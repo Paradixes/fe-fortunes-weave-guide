@@ -16,6 +16,7 @@ __pycache__/
 .openai/
 .impeccable/
 .codex/
+.agents/skills/
 # Dependencies, local runtime and generated delivery packages
 .venv/
 node_modules/
