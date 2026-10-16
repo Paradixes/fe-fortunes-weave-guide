@@ -6,7 +6,7 @@ assert.deepEqual(d.planning.c31.primary.primaryRoutes,['レダ','セオドラ'])
 assert(!d.planning.c6.routes['レダ'].active,'No mandatory physical healer');assert.equal(d.planning.c6.final.end,'贤士');assert.equal(d.planning.c49.final.end,'圣枪师');assert.equal(d.planning.c32.audit.defaultDirections,'1–2');assert.equal(d.planning.c47.audit.defaultDirections,'1–2');assert(!d.planning.c47.routes['レダ']);
 assert(d.crossRoutePolicy.fusion.includes('同一技能EXP取最高，不相加'));assert(d.crossRoutePolicy.strength.includes('物理每击伤害'));assert(!d.crossRoutePolicy.fusion.includes('分歧'));
 assert(d.learning.c47.combatArts.some(a=>a.name==='离脱射击'&&a.requirementUnknown),'Verified ability, rank uncertainty preserved');
-const index=fs.readFileSync(path.join(root,'index.html'),'utf8');assert(index.includes('cultivation.js?v=84')&&index.includes('cultivation.css?v=84'));
+const index=fs.readFileSync(path.join(root,'index.html'),'utf8');assert(index.includes('cultivation.js?v=94')&&index.includes('cultivation.css?v=84'));
 const css=fs.readFileSync(path.join(root,'cultivation.css'),'utf8');assert.equal(css.split('{').length,css.split('}').length);assert(css.includes('@media(max-width:640px)'));
 new vm.Script(fs.readFileSync(path.join(root,'cultivation.js'),'utf8'));
 console.log('PASS cultivation: all 63 reviewed, explicit active/unused route states, all main/optional class reasons, one/two-direction defaults, late-entry exclusions, fusion max policy and responsive UI asset linkage.');
