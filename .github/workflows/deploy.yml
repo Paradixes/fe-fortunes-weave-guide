@@ -1,0 +1,86 @@
+name: Deploy production
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Finish the current deployment before starting another one.
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Validate source and catalogue
+        run: |
+          node scripts/build-catalog.cjs
+          git diff --exit-code -- data/catalog.json dist/catalog.js dist/roster.json dist/learning.json dist/map.json
+          node scripts/verify-site.cjs
+          node scripts/verify-workbench.cjs
+          node scripts/verify-cultivation.cjs
+          python3 scripts/verify-sqlite.py
+          python3 scripts/verify-deploy.py
+          python3 scripts/check-public-export.py
+      - name: Package runtime
+        env:
+          DEPLOY_SHA: ${{ github.sha }}
+          DEPLOY_RUN: ${{ github.run_id }}
+          DEPLOY_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          manifest = {
+              'sha': os.environ['DEPLOY_SHA'],
+              'release': '-'.join(os.environ[k] for k in ('DEPLOY_SHA', 'DEPLOY_RUN', 'DEPLOY_ATTEMPT')),
+          }
+          Path('dist/deployment.json').write_text(json.dumps(manifest) + '\n')
+          PY
+          tar --exclude='__pycache__' -czf "$RUNNER_TEMP/release.tar.gz" dist data/catalog.sqlite3 server/catalog_server.py
+      - name: Deploy over verified SSH
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${DEPLOY_HOST:?Missing DEPLOY_HOST}"
+          : "${DEPLOY_USER:?Missing DEPLOY_USER}"
+          : "${DEPLOY_SSH_KEY:?Missing DEPLOY_SSH_KEY}"
+          : "${DEPLOY_KNOWN_HOSTS:?Missing DEPLOY_KNOWN_HOSTS}"
+          keydir=$(mktemp -d)
+          trap 'rm -rf "$keydir"' EXIT
+          chmod 700 "$keydir"
+          printf '%s\n' "$DEPLOY_SSH_KEY" > "$keydir/key"
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$keydir/known_hosts"
+          chmod 600 "$keydir/key" "$keydir/known_hosts"
+          ssh -F /dev/null -i "$keydir/key" \
+            -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
+            -o UserKnownHostsFile="$keydir/known_hosts" -o ConnectTimeout=15 \
+            -o ServerAliveInterval=15 -o ServerAliveCountMax=3 \
+            -p "${DEPLOY_PORT:-22}" "$DEPLOY_USER@$DEPLOY_HOST" < "$RUNNER_TEMP/release.tar.gz"
+      - name: Write deployment summary
+        env:
+          DEPLOY_SHA: ${{ github.sha }}
+        run: printf 'Deployed `%s`. SQLite and HTTPS checks passed.\n' "$DEPLOY_SHA" >> "$GITHUB_STEP_SUMMARY"
