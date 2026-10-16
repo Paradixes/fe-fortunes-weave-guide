@@ -6754,8 +6754,8 @@
           "thunder"
         ],
         "growthNote": "魔力45、魔防45，白魔功能是主价值；剑术不擅长，魔法剑不能只凭魔力高就列必修。",
-        "rating": "A+",
-        "ratingReason": "拉近后接辅助魔法、相邻速度支援与白魔适性，能优化救援和走位；收益受位置与可用辅助法术限制。",
+        "rating": "A",
+        "ratingReason": "拉近后接辅助魔法、相邻速度支援与白魔适性，能优化救援和走位；外传后才入队、身板薄，收益受位置与可用辅助法术限制，按辅助位评为 A。",
         "alias": "",
         "baseStats": {
           "hp": 24,
@@ -7746,8 +7746,8 @@
           "giant"
         ],
         "growthNote": "力量40、魔力30，斧黑魔马飞行适性只是入口，不足以证明第二条法师主养划算。",
-        "rating": "A",
-        "ratingReason": "斧马适性、穿过敌人和地形消耗降低，价值在突破站位与机动；不靠纯面板总和评价。",
+        "rating": "B",
+        "ratingReason": "斧马适性、穿过敌人和地形消耗降低，价值在突破站位与机动；穿越对大型骑兵无效、双防一般，四家外站均在 B 档及以下，按机动辅助评为 B。",
         "alias": "",
         "baseStats": {
           "hp": 28,
@@ -9735,8 +9735,8 @@
           "daminasword"
         ],
         "growthNote": "力量35、速度50，输出玩法需要力量，辅助玩法优先剑弓资格与安全；魔力35不是法师必修理由。",
-        "rating": "A+",
-        "ratingReason": "周围友军共享道具袋是稀有支援，剑弓适性还可衔接终局再行动职业；价值高于普通低伤害弓手。",
+        "rating": "A-",
+        "ratingReason": "周围友军共享道具袋是稀有支援，剑弓适性还可衔接终局再行动职业；但外传后加入、蕾达线不可用，力量魔力均35%，自身输出有限，评为 A-。",
         "alias": "乌舒拉",
         "baseStats": {
           "hp": 25,
@@ -31219,8 +31219,11 @@
           "description": "自己出击时，全体友军不受冥炎影响，处于冥炎中的全体友军受到攻击时伤害减半",
           "level": 5,
           "sources": [
+            "https://gamewith.jp/fefw/577325",
+            "https://game8.jp/fe-banshisenko/816414",
             "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
-          ]
+          ],
+          "note": "等级据 Gamersky；Game8 列为等级技能但未标注等级，GameWith 无等级表"
         }
       ],
       "learnedSkills": [
@@ -31473,14 +31476,35 @@
           "description": "释放熊熊燃烧的冥炎",
           "weapon": "圣焰",
           "cost": "HP 13",
-          "might": "魔力力量+12"
+          "might": "魔力+12",
+          "condition": "凯伊篇第1章剧情习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816414"
+          ]
         },
         {
           "name": "黑炎涡流",
           "description": "向大范围释放冥炎的范围攻击",
           "weapon": "圣焰",
           "cost": "HP 19",
-          "might": "魔力力量+15"
+          "might": "魔力+15",
+          "level": 10,
+          "condition": "等级 10 习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816414"
+          ]
+        },
+        {
+          "name": "落星冥焰狱",
+          "description": "释放命中后炸裂的冥炎，将攻击范围的地形变为「冥炎」（每张地图仅限使用1次）",
+          "weapon": "圣焰",
+          "cost": "HP 19",
+          "might": "魔力+20",
+          "level": 35,
+          "condition": "等级 35 习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816414"
+          ]
         }
       ],
       "magic": [
@@ -31599,15 +31623,13 @@
     "c1": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "心情上佳+",
           "description": "「随心所欲」效果的能力提升变为+20",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577301",
+            "https://game8.jp/fe-banshisenko/816440"
+          ]
         }
       ],
       "learnedSkills": [
@@ -31671,6 +31693,12 @@
           "description": "【飞行】先攻战斗时，攻速+2",
           "skill": "飞行术",
           "rank": "C+"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -31924,13 +31952,11 @@
         {
           "name": "兽之冲动",
           "description": "战斗后，必杀+2（发生必杀一击的战斗后恢复原状）",
-          "level": 5
-        },
-        {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
+          "level": 5,
+          "sources": [
+            "https://gamewith.jp/fefw/577324",
+            "https://game8.jp/fe-banshisenko/816415"
+          ]
         }
       ],
       "learnedSkills": [
@@ -31986,6 +32012,12 @@
           "sources": [
             "https://gamecap.jp/fe_fw/oboeru.html"
           ]
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -32175,7 +32207,34 @@
           "name": "影渡",
           "description": "转移移动至多3格。移动后可再进行攻击",
           "weapon": "圣焰",
-          "cost": "HP 11"
+          "cost": "HP 11",
+          "condition": "迪托利希篇第4章剧情习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816415"
+          ]
+        },
+        {
+          "name": "影缝",
+          "description": "转移移动至多3格。移动后，使周围2格内的敌人陷入无法移动状态",
+          "weapon": "圣焰",
+          "cost": "HP 15",
+          "level": 20,
+          "condition": "等级 20 习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816415"
+          ]
+        },
+        {
+          "name": "影灭",
+          "description": "转移移动至多5格。移动后，对攻击范围内的敌人造成伤害",
+          "weapon": "圣焰",
+          "cost": "HP 36",
+          "might": "力+25",
+          "level": 35,
+          "condition": "等级 35 习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816415"
+          ]
         }
       ],
       "magic": [
@@ -32288,14 +32347,19 @@
         {
           "name": "威迫+",
           "description": "战斗时，有20%几率发动，使敌人的必杀回避减半",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577287",
+            "https://game8.jp/fe-banshisenko/816460"
+          ]
         },
         {
           "name": "威迫",
           "description": "战斗时，有10%概率使敌人的必杀回避减半。",
           "level": 20,
           "sources": [
-            "https://gamewith.jp/fefw/577287"
+            "https://gamewith.jp/fefw/577287",
+            "https://game8.jp/fe-banshisenko/816460"
           ]
         }
       ],
@@ -32570,7 +32634,11 @@
         {
           "name": "信仰的恩赐+",
           "description": "用魔法回复友军时，有幸运%几率发动，回复量+30",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577288",
+            "https://game8.jp/fe-banshisenko/816456"
+          ]
         }
       ],
       "learnedSkills": [
@@ -32766,19 +32834,16 @@
         {
           "name": "直击",
           "description": "以炽焰技艺攻击时有30%几率发动，造成的伤害+10",
-          "level": 5
-        },
-        {
-          "name": "重破坏",
-          "description": "【重装】攻击时，有（防守÷2）%几率发动。给予的伤害变为1.5倍",
-          "skill": "重装术",
-          "rank": "C",
-          "note": "按重装术等级习得，因人而异（外网归为「装备特技」）"
+          "level": 5,
+          "sources": [
+            "https://gamewith.jp/fefw/577323",
+            "https://game8.jp/fe-banshisenko/816416"
+          ]
         },
         {
           "name": "计略达人",
           "description": "计略的次数+1",
-          "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
+          "note": "Game8 列为等级习得技能，未标注习得等级",
           "requirementUnknown": true
         }
       ],
@@ -32833,6 +32898,13 @@
           "sources": [
             "https://gamecap.jp/fe_fw/oboeru.html"
           ]
+        },
+        {
+          "name": "重破坏",
+          "description": "【重装】攻击时，有（防守÷2）%几率发动。给予的伤害变为1.5倍",
+          "skill": "重装术",
+          "rank": "C",
+          "note": "按重装术等级习得，因人而异（外网归为「装备特技」）"
         }
       ],
       "combatArts": [
@@ -32921,7 +32993,35 @@
           "description": "劈裂大地进行投掷攻击",
           "weapon": "圣焰",
           "cost": "HP 6",
-          "might": "力量+18"
+          "might": "力+18",
+          "condition": "赛奥朵拉篇第1章剧情习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816416"
+          ]
+        },
+        {
+          "name": "大轰土",
+          "description": "向远方进行投掷攻击",
+          "weapon": "圣焰",
+          "cost": "HP 12",
+          "might": "力+28",
+          "level": 20,
+          "condition": "等级 20 习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816416"
+          ]
+        },
+        {
+          "name": "彗星煌弹",
+          "description": "贯穿敌人的投掷攻击，必定命中（每张地图仅限使用1次）",
+          "weapon": "圣焰",
+          "cost": "HP 18",
+          "might": "力+33",
+          "level": 35,
+          "condition": "等级 35 习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816416"
+          ]
         }
       ],
       "magic": [
@@ -33042,12 +33142,20 @@
           "name": "远程治愈",
           "description": "回复魔法的射程+1",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 20
+          "level": 20,
+          "sources": [
+            "https://gamewith.jp/fefw/577294",
+            "https://game8.jp/fe-banshisenko/816448"
+          ]
         },
         {
           "name": "远程治愈+",
           "description": "回复魔法的射程+2",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577294",
+            "https://game8.jp/fe-banshisenko/816448"
+          ]
         }
       ],
       "learnedSkills": [
@@ -33250,7 +33358,11 @@
         {
           "name": "即兴",
           "description": "使用炽焰技艺后，若自己处于爆燃状态，可再次攻击",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577322",
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
         }
       ],
       "learnedSkills": [
@@ -33475,25 +33587,82 @@
           "name": "热狂之歌",
           "description": "范围内友军的力量、魔力+4（持续到下一个己方阶段）",
           "weapon": "圣焰",
-          "cost": "HP 7"
+          "cost": "HP 7",
+          "condition": "蕾达篇第1章剧情习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
         },
         {
           "name": "冷狂之歌",
           "description": "范围内友军的防守、魔防+4（持续到下一个己方阶段）",
           "weapon": "圣焰",
-          "cost": "HP 7"
+          "cost": "HP 7",
+          "condition": "蕾达篇兴行「酒馆店主的演出邀请」完成后习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
         },
         {
           "name": "狂骚之歌",
           "description": "使范围内的敌人陷入混乱状态（每张地图仅限使用1次）",
           "weapon": "圣焰",
-          "cost": "HP 15"
+          "cost": "HP 15",
+          "condition": "蕾达篇兴行「制作并展示新商品」完成后习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
         },
         {
           "name": "灭冥之歌",
           "description": "为范围内的友军赋予对冥魔有效（持续到下一个己方阶段）",
           "weapon": "圣焰",
-          "cost": "HP 10"
+          "cost": "HP 10",
+          "level": 10,
+          "condition": "等级 10 习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
+        },
+        {
+          "name": "召兽之歌",
+          "description": "召唤魔兽（每张地图仅限使用1次）",
+          "weapon": "圣焰",
+          "cost": "HP 15",
+          "condition": "蕾达篇第8章剧情习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
+        },
+        {
+          "name": "冷狂之歌+",
+          "description": "范围内友军的防守、魔防+7（持续到下一个己方阶段）",
+          "weapon": "圣焰",
+          "cost": "HP 10",
+          "condition": "蕾达篇兴行「制作并展示新商品2」完成后习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
+        },
+        {
+          "name": "热狂之歌+",
+          "description": "范围内友军的力量、魔力+7（持续到下一个己方阶段）",
+          "weapon": "圣焰",
+          "cost": "HP 10",
+          "condition": "蕾达篇兴行「制作并展示新商品3」完成后习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
+        },
+        {
+          "name": "天女之歌",
+          "description": "使范围内的友军再行动（每张地图仅限使用1次）",
+          "weapon": "圣焰",
+          "cost": "HP 10",
+          "condition": "蕾达篇兴行「制作并展示新商品4」完成后习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ]
         }
       ],
       "magic": [
@@ -33612,15 +33781,13 @@
     "c8": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "以风为友+",
           "description": "战斗时，若自己的攻速比敌人高5以上，攻击力+3；高8以上则回避+20",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577298",
+            "https://game8.jp/fe-banshisenko/816442"
+          ]
         }
       ],
       "learnedSkills": [
@@ -33693,6 +33860,12 @@
           "skill": "飞行术",
           "rank": "A",
           "note": "暂译名；效果据 GameWith / 神攻略 wiki"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -33938,7 +34111,11 @@
         {
           "name": "活力结界+",
           "description": "受到攻击时，有（自己剩余HP）%几率发动。防御力+5",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577295",
+            "https://game8.jp/fe-banshisenko/816446"
+          ]
         }
       ],
       "learnedSkills": [
@@ -34135,7 +34312,11 @@
         {
           "name": "无所畏惧+",
           "description": "先攻战斗时，攻击力+6，回避-30",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577293",
+            "https://game8.jp/fe-banshisenko/816459"
+          ]
         }
       ],
       "learnedSkills": [],
@@ -34262,7 +34443,11 @@
         {
           "name": "精灵的引导+",
           "description": "为周围2格内的友军赋予「精灵之声」",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577303",
+            "https://game8.jp/fe-banshisenko/816437"
+          ]
         }
       ],
       "learnedSkills": [
@@ -34642,7 +34827,11 @@
         {
           "name": "我停不下来+",
           "description": "「先发制人」发动后攻击时，有50%几率发动，攻击力+5",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577302",
+            "https://game8.jp/fe-banshisenko/816439"
+          ]
         }
       ],
       "learnedSkills": [
@@ -34833,15 +35022,21 @@
         {
           "name": "秘奥",
           "description": "战斗时，若自己的攻击对敌人有效、特效，命中+10",
-          "level": 20,
+          "level": null,
           "sources": [
             "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
-          ]
+          ],
+          "requirementUnknown": true,
+          "note": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实"
         },
         {
           "name": "秘奥+",
           "description": "战斗时，若自己的攻击对敌人有效、特效，命中+20",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577380",
+            "https://game8.jp/fe-banshisenko/816462"
+          ]
         }
       ],
       "learnedSkills": [
@@ -35074,23 +35269,23 @@
     "c14": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "飞翔",
           "description": "自己位于无法步行的地形时，攻速+3",
-          "level": 20,
+          "level": null,
           "sources": [
             "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
-          ]
+          ],
+          "requirementUnknown": true,
+          "note": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实"
         },
         {
           "name": "飞翔+",
           "description": "自己位于无法步行的地形时，攻速+5",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577376",
+            "https://game8.jp/fe-banshisenko/816445"
+          ]
         }
       ],
       "learnedSkills": [
@@ -35169,6 +35364,12 @@
           "description": "装备剑时，命中、回避+10，攻击力+3",
           "skill": "剑术",
           "rank": "S+"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -35532,15 +35733,13 @@
     "c15": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "误差修正+",
           "description": "战斗时，若自己的命中率在75%以上，命中+20",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577320",
+            "https://game8.jp/fe-banshisenko/816419"
+          ]
         }
       ],
       "learnedSkills": [
@@ -35616,6 +35815,12 @@
           "sources": [
             "https://gamecap.jp/fe_fw/oboeru.html"
           ]
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -36242,15 +36447,21 @@
         {
           "name": "骑乘突击",
           "description": "【骑兵】先攻战斗时，命中+10",
-          "level": 20,
+          "level": null,
           "sources": [
             "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
-          ]
+          ],
+          "requirementUnknown": true,
+          "note": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实"
         },
         {
           "name": "骑乘突击+",
           "description": "【骑兵】先攻战斗时，命中+10，攻击力+3",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577299",
+            "https://game8.jp/fe-banshisenko/816441"
+          ]
         }
       ],
       "learnedSkills": [
@@ -36467,7 +36678,11 @@
         {
           "name": "压制+",
           "description": "相邻的敌人移动力-5",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577291",
+            "https://game8.jp/fe-banshisenko/816453"
+          ]
         }
       ],
       "learnedSkills": [
@@ -36648,7 +36863,11 @@
         {
           "name": "追加演出+",
           "description": "「战场剧作家」发动时，该友军命中、必杀+10",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577305",
+            "https://game8.jp/fe-banshisenko/816433"
+          ]
         }
       ],
       "learnedSkills": [
@@ -36822,7 +37041,11 @@
         {
           "name": "牙闪+",
           "description": "攻击时，有20%几率发动。攻击力+7，命中+100",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577373",
+            "https://game8.jp/fe-banshisenko/816432"
+          ]
         }
       ],
       "learnedSkills": [
@@ -36939,22 +37162,21 @@
     "c21": {
       "levelSkills": [
         {
-          "name": "重破坏",
-          "description": "【重装】攻击时，有（防守÷2）%几率发动。给予的伤害变为1.5倍",
-          "skill": "重装术",
-          "rank": "B",
-          "note": "按重装术等级习得，因人而异（外网归为「装备特技」）"
-        },
-        {
           "name": "投枪达人+",
           "description": "战斗时，若投枪攻击，命中+20，攻击力+4",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577317",
+            "https://game8.jp/fe-banshisenko/816422"
+          ]
         },
         {
           "name": "投枪达人",
           "description": "投掷枪进行攻击时，命中+10、攻击力+2。",
           "level": 20,
           "sources": [
+            "https://gamewith.jp/fefw/577317",
+            "https://game8.jp/fe-banshisenko/816422",
             "https://appmedia.jp/fe_banshisenkou/80470093"
           ]
         }
@@ -37003,6 +37225,13 @@
           "skill": "飞行术",
           "rank": "C+",
           "note": "暂译名；效果据 GameWith / 神攻略 wiki"
+        },
+        {
+          "name": "重破坏",
+          "description": "【重装】攻击时，有（防守÷2）%几率发动。给予的伤害变为1.5倍",
+          "skill": "重装术",
+          "rank": "B",
+          "note": "按重装术等级习得，因人而异（外网归为「装备特技」）"
         }
       ],
       "combatArts": [
@@ -37282,21 +37511,21 @@
     "c22": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "暗之秘术+",
           "description": "「唤暗」的效果范围变为周围3格",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577318",
+            "https://game8.jp/fe-banshisenko/816421"
+          ]
         },
         {
           "name": "暗之秘术",
           "description": "使「唤暗」的效果范围扩大至周围2格。",
           "level": 20,
           "sources": [
+            "https://gamewith.jp/fefw/577318",
+            "https://game8.jp/fe-banshisenko/816421",
             "https://appmedia.jp/fe_banshisenkou/80470087"
           ]
         }
@@ -37314,6 +37543,12 @@
           "source": "https://gamewith.jp/fefw/574420",
           "confidence": "high",
           "checkedAt": "2026-10-15"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -37546,15 +37781,13 @@
     "c23": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "专注领域+",
           "description": "「集中」发动时，有20%几率发动，回避+10（持续到下一个己方阶段）",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577296",
+            "https://game8.jp/fe-banshisenko/816447"
+          ]
         }
       ],
       "learnedSkills": [
@@ -37569,6 +37802,12 @@
           "name": "短兵相接",
           "description": "【步兵】相邻的敌人移动力-1",
           "skill": "步兵术",
+          "rank": "D"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
           "rank": "D"
         }
       ],
@@ -37807,7 +38046,11 @@
         {
           "name": "状态绝佳+",
           "description": "战斗时，若自己的HP为最大值，攻击力+3，回避+10",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577378",
+            "https://game8.jp/fe-banshisenko/816451"
+          ]
         }
       ],
       "learnedSkills": [
@@ -38011,7 +38254,11 @@
         {
           "name": "正义执行+",
           "description": "「天秤之天冠」发动时，攻击力+7",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577340",
+            "https://game8.jp/fe-banshisenko/816450"
+          ]
         }
       ],
       "learnedSkills": [
@@ -38197,12 +38444,20 @@
           "name": "补充说明",
           "description": "相邻的友军战斗时，有30%几率发动。该友军命中+10",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 20
+          "level": 20,
+          "sources": [
+            "https://gamewith.jp/fefw/577315",
+            "https://game8.jp/fe-banshisenko/816424"
+          ]
         },
         {
           "name": "补充说明+",
           "description": "相邻的友军战斗时，有30%几率发动。该友军命中+20",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577315",
+            "https://game8.jp/fe-banshisenko/816424"
+          ]
         }
       ],
       "learnedSkills": [
@@ -38470,22 +38725,23 @@
     "c27": {
       "levelSkills": [
         {
-          "name": "绝对防御",
-          "description": "【重装】受到攻击时，有10%几率发动。防御力+10",
-          "skill": "重装术",
-          "rank": "C",
-          "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）"
-        },
-        {
           "name": "认真的一击",
           "description": "使用战技攻击时，有30%几率发动。给予的伤害变为1.3倍",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 20
+          "level": 20,
+          "sources": [
+            "https://gamewith.jp/fefw/577313",
+            "https://game8.jp/fe-banshisenko/816425"
+          ]
         },
         {
           "name": "认真的一击+",
           "description": "使用战技攻击时，有30%几率发动。给予的伤害变为1.5倍",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577313",
+            "https://game8.jp/fe-banshisenko/816425"
+          ]
         }
       ],
       "learnedSkills": [
@@ -38518,6 +38774,13 @@
           "description": "体格+5",
           "note": "来源待确认：外网归为「装备特技」，多名角色都有，可能是技能等级习得",
           "requirementUnknown": true
+        },
+        {
+          "name": "绝对防御",
+          "description": "【重装】受到攻击时，有10%几率发动。防御力+10",
+          "skill": "重装术",
+          "rank": "C",
+          "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）"
         }
       ],
       "combatArts": [
@@ -38787,15 +39050,13 @@
     "c28": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "阻滞+",
           "description": "先攻战斗后，敌人速度-3 ※进行1次战斗后恢复原状",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577341",
+            "https://game8.jp/fe-banshisenko/816457"
+          ]
         }
       ],
       "learnedSkills": [
@@ -38822,6 +39083,12 @@
           "name": "判读风向",
           "description": "战斗时，若敌人使用弓，回避+10",
           "skill": "飞行术",
+          "rank": "D"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
           "rank": "D"
         }
       ],
@@ -39019,7 +39286,11 @@
         {
           "name": "注意唤起+",
           "description": "相邻的友军速度+4",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577339",
+            "https://game8.jp/fe-banshisenko/816438"
+          ]
         }
       ],
       "learnedSkills": [
@@ -39243,12 +39514,20 @@
           "name": "回礼一击",
           "description": "后攻攻击时，有5%几率发动。给予的伤害变为1.3倍",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 20
+          "level": 20,
+          "sources": [
+            "https://gamewith.jp/fefw/577310",
+            "https://game8.jp/fe-banshisenko/816428"
+          ]
         },
         {
           "name": "回礼一击+",
           "description": "后攻攻击时，有10%几率使给予的伤害变为1.3倍",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577310",
+            "https://game8.jp/fe-banshisenko/816428"
+          ]
         }
       ],
       "learnedSkills": [
@@ -39593,7 +39872,11 @@
         {
           "name": "随风而行+",
           "description": "战斗时，随机发动「回避+1」「回避+5」「回避+20」「回避+30」中的一种",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577311",
+            "https://game8.jp/fe-banshisenko/816429"
+          ]
         }
       ],
       "learnedSkills": [
@@ -39920,15 +40203,13 @@
     "c32": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "强战士之血+",
           "description": "根据装备的武器种类，基础能力大幅提升",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577308",
+            "https://game8.jp/fe-banshisenko/816431"
+          ]
         }
       ],
       "learnedSkills": [
@@ -39988,6 +40269,12 @@
           "skill": "格斗术",
           "rank": "S+",
           "note": "技能等级 S+ 习得（据 GameWith 特技一览）"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -40290,12 +40577,20 @@
           "name": "激情圣吸",
           "description": "使用圣吸战斗时，攻击力+3，必杀+5",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 20
+          "level": 20,
+          "sources": [
+            "https://gamewith.jp/fefw/577309",
+            "https://game8.jp/fe-banshisenko/816430"
+          ]
         },
         {
           "name": "激情圣吸+",
           "description": "使用圣吸战斗时，攻击力+5，必杀+10",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577309",
+            "https://game8.jp/fe-banshisenko/816430"
+          ]
         }
       ],
       "learnedSkills": [
@@ -40596,22 +40891,21 @@
     "c34": {
       "levelSkills": [
         {
-          "name": "绝对防御",
-          "description": "【重装】受到攻击时，有10%几率发动。防御力+10",
-          "skill": "重装术",
-          "rank": "C",
-          "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）"
-        },
-        {
           "name": "铁血+",
           "description": "与相邻的敌人战斗时，攻击力+3。且该次攻击时，有30%几率攻击力再+3",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577316",
+            "https://game8.jp/fe-banshisenko/816423"
+          ]
         },
         {
           "name": "铁血",
           "description": "与相邻敌人战斗时，攻击力+3。",
           "level": 20,
           "sources": [
+            "https://gamewith.jp/fefw/577316",
+            "https://game8.jp/fe-banshisenko/816423",
             "https://hyperwiki.jp/fefw/character/ch44/"
           ]
         }
@@ -40659,6 +40953,13 @@
           "description": "战斗时，若敌人使用弓，回避+10",
           "skill": "飞行术",
           "rank": "D"
+        },
+        {
+          "name": "绝对防御",
+          "description": "【重装】受到攻击时，有10%几率发动。防御力+10",
+          "skill": "重装术",
+          "rank": "C",
+          "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）"
         }
       ],
       "combatArts": [
@@ -40936,15 +41237,13 @@
     "c35": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "疾驱+",
           "description": "【骑兵】移动时，地形的移动消耗-2（最低为1）",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577300",
+            "https://game8.jp/fe-banshisenko/816443"
+          ]
         }
       ],
       "learnedSkills": [
@@ -40973,6 +41272,12 @@
           "description": "【飞行】先攻战斗时，攻速+2",
           "skill": "飞行术",
           "rank": "C+"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -41133,6 +41438,23 @@
     "c36": {
       "levelSkills": [
         {
+          "name": "全力+",
+          "description": "攻击时，有（力量÷2）%几率发动。给予的伤害变为1.5倍",
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577336",
+            "https://game8.jp/fe-banshisenko/816455"
+          ]
+        }
+      ],
+      "learnedSkills": [
+        {
+          "name": "短兵相接",
+          "description": "【步兵】相邻的敌人移动力-1",
+          "skill": "步兵术",
+          "rank": "D"
+        },
+        {
           "name": "重破坏",
           "description": "【重装】攻击时，有（防守÷2）%几率发动。给予的伤害变为1.5倍",
           "skill": "重装术",
@@ -41145,19 +41467,6 @@
           "skill": "重装术",
           "rank": "B+",
           "note": "按重装术等级习得，因人而异（外网归为「装备特技」）"
-        },
-        {
-          "name": "全力+",
-          "description": "攻击时，有（力量÷2）%几率发动。给予的伤害变为1.5倍",
-          "level": 35
-        }
-      ],
-      "learnedSkills": [
-        {
-          "name": "短兵相接",
-          "description": "【步兵】相邻的敌人移动力-1",
-          "skill": "步兵术",
-          "rank": "D"
         }
       ],
       "combatArts": [
@@ -41363,15 +41672,21 @@
         {
           "name": "贯穿",
           "description": "使用弓的战技攻击时，攻击力+2，必杀+5",
-          "level": 20,
+          "level": null,
           "sources": [
             "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
-          ]
+          ],
+          "requirementUnknown": true,
+          "note": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实"
         },
         {
           "name": "贯穿+",
           "description": "使用弓的战技攻击时，攻击力+4，必杀+10",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577379",
+            "https://game8.jp/fe-banshisenko/816463"
+          ]
         }
       ],
       "learnedSkills": [
@@ -41596,7 +41911,11 @@
         {
           "name": "怒涛反击+",
           "description": "后攻战斗时，攻击力+3，必杀+10",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577383",
+            "https://game8.jp/fe-banshisenko/816461"
+          ]
         }
       ],
       "learnedSkills": [
@@ -41817,12 +42136,20 @@
           "name": "感觉不错",
           "description": "攻击时，若自己的命中率为100%，攻击力+3",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 20
+          "level": 20,
+          "sources": [
+            "https://gamewith.jp/fefw/577314",
+            "https://game8.jp/fe-banshisenko/816426"
+          ]
         },
         {
           "name": "感觉不错+",
           "description": "攻击时，若自己的命中率为100%，攻击力+5",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577314",
+            "https://game8.jp/fe-banshisenko/816426"
+          ]
         }
       ],
       "learnedSkills": [
@@ -42083,24 +42410,23 @@
     "c40": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D",
-          "sources": [
-            "https://hyperwiki.jp/fefw/character/ch47/"
-          ]
-        },
-        {
           "name": "加速",
           "description": "击倒敌人时，速度+1（最多+10）（持续到战斗结束）",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 20
+          "level": 20,
+          "sources": [
+            "https://gamewith.jp/fefw/577312",
+            "https://game8.jp/fe-banshisenko/816427"
+          ]
         },
         {
           "name": "加速+",
           "description": "击倒敌人时，速度+2（最多+10）（持续到战斗结束）",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577312",
+            "https://game8.jp/fe-banshisenko/816427"
+          ]
         }
       ],
       "learnedSkills": [
@@ -42138,6 +42464,15 @@
           "skill": "重装术",
           "rank": "C",
           "note": "暂译名；据 GameWith 特技一览（2026-10-07）"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch47/"
+          ]
         }
       ],
       "combatArts": [
@@ -42298,7 +42633,11 @@
         {
           "name": "恶运+",
           "description": "击倒敌人时，幸运+2（最多+10）（持续到战斗结束）",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577304",
+            "https://game8.jp/fe-banshisenko/816435"
+          ]
         }
       ],
       "learnedSkills": [
@@ -42493,15 +42832,13 @@
     "c42": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "卑劣+",
           "description": "战斗时，若敌人剩余HP在一半以下，命中+20，攻击力+3",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577292",
+            "https://game8.jp/fe-banshisenko/816458"
+          ]
         }
       ],
       "learnedSkills": [
@@ -42523,6 +42860,12 @@
           "skill": "重装术",
           "rank": "C",
           "note": "来源待确认：外网归为「装备特技」，多名角色都有，可能是技能等级习得"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -42742,15 +43085,21 @@
         {
           "name": "战车手",
           "description": "自身为「战车兵」时，猛击的次数+1",
-          "level": 20,
+          "level": null,
           "sources": [
             "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
-          ]
+          ],
+          "requirementUnknown": true,
+          "note": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实"
         },
         {
           "name": "战车手+",
           "description": "若自己为「战车兵」，猛击的次数+2",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577297",
+            "https://game8.jp/fe-banshisenko/816444"
+          ]
         }
       ],
       "learnedSkills": [],
@@ -42923,7 +43272,11 @@
         {
           "name": "看破+",
           "description": "战斗时，若自己能够追击，回避+20",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577289",
+            "https://game8.jp/fe-banshisenko/816454"
+          ]
         }
       ],
       "learnedSkills": [
@@ -43116,7 +43469,11 @@
         {
           "name": "王之威光+",
           "description": "战斗时，若敌人已受到伤害，攻击力+4，必杀+10",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577338",
+            "https://game8.jp/fe-banshisenko/816449"
+          ]
         }
       ],
       "learnedSkills": [],
@@ -43228,7 +43585,11 @@
         {
           "name": "毫不留情+",
           "description": "追击时，命中、必杀+10",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577306",
+            "https://game8.jp/fe-banshisenko/816436"
+          ]
         }
       ],
       "learnedSkills": [
@@ -43355,7 +43716,11 @@
         {
           "name": "好机+",
           "description": "攻击时，有（幸运÷2）%几率发动。给予的伤害变为1.5倍",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577307",
+            "https://game8.jp/fe-banshisenko/816434"
+          ]
         }
       ],
       "learnedSkills": [
@@ -43550,7 +43915,11 @@
         {
           "name": "瞬刃+",
           "description": "自己回避攻击的那场战斗中，攻击力+5",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577290",
+            "https://game8.jp/fe-banshisenko/816452"
+          ]
         }
       ],
       "learnedSkills": [],
@@ -43666,15 +44035,13 @@
     "c49": {
       "levelSkills": [
         {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
-        },
-        {
           "name": "平安祈祷+",
           "description": "相邻的友军必杀回避+20",
-          "level": 35
+          "level": 35,
+          "sources": [
+            "https://gamewith.jp/fefw/577319",
+            "https://game8.jp/fe-banshisenko/816420"
+          ]
         }
       ],
       "learnedSkills": [
@@ -43708,6 +44075,12 @@
           "description": "【飞行】先攻战斗时，攻速+2",
           "skill": "飞行术",
           "rank": "C+"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
         }
       ],
       "combatArts": [
@@ -44018,7 +44391,8 @@
       ]
     },
     "c51": {
-      "levelSkills": [
+      "levelSkills": [],
+      "learnedSkills": [
         {
           "name": "及时防御",
           "description": "受到攻击时有25%几率发动，防御力+3",
@@ -44026,7 +44400,6 @@
           "rank": "D"
         }
       ],
-      "learnedSkills": [],
       "combatArts": [
         {
           "name": "劈刺",
@@ -44146,12 +44519,20 @@
           "name": "动态预测",
           "description": "先攻战斗时，魔法的命中+20",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 0
+          "level": 1,
+          "sources": [
+            "https://gamewith.jp/fefw/577374",
+            "https://game8.jp/fe-banshisenko/816884"
+          ]
         },
         {
           "name": "调魂+",
           "description": "用魔法回复友军时，中量回复自己的HP",
-          "level": 0
+          "level": 1,
+          "sources": [
+            "https://gamewith.jp/fefw/577374",
+            "https://game8.jp/fe-banshisenko/816884"
+          ]
         }
       ],
       "learnedSkills": [
@@ -44237,14 +44618,22 @@
           "description": "发射耀眼光芒，攻击大范围的敌人",
           "weapon": "圣焰",
           "cost": "HP 11",
-          "might": "魔力力量+20"
+          "might": "魔力+20",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816884"
+          ]
         },
         {
           "name": "光辉耀枪",
           "description": "以耀眼光芒射穿敌人。对冥魔有效",
           "weapon": "圣焰",
           "cost": "HP 4",
-          "might": "魔力力量+25"
+          "might": "魔力+25",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816884"
+          ]
         }
       ],
       "magic": [
@@ -44403,16 +44792,75 @@
           "name": "熟练炮手",
           "description": "使用兵器战斗时，命中+30",
           "note": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
-          "level": 0
+          "level": 1,
+          "sources": [
+            "https://gamewith.jp/fefw/577342",
+            "https://game8.jp/fe-banshisenko/816883"
+          ]
         },
         {
           "name": "胜利之风",
           "description": "自己或敌人攻击时，有幸运%几率发动：自己攻击时命中+15，敌人攻击时回避+15",
-          "level": 0
+          "level": 1,
+          "sources": [
+            "https://gamewith.jp/fefw/577342",
+            "https://game8.jp/fe-banshisenko/816883"
+          ]
         }
       ],
       "learnedSkills": [],
-      "combatArts": [],
+      "combatArts": [
+        {
+          "name": "虚脱冥咒",
+          "description": "使敌人陷入虚脱状态：命中减半（战斗1次或经过1回合后解除）",
+          "weapon": "圣焰",
+          "cost": "HP 11",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ]
+        },
+        {
+          "name": "钝化冥咒",
+          "description": "使敌人陷入钝化状态：攻速减半（战斗1次或经过1回合后解除）",
+          "weapon": "圣焰",
+          "cost": "HP 18",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ]
+        },
+        {
+          "name": "凶运冥咒",
+          "description": "使敌人陷入凶运状态：幸运减半（战斗1次或经过1回合后解除）",
+          "weapon": "圣焰",
+          "cost": "HP 9",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ]
+        },
+        {
+          "name": "攻转冥咒",
+          "description": "使敌人陷入攻转状态：力量与魔力互换（战斗1次或经过1回合后解除）",
+          "weapon": "圣焰",
+          "cost": "HP 14",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ]
+        },
+        {
+          "name": "防转冥咒",
+          "description": "使敌人陷入防转状态：防守与魔防互换（战斗1次或经过1回合后解除）",
+          "weapon": "圣焰",
+          "cost": "HP 14",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ]
+        }
+      ],
       "magic": [
         {
           "name": "火焰",
@@ -44546,12 +44994,14 @@
         {
           "name": "后之先",
           "description": "在敌方阶段行动时，有25%几率由自己先攻",
-          "note": "据神攻略 wiki《特技》（10/04 更新）"
+          "note": "Game8 列为等级习得技能，未标注习得等级",
+          "requirementUnknown": true
         },
         {
           "name": "先之先",
           "description": "先攻战斗时，有25%几率能先于敌人的反击行动",
-          "note": "据神攻略 wiki《特技》（10/04 更新）"
+          "note": "Game8 列为等级习得技能，未标注习得等级",
+          "requirementUnknown": true
         }
       ],
       "learnedSkills": [
@@ -44667,6 +45117,46 @@
           "hit": "0",
           "crit": "0",
           "range": "1"
+        },
+        {
+          "name": "霸之觉醒",
+          "description": "解放潜藏的战斗能力：命中+50，可再次攻击（持续到下一个己方阶段）",
+          "weapon": "圣焰",
+          "cost": "HP 6",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816882"
+          ]
+        },
+        {
+          "name": "闪之觉醒",
+          "description": "解放潜藏的战斗能力：物理耐性+10，可再次攻击（持续到下一个己方阶段）",
+          "weapon": "圣焰",
+          "cost": "HP 6",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816882"
+          ]
+        },
+        {
+          "name": "理之觉醒",
+          "description": "解放潜藏的战斗能力：魔法耐性+10，可再次攻击（持续到下一个己方阶段）",
+          "weapon": "圣焰",
+          "cost": "HP 6",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816882"
+          ]
+        },
+        {
+          "name": "岚之觉醒",
+          "description": "解放潜藏的斗争本能：回避+30，可再次攻击（持续到下一个己方阶段）",
+          "weapon": "圣焰",
+          "cost": "HP 6",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816882"
+          ]
         }
       ],
       "magic": [
@@ -44780,38 +45270,39 @@
         {
           "name": "连贯圆滑",
           "description": "自身回避攻击时，自身回复5点HP",
-          "level": 1,
+          "level": null,
           "sources": [
             "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json"
-          ]
+          ],
+          "requirementUnknown": true,
+          "note": "GameWith 与 Game8 只列加入即有的「连贯圆滑+」；基础版不单独计入"
         },
         {
           "name": "即时回避",
           "description": "【步兵】受到攻击时有3%几率发动，回避+100",
-          "level": 0
-        },
-        {
-          "name": "及时防御",
-          "description": "受到攻击时有25%几率发动，防御力+3",
-          "skill": "重装术",
-          "rank": "D"
+          "level": 1,
+          "sources": [
+            "https://gamewith.jp/fefw/577372",
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
         },
         {
           "name": "连贯圆滑+",
           "description": "自己回避攻击时，回复自己10点HP",
-          "level": 0
+          "level": 1,
+          "sources": [
+            "https://gamewith.jp/fefw/577372",
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
         },
         {
           "name": "经络扩张",
           "description": "击倒敌人时，最大HP+2（最多+10）（持续到战斗结束）",
-          "level": 0
-        },
-        {
-          "name": "闪身+",
-          "description": "【步兵】战斗时，若敌人使用弓、魔法，回避+10",
-          "skill": "步兵术",
-          "rank": "B",
-          "level": 0
+          "level": 1,
+          "sources": [
+            "https://gamewith.jp/fefw/577372",
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
         }
       ],
       "learnedSkills": [
@@ -44827,6 +45318,18 @@
           "description": "【步兵】移动时，地形的移动消耗-1（不低于1）",
           "skill": "步兵术",
           "rank": "A"
+        },
+        {
+          "name": "及时防御",
+          "description": "受到攻击时有25%几率发动，防御力+3",
+          "skill": "重装术",
+          "rank": "D"
+        },
+        {
+          "name": "闪身+",
+          "description": "【步兵】战斗时，若敌人使用弓、魔法，回避+10",
+          "skill": "步兵术",
+          "rank": "B"
         }
       ],
       "combatArts": [
@@ -44904,6 +45407,72 @@
           "hit": "20",
           "crit": "0",
           "range": "1"
+        },
+        {
+          "name": "龙破·壹式",
+          "description": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "weapon": "圣焰",
+          "cost": "HP 2",
+          "might": "魔力+3",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
+        },
+        {
+          "name": "煌龙破",
+          "description": "打出体内炼成之劲的范围攻击，可破坏障碍物",
+          "weapon": "圣焰",
+          "cost": "HP 8",
+          "might": "魔力+5",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
+        },
+        {
+          "name": "龙破·贰式",
+          "description": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "weapon": "圣焰",
+          "cost": "HP 4",
+          "might": "魔力+7",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
+        },
+        {
+          "name": "龙破·叁式",
+          "description": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "weapon": "圣焰",
+          "cost": "HP 6",
+          "might": "魔力+10",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
+        },
+        {
+          "name": "波动回龙劲",
+          "description": "打出螺旋炼成之气，可破坏障碍物",
+          "weapon": "圣焰",
+          "cost": "HP 12",
+          "might": "魔力+15",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
+        },
+        {
+          "name": "七星天龙劲",
+          "description": "以深奥义之力放出的强大一击，可破坏障碍物",
+          "weapon": "圣焰",
+          "cost": "HP 20",
+          "might": "魔力+20",
+          "condition": "加入时即可使用",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ]
         }
       ],
       "magic": [
@@ -45352,6 +45921,8 @@
           "description": "被冥魔的敌人攻击时，有5%几率发动，受到的伤害变为0",
           "level": 45,
           "sources": [
+            "https://gamewith.jp/fefw/577454",
+            "https://game8.jp/fe-banshisenko/816479",
             "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json"
           ]
         },
@@ -45359,7 +45930,11 @@
           "name": "烈日的加护+",
           "description": "被冥魔的敌人攻击时，有10%几率发动，受到的伤害变为0",
           "note": "暂译名；据 GameWith 特技一览（2026-10-07）",
-          "level": 60
+          "level": 60,
+          "sources": [
+            "https://gamewith.jp/fefw/577454",
+            "https://game8.jp/fe-banshisenko/816479"
+          ]
         }
       ],
       "learnedSkills": [
@@ -45464,41 +46039,6 @@
           "range": "1"
         },
         {
-          "name": "破邪闪击",
-          "description": "以神圣的光之枪贯穿敌人。对冥魔有效",
-          "weapon": "圣焰",
-          "cost": "HP 12",
-          "might": "力量+20"
-        },
-        {
-          "name": "破邪闪击·改",
-          "description": "以神圣的光之枪贯穿敌人。对冥魔有效，必定命中",
-          "weapon": "圣焰",
-          "cost": "HP 18",
-          "might": "力量+25"
-        },
-        {
-          "name": "九天神击",
-          "description": "以神圣的光之枪贯穿敌人。对冥魔有效",
-          "weapon": "圣焰",
-          "cost": "HP 24",
-          "might": "力量+25"
-        },
-        {
-          "name": "九天神击·改",
-          "description": "以神圣的光之枪贯穿敌人。对冥魔特攻，必定命中",
-          "weapon": "圣焰",
-          "cost": "HP 29",
-          "might": "力量+30"
-        },
-        {
-          "name": "破天绝祸击",
-          "description": "以神圣的光之枪贯穿敌人。对冥魔特攻，必定命中",
-          "weapon": "圣焰",
-          "cost": "HP 35",
-          "might": "力量+30"
-        },
-        {
           "name": "旋风枪",
           "description": "命中高",
           "weapon": "枪",
@@ -45508,6 +46048,61 @@
           "crit": "0",
           "range": "1",
           "requirementUnknown": true
+        },
+        {
+          "name": "破邪闪击",
+          "description": "以神圣的光之枪贯穿敌人。对冥魔有效",
+          "weapon": "圣焰",
+          "cost": "HP 12",
+          "might": "力+20",
+          "condition": "序幕降临篇剧情习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816479"
+          ]
+        },
+        {
+          "name": "破邪闪击·改",
+          "description": "以神圣的光之枪贯穿敌人。对冥魔有效，必定命中",
+          "weapon": "圣焰",
+          "cost": "HP 18",
+          "might": "力+25",
+          "condition": "第三部救世篇开始时习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816479"
+          ]
+        },
+        {
+          "name": "九天神击",
+          "description": "以神圣的光之枪贯穿敌人。对冥魔有效",
+          "weapon": "圣焰",
+          "cost": "HP 24",
+          "might": "力+25",
+          "condition": "第三部救世篇开始时习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816479"
+          ]
+        },
+        {
+          "name": "九天神击·改",
+          "description": "以神圣的光之枪贯穿敌人。对冥魔特攻，必定命中",
+          "weapon": "圣焰",
+          "cost": "HP 29",
+          "might": "力+30",
+          "condition": "第三部救世篇开始时习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816479"
+          ]
+        },
+        {
+          "name": "破天绝祸击",
+          "description": "以神圣的光之枪贯穿敌人。对冥魔特攻，必定命中",
+          "weapon": "圣焰",
+          "cost": "HP 35",
+          "might": "力+30",
+          "condition": "第三部救世篇开始时习得",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816479"
+          ]
         }
       ],
       "magic": [
@@ -45643,7 +46238,11 @@
           "name": "魔力增幅+",
           "description": "战斗后，有（魔力÷2）%几率发动，攻击力+7（进行1次战斗后恢复）",
           "note": "暂译名；据 GameWith 特技一览（2026-10-07）",
-          "level": 60
+          "level": 60,
+          "sources": [
+            "https://gamewith.jp/fefw/577535",
+            "https://game8.jp/fe-banshisenko/816477"
+          ]
         }
       ],
       "learnedSkills": [
@@ -45811,7 +46410,11 @@
           "name": "改造+",
           "description": "装备「杰尔贝鲁斯」时，攻击变为对飞行特效",
           "note": "暂译名；据 GameWith 特技一览（2026-10-07）",
-          "level": 60
+          "level": 60,
+          "sources": [
+            "https://gamewith.jp/fefw/577532",
+            "https://game8.jp/fe-banshisenko/816478"
+          ]
         }
       ],
       "learnedSkills": [
@@ -73853,8 +74456,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "SS"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c1": {
         "rating": "S-",
@@ -73879,8 +74484,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c2": {
         "rating": "S",
@@ -73904,8 +74511,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "SS"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c3": {
         "rating": "A",
@@ -73929,8 +74538,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c4": {
         "rating": "A",
@@ -73954,8 +74565,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "C"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c5": {
         "rating": "S-",
@@ -73979,8 +74592,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "SS"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c6": {
         "rating": "S-",
@@ -74004,8 +74619,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c7": {
         "rating": "S",
@@ -74029,8 +74646,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "SS"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c8": {
         "rating": "A+",
@@ -74055,8 +74674,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c9": {
         "rating": "B",
@@ -74080,8 +74701,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c10": {
         "rating": "B",
@@ -74105,8 +74728,10 @@
               "role": "最強キャラランキング",
               "tier": "C"
             }
-          ]
-        }
+          ],
+          "Game8": "C"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c11": {
         "rating": "A+",
@@ -74130,8 +74755,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c12": {
         "rating": "A+",
@@ -74155,8 +74782,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c13": {
         "rating": "A+",
@@ -74180,8 +74809,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c14": {
         "rating": "A",
@@ -74206,8 +74837,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c15": {
         "rating": "S-",
@@ -74231,8 +74864,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c16": {
         "rating": "A+",
@@ -74256,8 +74891,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c17": {
         "rating": "A-",
@@ -74281,8 +74918,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "D"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c18": {
         "rating": "A",
@@ -74306,8 +74945,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c19": {
         "rating": "B",
@@ -74331,8 +74972,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c20": {
         "rating": "A-",
@@ -74357,8 +75000,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c21": {
         "rating": "S-",
@@ -74382,8 +75027,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c22": {
         "rating": "A+",
@@ -74408,8 +75055,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c23": {
         "rating": "A",
@@ -74433,8 +75082,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c24": {
         "rating": "A+",
@@ -74458,8 +75109,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c25": {
         "rating": "A-",
@@ -74483,8 +75136,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "C"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c26": {
         "rating": "A-",
@@ -74508,8 +75163,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c27": {
         "rating": "A",
@@ -74533,8 +75190,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c28": {
         "rating": "A-",
@@ -74558,15 +75217,17 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c29": {
-        "rating": "A+",
-        "reason": "拉近后接辅助魔法、相邻速度支援与白魔适性，能优化救援和走位；收益受位置与可用辅助法术限制。",
+        "rating": "A",
+        "reason": "拉近后接辅助魔法、相邻速度支援与白魔适性，能优化救援和走位；外传后才入队、身板薄，收益受位置与可用辅助法术限制，按辅助位评为 A。",
         "limits": "外传后才能入队，拉近后可用的是辅助魔法，并非任意再行动；身板薄，不擅长剑。",
         "investment": "白魔与位置支援一方向；主力伤害不缺时无需补魔剑，另一线仅补新增功能。",
-        "previousRating": "S",
+        "previousRating": "A+",
         "id": "c29",
         "sources": [
           "https://altema.jp/febansisenkou/saikyochara",
@@ -74583,8 +75244,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c30": {
         "rating": "A",
@@ -74608,8 +75271,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c31": {
         "rating": "S-",
@@ -74633,8 +75298,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "SS"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c32": {
         "rating": "S",
@@ -74658,8 +75325,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c33": {
         "rating": "S-",
@@ -74684,8 +75353,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c34": {
         "rating": "A+",
@@ -74710,12 +75381,14 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c35": {
-        "rating": "A",
-        "reason": "斧马适性、穿过敌人和地形消耗降低，价值在突破站位与机动；不靠纯面板总和评价。",
+        "rating": "B",
+        "reason": "斧马适性、穿过敌人和地形消耗降低，价值在突破站位与机动；穿越对大型骑兵无效、双防一般，四家外站均在 B 档及以下，按机动辅助评为 B。",
         "limits": "大型骑兵不能触发穿越；双防一般，穿进敌阵仍要有撤退和存活方案。",
         "investment": "穿越与救援B组成机动支援；优先允许白魔的职业。瓦尔基里姆需马D及白魔或黑魔A；墓志铭偏魔法剑，不施放救援。",
         "previousRating": "A",
@@ -74735,8 +75408,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "D"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c36": {
         "rating": "B",
@@ -74760,8 +75435,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "C"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c37": {
         "rating": "A-",
@@ -74785,8 +75462,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c38": {
         "rating": "A+",
@@ -74811,8 +75490,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "C"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c39": {
         "rating": "A-",
@@ -74836,8 +75517,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c40": {
         "rating": "A",
@@ -74861,8 +75544,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c41": {
         "rating": "B",
@@ -74886,8 +75571,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c42": {
         "rating": "C",
@@ -74911,8 +75598,10 @@
               "role": "最強キャラランキング",
               "tier": "C"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c43": {
         "rating": "B",
@@ -74936,8 +75625,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c44": {
         "rating": "A",
@@ -74961,8 +75652,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c45": {
         "rating": "B",
@@ -74986,8 +75679,10 @@
               "tier": "A"
             }
           ],
-          "Altema": "C"
-        }
+          "Altema": "C",
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c46": {
         "rating": "B",
@@ -75011,15 +75706,17 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c47": {
-        "rating": "A+",
-        "reason": "周围友军共享道具袋是稀有支援，剑弓适性还可衔接终局再行动职业；价值高于普通低伤害弓手。",
+        "rating": "A-",
+        "reason": "周围友军共享道具袋是稀有支援，剑弓适性还可衔接终局再行动职业；但外传后加入、蕾达线不可用，力量魔力均35%，自身输出有限，评为 A-。",
         "limits": "外传后加入且蕾达线不可用，力量魔力均35%；未解锁对应神将职前不能提前按第二舞者计算。",
         "investment": "第一、二部以剑客→侍道培养剑术与速度；第三部舞者向全角色开放后，再按队伍需要接舞位。神乐另需剑A、弓C及缪斯项链。",
-        "previousRating": "S-",
+        "previousRating": "A+",
         "id": "c47",
         "sources": [
           "https://altema.jp/febansisenkou/saikyochara",
@@ -75036,8 +75733,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c48": {
         "rating": "A",
@@ -75061,8 +75760,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c49": {
         "rating": "A",
@@ -75087,8 +75788,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c50": {
         "rating": "S-",
@@ -75112,8 +75815,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "A"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c51": {
         "rating": "A-",
@@ -75137,8 +75842,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "C"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c52": {
         "rating": "S-",
@@ -75162,8 +75869,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "SS"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c53": {
         "rating": "S-",
@@ -75188,8 +75897,10 @@
               "role": "最強キャラランキング",
               "tier": "A"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c54": {
         "rating": "S-",
@@ -75213,8 +75924,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c55": {
         "rating": "S-",
@@ -75238,8 +75951,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "S"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c56": {
         "rating": "A+",
@@ -75263,8 +75978,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c57": {
         "rating": "B",
@@ -75288,8 +76005,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "D"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c58": {
         "rating": "S",
@@ -75313,8 +76032,10 @@
               "role": "最強キャラランキング",
               "tier": "SS"
             }
-          ]
-        }
+          ],
+          "Game8": "SS"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c59": {
         "rating": "A",
@@ -75338,8 +76059,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c60": {
         "rating": "A+",
@@ -75363,8 +76086,10 @@
               "role": "最強キャラランキング",
               "tier": "S"
             }
-          ]
-        }
+          ],
+          "Game8": "B"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c61": {
         "rating": "A-",
@@ -75388,8 +76113,10 @@
               "role": "最強キャラランキング",
               "tier": "B"
             }
-          ]
-        }
+          ],
+          "Game8": "C"
+        },
+        "referenceCheckedAt": "2026-10-16"
       },
       "c62": {
         "rating": "B",
@@ -75413,10 +76140,13 @@
               "role": "最強キャラランキング",
               "tier": "C"
             }
-          ]
-        }
+          ],
+          "Game8": "D"
+        },
+        "referenceCheckedAt": "2026-10-16"
       }
-    }
+    },
+    "referenceCheckedAt": "2026-10-16"
   },
   "dataResearch": {
     "checkedAt": "2026-10-15",
@@ -75429,7 +76159,7 @@
     "resolvedMaterialLocationRecords": 9,
     "checkedCharacterLearningPages": 34,
     "remainingCounts": {
-      "skillRequirements": 61,
+      "skillRequirements": 69,
       "materialLocations": 0,
       "skillProvenance": 43,
       "skillEffects": 0,
@@ -76134,31 +76864,79 @@
     "resolvedStartClasses": 5,
     "resolvedClassUnlocks": 6,
     "latestPass": {
-      "checkedAt": "2026-10-15",
-      "scope": {
-        "characters": 63,
-        "classes": 60,
-        "equipment": 147,
-        "careerDirections": 25
-      },
-      "filled": {
-        "characters": 63,
-        "classes": 60,
-        "equipment": 147,
-        "missingBasePanels": 11,
-        "missingStartClassBefore": 6,
-        "startClassesVerified": 5,
-        "learningRequirementUnknownBefore": 94,
-        "learningRequirementsVerified": 33,
-        "learningRequirementUnknownAfterPatch": 61,
-        "missingEffectRowsVerified": 17,
-        "missingEffectTypesVerified": 6,
-        "equipmentAcquisitionsVerified": 1
-      },
-      "classUnlocks": 6,
-      "note": "评级为本站按职责和常规投入的分析，不以外站投票决定；一般以一条主养、必要时第二条互补为投入前提。"
+      "date": "2026-10-16",
+      "scope": "63名角色的等级习得技能、炽焰技艺解锁条件、外站评级与推荐职业对照",
+      "method": "GameWith 角色页「レベル習得スキル」表（逐行习得等级）与 Game8 角色页「レベルで覚えるスキル」「ブレイズアーツ・習得方法」交叉核对；评级对照两站10/16更新的榜单。",
+      "changes": [
+        "c1 古扎岚: 「及时防御」按重装术D习得，移出等级技能",
+        "c2 迪托利希: 「及时防御」按重装术D习得，移出等级技能",
+        "c5 赛奥朵拉: 「重破坏」按重装术C习得，移出等级技能",
+        "c8 卡塔妮雅: 「及时防御」按重装术D习得，移出等级技能",
+        "c14 亚历珊德拉: 「及时防御」按重装术D习得，移出等级技能",
+        "c15 皮特鲁: 「及时防御」按重装术D习得，移出等级技能",
+        "c21 艾丝梅拉尔达: 「重破坏」按重装术B习得，移出等级技能",
+        "c22 法毕欧: 「及时防御」按重装术D习得，移出等级技能",
+        "c23 诺克裘拉: 「及时防御」按重装术D习得，移出等级技能",
+        "c27 托比亚斯: 「绝对防御」按重装术C习得，移出等级技能",
+        "c28 哈尔温: 「及时防御」按重装术D习得，移出等级技能",
+        "c32 穆: 「及时防御」按重装术D习得，移出等级技能",
+        "c34 米迦艾拉: 「绝对防御」按重装术C习得，移出等级技能",
+        "c35 努蒂奴: 「及时防御」按重装术D习得，移出等级技能",
+        "c36 大刀: 「重破坏」按重装术C习得，移出等级技能",
+        "c36 大刀: 「重破坏+」按重装术B+习得，移出等级技能",
+        "c40 莱桑达: 「及时防御」按重装术D习得，移出等级技能",
+        "c42 札可捏: 「及时防御」按重装术D习得，移出等级技能",
+        "c49 乌尔坦德: 「及时防御」按重装术D习得，移出等级技能",
+        "c51 内森: 「及时防御」按重装术D习得，移出等级技能",
+        "c55 爱娜特莉亚: 「及时防御」按重装术D习得，移出等级技能",
+        "c55 爱娜特莉亚: 「闪身+」按步兵术B习得，移出等级技能",
+        "c13 努佐: 「秘奥」Lv20 仅单一来源，改为待核实",
+        "c14 亚历珊德拉: 「飞翔」Lv20 仅单一来源，改为待核实",
+        "c17 伊欧: 「骑乘突击」Lv20 仅单一来源，改为待核实",
+        "c37 易尼奥尼: 「贯穿」Lv20 仅单一来源，改为待核实",
+        "c43 班迪兹: 「战车手」Lv20 仅单一来源，改为待核实",
+        "c52 欧露赫露: 「动态预测」等级 0 → 1",
+        "c52 欧露赫露: 「调魂+」等级 0 → 1",
+        "c53 谭利穆恩: 「熟练炮手」等级 0 → 1",
+        "c53 谭利穆恩: 「胜利之风」等级 0 → 1",
+        "c55 爱娜特莉亚: 「连贯圆滑+」等级 0 → 1",
+        "c55 爱娜特莉亚: 「经络扩张」等级 0 → 1",
+        "c55 爱娜特莉亚: 「即时回避」等级 0 → 1",
+        "c55 爱娜特莉亚: 「连贯圆滑」Lv1 仅单一来源，改为待核实",
+        "c0 凯伊: 补充炽焰技艺「落星冥焰狱」（等级 35 习得）",
+        "c2 迪托利希: 补充炽焰技艺「影缝」（等级 20 习得）",
+        "c2 迪托利希: 补充炽焰技艺「影灭」（等级 35 习得）",
+        "c5 赛奥朵拉: 补充炽焰技艺「大轰土」（等级 20 习得）",
+        "c5 赛奥朵拉: 补充炽焰技艺「彗星煌弹」（等级 35 习得）",
+        "c7 蕾达: 补充炽焰技艺「召兽之歌」（蕾达篇第8章剧情习得）",
+        "c7 蕾达: 补充炽焰技艺「冷狂之歌+」（蕾达篇兴行「制作并展示新商品2」完成后习得）",
+        "c7 蕾达: 补充炽焰技艺「热狂之歌+」（蕾达篇兴行「制作并展示新商品3」完成后习得）",
+        "c7 蕾达: 补充炽焰技艺「天女之歌」（蕾达篇兴行「制作并展示新商品4」完成后习得）",
+        "c53 谭利穆恩: 补充炽焰技艺「虚脱冥咒」（加入时即可使用）",
+        "c53 谭利穆恩: 补充炽焰技艺「钝化冥咒」（加入时即可使用）",
+        "c53 谭利穆恩: 补充炽焰技艺「凶运冥咒」（加入时即可使用）",
+        "c53 谭利穆恩: 补充炽焰技艺「攻转冥咒」（加入时即可使用）",
+        "c53 谭利穆恩: 补充炽焰技艺「防转冥咒」（加入时即可使用）",
+        "c54 贝特兰: 补充炽焰技艺「霸之觉醒」（加入时即可使用）",
+        "c54 贝特兰: 补充炽焰技艺「闪之觉醒」（加入时即可使用）",
+        "c54 贝特兰: 补充炽焰技艺「理之觉醒」（加入时即可使用）",
+        "c54 贝特兰: 补充炽焰技艺「岚之觉醒」（加入时即可使用）",
+        "c55 爱娜特莉亚: 补充炽焰技艺「龙破·壹式」（加入时即可使用）",
+        "c55 爱娜特莉亚: 补充炽焰技艺「煌龙破」（加入时即可使用）",
+        "c55 爱娜特莉亚: 补充炽焰技艺「龙破·贰式」（加入时即可使用）",
+        "c55 爱娜特莉亚: 补充炽焰技艺「龙破·叁式」（加入时即可使用）",
+        "c55 爱娜特莉亚: 补充炽焰技艺「波动回龙劲」（加入时即可使用）",
+        "c55 爱娜特莉亚: 补充炽焰技艺「七星天龙劲」（加入时即可使用）",
+        "c5 赛奥朵拉: 新增外站共识路线「重装枪系前排」 士兵 → 重装步兵 → 卫士 → 圣枪师",
+        "c31 西洛可: 新增外站共识路线「黑魔专精」 诅咒师 → 萨满巫师 → 先知 → 德鲁伊",
+        "c18 哥莱亚斯: 新增外站共识路线「斧系终局战斗将领」 重装步兵 → 巨型重甲兵 → 战斗将领",
+        "c51 内森: 新增外站共识路线「铁甲骑兵路线」 铁甲骑兵 → 英勇骑士"
+      ]
     },
     "latestSources": [
+      "https://gamewith.jp/fefw/573109",
+      "https://gamewith.jp/fefw/575250",
+      "https://game8.jp/fe-banshisenko/816563",
       "https://gamewith.jp/fefw/574424",
       "https://gamewith.jp/fefw/574420",
       "https://gamecap.jp/fe_fw/oboeru.html",
@@ -76551,6 +77329,24 @@
         "stop": "飞行、龙宠与生存够用，不默认多线满养。",
         "source": "https://www.bilibili.com/video/BV1pYpo64EvB/?t=2308",
         "sourceLabel": "视频观点 · 本站按资格整理"
+      },
+      {
+        "title": "重装枪系前排",
+        "classes": [
+          "士兵",
+          "重装步兵",
+          "卫士",
+          "圣枪师"
+        ],
+        "when": "Game8 与 GameWith 均按生命70%与防御走重装：士兵→重装步兵→卫士→圣枪师；本站默认保留骑乘机动。",
+        "stop": "重装术与枪术资格、实战承伤够用即停；骑乘成果不重复投入。",
+        "source": "https://gamewith.jp/fefw/577323",
+        "sourceLabel": "Game8 与 GameWith 共同推荐 · 本站按资格整理",
+        "sources": [
+          "https://game8.jp/fe-banshisenko/816416",
+          "https://gamewith.jp/fefw/577323"
+        ],
+        "checkedAt": "2026-10-16"
       }
     ],
     "c58": [
@@ -76578,6 +77374,63 @@
         "source": "https://www.bilibili.com/video/BV1pYpo64EvB/?t=1050",
         "sourceLabel": "视频观点 · 本站按资格整理",
         "unlockSource": "https://gamewith.jp/fefw/578950"
+      }
+    ],
+    "c31": [
+      {
+        "title": "黑魔专精",
+        "classes": [
+          "诅咒师",
+          "萨满巫师",
+          "先知",
+          "德鲁伊"
+        ],
+        "when": "Game8 与 GameWith 均推荐纯黑魔路线（终局德鲁伊或高阶墓志铭）；本站默认剑与魔法剑。",
+        "stop": "黑魔术资格与魔力伤害达标即停，不同时养满剑系。",
+        "source": "https://gamewith.jp/fefw/577311",
+        "sourceLabel": "Game8 与 GameWith 共同推荐 · 本站按资格整理",
+        "sources": [
+          "https://game8.jp/fe-banshisenko/816429",
+          "https://gamewith.jp/fefw/577311"
+        ],
+        "checkedAt": "2026-10-16"
+      }
+    ],
+    "c18": [
+      {
+        "title": "斧系终局战斗将领",
+        "classes": [
+          "重装步兵",
+          "巨型重甲兵",
+          "战斗将领"
+        ],
+        "when": "Game8 与 GameWith 的最上级职业均为战斗将领；本站默认要塞防线。",
+        "stop": "斧术与力量输出够用即停。",
+        "source": "https://gamewith.jp/fefw/577291",
+        "sourceLabel": "Game8 与 GameWith 共同推荐 · 本站按资格整理",
+        "sources": [
+          "https://game8.jp/fe-banshisenko/816453",
+          "https://gamewith.jp/fefw/577291"
+        ],
+        "checkedAt": "2026-10-16"
+      }
+    ],
+    "c51": [
+      {
+        "title": "铁甲骑兵路线",
+        "classes": [
+          "铁甲骑兵",
+          "英勇骑士"
+        ],
+        "when": "后期加入，Game8 与 GameWith 均推荐铁甲骑兵→英勇骑士。",
+        "stop": "入队后按现有面板接续，不回练初级职业。",
+        "source": "https://gamewith.jp/fefw/577895",
+        "sourceLabel": "Game8 与 GameWith 共同推荐 · 本站按资格整理",
+        "sources": [
+          "https://game8.jp/fe-banshisenko/816909",
+          "https://gamewith.jp/fefw/577895"
+        ],
+        "checkedAt": "2026-10-16"
       }
     ]
   },
@@ -93439,7 +94292,7 @@
       "descriptions": [
         {
           "text": "使「唤暗」的效果范围扩大至周围2格。",
-          "source": "https://appmedia.jp/fe_banshisenkou/80470087"
+          "source": "https://gamewith.jp/fefw/577318"
         }
       ],
       "characters": [
@@ -93456,8 +94309,10 @@
           "condition": "",
           "uncertain": false,
           "description": "使「唤暗」的效果范围扩大至周围2格。",
-          "source": "https://appmedia.jp/fe_banshisenkou/80470087",
+          "source": "https://gamewith.jp/fefw/577318",
           "sources": [
+            "https://gamewith.jp/fefw/577318",
+            "https://game8.jp/fe-banshisenko/816421",
             "https://appmedia.jp/fe_banshisenkou/80470087"
           ],
           "weapon": "",
@@ -93473,7 +94328,7 @@
       "descriptions": [
         {
           "text": "「唤暗」的效果范围变为周围3格",
-          "source": "https://game8.jp/fe-banshisenko/816421"
+          "source": "https://gamewith.jp/fefw/577318"
         }
       ],
       "characters": [
@@ -93490,8 +94345,9 @@
           "condition": "",
           "uncertain": false,
           "description": "「唤暗」的效果范围变为周围3格",
-          "source": "https://game8.jp/fe-banshisenko/816421",
+          "source": "https://gamewith.jp/fefw/577318",
           "sources": [
+            "https://gamewith.jp/fefw/577318",
             "https://game8.jp/fe-banshisenko/816421"
           ],
           "weapon": "",
@@ -93507,7 +94363,7 @@
       "descriptions": [
         {
           "text": "战斗时，若敌人剩余HP在一半以下，命中+20，攻击力+3",
-          "source": "https://game8.jp/fe-banshisenko/816458"
+          "source": "https://gamewith.jp/fefw/577292"
         }
       ],
       "characters": [
@@ -93524,8 +94380,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，若敌人剩余HP在一半以下，命中+20，攻击力+3",
-          "source": "https://game8.jp/fe-banshisenko/816458",
+          "source": "https://gamewith.jp/fefw/577292",
           "sources": [
+            "https://gamewith.jp/fefw/577292",
             "https://game8.jp/fe-banshisenko/816458"
           ],
           "weapon": "",
@@ -93666,7 +94523,7 @@
       "descriptions": [
         {
           "text": "相邻的友军战斗时，有30%几率发动。该友军命中+10",
-          "source": "https://game8.jp/fe-banshisenko/816424"
+          "source": "https://gamewith.jp/fefw/577315"
         }
       ],
       "characters": [
@@ -93683,8 +94540,9 @@
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "相邻的友军战斗时，有30%几率发动。该友军命中+10",
-          "source": "https://game8.jp/fe-banshisenko/816424",
+          "source": "https://gamewith.jp/fefw/577315",
           "sources": [
+            "https://gamewith.jp/fefw/577315",
             "https://game8.jp/fe-banshisenko/816424"
           ],
           "weapon": "",
@@ -93700,7 +94558,7 @@
       "descriptions": [
         {
           "text": "相邻的友军战斗时，有30%几率发动。该友军命中+20",
-          "source": "https://game8.jp/fe-banshisenko/816424"
+          "source": "https://gamewith.jp/fefw/577315"
         }
       ],
       "characters": [
@@ -93717,8 +94575,9 @@
           "condition": "",
           "uncertain": false,
           "description": "相邻的友军战斗时，有30%几率发动。该友军命中+20",
-          "source": "https://game8.jp/fe-banshisenko/816424",
+          "source": "https://gamewith.jp/fefw/577315",
           "sources": [
+            "https://gamewith.jp/fefw/577315",
             "https://game8.jp/fe-banshisenko/816424"
           ],
           "weapon": "",
@@ -94216,7 +95075,7 @@
       "descriptions": [
         {
           "text": "用魔法回复友军时，中量回复自己的HP",
-          "source": "https://game8.jp/fe-banshisenko/816884"
+          "source": "https://gamewith.jp/fefw/577374"
         }
       ],
       "characters": [
@@ -94227,14 +95086,15 @@
         {
           "characterId": "c52",
           "method": "等级／条件",
-          "level": 0,
+          "level": 1,
           "skill": "",
           "rank": "",
           "condition": "",
           "uncertain": false,
           "description": "用魔法回复友军时，中量回复自己的HP",
-          "source": "https://game8.jp/fe-banshisenko/816884",
+          "source": "https://gamewith.jp/fefw/577374",
           "sources": [
+            "https://gamewith.jp/fefw/577374",
             "https://game8.jp/fe-banshisenko/816884"
           ],
           "weapon": "",
@@ -94250,7 +95110,7 @@
       "descriptions": [
         {
           "text": "先攻战斗时，魔法的命中+20",
-          "source": "https://game8.jp/fe-banshisenko/816884"
+          "source": "https://gamewith.jp/fefw/577374"
         }
       ],
       "characters": [
@@ -94261,14 +95121,15 @@
         {
           "characterId": "c52",
           "method": "等级／条件",
-          "level": 0,
+          "level": 1,
           "skill": "",
           "rank": "",
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "先攻战斗时，魔法的命中+20",
-          "source": "https://game8.jp/fe-banshisenko/816884",
+          "source": "https://gamewith.jp/fefw/577374",
           "sources": [
+            "https://gamewith.jp/fefw/577374",
             "https://game8.jp/fe-banshisenko/816884"
           ],
           "weapon": "",
@@ -94748,7 +95609,7 @@
       "descriptions": [
         {
           "text": "击倒敌人时，幸运+2（最多+10）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816435"
+          "source": "https://gamewith.jp/fefw/577304"
         }
       ],
       "characters": [
@@ -94765,8 +95626,9 @@
           "condition": "",
           "uncertain": false,
           "description": "击倒敌人时，幸运+2（最多+10）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816435",
+          "source": "https://gamewith.jp/fefw/577304",
           "sources": [
+            "https://gamewith.jp/fefw/577304",
             "https://game8.jp/fe-banshisenko/816435"
           ],
           "weapon": "",
@@ -95153,11 +96015,11 @@
         {
           "characterId": "c14",
           "method": "等级／条件",
-          "level": 20,
+          "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": false,
+          "condition": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实",
+          "uncertain": true,
           "description": "自己位于无法步行的地形时，攻速+3",
           "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
           "sources": [
@@ -95176,7 +96038,7 @@
       "descriptions": [
         {
           "text": "自己位于无法步行的地形时，攻速+5",
-          "source": "https://game8.jp/fe-banshisenko/816445"
+          "source": "https://gamewith.jp/fefw/577376"
         }
       ],
       "characters": [
@@ -95193,8 +96055,9 @@
           "condition": "",
           "uncertain": false,
           "description": "自己位于无法步行的地形时，攻速+5",
-          "source": "https://game8.jp/fe-banshisenko/816445",
+          "source": "https://gamewith.jp/fefw/577376",
           "sources": [
+            "https://gamewith.jp/fefw/577376",
             "https://game8.jp/fe-banshisenko/816445"
           ],
           "weapon": "",
@@ -95307,7 +96170,7 @@
       "descriptions": [
         {
           "text": "装备「杰尔贝鲁斯」时，攻击变为对飞行特效",
-          "source": "https://game8.jp/fe-banshisenko/816478"
+          "source": "https://gamewith.jp/fefw/577532"
         }
       ],
       "characters": [
@@ -95324,8 +96187,9 @@
           "condition": "暂译名；据 GameWith 特技一览（2026-10-07）",
           "uncertain": false,
           "description": "装备「杰尔贝鲁斯」时，攻击变为对飞行特效",
-          "source": "https://game8.jp/fe-banshisenko/816478",
+          "source": "https://gamewith.jp/fefw/577532",
           "sources": [
+            "https://gamewith.jp/fefw/577532",
             "https://game8.jp/fe-banshisenko/816478"
           ],
           "weapon": "",
@@ -95341,7 +96205,7 @@
       "descriptions": [
         {
           "text": "攻击时，若自己的命中率为100%，攻击力+3",
-          "source": "https://game8.jp/fe-banshisenko/816426"
+          "source": "https://gamewith.jp/fefw/577314"
         }
       ],
       "characters": [
@@ -95358,8 +96222,9 @@
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "攻击时，若自己的命中率为100%，攻击力+3",
-          "source": "https://game8.jp/fe-banshisenko/816426",
+          "source": "https://gamewith.jp/fefw/577314",
           "sources": [
+            "https://gamewith.jp/fefw/577314",
             "https://game8.jp/fe-banshisenko/816426"
           ],
           "weapon": "",
@@ -95375,7 +96240,7 @@
       "descriptions": [
         {
           "text": "攻击时，若自己的命中率为100%，攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816426"
+          "source": "https://gamewith.jp/fefw/577314"
         }
       ],
       "characters": [
@@ -95392,8 +96257,9 @@
           "condition": "",
           "uncertain": false,
           "description": "攻击时，若自己的命中率为100%，攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816426",
+          "source": "https://gamewith.jp/fefw/577314",
           "sources": [
+            "https://gamewith.jp/fefw/577314",
             "https://game8.jp/fe-banshisenko/816426"
           ],
           "weapon": "",
@@ -95892,11 +96758,11 @@
         {
           "characterId": "c37",
           "method": "等级／条件",
-          "level": 20,
+          "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": false,
+          "condition": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实",
+          "uncertain": true,
           "description": "使用弓的战技攻击时，攻击力+2，必杀+5",
           "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
           "sources": [
@@ -95915,7 +96781,7 @@
       "descriptions": [
         {
           "text": "使用弓的战技攻击时，攻击力+4，必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816463"
+          "source": "https://gamewith.jp/fefw/577379"
         }
       ],
       "characters": [
@@ -95932,8 +96798,9 @@
           "condition": "",
           "uncertain": false,
           "description": "使用弓的战技攻击时，攻击力+4，必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816463",
+          "source": "https://gamewith.jp/fefw/577379",
           "sources": [
+            "https://gamewith.jp/fefw/577379",
             "https://game8.jp/fe-banshisenko/816463"
           ],
           "weapon": "",
@@ -95949,7 +96816,7 @@
       "descriptions": [
         {
           "text": "追击时，命中、必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816436"
+          "source": "https://gamewith.jp/fefw/577306"
         }
       ],
       "characters": [
@@ -95966,8 +96833,9 @@
           "condition": "",
           "uncertain": false,
           "description": "追击时，命中、必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816436",
+          "source": "https://gamewith.jp/fefw/577306",
           "sources": [
+            "https://gamewith.jp/fefw/577306",
             "https://game8.jp/fe-banshisenko/816436"
           ],
           "weapon": "",
@@ -95983,7 +96851,7 @@
       "descriptions": [
         {
           "text": "攻击时，有（幸运÷2）%几率发动。给予的伤害变为1.5倍",
-          "source": "https://game8.jp/fe-banshisenko/816434"
+          "source": "https://gamewith.jp/fefw/577307"
         }
       ],
       "characters": [
@@ -96000,8 +96868,9 @@
           "condition": "",
           "uncertain": false,
           "description": "攻击时，有（幸运÷2）%几率发动。给予的伤害变为1.5倍",
-          "source": "https://game8.jp/fe-banshisenko/816434",
+          "source": "https://gamewith.jp/fefw/577307",
           "sources": [
+            "https://gamewith.jp/fefw/577307",
             "https://game8.jp/fe-banshisenko/816434"
           ],
           "weapon": "",
@@ -96031,8 +96900,8 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "据神攻略 wiki《特技》（10/04 更新）",
-          "uncertain": false,
+          "condition": "Game8 列为等级习得技能，未标注习得等级",
+          "uncertain": true,
           "description": "在敌方阶段行动时，有25%几率由自己先攻",
           "source": "https://game8.jp/fe-banshisenko/816882",
           "sources": [
@@ -96051,7 +96920,7 @@
       "descriptions": [
         {
           "text": "后攻攻击时，有5%几率发动。给予的伤害变为1.3倍",
-          "source": "https://game8.jp/fe-banshisenko/816428"
+          "source": "https://gamewith.jp/fefw/577310"
         }
       ],
       "characters": [
@@ -96068,8 +96937,9 @@
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "后攻攻击时，有5%几率发动。给予的伤害变为1.3倍",
-          "source": "https://game8.jp/fe-banshisenko/816428",
+          "source": "https://gamewith.jp/fefw/577310",
           "sources": [
+            "https://gamewith.jp/fefw/577310",
             "https://game8.jp/fe-banshisenko/816428"
           ],
           "weapon": "",
@@ -96085,7 +96955,7 @@
       "descriptions": [
         {
           "text": "后攻攻击时，有10%几率使给予的伤害变为1.3倍",
-          "source": "https://game8.jp/fe-banshisenko/816428"
+          "source": "https://gamewith.jp/fefw/577310"
         }
       ],
       "characters": [
@@ -96102,8 +96972,9 @@
           "condition": "",
           "uncertain": false,
           "description": "后攻攻击时，有10%几率使给予的伤害变为1.3倍",
-          "source": "https://game8.jp/fe-banshisenko/816428",
+          "source": "https://gamewith.jp/fefw/577310",
           "sources": [
+            "https://gamewith.jp/fefw/577310",
             "https://game8.jp/fe-banshisenko/816428"
           ],
           "weapon": "",
@@ -96153,7 +97024,7 @@
       "descriptions": [
         {
           "text": "受到攻击时，有（自己剩余HP）%几率发动。防御力+5",
-          "source": "https://game8.jp/fe-banshisenko/816446"
+          "source": "https://gamewith.jp/fefw/577295"
         }
       ],
       "characters": [
@@ -96170,8 +97041,9 @@
           "condition": "",
           "uncertain": false,
           "description": "受到攻击时，有（自己剩余HP）%几率发动。防御力+5",
-          "source": "https://game8.jp/fe-banshisenko/816446",
+          "source": "https://gamewith.jp/fefw/577295",
           "sources": [
+            "https://gamewith.jp/fefw/577295",
             "https://game8.jp/fe-banshisenko/816446"
           ],
           "weapon": "",
@@ -96187,7 +97059,7 @@
       "descriptions": [
         {
           "text": "使用圣吸战斗时，攻击力+3，必杀+5",
-          "source": "https://game8.jp/fe-banshisenko/816430"
+          "source": "https://gamewith.jp/fefw/577309"
         }
       ],
       "characters": [
@@ -96204,8 +97076,9 @@
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "使用圣吸战斗时，攻击力+3，必杀+5",
-          "source": "https://game8.jp/fe-banshisenko/816430",
+          "source": "https://gamewith.jp/fefw/577309",
           "sources": [
+            "https://gamewith.jp/fefw/577309",
             "https://game8.jp/fe-banshisenko/816430"
           ],
           "weapon": "",
@@ -96221,7 +97094,7 @@
       "descriptions": [
         {
           "text": "使用圣吸战斗时，攻击力+5，必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816430"
+          "source": "https://gamewith.jp/fefw/577309"
         }
       ],
       "characters": [
@@ -96238,8 +97111,9 @@
           "condition": "",
           "uncertain": false,
           "description": "使用圣吸战斗时，攻击力+5，必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816430",
+          "source": "https://gamewith.jp/fefw/577309",
           "sources": [
+            "https://gamewith.jp/fefw/577309",
             "https://game8.jp/fe-banshisenko/816430"
           ],
           "weapon": "",
@@ -96335,7 +97209,7 @@
       "acquisition": [
         {
           "characterId": "c1",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96351,7 +97225,7 @@
         },
         {
           "characterId": "c2",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96367,7 +97241,7 @@
         },
         {
           "characterId": "c8",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96383,7 +97257,7 @@
         },
         {
           "characterId": "c14",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96399,7 +97273,7 @@
         },
         {
           "characterId": "c15",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96415,7 +97289,7 @@
         },
         {
           "characterId": "c22",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96431,7 +97305,7 @@
         },
         {
           "characterId": "c23",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96447,7 +97321,7 @@
         },
         {
           "characterId": "c28",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96463,7 +97337,7 @@
         },
         {
           "characterId": "c32",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96479,7 +97353,7 @@
         },
         {
           "characterId": "c35",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96495,7 +97369,7 @@
         },
         {
           "characterId": "c40",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96511,7 +97385,7 @@
         },
         {
           "characterId": "c42",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96527,7 +97401,7 @@
         },
         {
           "characterId": "c49",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96543,7 +97417,7 @@
         },
         {
           "characterId": "c51",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96559,7 +97433,7 @@
         },
         {
           "characterId": "c55",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "D",
@@ -96635,7 +97509,7 @@
         },
         {
           "text": "【步兵】受到攻击时有3%几率发动，回避+100",
-          "source": "https://game8.jp/fe-banshisenko/816885"
+          "source": "https://gamewith.jp/fefw/577372"
         }
       ],
       "characters": [
@@ -96867,14 +97741,15 @@
         {
           "characterId": "c55",
           "method": "等级／条件",
-          "level": 0,
+          "level": 1,
           "skill": "",
           "rank": "",
           "condition": "",
           "uncertain": false,
           "description": "【步兵】受到攻击时有3%几率发动，回避+100",
-          "source": "https://game8.jp/fe-banshisenko/816885",
+          "source": "https://gamewith.jp/fefw/577372",
           "sources": [
+            "https://gamewith.jp/fefw/577372",
             "https://game8.jp/fe-banshisenko/816885"
           ],
           "weapon": "",
@@ -96918,7 +97793,7 @@
       "descriptions": [
         {
           "text": "使用炽焰技艺后，若自己处于爆燃状态，可再次攻击",
-          "source": "https://game8.jp/fe-banshisenko/816417"
+          "source": "https://gamewith.jp/fefw/577322"
         }
       ],
       "characters": [
@@ -96935,8 +97810,9 @@
           "condition": "",
           "uncertain": false,
           "description": "使用炽焰技艺后，若自己处于爆燃状态，可再次攻击",
-          "source": "https://game8.jp/fe-banshisenko/816417",
+          "source": "https://gamewith.jp/fefw/577322",
           "sources": [
+            "https://gamewith.jp/fefw/577322",
             "https://game8.jp/fe-banshisenko/816417"
           ],
           "weapon": "",
@@ -96952,7 +97828,7 @@
       "descriptions": [
         {
           "text": "【骑兵】移动时，地形的移动消耗-2（最低为1）",
-          "source": "https://game8.jp/fe-banshisenko/816443"
+          "source": "https://gamewith.jp/fefw/577300"
         }
       ],
       "characters": [
@@ -96969,8 +97845,9 @@
           "condition": "",
           "uncertain": false,
           "description": "【骑兵】移动时，地形的移动消耗-2（最低为1）",
-          "source": "https://game8.jp/fe-banshisenko/816443",
+          "source": "https://gamewith.jp/fefw/577300",
           "sources": [
+            "https://gamewith.jp/fefw/577300",
             "https://game8.jp/fe-banshisenko/816443"
           ],
           "weapon": "",
@@ -97028,7 +97905,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
+          "condition": "Game8 列为等级习得技能，未标注习得等级",
           "uncertain": true,
           "description": "计略的次数+1",
           "source": "https://game8.jp/fe-banshisenko/816416",
@@ -97104,7 +97981,7 @@
       "descriptions": [
         {
           "text": "击倒敌人时，速度+1（最多+10）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816427"
+          "source": "https://gamewith.jp/fefw/577312"
         }
       ],
       "characters": [
@@ -97121,8 +97998,9 @@
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "击倒敌人时，速度+1（最多+10）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816427",
+          "source": "https://gamewith.jp/fefw/577312",
           "sources": [
+            "https://gamewith.jp/fefw/577312",
             "https://game8.jp/fe-banshisenko/816427"
           ],
           "weapon": "",
@@ -97138,7 +98016,7 @@
       "descriptions": [
         {
           "text": "击倒敌人时，速度+2（最多+10）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816427"
+          "source": "https://gamewith.jp/fefw/577312"
         }
       ],
       "characters": [
@@ -97155,8 +98033,9 @@
           "condition": "",
           "uncertain": false,
           "description": "击倒敌人时，速度+2（最多+10）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816427",
+          "source": "https://gamewith.jp/fefw/577312",
           "sources": [
+            "https://gamewith.jp/fefw/577312",
             "https://game8.jp/fe-banshisenko/816427"
           ],
           "weapon": "",
@@ -97318,7 +98197,7 @@
       "descriptions": [
         {
           "text": "击倒敌人时，最大HP+2（最多+10）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816885"
+          "source": "https://gamewith.jp/fefw/577372"
         }
       ],
       "characters": [
@@ -97329,14 +98208,15 @@
         {
           "characterId": "c55",
           "method": "等级／条件",
-          "level": 0,
+          "level": 1,
           "skill": "",
           "rank": "",
           "condition": "",
           "uncertain": false,
           "description": "击倒敌人时，最大HP+2（最多+10）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816885",
+          "source": "https://gamewith.jp/fefw/577372",
           "sources": [
+            "https://gamewith.jp/fefw/577372",
             "https://game8.jp/fe-banshisenko/816885"
           ],
           "weapon": "",
@@ -97352,7 +98232,7 @@
       "descriptions": [
         {
           "text": "为周围2格内的友军赋予「精灵之声」",
-          "source": "https://game8.jp/fe-banshisenko/816437"
+          "source": "https://gamewith.jp/fefw/577303"
         }
       ],
       "characters": [
@@ -97369,8 +98249,9 @@
           "condition": "",
           "uncertain": false,
           "description": "为周围2格内的友军赋予「精灵之声」",
-          "source": "https://game8.jp/fe-banshisenko/816437",
+          "source": "https://gamewith.jp/fefw/577303",
           "sources": [
+            "https://gamewith.jp/fefw/577303",
             "https://game8.jp/fe-banshisenko/816437"
           ],
           "weapon": "",
@@ -97498,7 +98379,7 @@
       "acquisition": [
         {
           "characterId": "c27",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "C",
@@ -97514,7 +98395,7 @@
         },
         {
           "characterId": "c34",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "C",
@@ -97640,7 +98521,7 @@
       "descriptions": [
         {
           "text": "战斗时，若自己能够追击，回避+20",
-          "source": "https://game8.jp/fe-banshisenko/816454"
+          "source": "https://gamewith.jp/fefw/577289"
         }
       ],
       "characters": [
@@ -97657,8 +98538,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，若自己能够追击，回避+20",
-          "source": "https://game8.jp/fe-banshisenko/816454",
+          "source": "https://gamewith.jp/fefw/577289",
           "sources": [
+            "https://gamewith.jp/fefw/577289",
             "https://game8.jp/fe-banshisenko/816454"
           ],
           "weapon": "",
@@ -97685,11 +98567,11 @@
         {
           "characterId": "c55",
           "method": "等级／条件",
-          "level": 1,
+          "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": false,
+          "condition": "GameWith 与 Game8 只列加入即有的「连贯圆滑+」；基础版不单独计入",
+          "uncertain": true,
           "description": "自身回避攻击时，自身回复5点HP",
           "source": "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json",
           "sources": [
@@ -97708,7 +98590,7 @@
       "descriptions": [
         {
           "text": "自己回避攻击时，回复自己10点HP",
-          "source": "https://game8.jp/fe-banshisenko/816885"
+          "source": "https://gamewith.jp/fefw/577372"
         }
       ],
       "characters": [
@@ -97719,14 +98601,15 @@
         {
           "characterId": "c55",
           "method": "等级／条件",
-          "level": 0,
+          "level": 1,
           "skill": "",
           "rank": "",
           "condition": "",
           "uncertain": false,
           "description": "自己回避攻击时，回复自己10点HP",
-          "source": "https://game8.jp/fe-banshisenko/816885",
+          "source": "https://gamewith.jp/fefw/577372",
           "sources": [
+            "https://gamewith.jp/fefw/577372",
             "https://game8.jp/fe-banshisenko/816885"
           ],
           "weapon": "",
@@ -97742,7 +98625,7 @@
       "descriptions": [
         {
           "text": "被冥魔的敌人攻击时，有5%几率发动，受到的伤害变为0",
-          "source": "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json"
+          "source": "https://gamewith.jp/fefw/577454"
         }
       ],
       "characters": [
@@ -97759,8 +98642,10 @@
           "condition": "",
           "uncertain": false,
           "description": "被冥魔的敌人攻击时，有5%几率发动，受到的伤害变为0",
-          "source": "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json",
+          "source": "https://gamewith.jp/fefw/577454",
           "sources": [
+            "https://gamewith.jp/fefw/577454",
+            "https://game8.jp/fe-banshisenko/816479",
             "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json"
           ],
           "weapon": "",
@@ -97776,7 +98661,7 @@
       "descriptions": [
         {
           "text": "被冥魔的敌人攻击时，有10%几率发动，受到的伤害变为0",
-          "source": "https://game8.jp/fe-banshisenko/816479"
+          "source": "https://gamewith.jp/fefw/577454"
         }
       ],
       "characters": [
@@ -97793,8 +98678,9 @@
           "condition": "暂译名；据 GameWith 特技一览（2026-10-07）",
           "uncertain": false,
           "description": "被冥魔的敌人攻击时，有10%几率发动，受到的伤害变为0",
-          "source": "https://game8.jp/fe-banshisenko/816479",
+          "source": "https://gamewith.jp/fefw/577454",
           "sources": [
+            "https://gamewith.jp/fefw/577454",
             "https://game8.jp/fe-banshisenko/816479"
           ],
           "weapon": "",
@@ -97877,11 +98763,11 @@
         {
           "characterId": "c13",
           "method": "等级／条件",
-          "level": 20,
+          "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": false,
+          "condition": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实",
+          "uncertain": true,
           "description": "战斗时，若自己的攻击对敌人有效、特效，命中+10",
           "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
           "sources": [
@@ -97900,7 +98786,7 @@
       "descriptions": [
         {
           "text": "战斗时，若自己的攻击对敌人有效、特效，命中+20",
-          "source": "https://game8.jp/fe-banshisenko/816462"
+          "source": "https://gamewith.jp/fefw/577380"
         }
       ],
       "characters": [
@@ -97917,8 +98803,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，若自己的攻击对敌人有效、特效，命中+20",
-          "source": "https://game8.jp/fe-banshisenko/816462",
+          "source": "https://gamewith.jp/fefw/577380",
           "sources": [
+            "https://gamewith.jp/fefw/577380",
             "https://game8.jp/fe-banshisenko/816462"
           ],
           "weapon": "",
@@ -97934,7 +98821,7 @@
       "descriptions": [
         {
           "text": "自己出击时，全体友军不受冥炎影响，处于冥炎中的全体友军受到攻击时伤害减半",
-          "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+          "source": "https://gamewith.jp/fefw/577325"
         }
       ],
       "characters": [
@@ -97948,11 +98835,13 @@
           "level": 5,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "等级据 Gamersky；Game8 列为等级技能但未标注等级，GameWith 无等级表",
           "uncertain": false,
           "description": "自己出击时，全体友军不受冥炎影响，处于冥炎中的全体友军受到攻击时伤害减半",
-          "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
+          "source": "https://gamewith.jp/fefw/577325",
           "sources": [
+            "https://gamewith.jp/fefw/577325",
+            "https://game8.jp/fe-banshisenko/816414",
             "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
           ],
           "weapon": "",
@@ -98024,7 +98913,7 @@
       "descriptions": [
         {
           "text": "战斗后，有（魔力÷2）%几率发动，攻击力+7（进行1次战斗后恢复）",
-          "source": "https://game8.jp/fe-banshisenko/816477"
+          "source": "https://gamewith.jp/fefw/577535"
         }
       ],
       "characters": [
@@ -98041,8 +98930,9 @@
           "condition": "暂译名；据 GameWith 特技一览（2026-10-07）",
           "uncertain": false,
           "description": "战斗后，有（魔力÷2）%几率发动，攻击力+7（进行1次战斗后恢复）",
-          "source": "https://game8.jp/fe-banshisenko/816477",
+          "source": "https://gamewith.jp/fefw/577535",
           "sources": [
+            "https://gamewith.jp/fefw/577535",
             "https://game8.jp/fe-banshisenko/816477"
           ],
           "weapon": "",
@@ -98086,7 +98976,7 @@
       "descriptions": [
         {
           "text": "后攻战斗时，攻击力+3，必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816461"
+          "source": "https://gamewith.jp/fefw/577383"
         }
       ],
       "characters": [
@@ -98103,8 +98993,9 @@
           "condition": "",
           "uncertain": false,
           "description": "后攻战斗时，攻击力+3，必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816461",
+          "source": "https://gamewith.jp/fefw/577383",
           "sources": [
+            "https://gamewith.jp/fefw/577383",
             "https://game8.jp/fe-banshisenko/816461"
           ],
           "weapon": "",
@@ -98637,7 +99528,7 @@
       "descriptions": [
         {
           "text": "相邻的友军必杀回避+20",
-          "source": "https://game8.jp/fe-banshisenko/816420"
+          "source": "https://gamewith.jp/fefw/577319"
         }
       ],
       "characters": [
@@ -98654,8 +99545,9 @@
           "condition": "",
           "uncertain": false,
           "description": "相邻的友军必杀回避+20",
-          "source": "https://game8.jp/fe-banshisenko/816420",
+          "source": "https://gamewith.jp/fefw/577319",
           "sources": [
+            "https://gamewith.jp/fefw/577319",
             "https://game8.jp/fe-banshisenko/816420"
           ],
           "weapon": "",
@@ -98771,11 +99663,11 @@
         {
           "characterId": "c17",
           "method": "等级／条件",
-          "level": 20,
+          "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": false,
+          "condition": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实",
+          "uncertain": true,
           "description": "【骑兵】先攻战斗时，命中+10",
           "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
           "sources": [
@@ -98794,7 +99686,7 @@
       "descriptions": [
         {
           "text": "【骑兵】先攻战斗时，命中+10，攻击力+3",
-          "source": "https://game8.jp/fe-banshisenko/816441"
+          "source": "https://gamewith.jp/fefw/577299"
         }
       ],
       "characters": [
@@ -98811,8 +99703,9 @@
           "condition": "",
           "uncertain": false,
           "description": "【骑兵】先攻战斗时，命中+10，攻击力+3",
-          "source": "https://game8.jp/fe-banshisenko/816441",
+          "source": "https://gamewith.jp/fefw/577299",
           "sources": [
+            "https://gamewith.jp/fefw/577299",
             "https://game8.jp/fe-banshisenko/816441"
           ],
           "weapon": "",
@@ -99889,7 +100782,7 @@
       "descriptions": [
         {
           "text": "根据装备的武器种类，基础能力大幅提升",
-          "source": "https://game8.jp/fe-banshisenko/816431"
+          "source": "https://gamewith.jp/fefw/577308"
         }
       ],
       "characters": [
@@ -99906,8 +100799,9 @@
           "condition": "",
           "uncertain": false,
           "description": "根据装备的武器种类，基础能力大幅提升",
-          "source": "https://game8.jp/fe-banshisenko/816431",
+          "source": "https://gamewith.jp/fefw/577308",
           "sources": [
+            "https://gamewith.jp/fefw/577308",
             "https://game8.jp/fe-banshisenko/816431"
           ],
           "weapon": "",
@@ -99923,7 +100817,7 @@
       "descriptions": [
         {
           "text": "攻击时，有（力量÷2）%几率发动。给予的伤害变为1.5倍",
-          "source": "https://game8.jp/fe-banshisenko/816455"
+          "source": "https://gamewith.jp/fefw/577336"
         }
       ],
       "characters": [
@@ -99940,8 +100834,9 @@
           "condition": "",
           "uncertain": false,
           "description": "攻击时，有（力量÷2）%几率发动。给予的伤害变为1.5倍",
-          "source": "https://game8.jp/fe-banshisenko/816455",
+          "source": "https://gamewith.jp/fefw/577336",
           "sources": [
+            "https://gamewith.jp/fefw/577336",
             "https://game8.jp/fe-banshisenko/816455"
           ],
           "weapon": "",
@@ -99957,7 +100852,7 @@
       "descriptions": [
         {
           "text": "使用战技攻击时，有30%几率发动。给予的伤害变为1.3倍",
-          "source": "https://game8.jp/fe-banshisenko/816425"
+          "source": "https://gamewith.jp/fefw/577313"
         }
       ],
       "characters": [
@@ -99974,8 +100869,9 @@
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "使用战技攻击时，有30%几率发动。给予的伤害变为1.3倍",
-          "source": "https://game8.jp/fe-banshisenko/816425",
+          "source": "https://gamewith.jp/fefw/577313",
           "sources": [
+            "https://gamewith.jp/fefw/577313",
             "https://game8.jp/fe-banshisenko/816425"
           ],
           "weapon": "",
@@ -99991,7 +100887,7 @@
       "descriptions": [
         {
           "text": "使用战技攻击时，有30%几率发动。给予的伤害变为1.5倍",
-          "source": "https://game8.jp/fe-banshisenko/816425"
+          "source": "https://gamewith.jp/fefw/577313"
         }
       ],
       "characters": [
@@ -100008,8 +100904,9 @@
           "condition": "",
           "uncertain": false,
           "description": "使用战技攻击时，有30%几率发动。给予的伤害变为1.5倍",
-          "source": "https://game8.jp/fe-banshisenko/816425",
+          "source": "https://gamewith.jp/fefw/577313",
           "sources": [
+            "https://gamewith.jp/fefw/577313",
             "https://game8.jp/fe-banshisenko/816425"
           ],
           "weapon": "",
@@ -100216,8 +101113,8 @@
         },
         {
           "characterId": "c55",
-          "method": "等级／条件",
-          "level": 0,
+          "method": "技能等级",
+          "level": null,
           "skill": "步兵术",
           "rank": "B",
           "condition": "",
@@ -100464,7 +101361,7 @@
       "descriptions": [
         {
           "text": "自己或敌人攻击时，有幸运%几率发动：自己攻击时命中+15，敌人攻击时回避+15",
-          "source": "https://game8.jp/fe-banshisenko/816883"
+          "source": "https://gamewith.jp/fefw/577342"
         }
       ],
       "characters": [
@@ -100475,14 +101372,15 @@
         {
           "characterId": "c53",
           "method": "等级／条件",
-          "level": 0,
+          "level": 1,
           "skill": "",
           "rank": "",
           "condition": "",
           "uncertain": false,
           "description": "自己或敌人攻击时，有幸运%几率发动：自己攻击时命中+15，敌人攻击时回避+15",
-          "source": "https://game8.jp/fe-banshisenko/816883",
+          "source": "https://gamewith.jp/fefw/577342",
           "sources": [
+            "https://gamewith.jp/fefw/577342",
             "https://game8.jp/fe-banshisenko/816883"
           ],
           "weapon": "",
@@ -100526,7 +101424,7 @@
       "descriptions": [
         {
           "text": "战斗后，必杀+2（发生必杀一击的战斗后恢复原状）",
-          "source": "https://game8.jp/fe-banshisenko/816415"
+          "source": "https://gamewith.jp/fefw/577324"
         }
       ],
       "characters": [
@@ -100543,8 +101441,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗后，必杀+2（发生必杀一击的战斗后恢复原状）",
-          "source": "https://game8.jp/fe-banshisenko/816415",
+          "source": "https://gamewith.jp/fefw/577324",
           "sources": [
+            "https://gamewith.jp/fefw/577324",
             "https://game8.jp/fe-banshisenko/816415"
           ],
           "weapon": "",
@@ -100560,7 +101459,7 @@
       "descriptions": [
         {
           "text": "使用兵器战斗时，命中+30",
-          "source": "https://game8.jp/fe-banshisenko/816883"
+          "source": "https://gamewith.jp/fefw/577342"
         }
       ],
       "characters": [
@@ -100571,14 +101470,15 @@
         {
           "characterId": "c53",
           "method": "等级／条件",
-          "level": 0,
+          "level": 1,
           "skill": "",
           "rank": "",
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "使用兵器战斗时，命中+30",
-          "source": "https://game8.jp/fe-banshisenko/816883",
+          "source": "https://gamewith.jp/fefw/577342",
           "sources": [
+            "https://gamewith.jp/fefw/577342",
             "https://game8.jp/fe-banshisenko/816883"
           ],
           "weapon": "",
@@ -100622,7 +101522,7 @@
       "descriptions": [
         {
           "text": "自己回避攻击的那场战斗中，攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816452"
+          "source": "https://gamewith.jp/fefw/577290"
         }
       ],
       "characters": [
@@ -100639,8 +101539,9 @@
           "condition": "",
           "uncertain": false,
           "description": "自己回避攻击的那场战斗中，攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816452",
+          "source": "https://gamewith.jp/fefw/577290",
           "sources": [
+            "https://gamewith.jp/fefw/577290",
             "https://game8.jp/fe-banshisenko/816452"
           ],
           "weapon": "",
@@ -100684,7 +101585,7 @@
       "descriptions": [
         {
           "text": "战斗时，随机发动「回避+1」「回避+5」「回避+20」「回避+30」中的一种",
-          "source": "https://game8.jp/fe-banshisenko/816429"
+          "source": "https://gamewith.jp/fefw/577311"
         }
       ],
       "characters": [
@@ -100701,8 +101602,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，随机发动「回避+1」「回避+5」「回避+20」「回避+30」中的一种",
-          "source": "https://game8.jp/fe-banshisenko/816429",
+          "source": "https://gamewith.jp/fefw/577311",
           "sources": [
+            "https://gamewith.jp/fefw/577311",
             "https://game8.jp/fe-banshisenko/816429"
           ],
           "weapon": "",
@@ -100899,7 +101801,7 @@
       "descriptions": [
         {
           "text": "与相邻敌人战斗时，攻击力+3。",
-          "source": "https://hyperwiki.jp/fefw/character/ch44/"
+          "source": "https://gamewith.jp/fefw/577316"
         }
       ],
       "characters": [
@@ -100916,8 +101818,10 @@
           "condition": "",
           "uncertain": false,
           "description": "与相邻敌人战斗时，攻击力+3。",
-          "source": "https://hyperwiki.jp/fefw/character/ch44/",
+          "source": "https://gamewith.jp/fefw/577316",
           "sources": [
+            "https://gamewith.jp/fefw/577316",
+            "https://game8.jp/fe-banshisenko/816423",
             "https://hyperwiki.jp/fefw/character/ch44/"
           ],
           "weapon": "",
@@ -100933,7 +101837,7 @@
       "descriptions": [
         {
           "text": "与相邻的敌人战斗时，攻击力+3。且该次攻击时，有30%几率攻击力再+3",
-          "source": "https://game8.jp/fe-banshisenko/816423"
+          "source": "https://gamewith.jp/fefw/577316"
         }
       ],
       "characters": [
@@ -100950,8 +101854,9 @@
           "condition": "",
           "uncertain": false,
           "description": "与相邻的敌人战斗时，攻击力+3。且该次攻击时，有30%几率攻击力再+3",
-          "source": "https://game8.jp/fe-banshisenko/816423",
+          "source": "https://gamewith.jp/fefw/577316",
           "sources": [
+            "https://gamewith.jp/fefw/577316",
             "https://game8.jp/fe-banshisenko/816423"
           ],
           "weapon": "",
@@ -100967,7 +101872,7 @@
       "descriptions": [
         {
           "text": "投掷枪进行攻击时，命中+10、攻击力+2。",
-          "source": "https://appmedia.jp/fe_banshisenkou/80470093"
+          "source": "https://gamewith.jp/fefw/577317"
         }
       ],
       "characters": [
@@ -100984,8 +101889,10 @@
           "condition": "",
           "uncertain": false,
           "description": "投掷枪进行攻击时，命中+10、攻击力+2。",
-          "source": "https://appmedia.jp/fe_banshisenkou/80470093",
+          "source": "https://gamewith.jp/fefw/577317",
           "sources": [
+            "https://gamewith.jp/fefw/577317",
+            "https://game8.jp/fe-banshisenko/816422",
             "https://appmedia.jp/fe_banshisenkou/80470093"
           ],
           "weapon": "",
@@ -101001,7 +101908,7 @@
       "descriptions": [
         {
           "text": "战斗时，若投枪攻击，命中+20，攻击力+4",
-          "source": "https://game8.jp/fe-banshisenko/816422"
+          "source": "https://gamewith.jp/fefw/577317"
         }
       ],
       "characters": [
@@ -101018,8 +101925,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，若投枪攻击，命中+20，攻击力+4",
-          "source": "https://game8.jp/fe-banshisenko/816422",
+          "source": "https://gamewith.jp/fefw/577317",
           "sources": [
+            "https://gamewith.jp/fefw/577317",
             "https://game8.jp/fe-banshisenko/816422"
           ],
           "weapon": "",
@@ -101091,7 +101999,7 @@
       "descriptions": [
         {
           "text": "战斗时，若敌人已受到伤害，攻击力+4，必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816449"
+          "source": "https://gamewith.jp/fefw/577338"
         }
       ],
       "characters": [
@@ -101108,8 +102016,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，若敌人已受到伤害，攻击力+4，必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816449",
+          "source": "https://gamewith.jp/fefw/577338",
           "sources": [
+            "https://gamewith.jp/fefw/577338",
             "https://game8.jp/fe-banshisenko/816449"
           ],
           "weapon": "",
@@ -101144,7 +102053,8 @@
           "description": "战斗时，有10%概率使敌人的必杀回避减半。",
           "source": "https://gamewith.jp/fefw/577287",
           "sources": [
-            "https://gamewith.jp/fefw/577287"
+            "https://gamewith.jp/fefw/577287",
+            "https://game8.jp/fe-banshisenko/816460"
           ],
           "weapon": "",
           "parameters": {}
@@ -101159,7 +102069,7 @@
       "descriptions": [
         {
           "text": "战斗时，有20%几率发动，使敌人的必杀回避减半",
-          "source": "https://game8.jp/fe-banshisenko/816460"
+          "source": "https://gamewith.jp/fefw/577287"
         }
       ],
       "characters": [
@@ -101176,8 +102086,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，有20%几率发动，使敌人的必杀回避减半",
-          "source": "https://game8.jp/fe-banshisenko/816460",
+          "source": "https://gamewith.jp/fefw/577287",
           "sources": [
+            "https://gamewith.jp/fefw/577287",
             "https://game8.jp/fe-banshisenko/816460"
           ],
           "weapon": "",
@@ -101520,7 +102431,7 @@
       "descriptions": [
         {
           "text": "「先发制人」发动后攻击时，有50%几率发动，攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816439"
+          "source": "https://gamewith.jp/fefw/577302"
         }
       ],
       "characters": [
@@ -101537,8 +102448,9 @@
           "condition": "",
           "uncertain": false,
           "description": "「先发制人」发动后攻击时，有50%几率发动，攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816439",
+          "source": "https://gamewith.jp/fefw/577302",
           "sources": [
+            "https://gamewith.jp/fefw/577302",
             "https://game8.jp/fe-banshisenko/816439"
           ],
           "weapon": "",
@@ -101554,7 +102466,7 @@
       "descriptions": [
         {
           "text": "先攻战斗时，攻击力+6，回避-30",
-          "source": "https://game8.jp/fe-banshisenko/816459"
+          "source": "https://gamewith.jp/fefw/577293"
         }
       ],
       "characters": [
@@ -101571,8 +102483,9 @@
           "condition": "",
           "uncertain": false,
           "description": "先攻战斗时，攻击力+6，回避-30",
-          "source": "https://game8.jp/fe-banshisenko/816459",
+          "source": "https://gamewith.jp/fefw/577293",
           "sources": [
+            "https://gamewith.jp/fefw/577293",
             "https://game8.jp/fe-banshisenko/816459"
           ],
           "weapon": "",
@@ -101616,7 +102529,7 @@
       "descriptions": [
         {
           "text": "战斗时，若自己的命中率在75%以上，命中+20",
-          "source": "https://game8.jp/fe-banshisenko/816419"
+          "source": "https://gamewith.jp/fefw/577320"
         }
       ],
       "characters": [
@@ -101633,8 +102546,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，若自己的命中率在75%以上，命中+20",
-          "source": "https://game8.jp/fe-banshisenko/816419",
+          "source": "https://gamewith.jp/fefw/577320",
           "sources": [
+            "https://gamewith.jp/fefw/577320",
             "https://game8.jp/fe-banshisenko/816419"
           ],
           "weapon": "",
@@ -101692,8 +102606,8 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "据神攻略 wiki《特技》（10/04 更新）",
-          "uncertain": false,
+          "condition": "Game8 列为等级习得技能，未标注习得等级",
+          "uncertain": true,
           "description": "先攻战斗时，有25%几率能先于敌人的反击行动",
           "source": "https://game8.jp/fe-banshisenko/816882",
           "sources": [
@@ -101712,7 +102626,7 @@
       "descriptions": [
         {
           "text": "「随心所欲」效果的能力提升变为+20",
-          "source": "https://game8.jp/fe-banshisenko/816440"
+          "source": "https://gamewith.jp/fefw/577301"
         }
       ],
       "characters": [
@@ -101729,8 +102643,9 @@
           "condition": "",
           "uncertain": false,
           "description": "「随心所欲」效果的能力提升变为+20",
-          "source": "https://game8.jp/fe-banshisenko/816440",
+          "source": "https://gamewith.jp/fefw/577301",
           "sources": [
+            "https://gamewith.jp/fefw/577301",
             "https://game8.jp/fe-banshisenko/816440"
           ],
           "weapon": "",
@@ -101746,7 +102661,7 @@
       "descriptions": [
         {
           "text": "用魔法回复友军时，有幸运%几率发动，回复量+30",
-          "source": "https://game8.jp/fe-banshisenko/816456"
+          "source": "https://gamewith.jp/fefw/577288"
         }
       ],
       "characters": [
@@ -101763,8 +102678,9 @@
           "condition": "",
           "uncertain": false,
           "description": "用魔法回复友军时，有幸运%几率发动，回复量+30",
-          "source": "https://game8.jp/fe-banshisenko/816456",
+          "source": "https://gamewith.jp/fefw/577288",
           "sources": [
+            "https://gamewith.jp/fefw/577288",
             "https://game8.jp/fe-banshisenko/816456"
           ],
           "weapon": "",
@@ -101836,7 +102752,7 @@
       "descriptions": [
         {
           "text": "相邻的敌人移动力-5",
-          "source": "https://game8.jp/fe-banshisenko/816453"
+          "source": "https://gamewith.jp/fefw/577291"
         }
       ],
       "characters": [
@@ -101853,8 +102769,9 @@
           "condition": "",
           "uncertain": false,
           "description": "相邻的敌人移动力-5",
-          "source": "https://game8.jp/fe-banshisenko/816453",
+          "source": "https://gamewith.jp/fefw/577291",
           "sources": [
+            "https://gamewith.jp/fefw/577291",
             "https://game8.jp/fe-banshisenko/816453"
           ],
           "weapon": "",
@@ -101870,7 +102787,7 @@
       "descriptions": [
         {
           "text": "攻击时，有20%几率发动。攻击力+7，命中+100",
-          "source": "https://game8.jp/fe-banshisenko/816432"
+          "source": "https://gamewith.jp/fefw/577373"
         }
       ],
       "characters": [
@@ -101887,8 +102804,9 @@
           "condition": "",
           "uncertain": false,
           "description": "攻击时，有20%几率发动。攻击力+7，命中+100",
-          "source": "https://game8.jp/fe-banshisenko/816432",
+          "source": "https://gamewith.jp/fefw/577373",
           "sources": [
+            "https://gamewith.jp/fefw/577373",
             "https://game8.jp/fe-banshisenko/816432"
           ],
           "weapon": "",
@@ -102413,7 +103331,7 @@
       "descriptions": [
         {
           "text": "战斗时，若自己的攻速比敌人高5以上，攻击力+3；高8以上则回避+20",
-          "source": "https://game8.jp/fe-banshisenko/816442"
+          "source": "https://gamewith.jp/fefw/577298"
         }
       ],
       "characters": [
@@ -102430,8 +103348,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，若自己的攻速比敌人高5以上，攻击力+3；高8以上则回避+20",
-          "source": "https://game8.jp/fe-banshisenko/816442",
+          "source": "https://gamewith.jp/fefw/577298",
           "sources": [
+            "https://gamewith.jp/fefw/577298",
             "https://game8.jp/fe-banshisenko/816442"
           ],
           "weapon": "",
@@ -102447,7 +103366,7 @@
       "descriptions": [
         {
           "text": "回复魔法的射程+1",
-          "source": "https://game8.jp/fe-banshisenko/816448"
+          "source": "https://gamewith.jp/fefw/577294"
         }
       ],
       "characters": [
@@ -102464,8 +103383,9 @@
           "condition": "角色专属的 Lv特技（外网归为「装备特技」；+ 版为同一角色更高等级习得）",
           "uncertain": false,
           "description": "回复魔法的射程+1",
-          "source": "https://game8.jp/fe-banshisenko/816448",
+          "source": "https://gamewith.jp/fefw/577294",
           "sources": [
+            "https://gamewith.jp/fefw/577294",
             "https://game8.jp/fe-banshisenko/816448"
           ],
           "weapon": "",
@@ -102481,7 +103401,7 @@
       "descriptions": [
         {
           "text": "回复魔法的射程+2",
-          "source": "https://game8.jp/fe-banshisenko/816448"
+          "source": "https://gamewith.jp/fefw/577294"
         }
       ],
       "characters": [
@@ -102498,8 +103418,9 @@
           "condition": "",
           "uncertain": false,
           "description": "回复魔法的射程+2",
-          "source": "https://game8.jp/fe-banshisenko/816448",
+          "source": "https://gamewith.jp/fefw/577294",
           "sources": [
+            "https://gamewith.jp/fefw/577294",
             "https://game8.jp/fe-banshisenko/816448"
           ],
           "weapon": "",
@@ -102577,11 +103498,11 @@
         {
           "characterId": "c43",
           "method": "等级／条件",
-          "level": 20,
+          "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": false,
+          "condition": "仅 Gamersky 记为 Lv20；GameWith 等级技能表与 Game8 只列 Lv35「+」版，待实机核实",
+          "uncertain": true,
           "description": "自身为「战车兵」时，猛击的次数+1",
           "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
           "sources": [
@@ -102600,7 +103521,7 @@
       "descriptions": [
         {
           "text": "若自己为「战车兵」，猛击的次数+2",
-          "source": "https://game8.jp/fe-banshisenko/816444"
+          "source": "https://gamewith.jp/fefw/577297"
         }
       ],
       "characters": [
@@ -102617,8 +103538,9 @@
           "condition": "",
           "uncertain": false,
           "description": "若自己为「战车兵」，猛击的次数+2",
-          "source": "https://game8.jp/fe-banshisenko/816444",
+          "source": "https://gamewith.jp/fefw/577297",
           "sources": [
+            "https://gamewith.jp/fefw/577297",
             "https://game8.jp/fe-banshisenko/816444"
           ],
           "weapon": "",
@@ -102729,7 +103651,7 @@
       "descriptions": [
         {
           "text": "「天秤之天冠」发动时，攻击力+7",
-          "source": "https://game8.jp/fe-banshisenko/816450"
+          "source": "https://gamewith.jp/fefw/577340"
         }
       ],
       "characters": [
@@ -102746,8 +103668,9 @@
           "condition": "",
           "uncertain": false,
           "description": "「天秤之天冠」发动时，攻击力+7",
-          "source": "https://game8.jp/fe-banshisenko/816450",
+          "source": "https://gamewith.jp/fefw/577340",
           "sources": [
+            "https://gamewith.jp/fefw/577340",
             "https://game8.jp/fe-banshisenko/816450"
           ],
           "weapon": "",
@@ -102763,7 +103686,7 @@
       "descriptions": [
         {
           "text": "以炽焰技艺攻击时有30%几率发动，造成的伤害+10",
-          "source": "https://game8.jp/fe-banshisenko/816416"
+          "source": "https://gamewith.jp/fefw/577323"
         }
       ],
       "characters": [
@@ -102780,8 +103703,9 @@
           "condition": "",
           "uncertain": false,
           "description": "以炽焰技艺攻击时有30%几率发动，造成的伤害+10",
-          "source": "https://game8.jp/fe-banshisenko/816416",
+          "source": "https://gamewith.jp/fefw/577323",
           "sources": [
+            "https://gamewith.jp/fefw/577323",
             "https://game8.jp/fe-banshisenko/816416"
           ],
           "weapon": "",
@@ -102885,7 +103809,7 @@
       "acquisition": [
         {
           "characterId": "c5",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "C",
@@ -102901,7 +103825,7 @@
         },
         {
           "characterId": "c21",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "B",
@@ -102917,7 +103841,7 @@
         },
         {
           "characterId": "c36",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "C",
@@ -102972,7 +103896,7 @@
         },
         {
           "characterId": "c36",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
           "skill": "重装术",
           "rank": "B+",
@@ -103307,7 +104231,7 @@
       "descriptions": [
         {
           "text": "相邻的友军速度+4",
-          "source": "https://game8.jp/fe-banshisenko/816438"
+          "source": "https://gamewith.jp/fefw/577339"
         }
       ],
       "characters": [
@@ -103324,8 +104248,9 @@
           "condition": "",
           "uncertain": false,
           "description": "相邻的友军速度+4",
-          "source": "https://game8.jp/fe-banshisenko/816438",
+          "source": "https://gamewith.jp/fefw/577339",
           "sources": [
+            "https://gamewith.jp/fefw/577339",
             "https://game8.jp/fe-banshisenko/816438"
           ],
           "weapon": "",
@@ -103341,7 +104266,7 @@
       "descriptions": [
         {
           "text": "「集中」发动时，有20%几率发动，回避+10（持续到下一个己方阶段）",
-          "source": "https://game8.jp/fe-banshisenko/816447"
+          "source": "https://gamewith.jp/fefw/577296"
         }
       ],
       "characters": [
@@ -103358,8 +104283,9 @@
           "condition": "",
           "uncertain": false,
           "description": "「集中」发动时，有20%几率发动，回避+10（持续到下一个己方阶段）",
-          "source": "https://game8.jp/fe-banshisenko/816447",
+          "source": "https://gamewith.jp/fefw/577296",
           "sources": [
+            "https://gamewith.jp/fefw/577296",
             "https://game8.jp/fe-banshisenko/816447"
           ],
           "weapon": "",
@@ -103403,7 +104329,7 @@
       "descriptions": [
         {
           "text": "战斗时，若自己的HP为最大值，攻击力+3，回避+10",
-          "source": "https://game8.jp/fe-banshisenko/816451"
+          "source": "https://gamewith.jp/fefw/577378"
         }
       ],
       "characters": [
@@ -103420,8 +104346,9 @@
           "condition": "",
           "uncertain": false,
           "description": "战斗时，若自己的HP为最大值，攻击力+3，回避+10",
-          "source": "https://game8.jp/fe-banshisenko/816451",
+          "source": "https://gamewith.jp/fefw/577378",
           "sources": [
+            "https://gamewith.jp/fefw/577378",
             "https://game8.jp/fe-banshisenko/816451"
           ],
           "weapon": "",
@@ -103471,7 +104398,7 @@
       "descriptions": [
         {
           "text": "「战场剧作家」发动时，该友军命中、必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816433"
+          "source": "https://gamewith.jp/fefw/577305"
         }
       ],
       "characters": [
@@ -103488,8 +104415,9 @@
           "condition": "",
           "uncertain": false,
           "description": "「战场剧作家」发动时，该友军命中、必杀+10",
-          "source": "https://game8.jp/fe-banshisenko/816433",
+          "source": "https://gamewith.jp/fefw/577305",
           "sources": [
+            "https://gamewith.jp/fefw/577305",
             "https://game8.jp/fe-banshisenko/816433"
           ],
           "weapon": "",
@@ -103533,7 +104461,7 @@
       "descriptions": [
         {
           "text": "先攻战斗后，敌人速度-3 ※进行1次战斗后恢复原状",
-          "source": "https://game8.jp/fe-banshisenko/816457"
+          "source": "https://gamewith.jp/fefw/577341"
         }
       ],
       "characters": [
@@ -103550,8 +104478,9 @@
           "condition": "",
           "uncertain": false,
           "description": "先攻战斗后，敌人速度-3 ※进行1次战斗后恢复原状",
-          "source": "https://game8.jp/fe-banshisenko/816457",
+          "source": "https://gamewith.jp/fefw/577341",
           "sources": [
+            "https://gamewith.jp/fefw/577341",
             "https://game8.jp/fe-banshisenko/816457"
           ],
           "weapon": "",
@@ -103794,6 +104723,42 @@
         "class-57",
         "class-58"
       ]
+    },
+    {
+      "id": "ability-6604780e587b",
+      "name": "霸之觉醒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "解放潜藏的战斗能力：命中+50，可再次攻击（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816882"
+        }
+      ],
+      "characters": [
+        "c54"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c54",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "解放潜藏的战斗能力：命中+50，可再次攻击（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816882",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816882"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 6"
+          }
+        }
+      ],
+      "usableClasses": []
     },
     {
       "id": "ability-a56c62c51402",
@@ -104582,6 +105547,43 @@
       ]
     },
     {
+      "id": "ability-7a953ee4cee0",
+      "name": "波动回龙劲",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "打出螺旋炼成之气，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885"
+        }
+      ],
+      "characters": [
+        "c55"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c55",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "打出螺旋炼成之气，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 12",
+            "might": "魔力+15"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
       "id": "ability-d3f48bb990f8",
       "name": "波纹斩",
       "type": "战技",
@@ -105171,6 +106173,43 @@
       ]
     },
     {
+      "id": "ability-bc6d9289a456",
+      "name": "大轰土",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "向远方进行投掷攻击",
+          "source": "https://game8.jp/fe-banshisenko/816416"
+        }
+      ],
+      "characters": [
+        "c5"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c5",
+          "method": "战技习得",
+          "level": 20,
+          "skill": "",
+          "rank": "",
+          "condition": "等级 20 习得",
+          "uncertain": false,
+          "description": "向远方进行投掷攻击",
+          "source": "https://game8.jp/fe-banshisenko/816416",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816416"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 12",
+            "might": "力+28"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
       "id": "ability-9c4f5a65c58f",
       "name": "大强弓",
       "type": "战技",
@@ -105654,6 +106693,42 @@
       ]
     },
     {
+      "id": "ability-bfc05ef52124",
+      "name": "钝化冥咒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "使敌人陷入钝化状态：攻速减半（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883"
+        }
+      ],
+      "characters": [
+        "c53"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c53",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "使敌人陷入钝化状态：攻速减半（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 18"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
       "id": "ability-22f36990371b",
       "name": "二连投掷",
       "type": "战技",
@@ -106072,6 +107147,42 @@
             "hit": "0",
             "crit": "0",
             "range": "1"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-93e9517963f6",
+      "name": "防转冥咒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "使敌人陷入防转状态：防守与魔防互换（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883"
+        }
+      ],
+      "characters": [
+        "c53"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c53",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "使敌人陷入防转状态：防守与魔防互换（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 14"
           }
         }
       ],
@@ -107529,6 +108640,42 @@
       "usableClasses": []
     },
     {
+      "id": "ability-db8953e62867",
+      "name": "攻转冥咒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "使敌人陷入攻转状态：力量与魔力互换（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883"
+        }
+      ],
+      "characters": [
+        "c53"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c53",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "使敌人陷入攻转状态：力量与魔力互换（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 14"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
       "id": "ability-5347fd2c4ad8",
       "name": "光辉耀枪",
       "type": "战技",
@@ -107549,7 +108696,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "加入时即可使用",
           "uncertain": false,
           "description": "以耀眼光芒射穿敌人。对冥魔有效",
           "source": "https://game8.jp/fe-banshisenko/816884",
@@ -107559,7 +108706,7 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 4",
-            "might": "魔力力量+25"
+            "might": "魔力+25"
           }
         }
       ],
@@ -108311,10 +109458,10 @@
         {
           "characterId": "c0",
           "method": "战技习得",
-          "level": null,
+          "level": 10,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "等级 10 习得",
           "uncertain": false,
           "description": "向大范围释放冥炎的范围攻击",
           "source": "https://game8.jp/fe-banshisenko/816414",
@@ -108324,7 +109471,7 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 19",
-            "might": "魔力力量+15"
+            "might": "魔力+15"
           }
         }
       ],
@@ -108351,7 +109498,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "赛奥朵拉篇第1章剧情习得",
           "uncertain": false,
           "description": "劈裂大地进行投掷攻击",
           "source": "https://game8.jp/fe-banshisenko/816416",
@@ -108361,7 +109508,7 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 6",
-            "might": "力量+18"
+            "might": "力+18"
           }
         }
       ],
@@ -108554,6 +109701,80 @@
         "class-57",
         "class-58"
       ]
+    },
+    {
+      "id": "ability-aca571a8fd25",
+      "name": "煌龙破",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "打出体内炼成之劲的范围攻击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885"
+        }
+      ],
+      "characters": [
+        "c55"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c55",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "打出体内炼成之劲的范围攻击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 8",
+            "might": "魔力+5"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-2f1f7ceb6b43",
+      "name": "彗星煌弹",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "贯穿敌人的投掷攻击，必定命中（每张地图仅限使用1次）",
+          "source": "https://game8.jp/fe-banshisenko/816416"
+        }
+      ],
+      "characters": [
+        "c5"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c5",
+          "method": "战技习得",
+          "level": 35,
+          "skill": "",
+          "rank": "",
+          "condition": "等级 35 习得",
+          "uncertain": false,
+          "description": "贯穿敌人的投掷攻击，必定命中（每张地图仅限使用1次）",
+          "source": "https://game8.jp/fe-banshisenko/816416",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816416"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 18",
+            "might": "力+33"
+          }
+        }
+      ],
+      "usableClasses": []
     },
     {
       "id": "ability-10eca91c89c7",
@@ -109911,7 +111132,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "第三部救世篇开始时习得",
           "uncertain": false,
           "description": "以神圣的光之枪贯穿敌人。对冥魔有效",
           "source": "https://game8.jp/fe-banshisenko/816479",
@@ -109921,7 +111142,7 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 24",
-            "might": "力量+25"
+            "might": "力+25"
           }
         }
       ],
@@ -109948,7 +111169,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "第三部救世篇开始时习得",
           "uncertain": false,
           "description": "以神圣的光之枪贯穿敌人。对冥魔特攻，必定命中",
           "source": "https://game8.jp/fe-banshisenko/816479",
@@ -109958,7 +111179,7 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 29",
-            "might": "力量+30"
+            "might": "力+30"
           }
         }
       ],
@@ -110079,7 +111300,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "蕾达篇兴行「制作并展示新商品」完成后习得",
           "uncertain": false,
           "description": "使范围内的敌人陷入混乱状态（每张地图仅限使用1次）",
           "source": "https://game8.jp/fe-banshisenko/816417",
@@ -110244,6 +111465,42 @@
       "usableClasses": []
     },
     {
+      "id": "ability-fd2f6f46100f",
+      "name": "岚之觉醒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "解放潜藏的斗争本能：回避+30，可再次攻击（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816882"
+        }
+      ],
+      "characters": [
+        "c54"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c54",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "解放潜藏的斗争本能：回避+30，可再次攻击（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816882",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816882"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 6"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
       "id": "ability-3f1801cc75f3",
       "name": "冷狂之歌",
       "type": "战技",
@@ -110264,7 +111521,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "蕾达篇兴行「酒馆店主的演出邀请」完成后习得",
           "uncertain": false,
           "description": "范围内友军的防守、魔防+4（持续到下一个己方阶段）",
           "source": "https://game8.jp/fe-banshisenko/816417",
@@ -110274,6 +111531,42 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 7"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-d6324183b1b0",
+      "name": "冷狂之歌+",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "范围内友军的防守、魔防+7（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816417"
+        }
+      ],
+      "characters": [
+        "c7"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c7",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "蕾达篇兴行「制作并展示新商品2」完成后习得",
+          "uncertain": false,
+          "description": "范围内友军的防守、魔防+7（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816417",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 10"
           }
         }
       ],
@@ -110326,6 +111619,42 @@
         "class-52",
         "class-55"
       ]
+    },
+    {
+      "id": "ability-0a600d88ba26",
+      "name": "理之觉醒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "解放潜藏的战斗能力：魔法耐性+10，可再次攻击（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816882"
+        }
+      ],
+      "characters": [
+        "c54"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c54",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "解放潜藏的战斗能力：魔法耐性+10，可再次攻击（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816882",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816882"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 6"
+          }
+        }
+      ],
+      "usableClasses": []
     },
     {
       "id": "ability-c1c0fdbb0c29",
@@ -111371,6 +112700,117 @@
       "usableClasses": []
     },
     {
+      "id": "ability-6fcb67a952b0",
+      "name": "龙破·贰式",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885"
+        }
+      ],
+      "characters": [
+        "c55"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c55",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 4",
+            "might": "魔力+7"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-f6512a6b999f",
+      "name": "龙破·叁式",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885"
+        }
+      ],
+      "characters": [
+        "c55"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c55",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 6",
+            "might": "魔力+10"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-5ef29b08a59b",
+      "name": "龙破·壹式",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885"
+        }
+      ],
+      "characters": [
+        "c55"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c55",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "释放体内炼成之劲的范围攻击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 2",
+            "might": "魔力+3"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
       "id": "ability-fc38237eb7ae",
       "name": "螺旋射击",
       "type": "战技",
@@ -111498,6 +112938,43 @@
         "class-52",
         "class-55"
       ]
+    },
+    {
+      "id": "ability-dbeab7f82a2f",
+      "name": "落星冥焰狱",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "释放命中后炸裂的冥炎，将攻击范围的地形变为「冥炎」（每张地图仅限使用1次）",
+          "source": "https://game8.jp/fe-banshisenko/816414"
+        }
+      ],
+      "characters": [
+        "c0"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c0",
+          "method": "战技习得",
+          "level": 35,
+          "skill": "",
+          "rank": "",
+          "condition": "等级 35 习得",
+          "uncertain": false,
+          "description": "释放命中后炸裂的冥炎，将攻击范围的地形变为「冥炎」（每张地图仅限使用1次）",
+          "source": "https://game8.jp/fe-banshisenko/816414",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816414"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 19",
+            "might": "魔力+20"
+          }
+        }
+      ],
+      "usableClasses": []
     },
     {
       "id": "ability-1b9831597d96",
@@ -112126,10 +113603,10 @@
         {
           "characterId": "c7",
           "method": "战技习得",
-          "level": null,
+          "level": 10,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "等级 10 习得",
           "uncertain": false,
           "description": "为范围内的友军赋予对冥魔有效（持续到下一个己方阶段）",
           "source": "https://game8.jp/fe-banshisenko/816417",
@@ -112232,7 +113709,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "凯伊篇第1章剧情习得",
           "uncertain": false,
           "description": "释放熊熊燃烧的冥炎",
           "source": "https://game8.jp/fe-banshisenko/816414",
@@ -112242,7 +113719,7 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 13",
-            "might": "魔力力量+12"
+            "might": "魔力+12"
           }
         }
       ],
@@ -113631,7 +115108,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "第三部救世篇开始时习得",
           "uncertain": false,
           "description": "以神圣的光之枪贯穿敌人。对冥魔特攻，必定命中",
           "source": "https://game8.jp/fe-banshisenko/816479",
@@ -113641,7 +115118,7 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 35",
-            "might": "力量+30"
+            "might": "力+30"
           }
         }
       ],
@@ -113668,7 +115145,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "序幕降临篇剧情习得",
           "uncertain": false,
           "description": "以神圣的光之枪贯穿敌人。对冥魔有效",
           "source": "https://game8.jp/fe-banshisenko/816479",
@@ -113678,7 +115155,7 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 12",
-            "might": "力量+20"
+            "might": "力+20"
           }
         }
       ],
@@ -113705,7 +115182,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "第三部救世篇开始时习得",
           "uncertain": false,
           "description": "以神圣的光之枪贯穿敌人。对冥魔有效，必定命中",
           "source": "https://game8.jp/fe-banshisenko/816479",
@@ -113715,7 +115192,44 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 18",
-            "might": "力量+25"
+            "might": "力+25"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-3e9ac09fd335",
+      "name": "七星天龙劲",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "以深奥义之力放出的强大一击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885"
+        }
+      ],
+      "characters": [
+        "c55"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c55",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "以深奥义之力放出的强大一击，可破坏障碍物",
+          "source": "https://game8.jp/fe-banshisenko/816885",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816885"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 20",
+            "might": "魔力+20"
           }
         }
       ],
@@ -114389,7 +115903,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "蕾达篇第1章剧情习得",
           "uncertain": false,
           "description": "范围内友军的力量、魔力+4（持续到下一个己方阶段）",
           "source": "https://game8.jp/fe-banshisenko/816417",
@@ -114399,6 +115913,42 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 7"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-3590070e594c",
+      "name": "热狂之歌+",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "范围内友军的力量、魔力+7（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816417"
+        }
+      ],
+      "characters": [
+        "c7"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c7",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "蕾达篇兴行「制作并展示新商品3」完成后习得",
+          "uncertain": false,
+          "description": "范围内友军的力量、魔力+7（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816417",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 10"
           }
         }
       ],
@@ -114559,7 +116109,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "加入时即可使用",
           "uncertain": false,
           "description": "发射耀眼光芒，攻击大范围的敌人",
           "source": "https://game8.jp/fe-banshisenko/816884",
@@ -114569,7 +116119,43 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 11",
-            "might": "魔力力量+20"
+            "might": "魔力+20"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-2bf7bf107d3f",
+      "name": "闪之觉醒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "解放潜藏的战斗能力：物理耐性+10，可再次攻击（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816882"
+        }
+      ],
+      "characters": [
+        "c54"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c54",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "解放潜藏的战斗能力：物理耐性+10，可再次攻击（持续到下一个己方阶段）",
+          "source": "https://game8.jp/fe-banshisenko/816882",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816882"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 6"
           }
         }
       ],
@@ -116071,6 +117657,42 @@
             "hit": "0",
             "crit": "0",
             "range": "1"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-7a53cf6e1ab8",
+      "name": "天女之歌",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "使范围内的友军再行动（每张地图仅限使用1次）",
+          "source": "https://game8.jp/fe-banshisenko/816417"
+        }
+      ],
+      "characters": [
+        "c7"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c7",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "蕾达篇兴行「制作并展示新商品4」完成后习得",
+          "uncertain": false,
+          "description": "使范围内的友军再行动（每张地图仅限使用1次）",
+          "source": "https://game8.jp/fe-banshisenko/816417",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 10"
           }
         }
       ],
@@ -117585,6 +119207,78 @@
         "class-54",
         "class-58"
       ]
+    },
+    {
+      "id": "ability-0553d8c64209",
+      "name": "凶运冥咒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "使敌人陷入凶运状态：幸运减半（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883"
+        }
+      ],
+      "characters": [
+        "c53"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c53",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "使敌人陷入凶运状态：幸运减半（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 9"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-9b865723eba2",
+      "name": "虚脱冥咒",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "使敌人陷入虚脱状态：命中减半（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883"
+        }
+      ],
+      "characters": [
+        "c53"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c53",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "加入时即可使用",
+          "uncertain": false,
+          "description": "使敌人陷入虚脱状态：命中减半（战斗1次或经过1回合后解除）",
+          "source": "https://game8.jp/fe-banshisenko/816883",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816883"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 11"
+          }
+        }
+      ],
+      "usableClasses": []
     },
     {
       "id": "ability-91f6c8fafd0e",
@@ -119386,7 +121080,7 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
+          "condition": "迪托利希篇第4章剧情习得",
           "uncertain": false,
           "description": "转移移动至多3格。移动后可再进行攻击",
           "source": "https://game8.jp/fe-banshisenko/816415",
@@ -119396,6 +121090,79 @@
           "weapon": "圣焰",
           "parameters": {
             "cost": "HP 11"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-f195158b0dd8",
+      "name": "影缝",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "转移移动至多3格。移动后，使周围2格内的敌人陷入无法移动状态",
+          "source": "https://game8.jp/fe-banshisenko/816415"
+        }
+      ],
+      "characters": [
+        "c2"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c2",
+          "method": "战技习得",
+          "level": 20,
+          "skill": "",
+          "rank": "",
+          "condition": "等级 20 习得",
+          "uncertain": false,
+          "description": "转移移动至多3格。移动后，使周围2格内的敌人陷入无法移动状态",
+          "source": "https://game8.jp/fe-banshisenko/816415",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816415"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 15"
+          }
+        }
+      ],
+      "usableClasses": []
+    },
+    {
+      "id": "ability-de50cbdde61d",
+      "name": "影灭",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "转移移动至多5格。移动后，对攻击范围内的敌人造成伤害",
+          "source": "https://game8.jp/fe-banshisenko/816415"
+        }
+      ],
+      "characters": [
+        "c2"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c2",
+          "method": "战技习得",
+          "level": 35,
+          "skill": "",
+          "rank": "",
+          "condition": "等级 35 习得",
+          "uncertain": false,
+          "description": "转移移动至多5格。移动后，对攻击范围内的敌人造成伤害",
+          "source": "https://game8.jp/fe-banshisenko/816415",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816415"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 36",
+            "might": "力+25"
           }
         }
       ],
@@ -120207,6 +121974,42 @@
         "class-58",
         "class-59"
       ]
+    },
+    {
+      "id": "ability-41850fef48a3",
+      "name": "召兽之歌",
+      "type": "战技",
+      "descriptions": [
+        {
+          "text": "召唤魔兽（每张地图仅限使用1次）",
+          "source": "https://game8.jp/fe-banshisenko/816417"
+        }
+      ],
+      "characters": [
+        "c7"
+      ],
+      "classes": [],
+      "acquisition": [
+        {
+          "characterId": "c7",
+          "method": "战技习得",
+          "level": null,
+          "skill": "",
+          "rank": "",
+          "condition": "蕾达篇第8章剧情习得",
+          "uncertain": false,
+          "description": "召唤魔兽（每张地图仅限使用1次）",
+          "source": "https://game8.jp/fe-banshisenko/816417",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816417"
+          ],
+          "weapon": "圣焰",
+          "parameters": {
+            "cost": "HP 15"
+          }
+        }
+      ],
+      "usableClasses": []
     }
   ],
   "abilityAcquisitionFacts": [

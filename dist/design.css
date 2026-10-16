@@ -421,3 +421,45 @@ button.route-identity:focus-visible { outline:2px solid var(--ui-accent); outlin
 .header-brand > span { white-space:nowrap; }
 .main > header { position:sticky; top:0; z-index:30; background:var(--bg); }
 html { scroll-padding-top:80px; }
+
+/* Character skill growth: personal skill plus level-gated skills, shared by cards and dossiers. */
+.card-skill .skill-ladder { list-style: none; display: flex; flex-wrap: wrap; gap: var(--ui-space-1) var(--ui-space-3); margin: var(--ui-space-2) 0 0; padding: var(--ui-space-2) 0 0; border-top: 1px solid color-mix(in srgb, var(--line) 80%, transparent); }
+.card-skill .skill-ladder li { display: inline-flex; align-items: baseline; gap: 6px; min-width: 0; font-size: 13px; line-height: 1.5; }
+.card-skill .skill-ladder li > span { font-size: 11px; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.skill-growth-name { display: inline; min-height: 0; font: inherit; font-weight: 700; color: var(--ink); background: none; border: 0; padding: 0; margin: 0; text-align: left; cursor: default; }
+.skill-growth-track .skill-growth-name { align-self: flex-start; }
+button.skill-growth-name[data-reference-type] { min-height: 0; display: inline; }
+button.skill-growth-name { cursor: help; text-decoration: underline dotted color-mix(in srgb, var(--gold) 70%, transparent); text-underline-offset: 3px; }
+button.skill-growth-name:hover { color: var(--purple); }
+button.skill-growth-name:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; border-radius: 2px; }
+.card-skill .skill-ladder .skill-growth-name { font-weight: 600; }
+
+.skill-growth { margin: var(--ui-space-4) 0 var(--ui-space-6); padding: var(--ui-space-4) var(--ui-space-4) var(--ui-space-2); background: var(--ui-soft); border-radius: var(--ui-radius); }
+.skill-growth-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--ui-space-1) var(--ui-space-3); margin-bottom: var(--ui-space-3); }
+#detail .skill-growth-head h2 { margin: 0; font-size: 17px; }
+.skill-growth-head small, .skill-growth-note, .skill-growth-meta, .skill-growth-upgrade { font-size: 12px; color: var(--muted); }
+.skill-growth-subtitle { margin: var(--ui-space-4) 0 var(--ui-space-2); font-size: 14px; color: var(--ink); }
+.skill-growth-track { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0 var(--ui-space-4); margin: 0; padding: 0; }
+.skill-growth-track > li { position: relative; display: flex; flex-direction: column; gap: 2px; min-width: 0; padding: var(--ui-space-3) 0 var(--ui-space-3); border-top: 1px solid var(--line); }
+.skill-growth-track > li::before { content: ''; position: absolute; left: 0; top: -4px; width: 7px; height: 7px; border-radius: 50%; background: var(--card); border: 1px solid var(--gold); }
+.skill-growth-track > li:first-child::before { background: var(--gold); }
+.skill-growth-stage { display: flex; align-items: baseline; gap: var(--ui-space-2); margin-bottom: 2px; }
+.skill-growth-stage span { font-size: 12px; color: var(--muted); }
+.skill-growth-stage small { font-size: 13px; font-weight: 700; color: var(--purple); font-variant-numeric: tabular-nums; }
+.skill-growth-track .skill-growth-name { font-size: 15px; line-height: 1.45; }
+.skill-growth-track p { margin: 2px 0 0; font-size: 13px; line-height: 1.6; color: var(--ink); }
+@media (max-width: 640px) {
+  .skill-growth { padding: var(--ui-space-3); }
+  .skill-growth-track { grid-template-columns: 1fr; padding-left: var(--ui-space-4); border-left: 1px solid var(--line); margin-left: 3px; }
+  .skill-growth-track > li { border-top: 0; padding: var(--ui-space-1) 0 var(--ui-space-3); }
+  .skill-growth-track > li::before { left: calc(-1 * var(--ui-space-4) - 4px); top: 9px; }
+}
+.detail-hero .detail-hero-meta { display: flex; flex-wrap: wrap; gap: 2px var(--ui-space-3); font-size: 13px; color: var(--muted); }
+.detail-hero .detail-hero-meta span + span::before { content: '·'; margin-right: var(--ui-space-3); color: var(--line); }
+#themeBtn { display: inline-flex; align-items: center; justify-content: center; }
+#themeBtn .theme-icon-sun, body.dark #themeBtn .theme-icon-moon { display: none; }
+body.dark #themeBtn .theme-icon-sun { display: block; }
+/* Callouts read as tinted panels; a thick side stripe added no meaning beyond the tint. */
+.note, .fusion-result, .switch-rule, .choice-reason, .strategy-policy, .source-selected { border-left: 0; border-radius: var(--ui-control-radius); }
+.character-pin-info { border-left: 0; border: 1px solid var(--line); border-radius: var(--ui-control-radius); }
+.heading-meta { display: block; margin: 2px 0 0; font-size: 12px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
