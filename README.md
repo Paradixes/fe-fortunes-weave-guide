@@ -39,6 +39,32 @@ python3 server/catalog_server.py --db data/catalog.sqlite3 --port 18776
 
 服务器配置均为通用示例；部署时填写自己的域名和路径。请勿提交密钥、环境变量、本机状态或真实服务器地址。
 
+## GitHub Actions 自动部署
+
+`.github/workflows/deploy.yml` 在推送到 `main` 时自动发布，也可在 Actions 中手动运行。其他分支不会部署。先校验攻略、计算器、SQLite 和公开文件，再通过 SSH 上传运行文件。服务器核对静态资料与 SQLite 一致后切换版本，重启数据服务，并检查本地 API、网站 HTTPS 和发布版本；失败时恢复原版本。部署串行执行，不中断正在发布的任务。
+
+在仓库 **Settings → Secrets and variables → Actions** 配置以下 Repository secrets：
+
+| Secret | 内容 |
+| --- | --- |
+| `DEPLOY_HOST` | 服务器地址 |
+| `DEPLOY_USER` | SSH 部署用户名 |
+| `DEPLOY_PORT` | SSH 端口，可省略，默认 `22` |
+| `DEPLOY_SSH_KEY` | 专用于 Actions 的完整 SSH 私钥 |
+| `DEPLOY_KNOWN_HOSTS` | 已通过可信连接核实的服务器 SSH 主机公钥记录 |
+
+服务器只需初始化一次，沿用现有 Nginx、HTTPS 与 `fire-emblem-catalog.service`：
+
+1. 将 `server/deploy-release.py` 安装为 root 所有的 `/usr/local/sbin/fe-guide-deploy`，权限 `755`。后续修改接收器时，需单独更新这份服务器文件。
+2. 创建 root 所有、权限 `600` 的 `/etc/fire-emblem-deploy.json`，内容为 `{"site_url":"https://guide.example.com"}`，将示例网址替换成实际网站。该文件留在服务器，不能提交到 Git。
+3. 为 Actions 单独生成 SSH 密钥。将公钥加入部署用户的 `authorized_keys`，前缀使用 `restrict,command="sudo -n /usr/local/sbin/fe-guide-deploy"`。此密钥只接收部署包，不能打开终端或转发端口。不要复用个人私钥。
+4. 部署用户需要能免密码运行该接收器；若没有现成权限，使用 `visudo` 授予 `/usr/local/sbin/fe-guide-deploy` 的专用 sudo 权限。
+5. 填入上表 Secrets，再运行一次工作流。`DEPLOY_KNOWN_HOSTS` 应来自已核实的主机记录，工作流不会在发布时盲目信任 `ssh-keyscan` 结果。
+
+运行文件发布到 `/var/www/fire-emblem/app-releases/<commit>-<run>-<attempt>`，`app-current` 与 `current` 软链接指向当前版本。旧版本保留用于回滚。`/deployment.json` 可核对当前提交；其中只有提交与运行编号，不含服务器或登录信息。此次工作流不更改 Nginx、证书或浏览器本地偏好。
+
+接收器的归档安全、数据一致性与失败回滚测试：`python3 scripts/verify-deploy.py`。
+
 ## 数据修改
 
 唯一数据源是 `data/catalog.sqlite3`；`data/catalog.json` 是构建生成的交换快照。角色、职业、装备及来源、招募记录、事件、斗技场项目、骑宠、地图、培养规划和熟练说明集中在这里。`planning` 保存每名角色的整合方案和实际可培养路线，所有界面使用同一组读取函数。主副职选择理由由共用规则根据这些记录生成。不同路线的推荐允许不同，但同一方案不再由页面脚本覆盖修改。
