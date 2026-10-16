@@ -1,0 +1,34 @@
+.cultivation-decision{margin:18px 0;padding:18px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.cultivation-decision-head{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.cultivation-decision-head h3{margin:4px 0;font-size:18px}
+.cultivation-decision>p{margin:12px 0;color:var(--muted,#756756);font-size:13px;line-height:1.7}
+.direction-count{display:grid;justify-items:center;gap:2px;color:var(--gold);font-size:25px;font-weight:700;white-space:nowrap}
+.direction-count small{font-size:10px;font-weight:400;color:var(--muted,#756756)}
+.cultivation-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.cultivation-metrics>div{display:flex;align-items:flex-start;gap:10px;padding:10px;background:var(--bg,#f7f3eb);border-radius:8px;font-size:12px;line-height:1.65}
+.cultivation-metrics b{color:var(--gold);white-space:nowrap}
+.direction-decision{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:13px}
+.direction-decision .stage-label{margin-right:8px}
+.direction-decision p{margin:7px 0 0;color:var(--muted,#756756);line-height:1.7}
+.profile-table .stage-label{display:inline-flex;margin-bottom:6px}
+@media(max-width:640px){.cultivation-metrics{grid-template-columns:1fr}.cultivation-decision{padding:14px}.cultivation-decision-head h3{font-size:16px}}
+.career-alternatives{margin:24px 0}
+.career-alternatives h3{margin-bottom:8px;font-size:18px}
+.career-alternatives details,.dancer-planning details{border-bottom:1px solid var(--line);padding:8px 0}
+.career-alternatives summary,.dancer-planning summary{min-height:44px;display:list-item;align-content:center;font-weight:600;cursor:pointer}
+.career-alternatives p,.dancer-planning p{font-size:14px;line-height:1.7;margin:8px 0}
+.career-path{display:flex;align-items:center;flex-wrap:wrap;gap:4px;min-width:0}
+.career-path .text-button{min-height:44px;padding:8px;text-decoration:underline;text-underline-offset:4px;white-space:normal}
+.career-path-arrow,.career-path-or{color:var(--muted);font-size:13px}
+.branch-requirements{margin:12px 0;font-size:13px;line-height:1.7}
+.branch-requirements>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;padding:8px 0;border-top:1px solid var(--line)}
+.branch-requirements dd{margin:0;min-width:0}
+.branch-requirements small{display:block;color:var(--muted);font-size:12px}
+.branch-source{display:inline-flex;align-items:center;min-height:44px;font-size:13px;text-underline-offset:4px}
+.dancer-planning{margin:24px 0 32px}
+.dancer-planning>h2{margin-bottom:8px}
+.dancer-candidates article{display:grid;grid-template-columns:minmax(150px,200px) minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.dancer-plan-body{min-width:0}
+.dancer-plan-body small{display:block;color:var(--muted);font-size:13px;line-height:1.7}
+.dancer-planning li{font-size:14px;line-height:1.7;margin:8px 0}
+@media(max-width:640px){.dancer-candidates article{grid-template-columns:1fr;gap:8px}.branch-requirements>div{grid-template-columns:1fr;gap:4px}}

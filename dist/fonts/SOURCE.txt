@@ -1,0 +1,7 @@
+Cinzel Decorative Bold, S/A/B/C glyph subset served by Google Fonts.
+Source project: https://github.com/google/fonts/tree/main/ofl/cinzeldecorative
+Downloaded via Google Fonts CSS API; converted to WOFF with fontTools without altering outlines.
+License: SIL Open Font License 1.1, see OFL.txt.
+Used only by the character-card rating letters. 1,716-byte local subset, font-display: swap.
+
+Berkshire Swash Regular: Google Fonts / google/fonts ofl/berkshireswash. SIL OFL 1.1 (OFL-berkshire.txt). Local SABC subset converted to WOFF; no runtime font service.

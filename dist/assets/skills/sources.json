@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "https://game8.jp/fe-banshisenko/816408",
+    "https://game8.jp/fe-banshisenko/816415",
+    "https://game8.jp/fe-banshisenko/816438"
+  ],
+  "icons": [
+    {
+      "name": "剣術",
+      "file": "sword.webp",
+      "url": "https://img.game8.jp/13007558/bf55166f377706442f37e7f6eb9884de.webp/show",
+      "bytes": 298
+    },
+    {
+      "name": "斧術",
+      "file": "axe.webp",
+      "url": "https://img.game8.jp/13007559/0c13519e0ccd3e7d2ffc02a9765d3e30.webp/show",
+      "bytes": 320
+    },
+    {
+      "name": "格闘術",
+      "file": "fist.webp",
+      "url": "https://img.game8.jp/13007564/9ad582168654a05a01d6057ec16b7f44.webp/show",
+      "bytes": 370
+    },
+    {
+      "name": "弓術",
+      "file": "bow.webp",
+      "url": "https://img.game8.jp/13007573/61bf6411c768e5f4cd880a8ae86f4c03.webp/show",
+      "bytes": 358
+    },
+    {
+      "name": "槍術",
+      "file": "lance.webp",
+      "url": "https://img.game8.jp/13007571/330e102868c6f2fd15a546b53fc83f61.webp/show",
+      "bytes": 254
+    },
+    {
+      "name": "馬術",
+      "file": "horse.webp",
+      "url": "https://img.game8.jp/13007576/e53dde7df56033473d51ce206de8573d.webp/show",
+      "bytes": 304
+    },
+    {
+      "name": "黒魔術",
+      "file": "black-magic.webp",
+      "url": "https://img.game8.jp/13007556/b9ebbf92f619ab66992d27ee53752a83.webp/show",
+      "bytes": 412
+    },
+    {
+      "name": "白魔術",
+      "file": "white-magic.webp",
+      "url": "https://img.game8.jp/13007575/9cfcd74aa7a79f2d2e0dbdfa3e5b5258.webp/show",
+      "bytes": 374
+    },
+    {
+      "name": "重装術",
+      "file": "armor.webp",
+      "url": "https://img.game8.jp/13007565/34d7fdb8ab2274401fca9b636b45024e.webp/show",
+      "bytes": 368
+    },
+    {
+      "name": "飛行術",
+      "file": "flight.webp",
+      "url": "https://img.game8.jp/13007570/d891aa626349b8420803f977112d9806.webp/show",
+      "bytes": 314
+    },
+    {
+      "name": "歩兵術",
+      "file": "infantry.webp",
+      "url": "https://img.game8.jp/13007561/fe2292e7767093bcbfff785aaf19c91a.webp/show",
+      "bytes": 340
+    },
+    {
+      "name": "指揮術",
+      "file": "command.webp",
+      "url": "https://img.game8.jp/13007560/da4adc34b66a81196af5ef709ca57a76.webp/show",
+      "bytes": 294
+    }
+  ]
+}

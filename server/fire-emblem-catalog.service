@@ -1,0 +1,19 @@
+[Unit]
+Description=Fire Emblem read-only SQLite catalogue
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/usr/bin/python3 /var/www/fire-emblem/app-current/server/catalog_server.py --db /var/www/fire-emblem/app-current/data/catalog.sqlite3 --port 18776
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

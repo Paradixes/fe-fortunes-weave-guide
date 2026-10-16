@@ -1,0 +1,83 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert'),path=require('path');
+const root=path.resolve(__dirname,'..'),catalog=JSON.parse(fs.readFileSync(root+'/data/catalog.json'));
+const script=fs.readFileSync(root+'/dist/workbench.js','utf8');
+new vm.Script(script);
+const statNames={hp:'生命',str:'力量',mag:'魔力',spd:'速度',dex:'技巧',def:'防御',res:'魔防',lck:'幸运',cha:'魅力'};
+const stored={};const ctx={DB:catalog.database,CATALOG:catalog,statNames,routes:{'レダ':'蕾达','カイ':'凯伊','ディートリヒ':'迪托利希','セオドラ':'赛奥朵拉'},localStorage:{getItem:k=>stored[k],setItem:(k,v)=>stored[k]=v}};
+vm.createContext(ctx);vm.runInContext(script.slice(0,script.indexOf('function wbOptions')),ctx);
+const run=s=>vm.runInContext(s,ctx);
+run("wbDraft=wbPreset('c7');wbDraft.stages=wbDraft.stages.slice(0,1);wbDraft.stages[0].levels=0");
+assert.equal(run('wbCalculate(wbDraft).stats.str'),catalog.database.characters[7].baseStats.str,'Zero upgrades add no growth');
+run('wbDraft.growth.str=50;wbDraft.stages[0].levels=10');
+assert.equal(run('wbCalculate(wbDraft).stats.str'),13,'Ten 50% growth upgrades add exactly five');
+run("wbDraft.stages[0].classId=wbClass('勇士').id");
+assert.equal(run('wbCalculate(wbDraft).stats.str'),15,'Class growth participates in every actual upgrade');
+run("wbDraft.stages[0].classId=wbClass('轻骑兵').id;wbDraft.stages[0].pet='wild-horse';wbDraft.stages[0].friendship=5;wbDraft.stages[0].multiplier=1");
+const five=run('wbCalculate(wbDraft).stats.spd');run('wbDraft.stages[0].friendship=4');
+assert(Math.abs(five-run('wbCalculate(wbDraft).stats.spd')-.5)<1e-8,'Full friendship contributes five growth points over ten levels');
+run("wbDraft.stages[0].classId=wbClass('剑客').id;wbDraft.stages[0].friendship=5");
+assert(run('wbCalculate(wbDraft).warnings.some(w=>w.includes("不兼容"))'),'Incompatible mount ignored and explained');
+for(const c of catalog.database.characters){ctx.cid=c.id;assert(run('wbCalculate(wbPreset(cid)).level<=99'),'All 63 presets are bounded');}
+run("wbDraft=wbPreset('c60')");assert.equal(run('wbDraft.level'),45);assert.equal(run('wbDraft.stages.length'),1);assert.equal(run('wbCalculate(wbDraft).rows[0].className'),'武僧','Late entry does not invent early training');
+run("wbDraft=wbPreset('c7')");assert.equal(run('wbCalculate(wbDraft).rows[1].start'),5);assert.equal(run('wbCalculate(wbDraft).rows[2].start'),20);assert.equal(run('wbCalculate(wbDraft).rows[3].start'),35);assert.equal(run('wbCalculate(wbDraft).rows[4].start'),45);
+assert.throws(()=>run('wbValidate({characterId:"missing",stages:[]})'));
+run("wbDraft.base.str=NaN;wbDraft.level=999;wbDraft.stages[0].levels=999");assert.equal(run('wbValidate(wbDraft).base.str'),0);assert.equal(run('wbCalculate(wbDraft).level'),99);
+run('wbDraft=wbPreset("c7");wbDraft.notes="自定义备注";wbPersist();wbDraft=null;wbDraft=JSON.parse(localStorage.getItem(WB_STORE)).draft');assert.equal(run('wbState().notes'),'自定义备注','Browser-local round trip preserves custom notes');
+console.log('PASS workbench: zero-upgrade identity, staged expectations, class and compatible friendship growth, all 63 presets, real stage boundaries, late entry, invalid inputs and local persistence.');
+// Multi-route projects preserve route availability and merge independently trained lanes.
+assert.deepEqual(Array.from(run("wbAvailable('c7')")),['レダ']);
+assert.deepEqual(Array.from(run("wbAvailable('c47')")),['カイ','ディートリヒ','セオドラ']);
+assert.deepEqual(Array.from(run("wbAvailable('c60')")),['common']);
+for(const c of catalog.database.characters){ctx.cid=c.id;for(const r of run('wbAvailable(cid)')){ctx.rid=r;assert(run('wbCalculate(wbPreset(cid,rid)).level<=99'));}}
+run("wbDraft=wbPreset('c47');wbDraft.stages[0].reason='我的物理补养理由';var legacy=wbMigrate(wbDraft)");
+assert.equal(run('legacy.lanes[legacy.activeRoute].stages[0].reason'),'我的物理补养理由','Legacy single-line plans migrate without losing node rationale');
+run("var project={version:2,characterId:'c47',name:'双线补养',activeRoute:'カイ',selected:['カイ','ディートリヒ'],lanes:{'カイ':wbPreset('c47','カイ'),'ディートリヒ':wbPreset('c47','ディートリヒ')}}; project.lanes['カイ'].base.str=80; project.lanes['ディートリヒ'].base.mag=90;");
+const merged=run('wbFusion(project)');for(const k of Object.keys(statNames))assert.equal(merged.stats[k],Math.max(...merged.results.map(r=>r.stats[k])),'Fusion takes per-stat max: '+k);
+run("project.selected=['カイ']");assert.equal(run('wbFusion(project).results.length'),1);run('project.selected=[]');assert.equal(run('wbFusion(project).stats'),null,'Empty fusion selection does not produce Infinity');
+run("project.lanes['レダ']=wbPreset('c47')");assert.throws(()=>run('wbProjectValidate(project)'),/不能加入/);run("delete project.lanes['レダ'];project.selected=['カイ','ディートリヒ'];wbProjects.c47=project;wbProject('c47');wbDraft.stages[0].reason='第一线理由';wbProjects.c47.lanes['カイ']=wbValidate(wbDraft);wbPersist()");
+run("wbProjects=JSON.parse(localStorage.getItem(WB_STORE)).projects;wbProject('c47')");assert.equal(run("wbProjects.c47.lanes['カイ'].stages[0].reason"),'第一线理由');assert.equal(run('Object.keys(wbProjects.c47.lanes).length'),2,'Both routes survive reload');
+console.log('PASS v86: 63 character route gates, all route presets, single-lane migration, node reasons, multi-route persistence and per-stat fusion selection.');
+
+run("wbApplied={};wbPersist()");assert.equal(run('Object.keys(wbApplied).length'),0,'Draft persistence does not apply a plan');
+const prior=ctx.localStorage.setItem;ctx.localStorage.setItem=()=>{throw Error('storage full')};
+assert.equal(run('wbSaveApply(project)'),false);assert.equal(run('Object.keys(wbApplied).length'),0,'Failed save cannot apply a plan');ctx.localStorage.setItem=prior;
+assert(run('wbSaveApply(project)'));run("project.lanes['カイ'].stages[0].reason='unsaved change'");assert.notEqual(run("wbApplied.c47.lanes['カイ'].stages[0].reason"),'unsaved change','Applied plans are immutable snapshots of the save action');
+console.log('PASS v88 storage: browsing drafts is not application; successful saves isolate a snapshot and storage failures roll back.');
+
+// Fusion uses only pre-third-part outcomes. Existing full routes retain every node.
+run("var phased=wbPreset('c7','レダ');var originalNodes=phased.stages.map(s=>({classId:s.classId,levels:s.levels,reason:s.reason}));phased.stages.forEach(s=>delete s.phase);var migrated=wbValidate(phased)");
+assert.equal(run("migrated.stages.at(-1).phase"),'third','Third-part classes start a separate continuation');
+assert.equal(run("migrated.stages.slice(0,-1).every(s=>s.phase==='early')"),true);
+assert.equal(run('JSON.stringify(migrated.stages.map(s=>({classId:s.classId,levels:s.levels,reason:s.reason})))'),run('JSON.stringify(originalNodes)'),'Migration preserves all saved classes, level counts and reasons');
+run("var fusionPlan={version:2,characterId:'c47',name:'阶段分离',activeRoute:'カイ',continuationRoute:'ディートリヒ',selected:['カイ','ディートリヒ'],lanes:{'カイ':wbPreset('c47','カイ'),'ディートリヒ':wbPreset('c47','ディートリヒ')}};for(const lane of Object.values(fusionPlan.lanes)){lane.level=20;lane.baselineKnown=true;lane.base=Object.fromEntries(WB_KEYS.map(k=>[k,10]));lane.growth=Object.fromEntries(WB_KEYS.map(k=>[k,0]));lane.stages=[{classId:wbClass('平民').id,levels:40,reason:'融合前培养到60级',phase:'early'},{classId:wbClass('战斗将领').id,levels:10,reason:'第三部再练',phase:'third'}];}fusionPlan.lanes['ディートリヒ'].base.mag=20;fusionPlan.lanes['カイ'].stages[1].levels=25;var separated=wbFusion(fusionPlan)");
+assert.equal(run('separated.level'),60,'Pre-fusion training is not capped at level 45');
+assert.equal(run('separated.stats.str'),10,'Post-fusion class growth is excluded from each earlier branch');
+assert.equal(run('separated.stats.mag'),20,'Pre-fusion results still merge per stat');
+assert.equal(run('separated.continuation.level'),70,'Only the explicitly selected third-part continuation is applied');
+assert.equal(run('separated.continuation.stats.str'),12.5,'Ten 25% third-part upgrades are applied once');
+assert.equal(run("wbCalculate(fusionPlan.lanes['カイ']).level"),85,'Unselected continuation is preserved in its original lane');
+run("var upperContinuation=wbPreset('c7');upperContinuation.stages[3].phase='third';upperContinuation=wbValidate(upperContinuation)");
+assert.equal(run('wbSplitPlan(upperContinuation).early.length'),3,'An upper class can explicitly be trained after fusion');
+assert.equal(run('wbCalculate(upperContinuation,{untilThird:true}).level'),35,'Phase boundary, not class rank alone, controls the earlier result');
+run("var elephant=wbPreset('c7');elephant.stages[3].classId=wbClass('战象兵').id;elephant.stages.forEach(s=>delete s.phase)");
+assert.equal(run('wbSplitPlan(elephant).early.length'),3,'Third-part-only upper classes also start continuation');
+run("fusionPlan.lanes['カイ'].baselineKnown=false;fusionPlan.lanes['カイ'].base.str=999;var unknownResult=wbCalculate(fusionPlan.lanes['カイ']);var partialFusion=wbFusion(fusionPlan)");
+assert.equal(run('unknownResult.baselineKnown'),false);assert.equal(run('unknownResult.gains.str'),6.25,'Growth deltas do not depend on unconfirmed starting values');
+assert.equal(run('partialFusion.stats.str'),10,'An unconfirmed baseline never dominates absolute fusion');
+assert.deepEqual(Array.from(run('partialFusion.excluded')),['カイ']);
+run("fusionPlan.lanes['ディートリヒ'].baselineKnown=false");assert.equal(run('wbFusion(fusionPlan).stats'),null,'All unknown baselines yield no absolute fusion');assert.equal(run('wbFusion(fusionPlan).continuation'),null,'No absolute third-part result is invented without a fusion baseline');
+run("var late=wbMigrate(wbPreset('c60','common'));late.lanes.common.baselineKnown=false;var lateResult=wbFusion(late)");
+assert.equal(run('lateResult.continuation.baselineKnown'),false,'Late characters keep growth-only continuation until their baseline is confirmed');
+assert.equal(run('wbProjectValidate(fusionPlan).continuationRoute'),'ディートリヒ','Continuation choice survives validation and saving');
+console.log('PASS phase-aware fusion: legacy preservation, arbitrary pre-fusion levels, third-part growth once, upper-class phase boundary, unknown-baseline exclusion and late-character deltas.');
+
+run("var nonLedaDance=wbPreset('c8','レダ');nonLedaDance.stages[2].classId=wbClass('舞者').id;nonLedaDance.stages.forEach(s=>delete s.phase)");
+assert.equal(run('wbValidate(nonLedaDance).stages[2].phase'),'third','Dance belongs to the third part for every non-Leda character');
+run("var ledaDance=wbPreset('c7','レダ');ledaDance.stages.forEach(s=>delete s.phase)");
+assert.equal(run("wbValidate(ledaDance).stages.find(s=>wbClass(s.classId).cn==='舞者').phase"),'early','Leda retains her exclusive earlier dance class');
+assert.equal(run("wbPreset('c62','common').stages.length"),1,'Fixed-class late recruit has one actual class stage');
+assert.equal(run("wbClass(wbPreset('c62','common').stages[0].classId).cn"),'战斗将领');
+run("var impossible=wbMigrate(wbPreset('c62','common'));impossible.lanes.common.stages[0].classId=wbClass('神乐神将').id;var beforeInvalid=JSON.stringify(wbApplied)");
+assert.equal(run('wbSaveApply(impossible)'),false,'Unreachable class plans cannot silently become guide recommendations');
+assert(run('wbLastError.includes("不能转职")'));assert.equal(run('JSON.stringify(wbApplied)'),run('beforeInvalid'),'Rejected application leaves prior applied data intact');
+console.log('PASS reachability: character-aware dance phase, fixed-class preset and rejected impossible application.');

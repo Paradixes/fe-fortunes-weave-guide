@@ -1,0 +1,28 @@
+/* Reading hierarchy and consistent interaction targets. */
+.arena-direction-table td {vertical-align:top;}
+.training-more {margin-top:12px;}
+.training-more summary,.map-more-types summary,.card-loadout summary {cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:13px;color:var(--purple);}
+.card-loadout {width:100%;}
+.card-loadout[open] summary {margin-bottom:8px;}
+.char-card .char-name {font-size:18px;font-weight:700;text-align:left;line-height:1.4;}
+.char-card .char-person-copy small,.char-card .loadout-row > small,.growth-strength,.choice-reason,.card-career-label,.arena-goal-list {font-size:13px;}
+.char-card .card-skill p,.map-result p {font-size:14px;line-height:1.65;}
+.rating-help {min-width:44px;min-height:44px;width:44px;height:44px;}
+.chip-list button,.mini-career-link,.arena-direction-table .text-button,.arena-direction-table a {min-height:44px;display:inline-flex;align-items:center;padding-block:8px;}
+.sidebar-collapsed #pageNav a {position:relative;}
+@media(min-width:901px) { .sidebar-collapsed #pageNav a:hover::after,.sidebar-collapsed #pageNav a:focus-visible::after {content:attr(aria-label);position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%);white-space:nowrap;background:var(--card);color:var(--text);padding:8px 12px;border:1px solid var(--line);border-radius:6px;z-index:20;font-size:13px;} }
+.map-more-types {flex-basis:100%;}
+.map-viewport .pin-label:not(.searched-label) {display:none;}
+.map-viewport.map-detail-zoom .pin-label,.map-viewport .pin:hover .pin-label,.map-viewport .pin:focus-visible .pin-label {display:block;}
+.map-more-types .segments {flex-wrap:wrap;}
+.inventory-entry {margin:0 0 16px;}
+.empty-state {padding:24px 0;font-size:14px;}
+@media(max-width:700px) { .action-chip,.gear-chip,.loadout-row .chip-list button {font-size:13px;} }
+.card-loadout.disclosure {margin:8px 0;border:0;background:transparent;box-shadow:none;}
+.card-loadout .disclosure-heading {padding:8px 0;min-height:44px;font-size:13px;background:transparent;}
+.card-loadout .disclosure-body {padding:4px 0 8px;}
+.training-more.disclosure {margin:12px 0 0;}
+.map-more-types.disclosure {width:100%;margin:0;border:0;background:transparent;}
+.map-more-types .disclosure-heading {padding-inline:0;}
+button[data-reference-type],button[data-class],button[data-gear],button[data-character-gear],button[data-character-material] {min-height:44px;}
+.route-cover {overflow-anchor:none;}

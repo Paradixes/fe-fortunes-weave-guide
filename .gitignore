@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+
+# Local configuration and credentials
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pub
+*.p12
+*.pfx
+*.keystore
+.ssh/
+.openai/
+.impeccable/
+.codex/
+# Dependencies, local runtime and generated delivery packages
+.venv/
+node_modules/
+*.sqlite3-wal
+*.sqlite3-shm
+dist/deploy/

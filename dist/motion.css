@@ -1,0 +1,54 @@
+:root { --motion-ease: cubic-bezier(0.16, 1, 0.3, 1); }
+.route-hero-picker button { position: relative; }
+[role="tablist"] { position: relative; }
+.tab-motion-marker {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: var(--gold);
+  transform-origin: left;
+  pointer-events: none;
+}
+.sidebar { transition: width 220ms var(--motion-ease), padding 220ms var(--motion-ease); }
+.main { transition: margin-left 220ms var(--motion-ease); }
+@media (max-width: 900px) {
+  .sidebar { transition: none; }
+  .sidebar-collapsed .sidebar {
+    display: block;
+    height: 0;
+    width: auto;
+    padding-block: 0;
+    border: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  .sidebar-moving .sidebar { visibility: visible; overflow: hidden; }
+}
+.route-motion-marker {
+  position: absolute;
+  height: 3px;
+  bottom: -1px;
+  left: 0;
+  background: var(--ui-accent);
+  transform-origin: left;
+  pointer-events: none;
+}
+.favorite, .segments button, .route-content-tabs button {
+  transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
+}
+.disclosure-heading i { transition: transform 160ms var(--motion-ease); }
+.disclosure-heading[aria-expanded="true"] i { transform: rotate(180deg); }
+dialog[open] { animation: detail-focus 220ms var(--motion-ease); }
+dialog[open]::backdrop { animation: backdrop-focus 180ms ease-out; }
+@keyframes detail-focus {
+  from { opacity: 0.75; transform: scale(0.985); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes backdrop-focus { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .sidebar, .main { transition: none; }
+  dialog[open], dialog[open]::backdrop { animation: none; }
+  .disclosure-heading i { transition: none; }
+  .favorite, .segments button, .route-content-tabs button { transition-duration: 80ms; }
+  html { scroll-behavior: auto; }
+}
