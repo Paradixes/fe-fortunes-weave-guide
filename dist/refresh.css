@@ -544,3 +544,59 @@ body .equipment-library.equipment-ledger{display:block!important;container-type:
 @keyframes loading-shimmer{0%{background-position:120% 0}100%{background-position:-120% 0}}
 @keyframes loading-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.loading-block,.loading-weave path,.loading-skeleton i{animation:none}.loading-weave path{stroke-dasharray:none}}
+
+/* v100 统一检索面板：搜索栏 + 标签/胶囊筛选行 + 胶囊下拉 */
+.fdeck{margin:18px 0 18px;padding:14px 16px 12px;border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:0 1px 0 color-mix(in srgb,var(--line) 40%,transparent)}
+.fdeck.fdeck-solo{padding:12px 14px}
+.fdeck .search-bar{margin:0}
+.fdeck .search-bar .search{max-width:none}
+.fdeck .search{height:42px;background:var(--bg)}
+.fdeck-rows{display:grid;gap:8px;margin-top:12px;padding-top:12px;border-top:1px dashed color-mix(in srgb,var(--line) 85%,transparent)}
+.fdeck-row{display:grid;grid-template-columns:76px minmax(0,1fr);align-items:start;gap:12px}
+.fdeck-label{display:flex;align-items:center;gap:5px;min-height:32px;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--muted);white-space:nowrap}
+.fdeck-ctrl{min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+.fdeck .segments,.fdeck .tier-filters{display:flex;flex-wrap:wrap;gap:6px;margin:0}
+.fdeck .segments button,.fdeck .tier-filters [data-tier]{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 13px;border:1px solid transparent;border-radius:999px;background:color-mix(in srgb,var(--tint) 55%,transparent);color:var(--ink);font:inherit;font-size:13px;font-weight:500;line-height:1;white-space:nowrap;cursor:pointer;box-shadow:none;transition:background .16s,border-color .16s,color .16s}
+.fdeck .segments button:hover,.fdeck .tier-filters [data-tier]:hover{background:var(--tint);border-color:color-mix(in srgb,var(--purple) 22%,var(--line))}
+.fdeck .segments button :is(small,span),.fdeck .segments button>span{margin:0;opacity:1;font-size:11px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.fdeck .segments button.active,.fdeck .tier-filters [data-tier].active{background:color-mix(in srgb,var(--purple) 12%,var(--card));border-color:color-mix(in srgb,var(--purple) 55%,transparent);color:var(--purple);font-weight:650}
+.fdeck .segments button.active :is(small,span){color:color-mix(in srgb,var(--purple) 75%,var(--muted))}
+.fdeck .segments button:focus-visible{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 28%,transparent)}
+.fdeck .tier-dot{display:inline-block;width:9px;height:9px;border-radius:50%;padding:0;background:var(--rating-bg);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--rating-ink) 30%,transparent)}
+.fdeck .rating-help{width:18px;height:18px;min-width:18px;margin:0;padding:0;border:0;background:transparent;color:var(--muted);display:inline-grid;place-items:center;cursor:pointer}
+.fdeck .rating-help>span{width:16px;height:16px;font-size:10px}
+.fdeck .rating-help:hover{color:var(--purple)}
+.fdeck .class-sort{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--muted)}
+.fdeck .class-sort select{appearance:none;-webkit-appearance:none;min-height:32px;height:32px;min-width:132px;padding:0 32px 0 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23827269' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center;color:var(--ink);font:inherit;font-size:13px;font-weight:500;cursor:pointer}
+.fdeck .class-sort select:hover{border-color:color-mix(in srgb,var(--purple) 30%,var(--line))}
+.fdeck .class-sort select:focus-visible{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 22%,transparent)}
+.fdeck .class-sort select:has(option:checked:not([value=""])){border-color:color-mix(in srgb,var(--purple) 55%,transparent);color:var(--purple);background-color:color-mix(in srgb,var(--purple) 8%,var(--bg))}
+.dark .fdeck{background:#2a231f;box-shadow:none}
+.dark .fdeck .search{background:#231e19}
+.dark .fdeck .segments button,.dark .fdeck .tier-filters [data-tier]{background:#342b25;color:var(--ink)}
+.dark .fdeck .segments button:hover,.dark .fdeck .tier-filters [data-tier]:hover{background:#3d322a}
+.dark .fdeck .segments button.active,.dark .fdeck .tier-filters [data-tier].active{background:color-mix(in srgb,var(--purple) 18%,#2a231f);color:var(--purple)}
+.dark .fdeck .class-sort select{background-color:#231e19;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23baa99b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")}
+@media (max-width:640px){
+ .fdeck{padding:12px;border-radius:12px}
+ .fdeck-row{grid-template-columns:1fr;gap:6px}
+ .fdeck-label{min-height:0}
+ .fdeck-ctrl{gap:8px}
+ .fdeck .segments,.fdeck .tier-filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -12px;padding:0 12px 2px;mask-image:linear-gradient(90deg,#000 calc(100% - 24px),transparent)}
+ .fdeck .segments::-webkit-scrollbar{display:none}
+ .fdeck-selects .fdeck-ctrl{display:grid;grid-template-columns:1fr 1fr}
+ .fdeck .class-sort{display:grid;gap:4px}
+ .fdeck .class-sort select{min-width:0;width:100%}
+}
+@media (prefers-reduced-motion:reduce){.fdeck .segments button{transition:none}}
+.fdeck .roster-search-row{padding:0;border:0;margin:0}
+.fdeck .segments button,.fdeck .tier-filters [data-tier]{font-weight:500}
+/* 分段切换（路线、档案、视图）：选中项为浮起的卡片，而非整块深色填充 */
+.route-tabs,.dossier-tabs,.view-tabs{background:color-mix(in srgb,var(--tint) 60%,var(--bg));border-color:color-mix(in srgb,var(--line) 70%,transparent)}
+.route-tabs button,.dossier-tabs button,.view-tabs button{color:var(--muted);font-weight:500;transition:background .16s,color .16s,box-shadow .16s}
+.route-tabs button:hover,.dossier-tabs button:hover,.view-tabs button:hover{border-color:transparent;color:var(--ink);background:color-mix(in srgb,var(--card) 50%,transparent)}
+.route-tabs button.active,.dossier-tabs button.active,.view-tabs button.active,.route-tabs .active{background:var(--card);border-color:color-mix(in srgb,var(--purple) 28%,var(--line));color:var(--purple);font-weight:650;box-shadow:0 1px 2px #352b2714,0 2px 8px #352b270d}
+.dark .route-tabs,.dark .dossier-tabs,.dark .view-tabs{background:#231e19}
+.dark .route-tabs button.active,.dark .dossier-tabs button.active,.dark .view-tabs button.active,.dark .route-tabs .active{background:#3a2f28;color:var(--purple);box-shadow:none}
+.fdeck .tier-dot.rating-S{background:#e8836a}.fdeck .tier-dot.rating-S-{background:#ecaa4e}.fdeck .tier-dot.rating-A\+{background:#e3c065}.fdeck .tier-dot.rating-A{background:#d8bd8a}.fdeck .tier-dot.rating-A-{background:#c9b9a3}.fdeck .tier-dot.rating-B{background:#b3a698}.fdeck .tier-dot.rating-C{background:#d9d0c6}
+.fdeck .tier-dot{box-shadow:none}
