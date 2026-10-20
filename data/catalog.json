@@ -3694,8 +3694,8 @@
           "giant"
         ],
         "growthNote": "力量50、速度20，优先单击／战技伤害与生存，不把低速角色强行养成高速追击手。",
-        "rating": "B",
-        "ratingReason": "高生命和力量、装备斧再加力量，适合单击与近战补位；明确物理用途才投入。",
+        "rating": "C",
+        "ratingReason": "高生命和力量、装斧再加力量，可当单击与近战补位；魔防10%、个人技能主动时回避-30，各外站多放在最低档，仅在明确物理用途时投入。",
         "alias": "",
         "baseStats": {
           "hp": 34,
@@ -6127,8 +6127,8 @@
           "giant"
         ],
         "growthNote": "力量45、防御40，枪斧飞行适性支持机动；物理地面与飞行属性重叠，第二线须有独立能力收益。",
-        "rating": "A-",
-        "ratingReason": "枪斧飞行与指挥适性，能兼顾机动和反击；是条件明确的前排备选。",
+        "rating": "B",
+        "ratingReason": "枪斧飞行与指挥适性兼顾机动和反击，但成长没有突出项，个人技能只在敌阶段首战按概率先攻；第三部的价值主要在圣枪，作为条件明确的备选。",
         "alias": "",
         "baseStats": {
           "hp": 28,
@@ -7584,8 +7584,8 @@
           "agaze_bow"
         ],
         "growthNote": "力量45、防御40、弓步兵适性，足以单线发挥远程作用；骑飞苦手不应为了统一机动强转。",
-        "rating": "A+",
-        "ratingReason": "早入队，力量45%、物防40%及贴身命中增伤支持重装前排；弓系为队伍需要远程时的分支。",
+        "rating": "A",
+        "ratingReason": "早入队，力量45%、物防40%及贴身命中加成支持重装前排；斧命中不稳、魔防25%，多数外站放在 B 档，按前排职责评 A。",
         "alias": "",
         "baseStats": {
           "hp": 29,
@@ -8251,8 +8251,8 @@
           "giant"
         ],
         "growthNote": "防御45、力量40、速度30，优先可靠承伤与武器伤害；马术不是擅长，不默认投入全套骑乘。",
-        "rating": "A+",
-        "ratingReason": "后攻命中与35级怒涛反击强化适合重装反击；按防线职责评价，不因低速度压低推荐。",
+        "rating": "A",
+        "ratingReason": "后攻命中与35级敌阶段必杀强化适合重装反击，装盾斧时物理几乎打不动；魔防与机动是短板，按防线职责评 A。",
         "alias": "",
         "baseStats": {
           "hp": 33,
@@ -9905,8 +9905,8 @@
           "swift"
         ],
         "growthNote": "速度60、力量35，力量影响伤害和负重；再养同样高速剑职未必新增有用成果。",
-        "rating": "A",
-        "ratingReason": "速度60%、回避后增伤与交换位置防御奖励，适合战术机动与回避型物理。",
+        "rating": "A-",
+        "ratingReason": "速度60%、回避后增伤与互换位置后防御加成，适合战术机动与回避型物理；力量35%需要高威力武器或中途补力量，火力上限一般。",
         "alias": "",
         "baseStats": {
           "hp": 27,
@@ -10492,8 +10492,8 @@
           "thunder"
         ],
         "growthNote": "速度极低且不能转骑飞，按治疗／承伤用，不按追击输出标准强练力量或速度。",
-        "rating": "S-",
-        "ratingReason": "双防60%、力量60%与防御＋5，治疗自回和专属远程技艺使其兼顾守线、恢复及攻坚；低速不抹掉这些独特职责。",
+        "rating": "S",
+        "ratingReason": "双防60%、力量60%与防御＋5，治疗自回和专属远程技艺使其兼顾守线、恢复及攻坚；四家外站均列最高档。速度10%、技巧20%导致命中偏低，需要补命中。",
         "alias": "奥尔赫尔",
         "baseStats": {
           "hp": 22,
@@ -11086,8 +11086,8 @@
           "giant"
         ],
         "growthNote": "敌阶段首次减伤服务承伤，后续战斗仍需物防魔防；枪斧重装适性比骑乘模板更贴合。",
-        "rating": "A+",
-        "ratingReason": "敌方首次战斗确定减伤、物防50%与技巧50%，是后期可靠防线补入。",
+        "rating": "A",
+        "ratingReason": "敌方首次战斗确定减伤、物防50%与技巧50%，后期可补防线；魔防低、只有首战减伤，需要队友保护侧翼，按防线职责评 A。",
         "alias": "",
         "baseStats": null,
         "baseLevel": null,
@@ -74707,8 +74707,8 @@
         "referenceCheckedAt": "2026-10-16"
       },
       "c10": {
-        "rating": "B",
-        "reason": "高生命和力量、装备斧再加力量，适合单击与近战补位；明确物理用途才投入。",
+        "rating": "C",
+        "reason": "高生命和力量、装斧再加力量，可当单击与近战补位；魔防10%、个人技能主动时回避-30，各外站多放在最低档，仅在明确物理用途时投入。",
         "limits": "速度20%、魔防10%且命中需要补；主动增伤特技伴随回避代价，不能当回避坦。",
         "investment": "斧伤害、命中与承伤优先，不用完整剑系速度线强行改造低速定位。",
         "previousRating": "B",
@@ -74718,7 +74718,9 @@
           "https://game8.jp/fe-banshisenko/816563",
           "https://gamewith.jp/fefw/575250",
           "https://appmedia.jp/fe_banshisenkou/80380957",
-          "https://game8.jp/fe-banshisenko/816459"
+          "https://game8.jp/fe-banshisenko/816459",
+          "https://al-gest.com/fe-banshisenkou/fe-banshisenkou-saikyo/",
+          "https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-tier-list-best-characters-ranked-for-every-route/"
         ],
         "referenceRatings": {
           "Altema": "C",
@@ -74731,7 +74733,7 @@
           ],
           "Game8": "C"
         },
-        "referenceCheckedAt": "2026-10-16"
+        "referenceCheckedAt": "2026-10-20"
       },
       "c11": {
         "rating": "A+",
@@ -75115,8 +75117,8 @@
         "referenceCheckedAt": "2026-10-16"
       },
       "c25": {
-        "rating": "A-",
-        "reason": "枪斧飞行与指挥适性，能兼顾机动和反击；是条件明确的前排备选。",
+        "rating": "B",
+        "reason": "枪斧飞行与指挥适性兼顾机动和反击，但成长没有突出项，个人技能只在敌阶段首战按概率先攻；第三部的价值主要在圣枪，作为条件明确的备选。",
         "limits": "敌方首次战斗先攻仅50%，血印低概率，不能依靠它们保证无伤；部分路线不可用。",
         "investment": "一条物理机动方向，先补主武器；未能承受反击时不以概率先攻代替防护。",
         "previousRating": "A-",
@@ -75126,7 +75128,9 @@
           "https://game8.jp/fe-banshisenko/816563",
           "https://gamewith.jp/fefw/575250",
           "https://appmedia.jp/fe_banshisenkou/80380957",
-          "https://game8.jp/fe-banshisenko/816450"
+          "https://game8.jp/fe-banshisenko/816450",
+          "https://al-gest.com/fe-banshisenkou/fe-banshisenkou-saikyo/",
+          "https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-tier-list-best-characters-ranked-for-every-route/"
         ],
         "referenceRatings": {
           "Altema": "C",
@@ -75139,7 +75143,7 @@
           ],
           "Game8": "C"
         },
-        "referenceCheckedAt": "2026-10-16"
+        "referenceCheckedAt": "2026-10-20"
       },
       "c26": {
         "rating": "A-",
@@ -75359,11 +75363,11 @@
         "referenceCheckedAt": "2026-10-16"
       },
       "c34": {
-        "rating": "A+",
-        "reason": "早入队，力量45%、物防40%及贴身命中增伤支持重装前排；弓系为队伍需要远程时的分支。",
+        "rating": "A",
+        "reason": "早入队，力量45%、物防40%及贴身命中加成支持重装前排；斧命中不稳、魔防25%，多数外站放在 B 档，按前排职责评 A。",
         "limits": "不擅长马飞与法术，不能套骑弓通用模板；近距离奖励不等于能无限承受反击。",
         "investment": "先建立物理防线与贴身输出；枪／斧按现有资格选，物防够用后补实际魔防缺口。队内已有重装才改弓，不默认两份完整主养。",
-        "previousRating": "A",
+        "previousRating": "A+",
         "id": "c34",
         "sources": [
           "https://altema.jp/febansisenkou/saikyochara",
@@ -75371,7 +75375,9 @@
           "https://gamewith.jp/fefw/575250",
           "https://appmedia.jp/fe_banshisenkou/80380957",
           "https://game8.jp/fe-banshisenko/816423",
-          "https://www.bilibili.com/video/BV1pYpo64EvB/"
+          "https://www.bilibili.com/video/BV1pYpo64EvB/",
+          "https://al-gest.com/fe-banshisenkou/fe-banshisenkou-saikyo/",
+          "https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-tier-list-best-characters-ranked-for-every-route/"
         ],
         "referenceRatings": {
           "Altema": "B",
@@ -75384,7 +75390,7 @@
           ],
           "Game8": "B"
         },
-        "referenceCheckedAt": "2026-10-16"
+        "referenceCheckedAt": "2026-10-20"
       },
       "c35": {
         "rating": "B",
@@ -75468,11 +75474,11 @@
         "referenceCheckedAt": "2026-10-16"
       },
       "c38": {
-        "rating": "A+",
-        "reason": "后攻命中与35级怒涛反击强化适合重装反击；按防线职责评价，不因低速度压低推荐。",
+        "rating": "A",
+        "reason": "后攻命中与35级敌阶段必杀强化适合重装反击，装盾斧时物理几乎打不动；魔防与机动是短板，按防线职责评 A。",
         "limits": "速度30%、魔防25%，低力量限制反击效率；中后入队不默认替换已养好的剧情坦克。",
         "investment": "一条重装与主武器方向，缺第二防线或偏好时投入；已有可靠防线可少养。",
-        "previousRating": "A-",
+        "previousRating": "A+",
         "id": "c38",
         "sources": [
           "https://altema.jp/febansisenkou/saikyochara",
@@ -75480,7 +75486,9 @@
           "https://gamewith.jp/fefw/575250",
           "https://appmedia.jp/fe_banshisenkou/80380957",
           "https://game8.jp/fe-banshisenko/816461",
-          "https://www.bilibili.com/video/BV1pYpo64EvB/"
+          "https://www.bilibili.com/video/BV1pYpo64EvB/",
+          "https://al-gest.com/fe-banshisenkou/fe-banshisenkou-saikyo/",
+          "https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-tier-list-best-characters-ranked-for-every-route/"
         ],
         "referenceRatings": {
           "Altema": "B",
@@ -75493,7 +75501,7 @@
           ],
           "Game8": "C"
         },
-        "referenceCheckedAt": "2026-10-16"
+        "referenceCheckedAt": "2026-10-20"
       },
       "c39": {
         "rating": "A-",
@@ -75739,18 +75747,20 @@
         "referenceCheckedAt": "2026-10-16"
       },
       "c48": {
-        "rating": "A",
-        "reason": "速度60%、回避后增伤与交换位置防御奖励，适合战术机动与回避型物理。",
+        "rating": "A-",
+        "reason": "速度60%、回避后增伤与互换位置后防御加成，适合战术机动与回避型物理；力量35%需要高威力武器或中途补力量，火力上限一般。",
         "limits": "力量35%，增伤需先成功回避；速度高不保证反击安全，魔防25%。",
         "investment": "一条剑弓方向，先补稳定伤害和关键功能；无新成果不跨线重复主养。",
-        "previousRating": "A+",
+        "previousRating": "A",
         "id": "c48",
         "sources": [
           "https://altema.jp/febansisenkou/saikyochara",
           "https://game8.jp/fe-banshisenko/816563",
           "https://gamewith.jp/fefw/575250",
           "https://appmedia.jp/fe_banshisenkou/80380957",
-          "https://game8.jp/fe-banshisenko/816452"
+          "https://game8.jp/fe-banshisenko/816452",
+          "https://al-gest.com/fe-banshisenkou/fe-banshisenkou-saikyo/",
+          "https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-tier-list-best-characters-ranked-for-every-route/"
         ],
         "referenceRatings": {
           "Altema": "B",
@@ -75763,7 +75773,7 @@
           ],
           "Game8": "B"
         },
-        "referenceCheckedAt": "2026-10-16"
+        "referenceCheckedAt": "2026-10-20"
       },
       "c49": {
         "rating": "A",
@@ -75848,18 +75858,20 @@
         "referenceCheckedAt": "2026-10-16"
       },
       "c52": {
-        "rating": "S-",
-        "reason": "双防60%、力量60%与防御＋5，治疗自回和专属远程技艺使其兼顾守线、恢复及攻坚；低速不抹掉这些独特职责。",
+        "rating": "S",
+        "reason": "双防60%、力量60%与防御＋5，治疗自回和专属远程技艺使其兼顾守线、恢复及攻坚；四家外站均列最高档。速度10%、技巧20%导致命中偏低，需要补命中。",
         "limits": "后期入队、速度10%、技巧20%，禁骑飞且常驻重装；怕特效与高命中法术连击，不能只看双防。",
         "investment": "白魔与生存先完成，专属远程攻击按实际魔力补；物理斧仅在命中和伤害足够时兼用。",
-        "previousRating": "A",
+        "previousRating": "S-",
         "id": "c52",
         "sources": [
           "https://altema.jp/febansisenkou/saikyochara",
           "https://game8.jp/fe-banshisenko/816563",
           "https://gamewith.jp/fefw/575250",
           "https://appmedia.jp/fe_banshisenkou/80380957",
-          "https://game8.jp/fe-banshisenko/816884"
+          "https://game8.jp/fe-banshisenko/816884",
+          "https://al-gest.com/fe-banshisenkou/fe-banshisenkou-saikyo/",
+          "https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-tier-list-best-characters-ranked-for-every-route/"
         ],
         "referenceRatings": {
           "Altema": "SS",
@@ -75872,7 +75884,7 @@
           ],
           "Game8": "SS"
         },
-        "referenceCheckedAt": "2026-10-16"
+        "referenceCheckedAt": "2026-10-20"
       },
       "c53": {
         "rating": "S-",
@@ -75957,8 +75969,8 @@
         "referenceCheckedAt": "2026-10-16"
       },
       "c56": {
-        "rating": "A+",
-        "reason": "敌方首次战斗确定减伤、物防50%与技巧50%，是后期可靠防线补入。",
+        "rating": "A",
+        "reason": "敌方首次战斗确定减伤、物防50%与技巧50%，后期可补防线；魔防低、只有首战减伤，需要队友保护侧翼，按防线职责评 A。",
         "limits": "减伤只覆盖敌方阶段首次战斗，不能给整回合所有战斗都算半伤；法术防护仍需补。",
         "investment": "先确定承伤顺序和防线职责，一条枪斧或重装补缺，不为面板重复养四线。",
         "previousRating": "A+",
@@ -75968,7 +75980,9 @@
           "https://game8.jp/fe-banshisenko/816563",
           "https://gamewith.jp/fefw/575250",
           "https://appmedia.jp/fe_banshisenkou/80380957",
-          "https://game8.jp/fe-banshisenko/816877"
+          "https://game8.jp/fe-banshisenko/816877",
+          "https://al-gest.com/fe-banshisenkou/fe-banshisenkou-saikyo/",
+          "https://www.keengamer.com/articles/guides/fire-emblem-fortunes-weave-tier-list-best-characters-ranked-for-every-route/"
         ],
         "referenceRatings": {
           "Altema": "B",
@@ -75981,7 +75995,7 @@
           ],
           "Game8": "B"
         },
-        "referenceCheckedAt": "2026-10-16"
+        "referenceCheckedAt": "2026-10-20"
       },
       "c57": {
         "rating": "B",
@@ -76146,7 +76160,7 @@
         "referenceCheckedAt": "2026-10-16"
       }
     },
-    "referenceCheckedAt": "2026-10-16"
+    "referenceCheckedAt": "2026-10-20"
   },
   "dataResearch": {
     "checkedAt": "2026-10-15",
@@ -77136,6 +77150,17 @@
         "stop": "重装D、马D、枪或斧A及神殿解锁，不重练整套重装。",
         "source": "https://www.bilibili.com/video/BV1pYpo64EvB/?t=471",
         "sourceLabel": "视频观点 · 本站按资格整理"
+      },
+      {
+        "title": "罗西纳特战车",
+        "classes": [
+          "战车兵",
+          "荣光骑士"
+        ],
+        "when": "想放大专属坐骑罗西纳特的成长加成；社区实测战车兵中坐骑修正翻倍。",
+        "stop": "马术与枪达到荣光骑士资格后转回骑兵主线；翻倍幅度以实机为准。",
+        "source": "https://ngabbs.com/read.php?tid=47724363",
+        "sourceLabel": "NGA 玩家讨论 · 本站按资格整理"
       }
     ],
     "c21": [
@@ -77191,6 +77216,17 @@
         "stop": "核对武器与被动追击规则，不宣称全部猛击触发被动。",
         "source": "https://www.bilibili.com/video/BV1pYpo64EvB/?t=1241",
         "sourceLabel": "视频观点 · 本站按资格整理"
+      },
+      {
+        "title": "进攻斧手",
+        "classes": [
+          "勇士",
+          "战斗将领"
+        ],
+        "when": "队伍缺近战火力，想用战斗将领的斧命中补正与精通伤害。",
+        "stop": "斧命中能稳定打中目标、取得精通后停止；仍需要防线时回到重装方案。",
+        "source": "https://altema.jp/febansisenkou/daito",
+        "sourceLabel": "Altema、redfreshet · 本站按资格整理"
       }
     ],
     "c23": [
@@ -77246,6 +77282,17 @@
         "stop": "弓资格与实战伤害够用即停。",
         "source": "https://www.bilibili.com/video/BV1pYpo64EvB/?t=1715",
         "sourceLabel": "视频观点 · 本站按资格整理"
+      },
+      {
+        "title": "进攻斧手",
+        "classes": [
+          "勇士",
+          "战斗将领"
+        ],
+        "when": "队伍缺近战火力，想用战斗将领的斧命中补正与精通伤害。",
+        "stop": "斧命中能稳定打中目标、取得精通后停止；仍需要防线时回到重装方案。",
+        "source": "https://redfreshet.com/fe-banshisenkou-recommended-class/",
+        "sourceLabel": "Altema、redfreshet · 本站按资格整理"
       }
     ],
     "c49": [
@@ -77431,6 +77478,58 @@
           "https://gamewith.jp/fefw/577895"
         ],
         "checkedAt": "2026-10-16"
+      }
+    ],
+    "c55": [
+      {
+        "title": "魔法拳",
+        "classes": [
+          "武僧"
+        ],
+        "when": "想利用格斗术与魔力，近身打物理判定的雷暴等技能。",
+        "stop": "格斗术与白魔达到武僧资格即可，不另练中级。",
+        "source": "https://redfreshet.com/game-tools/fe-banshisenko/characters/char_056/",
+        "sourceLabel": "redfreshet、游民星空 · 本站按资格整理"
+      }
+    ],
+    "c50": [
+      {
+        "title": "高阶墓志铭",
+        "classes": [
+          "高阶墓志铭"
+        ],
+        "when": "想同时吃剑与马术，并利用高阶墓志铭的生命、力量、速度修正。",
+        "stop": "剑与马术达到资格即可，入队已是上级职业，不回练低阶。",
+        "source": "https://redfreshet.com/game-tools/fe-banshisenko/characters/kiryk/",
+        "sourceLabel": "Altema、redfreshet · 本站按资格整理"
+      }
+    ],
+    "c48": [
+      {
+        "title": "高速剑系",
+        "classes": [
+          "剑客",
+          "侍道",
+          "刀剑将领"
+        ],
+        "when": "更看重追击与回避而非每击伤害，或已有高威力剑补火力。",
+        "stop": "剑达到刀剑将领资格即停；力量缺口用武器补，不再叠速度。",
+        "source": "https://gamewith.jp/fefw/577290",
+        "sourceLabel": "Altema、GameWith、KeenGamer · 本站按资格整理"
+      }
+    ],
+    "c44": [
+      {
+        "title": "高速剑系",
+        "classes": [
+          "剑客",
+          "侍道",
+          "刀剑将领"
+        ],
+        "when": "更看重追击与回避而非每击伤害，或已有高威力剑补火力。",
+        "stop": "剑达到刀剑将领资格即停；力量缺口用武器补，不再叠速度。",
+        "source": "https://altema.jp/febansisenkou/luludiya",
+        "sourceLabel": "Altema、GameWith、KeenGamer · 本站按资格整理"
       }
     ]
   },

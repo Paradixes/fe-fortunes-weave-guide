@@ -122,3 +122,113 @@
     });
   });
 })();
+
+// v95: directional route changes, staggered entrances and number count-up.
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const ease = 'cubic-bezier(0.16, 1, 0.3, 1)';
+  const canAnimate = () => !reduced.matches && !!Element.prototype.animate;
+  const routeOrder = () => [...CATALOG.presentation.heroes.map(h => h.route), '救世篇'];
+  const ENTRANCE = '.char-card, .role-coverage > *, .plan-dashboard > article, .class-ledger > .class-reference, .map-result, .wb-route-picker > button, .career-graph > .career-node, .skill-card, .equipment-card';
+  let lastView = '';
+
+  function stagger(root, limit = 14) {
+    if (!canAnimate() || !root) return;
+    const items = [...root.querySelectorAll(ENTRANCE)].filter(el => {
+      const r = el.getBoundingClientRect();
+      return r.height > 0 && r.bottom > 0 && r.top < innerHeight + 80;
+    }).slice(0, limit);
+    items.forEach((el, i) => el.animate([
+      { opacity: 0, transform: 'translateY(14px)' },
+      { opacity: 1, transform: 'none' }
+    ], { duration: 380, delay: 40 + i * 32, easing: ease, fill: 'backwards' }));
+  }
+
+  function countUp(root) {
+    if (!canAnimate()) return;
+    root.querySelectorAll('.plan-dashboard article b, .plan-dashboard article strong').forEach(el => {
+      const target = Number(el.textContent.trim());
+      if (!Number.isInteger(target) || target < 2 || target > 999) return;
+      const start = performance.now(), duration = 520;
+      const step = now => {
+        const t = Math.min(1, (now - start) / duration), eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = String(Math.round(target * eased));
+        if (t < 1 && el.isConnected) requestAnimationFrame(step); else el.textContent = String(target);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+
+  const baseRender = render;
+  render = function () {
+    const result = baseRender.apply(this, arguments);
+    const view = location.hash + '|' + (typeof routeGuideView === 'undefined' ? '' : routeGuideView);
+    if (view !== lastView) {
+      const first = !lastView;
+      lastView = view;
+      if (!first) requestAnimationFrame(() => stagger(document.querySelector('#content')));
+    }
+    return result;
+  };
+
+  const routeSelect = selectGuideRoute;
+  selectGuideRoute = function (nextRoute) {
+    const order = routeOrder(), from = order.indexOf(route), to = order.indexOf(nextRoute);
+    const changed = nextRoute !== route;
+    routeSelect(nextRoute);
+    lastView = location.hash + '|' + (typeof routeGuideView === 'undefined' ? '' : routeGuideView);
+    if (!changed || !canAnimate()) return;
+    const dir = to > from ? 1 : -1;
+    const art = document.querySelector('.route-art-panel .hero-art, .reunion-art');
+    art?.animate([
+      { opacity: 0, transform: `translateX(${dir * 56}px) scale(.97)` },
+      { opacity: 1, transform: 'none' }
+    ], { duration: 520, easing: ease });
+    [...document.querySelectorAll('.route-cover-copy > *')].forEach((el, i) => el.animate([
+      { opacity: 0, transform: `translateX(${dir * 24}px)` },
+      { opacity: 1, transform: 'none' }
+    ], { duration: 420, delay: 60 + i * 50, easing: ease, fill: 'backwards' }));
+    document.querySelector('.route-hero-picker .active > img')?.animate([
+      { transform: 'scale(.86)' }, { transform: 'scale(1.1)', offset: .55 }, { transform: 'scale(1)' }
+    ], { duration: 420, easing: ease });
+    const panel = document.querySelector('#route-guide-panel');
+    panel?.querySelector('.page-title')?.animate([
+      { opacity: 0, transform: 'translateY(8px)' }, { opacity: 1, transform: 'none' }
+    ], { duration: 360, delay: 80, easing: ease, fill: 'backwards' });
+    requestAnimationFrame(() => { stagger(panel); countUp(panel || document); });
+  };
+
+  // Content tabs inside a route: slide the new panel in from the tab's direction.
+  document.addEventListener('click', event => {
+    const tab = event.target.closest('[data-guide-view], [data-view-tab]');
+    if (!tab || !canAnimate()) return;
+    const group = tab.closest('[role="tablist"], .segments');
+    const tabs = group ? [...group.querySelectorAll('[data-guide-view], [data-view-tab]')] : [];
+    const before = tabs.findIndex(t => t.getAttribute('aria-selected') === 'true' || t.classList.contains('active'));
+    const after = tabs.indexOf(tab);
+    if (before < 0 || after < 0 || before === after) return;
+    const dir = after > before ? 1 : -1;
+    requestAnimationFrame(() => {
+      const panel = tab.dataset.guideView ? document.getElementById('guide-content-' + tab.dataset.guideView)
+        : document.getElementById(document.querySelector(`[data-view-tab="${CSS.escape(tab.dataset.viewTab)}"][aria-selected="true"]`)?.getAttribute('aria-controls') || '');
+      panel?.animate([
+        { opacity: 0, transform: `translateX(${dir * 18}px)` }, { opacity: 1, transform: 'none' }
+      ], { duration: 300, easing: ease });
+      if (panel) stagger(panel, 9);
+    });
+  }, true);
+
+  // Reveal cards that scroll into view the first time.
+  if ('IntersectionObserver' in window) {
+    const seen = new WeakSet();
+    const io = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting || seen.has(entry.target)) return;
+      seen.add(entry.target); io.unobserve(entry.target);
+      if (!canAnimate() || entry.boundingClientRect.top < innerHeight * .4) return;
+      entry.target.animate([{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }], { duration: 420, easing: ease });
+    }), { rootMargin: '0px 0px -40px 0px' });
+    const watch = () => document.querySelectorAll('#content .char-card, #content .class-tier-group').forEach(el => { if (!seen.has(el)) io.observe(el); });
+    new MutationObserver(() => requestAnimationFrame(watch)).observe(document.querySelector('#content'), { childList: true });
+    watch();
+  }
+})();
