@@ -17552,7 +17552,7 @@
       "type": "剑",
       "phase": "第一部",
       "rank": "剑术 E",
-      "purpose": "低门槛对冥府装备，长期保留",
+      "purpose": "第三部主力剑：战斗中使敌人冥府加护失效，剑术E即可装备，长期保留。",
       "effect": "使敌人的冥府加护失效。威力8 / 重量3 / 射程1。",
       "method": "蕾达第8章预选战：谭利穆恩赠送。；帝都商会：拉冬狗鱼3，兑换。；欧西利斯村武器店：3000金币，库存1。；凯伊 / 迪托利希 / 赛奥朵拉路线部分任务奖励；请查来源页对应任务。；部分武具箱随机开出；不是稳定获取路径。；欧西利斯村（库存1）；高级武具箱（打开随机开出，网友反馈）；帝都鞑古席翁（交出 拉冬狗鱼×3） · 旺达尔商会兑换",
       "materials": [
@@ -17629,7 +17629,9 @@
       "referenceSources": [
         "https://game8.jp/fe-banshisenko/819533",
         "https://fire-emblem-fw.site/items.html",
-        "https://gamewith.jp/fefw/578467"
+        "https://gamewith.jp/fefw/578467",
+        "https://appmedia.jp/fe_banshisenkou/80386114",
+        "https://game8.jp/fe-banshisenko/822235"
       ],
       "referenceIds": [
         "wp-8"
@@ -17694,7 +17696,7 @@
       "type": "剑",
       "phase": "第一部",
       "rank": "剑术 C",
-      "purpose": "西洛可的魔力输出备选",
+      "purpose": "普通攻击按魔力结算、射程1–2，用来处理高守备与重装；适合魔力不低的剑手（如西洛可），低魔力纯物理剑手收益有限。",
       "effect": "按魔力造成伤害，射程1–2。不能当成力量剑。",
       "method": "帝都商会：太阳果10 + 尤那魅1；第一部第8章起，库存1。；凯伊篇：盛托利翁训练任务「应对巨大敌人的战法」，声望6以上，奖励。；后期招募杰斯塔 / 努佐携带装备；来源页面按第12章状态确认。；高级武具箱随机开出：王都美盖拉 / 王都布雷斯顿道具店或帝都夜间安娜商店购箱；第12章资料已确认，不能当作早期保证。；高级武具箱（打开随机开出，网友反馈）；帝都鞑古席翁（交出 太阳果×10 + 尤那魅×1） · 旺达尔商会兑换；南侧通道（+3）",
       "materials": [
@@ -17780,7 +17782,9 @@
       "referenceSources": [
         "https://game8.jp/fe-banshisenko/819521",
         "https://fire-emblem-fw.site/items.html",
-        "https://gamewith.jp/fefw/578276"
+        "https://gamewith.jp/fefw/578276",
+        "https://appmedia.jp/fe_banshisenkou/80386114",
+        "https://game8.jp/fe-banshisenko/817514"
       ],
       "referenceIds": [
         "wp-14"
@@ -19148,7 +19152,7 @@
       "type": "手甲",
       "phase": "第三部",
       "rank": "后期候选",
-      "purpose": "穆后期装备候选",
+      "purpose": "穆后期装备候选；外站评为第三部顶级拳甲：战技按魔法结算、射程1–2、重量1。",
       "effect": "神殿试炼武器；不纳入第一部购物清单。",
       "method": "第三部复兴对应神殿本殿后，完成斯米尔诺斯的委托及试炼。涉及书本、学夜之魔法与洞穴熄火任务，按来源步骤完成。",
       "materials": [],
@@ -19169,7 +19173,8 @@
       "referenceSources": [
         "https://game8.jp/fe-banshisenko/820498",
         "https://fire-emblem-fw.site/items.html",
-        "https://gamewith.jp/fefw/580408"
+        "https://gamewith.jp/fefw/580408",
+        "https://game8.jp/fe-banshisenko/822235"
       ],
       "referenceIds": [
         "wp-215"
@@ -19291,7 +19296,7 @@
       "type": "斧",
       "phase": "第三部",
       "rank": "斧 E",
-      "purpose": "贝特兰及斧手；低武器等级即可使用的高威力候选",
+      "purpose": "贝特兰及斧手；战技「霸绝+」无视冥府加护且威力极高，是斧系处理第三部冥魔的核心解法。",
       "effect": "威力18 / 重量10 / 命中80 / 射程1。霸绝+：耐久6、威力+12、无视敌人的冥府加护",
       "sourcesList": [
         {
@@ -19312,7 +19317,8 @@
       "referenceSources": [
         "https://game8.jp/fe-banshisenko/819493",
         "https://fire-emblem-fw.site/items.html",
-        "https://gamewith.jp/fefw/580559"
+        "https://gamewith.jp/fefw/580559",
+        "https://game8.jp/fe-banshisenko/822235"
       ],
       "referenceIds": [
         "wp-69"
@@ -24115,7 +24121,7 @@
       "type": "斧",
       "phase": "全路线来源",
       "rank": "斧术 D",
-      "purpose": "按技能资格、负重与射程选择；不代表所有角色的毕业首选。",
+      "purpose": "对重装特效；命中60、重量20，交给力量高并有斧命中补正（战士/斗将/永劫神将）的角色。",
       "effect": "威力14 / 重量20 / 命中60 / 射程1 / 耐久30。对重装特效。",
       "stats": {
         "power": 14,
@@ -24220,7 +24226,9 @@
       "referenceSources": [
         "https://appmedia.jp/fe_banshisenkou/80411608",
         "https://fire-emblem-fw.site/items.html",
-        "https://gamewith.jp/fefw/578499"
+        "https://gamewith.jp/fefw/578499",
+        "https://appmedia.jp/fe_banshisenkou/80386114",
+        "https://gamewith.jp/fefw/575722"
       ],
       "referenceIds": [
         "wp-63"
@@ -80216,7 +80224,28 @@
         "referenceCheckedAt": "2026-10-16"
       }
     },
-    "referenceCheckedAt": "2026-10-20"
+    "referenceCheckedAt": "2026-10-20",
+    "weaponMetaReview": {
+      "checkedAt": "2026-10-20",
+      "article": "part3-weapons",
+      "result": "角色评级不批量调整；修正5件装备定位说明。",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80380957",
+        "https://appmedia.jp/fe_banshisenkou/80384683",
+        "https://appmedia.jp/fe_banshisenkou/80386114",
+        "https://game8.jp/fe-banshisenko/816563",
+        "https://game8.jp/fe-banshisenko/817236",
+        "https://game8.jp/fe-banshisenko/822235",
+        "https://gamecap.jp/fe_fw/osusume_c.html",
+        "https://gamecap.jp/fe_fw/w7.html",
+        "https://gamewith.jp/fefw/575722",
+        "https://hyperts.net/fefw/charioteer/",
+        "https://kamikouryaku.net/fe_banshisenkou/?兵種（クラス）一覧",
+        "https://kamikouryaku.net/fe_banshisenkou/?剣",
+        "https://kamikouryaku.net/fe_banshisenkou/?弓",
+        "https://kamikouryaku.net/fe_banshisenkou/?斧"
+      ]
+    }
   },
   "dataResearch": {
     "checkedAt": "2026-10-20",
@@ -127067,6 +127096,302 @@
           "url": "https://appmedia.jp/fe_banshisenkou/80399890"
         }
       ]
+    },
+    {
+      "id": "part3-weapons",
+      "category": "阵容",
+      "title": "第三部武器种强度：剑最强、斧坐牢吗？",
+      "summary": "逐条核对“剑最强／弓第二／奶妈刚需／枪拳看人／黑魔靠强化／斧坐牢”这套说法：方向大致对，但弓、白魔、黑魔与斧四条需要修正；本站角色评级按职责评估，不随武器种整体升降。",
+      "updated": "2026-10-20",
+      "tags": [
+        "第三部",
+        "武器种",
+        "冥府加护",
+        "评级"
+      ],
+      "related": [
+        {
+          "label": "装备与材料",
+          "hash": "equipment"
+        },
+        {
+          "label": "职业资格",
+          "hash": "classes"
+        },
+        {
+          "label": "全角色图鉴",
+          "hash": "characters"
+        }
+      ],
+      "sections": [
+        {
+          "id": "verdict",
+          "heading": "结论速览",
+          "blocks": [
+            {
+              "type": "note",
+              "text": "没有任何攻略站给出“剑>弓>枪…”的武器种明文排序。下表的判断由各站武器榜 SS 占比、职责编成表与神将职武器适性综合推出，属**推断**。"
+            },
+            {
+              "type": "table",
+              "head": [
+                "说法",
+                "判断",
+                "要点"
+              ],
+              "rows": [
+                [
+                  "剑最强",
+                  "基本成立",
+                  "**净化剑**无效冥府加护、**雷电剑**普攻按魔力结算；剑命中高、重量低、追击伤害×1.2；8个神将职里5个可用剑。"
+                ],
+                [
+                  "弓第二，因为能射飞行",
+                  "理由对，排名不对",
+                  "飞行特攻3倍各站一致，但弓被定位为“特定兵种对策”，SS 武器只有1把；命中随距离下降。"
+                ],
+                [
+                  "白魔法（奶妈）刚需",
+                  "言过其实",
+                  "各站都“推荐”回复位，无一处说“必须”；第三部分兵推进时回复位需求被放大，按“每队至少一名”理解更准确。"
+                ],
+                [
+                  "枪、拳套强角色可用",
+                  "成立",
+                  "救世主、凯伊、赛奥朵拉都是枪系核心；拳的限制在可用职业，不在强度，穆与永劫/拳圣神将是一线输出。"
+                ],
+                [
+                  "黑魔法依赖特定强化技能",
+                  "机制说错",
+                  "真正瓶颈是**使用次数**：强魔法次数少，第三部一张图撑不完；补强靠“黑魔术探求”（次数×2）、“全魔术极限”（×3）。“魔法连击”是手甲战技，不是黑魔强化。"
+                ],
+                [
+                  "斧基本坐牢",
+                  "部分成立",
+                  "命中低、重量重、编成表里没有斧的职责位；但扎尔莫克西斯（霸绝+无视冥府加护）与战锤（对重装）都是 SS 级，命中有职业补正。"
+                ]
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "label": "AppMedia 武器种与武器榜",
+              "url": "https://appmedia.jp/fe_banshisenkou/80386114"
+            },
+            {
+              "label": "Game8 武器榜",
+              "url": "https://game8.jp/fe-banshisenko/822235"
+            },
+            {
+              "label": "Game8 编成职责表",
+              "url": "https://game8.jp/fe-banshisenko/817236"
+            }
+          ]
+        },
+        {
+          "id": "axis",
+          "heading": "第三部的主轴：冥府加护",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "第三部武器评价的主轴不是武器种，而是**能否处理冥府加护**。能无视它的武器会直接进 SS：剑的净化剑、斧的扎尔莫克西斯（霸绝+），再加上救世主的个人技能“救世之光”（周围2格敌人冥府加护失效）与对冥魔有效的“破邪闪击”。"
+            },
+            {
+              "type": "p",
+              "text": "所以“剑最强”的体感，主要来自净化剑门槛低（剑术E）、谁都能带；而不是剑在所有场合都压过其他武器。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "Game8 武器榜",
+              "url": "https://game8.jp/fe-banshisenko/822235"
+            },
+            {
+              "label": "中文站救世篇攻略（二手汇总）",
+              "url": "https://cn.fire-emblem-fw.site/guides.html#g-salvation"
+            }
+          ]
+        },
+        {
+          "id": "sword-bow",
+          "heading": "剑与弓",
+          "blocks": [
+            {
+              "type": "cards",
+              "items": [
+                {
+                  "name": "剑：泛用主力",
+                  "text": "命中高、重量低、容易追击，追击伤害×1.2；Game8 SS 武器6把中剑占2、AppMedia 9把中剑占3。基础威力偏保守，靠追击与必杀出伤害。"
+                },
+                {
+                  "name": "弓：飞行对策",
+                  "text": "射程2以上、对飞行3倍特攻，能单方面输出；但近身难应对、需要堆命中。飞行打点也不是弓独占，古扎岚的燕返同样能补。"
+                }
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "label": "神攻略 剑",
+              "url": "https://kamikouryaku.net/fe_banshisenkou/?剣"
+            },
+            {
+              "label": "神攻略 弓",
+              "url": "https://kamikouryaku.net/fe_banshisenkou/?弓"
+            },
+            {
+              "label": "gamecap 推荐角色",
+              "url": "https://gamecap.jp/fe_fw/osusume_c.html"
+            },
+            {
+              "label": "GameWith 职业",
+              "url": "https://gamewith.jp/fefw/575722"
+            }
+          ]
+        },
+        {
+          "id": "heal-magic",
+          "heading": "白魔法与黑魔法",
+          "blocks": [
+            {
+              "type": "list",
+              "items": [
+                "**白魔**：稳定器。索绯雅“回复魔法射程+2”是外站 SS 回复位的代表；分兵时每路最好有人能奶，但不是没奶就不能过。",
+                "**黑魔**：伤害按魔力对魔防计算，本身不弱；问题是次数。主养黑魔时优先考虑次数系技能与“全魔术极限”所在的魔导神将，低魔力物理角色不要硬转黑魔。"
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "label": "gamecap 回复",
+              "url": "https://gamecap.jp/fe_fw/w7.html"
+            },
+            {
+              "label": "Game8 角色榜（次数限制）",
+              "url": "https://game8.jp/fe-banshisenko/816563"
+            },
+            {
+              "label": "Game8 技能",
+              "url": "https://game8.jp/fe-banshisenko/816408"
+            },
+            {
+              "label": "战车兵单人实测（第一部反例）",
+              "url": "https://hyperts.net/fefw/charioteer/"
+            }
+          ]
+        },
+        {
+          "id": "axe",
+          "heading": "斧：有短板，不是坐牢",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "斧命中低、重量重，咒宝斧触发冥咒相杀时该场战斗攻击为0，这是“坐牢”体感的来源。但斧命中后有**最低5伤害保底**，战士（斧命中+5→熟练之技+10）、斗将（+7）、永劫神将（+10）都在补命中。"
+            },
+            {
+              "type": "p",
+              "text": "实际建议：斧位交给力量高、能拿扎尔莫克西斯或战锤的角色（如贝特兰），不要让低力量角色为了斧开新线。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "神攻略 斧",
+              "url": "https://kamikouryaku.net/fe_banshisenkou/?斧"
+            },
+            {
+              "label": "神攻略 职业一览",
+              "url": "https://kamikouryaku.net/fe_banshisenkou/?兵種（クラス）一覧"
+            },
+            {
+              "label": "GameWith 职业",
+              "url": "https://gamewith.jp/fefw/575722"
+            }
+          ]
+        },
+        {
+          "id": "ratings",
+          "heading": "本站评级为什么不跟着调",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "本站角色评级按**实际入队窗口、职责内强度、关键能力与终局有效成果**评估，武器种只是其中一个输入。对照这次复核："
+            },
+            {
+              "type": "list",
+              "items": [
+                "剑、枪、拳的核心（迪托利希、救世主、凯伊、穆）本来就在 S；斧系除贝特兰（S-，有霸绝+）外均在 A 及以下，弓系除皮特鲁外在 A-/A——已与“剑强、斧弱、弓是对策位”一致。",
+                "回复位（索绯雅 S-、媞雅拉 A+ 等）不因“刚需”再上调：普通治疗不因低攻速扣分，也不因必要性额外加分。",
+                "外站分歧最大的是赛奥朵拉、西洛可、艾丝梅拉尔达、哥莱亚斯、索绯雅（Game8/AppMedia 高位，GameWith 仅 Tier 2），本站维持原评级并保留对照。"
+              ]
+            },
+            {
+              "type": "note",
+              "text": "因此这次只修正装备定位说明（净化剑、雷电剑、扎尔莫克西斯、战锤、雷甲），不批量改角色等级。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "AppMedia 角色榜",
+              "url": "https://appmedia.jp/fe_banshisenkou/80380957"
+            },
+            {
+              "label": "AppMedia 职业榜",
+              "url": "https://appmedia.jp/fe_banshisenkou/80384683"
+            },
+            {
+              "label": "Game8 角色榜",
+              "url": "https://game8.jp/fe-banshisenko/816563"
+            }
+          ]
+        },
+        {
+          "id": "names",
+          "heading": "名称对照",
+          "blocks": [
+            {
+              "type": "table",
+              "head": [
+                "常见说法",
+                "正式名称",
+                "说明"
+              ],
+              "rows": [
+                [
+                  "净化剑 / 浄化の剣",
+                  "清めの剣",
+                  "本站译名：净化剑"
+                ],
+                [
+                  "雷電剣",
+                  "サンダーソード",
+                  "本站译名：雷电剑"
+                ],
+                [
+                  "黒魔強化",
+                  "—",
+                  "日文各站均无此技能名"
+                ],
+                [
+                  "魔法連撃",
+                  "魔法连击",
+                  "手甲战技：连续2次、视为魔法攻击、每次80%"
+                ]
+              ]
+            }
+          ],
+          "sources": [
+            {
+              "label": "Game8 武器详情",
+              "url": "https://game8.jp/fe-banshisenko/817514"
+            },
+            {
+              "label": "中文站技能数据",
+              "url": "https://cn.fire-emblem-fw.site/data/v/skills.c9bb929b.json"
+            }
+          ]
+        }
+      ],
+      "sources": []
     }
   ]
 }
