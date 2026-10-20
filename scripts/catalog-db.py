@@ -15,6 +15,7 @@ COLLECTIONS = {
     "learning": ("learning",),
     "planning": ("planning",),
     "abilities": ("abilities",),
+    "articles": ("articles",),
 }
 
 
