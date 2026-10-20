@@ -162,7 +162,7 @@ d.crossRoutePolicy.healer='纯治疗每条指令治疗一次，攻速不增加�
 d.crossRoutePolicy.defense='防御补养只在终局确需承受物理攻击时启用。重装＋25 → 巨型重甲＋30需实际升级，训练职业／技能EXP不等于属性成长；晚加入仍须核对剩余升级空间，不默认占一条完整主养线。';
 d.cultivationAudit={version:1,date:'2026-10-11',count:63,basis:'编辑建议：以终局有效伤害、攻速、生存和功能为目标，不宣称已经实测最优；具体击杀阈值随难度、敌人和装备变化。',fusion:d.crossRoutePolicy.fusion,sources};
 // Confirmed new character-page entries: retain unknown ranks rather than invent thresholds.
-const usherArts=[['两断','剑术','剑','必杀较高'],['暗影迫近','剑术','剑','敌处于有利地形时，忽略该地形影响'],['必闪一击','剑术','剑','攻击时以技巧÷2的概率使攻击力+5'],['警戒射击','弓术','弓','战斗时回避+10'],['离脱射击','弓术','弓','战斗后可以移动1格'],['螺旋射击','弓术','弓','攻击时以技巧÷2的概率使攻击力+5']].map(([name,skill,weapon,description])=>({name,skill,weapon,description,requirementUnknown:true,note:'角色习得已核对，技能等级门槛待核实',source:'https://game8.jp/fe-banshisenko/816434'}));
+const usherArts=[['两断','剑术','剑','必杀较高','D'],['暗影迫近','剑术','剑','敌处于有利地形时，忽略该地形影响','C'],['必闪一击','剑术','剑','攻击时以技巧÷2的概率使攻击力+5','B'],['警戒射击','弓术','弓','战斗时回避+10','D'],['离脱射击','弓术','弓','战斗后可以移动1格','C'],['螺旋射击','弓术','弓','攻击时以技巧÷2的概率使攻击力+5','B']].map(([name,skill,weapon,description,rank])=>({name,skill,weapon,description,rank,requirementUnknown:false,note:'技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）',source:'https://game8.jp/fe-banshisenko/816434',sources:['https://game8.jp/fe-banshisenko/816434','https://gamecap.jp/fe_fw/oboeru.html']}));
 d.learning.c47.combatArts=[...d.learning.c47.combatArts,...usherArts].filter((x,i,a)=>a.findIndex(y=>y.name===x.name)===i);
 d.planning.c47.recommendations.combatArts=usherArts;
 // Keep existing route roles, opening members and user preference behavior intact.

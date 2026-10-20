@@ -340,7 +340,7 @@ for(const e of vm.runInContext('EQUIPMENT',ctx)){
  assert(!/[\u3040-\u30ff]/.test(h.replace(/<[^>]*>/g,'')),'Chinese weapon '+e.id);
 }
 vm.runInContext("activeCharacter=null;$('#detail').close();$('#sourceDialog').close();location.hash='#equipment';equipmentType='枪';query='';render()",ctx);
-assert((nodes['#content'].innerHTML.match(/class="weapon-summary(?: weapon-visual(?: equipment-preview)?)?"/g)||[]).length===vm.runInContext("EQUIPMENT.filter(e=>e.type==='枪').length",ctx));
+assert((nodes['#content'].innerHTML.match(/class="(?:weapon-summary(?: weapon-visual(?: equipment-preview)?)?|equipment-row)"/g)||[]).length===vm.runInContext("EQUIPMENT.filter(e=>e.type==='枪').length",ctx));
 assert(nodes['#content'].innerHTML.includes('equipment-source-preview')&&!nodes['#content'].innerHTML.includes('data-equipment-ref'));
 const safeSkill=vm.runInContext(`decorateSkillHTML('<a title="剑术" href="https://example.com/剑术"><svg><path d="m1 1"/></svg>剑术 A</a>')`,ctx);
 assert(safeSkill.includes('title="剑术" href="https://example.com/剑术"')&&safeSkill.includes('assets/skills/sword.webp'));
