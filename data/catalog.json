@@ -1998,9 +1998,8 @@
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "aurora_lance",
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "clean",
+          "library_gw_578469"
         ],
         "growthNote": "力量决定枪伤害，速度决定攻速；移动力优势用于有效出手，不把全骑乘技能同时练满。",
         "rating": "S",
@@ -2063,7 +2062,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "aurora_lance",
+              "kind": "exclusive",
+              "why": "凯伊篇专属路线武器，星光的闪烁可魔法远攻",
+              "url": "https://game8.jp/fe-banshisenko/816414"
+            },
+            {
+              "id": "clean",
+              "kind": "guide",
+              "why": "攻略建议第三部改用剑，净化剑使冥府加护失效",
+              "url": "https://news.17173.com/content/10062026/170410654.shtml"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "グザラン",
@@ -2189,7 +2211,7 @@
           "daminasword",
           "clean",
           "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量45、速度50，有双物理武器适性；第二成果应补力量或指定格斗能力，不为了凑方向练苦手黑白魔。",
         "rating": "S-",
@@ -2239,7 +2261,36 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "clean",
+              "kind": "guide",
+              "why": "冥府加护对策剑",
+              "url": "https://news.17173.com/content/10062026/170410654.shtml"
+            },
+            {
+              "id": "thunder",
+              "kind": "guide",
+              "why": "按魔力伤害、射程1–2",
+              "url": "https://news.17173.com/content/10062026/170410654.shtml"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ディートリヒ",
@@ -2341,11 +2392,12 @@
         "firstPart": true,
         "stop": "阶段资格：剑术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
+          "review_wp-19",
           "answerer_kai",
-          "daminasword",
-          "clean",
+          "library_80469838",
+          "giant",
           "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量45、速度50，剑系与本线强化战技优先；力量不足时同线土匪补养即可，不存在四线招募分工。",
         "rating": "S",
@@ -2402,7 +2454,48 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "review_wp-19",
+              "kind": "exclusive",
+              "why": "初始装备的魔剑，可用战技「血闪」",
+              "url": "https://gamewith.jp/fefw/579899"
+            },
+            {
+              "id": "answerer_kai",
+              "kind": "exclusive",
+              "why": "迪托利希篇第12章与法毕欧对话取得的强化版",
+              "url": "https://game8.jp/fe-banshisenko/822268"
+            },
+            {
+              "id": "library_80469838",
+              "kind": "guide",
+              "why": "攻略推荐：巨剑配巨人戒指爆发输出",
+              "url": "https://news.17173.com/content/10082026/170132886.shtml"
+            },
+            {
+              "id": "giant",
+              "kind": "guide",
+              "why": "攻略推荐：巨人戒指拿巨剑",
+              "url": "https://news.17173.com/content/10082026/170132886.shtml"
+            },
+            {
+              "id": "thunder",
+              "kind": "guide",
+              "why": "攻略列出的推荐武器之一",
+              "url": "https://news.17173.com/content/10082026/170132886.shtml"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "キロイカ",
@@ -2526,10 +2619,7 @@
         "stop": "阶段资格：弓术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "damina_bow",
-          "wind_bow",
-          "longbow",
-          "carla",
-          "agaze_bow"
+          "library_80469889"
         ],
         "growthNote": "速度55、力量40，弓伤害与安全射程是主职责；需要补的是实际伤害，不是重复一份弓术经验。",
         "rating": "A",
@@ -2579,7 +2669,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "damina_bow",
+              "kind": "rule",
+              "why": "弓术主武器：达·米纳弓战技命中+10",
+              "url": "https://game8.jp/fe-banshisenko/819475"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
+          ]
+        }
       },
       {
         "name": "フィアナ",
@@ -2702,9 +2809,8 @@
         "firstPart": true,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
           "heal",
-          "thunder"
+          "magic_staff"
         ],
         "growthNote": "魔力55、速度30，黑白魔功能可在允许两者的法职中一起训练；速度／生存不足才补第二份成果。",
         "rating": "A",
@@ -2742,7 +2848,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            }
+          ]
+        }
       },
       {
         "name": "セオドラ",
@@ -2844,9 +2967,8 @@
         "firstPart": true,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "review_wp-46",
+          "library_gw_578469"
         ],
         "growthNote": "力量50、防御40，枪伤害与可靠承伤优先；概率减伤不能代替稳定防御。",
         "rating": "S-",
@@ -2903,7 +3025,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "review_wp-46",
+              "kind": "exclusive",
+              "why": "赛奥朵拉篇第1章剧情取得的英雄之枪",
+              "url": "https://gamewith.jp/fefw/579607"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "ソフィア",
@@ -3026,9 +3165,7 @@
         "firstPart": true,
         "stop": "阶段资格：白魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
-          "heal",
-          "thunder"
+          "heal"
         ],
         "growthNote": "治疗量加成是核心；力量、技巧不能增加治疗次数，擅长弓也不意味着必须培养成狙击手。",
         "rating": "S-",
@@ -3065,7 +3202,18 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            }
+          ]
+        }
       },
       {
         "name": "レダ",
@@ -3169,8 +3317,10 @@
         "gearIds": [
           "carla",
           "wind_bow",
-          "thunder",
-          "swift"
+          "library_80469841",
+          "review_wp-164",
+          "library_80469844",
+          "library_80469889"
         ],
         "growthNote": "再行动优先于伤害；速度65是生存与兼任弓输出的基础，不强制把力量魔力刷满。",
         "rating": "S",
@@ -3227,7 +3377,48 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "carla",
+              "kind": "exclusive",
+              "why": "卡拉的弓只有一把，交给蕾达作3–10射程「天风」狙击",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            },
+            {
+              "id": "wind_bow",
+              "kind": "guide",
+              "why": "第三部持风弓进入人群作战",
+              "url": "https://news.17173.com/content/10062026/170410654.shtml"
+            },
+            {
+              "id": "library_80469841",
+              "kind": "guide",
+              "why": "疾风剑＋魅惑面具，闪避逼近100%开团",
+              "url": "https://news.17173.com/content/10072026/200358468.shtml"
+            },
+            {
+              "id": "review_wp-164",
+              "kind": "guide",
+              "why": "魅惑面具与疾风剑组合",
+              "url": "https://news.17173.com/content/10072026/200358468.shtml"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
+          ]
+        }
       },
       {
         "name": "カターニャ",
@@ -3352,8 +3543,7 @@
         "gearIds": [
           "daminasword",
           "clean",
-          "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量35、速度55，力量同时服务物理伤害和负重；个人疾风还要求攻速领先。",
         "rating": "A+",
@@ -3403,7 +3593,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "clean",
+              "kind": "guide",
+              "why": "冥府加护对策剑",
+              "url": "https://news.17173.com/content/10062026/170410654.shtml"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ヨーカイ",
@@ -3526,9 +3739,7 @@
         "firstPart": true,
         "stop": "阶段资格：白魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
-          "heal",
-          "thunder"
+          "heal"
         ],
         "growthNote": "魔力40，低门槛补治疗有实际价值；斧术适性不等于要另占一条高投入物理线。",
         "rating": "B",
@@ -3565,7 +3776,18 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            }
+          ]
+        }
       },
       {
         "name": "マジーデ",
@@ -3689,8 +3911,7 @@
         "stop": "阶段资格：斧术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminaaxe",
-          "zalmoxis",
-          "claire_hammer",
+          "library_gw_578470",
           "giant"
         ],
         "growthNote": "力量50、速度20，优先单击／战技伤害与生存，不把低速角色强行养成高速追击手。",
@@ -3715,7 +3936,30 @@
           "arts": [],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminaaxe",
+              "kind": "rule",
+              "why": "斧术主武器：达·米纳斧可兑换／购买",
+              "url": "https://game8.jp/fe-banshisenko/819487"
+            },
+            {
+              "id": "library_gw_578470",
+              "kind": "late",
+              "why": "第三部斧术B后换银斧",
+              "url": "https://gamewith.jp/fefw/578470"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "ニネ",
@@ -3838,9 +4082,9 @@
         "firstPart": true,
         "stop": "阶段资格：白魔术B / 马术D；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_80469850",
+          "heal",
+          "library_gw_578469"
         ],
         "growthNote": "力量45、魔力35、魔防45，圣枪师的枪伤害与白魔功能有真正互补价值。",
         "rating": "A+",
@@ -3897,7 +4141,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "ナジャ",
@@ -4021,9 +4288,7 @@
         "stop": "阶段资格：剑术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminasword",
-          "clean",
-          "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量55、速度45，先攻特性与物理伤害相配；单线成型后只补所需拳剑战技。",
         "rating": "A+",
@@ -4061,7 +4326,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ヌッツォ",
@@ -4186,8 +4468,7 @@
         "gearIds": [
           "daminasword",
           "clean",
-          "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量50、速度55，双核心成长较好；主要补命中、生存与选定武器能力，不需要四种属性分线。",
         "rating": "A+",
@@ -4231,7 +4512,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "clean",
+              "kind": "guide",
+              "why": "冥府加护对策剑",
+              "url": "https://news.17173.com/content/10062026/170410654.shtml"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "アレキサンドラ",
@@ -4353,10 +4657,9 @@
         "firstPart": true,
         "stop": "阶段资格：飞行术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "daminasword",
-          "clean",
-          "thunder",
-          "swift"
+          "library_80469853",
+          "review_wp-164",
+          "library_gw_578469"
         ],
         "growthNote": "力量35、速度55，飞行与力量互补；各线入队窗口不同，晚招募不能假定还有完整低级成长阶段。",
         "rating": "A",
@@ -4396,7 +4699,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469853",
+              "kind": "guide",
+              "why": "攻略：骑士杀手让她成为神鸵兵与骑士的噩梦",
+              "url": "https://news.17173.com/content/10062026/200702293.shtml"
+            },
+            {
+              "id": "review_wp-164",
+              "kind": "guide",
+              "why": "魅力成长50%，魅惑面具最佳装备者之一",
+              "url": "https://news.17173.com/content/10062026/200702293.shtml"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "ピーテル",
@@ -4514,11 +4840,10 @@
         "firstPart": true,
         "stop": "阶段资格：弓术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "damina_bow",
-          "wind_bow",
           "longbow",
-          "carla",
-          "agaze_bow"
+          "wind_bow",
+          "library_80411629",
+          "library_80469889"
         ],
         "growthNote": "开局远程职责和弓适性比后期补修更优先；力量35需要检查弓伤害，不能仅看攻速。",
         "rating": "S-",
@@ -4568,7 +4893,36 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "longbow",
+              "kind": "guide",
+              "why": "锻造后的长弓常备，3–4射程削血",
+              "url": "https://game8.jp/fe-banshisenko/819474"
+            },
+            {
+              "id": "wind_bow",
+              "kind": "guide",
+              "why": "与长弓一同锻满携带",
+              "url": "https://game8.jp/fe-banshisenko/819473"
+            },
+            {
+              "id": "library_80411629",
+              "kind": "guide",
+              "why": "对骑兵特效的射马弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80411629"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
+          ]
+        }
       },
       {
         "name": "ティアラ",
@@ -4686,9 +5040,8 @@
         "firstPart": true,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
           "heal",
-          "thunder"
+          "magic_staff"
         ],
         "growthNote": "魔力45、速度35，法术功能与指挥优先；额外物理线只有负重或明确混合输出收益才投入。",
         "rating": "A+",
@@ -4725,7 +5078,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            }
+          ]
+        }
       },
       {
         "name": "イオ",
@@ -4847,9 +5217,8 @@
         "firstPart": true,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_80469850",
+          "library_gw_578469"
         ],
         "growthNote": "枪斧马适性与骑乘个人收益相配；力量40、速度35，先满足枪伤害和机动，不因凯伊捕获就迁走本线职责。",
         "rating": "A-",
@@ -4893,7 +5262,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "ゴライアス",
@@ -5017,8 +5403,7 @@
         "stop": "阶段资格：重装术D / 斧术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminaaxe",
-          "zalmoxis",
-          "claire_hammer",
+          "library_gw_578470",
           "giant"
         ],
         "growthNote": "力量60、防御50、速度15，优势是守线与高伤害反击；剑客速度成长不能抹掉低速定位。",
@@ -5063,7 +5448,30 @@
             }
           ]
         },
-        "canRide": false
+        "canRide": false,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminaaxe",
+              "kind": "rule",
+              "why": "斧术主武器：达·米纳斧可兑换／购买",
+              "url": "https://game8.jp/fe-banshisenko/819487"
+            },
+            {
+              "id": "library_gw_578470",
+              "kind": "late",
+              "why": "第三部斧术B后换银斧",
+              "url": "https://gamewith.jp/fefw/578470"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "ダンテ",
@@ -5186,9 +5594,8 @@
         "firstPart": true,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
           "heal",
-          "thunder"
+          "magic_staff"
         ],
         "growthNote": "魔力45、速度40，治疗与攻击可同线取得；低物防需要安全站位，不能靠无限力量补养解决。",
         "rating": "B",
@@ -5225,7 +5632,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            }
+          ]
+        }
       },
       {
         "name": "ゲイツ",
@@ -5333,9 +5757,8 @@
         "firstPart": true,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_80469850",
+          "library_gw_578469"
         ],
         "growthNote": "力量50、防御45，骑乘输出与承伤有基础；只能在迪托利希线培养，不能分配其他线补修。",
         "rating": "A-",
@@ -5359,7 +5782,24 @@
           "arts": [],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "エスメラルダ",
@@ -5478,8 +5918,8 @@
         "stop": "阶段资格：重装术D / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "gracida",
-          "sorel_lance",
-          "slender_spear",
+          "library_gw_580454",
+          "library_gw_578469",
           "giant"
         ],
         "growthNote": "力量55、防御45，重量减轻个人能力降低专门补体格的紧迫性；力量仍直接影响伤害。",
@@ -5537,7 +5977,36 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "gracida",
+              "kind": "exclusive",
+              "why": "迪托利希篇第8章击败海王后取得；专属战技「无尘」，射程1–2",
+              "url": "https://gamecap.jp/fe_fw/osusume_chara.html"
+            },
+            {
+              "id": "library_gw_580454",
+              "kind": "exclusive",
+              "why": "路线奖励鱼叉，可用「蛮力投掷」",
+              "url": "https://gamewith.jp/fefw/580454"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "ファビオ",
@@ -5645,9 +6114,7 @@
         "firstPart": true,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
-          "heal",
-          "thunder"
+          "magic_staff"
         ],
         "growthNote": "魔力50、黑魔适性服务破防；两条可招募线应择主养，不能将重复黑魔经验当额外收益。",
         "rating": "A+",
@@ -5671,7 +6138,18 @@
           "arts": [],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            }
+          ]
+        }
       },
       {
         "name": "ノクチュラ",
@@ -5794,9 +6272,9 @@
         "firstPart": true,
         "stop": "阶段资格：格斗术C / 斧术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
+          "library_gw_580475",
           "daminaaxe",
-          "zalmoxis",
-          "claire_hammer",
+          "library_gw_578470",
           "giant"
         ],
         "growthNote": "力量45、速度45，格斗／斧伤害与命中是核心；不为职业数量把剑法骑重全部均摊。",
@@ -5841,7 +6319,36 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_gw_580475",
+              "kind": "exclusive",
+              "why": "诺克裘拉的初始装备，可用「暴爪」",
+              "url": "https://gamecap.jp/fe_fw/w5.html"
+            },
+            {
+              "id": "daminaaxe",
+              "kind": "rule",
+              "why": "斧术主武器：达·米纳斧可兑换／购买",
+              "url": "https://game8.jp/fe-banshisenko/819487"
+            },
+            {
+              "id": "library_gw_578470",
+              "kind": "late",
+              "why": "第三部斧术B后换银斧",
+              "url": "https://gamewith.jp/fefw/578470"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "ロレッタ",
@@ -5967,7 +6474,7 @@
           "daminasword",
           "clean",
           "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量35、速度55，与卡塔妮雅同样需要物理伤害；但个人技能、入队声望不同，不能复制全部路线。",
         "rating": "A+",
@@ -6004,7 +6511,36 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "clean",
+              "kind": "guide",
+              "why": "冥府加护对策剑",
+              "url": "https://gamecap.jp/fe_fw/osusume_chara.html"
+            },
+            {
+              "id": "thunder",
+              "kind": "guide",
+              "why": "魔力剑，射程1–2",
+              "url": "https://gamecap.jp/fe_fw/osusume_chara.html"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "セテス",
@@ -6122,9 +6658,8 @@
         "firstPart": true,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_80469850",
+          "library_gw_578469"
         ],
         "growthNote": "力量45、防御40，枪斧飞行适性支持机动；物理地面与飞行属性重叠，第二线须有独立能力收益。",
         "rating": "B",
@@ -6169,7 +6704,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "ボナパルテ",
@@ -6271,9 +6823,9 @@
         "firstPart": true,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
+          "daminasword",
           "magic_staff",
-          "heal",
-          "thunder"
+          "library_80469844"
         ],
         "growthNote": "剑黑白魔与马术适性支持混合战术；但只能在赛奥朵拉第一部培养，互补应同线换职而非虚构多线。",
         "rating": "A-",
@@ -6310,7 +6862,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "トビヤス",
@@ -6413,8 +6988,7 @@
         "stop": "阶段资格：重装术D / 斧术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminaaxe",
-          "zalmoxis",
-          "claire_hammer",
+          "library_gw_578470",
           "giant"
         ],
         "growthNote": "力量60、防御45、速度25，战技伤害与承伤匹配；只能本线培养，不虚构跨线融合。",
@@ -6465,7 +7039,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminaaxe",
+              "kind": "rule",
+              "why": "斧术主武器：达·米纳斧可兑换／购买",
+              "url": "https://game8.jp/fe-banshisenko/819487"
+            },
+            {
+              "id": "library_gw_578470",
+              "kind": "late",
+              "why": "第三部斧术B后换银斧",
+              "url": "https://gamewith.jp/fefw/578470"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "ハルヴィン",
@@ -6589,10 +7186,7 @@
         "stop": "阶段资格：弓术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "damina_bow",
-          "wind_bow",
-          "longbow",
-          "carla",
-          "agaze_bow"
+          "library_80469889"
         ],
         "growthNote": "弓马适性支持远程机动，力量35需要补伤害；骑乘资格和实际伤害到位后无需重复弓系培养。",
         "rating": "A-",
@@ -6636,7 +7230,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "damina_bow",
+              "kind": "rule",
+              "why": "弓术主武器：达·米纳弓战技命中+10",
+              "url": "https://game8.jp/fe-banshisenko/819475"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
+          ]
+        }
       },
       {
         "name": "サラン",
@@ -6749,9 +7360,8 @@
         "firstPart": true,
         "stop": "阶段资格：白魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
-          "heal",
-          "thunder"
+          "library_80469907",
+          "heal"
         ],
         "growthNote": "魔力45、魔防45，白魔功能是主价值；剑术不擅长，魔法剑不能只凭魔力高就列必修。",
         "rating": "A",
@@ -6788,7 +7398,24 @@
           ],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469907",
+              "kind": "guide",
+              "why": "官方介绍：以携带火器「沙罗曼蛇」击穿重甲",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469907"
+            },
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            }
+          ]
+        }
       },
       {
         "name": "バッカニア",
@@ -6901,9 +7528,8 @@
         "firstPart": true,
         "stop": "阶段资格：重装术D / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "daminaaxe",
-          "zalmoxis",
-          "claire_hammer",
+          "library_80469850",
+          "library_gw_578469",
           "giant"
         ],
         "growthNote": "力量50、防御45与固定减伤服务承伤；物防成果已好时，另一条相同重装线没有必然收益。",
@@ -6954,7 +7580,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "シロッコ",
@@ -7072,9 +7721,10 @@
         "firstPart": true,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
+          "daminasword",
           "magic_staff",
-          "heal",
-          "thunder"
+          "thunder",
+          "library_80469844"
         ],
         "growthNote": "力量与魔力均40，既要物理剑伤害，也要法术破防；两份成长成果互补，白魔功能可在法职同练。",
         "rating": "S-",
@@ -7133,7 +7783,36 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            },
+            {
+              "id": "thunder",
+              "kind": "guide",
+              "why": "剑术＋黑魔术，魔力剑射程1–2",
+              "url": "https://game8.jp/fe-banshisenko/819521"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ムウ",
@@ -7250,9 +7929,9 @@
         "firstPart": true,
         "stop": "阶段资格：格斗术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
+          "library_80411602",
           "daminafist",
-          "thunderfist",
-          "swift"
+          "library_80469904"
         ],
         "growthNote": "力量、速度、技巧均50，单线已经全面；剑系速度成果有用途，但格斗勇士与斧勇士不是两份必要力量培养。",
         "rating": "S",
@@ -7302,7 +7981,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80411602",
+              "kind": "guide",
+              "why": "手斧可攻击2格，但命中偏低",
+              "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+            },
+            {
+              "id": "daminafist",
+              "kind": "rule",
+              "why": "格斗术主武器：达·米纳手甲可兑换／购买",
+              "url": "https://game8.jp/fe-banshisenko/819463"
+            },
+            {
+              "id": "library_80469904",
+              "kind": "late",
+              "why": "第三部格斗术B后换银手甲",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+            }
+          ]
+        }
       },
       {
         "name": "オリンピア",
@@ -7420,9 +8122,8 @@
         "firstPart": true,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
           "heal",
-          "thunder"
+          "magic_staff"
         ],
         "growthNote": "魔力50、速度35，魔法必杀个人能力可用于输出，不应只当奶妈；黑白魔功能可以同线取得。",
         "rating": "S-",
@@ -7459,7 +8160,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            }
+          ]
+        }
       },
       {
         "name": "ミカエラ",
@@ -7577,11 +8295,11 @@
         "firstPart": true,
         "stop": "阶段资格：弓术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "damina_bow",
-          "wind_bow",
-          "longbow",
-          "carla",
-          "agaze_bow"
+          "library_80411611",
+          "library_80469850",
+          "library_gw_578469",
+          "library_gw_578470",
+          "giant"
         ],
         "growthNote": "力量45、防御40、弓步兵适性，足以单线发挥远程作用；骑飞苦手不应为了统一机动强转。",
         "rating": "A",
@@ -7618,7 +8336,42 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80411611",
+              "kind": "exclusive",
+              "why": "宝箱咒宝，高命中斧；龙骑兵定位首选",
+              "url": "https://appmedia.jp/fe_banshisenkou/80411611"
+            },
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            },
+            {
+              "id": "library_gw_578470",
+              "kind": "late",
+              "why": "第三部斧术B后换银斧",
+              "url": "https://gamewith.jp/fefw/578470"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "ヌディーヌ",
@@ -7741,9 +8494,7 @@
         "firstPart": true,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "heal"
         ],
         "growthNote": "力量40、魔力30，斧黑魔马飞行适性只是入口，不足以证明第二条法师主养划算。",
         "rating": "B",
@@ -7787,7 +8538,18 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            }
+          ]
+        }
       },
       {
         "name": "ダイトウ",
@@ -7911,8 +8673,7 @@
         "stop": "阶段资格：重装术D / 斧术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminaaxe",
-          "zalmoxis",
-          "claire_hammer",
+          "library_gw_578470",
           "giant"
         ],
         "growthNote": "力量55、防御45、速度30，伤害与承伤比追击更稳定；不为高速度职业名额复制培养。",
@@ -7957,7 +8718,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminaaxe",
+              "kind": "rule",
+              "why": "斧术主武器：达·米纳斧可兑换／购买",
+              "url": "https://game8.jp/fe-banshisenko/819487"
+            },
+            {
+              "id": "library_gw_578470",
+              "kind": "late",
+              "why": "第三部斧术B后换银斧",
+              "url": "https://gamewith.jp/fefw/578470"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "イニオニ",
@@ -8080,10 +8864,7 @@
         "stop": "阶段资格：弓术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "damina_bow",
-          "wind_bow",
-          "longbow",
-          "carla",
-          "agaze_bow"
+          "library_80469889"
         ],
         "growthNote": "力量50、速度35，斧弓能力可在一线训练，独立技能并不需要独立满级存档。",
         "rating": "A-",
@@ -8122,6 +8903,23 @@
           "startClass": [
             "https://game8.jp/fe-banshisenko/816899",
             "https://game.srv.world/note?os=FIRE_EMBLEM_18&p=member"
+          ]
+        },
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "damina_bow",
+              "kind": "rule",
+              "why": "弓术主武器：达·米纳弓战技命中+10",
+              "url": "https://game8.jp/fe-banshisenko/819475"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
           ]
         }
       },
@@ -8246,8 +9044,8 @@
         "firstPart": true,
         "stop": "阶段资格：重装术D / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
+          "library_80469850",
+          "library_gw_578469",
           "giant"
         ],
         "growthNote": "防御45、力量40、速度30，优先可靠承伤与武器伤害；马术不是擅长，不默认投入全套骑乘。",
@@ -8292,7 +9090,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "リリアン",
@@ -8411,10 +9232,7 @@
         "stop": "阶段资格：弓术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "damina_bow",
-          "wind_bow",
-          "longbow",
-          "carla",
-          "agaze_bow"
+          "library_80469889"
         ],
         "growthNote": "弓步兵适性与无反击命中收益相配；力量35需要检查弓伤害，速度40不强求所有敌人都追击。",
         "rating": "A-",
@@ -8464,7 +9282,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "damina_bow",
+              "kind": "rule",
+              "why": "弓术主武器：达·米纳弓战技命中+10",
+              "url": "https://game8.jp/fe-banshisenko/819475"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
+          ]
+        }
       },
       {
         "name": "ライサンダー",
@@ -8582,9 +9417,8 @@
         "firstPart": true,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_80469850",
+          "library_gw_578469"
         ],
         "growthNote": "力量40、速度50，地面骑兵与飞行都是物理；新增方向须提供不同成长或明确技能，不能仅换移动图标。",
         "rating": "A",
@@ -8634,7 +9468,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "シモン",
@@ -8758,9 +9609,7 @@
         "stop": "阶段资格：剑术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminasword",
-          "clean",
-          "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量50、防御40、速度35，力量不缺时补速度比重复勇士更有用；剑斧可同线培养。",
         "rating": "B",
@@ -8804,7 +9653,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ザーコネ",
@@ -8928,9 +9794,7 @@
         "stop": "阶段资格：剑术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminasword",
-          "clean",
-          "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量30、速度35，必须核对投入后的实际伤害；即使擅长多武器也不值得默认多线主力。",
         "rating": "C",
@@ -8980,7 +9844,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ベンディッツ",
@@ -9103,10 +9984,7 @@
         "stop": "阶段资格：弓术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "damina_bow",
-          "wind_bow",
-          "longbow",
-          "carla",
-          "agaze_bow"
+          "library_80469889"
         ],
         "growthNote": "力量35、速度35，弓与指挥功能比追击面板更明确；马术为弓骑资格服务。",
         "rating": "B",
@@ -9137,7 +10015,24 @@
           ],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "damina_bow",
+              "kind": "rule",
+              "why": "弓术主武器：达·米纳弓战技命中+10",
+              "url": "https://game8.jp/fe-banshisenko/819475"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
+          ]
+        }
       },
       {
         "name": "ルルディヤー",
@@ -9261,9 +10156,7 @@
         "stop": "阶段资格：剑术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminasword",
-          "clean",
-          "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "速度55、力量35，最需要补的是物理伤害与负重；已有高速优势不代表应无限叠速度。",
         "rating": "A",
@@ -9300,7 +10193,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ペペ",
@@ -9419,9 +10329,7 @@
         "stop": "阶段资格：剑术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminasword",
-          "clean",
-          "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "速度60、力量30，输出短板是力量；技能资格和速度优势不能替代每击伤害。",
         "rating": "B",
@@ -9445,7 +10353,24 @@
           "arts": [],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ディエゴ",
@@ -9569,9 +10494,7 @@
         "stop": "阶段资格：剑术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminasword",
-          "clean",
-          "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "力量40、速度45，物理基础均衡；另一线需要明确伤害／能力收益，不按武器种类机械拆线。",
         "rating": "B",
@@ -9608,7 +10531,24 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ウーシュラ",
@@ -9726,13 +10666,10 @@
         "firstPart": true,
         "stop": "阶段资格：格斗术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
+          "daminasword",
           "damina_bow",
-          "wind_bow",
-          "longbow",
-          "carla",
-          "agaze_bow",
-          "daminafist",
-          "daminasword"
+          "library_80469844",
+          "library_80469889"
         ],
         "growthNote": "力量35、速度50，输出玩法需要力量，辅助玩法优先剑弓资格与安全；魔力35不是法师必修理由。",
         "rating": "A-",
@@ -9776,7 +10713,36 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "damina_bow",
+              "kind": "rule",
+              "why": "弓术主武器：达·米纳弓战技命中+10",
+              "url": "https://game8.jp/fe-banshisenko/819475"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
+          ]
+        }
       },
       {
         "name": "ジェスター",
@@ -9900,9 +10866,8 @@
         "stop": "阶段资格：剑术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
           "daminasword",
-          "clean",
           "thunder",
-          "swift"
+          "library_80469844"
         ],
         "growthNote": "速度60、力量35，力量影响伤害和负重；再养同样高速剑职未必新增有用成果。",
         "rating": "A-",
@@ -9926,7 +10891,30 @@
           "arts": [],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "daminasword",
+              "kind": "rule",
+              "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+              "url": "https://game8.jp/fe-banshisenko/819524"
+            },
+            {
+              "id": "thunder",
+              "kind": "guide",
+              "why": "第10章后招募时自带雷电剑",
+              "url": "https://game8.jp/fe-banshisenko/819521"
+            },
+            {
+              "id": "library_80469844",
+              "kind": "late",
+              "why": "第三部剑术B后换银剑",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+            }
+          ]
+        }
       },
       {
         "name": "ウルタンド",
@@ -10044,11 +11032,9 @@
         "firstPart": true,
         "stop": "阶段资格：白魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
+          "library_80469850",
           "heal",
-          "magic_staff",
-          "aurora_lance",
-          "sorel_lance",
-          "slender_spear"
+          "library_gw_578469"
         ],
         "growthNote": "力量魔力均40，魔力／白魔与力量／物防互补；不擅长剑且无远程治疗，不套雷电剑奶妈模板。",
         "rating": "A",
@@ -10085,7 +11071,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "キリーク",
@@ -10199,9 +11208,8 @@
         "firstPart": false,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_80469850",
+          "library_gw_578469"
         ],
         "growthNote": "入队后先检查已有枪骑能力与武器伤害，不倒回第一部造多线培养窗口。",
         "rating": "S-",
@@ -10233,6 +11241,23 @@
         "dataSources": {
           "startClass": [
             "https://gamewith.jp/fefw/577615"
+          ]
+        },
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
           ]
         }
       },
@@ -10348,9 +11373,8 @@
         "firstPart": false,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_80469850",
+          "library_gw_578469"
         ],
         "growthNote": "共通后期入队，已有力量、速度与资格比初级职业成长更重要。",
         "rating": "A-",
@@ -10368,6 +11392,23 @@
         "dataSources": {
           "startClass": [
             "https://gamewith.jp/fefw/577895"
+          ]
+        },
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
           ]
         }
       },
@@ -10487,9 +11528,7 @@
         "firstPart": false,
         "stop": "阶段资格：白魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
-          "heal",
-          "thunder"
+          "heal"
         ],
         "growthNote": "速度极低且不能转骑飞，按治疗／承伤用，不按追击输出标准强练力量或速度。",
         "rating": "S",
@@ -10526,7 +11565,18 @@
           "arts": [],
           "skills": []
         },
-        "canRide": false
+        "canRide": false,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            }
+          ]
+        }
       },
       {
         "name": "タリムーン",
@@ -10640,9 +11690,8 @@
         "firstPart": false,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
           "heal",
-          "thunder"
+          "magic_staff"
         ],
         "growthNote": "剑黑魔适性允许混合，但融合窗口不等于普通四线招募；先使用既有法术和职业。",
         "rating": "S-",
@@ -10658,12 +11707,29 @@
             "unlockSource": "https://gamewith.jp/fefw/576935"
           }
         ],
-        "startClass": null,
+        "startClass": "先知",
         "recommendedActions": {
           "arts": [],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            }
+          ]
+        }
       },
       {
         "name": "ベルトラン",
@@ -10777,9 +11843,8 @@
         "firstPart": false,
         "stop": "阶段资格：格斗术C / 斧术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "daminaaxe",
           "zalmoxis",
-          "claire_hammer",
+          "library_gw_578470",
           "giant"
         ],
         "growthNote": "多物理适性与概率追击提供即战力；概率能力不能替代稳定伤害和必要攻速。",
@@ -10821,7 +11886,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "zalmoxis",
+              "kind": "exclusive",
+              "why": "贝特兰的初始装备，霸绝+无视冥府加护；仅此一把",
+              "url": "https://gamecap.jp/fe_fw/w5.html"
+            },
+            {
+              "id": "library_gw_578470",
+              "kind": "late",
+              "why": "第三部斧术B后换银斧",
+              "url": "https://gamewith.jp/fefw/578470"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "アナトリア",
@@ -10939,9 +12027,8 @@
         "firstPart": false,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
-          "heal",
-          "thunder"
+          "library_80469907",
+          "magic_staff"
         ],
         "growthNote": "黑魔与格斗适性支持选择不同武器，但晚加入不应回练四份基础属性。",
         "rating": "S-",
@@ -10950,7 +12037,7 @@
         "baseStats": null,
         "baseLevel": null,
         "bloodMarks": [],
-        "startClass": "诅咒师",
+        "startClass": "先知",
         "recommendedActions": {
           "arts": [
             {
@@ -10968,7 +12055,24 @@
           ],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469907",
+              "kind": "guide",
+              "why": "以携带火器「沙罗曼蛇」远程攻击",
+              "url": "https://gamemos.net/2026/08/25/post-147300/"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            }
+          ]
+        }
       },
       {
         "name": "セントリオン",
@@ -11081,8 +12185,8 @@
         "firstPart": false,
         "stop": "阶段资格：重装术D / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
+          "library_80469850",
+          "library_gw_578469",
           "giant"
         ],
         "growthNote": "敌阶段首次减伤服务承伤，后续战斗仍需物防魔防；枪斧重装适性比骑乘模板更贴合。",
@@ -11097,7 +12201,30 @@
           "arts": [],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            },
+            {
+              "id": "giant",
+              "kind": "rule",
+              "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+              "url": "https://altema.jp/febansisenkou/annagaiden"
+            }
+          ]
+        }
       },
       {
         "name": "クラプカ",
@@ -11153,9 +12280,8 @@
         "firstPart": false,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_80469850",
+          "library_gw_578469"
         ],
         "growthNote": "第六区分才加入，地图内防御叠加不是永久成长；以已有等级与枪白魔资格发挥即战力。",
         "rating": "B",
@@ -11169,7 +12295,24 @@
           "arts": [],
           "skills": []
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469850",
+              "kind": "rule",
+              "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "救世主",
@@ -11227,9 +12370,9 @@
         "firstPart": false,
         "stop": "阶段资格：马术C / 枪术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
+          "review_wp-214",
           "sorel_lance",
-          "slender_spear",
-          "giant"
+          "library_gw_578469"
         ],
         "growthNote": "周围冥府加护失效的独特功能优先，力量与生存服务该职责；不存在普通四线招募。",
         "rating": "S",
@@ -11274,7 +12417,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "review_wp-214",
+              "kind": "exclusive",
+              "why": "救世主的初始装备",
+              "url": "https://gamewith.jp/fefw/580414"
+            },
+            {
+              "id": "sorel_lance",
+              "kind": "exclusive",
+              "why": "无铭之枪觉醒为索雷尔的辉枪；仅此一把",
+              "url": "https://gamewith.jp/fefw/580415"
+            },
+            {
+              "id": "library_gw_578469",
+              "kind": "late",
+              "why": "第三部枪术B后换银枪",
+              "url": "https://gamewith.jp/fefw/578469"
+            }
+          ]
+        }
       },
       {
         "name": "コウカ",
@@ -11332,9 +12498,9 @@
         "firstPart": false,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
+          "library_80469907",
           "heal",
-          "thunder"
+          "magic_staff"
         ],
         "growthNote": "魔法命中个人能力直接服务法术；共通／序幕角色不套第一部声望主养分工。",
         "rating": "A",
@@ -11371,7 +12537,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469907",
+              "kind": "guide",
+              "why": "攻略站「推荐武器」指定沙罗曼蛇",
+              "url": "https://emagame.blog/guide/kouka/"
+            },
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "magic_staff",
+              "kind": "rule",
+              "why": "攻击魔法：魔道杖魔力+3",
+              "url": "https://game8.jp/fe-banshisenko/817533"
+            }
+          ]
+        }
       },
       {
         "name": "トロイア",
@@ -11428,9 +12617,9 @@
         "firstPart": false,
         "stop": "阶段资格：黑魔术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "magic_staff",
+          "library_gw_580457",
           "heal",
-          "thunder"
+          "library_80469904"
         ],
         "growthNote": "拳命中个人能力有物理用途，法术适性提供选择；是否混合由现有力量魔力和终局职责决定。",
         "rating": "A+",
@@ -11461,7 +12650,30 @@
             }
           ]
         },
-        "canRide": true
+        "canRide": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_gw_580457",
+              "kind": "exclusive",
+              "why": "第三部事件取得的特洛伊亚专用手甲，魔法攻击",
+              "url": "https://gamewith.jp/fefw/580457"
+            },
+            {
+              "id": "heal",
+              "kind": "rule",
+              "why": "治疗：治疗杖使回复量+10",
+              "url": "https://game8.jp/fe-banshisenko/817041"
+            },
+            {
+              "id": "library_80469904",
+              "kind": "late",
+              "why": "第三部格斗术B后换银手甲",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+            }
+          ]
+        }
       },
       {
         "name": "アスワン",
@@ -11519,11 +12731,8 @@
         "firstPart": false,
         "stop": "阶段资格：弓术B；所需战技、特技、法术与职业权限达标即停，同技能EXP取最高，不相加",
         "gearIds": [
-          "damina_bow",
-          "wind_bow",
-          "longbow",
-          "carla",
-          "agaze_bow"
+          "review_wp-160",
+          "library_80469889"
         ],
         "growthNote": "弓命中优势适合远程即战力；第五区分加入后，优先装备与弓资格而非重练低阶。",
         "rating": "A-",
@@ -11554,7 +12763,24 @@
             "https://gamewith.jp/fefw/577918"
           ]
         },
-        "canChangeClass": true
+        "canChangeClass": true,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "review_wp-160",
+              "kind": "exclusive",
+              "why": "亚丝望的初始装备，可用「圣闪」",
+              "url": "https://game8.jp/fe-banshisenko/816902"
+            },
+            {
+              "id": "library_80469889",
+              "kind": "late",
+              "why": "第三部弓术B后换银弓",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+            }
+          ]
+        }
       },
       {
         "name": "タホウニア",
@@ -11610,10 +12836,8 @@
         "firstPart": false,
         "stop": "固定职业，不安排转职资格训练。",
         "gearIds": [
-          "daminaaxe",
-          "zalmoxis",
-          "claire_hammer",
-          "giant"
+          "library_80469892",
+          "library_80469904"
         ],
         "growthNote": "力量50%、速度20%；固定职业限制改造空间，15%概率追击不能当稳定双击。",
         "rating": "B",
@@ -11663,7 +12887,24 @@
         "canUseArenaTraining": false,
         "canUseDining": false,
         "canUseTheatre": false,
-        "canUseThermae": false
+        "canUseThermae": false,
+        "gearPlan": {
+          "checkedAt": "2026-10-20",
+          "picks": [
+            {
+              "id": "library_80469892",
+              "kind": "guide",
+              "why": "格斗术射程1–2，重量4；个人技能以手甲战技追击",
+              "url": "https://ds-can.com/nanogames/fe05/"
+            },
+            {
+              "id": "library_80469904",
+              "kind": "late",
+              "why": "第三部格斗术B后换银手甲",
+              "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+            }
+          ]
+        }
       }
     ],
     "classes": [
@@ -31217,13 +32458,12 @@
         {
           "name": "冥炎之主",
           "description": "自己出击时，全体友军不受冥炎影响，处于冥炎中的全体友军受到攻击时伤害减半",
-          "level": 5,
+          "level": 35,
           "sources": [
-            "https://gamewith.jp/fefw/577325",
-            "https://game8.jp/fe-banshisenko/816414",
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://appmedia.jp/fe_banshisenkou/80402635",
+            "https://game8.jp/fe-banshisenko/816414"
           ],
-          "note": "等级据 Gamersky；Game8 列为等级技能但未标注等级，GameWith 无等级表"
+          "note": "AppMedia 习得技能表「专用习得技能：Lv.35」；此前记为 Lv5 的出处未能复核，已更正（2026-10-20）"
         }
       ],
       "learnedSkills": [
@@ -32101,7 +33341,13 @@
           "hit": "20",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "condition": "手配屋委托「挑战者求！吸血鬼博尔赫斯」击败后习得（迪托利希篇第5章）",
+          "note": "手配屋委托「挑战者求！吸血鬼博尔赫斯」击败后习得（迪托利希篇第5章）",
+          "source": "https://chucco.com/fefw-vampire-boruhesu/",
+          "sources": [
+            "https://chucco.com/fefw-vampire-boruhesu/"
+          ]
         },
         {
           "name": "秘传·落燕+",
@@ -32432,7 +33678,14 @@
           "hit": "0",
           "crit": "5",
           "range": "2",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "弓术",
+          "rank": "D",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         },
         {
           "name": "脱离射击",
@@ -33878,7 +35131,14 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "枪术",
+          "rank": "D",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         },
         {
           "name": "半劈刺",
@@ -40170,7 +41430,13 @@
           "range": "1～3",
           "uses": "5",
           "weight": "15",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "condition": "使用道具「档案B」（瀑布后洞窟宝箱）习得",
+          "note": "使用道具「档案B」（瀑布后洞窟宝箱）习得",
+          "source": "https://chucco.com/fefw-behind-waterfall-cave-treasure/",
+          "sources": [
+            "https://chucco.com/fefw-behind-waterfall-cave-treasure/"
+          ]
         },
         {
           "name": "死神Γ",
@@ -40182,7 +41448,13 @@
           "range": "1～2",
           "uses": "5",
           "weight": "13",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "condition": "使用道具「档案Γ」习得",
+          "note": "使用道具「档案Γ」习得",
+          "source": "https://fire-emblem.fun/?pid=1977",
+          "sources": [
+            "https://fire-emblem.fun/?pid=1977"
+          ]
         },
         {
           "name": "神风之剑",
@@ -41050,7 +42322,13 @@
           "hit": "20",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "condition": "迪托利希习得后，经「秘传传授」消耗魔响石教给其他角色（迪托利希篇第7章开放）",
+          "note": "迪托利希习得后，经「秘传传授」消耗魔响石教给其他角色（迪托利希篇第7章开放）",
+          "source": "https://chucco.com/fefw-look-up-rose-moon/",
+          "sources": [
+            "https://chucco.com/fefw-look-up-rose-moon/"
+          ]
         },
         {
           "name": "虎切",
@@ -41982,7 +43260,14 @@
           "hit": "50",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "斧术",
+          "rank": "C",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         },
         {
           "name": "刚击",
@@ -42175,8 +43460,14 @@
         {
           "name": "防御阵形",
           "description": "相邻的友军防御力+1",
-          "note": "来源待确认：外网归为「装备特技」，多名角色都有，可能是技能等级习得",
-          "requirementUnknown": true
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "requirementUnknown": false,
+          "skill": "指挥术",
+          "rank": "B",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         }
       ],
       "combatArts": [
@@ -42523,14 +43814,20 @@
         {
           "name": "攻速指挥",
           "description": "友军速度+2（持续到下一个己方阶段）",
-          "note": "暂译名；数据来自 GameWith 战技一览（2026-10-04）；莱桑达据站长游戏截图",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
           "weapon": "任意",
           "cost": "0",
           "might": "0",
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "指挥术",
+          "rank": "C",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         }
       ],
       "magic": [
@@ -43765,54 +45062,84 @@
           "skill": "剑术",
           "weapon": "剑",
           "description": "必杀较高",
-          "requirementUnknown": true,
-          "note": "角色习得已核对，技能等级门槛待核实",
-          "source": "https://game8.jp/fe-banshisenko/816434"
+          "requirementUnknown": false,
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "rank": "D",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
         },
         {
           "name": "暗影迫近",
           "skill": "剑术",
           "weapon": "剑",
           "description": "敌处于有利地形时，忽略该地形影响",
-          "requirementUnknown": true,
-          "note": "角色习得已核对，技能等级门槛待核实",
-          "source": "https://game8.jp/fe-banshisenko/816434"
+          "requirementUnknown": false,
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "rank": "C",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
         },
         {
           "name": "必闪一击",
           "skill": "剑术",
           "weapon": "剑",
           "description": "攻击时以技巧÷2的概率使攻击力+5",
-          "requirementUnknown": true,
-          "note": "角色习得已核对，技能等级门槛待核实",
-          "source": "https://game8.jp/fe-banshisenko/816434"
+          "requirementUnknown": false,
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "rank": "B",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
         },
         {
           "name": "警戒射击",
           "skill": "弓术",
           "weapon": "弓",
           "description": "战斗时回避+10",
-          "requirementUnknown": true,
-          "note": "角色习得已核对，技能等级门槛待核实",
-          "source": "https://game8.jp/fe-banshisenko/816434"
+          "requirementUnknown": false,
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "rank": "D",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
         },
         {
           "name": "离脱射击",
           "skill": "弓术",
           "weapon": "弓",
           "description": "战斗后可以移动1格",
-          "requirementUnknown": true,
-          "note": "角色习得已核对，技能等级门槛待核实",
-          "source": "https://game8.jp/fe-banshisenko/816434"
+          "requirementUnknown": false,
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "rank": "C",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
         },
         {
           "name": "螺旋射击",
           "skill": "弓术",
           "weapon": "弓",
           "description": "攻击时以技巧÷2的概率使攻击力+5",
-          "requirementUnknown": true,
-          "note": "角色习得已核对，技能等级门槛待核实",
-          "source": "https://game8.jp/fe-banshisenko/816434"
+          "requirementUnknown": false,
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "rank": "B",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
         }
       ],
       "magic": [
@@ -44994,8 +46321,13 @@
         {
           "name": "后之先",
           "description": "在敌方阶段行动时，有25%几率由自己先攻",
-          "note": "Game8 列为等级习得技能，未标注习得等级",
-          "requirementUnknown": true
+          "note": "加入时已习得（专用习得技能：初期）",
+          "requirementUnknown": false,
+          "level": 1,
+          "condition": "加入时已习得（专用习得技能：初期）",
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80470804"
+          ]
         },
         {
           "name": "先之先",
@@ -45022,7 +46354,14 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "剑术",
+          "rank": "C",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         },
         {
           "name": "烈火一击",
@@ -45033,7 +46372,14 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "剑术",
+          "rank": "B",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         },
         {
           "name": "劈刺",
@@ -45044,7 +46390,14 @@
           "hit": "10",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "斧术",
+          "rank": "D",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         },
         {
           "name": "愤怒激发",
@@ -45055,7 +46408,14 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "斧术",
+          "rank": "C",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         },
         {
           "name": "暴动",
@@ -45066,7 +46426,14 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true
+          "requirementUnknown": false,
+          "skill": "斧术",
+          "rank": "B",
+          "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
         },
         {
           "name": "旋风枪",
@@ -69483,54 +70850,84 @@
             "skill": "剑术",
             "weapon": "剑",
             "description": "必杀较高",
-            "requirementUnknown": true,
-            "note": "角色习得已核对，技能等级门槛待核实",
-            "source": "https://game8.jp/fe-banshisenko/816434"
+            "requirementUnknown": false,
+            "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+            "source": "https://game8.jp/fe-banshisenko/816434",
+            "rank": "D",
+            "sources": [
+              "https://game8.jp/fe-banshisenko/816434",
+              "https://gamecap.jp/fe_fw/oboeru.html"
+            ]
           },
           {
             "name": "暗影迫近",
             "skill": "剑术",
             "weapon": "剑",
             "description": "敌处于有利地形时，忽略该地形影响",
-            "requirementUnknown": true,
-            "note": "角色习得已核对，技能等级门槛待核实",
-            "source": "https://game8.jp/fe-banshisenko/816434"
+            "requirementUnknown": false,
+            "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+            "source": "https://game8.jp/fe-banshisenko/816434",
+            "rank": "C",
+            "sources": [
+              "https://game8.jp/fe-banshisenko/816434",
+              "https://gamecap.jp/fe_fw/oboeru.html"
+            ]
           },
           {
             "name": "必闪一击",
             "skill": "剑术",
             "weapon": "剑",
             "description": "攻击时以技巧÷2的概率使攻击力+5",
-            "requirementUnknown": true,
-            "note": "角色习得已核对，技能等级门槛待核实",
-            "source": "https://game8.jp/fe-banshisenko/816434"
+            "requirementUnknown": false,
+            "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+            "source": "https://game8.jp/fe-banshisenko/816434",
+            "rank": "B",
+            "sources": [
+              "https://game8.jp/fe-banshisenko/816434",
+              "https://gamecap.jp/fe_fw/oboeru.html"
+            ]
           },
           {
             "name": "警戒射击",
             "skill": "弓术",
             "weapon": "弓",
             "description": "战斗时回避+10",
-            "requirementUnknown": true,
-            "note": "角色习得已核对，技能等级门槛待核实",
-            "source": "https://game8.jp/fe-banshisenko/816434"
+            "requirementUnknown": false,
+            "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+            "source": "https://game8.jp/fe-banshisenko/816434",
+            "rank": "D",
+            "sources": [
+              "https://game8.jp/fe-banshisenko/816434",
+              "https://gamecap.jp/fe_fw/oboeru.html"
+            ]
           },
           {
             "name": "离脱射击",
             "skill": "弓术",
             "weapon": "弓",
             "description": "战斗后可以移动1格",
-            "requirementUnknown": true,
-            "note": "角色习得已核对，技能等级门槛待核实",
-            "source": "https://game8.jp/fe-banshisenko/816434"
+            "requirementUnknown": false,
+            "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+            "source": "https://game8.jp/fe-banshisenko/816434",
+            "rank": "C",
+            "sources": [
+              "https://game8.jp/fe-banshisenko/816434",
+              "https://gamecap.jp/fe_fw/oboeru.html"
+            ]
           },
           {
             "name": "螺旋射击",
             "skill": "弓术",
             "weapon": "弓",
             "description": "攻击时以技巧÷2的概率使攻击力+5",
-            "requirementUnknown": true,
-            "note": "角色习得已核对，技能等级门槛待核实",
-            "source": "https://game8.jp/fe-banshisenko/816434"
+            "requirementUnknown": false,
+            "note": "技能等级门槛据 GameCap 角色技能习得表（2026-10-20 核对）",
+            "source": "https://game8.jp/fe-banshisenko/816434",
+            "rank": "B",
+            "sources": [
+              "https://game8.jp/fe-banshisenko/816434",
+              "https://gamecap.jp/fe_fw/oboeru.html"
+            ]
           }
         ],
         "skills": [
@@ -76168,17 +77565,17 @@
     "resolvedSkillEffects": 12,
     "resolvedMerchantRecipes": 17,
     "policy": "优先采用明确记载具体机制或角色条件的来源；交叉核对分歧，保留原始依据。推荐、参考面板与游戏硬性规则分开，缺失数据不按成长率或同名技能外推。",
-    "remaining": "已逐项盘点角色、职业、装备、学习记录与养成方向。仍缺少11名角色的可核实入队面板、部分技能门槛及特殊装备来源；未收录不等于不能获得，具体清单如下。",
+    "remaining": "已逐项盘点角色、职业、装备、学习记录与养成方向。仍缺少11名角色的可核实入队面板（公开攻略只有成长率）、部分技能门槛及特殊装备来源；未收录不等于不能获得，具体清单如下。",
     "splitCombinedMerchantSources": 9,
     "resolvedMaterialLocationRecords": 9,
     "checkedCharacterLearningPages": 34,
     "remainingCounts": {
-      "skillRequirements": 69,
+      "skillRequirements": 48,
       "materialLocations": 0,
       "skillProvenance": 43,
       "skillEffects": 0,
       "basePanels": 11,
-      "startClasses": 1
+      "startClasses": 0
     },
     "conflicts": [],
     "resolvedConflicts": [
@@ -76372,6 +77769,52 @@
             "location": "两个回答解释为取高"
           }
         ]
+      },
+      {
+        "subject": "爱娜特莉亚 · 初始职业",
+        "current": "先知",
+        "statements": [
+          {
+            "value": "先知",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0_%E4%B8%87%E7%B4%AB%E5%8D%83%E7%B4%85",
+            "location": "登场人物列表：アナトリア「初期兵種 - ウァテス」"
+          },
+          {
+            "value": "先知",
+            "url": "https://game8.jp/fe-banshisenko/816885",
+            "location": "角色页：「加入時点でウァテス（上級職）」"
+          }
+        ],
+        "previous": "诅咒师",
+        "adopted": "先知",
+        "matchedSources": [
+          "https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0_%E4%B8%87%E7%B4%AB%E5%8D%83%E7%B4%85",
+          "https://game8.jp/fe-banshisenko/816885"
+        ],
+        "decision": "两个网站记录一致，采用一致值。"
+      },
+      {
+        "subject": "谭利穆恩 · 初始职业",
+        "current": "先知",
+        "statements": [
+          {
+            "value": "先知",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0_%E4%B8%87%E7%B4%AB%E5%8D%83%E7%B4%85",
+            "location": "登场人物列表：タリムーン「初期兵種 - ウァテス」"
+          },
+          {
+            "value": "先知",
+            "url": "https://game8.jp/fe-banshisenko/816883",
+            "location": "角色页：「加入時点でウァテス（上級職）」"
+          }
+        ],
+        "previous": "未收录",
+        "adopted": "先知",
+        "matchedSources": [
+          "https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0_%E4%B8%87%E7%B4%AB%E5%8D%83%E7%B4%85",
+          "https://game8.jp/fe-banshisenko/816883"
+        ],
+        "decision": "两个网站记录一致，采用一致值。"
       }
     ],
     "cnReview": {
@@ -76663,7 +78106,8 @@
           "黑羽玛吉纽斯",
           "野生天马",
           "猎鹰"
-        ]
+        ],
+        "note": "四种动物均为凯伊篇捕获对象，捕获系统在凯伊篇第一部第5章解锁；各地点何时可抵达仍未单独记载。"
       },
       {
         "subject": "入队基础面板",
@@ -76679,18 +78123,13 @@
           "库拉普卡",
           "亚丝望",
           "塔霍尼雅"
-        ]
+        ],
+        "note": "2026-10-20 复查 Game8、中文参考站与维基：公开页面只给出成长率（Game8 标为成长値），没有入队实数面板与入队等级，继续空缺。"
       },
       {
         "subject": "路线实测",
         "items": [
           "不同路线、不同入队等级的实际面板与纹章解锁阶段"
-        ]
-      },
-      {
-        "subject": "初始职业",
-        "items": [
-          "谭利穆恩"
         ]
       }
     ],
@@ -76875,7 +78314,7 @@
         "蕾达1级舞者压级玩法条件"
       ]
     },
-    "resolvedStartClasses": 5,
+    "resolvedStartClasses": 6,
     "resolvedClassUnlocks": 6,
     "latestPass": {
       "date": "2026-10-16",
@@ -76972,7 +78411,22 @@
       "https://game8.jp/fe-banshisenko/816859",
       "https://game8.jp/fe-banshisenko/816715",
       "https://gamewith.jp/fefw/578950"
-    ]
+    ],
+    "gapPass": {
+      "date": "2026-10-20",
+      "method": "GameCap 角色技能习得表逐角色核对战技门槛；道具/委托习得按 chucco 实测流程；初始职业对照维基与 Game8。",
+      "resolved": [
+        "c47 乌修拉 6项战技门槛",
+        "c54 贝特兰 5项战技门槛",
+        "c3/c8/c38/c39/c40 各1项门槛",
+        "c2/c34 秘传·血牙 委托与传授条件",
+        "c31 史莱姆B / 死神Γ 道具习得",
+        "c54 后之先 加入时已习得",
+        "c0 冥炎之主 更正为 Lv35（AppMedia）",
+        "c53 谭利穆恩 / c55 爱娜特莉亚 初始职业 先知"
+      ],
+      "skipped": "带「+」的强化战技（燕返+、集中投掷+、秘传·落燕+）来源只记载基础版，不外推；只在一家站点出现或站点间有分歧的门槛不采用。"
+    }
   },
   "careerAlternatives": {
     "c7": [

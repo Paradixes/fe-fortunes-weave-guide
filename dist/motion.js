@@ -78,7 +78,7 @@
   document.addEventListener('keydown', animateTabAction, true);
   const originalSelect = selectGuideRoute;
   selectGuideRoute = function (nextRoute) {
-    if (nextRoute === route) return originalSelect(nextRoute);
+    if (nextRoute === route || window.__routeViewTransition) return originalSelect(nextRoute);
     const previous = document.querySelector('.route-hero-picker .active')?.getBoundingClientRect();
     routeAnimations.forEach(animation => animation.cancel());
     routeAnimations = [];
@@ -171,10 +171,51 @@
     return result;
   };
 
+  // Decode every hero illustration up front so a route switch never shows a blank frame.
+  const artCache = new Map();
+  function artReady(r) {
+    const hero = CATALOG.presentation.heroes.find(h => h.route === r);
+    const urls = hero ? [hero.artSources?.[0]].filter(Boolean) : CATALOG.presentation.heroes.map(h => h.artSources?.[0]).filter(Boolean);
+    return Promise.all(urls.map(url => {
+      if (!artCache.has(url)) {
+        const img = new Image();
+        img.src = url;
+        artCache.set(url, (img.decode ? img.decode() : Promise.resolve()).catch(() => {}));
+      }
+      return artCache.get(url);
+    }));
+  }
+  (window.requestIdleCallback || (fn => setTimeout(fn, 600)))(() => routeOrder().forEach(artReady));
+
   const routeSelect = selectGuideRoute;
+  let routeToken = 0;
+  function cinematicSwitch(nextRoute, dir) {
+    const token = ++routeToken, root = document.documentElement;
+    const wait = new Promise(done => setTimeout(done, 280));
+    Promise.race([artReady(nextRoute), wait]).then(() => {
+      if (token !== routeToken) return;
+      root.dataset.routeDir = dir > 0 ? 'next' : 'prev';
+      const transition = document.startViewTransition(() => {
+        window.__routeViewTransition = true;
+        try { routeSelect(nextRoute); } finally { window.__routeViewTransition = false; }
+        lastView = location.hash + '|' + (typeof routeGuideView === 'undefined' ? '' : routeGuideView);
+        document.querySelector('.route-cover')?.classList.add('route-sheen');
+      });
+      transition.updateCallbackDone.then(() => {
+        const panel = document.querySelector('#route-guide-panel');
+        setTimeout(() => { stagger(panel); countUp(panel || document); }, 180);
+      });
+      transition.finished.finally(() => {
+        if (token === routeToken) delete root.dataset.routeDir;
+        document.querySelector('.route-sheen')?.classList.remove('route-sheen');
+      });
+    });
+  }
+
   selectGuideRoute = function (nextRoute) {
     const order = routeOrder(), from = order.indexOf(route), to = order.indexOf(nextRoute);
     const changed = nextRoute !== route;
+    if (changed && canAnimate() && document.startViewTransition) return cinematicSwitch(nextRoute, to > from ? 1 : -1);
     routeSelect(nextRoute);
     lastView = location.hash + '|' + (typeof routeGuideView === 'undefined' ? '' : routeGuideView);
     if (!changed || !canAnimate()) return;
