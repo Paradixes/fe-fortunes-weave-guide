@@ -168,7 +168,7 @@ python3 server/catalog_server.py --db data/catalog.sqlite3 --port 18776
 
 查看运行状态：`GET /api/health`。个人库存与偏好不发送到服务器，继续使用原 localStorage 键名。生产数据库及服务代码位于 `/var/www/fire-emblem/app-current`，systemd 服务为 `fire-emblem-catalog.service`。
 
-需要从交换 JSON 导入资料时先备份数据库，再执行 `python3 scripts/catalog-db.py import --source <file>`，然后 `node scripts/build-catalog.cjs`。构建会重新导出 JSON 快照和静态 bundle，并更新库内响应缓存。修改 SQLite 后必须重新构建以更新客户端数据。`python3 scripts/verify-sqlite.py` 检查无损交换、完整性、只读连接、HTTP 响应与条件缓存。
+需要从交换 JSON 导入资料时先备份数据库，再执行 `python3 scripts/derive-recommendations.py <file>`（按角色装备方案与职业规划重建装备、职业的「推荐角色」反向索引），然后 `python3 scripts/catalog-db.py import --source <file>`，最后 `node scripts/build-catalog.cjs`。攻略文章存于 SQLite 的 `articles` 集合，每篇一行。构建会重新导出 JSON 快照和静态 bundle，并更新库内响应缓存。修改 SQLite 后必须重新构建以更新客户端数据。`python3 scripts/verify-sqlite.py` 检查无损交换、完整性、只读连接、HTTP 响应与条件缓存。
 
 蕾达第5章观战截图依据：AppMedia 原图 https://appmedia.jp/wp-content/uploads/2026/09/FE_kansen.webp ，显示1449/4/10，12:00–17:59。角色血印新增已确认的解锁条件；凯伊使徒之天冠Lv.10解锁。
 
