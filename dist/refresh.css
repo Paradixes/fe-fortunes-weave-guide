@@ -497,5 +497,50 @@ body .equipment-library.equipment-ledger{display:block!important;container-type:
 .article-pager a:hover{border-color:var(--gold)}
 .article-pager a.next{text-align:right}
 .article-pager small{color:var(--muted);font-size:.76rem}
-@media (max-width:900px){.article-layout{grid-template-columns:1fr;gap:16px}.article-toc{position:static;flex-direction:row;flex-wrap:wrap;gap:6px}.article-toc b{display:none}.article-toc button,.article-toc a{border:1px solid var(--line);border-radius:999px;padding:4px 10px}.article-people article{grid-template-columns:1fr}.article-people article>*:first-child{grid-row:auto}}
+@media (max-width:900px){.article-layout{grid-template-columns:minmax(0,1fr);gap:16px}.article-body,.article-toc{min-width:0}.article-toc{position:static;flex-direction:row;flex-wrap:wrap;gap:6px}.article-toc b{display:none}.article-toc button,.article-toc a{border:1px solid var(--line);border-radius:999px;padding:4px 10px}.article-people article{grid-template-columns:1fr}.article-people article>*:first-child{grid-row:auto}}
 @media (max-width:900px){.article-toc a:not(.article-back){display:none}}
+/* 统一搜索框 */
+.search-bar{display:flex;align-items:center;gap:14px;margin:18px 0 14px}
+.search-bar .search{flex:1 1 auto;max-width:640px}
+.search{position:relative;display:flex;align-items:center;gap:10px;min-height:44px;padding:0 12px 0 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);box-shadow:0 1px 0 rgb(53 43 39/.03);transition:border-color .18s,box-shadow .18s,background .18s}
+.search:hover{border-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
+.search:focus-within{border-color:var(--gold);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 22%,transparent)}
+.search .search-icon{width:18px;height:18px;flex:none;color:var(--muted);transition:color .18s}
+.search:focus-within .search-icon,.search.has-value .search-icon{color:var(--purple)}
+.search input{flex:1;min-width:0;height:42px;padding:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:14px;outline:none;-webkit-appearance:none;appearance:none}
+.search input::-webkit-search-cancel-button,.search input::-webkit-search-decoration{-webkit-appearance:none;appearance:none;display:none}
+.search input::placeholder{color:var(--muted);opacity:.85}
+.search-clear{display:grid;place-items:center;flex:none;width:26px;height:26px;min-height:0;padding:0;border:0;border-radius:50%;background:var(--tint);color:var(--muted);cursor:pointer;transition:background .15s,color .15s}
+.search-clear:hover{background:color-mix(in srgb,var(--gold) 25%,var(--tint));color:var(--ink)}
+.search-kbd{flex:none;min-width:22px;padding:1px 6px;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;font:600 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);text-align:center;background:var(--bg)}
+.search:focus-within .search-kbd{opacity:0}
+.search-count{flex:none;white-space:nowrap;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.search-count b{color:var(--ink);font-weight:700}
+.roster-search-row.search-bar{margin:0}
+.route-map-tools .search{flex:1 1 auto;max-width:520px}
+.wb-picker-search{margin-bottom:12px}.wb-picker-search .search{max-width:none}
+.map-panel .search-bar{margin:12px 0 10px}.map-panel .search{max-width:none}
+.article-toolbar .search-bar{margin:0;flex:1 1 320px}
+/* 筛选下拉与搜索同一视觉语言 */
+.class-sort select{min-height:40px;border-radius:10px;padding:0 30px 0 12px;font-size:13px;transition:border-color .18s,box-shadow .18s}
+.class-sort select:hover{border-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
+.class-sort select:focus-visible{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 22%,transparent)}
+.dark .search,.dark .class-sort select{background:#231e19}
+.dark .search-kbd{background:#1a1612}
+@media (max-width:640px){.search-bar{flex-wrap:wrap;gap:8px}.search-bar .search{flex-basis:100%;max-width:none}.search-kbd{display:none}}
+.toolbar.search-bar{justify-content:flex-start}
+.custom-workbench .search,.wb-character-picker .search{flex-direction:row}
+.custom-workbench .search input,.wb-character-picker .search input{height:42px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;outline:none}
+.custom-workbench .search input:focus-visible{outline:none;box-shadow:none}
+/* 载入状态：交织丝线 + 骨架条 */
+.loading-block{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin:18px 0;padding:18px 20px;border:1px dashed var(--line);border-radius:12px;background:color-mix(in srgb,var(--card) 70%,transparent);color:var(--muted);font-size:13px;animation:loading-in .4s ease both}
+.loading-block>span{display:inline-flex;align-items:center;gap:8px;letter-spacing:.04em}
+.loading-block.compact{flex-direction:row;align-items:center;padding:10px 14px}
+.loading-weave path{stroke-width:1.6;stroke-linecap:round;stroke-dasharray:.22 .78;animation:sp-weave 1.8s linear infinite}
+.loading-weave .w1{stroke:var(--gold)}.loading-weave .w2{stroke:var(--purple);animation-delay:-.9s}
+.loading-skeleton{display:grid;gap:9px;width:100%}
+.loading-skeleton i{display:block;height:12px;width:var(--w);border-radius:6px;background:linear-gradient(90deg,var(--tint) 0%,color-mix(in srgb,var(--gold) 18%,var(--tint)) 45%,var(--tint) 90%);background-size:220% 100%;animation:loading-shimmer 1.6s var(--d) ease-in-out infinite}
+@keyframes sp-weave{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes loading-shimmer{0%{background-position:120% 0}100%{background-position:-120% 0}}
+@keyframes loading-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.loading-block,.loading-weave path,.loading-skeleton i{animation:none}.loading-weave path{stroke-dasharray:none}}

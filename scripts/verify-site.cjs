@@ -589,7 +589,7 @@ assert.equal(reviewed.abilities.length,450);
 const abilityIds=new Set(reviewed.abilities.map(a=>a.id));assert.equal(abilityIds.size,reviewed.abilities.length);
 for(const a of reviewed.abilities){assert(a.acquisition.length);for(const id of a.characters)assert(reviewed.database.characters.some(c=>c.id===id));for(const id of a.classes)assert(reviewed.database.classes.some(c=>c.id===id));for(const binding of a.acquisition)assert(binding.source,'Every skill binding retains provenance');ctx.abilityProbe=a.id;ctx.abilityProbeName=a.name;assert(vm.runInContext("referenceMarkup('ability',abilityProbe)",ctx).includes(vm.runInContext('esc(abilityProbeName)',ctx)));}
 for(const c of reviewed.database.characters){ctx.probeId=c.id;assert(vm.runInContext('cardCareer(DB.characters.find(c=>c.id===probeId))',ctx).includes('mini-career-track'));}
-vm.runInContext("query='';location.hash='#skills';render()",ctx);assert(nodes['#content'].innerHTML.includes('450项技能资料'));
+vm.runInContext("query='';location.hash='#skills';render()",ctx);assert(nodes['#content'].innerHTML.includes('450项特技、战技'));
 console.log('PASS v88: draft isolation, explicit application, profession permissions and qualification goals, inline dossiers, restored cards, shared stats and 426 linked skills with provenance.');
 for(const c of reviewed.database.characters){ctx.probeId=c.id;const missing=vm.runInContext("(()=>{const c=DB.characters.find(c=>c.id===probeId),r=recommendations(c);return [...r.arts,...r.skills,...r.magic].filter(a=>!abilityName(a.name)).map(a=>a.name)})()",ctx);assert(!missing.length,'Every recommended action resolves to skill data: '+c.cn+' '+missing);}
 vm.runInContext("wbApplied={};activeCharacter='c8';detailRoutes.c8='レダ';careerDirectionSelection.c8=2;",ctx);
