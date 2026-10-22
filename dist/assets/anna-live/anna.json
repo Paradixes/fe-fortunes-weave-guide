@@ -1,0 +1,18 @@
+{
+ "version": 1,
+ "note": "C 方案（图生视频）。rect＝视频画面在原画 2000×1020 坐标里的范围（和 B 方案 view 同一套坐标）。idle 的 segs 按顺序轮流放；clips 首尾都是交接帧。生成与抠像见 work/anna_video/。10-20 起首帧是睁眼版（anna-open-art-hd.webp，官方立绘只改左眼），旧的眨眼版备份在 work/anna_video/backup_wink_20261020/。",
+ "rect": [175.3125, -114.1875, 971.5625, 1008.0],
+ "fps": 24,
+ "default": "c1",
+ "idle": {
+  "c1": {"src": "idle-a.webm", "label": "待机 6.5 秒循环"},
+  "c2": {"segs": ["idle-a.webm", "idle-b.webm"], "label": "两段待机轮流 13 秒"}
+ },
+ "clips": {
+  "talk": {"src": "talk.webm"},
+  "happy": {"src": "happy.webm"},
+  "smug": {"src": "smug.webm"},
+  "surprised": {"src": "surprised.webm"}
+ },
+ "bg": {"webm": "bg.webm", "mp4": "bg.mp4", "poster": "bg-poster.webp"}
+}

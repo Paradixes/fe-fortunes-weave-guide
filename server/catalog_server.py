@@ -8,7 +8,8 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 BUNDLES = {"catalog.js": "application/javascript", "roster.json": "application/json",
-           "learning.json": "application/json", "map.json": "application/json"}
+           "learning.json": "application/json", "map.json": "application/json",
+           "map-extras.json": "application/json"}
 
 
 class CatalogHandler(BaseHTTPRequestHandler):

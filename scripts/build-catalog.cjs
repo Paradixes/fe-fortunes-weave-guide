@@ -6,7 +6,7 @@ for(const c of db.characters){assert(data.planning[c.id],'Missing plan '+c.id);f
 for(const route of Object.values(data.routeStrategy))for(const id of [...(route.core||[]),...Object.values(route.coverage||{}).flat()])assert(charIds.has(typeof id==='string'?id:id.id),'Unknown strategy character '+JSON.stringify(id));
 for(const e of data.events)for(const id of e.related)assert(charIds.has(id),'Unknown event character '+id);
 for(const cl of db.classes){const skill=data.masterySkills[cl.col_37];assert(skill&&skill.description&&skill.type&&skill.source,'Missing mastery effect '+cl.cn)}
-const runtime={...data,masteryNotes:Object.fromEntries(db.classes.map(cl=>[cl.cn,data.masterySkills[cl.col_37].description])),mapTerms:data.map.map(p=>({name:p.name,info:p.info||''}))};delete runtime.learning;delete runtime.map;
+const runtime={...data,masteryNotes:Object.fromEntries(db.classes.map(cl=>[cl.cn,data.masterySkills[cl.col_37].description])),mapTerms:data.map.map(p=>({name:p.name,info:p.info||''}))};delete runtime.learning;delete runtime.map;delete runtime.mapExtras;
 // Source comparisons remain in the canonical audit; ship only fields read by the UI.
 if(data.ratingAudit)runtime.ratingAudit={...data.ratingAudit,characters:Object.fromEntries(Object.entries(data.ratingAudit.characters).map(([id,a])=>[id,{rating:a.rating,limits:a.limits}]))};
 const aliases=`const SOURCES=CATALOG.sources,EQUIPMENT=CATALOG.equipment,ROUTE_EVENTS=CATALOG.events,ARENA_PROJECTS=CATALOG.arenaProjects,PET_GUIDE=CATALOG.petGuide,ROUTE_STRATEGY=CATALOG.routeStrategy,ART_SLOT_BONUSES=CATALOG.artSlotBonuses;\nconst PRIMARY_VALUE=Object.fromEntries(Object.entries(CATALOG.planning).map(([id,p])=>[id,p.primary]));\nconst EDITOR_BUILDS=Object.fromEntries(Object.entries(CATALOG.planning).map(([id,p])=>[id,{recommendations:p.recommendations,routes:Object.fromEntries(Object.entries(p.routes).filter(([,v])=>v.rule).map(([r,v])=>[r,v.rule]))}]));\n`;
@@ -19,6 +19,6 @@ const packed=pack(runtime);assert.deepStrictEqual(decodePacked(packed),runtime,'
 fs.writeFileSync(path.join(root,'dist/catalog.js'),'// Generated losslessly from SQLite; repeated values are interned.\nconst catalogStrings='+JSON.stringify(dictionary)+';\n'+hydrate+'\nconst CATALOG=unpackCatalog('+JSON.stringify(packed)+');\n(function freeze(v){if(v&&typeof v==="object"&&!Object.isFrozen(v)){Object.values(v).forEach(freeze);Object.freeze(v)}})(CATALOG);\n'+aliases);
 console.log('Catalogue bytes: '+Buffer.byteLength(JSON.stringify(runtime))+' → '+fs.statSync(path.join(root,'dist/catalog.js')).size);
 
-for(const [file,value]of Object.entries({'roster.json':db,'learning.json':data.learning,'map.json':data.map}))fs.writeFileSync(path.join(root,'dist',file),JSON.stringify(value));
+for(const [file,value]of Object.entries({'roster.json':db,'learning.json':data.learning,'map.json':data.map,'map-extras.json':data.mapExtras}))fs.writeFileSync(path.join(root,'dist',file),JSON.stringify(value));
 execFileSync('python3',[path.join(root,'scripts/catalog-db.py'),'cache']);
 console.log(`SQLite catalogue validated: ${db.characters.length} characters, ${db.classes.length} classes, ${data.equipment.length} equipment; derived lazy-loading bundles cached in SQLite.`);
