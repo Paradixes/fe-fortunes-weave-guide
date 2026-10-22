@@ -82,7 +82,14 @@ function bindAsk(){
  });
 }
 
-function boot(){if(host()){mount();bindAsk()}}
+function mountBg(){
+ const bg=document.querySelector('#anna-live-home .anna-live-bg');if(!bg)return;
+ const v=bg.querySelector('video');if(!v)return;
+ if(reduced()){const img=new Image();img.src='assets/anna-live/bg-poster.webp';img.alt='';bg.replaceChildren(img);return}
+ v.play().catch(()=>{});
+}
+
+function boot(){if(host()){mountBg();mount();bindAsk()}}
 if(typeof render==='function'){
  const baseRender=render;
  render=function(...a){const r=baseRender(...a);boot();return r};
