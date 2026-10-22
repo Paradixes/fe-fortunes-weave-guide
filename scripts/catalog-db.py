@@ -83,7 +83,7 @@ def export_catalog(db):
 
 def cache_bundles(db, directory):
     with sqlite3.connect(db) as conn:
-        for name in ("catalog.js", "roster.json", "learning.json", "map.json"):
+        for name in ("catalog.js", "roster.json", "learning.json", "map.json", "map-extras.json"):
             conn.execute("INSERT OR REPLACE INTO bundles VALUES (?,?)", (name, (Path(directory) / name).read_bytes()))
 
 

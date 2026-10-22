@@ -659,4 +659,36 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(vm.runInContext("typeof openAnnaSearch==='function'&&typeof closeAnnaSearch==='function'",ctx),'Anna search dialog controls exposed');
  console.log('PASS v103: Anna one-tap search (pinyin/alias/Japanese/synonym), header entry and UI residue cleanup.');
 }
+// v104: homepage Anna live figure + ask window, Anna pet, dossier hierarchy, legacy map/recruit/gift data
+{
+ const html=fs.readFileSync(root+'index.html','utf8');
+ assert(html.includes('anna-home.css?v=')&&html.includes('anna-home.js?v=')&&html.includes('anna-pet.css?v=')&&html.includes('anna-pet.js?v='),'Anna home and pet assets registered in index.html');
+ assert(!fs.readFileSync(__filename,'utf8').split('\n')[0].includes('anna-home')&&!fs.readFileSync(__filename,'utf8').split('\n')[0].includes('anna-pet'),'Anna home/pet stay out of the vm harness');
+ const extras=JSON.parse(fs.readFileSync(root+'map-extras.json','utf8'));
+ assert(extras.shops.length>=100&&extras.gather.length>=1000&&extras.renown.length===12&&extras.mounts.length===20,'Legacy map extras complete');
+ ctx.mapExtrasProbe=JSON.stringify(extras);
+ vm.runInContext('MAP_EXTRAS=JSON.parse(mapExtrasProbe)',ctx);
+ ctx.pinProbe=extras.shops[0].place;
+ const pinHtml=vm.runInContext("mapPinDetail(pinProbe)",ctx);
+ assert(pinHtml.includes('pin-shop-table'),'Pin detail lists shop inventory');
+ assert(!pinHtml.includes('尚未逐店补全'),'Shop data replaces the unverified fallback note');
+ const gatherPin=extras.gather[0].place;
+ ctx.gatherProbe=gatherPin;
+ assert(vm.runInContext("mapPinDetail(gatherProbe)",ctx).includes('采集与探索'),'Pin detail lists gather records');
+ assert(vm.runInContext("(()=>{const names=new Set(EQUIPMENT.map(e=>e.name));const s=MAP_EXTRAS.shops.find(s=>s.goods.some(g=>names.has(g[0])));return s?mapPinDetail(s.place):''})()",ctx).includes('data-reference-type="equipment"'),'Shop goods matching equipment open reference dialogs');
+ vm.runInContext("recruitScope='カイ';recruitFilter='all';query=''",ctx);
+ const rec=vm.runInContext('recruit()',ctx);
+ assert(rec.includes('答题：')&&rec.includes('礼物：')&&rec.includes('时限'),'Recruit rows carry quiz answers, gifts and deadlines');
+ assert(rec.includes('生日'),'Recruit roster shows birthdays');
+ assert(vm.runInContext("annaSearch('凯伊 礼物').groups.some(g=>g.kind==='gift')",ctx),'Anna search exposes the gift group');
+ assert(vm.runInContext("annaSearch('生日').flat.length>0",ctx),'Birthdays searchable');
+ assert(vm.runInContext("annaSearch('太阳果').best?.e.kind==='material'",ctx),'Existing lookups unaffected');
+ assert(vm.runInContext("personalSkillPanel(DB.characters[7])",ctx).includes('项'),'Skill groups carry item counts');
+ const dg=vm.runInContext("careerDiagram(DB.characters[8])",ctx);
+ assert(dg.includes('dossier-node-reason')&&dg.includes('熟练：')&&dg.includes('wb-path-level'),'Dossier nodes carry reasons, mastery and reference level');
+ const charCss=fs.readFileSync(root+'character-page.css','utf8');
+ assert(charCss.includes('dossier-node-reason')&&charCss.includes('border-block'),'Skill band and node reason styles present');
+ assert(fs.readFileSync(root+'materials.css','utf8').includes('.pin-shop-table'),'Pin shop table styles present');
+ console.log('PASS v104: Anna home stage and pet assets, shop/gather pin details, recruit quiz/gift enrichment, gift search kind and dossier hierarchy.');
+}
 })();

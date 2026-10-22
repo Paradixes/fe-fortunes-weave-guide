@@ -1,0 +1,16 @@
+/* 安娜桌宠:右下角固定,可拖拽;气泡在宠物上方 */
+#annaPet{position:fixed;z-index:30;width:96px;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;outline-offset:4px}
+#annaPet.carried{cursor:grabbing}
+#annaPet .anna-pet-figure{pointer-events:none;line-height:0;filter:drop-shadow(0 6px 10px rgba(30,20,26,.28))}
+#annaPet video,#annaPet img{width:100%;height:auto;display:block}
+#annaPet.carried .anna-pet-figure{filter:drop-shadow(0 14px 18px rgba(30,20,26,.35))}
+#annaPetBubble{position:fixed;z-index:31;right:16px;bottom:230px;max-width:min(320px,72vw);padding:10px 14px;border:1px solid var(--line);border-radius:12px 12px 4px 12px;background:var(--card);color:var(--ink);font-size:13px;line-height:1.6;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(6px);transition:opacity .18s,transform .18s}
+#annaPetBubble.show{opacity:1;pointer-events:auto;transform:none}
+#annaPetBubble button{display:block;margin:6px 0 0;padding:3px 10px;font-size:12px;border-color:var(--gold);color:var(--purple);background:var(--bg)}
+@media (max-width:650px){
+ #annaPet{width:72px}
+ #annaPetBubble{bottom:180px;font-size:12px}
+}
+@media (prefers-reduced-motion:reduce){
+ #annaPetBubble{transition:none}
+}
