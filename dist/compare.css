@@ -1,0 +1,41 @@
+/* 角色对比页 */
+.visually-hidden{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.compare-picker{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 16px;padding:12px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--card)}
+.compare-chip{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:4px 4px 4px 6px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.compare-chip .portrait{width:32px;height:32px}
+.compare-chip b{font-size:13px}
+.compare-chip button{display:grid;place-items:center;width:32px;height:32px;padding:0;border:0;border-radius:50%;background:none;color:var(--muted);cursor:pointer}
+.compare-chip button:hover,.compare-chip button:focus-visible{background:var(--ui-soft);color:var(--ink)}
+.compare-add select{min-height:44px;padding:0 12px;border:1px dashed var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}
+.compare-empty{padding:32px;border:1px dashed var(--line);border-radius:var(--ui-radius,12px);text-align:center;color:var(--muted)}
+.compare-suggest{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:12px}
+.compare-note{margin:0 0 8px;font-size:12px}
+.compare-wrap{border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--card)}
+.compare-wrap .compare-table{width:100%;min-width:calc(140px + var(--compare-cols) * 200px);border-collapse:collapse;table-layout:fixed;font-size:13px}
+.compare-table th,.compare-table td{padding:10px 12px;border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent);vertical-align:top;text-align:left;line-height:1.6}
+.compare-table thead th{position:sticky;top:0;background:var(--card);z-index:1;vertical-align:bottom}
+.compare-table tbody th[scope=row]{width:140px;color:var(--muted);font-weight:600;font-size:12px}
+.compare-table thead th:first-child{width:140px}
+.compare-table td small{display:block;font-size:12px;color:var(--muted)}
+.compare-group th{padding-top:18px;background:color-mix(in srgb,var(--tint) 45%,var(--card));font-size:12px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+.compare-person{display:flex;align-items:center;gap:10px;width:100%;padding:4px;border:0;border-radius:var(--ui-control-radius,6px);background:none;color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.compare-person:hover,.compare-person:focus-visible{background:var(--ui-soft)}
+.compare-person .portrait{width:48px;height:48px;flex:none}
+.compare-person b{display:block;font-size:15px}
+.compare-person small{display:block;font-size:11px;font-weight:500;color:var(--muted)}
+.compare-table td{font-variant-numeric:tabular-nums}
+.compare-growth{display:inline-block;min-width:3.4em;padding:1px 8px;border-radius:4px;background:var(--growth-color);color:#352b27;font-weight:600;text-align:center}
+.compare-top{font-weight:700}
+.compare-top .compare-growth{box-shadow:0 0 0 2px var(--ui-accent)}
+.compare-top::after{content:' ▲';font-size:10px;color:var(--ui-accent)}
+.character-page-top .character-compare-link{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);font-size:13px;text-decoration:none}
+.character-page-top .character-compare-link:hover,.character-page-top .character-compare-link:focus-visible{border-color:var(--ui-accent);color:var(--ui-accent)}
+@media (max-width:650px){
+ .compare-wrap .compare-table{min-width:calc(76px + var(--compare-cols) * 138px);font-size:12px}
+ .compare-table tbody th[scope=row],.compare-table thead th:first-child{width:76px;position:sticky;left:0;z-index:2;background:var(--card)}
+ .compare-table th,.compare-table td{padding:8px}
+ .compare-person{flex-direction:column;align-items:flex-start;gap:4px}
+ .compare-person .portrait{width:36px;height:36px}
+ .compare-group th{position:static}
+}
+.compare-table .compare-person,.compare-table .compare-person b{color:var(--ink)}
