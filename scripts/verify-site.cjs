@@ -42,7 +42,8 @@ for(const c of vm.runInContext('DB.characters',ctx)){ctx.testId=c.id;assert(vm.r
 assert(vm.runInContext("EQUIPMENT.every(e=>!equipmentSourcePreview(e).includes('source-option-description'))",ctx),'Weapon previews contain only tags and quantity');
 assert(vm.runInContext("sourceQuantityLabel({sourcesList:[{text:'库存2'},{text:'库存3'}]})==='可获取 5 件'&&sourceQuantityLabel({sourcesList:[{text:'库存2'},{text:'随机开出'}]})==='已知 ≥ 2 件'&&sourceQuantityLabel({sourcesList:[{text:'随机开出'}]})==='总数待核实'",ctx),'Unknown and random source quantities never become invented totals');
 console.log('PASS v32: canonical primary-route filtering, multi-route assignments, third-part availability, combined filters, independent guide state and contextual count/rating help.');
-for(const hash of ['', '#home', '#overview']){ctx.location.hash=hash;vm.runInContext("route='レダ';render()",ctx);assert(nodes['#content'].innerHTML.includes('route-guide-panel')&&!nodes['#content'].innerHTML.includes('home-showcase'),'Route guide homepage '+hash);assert(!nodes['#pageNav'].innerHTML.includes('href="#home"'));}
+for(const hash of ['', '#home']){ctx.location.hash=hash;vm.runInContext("route='レダ';render()",ctx);assert(nodes['#content'].innerHTML.includes('anna-live-home')&&!nodes['#content'].innerHTML.includes('route-guide-panel'),'Standalone Anna homepage '+hash);assert(nodes['#pageNav'].innerHTML.includes('href="#home"'),'Home appears in navigation '+hash);}
+ctx.location.hash='#overview';vm.runInContext("route='レダ';render()",ctx);assert(nodes['#content'].innerHTML.includes('route-guide-panel')&&!nodes['#content'].innerHTML.includes('anna-live-home'),'Route guide keeps its own page without the Anna counter');assert(nodes['#content'].innerHTML.includes('anna-note'),'Route guide keeps the compact Anna note');
 for(const h of vm.runInContext('CATALOG.presentation.heroes',ctx)){const cover=vm.runInContext(`routeCover(${JSON.stringify(h.route)})`,ctx);assert(cover.includes(h.artSources[0])&&cover.includes('route-hero-picker')&&!cover.includes('非游戏原台词')&&!cover.includes(h.description));}
 assert(vm.runInContext("equipmentCard(EQUIPMENT.find(e=>e.id==='clean')).includes('<dt>威力</dt><dd>8</dd>')&&equipmentCard(EQUIPMENT.find(e=>e.id==='clean')).includes('<dt>重量</dt><dd>3</dd>')",ctx));
 assert(vm.runInContext("EQUIPMENT.every(e=>!equipmentCard(e).includes('undefined'))",ctx));
@@ -690,5 +691,18 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(charCss.includes('dossier-node-reason')&&charCss.includes('border-block'),'Skill band and node reason styles present');
  assert(fs.readFileSync(root+'materials.css','utf8').includes('.pin-shop-table'),'Pin shop table styles present');
  console.log('PASS v104: Anna home stage and pet assets, shop/gather pin details, recruit quiz/gift enrichment, gift search kind and dossier hierarchy.');
+}
+// v105: standalone Anna homepage, dossier layering fixes, class picker, calculator join-timing note
+{
+ const homeHtml=vm.runInContext('homePage()',ctx);
+ assert(homeHtml.includes('anna-ask-chips')&&homeHtml.includes('home-route-grid')&&homeHtml.includes('home-link-grid')&&homeHtml.includes('home-article-grid')&&homeHtml.includes('home-face-grid')&&homeHtml.includes('home-stats'),'Homepage carries ask chips, routes, directory, articles, character strip and stats');
+ assert(vm.runInContext("homePage().match(/data-open-route=/g).length===5",ctx),'All five routes linked from homepage');
+ assert(vm.runInContext("homePage().match(/class=\"home-face\"/g).length===12",ctx),'Character strip shows 12 faces');
+ assert(vm.runInContext("wbInlineMarkup(DB.characters[8],0,wbDetailRoute(DB.characters[8]).d.stages[0],wbDetailCalculation(DB.characters[8],wbDetailRoute(DB.characters[8])).rows[0])",ctx).includes('class-picker-option'),'Node editor uses the icon class picker');
+ assert(vm.runInContext("wbInlineMarkup(DB.characters[8],0,wbDetailRoute(DB.characters[8]).d.stages[0],wbDetailCalculation(DB.characters[8],wbDetailRoute(DB.characters[8])).rows[0])",ctx).includes('data-inline-field="classId"'),'Class picker keeps the apply-compatible hidden field');
+ assert(vm.runInContext("typeof wbJoinTiming==='function'&&wbJoinTiming({characterId:'c7',activeRoute:'レダ'}).length>0",ctx),'Calculator reports per-route join timing');
+ const charCss=fs.readFileSync(root+'character-page.css','utf8');
+ assert(charCss.includes('.dossier-node-stage>span')&&/skill-growth\{[^}]*padding:20px 24px/.test(charCss),'Career node tiers and skill band padding present');
+ console.log('PASS v105: standalone Anna homepage with directory/stats/faces, class picker, node hierarchy and calculator join-timing note.');
 }
 })();

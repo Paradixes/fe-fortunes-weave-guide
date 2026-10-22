@@ -26,3 +26,26 @@
 .map-more-types .disclosure-heading {padding-inline:0;}
 button[data-reference-type],button[data-class],button[data-gear],button[data-character-gear],button[data-character-material] {min-height:44px;}
 .route-cover {overflow-anchor:none;}
+/* 职业选择器:图标 + 双行(名称/熟练奖励),分组可搜索,替代原生 select */
+.class-picker{position:relative}
+.class-picker-toggle{display:flex;align-items:center;gap:8px;width:100%;min-height:44px;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.class-picker-toggle:hover{border-color:var(--purple)}
+.class-picker-toggle .class-icon{flex:none}
+.class-picker-copy{flex:1;min-width:0;display:grid}
+.class-picker-copy b{font-size:13px;line-height:1.4}
+.class-picker-copy small{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.class-picker-toggle>svg{flex:none;color:var(--muted)}
+.class-picker-popover{position:absolute;z-index:6;left:0;right:0;top:calc(100% + 6px);padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--card);box-shadow:var(--shadow)}
+.class-picker-search .search{max-width:none;padding:6px 10px}
+.class-picker-list{max-height:240px;overflow:auto;display:grid;gap:2px;margin-top:6px}
+.class-picker-group>p{margin:6px 0 2px;font-size:10px;font-weight:600;color:var(--muted);letter-spacing:.04em}
+.class-picker-option{display:flex;align-items:center;gap:8px;width:100%;min-height:40px;padding:5px 8px;border:0;border-radius:6px;background:transparent;color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.class-picker-option:hover,.class-picker-option:focus-visible{background:var(--tint)}
+.class-picker-option[aria-selected=true]{background:color-mix(in srgb,var(--tint) 70%,var(--card))}
+.class-picker-option .class-icon{flex:none}
+.class-picker-option>span{flex:1;min-width:0;display:grid}
+.class-picker-option b{font-size:12px;line-height:1.4}
+.class-picker-option small{font-size:10px;color:var(--muted)}
+.class-picker-check{flex:none;color:var(--purple);display:grid;place-items:center}
+.inline-node-editor .route-node-popover{overflow:visible}
+.route-node-popover{overflow:visible}

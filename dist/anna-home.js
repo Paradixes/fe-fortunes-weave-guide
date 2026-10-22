@@ -40,7 +40,7 @@ function express(name){
 function mount(){
  const h=host();if(!h)return;
  if(currentFigure){if(currentFigure.parentNode!==h){h.innerHTML='';h.appendChild(currentFigure)}return}
- if(reduced()){currentFigure=stillImage();h.appendChild(currentFigure);return}
+ if(reduced()||narrow()){currentFigure=stillImage();h.appendChild(currentFigure);return}
  const video=document.createElement('video');
  video.muted=true;video.playsInline=true;video.loop=true;video.autoplay=true;
  video.className='anna-live-video';video.src=idleSrc();
@@ -74,6 +74,11 @@ function bindAsk(){
   const hit=e.target.closest('[data-ask-idx]');
   if(hit){annaFlat=annaSearch(askQuery).flat;pickAnna(Number(hit.dataset.askIdx));return}
   if(e.target.closest('[data-ask-all]'))openAnnaSearch(askQuery);
+ });
+ form.closest('.anna-ask')?.addEventListener('click',e=>{
+  const chip=e.target.closest('[data-home-chip]');if(!chip)return;
+  if(input)input.value=chip.dataset.homeChip;
+  form.requestSubmit();
  });
 }
 
