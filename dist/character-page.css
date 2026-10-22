@@ -5,47 +5,55 @@
 .character-back:hover,.character-back:focus-visible{background:var(--ui-soft);color:var(--ink)}
 .character-page-grid{display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:40px;align-items:start}
 .character-page-grid.no-toc{grid-template-columns:minmax(0,1fr)}
-.character-page-body{min-width:0;display:flex;flex-direction:column}
+.character-page-body{min-width:0}
 .character-page .detail-hero{padding:24px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--card)}
 .character-page .detail-hero .portrait{width:96px;height:96px}
 .character-page .detail-hero h1{font-size:30px}
-.character-page .rating-analysis{position:relative;margin:0 0 18px;padding:20px 22px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:color-mix(in srgb,var(--tint) 42%,var(--card))}
-.character-page .rating-analysis::before,.character-page .skill-growth::before{display:block;margin-bottom:9px;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em}
-.character-page .rating-analysis::before{content:attr(data-section-kicker)}
-.character-page .skill-growth{position:relative;margin:0 0 26px;padding:20px 22px 10px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--card);box-shadow:0 1px 0 color-mix(in srgb,var(--line) 45%,transparent)}
-.character-page .skill-growth::before{content:attr(data-section-kicker)}
-.character-page .skill-growth-head{align-items:flex-start;margin:0;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.character-page .skill-growth-head h2{font-size:22px;line-height:1.35}
-.character-page .skill-growth-head>small{max-width:58ch;line-height:1.7}
-.character-page .skill-growth-subtitle{display:flex;align-items:center;gap:10px;margin:22px 0 0;padding:0 0 8px;border-bottom:1px solid var(--line);font-size:13px;color:var(--purple)}
-.character-page .skill-growth-subtitle::after{content:"";height:1px;flex:1;background:var(--line)}
-.character-page .skill-growth-track{grid-template-columns:minmax(0,1fr);gap:0}
-.character-page .skill-growth-track>li{display:grid;grid-template-columns:126px minmax(0,1fr);column-gap:22px;row-gap:4px;padding:15px 0;border-top:0;border-bottom:1px solid color-mix(in srgb,var(--line) 72%,transparent)}
-.character-page .skill-growth-track>li::before{display:none}
-.character-page .skill-growth-track>li> :not(.skill-growth-stage){grid-column:2}
-.character-page .skill-growth-stage{grid-row:1/span 4;align-self:start;display:flex;flex-direction:column;align-items:flex-start;gap:3px;margin:0;padding:7px 10px;border-left:2px solid var(--gold);background:var(--bg);border-radius:0 6px 6px 0}
-.character-page .skill-growth-stage span{font-size:11px;color:var(--muted)}
-.character-page .skill-growth-stage small{font-size:13px;letter-spacing:.02em}
-.character-page .skill-growth-track .skill-growth-name{font-size:17px;line-height:1.45}
-.character-page .skill-growth-track p{max-width:70ch;margin-top:1px;font-size:13px}
-.character-page .dossier-tabs{margin:28px 0 16px}
-.character-route-workspace{padding:0 0 8px}
-.character-route-workspace>.action-chips{position:relative;margin:0 0 16px;padding:16px 18px 12px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--bg)}
-.character-route-workspace>.action-chips::before{content:attr(data-section-kicker);display:block;margin-bottom:8px;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em}
-.character-route-workspace>.character-section-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin:34px 0 14px;padding-top:20px;border-top:1px solid var(--line);font-size:22px;line-height:1.4}
-.character-route-workspace>.character-section-title::before{content:attr(data-section-kicker);padding-left:9px;border-left:2px solid var(--gold);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em}
-.character-page .dossier-route{position:relative;margin:16px 0 24px;padding:18px 20px 14px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--bg)}
-.character-page .dossier-route .wb-path-heading{align-items:center;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line);font-size:12px}
-.character-page .dossier-route .career-graph-scroll{padding-top:4px}
-.character-page .dossier-route .dossier-timeline>li{border-top-color:color-mix(in srgb,var(--gold) 50%,var(--line));background:color-mix(in srgb,var(--card) 64%,transparent)}
-.character-page .dossier-route .dossier-timeline>li{padding-inline:12px}
-.character-page .dossier-route .route-final-stats{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
-.character-page .dossier-route .route-final-stats>small{letter-spacing:.02em}
-.character-route-workspace>.detail-training{gap:10px;margin:16px 0 6px}
-.character-route-workspace>.detail-training>div{padding:13px 15px;background:var(--bg)}
-.character-route-workspace>h3{display:flex;align-items:center;gap:8px;margin:26px 0 8px;font-size:15px}
-.character-route-workspace>h3+.table-wrap{margin-bottom:14px}
-.character-route-workspace>.table-wrap,.character-route-workspace>h3+.table-wrap{border-color:color-mix(in srgb,var(--line) 82%,transparent)}
+/* 角色技能：左列分组标签，个人技能单独成行，其余技能双列并排；阶段写在技能名旁 */
+.character-page .skill-growth{padding:20px 24px 6px}
+.character-page .skill-growth-head{margin-bottom:6px}
+.skill-group{display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px 16px;padding:14px 0;border-top:1px solid color-mix(in srgb,var(--line) 80%,transparent)}
+.skill-group-label{display:flex;align-items:baseline;gap:6px;margin:0;padding-top:3px;font-size:12px;font-weight:600;line-height:1.5;color:var(--muted)}
+.skill-group-label small{font-size:11px;font-weight:500;font-variant-numeric:tabular-nums;color:var(--muted)}
+.skill-signature{padding:10px 14px;border-radius:8px;background:var(--card)}
+.skill-signature .skill-growth-name{font-size:16px;line-height:1.45}
+.skill-signature p{margin:2px 0 0;font-size:13px;line-height:1.6;color:var(--ink)}
+.skill-group-personal .skill-group-label{padding-top:12px}
+.skill-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px 28px;margin:0;padding:0}
+.skill-item{min-width:0}
+.skill-item-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.skill-item .skill-growth-name{font-size:15px;line-height:1.45}
+.skill-when{padding:0 7px;border-radius:999px;background:color-mix(in srgb,var(--tint) 75%,transparent);font-size:11px;line-height:18px;color:var(--muted);white-space:nowrap}
+.skill-when.is-level{color:var(--purple);font-weight:700;font-variant-numeric:tabular-nums}
+.skill-item p{margin:2px 0 0;font-size:13px;line-height:1.6;color:var(--ink)}
+.skill-item>small{display:block;margin-top:2px;line-height:1.5}
+.dark .skill-when{background:#3a2f28}
+/* 职业路线：方向为分段切换；只有终点节点带底色；属性期望降为细分隔的一行数据 */
+.character-page .dossier-route{margin:12px 0 24px;padding:20px 24px 16px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--card)}
+.character-page .career-direction-tabs{display:inline-flex;flex-wrap:wrap;gap:2px;margin:0 0 6px;padding:3px;border-radius:10px;background:color-mix(in srgb,var(--tint) 60%,var(--bg))}
+.character-page .career-direction-tabs button{min-height:34px;padding:0 14px;border:0;border-radius:8px;background:transparent;color:var(--muted);font-size:13px;font-weight:500;box-shadow:none}
+.character-page .career-direction-tabs button:hover{color:var(--ink)}
+.character-page .career-direction-tabs button[aria-pressed=true]{background:var(--card);color:var(--purple);font-weight:650;box-shadow:0 1px 3px #352b2724,0 0 0 1px color-mix(in srgb,var(--line) 70%,transparent)}
+.character-page .career-direction-tabs button:focus-visible{outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 28%,transparent)}
+.character-page .dossier-route .wb-path-heading{margin:10px 0 12px}
+.character-page .dossier-timeline>li{padding:16px 14px 12px}
+.character-page .dossier-timeline>li::before{left:14px}
+.character-page .dossier-timeline .path-class{font-size:15px;color:var(--ink)}
+.character-page .dossier-timeline .class-icon{--class-icon-size:36px!important}
+.character-page .dossier-timeline .dossier-end-node{border-top-color:var(--gold);border-radius:0 0 10px 10px;background:color-mix(in srgb,var(--tint) 60%,var(--card))}
+.character-page .dossier-end-node .path-class{font-size:17px;font-weight:700;color:var(--purple)}
+.character-page .dossier-end-node .class-icon{--class-icon-size:40px!important}
+.character-page .dossier-timeline .path-class>span:last-child{white-space:nowrap}
+.character-page .route-final-stats{margin-top:16px;padding-top:12px;border-top:1px solid color-mix(in srgb,var(--line) 80%,transparent)}
+.character-page .route-final-stats>small{font-size:12px;color:var(--muted)}
+.character-page .route-final-stats>.entry-stat-grid{gap:1px;margin:8px 0 0;border-radius:8px;overflow:hidden;background:color-mix(in srgb,var(--line) 70%,transparent)}
+.character-page .route-final-stats .entry-stat-grid>div{padding:6px 10px;border-radius:0;background:var(--card)}
+.character-page .route-final-stats .entry-stat-grid small{font-size:11px;color:var(--muted)}
+.character-page .route-final-stats .entry-stat-grid b{font-size:15px;font-weight:650}
+.character-page .dossier-route .wb-caption{margin:10px 0 0}
+.dark .character-page .career-direction-tabs button[aria-pressed=true]{background:#3a2f28}
+/* 职业路线标题后附当前路线与方案名，替代原先紧挨着的同级标题 */
+.character-page h2 .route-profile-name{display:inline;margin:0 0 0 10px;font-size:14px;font-weight:500;color:var(--muted)}
 .character-page h2[id]{scroll-margin-top:88px}
 .character-page h2[id]:focus{outline:none}
 .character-toc{position:sticky;top:88px;max-height:calc(100dvh - 112px);overflow:auto;padding-left:16px;border-left:1px solid var(--line);font-size:13px}
@@ -73,19 +81,16 @@
 }
 @media (max-width:650px){
  .character-page .detail-hero{padding:16px}
+ .character-page .skill-growth{padding:16px 14px 4px}
+ .skill-group{grid-template-columns:minmax(0,1fr);gap:8px}
+ .skill-group-personal .skill-group-label{padding-top:0}
+ .skill-list{grid-template-columns:minmax(0,1fr);gap:12px}
+ .character-page .dossier-route{padding:14px 12px 12px}
+ .character-page .career-direction-tabs{display:flex;flex-wrap:nowrap;max-width:100%;overflow-x:auto;scrollbar-width:none}
+ .character-page .career-direction-tabs::-webkit-scrollbar{display:none}
+ .character-page .career-direction-tabs button{flex:none;min-height:40px;white-space:nowrap}
  .character-page .detail-hero .portrait{width:72px;height:72px}
  .character-page .detail-hero h1{font-size:24px}
- .character-page .rating-analysis{padding:16px}
- .character-page .skill-growth{padding:16px 14px 8px}
- .character-page .skill-growth-head h2{font-size:20px}
- .character-page .skill-growth-track>li{grid-template-columns:1fr;gap:5px;padding:14px 0}
- .character-page .skill-growth-stage{grid-row:auto;display:grid;grid-template-columns:1fr auto;width:100%;padding:6px 9px}
- .character-page .skill-growth-track>li> :not(.skill-growth-stage){grid-column:1}
- .character-page .dossier-tabs{margin-top:22px}
- .character-route-workspace>.action-chips{padding:14px}
- .character-route-workspace>.character-section-title{margin-top:28px;font-size:20px}
- .character-page .dossier-route{padding:14px 12px 10px}
- .character-page .dossier-route .wb-path-heading{align-items:flex-start;flex-direction:column}
  .character-pager{grid-template-columns:1fr 1fr}
  .character-pager>a{display:none}
 }
