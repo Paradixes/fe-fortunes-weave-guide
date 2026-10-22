@@ -69,6 +69,74 @@ class DeployTests(unittest.TestCase):
             self.assertEqual((root / 'app-current').resolve(), old.resolve())
             self.assertEqual((root / 'current').resolve(), (old / 'dist').resolve())
 
+    def test_delta_expands_onto_live_release(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            current = root / 'current'
+            (current / 'dist/assets').mkdir(parents=True)
+            (current / 'data').mkdir()
+            live = {'sha': 'b' * 40, 'release': 'b' * 40 + '-1-1'}
+            (current / 'dist/deployment.json').write_text(json.dumps(live))
+            (current / 'dist/app.js').write_text('old')
+            (current / 'dist/assets/keep.png').write_bytes(b'png')
+            (current / 'dist/stale.css').write_text('stale')
+            staging = root / 'incoming'
+            target = staging / 'release'
+            target.mkdir(parents=True)
+            (target / 'delta.json').write_text(json.dumps(
+                {'base': 'b' * 40, 'deleted': ['dist/stale.css']}))
+            (target / 'dist').mkdir()
+            (target / 'dist/app.js').write_text('new')
+            full = deploy.apply_delta(target, current)
+            self.assertEqual((full / 'dist/app.js').read_text(), 'new')
+            self.assertEqual((full / 'dist/assets/keep.png').read_bytes(), b'png')
+            self.assertFalse((full / 'dist/stale.css').exists())
+            self.assertFalse((full / 'delta.json').exists())
+            self.assertEqual((current / 'dist/app.js').read_text(), 'old')
+
+    def test_delta_base_mismatch_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            current = root / 'current'
+            (current / 'dist').mkdir(parents=True)
+            (current / 'dist/deployment.json').write_text(
+                json.dumps({'sha': 'b' * 40, 'release': 'b' * 40 + '-1-1'}))
+            target = root / 'release'
+            target.mkdir()
+            (target / 'delta.json').write_text(json.dumps({'base': 'c' * 40, 'deleted': []}))
+            with self.assertRaisesRegex(ValueError, 'does not match'):
+                deploy.apply_delta(target, current)
+
+    def test_delta_deletion_cannot_escape(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            current = root / 'current'
+            (current / 'dist').mkdir(parents=True)
+            (current / 'dist/deployment.json').write_text(
+                json.dumps({'sha': 'b' * 40, 'release': 'b' * 40 + '-1-1'}))
+            target = root / 'release'
+            target.mkdir()
+            (target / 'delta.json').write_text(
+                json.dumps({'base': 'b' * 40, 'deleted': ['../outside.txt']}))
+            with self.assertRaisesRegex(ValueError, 'Unsafe delta'):
+                deploy.apply_delta(target, current)
+
+    def test_delta_manifest_accepted_by_unpack(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            archive = root / 'upload.tar.gz'
+            with tarfile.open(archive, 'w:gz') as package:
+                for d in ('./', './dist'):
+                    d_entry = tarfile.TarInfo(d)
+                    d_entry.type = tarfile.DIRTYPE
+                    package.addfile(d_entry)
+                payload = json.dumps({'base': 'b' * 40, 'deleted': []}).encode()
+                entry = tarfile.TarInfo('./delta.json')
+                entry.size = len(payload)
+                package.addfile(entry, io.BytesIO(payload))
+            deploy.unpack(archive, root / 'extracted')
+            self.assertTrue((root / 'extracted/delta.json').is_file())
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -33,8 +33,13 @@ def unpack(archive, target):
             raise ValueError('Too many archive entries')
         for entry in members:
             name = PurePosixPath(entry.name)
+            if name.parts and name.parts[0] == '.':
+                name = PurePosixPath(*name.parts[1:])
+            if not name.parts and entry.isdir():
+                continue
             valid = (name.parts and name.parts[0] == 'dist') or str(name) in {
                 'data', 'data/catalog.sqlite3', 'server', 'server/catalog_server.py',
+                'delta.json',
             }
             if (not valid or name.is_absolute() or '..' in name.parts
                     or name in seen or not (entry.isdir() or entry.isfile())):
@@ -129,6 +134,28 @@ def activate(release, manifest, site_url):
         raise
 
 
+def apply_delta(target, current):
+    """Expand a delta upload into a full release tree copied from the live one."""
+    delta = json.loads((target / 'delta.json').read_text())
+    live = json.loads((current / 'dist/deployment.json').read_text())
+    if delta.get('base') != live.get('sha'):
+        raise ValueError('Delta base does not match the live release')
+    full = target.parent / 'full'
+    shutil.copytree(current, full)
+    root = full.resolve()
+    for name in delta.get('deleted', []):
+        dest = (full / name).resolve()
+        if not str(dest).startswith(str(root) + '/'):
+            raise ValueError('Unsafe delta deletion')
+        dest.unlink(missing_ok=True)
+    for entry in sorted(target.rglob('*')):
+        if entry.is_file() and entry.name != 'delta.json':
+            dest = full / entry.relative_to(target)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(entry, dest)
+    return full
+
+
 def main():
     if os.geteuid() != 0:
         raise RuntimeError('Deploy receiver requires root')
@@ -152,6 +179,9 @@ def main():
             target = staging / 'release'
             target.mkdir(mode=0o755)
             unpack(archive, target)
+            if (target / 'delta.json').is_file():
+                current = (ROOT / 'app-current').resolve(strict=True)
+                target = apply_delta(target, current)
             manifest = validate(target)
             release = releases / manifest['release']
             if release.exists():
