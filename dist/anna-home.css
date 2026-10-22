@@ -1,10 +1,13 @@
-/* 首页安娜柜台:立绘舞台 + 提问窗 */
-#anna-live-home{display:grid;grid-template-columns:minmax(280px,400px) 1fr;gap:18px;align-items:stretch;margin:0 0 16px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
-.anna-live-stage{position:relative;min-height:330px;background:#2e2233 url('assets/anna-live/bg-poster.webp') center/cover no-repeat}
+/* 首页安娜柜台:全幅动态背景(带渐变遮罩)+ 左侧提问窗 + 右侧立绘。背景视频铺满整个柜台,搜索区浮在渐变之上 */
+#anna-live-home{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,360px);min-height:440px;margin:0 0 16px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:radial-gradient(90% 120% at 0% 0%,color-mix(in srgb,var(--purple) 8%,transparent),transparent 62%),linear-gradient(180deg,var(--card),color-mix(in srgb,var(--tint) 65%,var(--card)))}
+.anna-live-bg{position:absolute;inset:0;z-index:-1;grid-area:1/1/-1/-1}
+.anna-live-bg video,.anna-live-bg img{display:block;width:100%;height:100%;object-fit:cover;object-position:62% 38%;opacity:.5;-webkit-mask-image:linear-gradient(90deg,transparent,#000 46%);mask-image:linear-gradient(90deg,transparent,#000 46%)}
+.dark .anna-live-bg video,.dark .anna-live-bg img{opacity:.42}
+.anna-live-stage{position:relative;min-width:0;grid-column:2;grid-row:1}
 .anna-live-figure{position:absolute;inset:0;display:grid;place-items:end center}
-.anna-live-video{height:100%;max-width:100%;object-fit:contain;object-position:bottom}
-.anna-live-still{height:92%;max-width:92%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 10px 18px rgba(20,12,26,.35))}
-.anna-ask{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:22px 24px;min-width:0;background:linear-gradient(135deg,var(--card) 0%,var(--tint) 130%)}
+.anna-live-video{height:104%;max-width:100%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 12px 24px rgba(20,12,26,.3))}
+.anna-live-still{height:96%;max-width:92%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 10px 18px rgba(20,12,26,.35))}
+.anna-ask{position:relative;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:30px 18px 30px 34px;min-width:0;grid-column:1;grid-row:1}
 .anna-ask>b{font-family:'Noto Serif SC',Georgia,serif;font-size:17px;color:var(--purple)}
 .anna-ask>p{margin:0;font-size:12px;color:var(--muted)}
 .anna-ask kbd{padding:0 4px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;font:600 10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--bg)}
@@ -22,16 +25,18 @@
 .anna-ask-all{justify-self:start;padding:5px 12px;border:1px solid var(--line);border-radius:8px;background:none;color:var(--purple);font:inherit;font-size:12px;cursor:pointer}
 .anna-ask-all:hover{background:var(--tint)}
 .anna-ask-none{margin:0;font-size:12px;color:var(--muted)}
-.anna-ask-more{align-self:flex-start;padding:4px 12px;border:1px solid var(--line);border-radius:8px;background:none;color:var(--muted);font:inherit;font-size:12px;cursor:pointer}
-.anna-ask-more:hover{color:var(--purple);border-color:var(--gold)}
 @media (max-width:860px){
- #anna-live-home{grid-template-columns:120px 1fr;gap:12px}
- .anna-live-stage{min-height:180px}
+ #anna-live-home{grid-template-columns:1fr;min-height:300px}
+ .anna-live-stage{position:absolute;inset:0;pointer-events:none;grid-area:1/1/-1/-1}
+ .anna-live-figure{place-items:end end;padding-right:4px}
+ .anna-live-video,.anna-live-still{height:210px;width:auto}
+ .anna-ask{position:relative;padding:20px 140px 20px 18px}
+ .anna-live-bg video,.anna-live-bg img{opacity:.4;object-position:70% 30%;-webkit-mask-image:linear-gradient(100deg,transparent 18%,#000 72%);mask-image:linear-gradient(100deg,transparent 18%,#000 72%)}
 }
 @media (max-width:560px){
- #anna-live-home{grid-template-columns:1fr}
- .anna-live-stage{min-height:150px;max-height:200px}
- .anna-ask{padding:12px 14px}
+ #anna-live-home{min-height:0}
+ .anna-live-video,.anna-live-still{height:160px}
+ .anna-ask{padding:14px 110px 16px 14px}
 }
 @media (prefers-reduced-motion:reduce){
  .anna-live-still{filter:none}
