@@ -1,105 +1,170 @@
-/* 首页安娜柜台:全幅动态背景(带渐变遮罩)+ 左侧提问窗 + 右侧立绘。背景视频铺满整个柜台,搜索区浮在渐变之上 */
-#anna-live-home{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,360px);min-height:440px;margin:0 0 16px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:radial-gradient(90% 120% at 0% 0%,color-mix(in srgb,var(--purple) 8%,transparent),transparent 62%),linear-gradient(180deg,var(--card),color-mix(in srgb,var(--tint) 65%,var(--card)))}
-.anna-live-bg{position:absolute;inset:0;z-index:-1;grid-area:1/1/-1/-1}
-.anna-live-bg video,.anna-live-bg img{display:block;width:100%;height:100%;object-fit:cover;object-position:62% 38%;opacity:.5;-webkit-mask-image:linear-gradient(90deg,transparent,#000 46%);mask-image:linear-gradient(90deg,transparent,#000 46%)}
-.dark .anna-live-bg video,.dark .anna-live-bg img{opacity:.42}
-.anna-live-stage{position:relative;min-width:0;grid-column:2;grid-row:1}
-.anna-live-figure{position:absolute;inset:0;display:grid;place-items:end center}
-.anna-live-video{height:104%;max-width:100%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 12px 24px rgba(20,12,26,.3))}
-.anna-live-still{height:96%;max-width:92%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 10px 18px rgba(20,12,26,.35))}
-.anna-ask{position:relative;display:flex;flex-direction:column;justify-content:center;gap:10px;padding:30px 18px 30px 34px;min-width:0;grid-column:1;grid-row:1}
-.anna-ask>b{font-family:'Noto Serif SC',Georgia,serif;font-size:17px;color:var(--purple)}
-.anna-ask>p{margin:0;font-size:12px;color:var(--muted)}
-.anna-ask kbd{padding:0 4px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;font:600 10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--bg)}
-.anna-ask-form{display:flex;gap:8px}
-.anna-ask-form input{flex:1;min-width:0;min-height:40px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:13px}
-.anna-ask-form input:focus{outline:none;border-color:var(--ui-accent,var(--purple))}
-.anna-ask-form button{flex:none;padding:0 16px;border:1px solid var(--gold);border-radius:8px;background:var(--card);color:var(--purple);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
-.anna-ask-form button:hover{background:var(--tint)}
-.anna-ask-results{display:grid;gap:6px}
-.anna-ask-hit{display:flex;align-items:baseline;gap:8px;width:100%;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:13px;text-align:left;cursor:pointer}
-.anna-ask-hit:hover,.anna-ask-hit:focus-visible{border-color:var(--ui-accent,var(--purple));background:var(--card)}
-.anna-ask-hit .anna-kind{flex:none;font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px}
+/* 首页安娜剧场首屏:全幅动态斗技场背景 + 金缕流火粒子画布 + 右侧多层坐标对齐立绘 + 左侧对话铭牌与提问窗 */
+#anna-live-home{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) 390px;min-height:448px;margin:0 0 12px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));border-radius:18px;overflow:hidden;background:radial-gradient(85% 120% at 82% 85%,color-mix(in srgb,var(--gold) 22%,transparent),transparent 62%),radial-gradient(90% 120% at 0% 0%,color-mix(in srgb,var(--purple) 10%,transparent),transparent 60%),linear-gradient(135deg,var(--card) 22%,color-mix(in srgb,var(--tint) 78%,var(--card)));box-shadow:0 18px 42px -18px rgba(45,32,24,.22),inset 0 1px 0 rgba(255,252,245,.65)}
+.dark #anna-live-home{box-shadow:0 20px 48px -18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,240,220,.08)}
+.anna-live-bg{position:absolute;inset:0;z-index:-2;grid-area:1/1/-1/-1}
+.anna-live-bg video,.anna-live-bg img{display:block;width:100%;height:100%;object-fit:cover;object-position:62% 38%;opacity:.52;-webkit-mask-image:linear-gradient(90deg,transparent 6%,rgba(0,0,0,.35) 32%,#000 58%);mask-image:linear-gradient(90deg,transparent 6%,rgba(0,0,0,.35) 32%,#000 58%)}
+.dark .anna-live-bg video,.dark .anna-live-bg img{opacity:.46}
+.anna-ember-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;grid-area:1/1/-1/-1}
+.anna-live-stage{position:relative;min-width:0;grid-column:2;grid-row:1;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.anna-stage-halo{position:absolute;right:12px;bottom:-40px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--gold) 34%,transparent) 0%,color-mix(in srgb,var(--purple) 14%,transparent) 48%,transparent 72%);filter:blur(8px);pointer-events:none;animation:anna-halo-breathe 4.2s ease-in-out infinite}
+@keyframes anna-halo-breathe{0%,100%{transform:scale(.94);opacity:.72}50%{transform:scale(1.06);opacity:1}}
+.anna-live-figure{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:center;width:100%;height:100%}
+.anna-stage-wrap{position:relative;display:inline-block;line-height:0;cursor:pointer;-webkit-tap-highlight-color:transparent;filter:drop-shadow(0 14px 28px rgba(24,14,18,.32));transition:transform .24s cubic-bezier(.16,1,.3,1)}
+.anna-stage-wrap:hover{transform:translateY(-3px) scale(1.01)}
+.anna-live-still{display:block;width:auto;height:492px;margin-bottom:-52px;object-fit:contain;transition:opacity .38s ease}
+.anna-c-layer video{width:100%;height:100%}
+
+/* 左侧交互台词与搜索区 */
+.anna-ask{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:30px 16px 32px 38px;min-width:0;grid-column:1;grid-row:1}
+.anna-ask-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.anna-kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);letter-spacing:.08em}
+.anna-kicker img{width:22px;height:22px;border-radius:50%;border:1px solid color-mix(in srgb,var(--gold) 55%,var(--line));background:var(--tint)}
+.anna-kicker b{font:700 15px/1.3 'Noto Serif SC',Georgia,serif;color:var(--purple);letter-spacing:.04em}
+.anna-kicker i{width:1px;height:13px;background:var(--line)}
+.anna-kicker small{font-size:12px;color:var(--muted)}
+
+/* 安娜对话气泡框 */
+.anna-speech{position:relative;margin:4px 0 2px;padding:20px 24px 16px;border:1px solid color-mix(in srgb,var(--gold) 50%,var(--line));border-radius:14px;background:color-mix(in srgb,var(--card) 94%,var(--tint));box-shadow:0 8px 24px -12px rgba(45,32,24,.15);cursor:pointer;user-select:none;transition:border-color .18s,box-shadow .18s,transform .18s}
+.anna-speech:hover{border-color:var(--gold);box-shadow:0 10px 28px -10px rgba(45,32,24,.22);transform:translateY(-1px)}
+.anna-speech::before,.anna-speech::after{content:"";position:absolute;top:46%;border-style:solid;border-color:transparent;pointer-events:none}
+.anna-speech::before{right:-12px;border-width:10px 0 10px 12px;border-left-color:color-mix(in srgb,var(--gold) 50%,var(--line))}
+.anna-speech::after{right:-10px;border-width:9px 0 9px 11px;border-left-color:color-mix(in srgb,var(--card) 94%,var(--tint))}
+.anna-speech-plate{position:absolute;top:-12px;left:18px;display:inline-flex;align-items:baseline;gap:6px;padding:2px 12px 3px;border-radius:999px;background:var(--purple);color:var(--card);font:700 12.5px/1.35 'Noto Serif SC',Georgia,serif;box-shadow:0 3px 8px -2px rgba(45,20,16,.3)}
+.anna-speech-plate small{font:500 10.5px var(--ui-ui-font,system-ui);opacity:.88;letter-spacing:.03em}
+.anna-speech-line{display:grid;margin:0;font:600 18.5px/1.58 'Noto Serif SC',Georgia,serif;color:var(--ink);letter-spacing:.02em;min-height:2.9em;align-content:center}
+.anna-speech-line>span{grid-area:1/1}
+.anna-speech-ghost{visibility:hidden;pointer-events:none}
+.anna-speech-next{position:absolute;right:14px;bottom:10px;border-style:solid;border-width:7px 5px 0;border-color:var(--purple) transparent transparent;opacity:.75;animation:anna-bob 1.2s ease-in-out infinite}
+@keyframes anna-bob{50%{transform:translateY(3px)}}
+
+/* 搜索提问框 */
+.anna-ask-form{display:flex;gap:8px;align-items:stretch}
+.anna-ask-field{flex:1;min-width:0;display:flex;align-items:center;gap:10px;min-height:50px;padding:0 10px 0 15px;border:1.5px solid color-mix(in srgb,var(--gold) 45%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--card) 96%,var(--bg));box-shadow:0 4px 14px -6px rgba(45,32,24,.1);transition:border-color .16s,box-shadow .16s}
+.anna-ask-field:focus-within{border-color:var(--gold);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 22%,transparent),0 6px 18px -6px rgba(45,32,24,.14)}
+.anna-ask-field .search-icon{flex:none;color:var(--muted)}
+.anna-ask-field:focus-within .search-icon{color:var(--purple)}
+.anna-ask-form input{flex:1;min-width:0;height:46px;padding:0;border:0;background:transparent;color:var(--ink);font:inherit;font-size:15px;outline:none;-webkit-appearance:none;appearance:none}
+.anna-ask-form input::-webkit-search-cancel-button,.anna-ask-form input::-webkit-search-decoration{-webkit-appearance:none;appearance:none;display:none}
+.anna-ask-form>button[type=submit]{flex:none;padding:0 22px;border:1px solid color-mix(in srgb,var(--gold) 60%,var(--purple));border-radius:12px;background:linear-gradient(155deg,var(--purple),color-mix(in srgb,var(--purple) 80%,#2b140d));color:#fff9f0;font:700 14.5px var(--ui-ui-font,system-ui);letter-spacing:.06em;cursor:pointer;box-shadow:0 6px 16px -6px color-mix(in srgb,var(--purple) 65%,transparent);transition:transform .15s,filter .15s}
+.anna-ask-form>button[type=submit]:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.anna-ask-form>button[type=submit]:active{transform:none}
+.anna-ask-results{display:grid;gap:8px}
+.anna-ask-results:empty{display:none}
+.anna-ask-hits{display:grid;gap:6px}
+.anna-ask-hit{display:flex;align-items:baseline;gap:8px;width:100%;padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:color-mix(in srgb,var(--card) 94%,var(--bg));color:var(--ink);font:inherit;font-size:13px;text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s,transform .15s}
+.anna-ask-hit:hover,.anna-ask-hit:focus-visible{border-color:var(--ui-accent,var(--purple));background:var(--card);transform:translateX(2px)}
+.anna-ask-hit .anna-kind{flex:none;font-size:10px;color:var(--purple);border:1px solid color-mix(in srgb,var(--purple) 30%,var(--line));border-radius:4px;padding:0 5px;background:var(--tint)}
 .anna-ask-hit b{font-weight:600}
 .anna-ask-hit small{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
-.anna-ask-all{justify-self:start;padding:5px 12px;border:1px solid var(--line);border-radius:8px;background:none;color:var(--purple);font:inherit;font-size:12px;cursor:pointer}
-.anna-ask-all:hover{background:var(--tint)}
+.anna-ask-actions{display:flex;align-items:center;gap:8px}
+.anna-ask-all{padding:5px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--purple);font:inherit;font-size:12px;font-weight:600;cursor:pointer}
+.anna-ask-all:hover{border-color:var(--gold);background:var(--tint)}
+.anna-ask-dismiss{padding:5px 10px;border:0;border-radius:8px;background:transparent;color:var(--muted);font:inherit;font-size:12px;cursor:pointer}
+.anna-ask-dismiss:hover{color:var(--ink);background:var(--ui-soft)}
 .anna-ask-none{margin:0;font-size:12px;color:var(--muted)}
+.anna-ask-loading{display:inline-flex;align-items:center;gap:6px;color:var(--purple);font-weight:500}
+.anna-ask-loading::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);animation:anna-pulse 1s ease-in-out infinite}
+@keyframes anna-pulse{0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.15)}}
+
+/* 大家常问带图标胶囊 */
+.anna-ask-chips{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:2px}
+.anna-ask-chips small{color:var(--muted);font-size:11.5px;flex:none;font-weight:600;letter-spacing:.08em}
+.anna-ask-chips>div{display:flex;gap:7px;flex-wrap:wrap}
+.anna-ask-chips button{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px 0 5px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--card) 90%,var(--bg));color:var(--ink);font:500 12px/1 var(--ui-ui-font,system-ui);cursor:pointer;box-shadow:0 1px 2px rgba(45,32,24,.05);transition:border-color .15s,background-color .15s,color .15s,transform .15s}
+.anna-ask-chips button img{width:22px;height:22px;border-radius:50%;object-fit:cover;background:var(--tint);flex:none}
+.anna-ask-chips button:hover{border-color:var(--gold);background:var(--tint);color:var(--purple);transform:translateY(-1px)}
+
 @media (max-width:860px){
- #anna-live-home{grid-template-columns:1fr;min-height:300px}
- .anna-live-stage{position:absolute;inset:0;pointer-events:none;grid-area:1/1/-1/-1}
- .anna-live-figure{place-items:end end;padding-right:4px}
- .anna-live-video,.anna-live-still{height:210px;width:auto}
- .anna-ask{position:relative;padding:20px 140px 20px 18px}
+ #anna-live-home{grid-template-columns:1fr;min-height:310px}
+ .anna-live-stage{position:absolute;inset:0;pointer-events:none;grid-area:1/1/-1/-1;justify-content:flex-end}
+ .anna-stage-halo{right:-20px;bottom:-40px;width:220px;height:220px}
+ .anna-live-figure{justify-content:flex-end;padding-right:6px}
+ .anna-live-still{height:210px;width:auto;margin-bottom:0}
+ .anna-ask{position:relative;padding:20px 136px 20px 18px}
+ .anna-speech::before,.anna-speech::after{display:none}
+ .anna-speech-line{font-size:15.5px}
  .anna-live-bg video,.anna-live-bg img{opacity:.4;object-position:70% 30%;-webkit-mask-image:linear-gradient(100deg,transparent 18%,#000 72%);mask-image:linear-gradient(100deg,transparent 18%,#000 72%)}
 }
 @media (max-width:560px){
  #anna-live-home{min-height:0}
- .anna-live-video,.anna-live-still{height:160px}
- .anna-ask{padding:14px 110px 16px 14px}
+ .anna-live-still{height:152px}
+ .anna-ask{padding:16px 14px}
+ .anna-live-stage{opacity:.26}
+ .anna-kicker small,.anna-kicker i{display:none}
+ .anna-speech{padding:16px 14px 12px}
+ .anna-speech-line{font-size:14.5px;min-height:2.6em}
+ .anna-ask-form>button[type=submit]{padding:0 14px}
 }
 @media (prefers-reduced-motion:reduce){
  .anna-live-still{filter:none}
+ .anna-ask-loading::before,.anna-stage-halo,.anna-speech-next{animation:none}
 }
 
-/* 独立首页:柜台之后的速览、路线入口、目录与最新文章 */
-.anna-ask-chips{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.anna-ask-chips small{color:var(--muted);font-size:11px;flex:none}
-.anna-ask-chips>div{display:flex;gap:6px;flex-wrap:wrap}
-.anna-ask-chips button{padding:4px 11px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--purple);font:inherit;font-size:12px;cursor:pointer}
-.anna-ask-chips button:hover{border-color:var(--gold);background:var(--tint)}
+/* 独立首页下半部:五章命运路线卡、精锐角色梯度速览、精选深度攻略与功能导航 */
 .home-page{display:grid;gap:28px}
-.home-stats{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
-.home-stats a{display:grid;gap:2px;padding:14px 10px;text-align:center;color:var(--ink);text-decoration:none;border-left:1px solid var(--line)}
-.home-stats a:first-child{border-left:0}
-.home-stats a:hover{background:var(--tint)}
-.home-stats b{font:650 24px/1.2 Georgia,serif;color:var(--purple);font-variant-numeric:tabular-nums}
-.home-stats span{font-size:11px;color:var(--muted)}
-.home-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
-.home-section-head h2{font:600 21px/1.4 'Noto Serif SC',serif;margin:0}
-.home-section-head p{margin:0;font-size:12px;color:var(--muted)}
-.home-route-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.home-route-card{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
-.home-route-card:hover,.home-route-card:focus-visible{border-color:var(--ui-accent,var(--purple));box-shadow:var(--shadow)}
-.home-route-card img,.home-route-card .portrait{width:44px;height:44px;flex:none;border-radius:50%}
-.home-route-card b{display:block;font-size:14px}
-.home-route-card small{display:block;font-size:11px;color:var(--muted);line-height:1.5}
-.home-link-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.home-link-card{display:flex;gap:10px;align-items:flex-start;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);text-decoration:none}
-.home-link-card:hover{border-color:var(--ui-accent,var(--purple));box-shadow:var(--shadow);text-decoration:none}
-.home-link-card svg{flex:none;margin-top:2px;color:var(--purple)}
-.home-link-card b{display:block;font-size:13px}
-.home-link-card small{display:block;font-size:11px;color:var(--muted);line-height:1.5}
-.home-article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.home-article-card{display:block;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);text-decoration:none}
-.home-article-card:hover{border-color:var(--ui-accent,var(--purple));box-shadow:var(--shadow);text-decoration:none}
-.home-article-card small{font-size:10px;color:var(--muted)}
-.home-article-card b{display:block;margin:4px 0;font-size:14px;line-height:1.5}
-.home-article-card p{margin:0;font-size:12px;color:var(--muted);line-height:1.65;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.home-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid color-mix(in srgb,var(--line) 80%,transparent)}
+.home-section-head h2{position:relative;font:700 20px/1.35 'Noto Serif SC',Georgia,serif;margin:0;color:var(--ink);padding-left:11px}
+.home-section-head h2::before{content:'';position:absolute;left:0;top:3px;bottom:3px;width:3.5px;border-radius:2px;background:linear-gradient(180deg,var(--purple),var(--gold))}
+.home-section-head .text-button{font-size:12.5px;min-height:0;padding:2px 0;color:var(--purple);text-decoration:none;font-weight:600}
+.home-section-head .text-button:hover{text-decoration:underline}
+
+/* 五章命运路线卡 */
+.home-route-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.home-route-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:14px 14px 13px;border:1px solid var(--line);border-top:3px solid color-mix(in srgb,var(--gold) 75%,var(--purple));border-radius:13px;background:linear-gradient(180deg,color-mix(in srgb,var(--tint) 45%,var(--card)),var(--card) 55%);color:var(--ink);font:inherit;text-align:left;cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),border-color .16s,box-shadow .2s}
+.home-route-card:hover,.home-route-card:focus-visible{border-color:color-mix(in srgb,var(--gold) 75%,var(--purple));box-shadow:0 12px 26px -14px rgba(45,32,24,.22);transform:translateY(-3px)}
+.home-route-card img,.home-route-card .portrait{width:48px;height:48px;flex:none;border-radius:50%;border:2px solid color-mix(in srgb,var(--gold) 55%,var(--card));box-shadow:0 4px 10px -4px rgba(45,32,24,.25)}
+.home-route-copy{min-width:0;width:100%}
+.home-route-card b{display:block;font:700 15px/1.35 'Noto Serif SC',Georgia,serif;color:var(--ink)}
+.home-route-card small{display:block;font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:3px}
+.home-route-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.home-route-tags i{font-style:normal;font-size:10.5px;padding:1px 7px;border-radius:999px;background:var(--ui-soft,var(--tint));color:var(--purple);font-weight:500}
+
+/* 主力角色速览(带 Berkshire 艺术评级) */
+.home-face-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.home-face{display:flex;align-items:center;gap:10px;padding:8px 12px 8px 9px;border:1px solid var(--line);border-radius:11px;background:var(--card);color:var(--ink);text-decoration:none;min-width:0;transition:transform .16s,border-color .16s,box-shadow .16s}
+.home-face:hover{border-color:color-mix(in srgb,var(--gold) 65%,var(--purple));box-shadow:var(--shadow);text-decoration:none;transform:translateY(-2px)}
+.home-face .portrait{width:38px;height:38px;flex:none;border:1.5px solid color-mix(in srgb,var(--gold) 40%,var(--line))}
+.home-face-copy{flex:1;min-width:0}
+.home-face b{display:block;font-size:13.5px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.home-face small{display:block;font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.home-face .rating-art{min-width:34px;width:auto;height:30px;padding:0;background:transparent!important;border:0!important;box-shadow:none!important;color:var(--rating-ink)!important}
+.dark .home-face .rating-art{color:var(--rating-bg)!important}
+.home-face .rating-art .rating-letter{font-size:24px}
+.home-face .rating-art .rating-modifier{font-size:13px;margin-top:2px}
+
+/* 精选深度攻略卡片 */
+.home-article-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.home-article-card{display:flex;flex-direction:column;gap:6px;padding:15px 17px;border:1px solid var(--line);border-radius:13px;background:var(--card);color:var(--ink);text-decoration:none;transition:transform .18s cubic-bezier(.16,1,.3,1),border-color .16s,box-shadow .18s}
+.home-article-card:hover{border-color:color-mix(in srgb,var(--gold) 65%,var(--purple));box-shadow:var(--shadow);text-decoration:none;transform:translateY(-2px)}
+.home-article-meta{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.home-article-cat{font-size:10.5px;font-weight:650;padding:1px 8px;border-radius:999px;background:color-mix(in srgb,var(--purple) 12%,var(--tint));color:var(--purple)}
+.home-article-card small{font-size:11px;color:var(--muted)}
+.home-article-card b{display:block;font:650 14.5px/1.45 'Noto Serif SC',Georgia,serif;color:var(--ink)}
+.home-article-card p{margin:0;font-size:12px;color:var(--muted);line-height:1.62;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* 账本工具与资料库 */
+.home-link-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.home-link-card{display:flex;gap:11px;align-items:flex-start;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);text-decoration:none;transition:transform .18s cubic-bezier(.16,1,.3,1),border-color .16s,box-shadow .18s}
+.home-link-card:hover{border-color:color-mix(in srgb,var(--gold) 65%,var(--purple));box-shadow:var(--shadow);text-decoration:none;transform:translateY(-2px)}
+.home-link-icon{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:color-mix(in srgb,var(--tint) 85%,var(--card));color:var(--purple);border:1px solid color-mix(in srgb,var(--gold) 30%,var(--line))}
+.home-link-card b{display:block;font-size:13.5px}
+.home-link-card small{display:block;font-size:11.5px;color:var(--muted);line-height:1.45;margin-top:2px}
+
 @media (max-width:1100px){
- .home-stats{grid-template-columns:repeat(3,1fr)}
- .home-stats a:nth-child(4){border-left:0}
- .home-stats a:nth-child(n+4){border-top:1px solid var(--line)}
- .home-route-grid{grid-template-columns:repeat(3,1fr)}
- .home-link-grid{grid-template-columns:repeat(2,1fr)}
- .home-article-grid{grid-template-columns:1fr}
+ .home-route-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .home-face-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .home-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:650px){
- .home-route-grid{grid-template-columns:repeat(2,1fr)}
- .home-stats{grid-template-columns:repeat(3,1fr)}
+ .home-route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-face-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-article-grid{grid-template-columns:1fr}
 }
-.home-face-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-.home-face{display:flex;align-items:center;gap:8px;padding:7px 9px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;min-width:0}
-.home-face:hover{border-color:var(--ui-accent,var(--purple));box-shadow:var(--shadow);text-decoration:none}
-.home-face .portrait{width:34px;height:34px;flex:none}
-.home-face b{display:block;font-size:12px;line-height:1.3;white-space:nowrap}
-.home-face small{display:block;font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-@media (max-width:1100px){.home-face-grid{grid-template-columns:repeat(4,1fr)}}
-@media (max-width:650px){.home-face-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* 安娜柜台 BYOK agent:设置弹层、齿轮按钮与代答区 */
-.anna-llm-gear{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border:1px dashed var(--line);border-radius:999px;background:none;color:var(--muted);font:inherit;font-size:11px;cursor:pointer}
-.anna-llm-gear:hover{border-color:var(--gold);color:var(--purple)}
+.anna-llm-gear{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--card) 85%,var(--bg));color:var(--muted);font:inherit;font-size:11px;font-weight:500;cursor:pointer;transition:border-color .15s,color .15s,background-color .15s}
+.anna-llm-gear:hover{border-color:var(--gold);color:var(--purple);background:var(--tint)}
 .anna-llm-settings{max-width:420px;width:calc(100vw - 48px);border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);padding:0}
 .anna-llm-settings::backdrop{background:rgba(24,16,10,.38)}
 .anna-llm-form{display:grid;gap:12px;padding:20px 22px}
@@ -111,9 +176,15 @@
 .anna-llm-actions{display:flex;align-items:center;gap:10px}
 .anna-llm-actions span{flex:1}
 .anna-llm-actions button{padding:7px 16px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:13px;cursor:pointer}
-.anna-llm-actions button[type=submit]{border-color:var(--gold);color:var(--purple);font-weight:600}
-.anna-agent-answer{padding:12px 14px;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line));border-radius:10px;background:var(--card);font-size:13px;line-height:1.8}
-.anna-agent-answer p{margin:0 0 8px}
-.anna-agent-answer p:last-child{margin:0}
+.anna-llm-actions button[type=submit]{border-color:var(--gold);background:var(--purple);color:var(--card);font-weight:600}
+.anna-agent-answer{padding:12px 14px;border:1px solid color-mix(in srgb,var(--gold) 50%,var(--line));border-radius:10px;background:color-mix(in srgb,var(--card) 96%,var(--tint));font-size:13px;line-height:1.75;box-shadow:0 4px 14px rgba(53,43,39,.06)}
+.anna-agent-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;padding-bottom:6px;border-bottom:1px dashed color-mix(in srgb,var(--line) 80%,transparent)}
+.anna-agent-head b{font-family:'Noto Serif SC',Georgia,serif;font-size:13px;color:var(--purple)}
+.anna-agent-body{max-height:260px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.anna-agent-body p{margin:0 0 8px}
+.anna-agent-body p:last-child{margin:0}
+.anna-agent-body code{padding:1px 5px;border-radius:4px;background:var(--tint);font-size:12px}
 .anna-agent-steps{margin:0;font-size:11px;color:var(--muted)}
-.anna-agent-error{margin:0;font-size:12px;color:var(--muted)}
+.anna-agent-error{margin:0;padding:8px 11px;border-radius:8px;background:color-mix(in srgb,var(--tint) 75%,var(--card));border:1px solid var(--line);font-size:12px;color:var(--muted)}
+.anna-ai-close{margin-left:auto;padding:2px 8px;border:0;border-radius:6px;background:transparent;color:var(--muted);font:inherit;font-size:11px;cursor:pointer}
+.anna-ai-close:hover{background:var(--ui-soft);color:var(--ink)}

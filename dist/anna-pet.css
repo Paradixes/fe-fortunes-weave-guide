@@ -1,5 +1,5 @@
 /* 安娜桌宠:右下角固定,可拖拽;气泡在宠物上方 */
-#annaPet{position:fixed;z-index:30;width:96px;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;outline-offset:4px}
+#annaPet{position:fixed;right:16px;bottom:16px;z-index:30;width:88px;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:none;outline-offset:4px}
 #annaPet.carried{cursor:grabbing}
 #annaPet .anna-pet-figure{pointer-events:none;line-height:0;filter:drop-shadow(0 6px 10px rgba(30,20,26,.28))}
 #annaPet video,#annaPet img{width:100%;height:auto;display:block}

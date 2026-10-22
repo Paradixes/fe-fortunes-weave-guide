@@ -142,3 +142,27 @@ Impeccable 单次机械检测发现五条提示：圆角控件上的粗选中边
 - 安娜柜台接入 BYOK agent(anna-agent.js):设置弹层填写 OpenAI 兼容接口的 Base URL/Key/模型,仅存本机 localStorage,浏览器直连;提问走纯前端 ReAct 工具循环(最多 5 轮),五个本地工具:查账本攻略、查角色档案(含各线入队章节日期)、查职业、查装备、查技能;答案区内联渲染加步骤注记(查过:翻账本/查角色档案…),接口失败自动回落本地匹配。未配置时柜台行为不变。首页柜台与账本弹层各有齿轮入口。
 - 保护性来源说明清理:catalog 剔除 147 条装备 availabilityNote 与 13 处「具体章节未核实」后缀,技能条目只留等级与效果。
 - 全站走查(Playwright 逐路由+角色页+弹层):无死链、无控制台错误、无坏图;安娜柜台 Chrome 下背景与立绘均正常播放(VP9-alpha webm,与老站一致);Safari 不支持 VP9-alpha,本机 ffmpeg 无 libwebp/hevc-alpha 编码能力,兜底方案留待后续。
+
+## 2026-10-22(v108):安娜动画恢复、Agent 工具循环修复、账本 AI 对话与页面净空精修
+
+- 安娜动态立绘与桌宠切页恢复:浏览器将 `HTMLVideoElement` 从旧 `#content` 摘除或切走页面时会自动 `pause()`,原先 `anna-home.js` 的 `mount()` 在复用 `currentFigure` 时直接 `return` 未调 `play()`,`anna-pet.js` 的 `show()` 在 `currentAction` 相同时同样早退。现已在 `mount()` / `show()` 中强制恢复循环与 `play()`,并监听 `visibilitychange`、`pageshow`、`focus` 自动续播。
+- 修复 BYOK Agent「工具调用轮次过多,已中止」:1) `annaToolAbility` 原先写错属性路径 `CATALOG.abilities.list`(实际 `CATALOG.abilities` 为数组),导致查技能永远失败;2) `annaToolEquipment` 原先只搜 `EQUIPMENT`,查材料/礼物时始终报错,现已接入 `materialExchangeIndex()` 与账本联合回退;3) `annaToolSearch` 原先仅返回标题不含正文摘要,模型查到攻略文章也拿不到内容,现已附带条目核心详情并新增 `lookup_article` 工具;4) 循环加入重复 `(name, arguments)` 去重提示,满 8 轮后追加一次不带 `tools` 的总结请求强制输出最终回答,不再直接抛异常中断。
+- 快捷键防冲突:`/` 统一聚焦当前页主输入框(`#search` 或首页 `#anna-ask-input`),仅在无页内搜索框的页面才唤醒账本弹层;页头「打听」按钮键帽改为 `⌘K`,移除柜台与路线页重复的 `<kbd>/</kbd>` 提示。
+- 账本弹层(`#annaSearch`)与桌宠「翻账本提问 ↗」接入 AI 对话:弹层搜索框右侧新增「AI 解答 ✦」按钮、结果区顶部提供一键 AI 解答横幅,支持 `Shift+Enter` 或问句回车直接调用 `annaAgentAsk` 并在弹层内渲染解答与核对步骤;未配置模型时引导打开 API 设置。`annaSearch` 同时升级为支持多词部分命中与长句 2~4 字词干切分,自然语言提问也能同时展示相关词条。
+- 页面净空与冗余文案清理:移除账本弹层底部「账本收录 63 名角色…」统计串、首页 6 格数字统计条(`.home-stats`)、路线页重复的 `.anna-note` 横幅,以及全角色图鉴、职业、装备、材料反查、招募、地图、角色对比、攻略文章等页面的冗余副标题与解释性废话,版面聚焦核心数据与交互。
+
+## 2026-10-22(v109):首页安娜剧场动效升级、路线与角色页高密度精修、18 篇攻略知识库扩充与出处引用
+
+- 首页安娜剧场首屏升级(`dist/anna-home.js`、`dist/anna-home.css`、`dist/v9.js`):
+  - 引入原画坐标映射的多层视频编排(`.anna-c-layer`):底层保底高清睁眼静态立绘(`anna-open-art.webp`),上层叠放双待机无缝轮播(`idle-a.webm` ⇄ `idle-b.webm`,共 13 秒循环)与 4 段独立表情视频(`talk`、`happy`、`smug`、`surprised`),利用 `requestVideoFrameCallback` 首帧就绪后 160ms 交叉淡入,消除单 `<video>` 切 `src` 黑屏闪烁与重影;修复首屏多次 `render()` 与 `alphaOK` 异步回调竞态导致的暂停问题。
+  - 新增斗技场流火与金缕微光粒子画布(`canvas.anna-ember-canvas`)及安娜背部呼吸光晕(`.anna-stage-halo`)。
+  - 新增「安娜 · 帝都秘商」互动台词气泡框(`#anna-live-speech`),点击安娜立绘或台词框切换 6 句台词并触发对应表情动作;常问胶囊升级为带游戏图标的快捷按钮。
+- 桌宠定位修复(`dist/anna-pet.js`、`dist/anna-pet.css`):默认使用 CSS `right: 16px; bottom: 16px` 固定在右下角,仅在用户主动拖拽后才持久化 `dragged: true` 坐标,解决窗口尺寸变化时旧坐标把桌宠锁在页面中央遮挡正文表格的问题。
+- 路线攻略(`#overview`)与角色详情页(`#character/...`)信息密度与区分度精修:
+  - 路线攻略卡片(`.char-card`):9 维成长率热力格改为单行紧凑键值条(`属性 数值%`),默认展开「推荐战技、特技与装备」芯片行(`open`),使单张卡片在一屏内完整呈现评级、入队条件、个人与等级技能、9 维成长率、四阶段职业图标链与推荐配装;关注角色卡片赋予铜金渐变顶栏高亮。
+  - 角色详情页(`#characterPage`):「评级理由与投入建议」升级为 2×2 结构化评定网格卡;「角色技能」升级为 3 列紧凑技能卡并将消耗/威力/强化关系改为行内胶囊标签;「参考基础与血印」与「基础成长率」统一为 9 列等宽对齐条带。
+- 攻略文章与 AI 知识库扩充(`data/catalog.json`、`dist/articles.js`、`dist/anna-agent.js`):
+  - 新增 10 篇深度攻略(七神加护与天刻白沙、神技与职业精通搭配、第二/三部前必做清单、自由行动与月度日历规划、资源与锻造规划、高效刷取指南、九个外传全攻略、第二部战争篇六章攻略、第三部救世篇六区分与终战攻略、首领战打法合集),全站攻略扩充至 18 篇并补齐拼音索引(`ANNA_PINYIN`)。
+  - 全部 18 篇攻略均标明资料出处与引用链接(安娜手帖、GameWith、Game8、AppMedia、GameCap 等),文章目录卡片展示来源徽章,阅读页底部展示可点击跳转的原始出处卡片(`.article-citations`),并同步接入 AI Agent 的 `lookup_article` 与 `search_guides` 知识库。
+
+
