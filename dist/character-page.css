@@ -5,10 +5,47 @@
 .character-back:hover,.character-back:focus-visible{background:var(--ui-soft);color:var(--ink)}
 .character-page-grid{display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:40px;align-items:start}
 .character-page-grid.no-toc{grid-template-columns:minmax(0,1fr)}
-.character-page-body{min-width:0}
+.character-page-body{min-width:0;display:flex;flex-direction:column}
 .character-page .detail-hero{padding:24px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--card)}
 .character-page .detail-hero .portrait{width:96px;height:96px}
 .character-page .detail-hero h1{font-size:30px}
+.character-page .rating-analysis{position:relative;margin:0 0 18px;padding:20px 22px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:color-mix(in srgb,var(--tint) 42%,var(--card))}
+.character-page .rating-analysis::before,.character-page .skill-growth::before{display:block;margin-bottom:9px;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em}
+.character-page .rating-analysis::before{content:attr(data-section-kicker)}
+.character-page .skill-growth{position:relative;margin:0 0 26px;padding:20px 22px 10px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--card);box-shadow:0 1px 0 color-mix(in srgb,var(--line) 45%,transparent)}
+.character-page .skill-growth::before{content:attr(data-section-kicker)}
+.character-page .skill-growth-head{align-items:flex-start;margin:0;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.character-page .skill-growth-head h2{font-size:22px;line-height:1.35}
+.character-page .skill-growth-head>small{max-width:58ch;line-height:1.7}
+.character-page .skill-growth-subtitle{display:flex;align-items:center;gap:10px;margin:22px 0 0;padding:0 0 8px;border-bottom:1px solid var(--line);font-size:13px;color:var(--purple)}
+.character-page .skill-growth-subtitle::after{content:"";height:1px;flex:1;background:var(--line)}
+.character-page .skill-growth-track{grid-template-columns:minmax(0,1fr);gap:0}
+.character-page .skill-growth-track>li{display:grid;grid-template-columns:126px minmax(0,1fr);column-gap:22px;row-gap:4px;padding:15px 0;border-top:0;border-bottom:1px solid color-mix(in srgb,var(--line) 72%,transparent)}
+.character-page .skill-growth-track>li::before{display:none}
+.character-page .skill-growth-track>li> :not(.skill-growth-stage){grid-column:2}
+.character-page .skill-growth-stage{grid-row:1/span 4;align-self:start;display:flex;flex-direction:column;align-items:flex-start;gap:3px;margin:0;padding:7px 10px;border-left:2px solid var(--gold);background:var(--bg);border-radius:0 6px 6px 0}
+.character-page .skill-growth-stage span{font-size:11px;color:var(--muted)}
+.character-page .skill-growth-stage small{font-size:13px;letter-spacing:.02em}
+.character-page .skill-growth-track .skill-growth-name{font-size:17px;line-height:1.45}
+.character-page .skill-growth-track p{max-width:70ch;margin-top:1px;font-size:13px}
+.character-page .dossier-tabs{margin:28px 0 16px}
+.character-route-workspace{padding:0 0 8px}
+.character-route-workspace>.action-chips{position:relative;margin:0 0 16px;padding:16px 18px 12px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--bg)}
+.character-route-workspace>.action-chips::before{content:attr(data-section-kicker);display:block;margin-bottom:8px;color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em}
+.character-route-workspace>.character-section-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin:34px 0 14px;padding-top:20px;border-top:1px solid var(--line);font-size:22px;line-height:1.4}
+.character-route-workspace>.character-section-title::before{content:attr(data-section-kicker);padding-left:9px;border-left:2px solid var(--gold);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em}
+.character-page .dossier-route{position:relative;margin:16px 0 24px;padding:18px 20px 14px;border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--bg)}
+.character-page .dossier-route .wb-path-heading{align-items:center;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line);font-size:12px}
+.character-page .dossier-route .career-graph-scroll{padding-top:4px}
+.character-page .dossier-route .dossier-timeline>li{border-top-color:color-mix(in srgb,var(--gold) 50%,var(--line));background:color-mix(in srgb,var(--card) 64%,transparent)}
+.character-page .dossier-route .dossier-timeline>li{padding-inline:12px}
+.character-page .dossier-route .route-final-stats{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.character-page .dossier-route .route-final-stats>small{letter-spacing:.02em}
+.character-route-workspace>.detail-training{gap:10px;margin:16px 0 6px}
+.character-route-workspace>.detail-training>div{padding:13px 15px;background:var(--bg)}
+.character-route-workspace>h3{display:flex;align-items:center;gap:8px;margin:26px 0 8px;font-size:15px}
+.character-route-workspace>h3+.table-wrap{margin-bottom:14px}
+.character-route-workspace>.table-wrap,.character-route-workspace>h3+.table-wrap{border-color:color-mix(in srgb,var(--line) 82%,transparent)}
 .character-page h2[id]{scroll-margin-top:88px}
 .character-page h2[id]:focus{outline:none}
 .character-toc{position:sticky;top:88px;max-height:calc(100dvh - 112px);overflow:auto;padding-left:16px;border-left:1px solid var(--line);font-size:13px}
@@ -38,6 +75,17 @@
  .character-page .detail-hero{padding:16px}
  .character-page .detail-hero .portrait{width:72px;height:72px}
  .character-page .detail-hero h1{font-size:24px}
+ .character-page .rating-analysis{padding:16px}
+ .character-page .skill-growth{padding:16px 14px 8px}
+ .character-page .skill-growth-head h2{font-size:20px}
+ .character-page .skill-growth-track>li{grid-template-columns:1fr;gap:5px;padding:14px 0}
+ .character-page .skill-growth-stage{grid-row:auto;display:grid;grid-template-columns:1fr auto;width:100%;padding:6px 9px}
+ .character-page .skill-growth-track>li> :not(.skill-growth-stage){grid-column:1}
+ .character-page .dossier-tabs{margin-top:22px}
+ .character-route-workspace>.action-chips{padding:14px}
+ .character-route-workspace>.character-section-title{margin-top:28px;font-size:20px}
+ .character-page .dossier-route{padding:14px 12px 10px}
+ .character-page .dossier-route .wb-path-heading{align-items:flex-start;flex-direction:column}
  .character-pager{grid-template-columns:1fr 1fr}
  .character-pager>a{display:none}
 }
