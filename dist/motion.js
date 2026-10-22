@@ -69,7 +69,7 @@
       ], {duration:220,easing:ease});
       animation.finished.then(() => marker.remove(), () => marker.remove());
       const panelId = selected.getAttribute('aria-controls');
-      const panel = panelId ? document.getElementById(panelId) : selected.dataset.guideView ? document.getElementById('guide-content-'+selected.dataset.guideView) : selected.dataset.detailRoute ? document.getElementById('detailContent') : nextGroup.closest('.chapter-calendar')?.querySelector('.calendar-months');
+      const panel = panelId ? document.getElementById(panelId) : selected.dataset.guideView ? document.getElementById('guide-content-'+selected.dataset.guideView) : selected.dataset.detailRoute ? document.getElementById('characterPage') : nextGroup.closest('.chapter-calendar')?.querySelector('.calendar-months');
       panel?.animate([{opacity:0.72},{opacity:1}],{duration:160,easing:ease});
       schedulePortraits();
     });

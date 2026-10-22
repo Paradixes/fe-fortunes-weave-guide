@@ -57,7 +57,7 @@ main { padding: var(--ui-space-8) 40px 64px; }
 .page-title h1 { font-size: 30px; line-height: 1.4; margin: 0 0 var(--ui-space-3); text-wrap: balance; }
 .page-title p { max-width: 72ch; margin: 0; line-height: 1.8; }
 main > section { margin-top: var(--ui-space-8); }
-main h2, #detailContent h2 { font-size: 20px; line-height: 1.5; margin: var(--ui-space-8) 0 var(--ui-space-4); }
+main h2, :is(#detailContent,#characterPage) h2 { font-size: 20px; line-height: 1.5; margin: var(--ui-space-8) 0 var(--ui-space-4); }
 main h3 { line-height: 1.5; }
 .cover-kicker { font-size: 12px; letter-spacing: 0; margin-bottom: var(--ui-space-2); }
 .cover-tags { gap: var(--ui-space-2); }
@@ -228,8 +228,8 @@ dialog::backdrop { background: #211c19a8; backdrop-filter: none; }
 .detail-hero p { margin: var(--ui-space-1) 0 0; }
 .rating-analysis { border: 0; border-block: 1px solid var(--line); border-radius: 0; padding: var(--ui-space-3) 0; background: transparent; margin-block:var(--ui-space-2) var(--ui-space-3); }
 .rating-analysis-heading { display: grid; grid-template-columns: 56px minmax(0, 1fr); align-items: center; gap: var(--ui-space-3); }
-#detailContent .detail-skill { margin-block:0 var(--ui-space-2); }
-#detailContent .rating-analysis-heading h2 { font: 650 15px/1.5 var(--ui-ui-font); margin: 0 0 var(--ui-space-1); }
+:is(#detailContent,#characterPage) .detail-skill { margin-block:0 var(--ui-space-2); }
+:is(#detailContent,#characterPage) .rating-analysis-heading h2 { font: 650 15px/1.5 var(--ui-ui-font); margin: 0 0 var(--ui-space-1); }
 .reason-facts { gap: 0 var(--ui-space-6); }
 .reason-facts dd { line-height: 1.8; }
 .career-panel, .cultivation-decision { border-radius: var(--ui-radius); box-shadow: none; }
@@ -258,33 +258,33 @@ dialog::backdrop { background: #211c19a8; backdrop-filter: none; }
 .equipment-source-preview small, .source-detail-meta .acquisition-price small,
 .class-card-section h4, .stage-label, .card-career-label, .mini-career-step small { font-size: 11px; }
 .preference-item { border-radius: var(--ui-control-radius); box-shadow: none; }
-#detailContent > h2 { font-size:20px; font-weight:700; margin:var(--ui-space-8) 0 var(--ui-space-3); }
-#detailContent > p { font-size:13px; line-height:1.8; }
-#detailContent .detail-skill { display:grid; grid-template-columns:auto 1fr; gap:var(--ui-space-1) var(--ui-space-3); padding:var(--ui-space-3); }
-#detailContent .detail-skill > span { font-size:11px; font-weight:500; color:var(--muted); align-self:center; }
-#detailContent .detail-skill > b { font-size:16px; font-weight:700; color:var(--ink); }
-#detailContent .detail-skill > p { grid-column:1/-1; margin:0; font-size:13px; line-height:1.8; color:var(--ink); }
-#detailContent .rating-analysis-heading p { font-size:13px; color:var(--ink); line-height:1.8; margin:0; }
-#detailContent .reason-facts dt { font-size:11px; font-weight:600; color:var(--muted); }
-#detailContent .reason-facts dd { font-size:13px; line-height:1.8; }
-#detailContent .career-reasons > div:first-child dd { font-weight:650; }
-#detailContent .career-reasons > div:last-child dd { color:var(--ui-accent); font-weight:600; }
-#detailContent .stage-option-head > b { font-size:17px; line-height:1.5; font-weight:700; }
-#detailContent .stage-option-head .text-button { font-size:12px; font-weight:550; }
-#detailContent .requirement-pills { margin:var(--ui-space-2) 0 var(--ui-space-3); }
-#detailContent .requirement-pills .tag { font-size:11px; font-weight:500; }
-#detailContent .stage-optional .stage-option-head > b { font-size:15px; font-weight:600; }
-#detailContent .mastery-fact > b { font-size:13px; font-weight:650; }
-#detailContent .mastery-fact > .mastery-effect { font-size:12px; line-height:1.8; }
-#detailContent .class-facts dt { font-size:11px; color:var(--muted); }
-#detailContent .class-facts dd { font-size:12px; line-height:1.8; }
-#detailContent .bloodmark-grid article b { font-size:13px; font-weight:650; }
-#detailContent .bloodmark-grid article p { font-size:12px; line-height:1.8; }
-#detailContent .character-global-growth { margin:16px 0; }
-#detailContent .character-global-growth > h2 { margin:0 0 12px; }
-#detailContent .character-global-growth .view-tabs { margin:12px 0; }
+:is(#detailContent,#characterPage) > h2 { font-size:20px; font-weight:700; margin:var(--ui-space-8) 0 var(--ui-space-3); }
+:is(#detailContent,#characterPage) > p { font-size:13px; line-height:1.8; }
+:is(#detailContent,#characterPage) .detail-skill { display:grid; grid-template-columns:auto 1fr; gap:var(--ui-space-1) var(--ui-space-3); padding:var(--ui-space-3); }
+:is(#detailContent,#characterPage) .detail-skill > span { font-size:11px; font-weight:500; color:var(--muted); align-self:center; }
+:is(#detailContent,#characterPage) .detail-skill > b { font-size:16px; font-weight:700; color:var(--ink); }
+:is(#detailContent,#characterPage) .detail-skill > p { grid-column:1/-1; margin:0; font-size:13px; line-height:1.8; color:var(--ink); }
+:is(#detailContent,#characterPage) .rating-analysis-heading p { font-size:13px; color:var(--ink); line-height:1.8; margin:0; }
+:is(#detailContent,#characterPage) .reason-facts dt { font-size:11px; font-weight:600; color:var(--muted); }
+:is(#detailContent,#characterPage) .reason-facts dd { font-size:13px; line-height:1.8; }
+:is(#detailContent,#characterPage) .career-reasons > div:first-child dd { font-weight:650; }
+:is(#detailContent,#characterPage) .career-reasons > div:last-child dd { color:var(--ui-accent); font-weight:600; }
+:is(#detailContent,#characterPage) .stage-option-head > b { font-size:17px; line-height:1.5; font-weight:700; }
+:is(#detailContent,#characterPage) .stage-option-head .text-button { font-size:12px; font-weight:550; }
+:is(#detailContent,#characterPage) .requirement-pills { margin:var(--ui-space-2) 0 var(--ui-space-3); }
+:is(#detailContent,#characterPage) .requirement-pills .tag { font-size:11px; font-weight:500; }
+:is(#detailContent,#characterPage) .stage-optional .stage-option-head > b { font-size:15px; font-weight:600; }
+:is(#detailContent,#characterPage) .mastery-fact > b { font-size:13px; font-weight:650; }
+:is(#detailContent,#characterPage) .mastery-fact > .mastery-effect { font-size:12px; line-height:1.8; }
+:is(#detailContent,#characterPage) .class-facts dt { font-size:11px; color:var(--muted); }
+:is(#detailContent,#characterPage) .class-facts dd { font-size:12px; line-height:1.8; }
+:is(#detailContent,#characterPage) .bloodmark-grid article b { font-size:13px; font-weight:650; }
+:is(#detailContent,#characterPage) .bloodmark-grid article p { font-size:12px; line-height:1.8; }
+:is(#detailContent,#characterPage) .character-global-growth { margin:16px 0; }
+:is(#detailContent,#characterPage) .character-global-growth > h2 { margin:0 0 12px; }
+:is(#detailContent,#characterPage) .character-global-growth .view-tabs { margin:12px 0; }
 .initial-data { margin:16px 0; }
-#detailContent .initial-data > h2 { margin:0 0 12px; }
+:is(#detailContent,#characterPage) .initial-data > h2 { margin:0 0 12px; }
 .entry-tabs { margin:12px 0; }
 .entry-meta { display:flex; gap:16px; flex-wrap:wrap; font-size:12px; margin-bottom:10px; color:var(--muted); }
 .entry-meta b { color:var(--ink); margin-left:4px; }
@@ -353,7 +353,7 @@ body.dark .arena-person.arena-supplement, body.dark .table-character.arena-suppl
   .segments button, .tier-filters button, .class-group-nav button { min-height: 44px; }
   .table-wrap table { min-width: 620px; }
   dialog { padding: var(--ui-space-4); border-radius: var(--ui-radius); }
-  #detailContent h2 { font-size: 18px; }
+  :is(#detailContent,#characterPage) h2 { font-size: 18px; }
   .entry-stat-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
   .char-card .char-name-row .favorite.compact { width:44px; height:44px; min-height:44px; }
   .detail-name-row .favorite.compact { width:44px; height:44px; min-height:44px; }
@@ -436,7 +436,7 @@ button.skill-growth-name:focus-visible { outline: 2px solid var(--purple); outli
 
 .skill-growth { margin: var(--ui-space-4) 0 var(--ui-space-6); padding: var(--ui-space-4) var(--ui-space-4) var(--ui-space-2); background: var(--ui-soft); border-radius: var(--ui-radius); }
 .skill-growth-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--ui-space-1) var(--ui-space-3); margin-bottom: var(--ui-space-3); }
-#detail .skill-growth-head h2 { margin: 0; font-size: 17px; }
+:is(#detail,#characterPage) .skill-growth-head h2 { margin: 0; font-size: 17px; }
 .skill-growth-head small, .skill-growth-note, .skill-growth-meta, .skill-growth-upgrade { font-size: 12px; color: var(--muted); }
 .skill-growth-subtitle { margin: var(--ui-space-4) 0 var(--ui-space-2); font-size: 14px; color: var(--ink); }
 .skill-growth-track { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0 var(--ui-space-4); margin: 0; padding: 0; }

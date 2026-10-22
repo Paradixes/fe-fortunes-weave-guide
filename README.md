@@ -77,6 +77,8 @@ python3 server/catalog_server.py --db data/catalog.sqlite3 --port 18776
 
 `dist/app.js`、`v9.js`、`reasons.js` 负责共享查询、偏好计算与展示。`locale.js` 处理中文名称。地图仅为已有地点记录提供入口，无已收录地点的装备不显示地图按钮。浏览器库存不会因切换方案或来源被扣除。
 
+角色详情是独立页面（`#character/<id>[/<路线>]`），角色对比页为 `#compare/<id>,<id>`；材料反查由装备兑换来源在页面内实时推导，不另存数据。
+
 静态网页位于 `dist/`，可部署到任意静态服务器；`server/` 提供可选的只读 SQLite 数据接口。
 
 ## 验证

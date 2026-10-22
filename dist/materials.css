@@ -1,0 +1,27 @@
+/* 材料反查：材料 → 可兑换装备 → 采集地点 */
+.equipment-views>.view-tabs{margin:var(--ui-space-4,16px) 0}
+.equipment-views .tab-count{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.material-hint{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 12px;padding:10px 14px;border-radius:var(--ui-radius,12px);background:var(--ui-soft);font-size:13px}
+.material-ledger{border:1px solid var(--line);border-radius:var(--ui-radius,12px);background:var(--card);overflow:clip}
+.material-row{display:grid;grid-template-columns:minmax(140px,180px) minmax(0,1.6fr) minmax(180px,1fr);gap:16px;align-items:start;padding:14px 16px;border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent);scroll-margin-top:88px}
+.material-row:last-child{border-bottom:0}
+.material-row:target{background:color-mix(in srgb,var(--ui-soft) 60%,var(--card))}
+.material-row-name{display:grid;gap:4px}
+.material-row-name>b{font-size:16px}
+.material-row-name small{font-size:11px;color:var(--muted)}
+.material-row-count{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.material-row-count b{color:var(--ui-accent);font-size:14px}
+.material-uses{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px}
+.material-gear{display:flex;align-items:center;gap:10px;width:100%;min-height:44px;padding:6px 10px;border:1px solid var(--line);border-radius:var(--ui-control-radius,6px);background:var(--bg);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.material-gear:hover,.material-gear:focus-visible{border-color:var(--ui-accent);background:var(--card)}
+.material-gear-icon{flex:none;width:28px;height:28px;display:grid;place-items:center}
+.material-gear-icon img{width:28px;height:28px;object-fit:contain}
+.material-gear b{display:block;font-size:13px;line-height:1.4}
+.material-gear small{display:block;font-size:11px;line-height:1.5;color:var(--muted)}
+.material-where small{display:block;font-size:11px;font-weight:600;color:var(--muted)}
+.material-where p{margin:2px 0 6px;font-size:13px;line-height:1.7}
+.pin-material-exchange{margin:4px 0 0;padding-left:18px;font-size:13px;line-height:1.8}
+@media (max-width:900px){.material-row{grid-template-columns:1fr;gap:10px}.material-row-name{grid-template-columns:auto 1fr;align-items:baseline;gap:4px 10px}.material-row-count{grid-column:1/-1}}
+.pin-material-exchange{list-style:none;padding:0;display:grid;gap:8px}
+.pin-material-exchange li{display:grid;grid-template-columns:4.5em 1fr;gap:8px;align-items:baseline}
+.pin-material-exchange li>span{display:flex;flex-wrap:wrap;gap:2px 10px}
