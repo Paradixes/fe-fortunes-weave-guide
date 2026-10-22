@@ -22,6 +22,7 @@ jobs:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: '22'
@@ -54,8 +55,49 @@ jobs:
           }
           Path('dist/deployment.json').write_text(json.dumps(manifest) + '\n')
           PY
-          tar --exclude='__pycache__' -czf "$RUNNER_TEMP/release.tar.gz" dist data/catalog.sqlite3 server/catalog_server.py
+          tar --exclude='__pycache__' -czf "$RUNNER_TEMP/release-full.tar.gz" dist data/catalog.sqlite3 server/catalog_server.py
+          # Delta deploy: upload only files changed since the live release (uploads to the
+          # server cross the Pacific on port 22 and have stalled the job past 15 minutes).
+          LIVE_SHA=$(curl -fsS --max-time 10 "https://fe-fortunes-weave.intramode.site/deployment.json" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("sha",""))' || true)
+          DELTA_OK=0
+          if [ -n "${LIVE_SHA:-}" ] && git cat-file -e "$LIVE_SHA^{commit}" 2>/dev/null; then
+            git diff --name-status --no-renames "$LIVE_SHA" "$DEPLOY_SHA" -- dist data/catalog.sqlite3 server/catalog_server.py > "$RUNNER_TEMP/delta-status.txt"
+            python3 - "$LIVE_SHA" <<'PY'
+          import json, os, sys
+          from pathlib import Path
+          temp = Path(os.environ['RUNNER_TEMP'])
+          changed, deleted = [], []
+          for line in (temp / 'delta-status.txt').read_text().splitlines():
+              status, _, name = line.partition('\t')
+              if status == 'D':
+                  deleted.append(name)
+              elif name:
+                  changed.append(name)
+          if 'dist/deployment.json' not in changed:
+              changed.append('dist/deployment.json')
+          (temp / 'delta.json').write_text(json.dumps({'base': sys.argv[1], 'deleted': deleted}) + '\n')
+          (temp / 'delta-files.txt').write_text('\n'.join(changed) + '\n')
+          PY
+            DELTA_DIR="$RUNNER_TEMP/delta-tree"
+            mkdir -p "$DELTA_DIR"
+            while IFS= read -r f; do
+              mkdir -p "$DELTA_DIR/$(dirname "$f")"
+              cp "$f" "$DELTA_DIR/$f"
+            done < "$RUNNER_TEMP/delta-files.txt"
+            cp "$RUNNER_TEMP/delta.json" "$DELTA_DIR/delta.json"
+            tar -czf "$RUNNER_TEMP/release-delta.tar.gz" -C "$DELTA_DIR" .
+            FULL_SIZE=$(stat -c %s "$RUNNER_TEMP/release-full.tar.gz")
+            DELTA_SIZE=$(stat -c %s "$RUNNER_TEMP/release-delta.tar.gz")
+            echo "Full ${FULL_SIZE} bytes vs delta ${DELTA_SIZE} bytes (base ${LIVE_SHA:0:7})"
+            if [ "$DELTA_SIZE" -lt "$FULL_SIZE" ]; then DELTA_OK=1; fi
+          fi
+          if [ "$DELTA_OK" = 1 ]; then
+            cp "$RUNNER_TEMP/release-delta.tar.gz" "$RUNNER_TEMP/release.tar.gz"
+          else
+            cp "$RUNNER_TEMP/release-full.tar.gz" "$RUNNER_TEMP/release.tar.gz"
+          fi
       - name: Deploy over verified SSH
+        timeout-minutes: 10
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
@@ -75,11 +117,23 @@ jobs:
           printf '%s\n' "$DEPLOY_SSH_KEY" > "$keydir/key"
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$keydir/known_hosts"
           chmod 600 "$keydir/key" "$keydir/known_hosts"
-          ssh -F /dev/null -i "$keydir/key" \
-            -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
-            -o UserKnownHostsFile="$keydir/known_hosts" -o ConnectTimeout=15 \
-            -o ServerAliveInterval=15 -o ServerAliveCountMax=3 \
-            -p "${DEPLOY_PORT:-22}" "$DEPLOY_USER@$DEPLOY_HOST" < "$RUNNER_TEMP/release.tar.gz"
+          deploy() {
+            timeout 540 ssh -F /dev/null -i "$keydir/key" \
+              -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
+              -o UserKnownHostsFile="$keydir/known_hosts" -o ConnectTimeout=15 \
+              -o ServerAliveInterval=15 -o ServerAliveCountMax=3 \
+              -p "${DEPLOY_PORT:-22}" "$DEPLOY_USER@$DEPLOY_HOST" < "$1"
+          }
+          start=$SECONDS
+          if ! deploy "$RUNNER_TEMP/release.tar.gz"; then
+            if (( SECONDS - start < 120 )); then
+              echo "Deploy failed fast (auth/connectivity or delta rejected); retrying once with the full archive" >&2
+              deploy "$RUNNER_TEMP/release-full.tar.gz"
+            else
+              echo "Deploy stalled past the 9-minute limit; not retrying a hung remote" >&2
+              exit 1
+            fi
+          fi
       - name: Write deployment summary
         env:
           DEPLOY_SHA: ${{ github.sha }}
