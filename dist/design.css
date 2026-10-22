@@ -54,8 +54,9 @@ input[type=number], .rating, .heat-cell b, .weapon-stat-grid dd, .stat strong {
 .header-left > span { line-height: 1.5; }
 main { padding: var(--ui-space-8) 40px 64px; }
 .page-title { margin: 0 0 var(--ui-space-6); }
-.page-title h1 { font-size: 30px; line-height: 1.4; margin: 0 0 var(--ui-space-3); text-wrap: balance; }
-.page-title p { max-width: 72ch; margin: 0; line-height: 1.8; }
+.page-title h1 { font-size: 28px; line-height: 1.35; margin: 0; text-wrap: balance; }
+.page-title p { max-width: 72ch; margin: 6px 0 0; line-height: 1.75; }
+.page-title p:empty, .page-title p.visually-hidden { display: none; }
 main > section { margin-top: var(--ui-space-8); }
 main h2, :is(#detailContent,#characterPage) h2 { font-size: 20px; line-height: 1.5; margin: var(--ui-space-8) 0 var(--ui-space-4); }
 main h3 { line-height: 1.5; }

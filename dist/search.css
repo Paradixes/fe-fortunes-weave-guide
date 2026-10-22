@@ -1,4 +1,4 @@
-/* 安娜一键搜索:页头入口、搜索弹层与首页便笺。配色全部沿用既有变量,深浅主题自适应。 */
+/* 安娜一键搜索与提问弹层:页头入口、联合检索与 AI 对话解答。配色全部沿用既有变量,深浅主题自适应。 */
 
 /* 页头入口按钮(与 #themeBtn 同排,触控目标 ≥44px 由 design.css 统一保证)。 */
 #annaSearchBtn{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ink)}
@@ -8,7 +8,7 @@
 .anna-btn-kbd{min-width:20px;padding:1px 5px;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;font:600 11px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);text-align:center;background:var(--bg)}
 
 /* 弹层:顶部锚定的情报账本;结果密排,信息密度对齐地图联想(7px 10px)。 */
-#annaSearch{position:fixed;inset:0;margin:12vh auto auto;width:min(640px,92vw);max-height:76dvh;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);box-shadow:0 28px 90px #17122a50;overscroll-behavior:contain}
+#annaSearch{position:fixed;inset:0;margin:10vh auto auto;width:min(660px,92vw);max-height:78dvh;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);box-shadow:0 28px 90px #17122a50;overscroll-behavior:contain}
 #annaSearch[open]{display:flex;flex-direction:column}
 #annaSearch::backdrop{background:#24212c99;backdrop-filter:blur(3px)}
 .anna-greet{display:flex;align-items:center;gap:10px;margin-bottom:12px}
@@ -16,12 +16,19 @@
 .anna-greet h2{margin:0;font:600 16px/1.6 'Noto Serif SC',Georgia,serif;color:var(--ink)}
 .anna-greet h2.anna-typing::after{content:'▍';color:var(--gold);animation:anna-caret 1s steps(1) infinite}
 @keyframes anna-caret{50%{opacity:0}}
-#annaSearch .anna-field{margin:0;flex:none;max-width:none}
-.anna-results{margin-top:10px;flex:1;min-height:0;overflow:auto}
+#annaSearch .anna-field{margin:0;flex:none;max-width:none;padding-right:6px}
+.anna-dialog-ask-btn{flex:none;height:30px;min-height:30px;padding:0 11px;border:1px solid color-mix(in srgb,var(--gold) 65%,var(--line));border-radius:7px;background:color-mix(in srgb,var(--tint) 75%,var(--card));color:var(--purple);font:inherit;font-size:12px;font-weight:650;white-space:nowrap;cursor:pointer;transition:background-color .15s,border-color .15s}
+.anna-dialog-ask-btn:hover:not(:disabled){border-color:var(--purple);background:var(--tint)}
+.anna-dialog-ask-btn[hidden]{display:none}
+.anna-results{margin-top:10px;flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.anna-dialog-ai{margin-bottom:10px}
+.anna-dialog-ai-bar{margin-bottom:8px}
+.anna-dialog-ask-trigger{display:flex;align-items:center;gap:6px;width:100%;padding:8px 12px;border:1px dashed color-mix(in srgb,var(--gold) 65%,var(--line));border-radius:9px;background:color-mix(in srgb,var(--tint) 45%,transparent);color:var(--purple);font:inherit;font-size:12.5px;font-weight:600;text-align:left;cursor:pointer;transition:background-color .15s,border-color .15s}
+.anna-dialog-ask-trigger:hover{border-style:solid;border-color:var(--gold);background:var(--tint)}
 .anna-group+.anna-group{margin-top:6px}
 .anna-group-label{font-size:11px;color:var(--muted);letter-spacing:1px;padding:4px 10px 2px}
-.anna-item{display:flex;align-items:baseline;gap:9px;padding:7px 10px;border-radius:7px;cursor:pointer;font-size:13px;line-height:1.5}
-.anna-item.active{background:color-mix(in srgb,var(--gold) 16%,transparent)}
+.anna-item{display:flex;align-items:baseline;gap:9px;padding:7px 10px;border-radius:7px;cursor:pointer;font-size:13px;line-height:1.5;transition:background-color .12s}
+.anna-item:hover,.anna-item.active{background:color-mix(in srgb,var(--gold) 16%,transparent)}
 .anna-kind{flex:none;font-size:10px;color:var(--purple);border:1px solid var(--line);border-radius:5px;padding:1px 5px;white-space:nowrap}
 .anna-item.active .anna-kind{border-color:var(--gold)}
 .anna-title{font-weight:600;white-space:nowrap}
@@ -30,18 +37,12 @@
 body.dark .anna-results mark{color:#e6c27a}
 .anna-empty{margin:18px 10px;color:var(--muted);font-size:13px;line-height:1.9}
 .anna-chips-wrap{padding:6px 2px}
+.anna-chips-wrap small{color:var(--muted);font-size:11px;font-weight:600}
 .anna-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .anna-chips button{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg);font-size:12px}
 .anna-chips button:hover{border-color:var(--gold);color:var(--purple)}
 .anna-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
 .anna-hint{white-space:nowrap}
-
-/* 首页安娜便笺(静态单行,不打断攻略阅读)。 */
-.anna-note{display:flex;align-items:center;gap:10px;padding:9px 14px;margin:0 0 16px;border:1px solid var(--line);border-radius:10px;background:var(--tint);font-size:12px}
-.anna-note b{font-family:'Noto Serif SC',Georgia,serif;color:var(--purple);flex:none}
-.anna-note span{flex:1;min-width:0;color:var(--ink)}
-.anna-note kbd{padding:0 4px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;font:600 10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--card)}
-.anna-note button{flex:none;padding:4px 12px;font-size:12px;border-color:var(--gold);color:var(--purple);background:var(--card)}
 
 /* 移动端:弹层全屏化,结果项保持 44px 触控高度。 */
 @media(max-width:640px){

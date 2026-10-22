@@ -43,7 +43,7 @@ assert(vm.runInContext("EQUIPMENT.every(e=>!equipmentSourcePreview(e).includes('
 assert(vm.runInContext("sourceQuantityLabel({sourcesList:[{text:'库存2'},{text:'库存3'}]})==='可获取 5 件'&&sourceQuantityLabel({sourcesList:[{text:'库存2'},{text:'随机开出'}]})==='已知 ≥ 2 件'&&sourceQuantityLabel({sourcesList:[{text:'随机开出'}]})==='总数待核实'",ctx),'Unknown and random source quantities never become invented totals');
 console.log('PASS v32: canonical primary-route filtering, multi-route assignments, third-part availability, combined filters, independent guide state and contextual count/rating help.');
 for(const hash of ['', '#home']){ctx.location.hash=hash;vm.runInContext("route='レダ';render()",ctx);assert(nodes['#content'].innerHTML.includes('anna-live-home')&&!nodes['#content'].innerHTML.includes('route-guide-panel'),'Standalone Anna homepage '+hash);assert(nodes['#pageNav'].innerHTML.includes('href="#home"'),'Home appears in navigation '+hash);}
-ctx.location.hash='#overview';vm.runInContext("route='レダ';render()",ctx);assert(nodes['#content'].innerHTML.includes('route-guide-panel')&&!nodes['#content'].innerHTML.includes('anna-live-home'),'Route guide keeps its own page without the Anna counter');assert(nodes['#content'].innerHTML.includes('anna-note'),'Route guide keeps the compact Anna note');
+ctx.location.hash='#overview';vm.runInContext("route='レダ';render()",ctx);assert(nodes['#content'].innerHTML.includes('route-guide-panel')&&!nodes['#content'].innerHTML.includes('anna-live-home'),'Route guide keeps its own page without the Anna counter');assert(!nodes['#content'].innerHTML.includes('anna-note'),'Route guide drops redundant Anna note');
 for(const h of vm.runInContext('CATALOG.presentation.heroes',ctx)){const cover=vm.runInContext(`routeCover(${JSON.stringify(h.route)})`,ctx);assert(cover.includes(h.artSources[0])&&cover.includes('route-hero-picker')&&!cover.includes('非游戏原台词')&&!cover.includes(h.description));}
 assert(vm.runInContext("equipmentCard(EQUIPMENT.find(e=>e.id==='clean')).includes('<dt>威力</dt><dd>8</dd>')&&equipmentCard(EQUIPMENT.find(e=>e.id==='clean')).includes('<dt>重量</dt><dd>3</dd>')",ctx));
 assert(vm.runInContext("EQUIPMENT.every(e=>!equipmentCard(e).includes('undefined'))",ctx));
@@ -637,7 +637,8 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(!styleCss.includes('@media(prefers-reduced-motion:reduce){}')&&!styleCss.includes('@media(max-width:700px){}'),'Empty media blocks removed');
  assert(!/\.search\s*\{[^}]*min-height/.test(fs.readFileSync(root+'design.css','utf8')),'design.css search residue removed');
  const counts=vm.runInContext("(()=>{const n=k=>buildAnnaIndex().filter(e=>e.kind===k).length;return {page:n('page'),character:n('character'),class:n('class'),ability:n('ability'),equipment:n('equipment'),material:n('material'),place:n('place'),article:n('article')}})()",ctx);
- assert.equal(counts.page,13,'Site pages indexed');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,450,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.article,8,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
+ assert.equal(counts.page,13,'Site pages indexed');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,450,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.article,18,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
+ assert(vm.runInContext("ARTICLES.every(a=>([a.sources||[],...a.sections.map(s=>s.sources||[])].flat()).length>0)",ctx),'Every article carries source citations');
  const best=q=>vm.runInContext(`(r=>({k:r.best?.e.kind,t:r.best?.e.title}))(annaSearch(${JSON.stringify(q)}))`,ctx);
  assert.deepEqual(best('xlk'),{k:'character',t:'西洛可'},'Pinyin acronym finds character');
  assert.deepEqual(best('xiluoke'),{k:'character',t:'西洛可'},'Full pinyin finds character');
@@ -689,7 +690,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
 // v105: standalone Anna homepage, dossier layering fixes, class picker, calculator join-timing note
 {
  const homeHtml=vm.runInContext('homePage()',ctx);
- assert(homeHtml.includes('anna-ask-chips')&&homeHtml.includes('home-route-grid')&&homeHtml.includes('home-link-grid')&&homeHtml.includes('home-article-grid')&&homeHtml.includes('home-face-grid')&&homeHtml.includes('home-stats'),'Homepage carries ask chips, routes, directory, articles, character strip and stats');
+ assert(homeHtml.includes('anna-ask-chips')&&homeHtml.includes('home-route-grid')&&homeHtml.includes('home-link-grid')&&homeHtml.includes('home-article-grid')&&homeHtml.includes('home-face-grid')&&!homeHtml.includes('home-stats'),'Homepage carries ask chips, routes, directory, articles and character strip without redundant stats');
  assert(vm.runInContext("homePage().match(/data-open-route=/g).length===5",ctx),'All five routes linked from homepage');
  assert(vm.runInContext("homePage().match(/class=\"home-face\"/g).length===12",ctx),'Character strip shows 12 faces');
  assert(vm.runInContext("wbInlineMarkup(DB.characters[8],0,wbDetailRoute(DB.characters[8]).d.stages[0],wbDetailCalculation(DB.characters[8],wbDetailRoute(DB.characters[8])).rows[0])",ctx).includes('class-picker-option'),'Node editor uses the icon class picker');
@@ -697,7 +698,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(vm.runInContext("typeof wbJoinTiming==='function'&&wbJoinTiming({characterId:'c7',activeRoute:'レダ'}).length>0",ctx),'Calculator reports per-route join timing');
  const charCss=fs.readFileSync(root+'character-page.css','utf8');
  assert(charCss.includes('.dossier-node-stage>span')&&/skill-growth\{[^}]*padding:20px 24px/.test(charCss),'Career node tiers and skill band padding present');
- console.log('PASS v105: standalone Anna homepage with directory/stats/faces, class picker, node hierarchy and calculator join-timing note.');
+ console.log('PASS v105: standalone Anna homepage with directory/faces, class picker, node hierarchy and calculator join-timing note.');
 }
 // v107: dossier node click refreshes stats bar; class-modifier growth tab removed; view transitions
 {
@@ -737,6 +738,27 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  vm.runInContext("localStorage.setItem('fw-anna-llm-v1','{}')",ctx);
  assert(vm.runInContext("annaLlmReady()===false&&annaLlmStateText()==='本地匹配'",ctx),'Clearing config restores local matching');
  assert(fs.readFileSync(root+'index.html','utf8').includes('anna-agent.js?v='),'Agent script versioned in index.html');
- console.log('PASS v108: BYOK settings store, character/class/equipment/ability/search tools, ReAct loop with stubbed endpoint, fallback state.');
+ // v108: Anna counter & dialog BYOK agent - settings store, local tools, ReAct loop with dedup & final synthesis, dialog AI
+ assert(vm.runInContext("annaStatsText()===''",ctx),'Redundant stats text removed');
+ assert(vm.runInContext("ANNA_AGENT_RUNNERS.lookup_ability({name:'跳舞'}).name==='跳舞'",ctx),'Ability tool resolves CATALOG.abilities array');
+ assert(vm.runInContext("ANNA_AGENT_RUNNERS.lookup_equipment({name:'太阳果'}).name==='太阳果'",ctx),'Equipment tool resolves exchange materials');
+ assert(vm.runInContext("ANNA_AGENT_RUNNERS.lookup_article({topic:'停止线'}).title.includes('停止线')",ctx),'Article tool resolves long-form guides');
+ const loop2=vm.runInContext(`(async()=>{
+  localStorage.setItem('fw-anna-llm-v1',JSON.stringify({base:'https://api.test/v1',key:'sk-x',model:'test-model'}));
+  let calls=0;
+  fetch=async(url,opt)=>{calls++;
+   const body=JSON.parse(opt.body);
+   if(body.tools)return {ok:true,json:async()=>({choices:[{message:{role:'assistant',tool_calls:[{id:'t'+calls,function:{name:'search_guides',arguments:'{"query":"凯伊"}'}}]}}]})};
+   return {ok:true,json:async()=>({choices:[{message:{role:'assistant',content:'综合答案：凯伊喜欢烤肉。'}}]})};
+  };
+  const r=await annaAgentAsk('凯伊喜欢什么礼物');
+  localStorage.setItem('fw-anna-llm-v1','{}');
+  return r;
+ })()`,ctx);
+ const r2=await loop2;
+ assert(r2.answer.includes('综合答案')&&r2.steps.length===1,'Duplicate tool calls deduplicated and forced final synthesis succeeds without aborting');
+ assert(fs.readFileSync(root+'anna-home.js','utf8').includes('resumeHomeVideos')&&fs.readFileSync(root+'anna-pet.js','utf8').includes('resumePetVideo'),'Anna home and pet videos resume after page switch');
+ assert(fs.readFileSync(root+'search.js','utf8').includes('askAnnaInDialog'),'Anna search dialog integrates AI Q&A');
+ console.log('PASS v108: BYOK settings store, character/class/equipment/ability/article/search tools, ReAct loop with dedup & final synthesis, dialog AI Q&A, video resume.');
 }
 })();
