@@ -1,4 +1,4 @@
-const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','app.js','reasons.js','articles.js','v9.js','cultivation.js','search.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
+const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','app.js','reasons.js','articles.js','v9.js','cultivation.js','search.js','anna-agent.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
 const searchEvents={...events};
 (async()=>{await new Promise(r=>setImmediate(r));vm.runInContext('LEARNING='+fs.readFileSync(root+'learning.json')+';PINS='+fs.readFileSync(root+'map.json')+';mapLoaded=true;',ctx);
 assert(vm.runInContext("!decorateSkillHTML('<p>疾风戒指 / 疾风剑</p>').includes('skill-inline')",ctx));
@@ -212,7 +212,7 @@ for(const scope of ['char:c8','global','route:カイ'])assert(vm.runInContext(`m
 vm.runInContext("v9Change({target:{dataset:{materialStock:'巴谷'},value:'-5'}})",ctx);assert(vm.runInContext("materialOwned('巴谷')===0",ctx));
 vm.runInContext("v9Change({target:{dataset:{materialStock:'巴谷'},value:'26'}})",ctx);
 const reload={...ctx,window:null,document:{...ctx.document,body:node(),querySelector:s=>nodes['reload:'+s]??=node()},location:{hash:''}};reload.window=reload;vm.createContext(reload);vm.runInContext(['locale.js','catalog.js','app.js','reasons.js','articles.js','v9.js','cultivation.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),reload);assert(vm.runInContext("materialOwned('巴谷')===26",reload),'Survives page reload');
-vm.runInContext("location.hash='#characters';activeCharacter=null;detailRoutes.c7='summary';openCharacter('c7')",ctx);assert(nodes['#characterPage'].innerHTML.includes('growth-delta'));assert(!nodes['#characterPage'].innerHTML.includes('growth-equation')&&!nodes['#characterPage'].innerHTML.includes('growth-meter'));
+vm.runInContext("location.hash='#characters';activeCharacter=null;detailRoutes.c7='summary';openCharacter('c7')",ctx);assert(nodes['#characterPage'].innerHTML.includes('character-global-growth'));assert(!nodes['#characterPage'].innerHTML.includes('growth-equation')&&!nodes['#characterPage'].innerHTML.includes('growth-meter'));
 assert(vm.runInContext("signedGrowth(DB.classes[0]).includes('--growth-color:')",ctx));
 assert(fs.readFileSync(root+'index.html','utf8').includes('id="sidebarToggle"'));
 assert(css.includes('max-width:1350px')&&css.includes('.sidebar-collapsed'));
@@ -289,7 +289,7 @@ assert(vm.runInContext("stageClass('剑客','主选',DB.characters[7]).includes(
 for(let i=0;i<63;i++){const a=vm.runInContext(`ratingAnalysis(DB.characters[${i}])`,ctx);for(const [k,v]of Object.entries(a))assert(v&&typeof v==='string'&&!v.includes('undefined'),'Rating rationale '+i+k);for(const rr of ['summary','レダ','カイ','ディートリヒ','セオドラ']){const valid=vm.runInContext(`'${rr}'==='summary'||firstPartHere(DB.characters[${i}],'${rr}')`,ctx);if(!valid)continue;vm.runInContext(`activeCharacter='c${i}';detailRoutes['c${i}']='${rr}'`,ctx);const plans=vm.runInContext(`(()=>{const c=DB.characters[${i}],b=buildPlan(c);return [b.mid,b.upper,b.end.split(' / ')]})()`,ctx);for(const [stage,classes]of plans.entries())for(const [j,n]of classes.entries()){ctx.reasonName=n;ctx.reasonMain=classes[0];const a=vm.runInContext(`careerRationale(classBy(reasonName),DB.characters[${i}],{label:'${j?'可选副职':'主选'}',stage:${stage+1},mainName:reasonMain})`,ctx);for(const [k,v]of Object.entries(a))assert(v&&!v.includes('undefined'),'Career rationale '+i+rr+n+k);}}}
 vm.runInContext("activeCharacter='c7';detailRoutes.c7='summary';openCharacter('c7')",ctx);assert(nodes['#characterPage'].innerHTML.includes('评级理由与投入建议')&&nodes['#characterPage'].innerHTML.includes('何时停止'));assert(vm.runInContext("!card(DB.characters[7]).includes('card-rating-reason') && DB.characters[7].ratingReason.length>0",ctx));
 
-vm.runInContext("$('#detail').close();activeCharacter=null;delete selectedClasses.c7;detailRoutes.c7='レダ';openCharacter('c7')",ctx);let dossier=nodes['#characterPage'].innerHTML;assert(dossier.indexOf('rating-analysis')<dossier.indexOf('skill-growth')&&dossier.indexOf('skill-growth')<dossier.indexOf('dossier-tabs'),'Rating rationale precedes character skills and route sections');assert(dossier.includes('skill-group-personal')&&dossier.includes('skill-when')&&!dossier.includes('skill-growth-stage'),'Character skills are grouped with inline stage chips');assert(dossier.indexOf('skill-growth')>0&&dossier.indexOf('skill-growth')<dossier.indexOf('dossier-tabs'));assert(dossier.indexOf('character-global-growth')<dossier.indexOf('dossier-tabs'));assert(!dossier.includes('成长结果'));const baseBefore=dossier.match(/data-view-panel="base"[\s\S]*?<\/section>/)[0];vm.runInContext("detailRoutes.c7='summary';openCharacter('c7')",ctx);dossier=nodes['#characterPage'].innerHTML;assert(baseBefore===dossier.match(/data-view-panel="base"[\s\S]*?<\/section>/)[0],'Base growth remains global');
+vm.runInContext("$('#detail').close();activeCharacter=null;delete selectedClasses.c7;detailRoutes.c7='レダ';openCharacter('c7')",ctx);let dossier=nodes['#characterPage'].innerHTML;assert(dossier.indexOf('rating-analysis')<dossier.indexOf('skill-growth')&&dossier.indexOf('skill-growth')<dossier.indexOf('dossier-tabs'),'Rating rationale precedes character skills and route sections');assert(dossier.includes('skill-group-personal')&&dossier.includes('skill-when')&&!dossier.includes('skill-growth-stage'),'Character skills are grouped with inline stage chips');assert(dossier.indexOf('skill-growth')>0&&dossier.indexOf('skill-growth')<dossier.indexOf('dossier-tabs'));assert(dossier.indexOf('character-global-growth')<dossier.indexOf('dossier-tabs'));assert(!dossier.includes('成长结果'));const baseBefore=dossier.match(/character-global-growth[\s\S]*?<\/section>/)[0];vm.runInContext("detailRoutes.c7='summary';openCharacter('c7')",ctx);dossier=nodes['#characterPage'].innerHTML;assert(baseBefore===dossier.match(/character-global-growth[\s\S]*?<\/section>/)[0],'Base growth remains global');
 for(const e of vm.runInContext('EQUIPMENT',ctx)){ctx.refId=e.id;const h=vm.runInContext("referenceMarkup('equipment',refId)",ctx);assert(h.includes(e.name)&&h.includes('获取途径'));}
 for(const cl of vm.runInContext('DB.classes',ctx)){ctx.refId=cl.cn;const h=vm.runInContext("referenceMarkup('class',refId)",ctx);assert(h.includes(cl.cn)&&h.includes('成长率修正')&&!h.includes('undefined'));}
 vm.runInContext("openReferenceDialog('equipment','daminasword')",ctx);assert(nodes['#sourceDialog'].open&&!nodes['#detail'].open);vm.runInContext("$('#sourceDialog').close()",ctx);assert(body.style.position==='');vm.runInContext("$('#detail').close();activeCharacter=null;location.hash='#overview';route='レダ';routeGuideView='plan';render()",ctx);assert(vm.runInContext('routeEquipmentContent()',ctx).includes('<th>需求角色</th>'));assert(nodes['#content'].innerHTML.includes('data-reference-type="equipment"')&&nodes['#content'].innerHTML.includes('data-reference-type="class"'));
@@ -486,27 +486,22 @@ vm.runInContext("route='救世篇';routeGuideView='calendar';render()",ctx);asse
 for(const c of vm.runInContext('DB.characters',ctx)){
  vm.runInContext(`selectedClasses={};detailRoutes[${JSON.stringify(c.id)}]='summary';openCharacter(${JSON.stringify(c.id)})`,ctx);
  const h=nodes['#characterPage'].innerHTML;
- assert(!h.includes('升级加成概率')&&!h.includes('career-growth-preview')&&h.includes('growth-delta')&&h.includes('data-view-kind="growth"'),c.id+' unified growth panel');
+ assert(h.includes('character-global-growth')&&!h.includes('data-view-kind="growth"')&&!h.includes('含职业修正'),c.id+' base growth panel without class-modifier tab');
  assert(h.indexOf('character-global-growth')<h.indexOf('dossier-tabs'));
- const expected=vm.runInContext(`(()=>{const c=DB.characters.find(c=>c.id===${JSON.stringify(c.id)}),cl=classBy(buildPlan(c,'summary').mid[0]);return Number(c.growth.str||0)+Number(cl.growth.str||0)})()`,ctx);
- const preview=h.slice(h.indexOf('data-view-panel="total"'));
- assert(preview.includes('<b>'+expected+'<sup>%</sup></b>'),c.id+' actual total probability');
+ const expected=vm.runInContext(`Number(DB.characters.find(c=>c.id===${JSON.stringify(c.id)}).growth.str||0)`,ctx);
+ assert(h.includes('<b>'+expected+'<sup>%</sup></b>'),c.id+' base growth value');
 }
-vm.runInContext("growthViewState.c7='total';openCharacter('c7')",ctx);assert(nodes['#characterPage'].innerHTML.includes('data-view-tab=\"total\" aria-controls=\"growth-c7-total\" aria-selected=\"true\"'),'Growth toggle persists on dossier refresh');vm.runInContext("delete growthViewState.c7",ctx);
-vm.runInContext("openCharacter('c7');previewCharacterGrowth(classBy('勇士').title)",ctx);
-assert(vm.runInContext("growthViewState.c7==='total'&&selectedClasses.c7===classBy('勇士').title",ctx),'Preview selects combined growth and requested class');
-assert(nodes['#characterPage'].innerHTML.includes('data-view-panel="total" >')&&!nodes['#characterPage'].innerHTML.includes('data-entry-view'),'Preview visible and route stat tabs removed');
 assert(vm.runInContext("card(DB.characters[7]).includes('char-name-row')&&!card(DB.characters[7]).includes('card-preference-footer')",ctx),'Favorite reuses name row');
 assert(vm.runInContext("preferenceButton(DB.characters[7],true).includes('preference-star')&&!preferenceButton(DB.characters[7],true).includes('☆')",ctx),'SVG favorite replaces font glyph');
 assert(vm.runInContext("(()=>{const c=DB.characters[8],h=cardCareer(c,{mid:['土匪','剑客'],upper:['勇士','待道'],end:'圣天翼兵 / 刀剑将领'});return ['土匪','剑客','勇士','待道','圣天翼兵','刀剑将领'].every(n=>h.includes('data-reference-id=\"'+n+'\"'))})()",ctx),'Every career alternative has its own class link');
 assert(vm.runInContext("(()=>{const h=tableCharacter(DB.characters[7]);return h.indexOf('rating-art')<h.indexOf('portrait')&&h.indexOf('portrait')<h.indexOf('table-character-copy')&&!tableCharacter(DB.characters[7],{showRating:false}).includes('rating-art')})()",ctx),'Art grade precedes portrait, arena stays grade-free');
 for(const c of vm.runInContext('DB.characters',ctx)){assert(c.ratingReason,'Rating explanation retained in data '+c.id);const h=vm.runInContext(`card(DB.characters.find(c=>c.id===${JSON.stringify(c.id)}))`,ctx);assert(h.includes('data-card-disclosure')&&!h.includes('card-rating-reason'),'Compact card with accessible complete loadout');}
 for(const file of ['style.css','design.css'])assert(!/\.card-rating-reason\s*>\s*span/.test(fs.readFileSync(root+file,'utf8')),'Rating rationale does not block all child spans: '+file);
-vm.runInContext("delete growthViewState.c7;delete selectedClasses.c7",ctx);
+vm.runInContext("delete selectedClasses.c7",ctx);
 vm.runInContext("location.hash='#overview';route='レダ';routeGuideView='equipment';render()",ctx);assert(!nodes['#content'].innerHTML.includes('gear-plan-grid')&&nodes['#content'].innerHTML.includes('source-picker-trigger')&&nodes['#content'].innerHTML.includes('<th>需求角色</th>'),'Route equipment acquisition summary uses structured rows');
 assert(!vm.runInContext('growthLegend()',ctx).includes('浅米低')&&!vm.runInContext('growthLegend({str:10})',ctx).includes('琥珀中'),'Color-name prose omitted from growth legends');
 assert(css.includes('.equipment-game-icon,.weapon-icon img')&&css.includes('.priority-p1{background:#ebc8aa')&&css.includes('.rating-A{background:#edd5bf'));
-console.log('PASS v43: calendar/equipment views separated on every route, empty final-part calendar hidden, all 63 default combined growth previews numerically verified, intrinsic growth above route tabs, warm semantic colors and 18px equipment icons.');
+console.log('PASS v43: calendar/equipment views separated on every route, empty final-part calendar hidden, all 63 base growth panels numerically verified, intrinsic growth above route tabs, warm semantic colors and 18px equipment icons.');
 
 // Quest identity survives month, route, agenda and deadline presentation.
 const questColors=vm.runInContext('calendarQuestColors()',ctx);
@@ -532,7 +527,6 @@ const design=fs.readFileSync(root+'design.css','utf8');assert(design.includes('w
 console.log('PASS v70: all 63 ratings and investment limits unified, three complete source comparisons, artistic seven-grade table, local shared equipment/hero assets and decoding priorities.');
 for(const cl of reviewed.database.classes){ctx.previewClass=cl;const html=vm.runInContext('skillAffinity(DB.characters[7],previewClass)',ctx);assert.equal((html.match(/data-affinity-skill=/g)||[]).length,12);for(const name of Object.values(reviewed.database.skills)){const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),item=html.match(new RegExp('<div class="affinity-item [^>]+data-affinity-skill="'+escaped+'"[^>]+>'))?.[0];assert(item,'Skill item '+name);assert(item.includes('data-class-usable="'+(name==='指挥术'||cl.allowedSkills.includes(name))+'"'),'Class permission '+cl.cn+name);}}
 assert(!vm.runInContext('skillAffinity(DB.characters[7])',ctx).includes('data-class-usable='),'Base affinities have no career dimming');
-assert(vm.runInContext("characterGrowth(DB.characters[7],classBy('勇士')).includes('affinity-class-preview')&&characterGrowth(DB.characters[7],classBy('勇士')).includes('data-view-panel=\"total\"')",ctx),'Class preview stays in the total tab');
 for(const h of reviewed.presentation.heroes){ctx.identityRoute=h.route;const html=vm.runInContext('routeIdentity(identityRoute)',ctx);const c=reviewed.database.characters.find(c=>c.id===h.id);assert(html.includes(c.portraitFile)&&html.includes(c.cn)&&html.includes('data-detail-route="'+h.route+'"'),'Correct protagonist identity '+h.route);}
 assert(!vm.runInContext("routeIdentity('共通')",ctx).includes('<img'),'Common late entry has no invented protagonist');
 for(const c of reviewed.database.characters){ctx.reviewId=c.id;const profile=vm.runInContext('routeProfileTable(DB.characters.find(c=>c.id===reviewId))',ctx);for(const r of Object.keys(reviewed.planning[c.id].routes)){const hero=reviewed.presentation.heroes.find(h=>h.route===r),lead=reviewed.database.characters.find(x=>x.id===hero.id);assert(profile.includes(lead.portraitFile),'Recruit gate avatar '+c.id+r);}}
@@ -704,5 +698,45 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  const charCss=fs.readFileSync(root+'character-page.css','utf8');
  assert(charCss.includes('.dossier-node-stage>span')&&/skill-growth\{[^}]*padding:20px 24px/.test(charCss),'Career node tiers and skill band padding present');
  console.log('PASS v105: standalone Anna homepage with directory/stats/faces, class picker, node hierarchy and calculator join-timing note.');
+}
+// v107: dossier node click refreshes stats bar; class-modifier growth tab removed; view transitions
+{
+ vm.runInContext("location.hash='#characters';detailRoutes.c7='レダ';openCharacter('c7')",ctx);
+ let html=nodes['#characterPage'].innerHTML;
+ assert(html.includes('route-final-stats')&&html.includes('data-route-node="0"'),'Dossier timeline nodes selectable with stats bar below');
+ assert(!html.includes('含职业修正')&&!html.includes('data-view-kind="growth"'),'Class-modifier growth tab removed');
+ const dg=vm.runInContext("careerDiagram(DB.characters[7])",ctx);
+ assert(dg.includes('route-final-stats')&&dg.includes('终点')&&(dg.includes('永久属性期望')||dg.includes('成长增量')),'Default stats bar shows endpoint expectations');
+ assert(!dg.includes('data-stats-reset'),'No reset action at endpoint');
+ vm.runInContext("dossierNodeSel['c7|レダ']=0",ctx);
+ const dg2=vm.runInContext("careerDiagram(DB.characters[7])",ctx);
+ assert(dg2.includes('path-node-selected')&&dg2.includes('data-stats-reset')&&/Lv\.\d+ ·/.test(dg2),'Selected node swaps in per-stage stats with reset action');
+ vm.runInContext("delete dossierNodeSel['c7|レダ']",ctx);
+ assert(vm.runInContext("careerDiagram(DB.characters[7])",ctx)===dg,'Clearing selection restores endpoint stats');
+ assert(fs.readFileSync(root+'motion.css','utf8').includes('::view-transition-new(root)'),'Character page transition keyframes present');
+ assert(fs.readFileSync(root+'v9.js','utf8').includes('document.startViewTransition'),'Character page paint uses view transitions');
+ console.log('PASS v107: dossier nodes swap the stats bar with reset, growth tab gone, view transitions wired.');
+}
+// v108: Anna counter BYOK agent - settings store, local tools, ReAct loop with stubbed endpoint
+{
+ assert(vm.runInContext("typeof annaLlmReady==='function'&&annaLlmReady()===false",ctx),'Agent starts unconfigured');
+ vm.runInContext("annaLlmConfig&&localStorage.setItem('fw-anna-llm-v1',JSON.stringify({base:'https://api.test/v1',key:'sk-x',model:'test-model'}))",ctx);
+ assert(vm.runInContext("annaLlmReady()===true&&annaLlmStateText().includes('test-model')",ctx),'Config roundtrip and state label');
+ const loop=vm.runInContext(`(async()=>{
+  let calls=0;
+  const oldFetch=fetch;
+  fetch=async(url,opt)=>{calls++;
+   if(calls===1)return {ok:true,json:async()=>({choices:[{message:{role:'assistant',tool_calls:[{id:'t1',function:{name:'lookup_character',arguments:'{"name":"凯伊"}'}}]}}]})};
+   return {ok:true,json:async()=>({choices:[{message:{role:'assistant',content:'**凯伊**很强。参考:凯伊'}}]})};
+  };
+  try{const r=await annaAgentAsk('凯伊怎么样');return {calls,answer:r.answer,steps:r.steps,body:undefined};}
+  finally{}
+ })()`,ctx);
+ const r=await loop;
+ assert(r.calls===2&&r.steps.join()==='lookup_character'&&r.answer.includes('凯伊'),'Agent loop executes tool then answers');
+ vm.runInContext("localStorage.setItem('fw-anna-llm-v1','{}')",ctx);
+ assert(vm.runInContext("annaLlmReady()===false&&annaLlmStateText()==='本地匹配'",ctx),'Clearing config restores local matching');
+ assert(fs.readFileSync(root+'index.html','utf8').includes('anna-agent.js?v='),'Agent script versioned in index.html');
+ console.log('PASS v108: BYOK settings store, character/class/equipment/ability/search tools, ReAct loop with stubbed endpoint, fallback state.');
 }
 })();

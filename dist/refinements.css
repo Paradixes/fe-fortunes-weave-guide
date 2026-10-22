@@ -49,3 +49,18 @@ button[data-reference-type],button[data-class],button[data-gear],button[data-cha
 .class-picker-check{flex:none;color:var(--purple);display:grid;place-items:center}
 .inline-node-editor .route-node-popover{overflow:visible}
 .route-node-popover{overflow:visible}
+
+/* 职业路线节点选中:下方属性期望切换到该节点 */
+.dossier-timeline li.path-node-selected .path-class{border-color:var(--gold);box-shadow:0 0 0 2px color-mix(in srgb,var(--gold) 40%,transparent);font-weight:650}
+.route-stats-reset{margin-left:10px}
+
+/* v107: 卡片内技能与职业选项之间的边界 */
+.char-card .card-skill{padding:12px 14px;border:1px solid var(--line)}
+.char-card .skill-ladder{gap:6px}
+.char-card .skill-ladder li{padding:2px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card)}
+.char-card .chip-list{gap:6px}
+.char-card .chip-list .action-chip,.char-card .chip-list .equipment-chip{border-color:color-mix(in srgb,var(--purple) 24%,var(--line));background:var(--card)}
+.char-card .mini-career-options{gap:6px}
+.char-card .mini-career-options .mini-career-link{border:1px solid var(--line);border-radius:6px;padding:4px 8px;background:var(--card)}
+.char-card .mini-career-options .mini-career-link+.mini-career-link{border-style:dashed;color:var(--muted)}
+.char-card .mini-career-options .mini-career-link:hover{border-color:var(--purple);color:var(--ink)}

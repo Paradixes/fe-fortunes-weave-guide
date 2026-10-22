@@ -52,3 +52,9 @@ dialog[open]::backdrop { animation: backdrop-focus 180ms ease-out; }
   .favorite, .segments button, .route-content-tabs button { transition-duration: 80ms; }
   html { scroll-behavior: auto; }
 }
+
+/* 角色卡片 → 角色页:整页视图过渡(reduced-motion 时 JS 侧不启用) */
+::view-transition-old(root){animation:vtx-out .16s ease-out both}
+::view-transition-new(root){animation:vtx-in .24s cubic-bezier(.2,.7,.3,1) both}
+@keyframes vtx-out{to{opacity:0;transform:translateY(8px)}}
+@keyframes vtx-in{from{opacity:0;transform:translateY(14px)}}
