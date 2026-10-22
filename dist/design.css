@@ -175,11 +175,6 @@ body.dark .heat-grid .heat-cell b, body.dark .heat-grid .heat-cell > small, body
 .mini-career-modern { gap: var(--ui-space-1); }
 .mini-career-step { border-radius: var(--ui-control-radius); box-shadow: none; }
 .toolbar { gap: var(--ui-space-3); margin-block: var(--ui-space-4); }
-.search { min-height: 42px; border-radius: var(--ui-control-radius); background: var(--card); border: 1px solid var(--line); box-shadow: none; }
-.search:focus-within { border-color: var(--ui-accent); outline: 2px solid var(--ui-accent); outline-offset: 2px; }
-.search input { font-size: 13px; }
-.search input::placeholder { color: var(--muted); opacity: 1; }
-.search-icon { display: block; width: 18px; height: 18px; flex: none; color: var(--muted); }
 .roster-filter-panel { padding: var(--ui-space-4); border-radius: var(--ui-radius); }
 .roster-filter-row { gap: var(--ui-space-3); margin-top: var(--ui-space-3); }
 .roster-filter-row .filter-label { font-size: 12px; font-weight: 600; }
