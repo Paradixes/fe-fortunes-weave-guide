@@ -116,6 +116,7 @@ function openAnnaSearch(q){
  if(annaOwnsLock)openGuideDialog(d);else d.showModal();
  const input=$('#annaInput');if(input){input.value=q||'';input.setAttribute('aria-expanded','false')}
  annaGreeting();
+ if(typeof annaLlmStateText==='function')d.querySelectorAll('[data-llm-state]').forEach(el=>el.textContent=annaLlmStateText());
  renderAnnaResults();
  input?.focus();
 }
@@ -141,6 +142,7 @@ function pickAnna(i){
  d?.addEventListener('close',()=>{if(typeof clearInterval==='function')clearInterval(annaGreetTimer);d.querySelector('h2')?.classList.remove('anna-typing');annaFlat=[];annaActive=-1;if(annaOwnsLock){annaOwnsLock=false;releaseDialogScroll()}});
  d?.addEventListener('pointerdown',e=>{annaBackdropDown=outsideDialog(e,d)});
  d?.addEventListener('click',e=>{
+  if(e.target.closest('[data-anna-llm-open]')){if(typeof openAnnaLlmSettings==='function')openAnnaLlmSettings();return}
   if(annaBackdropDown&&outsideDialog(e,d)){closeAnnaSearch();annaBackdropDown=false;return}
   annaBackdropDown=false;
   const item=e.target.closest?.('[data-anna-idx]');if(item){pickAnna(Number(item.dataset.annaIdx));return}

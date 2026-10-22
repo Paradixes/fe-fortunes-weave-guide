@@ -59,10 +59,28 @@ function bindAsk(){
  const input=document.getElementById('anna-ask-input'),box=document.getElementById('anna-ask-results');
  if(input&&askQuery)input.value=askQuery;
  if(box&&askHtml)box.innerHTML=askHtml;
- form.addEventListener('submit',e=>{
+ form.addEventListener('submit',async e=>{
   e.preventDefault();
   const q=(input?.value||'').trim();askQuery=q;if(!q)return;
   express('talk');
+  if(typeof annaLlmReady==='function'&&annaLlmReady()){
+   askHtml='<p class="anna-ask-none">安娜翻账本中…</p>';if(box)box.innerHTML=askHtml;
+   try{
+    const r=await annaAgentAsk(q,name=>{askHtml=`<p class="anna-ask-none">${esc(ANNA_TOOL_LABEL[name]||'查询中')}…</p>`;if(box)box.innerHTML=askHtml;});
+    const res=annaSearch(q),top=res.flat.slice(0,3);
+    askHtml=`<div class="anna-agent-answer">${annaAgentRender(r.answer)}</div>`
+     +(r.steps.length?`<small class="anna-agent-steps">查过：${[...new Set(r.steps)].map(n=>esc(ANNA_TOOL_LABEL[n]||n)).join('、')}</small>`:'')
+     +(top.length?top.map((s,i)=>{const g=ANNA_GROUPS.find(([k])=>k===s.e.kind);return `<button type="button" class="anna-ask-hit" data-ask-idx="${i}"><span class="anna-kind">${g?g[1]:''}</span><b>${esc(s.e.title)}</b>${s.e.sub?`<small>${esc(s.e.sub)}</small>`:''}</button>`}).join(''):'')
+     +`<button type="button" class="anna-ask-all" data-ask-all>在账本里查看全部 ↗</button>`;
+    express('happy');
+   }catch(err){
+    const res=annaSearch(q),top=res.flat.slice(0,3);
+    askHtml=`<p class="anna-agent-error">${esc('接口没答上来：'+(err&&err.message||err))}，先用账本匹配。</p>`+(top.length?top.map((s,i)=>{const g=ANNA_GROUPS.find(([k])=>k===s.e.kind);return `<button type="button" class="anna-ask-hit" data-ask-idx="${i}"><span class="anna-kind">${g?g[1]:''}</span><b>${esc(s.e.title)}</b>${s.e.sub?`<small>${esc(s.e.sub)}</small>`:''}</button>`}).join(''):'');
+    express('surprised');
+   }
+   if(box)box.innerHTML=askHtml;
+   return;
+  }
   const res=annaSearch(q),top=res.flat.slice(0,3);
   askHtml=top.length
    ?top.map((s,i)=>{const g=ANNA_GROUPS.find(([k])=>k===s.e.kind);return `<button type="button" class="anna-ask-hit" data-ask-idx="${i}"><span class="anna-kind">${g?g[1]:''}</span><b>${esc(s.e.title)}</b>${s.e.sub?`<small>${esc(s.e.sub)}</small>`:''}</button>`}).join('')+`<button type="button" class="anna-ask-all" data-ask-all>在账本里查看全部 ${res.total} 条 ↗</button>`
@@ -76,6 +94,7 @@ function bindAsk(){
   if(e.target.closest('[data-ask-all]'))openAnnaSearch(askQuery);
  });
  form.closest('.anna-ask')?.addEventListener('click',e=>{
+  if(e.target.closest('[data-anna-llm-open]')){if(typeof openAnnaLlmSettings==='function')openAnnaLlmSettings();return}
   const chip=e.target.closest('[data-home-chip]');if(!chip)return;
   if(input)input.value=chip.dataset.homeChip;
   form.requestSubmit();
@@ -89,7 +108,7 @@ function mountBg(){
  v.play().catch(()=>{});
 }
 
-function boot(){if(host()){mountBg();mount();bindAsk()}}
+function boot(){if(host()){mountBg();mount();bindAsk()}if(typeof annaLlmStateText==='function')document.querySelectorAll('[data-llm-state]').forEach(el=>el.textContent=annaLlmStateText())}
 if(typeof render==='function'){
  const baseRender=render;
  render=function(...a){const r=baseRender(...a);boot();return r};
