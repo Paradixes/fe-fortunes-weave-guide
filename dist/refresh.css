@@ -8,7 +8,6 @@
 .item-badge{display:inline-grid;place-items:center;flex:none;width:36px;height:36px;border-radius:9px;overflow:hidden;background:radial-gradient(circle at 50% 45%,#5a4438 0%,#2d241f 68%,#1d1815 100%);box-shadow:inset 0 0 0 1px rgba(218,176,102,.32),0 2px 5px -2px rgba(20,14,10,.28)}
 .item-badge img{display:block;width:100%;height:100%;object-fit:cover}
 .badge-forge{background:radial-gradient(circle at 50% 45%,#664836 0%,#33231a 68%,#1e1510 100%);box-shadow:inset 0 0 0 1.2px rgba(226,174,88,.45)}
-.badge-gift{background:radial-gradient(circle at 50% 45%,#6b3d46 0%,#352026 68%,#201418 100%);box-shadow:inset 0 0 0 1.2px rgba(228,168,142,.4)}
 .badge-ability{background:radial-gradient(circle at 50% 45%,#4b4662 0%,#262335 68%,#181622 100%);box-shadow:inset 0 0 0 1.2px rgba(188,176,232,.36)}
 
 /* ---------- Class ledger ---------- */
@@ -735,9 +734,8 @@ body .equipment-library.equipment-ledger,body .equipment-library.gift-ledger{dis
 .gift-cat-chip{display:inline-flex!important;align-items:center;min-height:24px!important;height:24px!important;cursor:pointer;border:1px solid color-mix(in srgb,var(--gold) 55%,var(--line));background:color-mix(in srgb,var(--tint) 75%,var(--card));color:var(--purple);font-size:11px;font-weight:600;padding:0 9px!important;border-radius:999px}
 .gift-cat-chip:hover{border-color:var(--purple);background:var(--tint)}
 .gift-char-likes{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:6px}
-.gift-item-chip{display:flex!important;align-items:center;gap:8px;width:100%;min-height:40px!important;height:auto!important;padding:5px 9px 5px 6px!important;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}
+.gift-item-chip{display:flex!important;align-items:center;gap:8px;width:100%;min-height:40px!important;height:auto!important;padding:5px 9px!important;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}
 .gift-item-chip:hover{border-color:var(--gold);background:var(--tint)}
-.gift-item-chip .item-badge{width:26px;height:26px;border-radius:6px;flex:none}
 .gift-chip-copy{min-width:0;flex:1;display:block}
 .gift-item-chip b{display:block;font-size:12.5px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .gift-item-chip small{display:block;font-size:10.5px;color:var(--muted);line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
