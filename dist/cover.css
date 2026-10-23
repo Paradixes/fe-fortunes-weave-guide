@@ -61,3 +61,34 @@
 }
 
 @media(min-width:1001px){.reunion-composite{width:calc(100% + 70px);max-width:673px;}}
+
+/* 五条路线专属背景与动效层:每条路线独立渐变色调、动态粒子画布、呼吸立绘与光环 */
+.route-cover{--route-tint-a:var(--tint);--route-tint-b:var(--card);--route-glow:rgba(205,152,78,.28);--route-accent:var(--purple)}
+.route-cover[data-route-theme="leda"]{--route-tint-a:#f6e2e4;--route-tint-b:#fffaf8;--route-glow:rgba(196,84,108,.28);--route-accent:#9e3c52}
+.route-cover[data-route-theme="kai"]{--route-tint-a:#e2efe5;--route-tint-b:#f9fcf9;--route-glow:rgba(76,148,108,.28);--route-accent:#2e6e4c}
+.route-cover[data-route-theme="dietrich"]{--route-tint-a:#e4e5f3;--route-tint-b:#fafafe;--route-glow:rgba(104,92,186,.28);--route-accent:#4e428c}
+.route-cover[data-route-theme="theodora"]{--route-tint-a:#f7ebd4;--route-tint-b:#fffdf7;--route-glow:rgba(212,156,58,.32);--route-accent:#966216}
+.route-cover[data-route-theme="reunion"]{--route-tint-a:#f3e5cf;--route-tint-b:#fffbf4;--route-glow:rgba(206,146,66,.3);--route-accent:#8f4a28}
+body.dark .route-cover[data-route-theme="leda"]{--route-tint-a:#3b2228;--route-tint-b:#231b19;--route-glow:rgba(218,102,126,.26);--route-accent:#f0a2b2}
+body.dark .route-cover[data-route-theme="kai"]{--route-tint-a:#1f3428;--route-tint-b:#1d211d;--route-glow:rgba(92,178,128,.25);--route-accent:#92ddb4}
+body.dark .route-cover[data-route-theme="dietrich"]{--route-tint-a:#26243b;--route-tint-b:#1e1c26;--route-glow:rgba(132,118,220,.26);--route-accent:#b8aef5}
+body.dark .route-cover[data-route-theme="theodora"]{--route-tint-a:#3a2e1c;--route-tint-b:#241e17;--route-glow:rgba(226,174,78,.28);--route-accent:#f2cc7e}
+body.dark .route-cover[data-route-theme="reunion"]{--route-tint-a:#38291d;--route-tint-b:#231c17;--route-glow:rgba(220,164,84,.26);--route-accent:#f0c488}
+.route-cover::before,.reunion-cover::before{background:radial-gradient(65% 95% at 24% 38%,var(--route-glow),transparent 68%),linear-gradient(115deg,var(--route-tint-a),var(--route-tint-b) 72%)}
+.route-cover-fx{position:absolute;inset:70px 0 0;border-radius:12px;overflow:hidden;pointer-events:none;z-index:0}
+.reunion-cover .route-cover-fx{inset:0}
+.route-fx-canvas{display:block;width:100%;height:100%}
+.route-art-halo{position:absolute;left:50%;bottom:10px;width:270px;height:270px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,var(--route-glow) 0%,transparent 70%);filter:blur(6px);pointer-events:none;animation:route-halo-pulse 4.4s ease-in-out infinite}
+@keyframes route-halo-pulse{0%,100%{transform:translateX(-50%) scale(.92);opacity:.7}50%{transform:translateX(-50%) scale(1.08);opacity:1}}
+.route-art-panel .hero-art{animation:hero-float 5.2s ease-in-out infinite}
+@keyframes hero-float{0%,100%{transform:translateX(-50%) translateY(0) scale(1)}50%{transform:translateX(-50%) translateY(-5px) scale(1.012)}}
+.route-hero-picker button.active{border-color:var(--route-accent);box-shadow:0 8px 20px -12px var(--route-glow),inset 0 -3px 0 var(--gold)}
+.route-hero-picker button.active>img{animation:tab-hero-bob 2.8s ease-in-out infinite}
+@keyframes tab-hero-bob{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.05)}}
+@media(max-width:1000px){
+ .route-cover-fx{inset:90px 0 0}
+ .route-art-panel::before,.reunion-art::before{background:radial-gradient(65% 95% at 50% 45%,var(--route-glow),transparent 70%),linear-gradient(115deg,var(--route-tint-a),var(--route-tint-b) 72%)}
+}
+@media(prefers-reduced-motion:reduce){
+ .route-art-halo,.route-art-panel .hero-art,.route-hero-picker button.active>img{animation:none}
+}

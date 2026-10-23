@@ -4,7 +4,10 @@ pages.guides='攻略文章';
 let articleCategory='all';
 function articleById(id){return ARTICLES.find(a=>a.id===id)}
 function currentArticleId(){const [page,id]=location.hash.slice(1).split('/');return page==='mechanics'?'inheritance':page==='guides'&&articleById(id)?id:''}
-function articleText(t){return esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
+function articleText(t){
+ const raw=esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+ return typeof linkifyGuideEntities==='function'?linkifyGuideEntities(raw):raw;
+}
 function articleMinutes(a){const n=JSON.stringify(a.sections).replace(/[\x00-\x7f]/g,'').length;return Math.max(1,Math.round(n/420))}
 function articleHost(u){try{const h=new URL(u).hostname.replace(/^www\./,'');return {'annasnotebook.net':'安娜手帖','gamewith.jp':'GameWith','game8.jp':'Game8','appmedia.jp':'AppMedia','gamecap.jp':'GameCap','kamikouryaku.net':'神攻略','nintendo.com':'任天堂官方','ndw.jp':'任天堂梦想杂志','bilibili.com':'哔哩哔哩','hyperts.net':'Hyperts','al-gest.com':'al-gest'}[h]||h}catch{return u}}
 function articleLink(id,label){const a=articleById(id);return a?`<a class="article-link" href="#guides/${esc(id)}"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Z M4 21V5 M8 7h7 M8 11h7"/></svg>${esc(label||a.title)}</a>`:''}
@@ -12,7 +15,8 @@ function articleLinks(ids,lead='相关攻略'){const links=ids.map(id=>articleLi
 function articleBlock(b){
   if(b.type==='p')return `<p>${articleText(b.text)}</p>`;
   if(b.type==='note')return `<aside class="article-note">${articleText(b.text)}</aside>`;
-  if(b.type==='formula')return `<p class="article-formula">${articleText(b.text)}</p>`;
+  if(b.type==='formula')return `<p class="article-formula">${esc(b.text).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}</p>`;
+  if(b.type==='figure')return `<figure class="article-figure"><img src="${escapeAttr(b.src)}" alt="${esc(b.caption||'')}" width="${b.width||1280}" height="${b.height||720}" loading="lazy" decoding="async">${b.caption?`<figcaption>${articleText(b.caption)}</figcaption>`:''}</figure>`;
   if(b.type==='list')return `<ul class="article-list">${b.items.map(t=>`<li>${articleText(t)}</li>`).join('')}</ul>`;
   if(b.type==='steps')return `<ol class="article-steps">${b.items.map((s,i)=>`<li><span>${/^\d/.test(s.name)?esc(s.name):String(i+1).padStart(2,'0')}</span><div>${/^\d/.test(s.name)?'':`<b>${esc(s.name)}</b>`}<p>${articleText(s.text)}</p></div></li>`).join('')}</ol>`;
   if(b.type==='cards')return `<div class="article-cards">${b.items.map(s=>`<article><h4>${esc(s.name)}</h4><p>${articleText(s.text)}</p></article>`).join('')}</div>`;

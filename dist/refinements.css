@@ -60,7 +60,7 @@ button[data-reference-type],button[data-class],button[data-gear],button[data-cha
 .char-card .skill-ladder li{padding:2px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card)}
 .char-card .chip-list{gap:6px}
 .char-card .chip-list .action-chip,.char-card .chip-list .equipment-chip{border-color:color-mix(in srgb,var(--purple) 24%,var(--line));background:var(--card)}
-.char-card .mini-career-options{gap:6px}
-.char-card .mini-career-options .mini-career-link{border:1px solid var(--line);border-radius:6px;padding:4px 8px;background:var(--card)}
-.char-card .mini-career-options .mini-career-link+.mini-career-link{border-style:dashed;color:var(--muted)}
-.char-card .mini-career-options .mini-career-link:hover{border-color:var(--purple);color:var(--ink)}
+.char-card .mini-career-options{gap:4px}
+.char-card .mini-career-options .mini-career-link{border:0;border-radius:6px;padding:2px 4px;background:transparent;font-weight:650;color:var(--ink)}
+.char-card .mini-career-options .mini-career-link+.mini-career-link{color:var(--muted);font-weight:500}
+.char-card .mini-career-options .mini-career-link:hover{background:color-mix(in srgb,var(--tint) 75%,transparent);color:var(--purple);text-decoration:none}

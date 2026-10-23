@@ -288,7 +288,16 @@ function bindAsk(){
   if(typeof annaLlmReady==='function'&&annaLlmReady()){
    askHtml='<p class="anna-ask-none anna-ask-loading">安娜正在翻阅账本…</p>';if(box)box.innerHTML=askHtml;
    try{
-    const r=await annaAgentAsk(q,name=>{askHtml=`<p class="anna-ask-none anna-ask-loading">${esc(ANNA_TOOL_LABEL[name]||'查询中')}…</p>`;if(box)box.innerHTML=askHtml;});
+    let stepList=[];
+    const r=await annaAgentAsk(q,name=>{
+     stepList.push(name);
+     askHtml=`<p class="anna-ask-none anna-ask-loading">${esc(ANNA_TOOL_LABEL[name]||'查询中')}…</p>`;
+     if(box)box.innerHTML=askHtml;
+    },partial=>{
+     const stepsText=stepList.length?`<small class="anna-agent-steps">已核对：${[...new Set(stepList)].map(n=>esc(ANNA_TOOL_LABEL[n]||n)).join(' · ')}</small>`:'';
+     askHtml=`<div class="anna-agent-answer is-streaming"><div class="anna-agent-head"><b>安娜的解答</b>${stepsText}</div><div class="anna-agent-body"><p>${annaAgentRender(partial)}<span class="anna-stream-caret">▍</span></p></div></div>`;
+     if(box)box.innerHTML=askHtml;
+    });
     const res=annaSearch(q),top=res.flat.slice(0,3);
     askHtml=`<div class="anna-agent-answer"><div class="anna-agent-head"><b>安娜的解答</b>${r.steps.length?`<small class="anna-agent-steps">已核对：${[...new Set(r.steps)].map(n=>esc(ANNA_TOOL_LABEL[n]||n)).join(' · ')}</small>`:''}</div><div class="anna-agent-body"><p>${annaAgentRender(r.answer)}</p></div></div>`
      +(top.length?`<div class="anna-ask-hits">${top.map((s,i)=>{const g=ANNA_GROUPS.find(([k])=>k===s.e.kind);return `<button type="button" class="anna-ask-hit" data-ask-idx="${i}"><span class="anna-kind">${g?g[1]:''}</span><b>${esc(s.e.title)}</b>${s.e.sub?`<small>${esc(s.e.sub)}</small>`:''}</button>`}).join('')}</div>`:'')
@@ -335,7 +344,7 @@ document.addEventListener('visibilitychange',()=>{if(document.visibilityState===
 window.addEventListener('pageshow',resumeHomeVideos);
 window.addEventListener('focus',resumeHomeVideos);
 
-function boot(){if(host()){mountBg();mount();bindAsk()}if(typeof annaLlmStateText==='function')document.querySelectorAll('[data-llm-state]').forEach(el=>el.textContent=annaLlmStateText())}
+function boot(){if(host()){mountBg();mount();bindAsk()}if(typeof syncAnnaLlmUI==='function')syncAnnaLlmUI();else if(typeof annaLlmStateText==='function')document.querySelectorAll('[data-llm-state]').forEach(el=>el.textContent=annaLlmStateText())}
 if(typeof render==='function'){
  const baseRender=render;
  render=function(...a){const r=baseRender(...a);boot();return r};
