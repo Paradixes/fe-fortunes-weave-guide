@@ -273,8 +273,9 @@
     watch();
   }
 
-  // v110: Route cover ambient particle canvas (unique per-route color & motion).
+  // v110: Route cover ambient particle canvas + Hero live rigging canvas + video playback sync.
   let routeFxRaf = 0, routeFxCanvas = null, routeFxParticles = [], routeFxTheme = '';
+  let heroLiveRaf = 0, heroLiveCanvas = null, heroLiveImg = null, heroLiveSlug = '';
   const ROUTE_FX_PALETTES = {
     leda: { colors: ['214,96,122', '238,164,178', '218,176,102'], vy: [-0.45, -0.18], vx: [-0.35, 0.35], sway: 0.025, r: [1.4, 3.0] },
     kai: { colors: ['78,162,116', '142,208,166', '216,182,98'], vy: [-0.55, -0.22], vx: [0.15, 0.65], sway: 0.02, r: [1.3, 2.8] },
@@ -296,7 +297,88 @@
       rgb: cfg.colors[Math.floor(Math.random() * cfg.colors.length)]
     }));
   }
+  function startHeroLiveRig() {
+    if (!canAnimate() || typeof requestAnimationFrame !== 'function') return;
+    const hc = document.querySelector('.route-art-panel .hero-live-canvas');
+    const img = document.querySelector('.route-art-panel .hero-art');
+    if (!hc || !img) {
+      if (heroLiveRaf) { cancelAnimationFrame(heroLiveRaf); heroLiveRaf = 0; }
+      heroLiveCanvas = null; heroLiveImg = null;
+      return;
+    }
+    const slug = hc.dataset.heroSlug || '';
+    heroLiveCanvas = hc;
+    heroLiveImg = img;
+    heroLiveSlug = slug;
+    if (heroLiveRaf) return;
+    const t0 = performance.now();
+    const tickHero = (now) => {
+      if (!heroLiveCanvas || !heroLiveCanvas.isConnected || !heroLiveImg || document.hidden) {
+        heroLiveRaf = 0;
+        return;
+      }
+      if (!heroLiveImg.complete || !heroLiveImg.naturalWidth) {
+        heroLiveRaf = requestAnimationFrame(tickHero);
+        return;
+      }
+      const ctx = heroLiveCanvas.getContext && heroLiveCanvas.getContext('2d');
+      if (!ctx) { heroLiveRaf = 0; return; }
+      const nw = heroLiveImg.naturalWidth, nh = heroLiveImg.naturalHeight;
+      const cw = 360, ch = 360;
+      if (heroLiveCanvas.width !== cw || heroLiveCanvas.height !== ch) {
+        heroLiveCanvas.width = cw;
+        heroLiveCanvas.height = ch;
+      }
+      heroLiveCanvas.classList.add('is-live');
+      heroLiveImg.classList.add('has-live-rig');
+      const t = (now - t0) * 0.001;
+      ctx.clearRect(0, 0, cw, ch);
+      const scale = Math.min((cw - 24) / nw, (ch - 12) / nh);
+      const dw = nw * scale, dh = nh * scale;
+      const baseX = (cw - dw) * 0.5, baseY = ch - dh;
+      const strips = 36, sh = nh / strips, dsh = dh / strips;
+      const breath = Math.sin(t * 2.1);
+      const sway = Math.sin(t * 1.35);
+      for (let i = 0; i < strips; i++) {
+        const u = i / strips; // 0 = top (head/hair), 1 = bottom (feet/cape)
+        // Upper body subtle head/shoulder sway + chest expansion + lower cape/hair billow wave
+        const headSway = (1 - u) * sway * 2.4;
+        const capeWave = u > 0.32 ? Math.sin(t * 3.4 - u * 6.5) * Math.pow((u - 0.32) / 0.68, 1.35) * 4.8 : 0;
+        const hairWave = u < 0.45 ? Math.sin(t * 2.8 + u * 8.0) * (0.45 - u) * 2.6 : 0;
+        const chestScale = 1 + Math.exp(-Math.pow((u - 0.34) / 0.16, 2)) * (0.014 * breath);
+        const yLift = (1 - u) * (-2.2 * breath);
+        const rowW = dw * chestScale;
+        const dx = baseX - (rowW - dw) * 0.5 + headSway + capeWave + hairWave;
+        const dy = baseY + i * dsh + yLift;
+        ctx.drawImage(heroLiveImg, 0, i * sh, nw, sh + 0.8, dx, dy, rowW, dsh + 0.9);
+      }
+      // Periodic weapon/magic aura shimmer sweep across the character
+      const sheenCycle = (t * 0.38) % 1;
+      if (sheenCycle < 0.45) {
+        const p = sheenCycle / 0.45;
+        const gy = baseY + dh * (1 - p);
+        ctx.save();
+        ctx.globalCompositeOperation = 'source-atop';
+        const grad = ctx.createLinearGradient(0, gy - 36, 0, gy + 36);
+        const tint = heroLiveSlug === 'leda' ? '255,190,205' : heroLiveSlug === 'kai' ? '185,255,215' : heroLiveSlug === 'dietrich' ? '205,195,255' : '255,230,165';
+        grad.addColorStop(0, `rgba(${tint},0)`);
+        grad.addColorStop(0.5, `rgba(${tint},0.22)`);
+        grad.addColorStop(1, `rgba(${tint},0)`);
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, cw, ch);
+        ctx.restore();
+      }
+      heroLiveRaf = requestAnimationFrame(tickHero);
+    };
+    heroLiveRaf = requestAnimationFrame(tickHero);
+  }
   function startRouteCoverFx() {
+    const vid = document.querySelector('.route-cover-video');
+    if (vid && vid.paused) {
+      const p = vid.play && vid.play();
+      if (p && p.catch) p.catch(() => {});
+    }
+    startHeroLiveRig();
     if (!canAnimate() || typeof requestAnimationFrame !== 'function') return;
     const c = document.querySelector('.route-fx-canvas');
     if (!c) { if (routeFxRaf) { cancelAnimationFrame(routeFxRaf); routeFxRaf = 0; } routeFxCanvas = null; return; }

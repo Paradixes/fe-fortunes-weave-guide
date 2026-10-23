@@ -216,6 +216,23 @@ function pickAnna(i){
   const ent=e.target.closest?.('.inline-entity-link');
   if(ent){
    if(ent.dataset.char){e.preventDefault();closeAnnaSearch();openCharacter(ent.dataset.char);return}
+   if(ent.dataset.giftJump){
+    e.preventDefault();
+    const id=ent.dataset.giftJump,g=typeof allGifts==='function'?allGifts().find(x=>x.id===id):null;
+    closeAnnaSearch();
+    if(typeof arenaViewState!=='undefined')arenaViewState['gifts-page']='gifts';
+    if(typeof giftCategoryFilter!=='undefined'){giftCategoryFilter='all';giftCharacterFilter='';}
+    if(g)query=g.name;
+    location.hash='#gifts';render();return;
+   }
+   if(ent.dataset.forgeMat){
+    e.preventDefault();
+    const name=ent.dataset.forgeMat;
+    closeAnnaSearch();
+    query=name;if(typeof materialKindFilter!=='undefined')materialKindFilter='all';
+    if(typeof arenaViewState!=='undefined')arenaViewState['equipment-page']='materials';
+    location.hash='#equipment';render();return;
+   }
    if(ent.dataset.referenceType){e.preventDefault();closeAnnaSearch();openReferenceDialog(ent.dataset.referenceType,ent.dataset.referenceId);return}
    if(ent.getAttribute('href')?.startsWith('#')){closeAnnaSearch();return}
   }
