@@ -583,6 +583,17 @@ assert(vm.runInContext("!training().includes('id=\"custom-workbench\"')&&pages.c
 assert(vm.runInContext("!careerDiagram(DB.characters[7]).includes('role=\"tablist\"')&&careerDiagram(DB.characters[7]).includes('永久属性期望')",ctx),'Career stages are a flat horizontal graph');
 console.log('PASS v86 integration: persistent workbench controls, 63 matching draft entries, 60 career previews, compact rationale and six primary pages.');
 vm.runInContext(fs.readFileSync(root+'refinements.js','utf8'),ctx);
+assert.equal(vm.runInContext("abilityCondition({method:'法术习得',skill:'黑魔术',rank:'D',condition:'暂译名（英 Freeze），游戏内中文名待确认；数值来自 Game8 英文版',uncertain:true})",ctx),'法术习得 · 黑魔术 · D');
+assert.equal(vm.runInContext("abilityGameplayNote('暂译名；第三部加入后习得；数据来自 GameWith 魔法一览')",ctx),'第三部加入后习得');
+assert.equal(vm.runInContext("abilityConditionGroups([{method:'法术习得',skill:'黑魔术',rank:'C'},{method:'法术习得',skill:'黑魔术',rank:'D'},{method:'法术习得',skill:'黑魔术',rank:'D'}]).join('|')",ctx),'法术习得 · 黑魔术 · D／C');
+assert.equal(vm.runInContext("abilityConditionGroups([{method:'法术习得',skill:'黑魔术',rank:'D',level:10},{method:'法术习得',skill:'黑魔术',rank:'C',level:20}]).length",ctx),2);
+{
+ const html=vm.runInContext("query='';giftCategoryFilter='all';giftCharacterFilter='';giftsPage()",ctx);
+ assert(html.includes('礼物图鉴')&&html.includes('角色喜好')&&!html.includes('更多分类'));
+ for(const category of vm.runInContext("[...new Set(CATALOG.gifts.map(g=>g.category))]",ctx))assert(html.includes('data-gift-cat="'+category+'"'));
+}
+console.log('PASS concise skill acquisition, grouped ranks, distinct level gates and complete gift categories.');
+
 vm.runInContext("wbApplied={};wbProjects={};wbDraft=null;activeCharacter=null;location.hash='#characters';var beforeCustom=JSON.stringify(buildPlan(DB.characters[8]));wbProject('c8');",ctx);
 assert.equal(vm.runInContext('JSON.stringify(buildPlan(DB.characters[8]))',ctx),vm.runInContext('beforeCustom',ctx),'Opening a draft does not change guide algorithms');
 assert(!vm.runInContext('cardCareer(DB.characters[8])',ctx).includes('示例'),'Cards do not invent example labels');
