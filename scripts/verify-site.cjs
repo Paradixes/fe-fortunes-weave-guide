@@ -789,6 +789,8 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(vm.runInContext("CATALOG.gifts.some(g=>g.id==='red-rose-bouquet')&&!CATALOG.gifts.some(g=>['zh-it-342','zh-it-343'].includes(g.id))",ctx),'Missing gift added and duplicate rows removed');
  assert(vm.runInContext("annaSearch('爽口的鱼酱').best?.e.id==='smooth-garum'",ctx),'Merged gift searchable by prior name');
  assert(vm.runInContext("(()=>{const ids=new Set(CATALOG.gifts.map(g=>g.id));return DB.characters.every(c=>(c.likedGifts||[]).every(id=>ids.has(id)))})()",ctx),'All character gift references resolve');
+ assert(vm.runInContext("(()=>{const g=CATALOG.gifts.find(g=>g.likedBy.length&&g.preferredBy?.length);const people=giftPeople(g);return people.some(p=>p.stage==='最爱')&&people.some(p=>p.stage==='喜欢')&&new Set(people.map(p=>p.id)).size===people.length})()",ctx),'Gift reactions remain distinct without duplicate people');
+ assert(vm.runInContext("(()=>{const c=DB.characters.find(c=>c.preferredGifts?.length);const g=CATALOG.gifts.find(g=>g.id===c.preferredGifts[0]);return characterGiftIds(c).includes(g.id)&&giftLevel(c,g)==='喜欢'&&characterGiftPanel(c).includes(g.name)&&ANNA_AGENT_RUNNERS.lookup_character({name:c.cn}).gifts.some(x=>x.name===g.name&&x.reaction==='喜欢')})()",ctx),'Liked gifts propagate to character UI and Anna with the correct reaction');
  console.log('PASS v110: multi-select roster filters, 124 gifts bidirectional database, forging materials, SSE streaming + mode toggle, entity links, full-bleed icons.');
 }
 })();
