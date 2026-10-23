@@ -784,6 +784,11 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(nodes['#content'].innerHTML.includes('compare-table')&&persisted['fw-compare-ids-v1']==='[\"c8\",\"c7\"]','Compare page persists and restores characters from localStorage');
  vm.runInContext("setCompare([])",ctx);
  assert(vm.runInContext("routeCover('レダ').includes('route-cover-video')&&routeCover('レダ').includes('hero-live-canvas')&&routeCover('レダ').includes('route-scene-reel')",ctx),'Route cover embeds video, scene reel, and live hero canvas');
+ assert(vm.runInContext("giftPriceText({price:null})==='—'&&giftPriceText({price:0})==='非卖品'&&giftPriceText({price:100})==='100G'",ctx),'Unknown price differs from non-sale');
+ assert(vm.runInContext("CATALOG.gifts.some(g=>g.id==='black-tail-feather'&&g.likedBy.includes('c33'))&&DB.characters.find(c=>c.id==='c33').likedGifts.includes('black-tail-feather')",ctx),'New gift relation is bidirectional');
+ assert(vm.runInContext("CATALOG.gifts.some(g=>g.id==='red-rose-bouquet')&&!CATALOG.gifts.some(g=>['zh-it-342','zh-it-343'].includes(g.id))",ctx),'Missing gift added and duplicate rows removed');
+ assert(vm.runInContext("annaSearch('爽口的鱼酱').best?.e.id==='smooth-garum'",ctx),'Merged gift searchable by prior name');
+ assert(vm.runInContext("(()=>{const ids=new Set(CATALOG.gifts.map(g=>g.id));return DB.characters.every(c=>(c.likedGifts||[]).every(id=>ids.has(id)))})()",ctx),'All character gift references resolve');
  console.log('PASS v110: multi-select roster filters, 124 gifts bidirectional database, forging materials, SSE streaming + mode toggle, entity links, full-bleed icons.');
 }
 })();

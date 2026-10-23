@@ -9364,7 +9364,8 @@
           "shield-portrait",
           "skin-balm",
           "southern-coffee",
-          "tales-of-adventure"
+          "tales-of-adventure",
+          "black-tail-feather"
         ],
         "giftCategories": [
           "打扮",
@@ -152930,10 +152931,17 @@
       "nameEn": "Legendary Garum",
       "category": "料理",
       "price": 2000,
-      "sources": [],
-      "places": [],
+      "sources": [
+        "海都阿雷库托 商店"
+      ],
+      "places": [
+        "海都阿雷库托"
+      ],
       "likedBy": [
         "c54"
+      ],
+      "evidence": [
+        "https://hyperwiki.jp/fefw/present/"
       ]
     },
     {
@@ -152998,6 +153006,16 @@
       "likedBy": [
         "c41",
         "c54"
+      ],
+      "aliases": [
+        "难闻的鱼酱"
+      ],
+      "legacyIds": [
+        "zh-it-343"
+      ],
+      "evidence": [
+        "https://gamewith.jp/fefw/574296",
+        "https://fireemblem.top/archive/gifts"
       ]
     },
     {
@@ -153017,6 +153035,16 @@
         "c48",
         "c52",
         "c54"
+      ],
+      "aliases": [
+        "爽口的鱼酱"
+      ],
+      "legacyIds": [
+        "zh-it-342"
+      ],
+      "evidence": [
+        "https://gamewith.jp/fefw/574296",
+        "https://fireemblem.top/archive/gifts"
       ]
     },
     {
@@ -153091,7 +153119,7 @@
       "name": "庶民百景",
       "nameEn": "Everyday Scenes",
       "category": "书",
-      "price": 0,
+      "price": null,
       "sources": [
         "开箱 礼品箱"
       ],
@@ -153790,7 +153818,7 @@
       "name": "实验性缝纫工具",
       "nameEn": null,
       "category": "打扮",
-      "price": 0,
+      "price": null,
       "sources": [],
       "places": [],
       "likedBy": [
@@ -153875,7 +153903,7 @@
       "name": "美丽的装饰弓",
       "nameEn": null,
       "category": "弓",
-      "price": 0,
+      "price": null,
       "sources": [],
       "places": [],
       "likedBy": [
@@ -154322,7 +154350,7 @@
       "name": "胡须装饰",
       "nameEn": null,
       "category": "马",
-      "price": 0,
+      "price": null,
       "sources": [],
       "places": [],
       "likedBy": []
@@ -154611,7 +154639,7 @@
       "name": "小白花绘画",
       "nameEn": "Flower Painting",
       "category": "绘画",
-      "price": 0,
+      "price": null,
       "sources": [
         "任务报酬「神威法王的秘密」",
         "封咒祭坛 迷宫宝箱",
@@ -154746,7 +154774,7 @@
       "id": "red-hair-clip",
       "name": "朱红色发饰",
       "nameEn": "Red Hair Clip",
-      "category": "其他",
+      "category": "打扮",
       "price": 500,
       "sources": [
         "吉玛港 市场"
@@ -154754,35 +154782,10 @@
       "places": [
         "吉玛港"
       ],
-      "likedBy": []
-    },
-    {
-      "id": "zh-it-342",
-      "name": "爽口的鱼酱",
-      "nameEn": null,
-      "category": "其他",
-      "price": 0,
-      "sources": [
-        "莱伊·欧港 市场"
-      ],
-      "places": [
-        "莱伊·欧港"
-      ],
-      "likedBy": []
-    },
-    {
-      "id": "zh-it-343",
-      "name": "难闻的鱼酱",
-      "nameEn": null,
-      "category": "其他",
-      "price": 0,
-      "sources": [
-        "贝涅托那许村 市场"
-      ],
-      "places": [
-        "贝涅托那许村"
-      ],
-      "likedBy": []
+      "likedBy": [],
+      "evidence": [
+        "https://hyperwiki.jp/fefw/present/"
+      ]
     },
     {
       "id": "antique-medal",
@@ -155061,7 +155064,7 @@
       "name": "幽·法丝的肖像",
       "nameEn": "Portrait of Yu Phas",
       "category": "美丽事物",
-      "price": 0,
+      "price": null,
       "sources": [
         "开箱 礼品箱"
       ],
@@ -155125,6 +155128,38 @@
       "likedBy": [
         "c25",
         "c29"
+      ]
+    },
+    {
+      "id": "black-tail-feather",
+      "name": "漆黑的尾羽",
+      "nameEn": null,
+      "nameJa": "漆黒の尾羽",
+      "category": "打扮",
+      "price": null,
+      "sources": [
+        "开箱 礼品箱"
+      ],
+      "places": [],
+      "likedBy": [
+        "c33"
+      ],
+      "evidence": [
+        "https://fireemblem.top/archive/gifts",
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ]
+    },
+    {
+      "id": "red-rose-bouquet",
+      "name": "红玫瑰花束",
+      "nameEn": null,
+      "category": "花",
+      "price": null,
+      "sources": [],
+      "places": [],
+      "likedBy": [],
+      "evidence": [
+        "https://www.gamersky.com/handbook/202609/2215218_3.shtml"
       ]
     }
   ]

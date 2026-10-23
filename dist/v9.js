@@ -499,6 +499,7 @@ document.addEventListener('click',e=>{
 
 // 礼物与喜好数据库：双向查看「礼物 → 喜爱角色」与「角色 → 偏好分类 & 喜爱礼物」。
 let giftCategoryFilter='all',giftCharacterFilter='',giftViewMode='gifts';
+function giftPriceText(g){return g.price==null?'—':g.price===0?'非卖品':g.price.toLocaleString('zh-CN')+'G'}
 function allGifts(){return CATALOG.gifts||[]}
 function giftsPage(){
  const gifts=allGifts(),q=query.trim().toLowerCase();
@@ -510,7 +511,7 @@ function giftsPage(){
   if(giftCharacterFilter&&!(g.likedBy||[]).includes(giftCharacterFilter))return false;
   if(!q)return true;
   const lovers=(g.likedBy||[]).map(id=>DB.characters.find(c=>c.id===id)?.cn||'').join(' ');
-  return [g.name,g.nameEn||'',g.category,...(g.sources||[]),lovers].join(' ').toLowerCase().includes(q);
+  return [g.name,g.nameEn||'',g.nameJa||'',...(g.aliases||[]),g.category,...(g.sources||[]),lovers].join(' ').toLowerCase().includes(q);
  });
  const giftById=new Map(gifts.map(g=>[g.id,g]));
  const filteredChars=DB.characters.filter(c=>{
@@ -522,11 +523,11 @@ function giftsPage(){
  });
  const viewKey='gifts-page',mode=arenaViewState[viewKey]||giftViewMode;
  const tab=(v,n,c)=>`<button id="gifts-view-tab-${v}" role="tab" data-view-tab="${v}" aria-selected="${mode===v}" aria-controls="gifts-view-panel-${v}" tabindex="${mode===v?0:-1}" class="${mode===v?'active':''}">${n} <span class="tab-count">${c}</span></button>`;
- const giftRowsHtml=`<div class="equipment-library equipment-ledger gift-ledger"><div class="equipment-ledger-head gift-ledger-head" aria-hidden="true"><span>礼物与分类</span><span>价格</span><span>获取方式与地点</span><span>最爱它的角色</span></div>${filteredGifts.map(g=>`<article class="equipment-row gift-row" id="gift-${escapeAttr(g.id)}"><div class="equipment-row-name" data-skill-images="off"><div><h3>${esc(g.name)}</h3><small><button type="button" class="text-button gift-cat-pill" data-gift-cat="${escapeAttr(g.category)}">${esc(g.category)}</button>${g.nameEn?` · ${esc(g.nameEn)}`:''}</small></div></div><div class="gift-price-cell"><b>${g.price?g.price.toLocaleString('zh-CN')+'G':'非卖品'}</b></div><div class="equipment-row-info" data-skill-images="off"><p class="equipment-row-effect">${(g.sources||[]).length?esc(g.sources.join(' · ')):'迷宫宝箱或探索获取'}</p>${(g.places||[]).length?`<div class="gift-places">${g.places.slice(0,3).map(pl=>`<button type="button" class="text-button" data-goto-map="${escapeAttr(pl)}">${esc(pl)} ↗</button>`).join('')}</div>`:''}</div>${peopleStack((g.likedBy||[]).map(id=>({id,stage:'最爱'})),{max:6,label:g.name,empty:'通用赠礼'})}</article>`).join('')||'<p class="muted" style="padding:18px">没有匹配的礼物。</p>'}</div>`;
+ const giftRowsHtml=`<div class="equipment-library equipment-ledger gift-ledger"><div class="equipment-ledger-head gift-ledger-head" aria-hidden="true"><span>礼物与分类</span><span>价格</span><span>获取方式与地点</span><span>最爱它的角色</span></div>${filteredGifts.map(g=>`<article class="equipment-row gift-row" id="gift-${escapeAttr(g.id)}"><div class="equipment-row-name" data-skill-images="off"><div><h3>${esc(g.name)}</h3><small><button type="button" class="text-button gift-cat-pill" data-gift-cat="${escapeAttr(g.category)}">${esc(g.category)}</button>${g.nameEn?` · ${esc(g.nameEn)}`:''}</small></div></div><div class="gift-price-cell"><b>${giftPriceText(g)}</b></div><div class="equipment-row-info" data-skill-images="off"><p class="equipment-row-effect">${(g.sources||[]).length?esc(g.sources.join(' · ')):'—'}</p>${(g.places||[]).length?`<div class="gift-places">${g.places.slice(0,3).map(pl=>`<button type="button" class="text-button" data-goto-map="${escapeAttr(pl)}">${esc(pl)} ↗</button>`).join('')}</div>`:''}</div>${peopleStack((g.likedBy||[]).map(id=>({id,stage:'最爱'})),{max:6,label:g.name,empty:'—'})}</article>`).join('')||'<p class="muted" style="padding:18px">没有匹配的礼物。</p>'}</div>`;
  const charRowsHtml=`<div class="gift-char-grid" data-skill-images="off">${filteredChars.map(c=>{
   const liked=(c.likedGifts||[]).map(id=>giftById.get(id)).filter(Boolean);
   const cats=c.giftCategories||[];
-  return `<article class="gift-char-card" id="gift-char-${c.id}"><div class="gift-char-head">${tableCharacter(c,{subtitle:c.birthday?'生日 '+c.birthday:c.role,showRating:true})}<div class="gift-char-cats">${cats.length?cats.map(cat=>`<button type="button" class="tag key gift-cat-chip" data-gift-cat="${escapeAttr(cat)}" title="点击筛选「${esc(cat)}」分类">偏好 · ${esc(cat)}</button>`).join(''):'<span class="tag">无特定分类偏好</span>'}</div></div><div class="gift-char-likes">${liked.length?liked.map(g=>`<button type="button" class="action-chip gift-item-chip" data-gift-jump="${escapeAttr(g.id)}" title="${esc(g.category)} · ${g.price?g.price+'G':'非卖品'} · ${esc((g.sources||[])[0]||'')}"><span class="gift-chip-copy"><b>${esc(g.name)}</b><small>${esc(g.category)}${g.price?` · ${g.price}G`:''}</small></span></button>`).join(''):'<span class="muted">暂无特定喜爱礼物记录</span>'}</div></article>`;
+  return `<article class="gift-char-card" id="gift-char-${c.id}"><div class="gift-char-head">${tableCharacter(c,{subtitle:c.birthday?'生日 '+c.birthday:c.role,showRating:true})}<div class="gift-char-cats">${cats.length?cats.map(cat=>`<button type="button" class="tag key gift-cat-chip" data-gift-cat="${escapeAttr(cat)}" title="点击筛选「${esc(cat)}」分类">偏好 · ${esc(cat)}</button>`).join(''):'<span class="tag">无特定分类偏好</span>'}</div></div><div class="gift-char-likes">${liked.length?liked.map(g=>`<button type="button" class="action-chip gift-item-chip" data-gift-jump="${escapeAttr(g.id)}" title="${esc(g.category)} · ${giftPriceText(g)} · ${esc((g.sources||[])[0]||'')}"><span class="gift-chip-copy"><b>${esc(g.name)}</b><small>${esc(g.category)}${g.price?` · ${g.price}G`:''}</small></span></button>`).join(''):'<span class="muted">暂无特定喜爱礼物记录</span>'}</div></article>`;
  }).join('')||'<p class="muted">没有匹配的角色。</p>'}</div>`;
  return title('全局好感与挖角资料','礼物与角色喜好','')
   +filterDeck(toolbar('搜索礼物、分类、角色、生日或获取商店…',searchCount(mode==='gifts'?filteredGifts.length:filteredChars.length,mode==='gifts'?gifts.length:DB.characters.length,mode==='gifts'?'件礼物':'名角色')),[
