@@ -23,15 +23,15 @@ function buildAnnaIndex(){
  if(annaIndex)return annaIndex;
  const idx=[];
  for(const [id,title,sub,kw]of ANNA_PAGES)idx.push(annaEntry('page',id,title,sub,kw,kw.join(' ')));
- for(const c of DB.characters)idx.push(annaEntry('character',c.id,c.cn,`${c.rating} · ${c.role}`,[c.name,c.alias],[c.role,c.personalSkill,c.personalSkillEffect,c.birthday?'生日 '+c.birthday:'',...(c.giftRecs||[]).map(g=>g.name),...c.joinDetails.flatMap(j=>[j.answers,j.deadline,j.gift?.name]).filter(Boolean)].filter(Boolean).join(' ')));
+ for(const c of DB.characters)idx.push(annaEntry('character',c.id,c.cn,`${c.rating} · ${c.role}`,[c.name,c.alias],[c.role,c.personalSkill,c.personalSkillEffect,c.birthday?'生日 '+c.birthday:'',...characterGiftIds(c).map(id=>CATALOG.gifts.find(g=>g.id===id)?.name).filter(Boolean),...c.joinDetails.flatMap(j=>[j.answers,j.deadline,j.gift?.name]).filter(Boolean)].filter(Boolean).join(' ')));
  for(const cl of DB.classes)idx.push(annaEntry('class',cl.cn,cl.cn,cl.col_1,[cl.title],[cl.col_37||'',cl.col_2||'',cl.unlock||'',(cl.allowedSkills||[]).join(' ')].join(' ')));
  for(const a of CATALOG.abilities)idx.push(annaEntry('ability',a.id,a.name,a.type,[],a.descriptions.map(d=>d.text).join(' ')));
  for(const e of EQUIPMENT)idx.push(annaEntry('equipment',e.id,e.name,[e.type,e.phase].filter(Boolean).join(' · '),[e.original,...(e.aliases||[])],[e.effect,e.purpose,e.type].filter(Boolean).join(' ')));
  for(const m of materialExchangeIndex())idx.push(annaEntry('material',m.name,m.name,`${m.kind||'材料'} · ${(m.allUses||m.uses).length} 项用途${m.where.length?' · '+m.where.slice(0,2).join('、'):''}`,m.aliases,m.where.join(' ')));
  if(Array.isArray(CATALOG.gifts)&&CATALOG.gifts.length){
   for(const g of CATALOG.gifts){
-   const who=(g.likedBy||[]).map(id=>DB.characters.find(c=>c.id===id)?.cn).filter(Boolean);
-   idx.push(annaEntry('gift',g.id,g.name,[g.category,giftPriceText(g),who.length?who.slice(0,3).join('、')+' 最爱':''].filter(Boolean).join(' · '),[g.nameEn||'',g.nameJa||'',...(g.aliases||[]),g.category],[g.category,...(g.sources||[]),...who,'礼物'].join(' ')));
+   const who=giftPeople(g).map(({id})=>DB.characters.find(c=>c.id===id)?.cn).filter(Boolean);
+   idx.push(annaEntry('gift',g.id,g.name,[g.category,giftPriceText(g),who.length?who.slice(0,3).join('、')+' 喜爱':''].filter(Boolean).join(' · '),[g.nameEn||'',g.nameJa||'',...(g.aliases||[]),g.category],[g.category,...(g.sources||[]),...who,'礼物'].join(' ')));
   }
  }else{
   const giftMap=new Map();
