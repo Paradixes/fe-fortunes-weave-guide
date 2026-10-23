@@ -767,7 +767,12 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  vm.runInContext("location.hash='#gifts';query='';render()",ctx);
  assert(nodes['#content'].innerHTML.includes('gift-ledger')&&nodes['#content'].innerHTML.includes('gift-char-grid'),'Gifts database renders both gift->char and char->gift views');
  assert(vm.runInContext("materialExchangeIndex().some(m=>m.name==='锻造石'&&m.forgeUses.length>20)",ctx),'Forging materials indexed in material lookup');
- assert(vm.runInContext("annaAgentRender('推荐凯伊转职勇士并携带净化剑').includes('data-char=\"c0\"')&&annaAgentRender('推荐凯伊转职勇士并携带净化剑').includes('data-reference-type=\"class\"')",ctx),'Entity auto-linking in Anna answers');
+ assert(vm.runInContext("annaAgentRender('推荐凯伊转职勇士并携带净化剑').includes('data-char=\"c0\"')&&annaAgentRender('推荐凯伊转职勇士并携带净化剑').includes('data-reference-type=\"class\"')&&annaAgentRender('推荐凯伊转职勇士并携带净化剑').includes('entity-inline-ico')",ctx),'Entity auto-linking with inline icons in Anna answers');
+ assert(vm.runInContext("quickReferenceHTML('character','c0').includes('char-quick-card')&&quickReferenceHTML('character','c0').includes('heat-card')",ctx),'Character link hover preview renders character card');
+ vm.runInContext("setCompare(['c8','c7']);location.hash='#compare';render()",ctx);
+ assert(nodes['#content'].innerHTML.includes('compare-table')&&persisted['fw-compare-ids-v1']==='[\"c8\",\"c7\"]','Compare page persists and restores characters from localStorage');
+ vm.runInContext("setCompare([])",ctx);
+ assert(vm.runInContext("routeCover('レダ').includes('route-cover-video')&&routeCover('レダ').includes('hero-live-canvas')&&routeCover('レダ').includes('route-scene-reel')",ctx),'Route cover embeds video, scene reel, and live hero canvas');
  console.log('PASS v110: multi-select roster filters, 124 gifts bidirectional database, forging materials, SSE streaming + mode toggle, entity links, full-bleed icons.');
 }
 })();

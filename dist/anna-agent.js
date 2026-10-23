@@ -166,37 +166,77 @@ async function annaAgentAsk(question,onStep,onStream){
  return {answer:String(finalMsg.content||''),steps};
 }
 
-/* 站内实体自动链接索引:将安娜回答或攻略文章中的角色/职业/装备/特技/地点/文章名转为站内链接 */
+/* 站内实体自动链接索引:将安娜回答或攻略文章中的角色/职业/装备/特技/礼物/材料/文章名转为带行内图标与悬停预览的站内链接 */
 let entityLinkCache=null;
+function entityIconHtml(src,round=false){
+ if(!src)return '';
+ return `<img class="entity-inline-ico${round?' is-round':''}" src="${escapeAttr(src)}" width="15" height="15" alt="" aria-hidden="true" loading="lazy" decoding="async">`;
+}
+function abilityIconSrcFor(a){
+ const iconMap=typeof CATALOG!=='undefined'&&CATALOG.abilityIcons||{};
+ const skillFiles={'剑术':'sword','枪术':'lance','斧术':'axe','弓术':'bow','格斗术':'fist','黑魔术':'black-magic','白魔术':'white-magic','马术':'horse','飞行术':'flight','重装术':'armor','步兵术':'infantry','指挥术':'command'};
+ const firstSkill=(a.acquisition||[]).map(b=>b.skill).find(s=>skillFiles[s]);
+ let src=iconMap[a.name]?.src||(firstSkill?`assets/skills/${skillFiles[firstSkill]}.webp`:'');
+ if(!src||src.startsWith('portraits/')){
+  src=a.type==='法术'?'assets/skills/black-magic.webp':a.type==='战技'?'assets/skills/sword.webp':'assets/skills/command.webp';
+ }
+ return src;
+}
 function buildEntityLinkIndex(){
  if(entityLinkCache||typeof DB==='undefined'||!DB)return entityLinkCache;
  const map=new Map();
  const add=(name,html)=>{if(name&&name.length>=2&&!map.has(name))map.set(name,html)};
+ const eqIcons=typeof CATALOG!=='undefined'&&CATALOG.presentation?.equipmentIcons||{};
+ const charAliases={'帝弥托利':'ディミトリ','库罗德':'クロード','艾黛尔贾特':'エーデルガルト'};
  for(const c of DB.characters){
-  add(c.cn,`<a class="inline-entity-link entity-char" href="#character/${c.id}" data-char="${c.id}">${esc(c.cn)}</a>`);
+  const pSrc=c.portraitFile?(c.portraitFile.startsWith('portraits/')?c.portraitFile:`portraits/${c.portraitFile}`):'';
+  const html=`<a class="inline-entity-link entity-char" href="#character/${c.id}" data-char="${c.id}" data-reference-type="character" data-reference-id="${c.id}">${entityIconHtml(pSrc,true)}<span>${esc(c.cn)}</span></a>`;
+  add(c.cn,html);
+  if(c.alias){
+   for(const al of String(c.alias).split(/[、/，,\s]+/)){
+    if(al&&al.length>=2&&!/^[a-zA-Z]+$/.test(al))add(al,`<a class="inline-entity-link entity-char" href="#character/${c.id}" data-char="${c.id}" data-reference-type="character" data-reference-id="${c.id}">${entityIconHtml(pSrc,true)}<span>${esc(al)}</span></a>`);
+   }
+  }
  }
  for(const cl of DB.classes){
-  add(cl.cn,`<button type="button" class="inline-entity-link entity-class" data-reference-type="class" data-reference-id="${escapeAttr(cl.id)}">${esc(cl.cn)}</button>`);
+  const cSrc=`assets/classes/${cl.id}.webp`;
+  add(cl.cn,`<a class="inline-entity-link entity-class" href="#classes" data-reference-type="class" data-reference-id="${escapeAttr(cl.id)}">${entityIconHtml(cSrc)}<span>${esc(cl.cn)}</span></a>`);
  }
  if(typeof EQUIPMENT!=='undefined'){
   for(const e of EQUIPMENT){
-   add(e.name,`<button type="button" class="inline-entity-link entity-equip" data-reference-type="equipment" data-reference-id="${escapeAttr(e.id)}">${esc(e.name)}</button>`);
+   const type=e.type==='拳套'?'手甲':e.type;
+   const eSrc=eqIcons[type]?.src||'assets/skills/sword.webp';
+   add(e.name,`<a class="inline-entity-link entity-equip" href="#equipment" data-reference-type="equipment" data-reference-id="${escapeAttr(e.id)}">${entityIconHtml(eSrc)}<span>${esc(e.name)}</span></a>`);
   }
  }
  const abilities=Array.isArray(CATALOG?.abilities)?CATALOG.abilities:[];
+ const skipGeneric=new Set(['攻击','防御','速度','魔力','力量','技巧','幸运','魅力','移动','回复','体格','命中','必杀','回避','射程','重量','耐久','生命','魔防','剑术','枪术','斧术','弓术','格斗术','黑魔术','白魔术','马术','飞行术','重装术','步兵术','指挥术']);
  for(const a of abilities){
-  if(a.name&&a.name.length>=2&&!['攻击','防御','速度','魔力','力量','技巧','幸运','魅力','移动','回复','体格','命中','必杀','回避','射程','重量','耐久'].includes(a.name)){
-   add(a.name,`<button type="button" class="inline-entity-link entity-ability" data-reference-type="ability" data-reference-id="${escapeAttr(a.id)}">${esc(a.name)}</button>`);
+  if(a.name&&a.name.length>=2&&!skipGeneric.has(a.name)){
+   const aSrc=abilityIconSrcFor(a);
+   add(a.name,`<a class="inline-entity-link entity-ability" href="#skills" data-reference-type="ability" data-reference-id="${escapeAttr(a.id)}">${entityIconHtml(aSrc)}<span>${esc(a.name)}</span></a>`);
+  }
+ }
+ const gifts=Array.isArray(CATALOG?.gifts)?CATALOG.gifts:[];
+ for(const g of gifts){
+  if(g.name&&g.name.length>=2&&!skipGeneric.has(g.name)){
+   add(g.name,`<a class="inline-entity-link entity-gift" href="#gifts" data-gift-jump="${escapeAttr(g.id)}">${entityIconHtml('assets/equipment-types/treasure.webp')}<span>${esc(g.name)}</span></a>`);
+  }
+ }
+ const forgeMats=Array.isArray(CATALOG?.forgingMaterials)?CATALOG.forgingMaterials:[];
+ for(const m of forgeMats){
+  if(m.name&&m.name.length>=2){
+   add(m.name,`<a class="inline-entity-link entity-mat" href="#equipment" data-forge-mat="${escapeAttr(m.name)}">${entityIconHtml('assets/equipment-types/gem.webp')}<span>${esc(m.name)}</span></a>`);
   }
  }
  if(typeof ARTICLES!=='undefined'){
   for(const art of ARTICLES){
-   add(art.title,`<a class="inline-entity-link entity-article" href="#guides/${escapeAttr(art.id)}">《${esc(art.title)}》</a>`);
+   add(art.title,`<a class="inline-entity-link entity-article" href="#guides/${escapeAttr(art.id)}"><span>《${esc(art.title)}》</span></a>`);
   }
  }
  const names=[...map.keys()].sort((a,b)=>b.length-a.length);
  const pattern=names.length?new RegExp(names.map(n=>n.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'g'):null;
- entityLinkCache={map,pattern};
+ entityLinkCache={map,pattern,charAliases};
  return entityLinkCache;
 }
 
@@ -204,8 +244,17 @@ function linkifyGuideEntities(html){
  const idx=buildEntityLinkIndex();
  if(!idx||!idx.pattern)return html;
  const seen=new Set();
+ const stack=[];
  return String(html).split(/(<[^>]+>)/g).map(part=>{
-  if(part.startsWith('<'))return part;
+  if(part.startsWith('<')){
+   const close=part.match(/^<\/(\w+)/),open=part.match(/^<(\w+)/);
+   if(close){const i=stack.lastIndexOf(close[1].toLowerCase());if(i>=0)stack.splice(i);}
+   else if(open&&!/\/\s*>$/.test(part)&&!/^(img|input|br|hr|meta|link|source|wbr)$/i.test(open[1])){
+    stack.push(open[1].toLowerCase());
+   }
+   return part;
+  }
+  if(stack.some(t=>t==='a'||t==='button'||t==='code'||t==='script'||t==='style'))return part;
   return part.replace(idx.pattern,match=>{
    if(seen.has(match))return match;
    seen.add(match);

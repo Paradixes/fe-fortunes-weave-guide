@@ -90,7 +90,11 @@ body .guide-content-tabs{margin:14px 0 12px}
 body .guide-jump{display:inline-flex;flex-wrap:wrap;gap:4px;margin:4px 0 14px;padding:4px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
 body .guide-jump button{min-height:30px;padding:0 13px;border:0;border-radius:999px;background:transparent;color:var(--muted);font-size:12.5px;font-weight:600;cursor:pointer;transition:background-color .15s,color .15s}
 body .guide-jump button:hover{background:var(--tint);color:var(--purple)}
-body .plan-dashboard{margin:12px 0 18px;padding:14px 20px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;background:linear-gradient(120deg,color-mix(in srgb,var(--tint) 50%,var(--card)),var(--card));box-shadow:0 4px 14px -10px rgba(45,32,24,.1)}
+body .plan-dashboard,body .recruit-dashboard,body .stats,body .preference-summary{margin:12px 0 18px;padding:14px 20px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;background:linear-gradient(120deg,color-mix(in srgb,var(--tint) 50%,var(--card)),var(--card));box-shadow:0 4px 14px -10px rgba(45,32,24,.1)}
+body .preference-summary{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+body .preference-summary>div:first-child{display:flex;align-items:baseline;gap:10px}
+body .preference-summary strong{font:700 26px/1.2 var(--ui-ui-font);color:var(--ui-accent)}
+body .preference-summary>div:last-child{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .plan-dashboard ~ section,.guide-content-panel>section{margin-top:28px}
 body .role-coverage{margin-block:10px;gap:8px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
 body .role-coverage article{padding:10px 12px;border-radius:10px;border:1px solid var(--line);border-top:2.5px solid color-mix(in srgb,var(--gold) 65%,var(--line));background:var(--card);transition:transform .16s,border-color .16s,box-shadow .16s}
@@ -374,7 +378,7 @@ html[data-route-dir=prev] .route-cover.route-sheen::after{--sheen-x:30%}
 /* ---------- Equipment ledger (v96) ---------- */
 .equipment-tools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 8px}
 .equipment-tools .equipment-types{margin:0}
-body .equipment-library.equipment-ledger{display:block!important;container-type:inline-size;border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:clip}
+body .equipment-library.equipment-ledger,body .equipment-library.gift-ledger{display:block!important;container-type:inline-size;border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:clip}
 .equipment-ledger{--eq-cols:minmax(180px,1fr) minmax(300px,330px) minmax(200px,1.6fr) 150px}
 .equipment-ledger-head,.equipment-row{display:grid;grid-template-columns:var(--eq-cols);gap:16px;align-items:center;padding:10px 16px}
 .equipment-ledger-head{position:sticky;top:64px;z-index:2;padding-block:8px;background:color-mix(in srgb,var(--tint) 70%,var(--card));border-bottom:1px solid var(--line);font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.04em}
@@ -710,27 +714,33 @@ body .equipment-library.equipment-ledger{display:block!important;container-type:
 .material-gear b em{font-style:normal;font-size:11px;color:var(--purple);margin-left:3px}
 
 /* 礼物与角色喜好数据库 */
-.gift-ledger{--eq-cols:minmax(200px,1.2fr) 90px minmax(220px,1.6fr) 190px}
+.gift-ledger{--eq-cols:minmax(220px,1.25fr) 88px minmax(220px,1.65fr) 180px}
+.gift-row .equipment-row-name>div{flex:1;min-width:0}
+.gift-row .equipment-row-name h3{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gift-row .equipment-row-name small{display:flex;align-items:center;gap:4px;flex-wrap:wrap;line-height:1.4;color:var(--muted)}
+.gift-price-cell{font-variant-numeric:tabular-nums;white-space:nowrap}
 .gift-price-cell b{font:700 14px/1.3 var(--ui-ui-font);color:var(--purple);font-variant-numeric:tabular-nums}
-.gift-cat-pill{min-height:0!important;padding:0 4px;font-size:11px;color:var(--purple)}
-.gift-places{display:flex;flex-wrap:wrap;gap:4px 10px}
-.gift-places .text-button{min-height:0!important;padding:0;font-size:11.5px;color:var(--purple)}
+.gift-cat-pill{display:inline!important;min-height:0!important;height:auto!important;padding:1px 6px!important;border-radius:4px;background:color-mix(in srgb,var(--tint) 75%,var(--bg));border:1px solid color-mix(in srgb,var(--line) 75%,transparent);font-size:11px;font-weight:600;color:var(--purple);text-decoration:none}
+.gift-cat-pill:hover{border-color:var(--gold);background:var(--tint);text-decoration:none}
+.gift-places{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:2px}
+.gift-places .text-button{display:inline-flex!important;min-height:0!important;height:auto!important;padding:0!important;font-size:11.5px;color:var(--purple)}
 .gift-more-cats.disclosure{width:100%;margin:4px 0 0;border:0;background:transparent}
 .gift-more-cats .disclosure-heading{min-height:28px;padding:2px 6px;font-size:12px;background:transparent;color:var(--purple)}
 .gift-more-cats .disclosure-body{padding:6px 0 0}
-.gift-char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
-.gift-char-card{display:flex;flex-direction:column;gap:10px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
-.gift-char-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-bottom:8px;border-bottom:1px dashed color-mix(in srgb,var(--line) 80%,transparent)}
-.gift-char-head .table-character{flex:1;min-width:170px;padding:0}
+.gift-char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:14px}
+.gift-char-card{display:flex;flex-direction:column;gap:10px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--card);box-shadow:0 3px 12px -8px rgba(45,32,24,.08)}
+.gift-char-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-bottom:10px;border-bottom:1px dashed color-mix(in srgb,var(--line) 80%,transparent)}
+.gift-char-head .table-character{flex:1 1 170px;min-width:0;padding:0}
 .gift-char-cats{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}
-.gift-cat-chip{cursor:pointer;border:1px solid color-mix(in srgb,var(--gold) 55%,var(--line));background:color-mix(in srgb,var(--tint) 75%,var(--card));color:var(--purple);font-size:11px;padding:2px 8px;border-radius:999px}
+.gift-cat-chip{display:inline-flex!important;align-items:center;min-height:24px!important;height:24px!important;cursor:pointer;border:1px solid color-mix(in srgb,var(--gold) 55%,var(--line));background:color-mix(in srgb,var(--tint) 75%,var(--card));color:var(--purple);font-size:11px;font-weight:600;padding:0 9px!important;border-radius:999px}
 .gift-cat-chip:hover{border-color:var(--purple);background:var(--tint)}
-.gift-char-likes{display:flex;flex-wrap:wrap;gap:6px}
-.gift-item-chip{display:inline-flex;align-items:center;gap:7px;min-height:36px!important;padding:4px 10px 4px 5px!important;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}
+.gift-char-likes{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:6px}
+.gift-item-chip{display:flex!important;align-items:center;gap:8px;width:100%;min-height:40px!important;height:auto!important;padding:5px 9px 5px 6px!important;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s}
 .gift-item-chip:hover{border-color:var(--gold);background:var(--tint)}
-.gift-item-chip .item-badge{width:26px;height:26px;border-radius:6px}
-.gift-item-chip b{display:block;font-size:12.5px;line-height:1.25}
-.gift-item-chip small{display:block;font-size:10.5px;color:var(--muted);line-height:1.2}
+.gift-item-chip .item-badge{width:26px;height:26px;border-radius:6px;flex:none}
+.gift-chip-copy{min-width:0;flex:1;display:block}
+.gift-item-chip b{display:block;font-size:12.5px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gift-item-chip small{display:block;font-size:10.5px;color:var(--muted);line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:1px}
 .character-gifts{margin:16px 0;padding:18px 22px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
 .character-gifts>h2{margin:0 0 10px!important;font-size:18px!important}
 .character-gift-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px}
@@ -740,6 +750,17 @@ body .equipment-library.equipment-ledger{display:block!important;container-type:
 .article-figure{margin:14px 0 18px;padding:10px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--tint) 35%,var(--card));box-shadow:0 6px 20px -12px rgba(45,32,24,.14)}
 .article-figure img{display:block;width:100%;max-height:460px;height:auto;object-fit:contain;border-radius:8px;background:#1c1714}
 .article-figure figcaption{margin-top:8px;padding:0 4px;font-size:12px;line-height:1.6;color:var(--muted);text-align:center}
+
+/* 角色链接悬浮卡片预览 */
+.class-quick-preview.is-char-preview{width:min(380px,calc(100vw - 16px));padding:0;border:0;background:transparent;box-shadow:0 16px 40px -12px rgba(35,24,18,.38)}
+.class-quick-preview.is-char-preview .char-quick-card{margin:0;padding:14px 16px;border:1px solid color-mix(in srgb,var(--gold) 55%,var(--line));box-shadow:none}
+.char-quick-close{margin-left:4px;width:26px;height:26px;min-height:0!important;padding:0!important;display:grid;place-items:center;border:0;background:transparent;color:var(--muted);border-radius:6px}
+.char-quick-close:hover{background:var(--tint);color:var(--purple)}
+.char-quick-card .card-skill{margin:6px 0}
+.char-quick-card .heat-card{margin:6px 0}
+.char-quick-card .card-career-modern{margin:6px 0 4px}
+.char-quick-goto{display:flex!important;align-items:center;justify-content:center;width:100%;min-height:32px!important;margin-top:8px;padding:4px 10px!important;border:1px solid color-mix(in srgb,var(--gold) 45%,var(--line))!important;border-radius:8px;background:color-mix(in srgb,var(--tint) 65%,var(--card))!important;font-size:12px;font-weight:600;color:var(--purple);text-decoration:none}
+.char-quick-goto:hover{background:var(--tint)!important;border-color:var(--purple)!important;text-decoration:none}
 
 /* 全章节时间轴条带与日历视觉升级 */
 .calendar-chapter-strip{display:flex;gap:6px;overflow-x:auto;padding:4px 2px 12px;margin-bottom:10px;border-bottom:1px dashed var(--line);scrollbar-width:thin}
