@@ -162,9 +162,18 @@
  .home-article-grid{grid-template-columns:1fr}
 }
 
-/* 安娜柜台 BYOK agent:设置弹层、齿轮按钮与代答区 */
-.anna-llm-gear{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--card) 85%,var(--bg));color:var(--muted);font:inherit;font-size:11px;font-weight:500;cursor:pointer;transition:border-color .15s,color .15s,background-color .15s}
+/* 安娜柜台 BYOK agent:设置弹层、模式切换器、齿轮按钮、流式光标与站内实体链接 */
+.anna-llm-controls{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}
+.anna-mode-switch{display:inline-flex;align-items:center;padding:2px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--tint) 65%,var(--bg))}
+.anna-mode-switch[hidden]{display:none}
+.anna-mode-switch button{min-height:24px;height:24px;padding:0 10px;border:0;border-radius:999px;background:transparent;color:var(--muted);font:600 11px/1 var(--ui-ui-font,system-ui);cursor:pointer;transition:background-color .15s,color .15s,box-shadow .15s}
+.anna-mode-switch button:hover{color:var(--ink)}
+.anna-mode-switch button.active{background:var(--card);color:var(--purple);box-shadow:0 1px 3px rgba(45,32,24,.15)}
+.anna-llm-gear{display:inline-flex;align-items:center;gap:5px;min-height:28px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--card) 85%,var(--bg));color:var(--muted);font:inherit;font-size:11px;font-weight:500;cursor:pointer;transition:border-color .15s,color .15s,background-color .15s}
 .anna-llm-gear:hover{border-color:var(--gold);color:var(--purple);background:var(--tint)}
+.anna-stream-caret{display:inline-block;margin-left:2px;color:var(--gold);animation:anna-caret .9s steps(1) infinite}
+.inline-entity-link{display:inline;padding:0 2px;border:0;border-bottom:1px dashed color-mix(in srgb,var(--purple) 60%,var(--gold));border-radius:3px;background:color-mix(in srgb,var(--tint) 55%,transparent);color:var(--purple);font:inherit;font-weight:600;text-decoration:none;cursor:pointer;transition:background-color .14s,border-color .14s}
+.inline-entity-link:hover{background:var(--tint);border-bottom-style:solid;border-bottom-color:var(--purple);text-decoration:none}
 .anna-llm-settings{max-width:420px;width:calc(100vw - 48px);border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);padding:0}
 .anna-llm-settings::backdrop{background:rgba(24,16,10,.38)}
 .anna-llm-form{display:grid;gap:12px;padding:20px 22px}

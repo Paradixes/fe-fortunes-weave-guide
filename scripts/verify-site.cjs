@@ -636,8 +636,8 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  const styleCss=fs.readFileSync(root+'style.css','utf8');
  assert(!styleCss.includes('@media(prefers-reduced-motion:reduce){}')&&!styleCss.includes('@media(max-width:700px){}'),'Empty media blocks removed');
  assert(!/\.search\s*\{[^}]*min-height/.test(fs.readFileSync(root+'design.css','utf8')),'design.css search residue removed');
- const counts=vm.runInContext("(()=>{const n=k=>buildAnnaIndex().filter(e=>e.kind===k).length;return {page:n('page'),character:n('character'),class:n('class'),ability:n('ability'),equipment:n('equipment'),material:n('material'),place:n('place'),article:n('article')}})()",ctx);
- assert.equal(counts.page,13,'Site pages indexed');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,450,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.article,18,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
+ const counts=vm.runInContext("(()=>{const n=k=>buildAnnaIndex().filter(e=>e.kind===k).length;return {page:n('page'),character:n('character'),class:n('class'),ability:n('ability'),equipment:n('equipment'),gift:n('gift'),material:n('material'),place:n('place'),article:n('article')}})()",ctx);
+ assert.equal(counts.page,14,'Site pages indexed');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,450,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.gift,124,'Gifts indexed');assert.equal(counts.article,18,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
  assert(vm.runInContext("ARTICLES.every(a=>([a.sources||[],...a.sections.map(s=>s.sources||[])].flat()).length>0)",ctx),'Every article carries source citations');
  const best=q=>vm.runInContext(`(r=>({k:r.best?.e.kind,t:r.best?.e.title}))(annaSearch(${JSON.stringify(q)}))`,ctx);
  assert.deepEqual(best('xlk'),{k:'character',t:'西洛可'},'Pinyin acronym finds character');
@@ -759,6 +759,15 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(r2.answer.includes('综合答案')&&r2.steps.length===1,'Duplicate tool calls deduplicated and forced final synthesis succeeds without aborting');
  assert(fs.readFileSync(root+'anna-home.js','utf8').includes('resumeHomeVideos')&&fs.readFileSync(root+'anna-pet.js','utf8').includes('resumePetVideo'),'Anna home and pet videos resume after page switch');
  assert(fs.readFileSync(root+'search.js','utf8').includes('askAnnaInDialog'),'Anna search dialog integrates AI Q&A');
- console.log('PASS v108: BYOK settings store, character/class/equipment/ability/article/search tools, ReAct loop with dedup & final synthesis, dialog AI Q&A, video resume.');
+ // v110: multi-select roster filters, gifts database page, forging materials, streaming + mode toggle, entity links
+ vm.runInContext("family='all';primaryRouteFilter='all';tier='all';familySet.clear();primaryRouteSet.clear();tierSet.clear();v9Click({target:{closest:s=>s==='[data-primary-route]'?{dataset:{primaryRoute:'レダ'}}:null}});v9Click({target:{closest:s=>s==='[data-primary-route]'?{dataset:{primaryRoute:'カイ'}}:null}})",ctx);
+ assert(vm.runInContext("primaryRouteSet.has('レダ')&&primaryRouteSet.has('カイ')&&matchesPrimaryRoute(DB.characters[7])&&matchesPrimaryRoute(DB.characters[0])",ctx),'Multi-select primary route filter');
+ vm.runInContext("v9Click({target:{closest:s=>s==='[data-roster-reset]'?{}:null}})",ctx);
+ assert(vm.runInContext("primaryRouteSet.size===0&&primaryRouteFilter==='all'",ctx),'Reset clears multi-select filters');
+ vm.runInContext("location.hash='#gifts';query='';render()",ctx);
+ assert(nodes['#content'].innerHTML.includes('gift-ledger')&&nodes['#content'].innerHTML.includes('gift-char-grid'),'Gifts database renders both gift->char and char->gift views');
+ assert(vm.runInContext("materialExchangeIndex().some(m=>m.name==='锻造石'&&m.forgeUses.length>20)",ctx),'Forging materials indexed in material lookup');
+ assert(vm.runInContext("annaAgentRender('推荐凯伊转职勇士并携带净化剑').includes('data-char=\"c0\"')&&annaAgentRender('推荐凯伊转职勇士并携带净化剑').includes('data-reference-type=\"class\"')",ctx),'Entity auto-linking in Anna answers');
+ console.log('PASS v110: multi-select roster filters, 124 gifts bidirectional database, forging materials, SSE streaming + mode toggle, entity links, full-bleed icons.');
 }
 })();

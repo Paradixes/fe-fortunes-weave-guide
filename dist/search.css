@@ -11,9 +11,10 @@
 #annaSearch{position:fixed;inset:0;margin:10vh auto auto;width:min(660px,92vw);max-height:78dvh;padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);box-shadow:0 28px 90px #17122a50;overscroll-behavior:contain}
 #annaSearch[open]{display:flex;flex-direction:column}
 #annaSearch::backdrop{background:#24212c99;backdrop-filter:blur(3px)}
-.anna-greet{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.anna-greet{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
 .anna-avatar{border-radius:50%;background:var(--tint);padding:4px;flex:none}
-.anna-greet h2{margin:0;font:600 16px/1.6 'Noto Serif SC',Georgia,serif;color:var(--ink)}
+.anna-greet h2{margin:0;flex:1;min-width:160px;font:600 16px/1.55 'Noto Serif SC',Georgia,serif;color:var(--ink)}
+.anna-greet .anna-llm-controls{margin-left:auto;flex:none}
 .anna-greet h2.anna-typing::after{content:'▍';color:var(--gold);animation:anna-caret 1s steps(1) infinite}
 @keyframes anna-caret{50%{opacity:0}}
 #annaSearch .anna-field{margin:0;flex:none;max-width:none;padding-right:6px}

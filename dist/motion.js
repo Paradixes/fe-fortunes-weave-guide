@@ -272,4 +272,76 @@
     new MutationObserver(() => requestAnimationFrame(watch)).observe(document.querySelector('#content'), { childList: true });
     watch();
   }
+
+  // v110: Route cover ambient particle canvas (unique per-route color & motion).
+  let routeFxRaf = 0, routeFxCanvas = null, routeFxParticles = [], routeFxTheme = '';
+  const ROUTE_FX_PALETTES = {
+    leda: { colors: ['214,96,122', '238,164,178', '218,176,102'], vy: [-0.45, -0.18], vx: [-0.35, 0.35], sway: 0.025, r: [1.4, 3.0] },
+    kai: { colors: ['78,162,116', '142,208,166', '216,182,98'], vy: [-0.55, -0.22], vx: [0.15, 0.65], sway: 0.02, r: [1.3, 2.8] },
+    dietrich: { colors: ['118,104,212', '172,158,242', '212,92,112'], vy: [-0.65, -0.25], vx: [-0.25, 0.25], sway: 0.03, r: [1.2, 2.6] },
+    theodora: { colors: ['218,166,68', '242,204,118', '196,118,54'], vy: [-0.38, -0.15], vx: [-0.2, 0.2], sway: 0.015, r: [1.5, 3.2] },
+    reunion: { colors: ['214,96,122', '78,162,116', '118,104,212', '218,166,68'], vy: [-0.5, -0.2], vx: [-0.3, 0.3], sway: 0.022, r: [1.4, 3.0] }
+  };
+  function initRouteParticles(w, h, cfg) {
+    routeFxParticles = Array.from({ length: 28 }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: cfg.r[0] + Math.random() * (cfg.r[1] - cfg.r[0]),
+      vx: cfg.vx[0] + Math.random() * (cfg.vx[1] - cfg.vx[0]),
+      vy: cfg.vy[0] + Math.random() * (cfg.vy[1] - cfg.vy[0]),
+      phase: Math.random() * Math.PI * 2,
+      sway: cfg.sway,
+      a: 0.22 + Math.random() * 0.58,
+      da: (Math.random() - 0.5) * 0.016,
+      rgb: cfg.colors[Math.floor(Math.random() * cfg.colors.length)]
+    }));
+  }
+  function startRouteCoverFx() {
+    if (!canAnimate() || typeof requestAnimationFrame !== 'function') return;
+    const c = document.querySelector('.route-fx-canvas');
+    if (!c) { if (routeFxRaf) { cancelAnimationFrame(routeFxRaf); routeFxRaf = 0; } routeFxCanvas = null; return; }
+    const theme = c.dataset.fxRoute || 'reunion';
+    if (routeFxCanvas !== c || routeFxTheme !== theme) {
+      routeFxCanvas = c;
+      routeFxTheme = theme;
+      routeFxParticles = [];
+    }
+    if (routeFxRaf) return;
+    const tick = () => {
+      if (!routeFxCanvas || !routeFxCanvas.isConnected || document.hidden) { routeFxRaf = 0; return; }
+      const ctx = routeFxCanvas.getContext && routeFxCanvas.getContext('2d');
+      if (!ctx) { routeFxRaf = 0; return; }
+      const w = routeFxCanvas.clientWidth || 900, h = routeFxCanvas.clientHeight || 260;
+      const cfg = ROUTE_FX_PALETTES[routeFxTheme] || ROUTE_FX_PALETTES.reunion;
+      if (routeFxCanvas.width !== w || routeFxCanvas.height !== h || !routeFxParticles.length) {
+        routeFxCanvas.width = w; routeFxCanvas.height = h;
+        initRouteParticles(w, h, cfg);
+      }
+      ctx.clearRect(0, 0, w, h);
+      for (const p of routeFxParticles) {
+        p.phase += p.sway;
+        p.x += p.vx + Math.sin(p.phase) * 0.25;
+        p.y += p.vy;
+        p.a += p.da;
+        if (p.a > 0.85 || p.a < 0.14) p.da = -p.da;
+        if (p.y < -10) { p.y = h + 8; p.x = Math.random() * w; }
+        if (p.x < -10) p.x = w + 8; else if (p.x > w + 10) p.x = -8;
+        const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3.4);
+        g.addColorStop(0, `rgba(${p.rgb},${Math.max(0, Math.min(1, p.a)).toFixed(2)})`);
+        g.addColorStop(1, `rgba(${p.rgb},0)`);
+        ctx.fillStyle = g;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 3.4, 0, Math.PI * 2); ctx.fill();
+      }
+      routeFxRaf = requestAnimationFrame(tick);
+    };
+    routeFxRaf = requestAnimationFrame(tick);
+  }
+  const fxRender = render;
+  render = function () {
+    const r = fxRender.apply(this, arguments);
+    if (typeof requestAnimationFrame === 'function') requestAnimationFrame(startRouteCoverFx);
+    return r;
+  };
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) startRouteCoverFx(); });
+  startRouteCoverFx();
 })();
