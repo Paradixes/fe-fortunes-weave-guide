@@ -1,6 +1,6 @@
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>zh(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const routes={'レダ':'蕾达','カイ':'凯伊','ディートリヒ':'迪托利希','セオドラ':'赛奥朵拉','救世篇':'第三部'};
-const pages={home:'首页',overview:'路线攻略',sources:'来源',preferences:'我的培养',characters:'全角色图鉴',recruit:'招募与声望',gifts:'礼物与喜好',classes:'职业资格',training:'技能与斗技场',equipment:'装备与材料',map:'探索大地图',mechanics:'周目与继承',character:'角色详情',compare:'角色对比'};
+const pages={home:'首页',overview:'路线攻略',sources:'来源',preferences:'我的培养',characters:'全角色图鉴',recruit:'招募与声望',gifts:'礼物与喜好',classes:'职业资格',training:'技能与斗技场',equipment:'装备与材料',map:'探索大地图',mechanics:'周目与继承',character:'角色详情',compare:'角色对比',collection:'物资统计'};
 let DB,PINS=[],mapLoaded=false,mapLoading=false,route='レダ',query='',family='all',mapType='all',mapScale=1,checked={};try{checked=JSON.parse(localStorage.getItem('guide-v2')||'{}')}catch{};route=checked.route||route;if(checked.dark)document.body.classList.add('dark');
 const statNames={hp:'生命',str:'力量',mag:'魔力',spd:'速度',dex:'技巧',def:'防御',res:'魔防',lck:'幸运',cha:'魅力'};
 const link=(url,label)=>guidePage()==='sources'&&url?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';
@@ -57,7 +57,7 @@ function resetMap(){const v=mapDOM('.map-viewport');if(!v)return;const b=CATALOG
 function zoomMap(factor,x,y){const v=mapDOM('.map-viewport');if(!v)return;x??=v.clientWidth/2;y??=v.clientHeight/2;const old=mapScale,next=Math.max(1,Math.min(8,old*factor));[mapX,mapY]=zoomAt(next,x,y,old,mapX,mapY);mapScale=next;clampMap();scheduleMap()}
 function loadVisibleTiles(){const v=mapDOM('.map-viewport'),layer=mapDOM('.map-tiles');if(!v||!layer)return;const scale=mapBase*mapScale;if(scale<=0.65){layer.replaceChildren();return}const level=scale>0.65?4:3,size=level===4?128:256,cols=Math.ceil(3328/size),rows=Math.ceil(2560/size);const minX=Math.max(0,Math.floor(-mapX/scale/size)-1),maxX=Math.min(cols-1,Math.floor((v.clientWidth-mapX)/scale/size)+1),minY=Math.max(0,Math.floor(-mapY/scale/size)-1),maxY=Math.min(rows-1,Math.floor((v.clientHeight-mapY)/scale/size)+1);let seen=new Set();for(let x=minX;x<=maxX;x++)for(let y=minY;y<=maxY;y++){const id=`tile-${level}-${x}-${y}`;seen.add(id);if(layer.querySelector('#'+id))continue;const img=document.createElement('img');img.id=id;img.src=`map-tiles/${level}/${x}_${y}.webp`;img.alt='';img.draggable=false;img.decoding='async';img.style.cssText=`position:absolute;left:${x*size}px;top:${y*size}px;width:${size}px;height:${size}px`;layer.appendChild(img)}for(const img of [...layer.children])if(!seen.has(img.id))img.remove()}
 function bindMap(){
- const v=mapDOM('.map-viewport');if(!v)return;resetMap();
+ const v=mapDOM('.map-viewport');if(!v)return;resetMap();if(v.dataset.mapBound)return;v.dataset.mapBound='true';
  v.addEventListener('wheel',e=>{e.preventDefault();const r=v.getBoundingClientRect();zoomMap(Math.exp(-Math.max(-100,Math.min(100,e.deltaY))*.003),e.clientX-r.left,e.clientY-r.top)},{passive:false});
  const pointers=new Map();let gesture=null;
  const sample=()=>{const ps=[...pointers.values()],r=v.getBoundingClientRect();if(ps.length>1)return {x:(ps[0].x+ps[1].x)/2-r.left,y:(ps[0].y+ps[1].y)/2-r.top,d:Math.max(1,Math.hypot(ps[1].x-ps[0].x,ps[1].y-ps[0].y))};return ps.length?{x:ps[0].x-r.left,y:ps[0].y-r.top,d:0}:null};
