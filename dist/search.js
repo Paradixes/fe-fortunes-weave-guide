@@ -11,9 +11,10 @@ const ANNA_SYNONYMS={'挖人':'招募','挖角':'招募','招人':'招募','最�
 const ANNA_GREETS=['嘘——想打听谁的消息?角色、职业、装备,安娜这儿都有。','欢迎光临!报个名字就行,日文的叫法我也认得。','想找谁最强,还是想挖谁的墙角?问吧,这回不收钱~','货架上的情报多得翻不完,直接告诉我你想找什么吧。'];
 const ANNA_EMPTY='这个名字查不到……换个别名或叫法试试?安娜的账本童叟无欺。';
 const ANNA_CHIPS=['挖角','舞者','停止线','继承','声望','斗技场'];
+ANNA_PINYIN['赠']='zeng';
 const ANNA_GROUPS=[['page','功能'],['character','角色'],['class','职业'],['ability','技能'],['equipment','装备'],['gift','礼物'],['material','材料'],['place','地点'],['article','攻略']];
 const ANNA_KIND_WEIGHT={page:10,character:8,class:5,equipment:5,ability:4,article:4,material:3,gift:3,place:2};
-const ANNA_PAGES=[['overview','路线攻略','首页、培养计划与阵容',['首页','培养计划','阵容','路线']],['characters','全角色图鉴','63 名角色的成长与培养',['人物','图鉴','角色列表']],['recruit','招募与声望','各路线入队条件与门槛',['挖角','挖人','入队','声望']],['gifts','礼物与喜好','124 件礼物分类、价格与角色喜好反查',['礼物','送礼','好感','喜好','特芙','生日']],['classes','职业资格','60 种职业的资格与成长修正',['职业','转职','成长率']],['skills','特技与战技','技能效果与获取条件',['技能','战技','特技']],['collection','物资统计','当前阵容的武器材料缺口与地图收集标记',['库存','材料统计','武器统计','收集','缺口']],['equipment','装备与材料','武器、装备、锻造石材与兑换材料',['装备','武器','材料','兑换','锻造','强化','商店']],['map','探索大地图','采集点、店铺与地点',['地图','采集','地点','点位']],['guides','攻略文章','机制解释与培养长文',['攻略','文章','机制','继承','周目']],['characters/plans','队伍规划','角色图鉴中的关注与培养规划',['偏好','关注','我的队伍','培养规划']],['characters/data','成长档案','角色成长、职业与技能资料',['技能学习','习得等级','学习表','角色列表']],['characters/compare','角色对比','并排比较角色成长',['对比','比较']],['calculator','自定义养成','自定义职业路线计算',['计算器','自定义','养成方案']],['sources','资料来源','数据出处与编辑方法',['来源','出处']]];
+const ANNA_PAGES=[['overview','路线攻略','首页、培养计划与阵容',['首页','培养计划','阵容','路线']],['characters','全角色图鉴','63 名角色的成长与培养',['人物','图鉴','角色列表']],['recruit','招募与声望','各路线入队条件与门槛',['挖角','挖人','入队','声望']],['characters/gifts','赠礼指南','124 件礼物分类、价格与角色喜好反查',['礼物','送礼','好感','喜好','特芙','生日']],['classes','职业资格','60 种职业的资格与成长修正',['职业','转职','成长率']],['skills','特技与战技','技能效果与获取条件',['技能','战技','特技']],['collection','物资统计','当前阵容的武器材料缺口与地图收集标记',['库存','材料统计','武器统计','收集','缺口']],['equipment','装备图鉴','武器性能、装备效果与获取途径',['装备','武器','强化','商店']],['materials','材料图鉴','兑换与锻造材料、关联武器和采集地点',['材料','配方','锻造石']],['map','探索大地图','采集点、店铺与地点',['地图','采集','地点','点位']],['guides','攻略文章','机制解释与培养长文',['攻略','文章','机制','继承','周目']],['characters/plans','队伍规划','角色图鉴中的关注与培养规划',['偏好','关注','我的队伍','培养规划']],['characters/data','成长档案','角色成长、职业与技能资料',['技能学习','习得等级','学习表','角色列表']],['characters/compare','角色对比','并排比较角色成长',['对比','比较']],['calculator','自定义养成','自定义职业路线计算',['计算器','自定义','养成方案']],['sources','资料来源','数据出处与编辑方法',['来源','出处']]];
 
 // 索引(CATALOG 已冻结,另建数组;首次打开时懒构建)。
 let annaIndex=null;
@@ -200,8 +201,9 @@ function pickAnna(i){
  else if(kind==='class')openReferenceDialog('class',id);
  else if(kind==='ability')openReferenceDialog('ability',id);
  else if(kind==='equipment')openReferenceDialog('equipment',id);
- else if(kind==='material'||kind==='place')goMap(title);
- else if(kind==='gift'){query=title;if(typeof giftCategoryFilter!=='undefined')giftCategoryFilter='all';if(typeof giftCharacterFilter!=='undefined')giftCharacterFilter='';if(typeof arenaViewState!=='undefined')arenaViewState['gifts-page']='gifts';activeCharacter=null;if($('#detail')?.open)$('#detail').close();location.hash='#gifts';render()}
+ else if(kind==='material'){query=title;materialKindFilter='all';location.hash='#materials';render()}
+ else if(kind==='place')goMap(title);
+ else if(kind==='gift'){query=title;if(typeof giftCategoryFilter!=='undefined')giftCategoryFilter='all';if(typeof giftCharacterFilter!=='undefined')giftCharacterFilter='';if(typeof arenaViewState!=='undefined')arenaViewState['gifts-page']='gifts';activeCharacter=null;if($('#detail')?.open)$('#detail').close();location.hash='#characters/gifts';render()}
  else if(kind==='article')location.hash='#guides/'+id;
  else if(kind==='page')location.hash='#'+id;
 }
@@ -223,15 +225,15 @@ function pickAnna(i){
     if(typeof arenaViewState!=='undefined')arenaViewState['gifts-page']='gifts';
     if(typeof giftCategoryFilter!=='undefined'){giftCategoryFilter='all';giftCharacterFilter='';}
     if(g)query=g.name;
-    location.hash='#gifts';render();return;
+    location.hash='#characters/gifts';render();return;
    }
    if(ent.dataset.forgeMat){
     e.preventDefault();
     const name=ent.dataset.forgeMat;
     closeAnnaSearch();
     query=name;if(typeof materialKindFilter!=='undefined')materialKindFilter='all';
-    if(typeof arenaViewState!=='undefined')arenaViewState['equipment-page']='materials';
-    location.hash='#equipment';render();return;
+    if(typeof arenaViewState!=='undefined')arenaViewState['equipment-page']='gear';
+    location.hash='#materials';render();return;
    }
    if(ent.dataset.referenceType){e.preventDefault();closeAnnaSearch();openReferenceDialog(ent.dataset.referenceType,ent.dataset.referenceId);return}
    if(ent.getAttribute('href')?.startsWith('#')){closeAnnaSearch();return}

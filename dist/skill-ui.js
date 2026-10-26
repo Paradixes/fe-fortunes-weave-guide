@@ -21,8 +21,10 @@ function alignDatabaseTabs(){const main=document.getElementById('content');if(!m
  else if(page==='classes')tabs=main.querySelector('.class-group-nav');
  else if(page==='recruit')tabs=main.querySelector('.recruit-tabs');
  else if(['equipment','gifts','training'].includes(page)){group=main.querySelector(page==='training'?'.arena-views':page==='gifts'?'.gift-views':'.equipment-views');tabs=group?.querySelector('.view-tabs');}
+ const inventory=main.querySelector('.inventory-entry'),deck=main.querySelector('.fdeck');if(inventory&&deck)deck.querySelector('.fdeck-row:last-child .fdeck-ctrl')?.appendChild(inventory);
  if(!tabs)return;tabs.classList.add('database-tabs');
- if(group){const deck=main.querySelector('.fdeck');main.insertBefore(group,title.nextSibling);if(deck&&!group.contains(deck))tabs.after(deck);const entry=main.querySelector('.inventory-entry');if(entry&&deck)deck.querySelector('.fdeck-row:last-child')?.appendChild(entry);}
+ if(page==='characters'&&rosterView==='gifts'){const gifts=main.querySelector('.gift-views'),filters=main.querySelector('.fdeck');if(gifts&&filters)gifts.querySelector('.view-tabs')?.after(filters);}
+ if(group){const deck=main.querySelector('.fdeck');main.insertBefore(group,title.nextSibling);if(deck&&!group.contains(deck))tabs.after(deck);const entry=main.querySelector('.inventory-entry');if(entry&&deck)deck.querySelector('.fdeck-row:last-child .fdeck-ctrl')?.appendChild(entry);}
  else{const row=tabs.closest('.fdeck-row');main.insertBefore(tabs,title.nextSibling);if(row)row.remove();}
 }
 const skillUiRender=render;
