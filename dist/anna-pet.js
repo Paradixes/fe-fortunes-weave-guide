@@ -5,6 +5,7 @@
 const BASE='assets/pigeon-pet/';
 const SMALL=()=>typeof matchMedia==='function'&&matchMedia('(max-width: 650px)').matches;
 
+let flightTimer=null,wingBeat=0;
 let lines={},figure=null,figureMode='',currentAction='',expressToken=0,bubbleTimer=null,idleTimer=null,sleepTimer=null,sleeping=false,petDragUntil=0,holdTimer=null,patDistance=0,patLastY=null;
 
 function store(pos){try{localStorage.setItem('fw-anna-pet-v1',JSON.stringify(pos))}catch{}}
@@ -36,8 +37,11 @@ function show(id){
  if(!figure)return;
  currentAction=id;figureMode='sprite';
  figure.dataset.action=id;
- figure.innerHTML=`<span class="pigeon-sprite" aria-hidden="true" style="background-position:${(POSES[id]??0)%3*50}% ${Math.floor((POSES[id]??0)/3)*100}%"></span>`;
+ if(!figure.firstElementChild)figure.innerHTML='<span class="pigeon-sprite" aria-hidden="true"></span>';
+ const pose=POSES[id]??0;figure.firstElementChild.style.backgroundPosition=`${pose%3*50}% ${Math.floor(pose/3)*100}%`;
 }
+function startFlight(el,dx=0){if(Math.abs(dx)>1)el.dataset.facing=dx<0?'left':'right';el.classList.add('carried');if(flightTimer)return;expressToken++;show('drag');if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;flightTimer=setInterval(()=>{if(!figure)return;wingBeat++;const pose=wingBeat%2?2:1;figure.firstElementChild.style.backgroundPosition=`${pose%3*50}% 0%`;},190)}
+function land(el){clearInterval(flightTimer);flightTimer=null;el.classList.remove('carried');express('happy');}
 function resumePigeon(){if(!document.hidden&&!sleeping)show('idle')}
 document.addEventListener('visibilitychange',resumePigeon);
 window.addEventListener('pageshow',resumePigeon);
@@ -59,11 +63,10 @@ function scheduleIdle(resetSleep=true){
  if(typeof setTimeout!=='function')return;
  if(typeof clearTimeout==='function'){clearTimeout(idleTimer);if(resetSleep)clearTimeout(sleepTimer)}
  idleTimer=setTimeout(()=>{
-  if(sleeping)return;
-  express(Math.random()<.5?'idle2':'read');
-  if(Math.random()<.6)bubble(say('menu'));
+  if(sleeping||flightTimer)return;
+  express(Math.random()<.55?'idle2':Math.random()<.5?'stretch':'read');
   scheduleIdle(false);
- },90000+Math.random()*90000);
+ },14000+Math.random()*18000);
  if(resetSleep)sleepTimer=setTimeout(()=>{
   sleeping=true;
   show('sleep');
@@ -99,7 +102,8 @@ function mount(){
   try{localStorage.removeItem('fw-anna-pet-v1')}catch{}
   el.style.right='16px';el.style.bottom='16px';el.style.left='auto';el.style.top='auto';
  }
- show('idle');
+ el.dataset.facing='right';show('idle');
+ el.addEventListener('pointerenter',()=>{if(!sleeping&&!flightTimer)express('wave')});
  fetch(BASE+'lines.json?v=2').then(r=>r.json()).then(d=>{lines=d;bubble(say('greet'),true)}).catch(()=>{});
  scheduleIdle();
 
@@ -113,8 +117,7 @@ function mount(){
   if(!SMALL()&&typeof setTimeout==='function'){
    holdTimer=setTimeout(()=>{
     for(const p of pts.values())p.moved=true;
-    el.classList.add('carried');
-    show('drag');
+    startFlight(el);
     bubble(say('pinch'));
    },500);
   }
@@ -125,11 +128,11 @@ function mount(){
   if(!p.moved&&Math.hypot(dx,dy)>5){
    p.moved=true;
    if(typeof clearTimeout==='function')clearTimeout(holdTimer);
-   el.classList.add('carried');
-   show('drag');
+   startFlight(el,dx);
    bubble(say('drag'));
   }
   if(p.moved){
+   startFlight(el,dx);
    const r=el.getBoundingClientRect();
    place(el,{x:r.left+dx,y:r.top+dy});
    p.x=e.clientX;p.y=e.clientY;
@@ -149,13 +152,13 @@ function mount(){
   if(typeof clearTimeout==='function')clearTimeout(holdTimer);
   if(p&&p.moved){
    petDragUntil=performance.now()+350;
-   el.classList.remove('carried');
+   land(el);
    const r=el.getBoundingClientRect();
    const pos=place(el,{x:r.left,y:r.top});
    el.style.right='auto';el.style.bottom='auto';
    store({x:pos.x,y:pos.y,dragged:true});
    bubble(say('drop'));
-   show(sleeping?'sleep':'idle');
+   if(sleeping)show('sleep');
   }
  };
  el.addEventListener('pointerup',end);

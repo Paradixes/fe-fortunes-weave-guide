@@ -1,0 +1,17 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const storage={},events={};let storageFails=false;
+const ctx={console,DB:false,PINS:[{id:'place-1',name:'威利村',x:30,y:45}],performance:{now:()=>1000},mapDragUntil:0,mapLoaded:true,localStorage:{getItem:k=>storage[k]||null,setItem:(k,v)=>{if(storageFails)throw Error('quota');storage[k]=v}},document:{querySelector:()=>null,addEventListener:(name,fn)=>events[name]=fn},window:{addEventListener(){}},esc:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'),escapeAttr:s=>String(s).replaceAll('"','&quot;').replaceAll('<','&lt;'),toast:()=>{},atlasIcon:n=>'<svg aria-label="'+n+'"></svg>',mapPage:()=>'<div class="map-results"></div><div class="map-viewport"></div>',mapPinDetail:()=>'<a class="map-pin-source"></a>',render:()=>{},Math,Date};
+vm.createContext(ctx);vm.runInContext(fs.readFileSync(require('path').resolve(__dirname,'../dist/map-notes.js'),'utf8'),ctx);
+const run=s=>vm.runInContext(s,ctx);
+assert.equal(run("normalizeMapNotes([{id:'a',title:'test',icon:'unknown',x:20,y:30},{id:'b',title:'bad',x:-1,y:5},null]).length"),1);
+assert.equal(run("normalizeMapNotes([{id:'a',title:'test',icon:'unknown',x:20,y:30}])[0].icon"),'关卡');
+assert.equal(run("mapNotePoint(350,250,{left:100,top:50,width:1000,height:800}).x"),25);
+assert.equal(run("mapNotePoint(350,250,{left:100,top:50,width:1000,height:800}).y"),25);
+run("newMapNote(25,35,'材料');writeMapNotes([mapNoteDraft]);closeMapNoteEditor()");assert.equal(run('readMapNotes()[0].title'),'材料');
+run("mapNoteDraft={...mapNotes[0],title:'<b>标题</b>'};writeMapNotes([mapNoteDraft])");assert(run('personalMapPins()').includes('&lt;b&gt;标题&lt;/b&gt;'));assert(!run('personalMapPins()').includes('<b>标题</b>'));
+assert(run('mapPage()').includes('我的标记'));assert(run("mapPinDetail('place-1')").includes('保存为我的标记'));
+const before=run('JSON.stringify(mapNotes)');storageFails=true;assert.equal(run('writeMapNotes([])'),false);assert.equal(run('JSON.stringify(mapNotes)'),before);storageFails=false;
+const form={id:'mapNoteEditor',elements:{title:{value:'  更新标题  '},icon:{value:'矿石'}}};events.submit({target:form,preventDefault(){}});assert.equal(run('readMapNotes()[0].title'),'更新标题');assert.equal(run('readMapNotes()[0].icon'),'矿石');
+run('mapNoteDraft={...mapNotes[0]}');events.click({target:{closest:()=>({hasAttribute:k=>k==='data-note-delete'})},preventDefault(){},stopImmediatePropagation(){}});assert.equal(run('readMapNotes().length'),0);
+storage['fw-map-notes-v1']='{broken';assert.equal(run('readMapNotes().length'),0);
+console.log('PASS map notes: normalized browser storage, map coordinates, safe titles, save/edit/delete, reload, quota failures and corrupt storage.');
