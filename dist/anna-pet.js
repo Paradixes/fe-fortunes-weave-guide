@@ -1,14 +1,11 @@
-// 安娜桌宠:右下角可拖拽小人。动作按需懒加载(首载仅 idle),alpha 校验失败/reduced-motion → poster 静态图。
+// 白鸽桌宠：六姿态透明插画，点按、阅读、休息与拖拽；减少动态效果时仅切换姿态。
 // 挂 body 不受 render() 影响;事件全挂在自身元素上;位置存 fw-anna-pet-v1。无后端,不含投稿/邮件。
 (function(){
 'use strict';
-const BASE='assets/anna-pet/';
-const ACTIONS={idle:{loop:true},idle2:{},wave:{},happy:{},think:{},surprised:{},sleep:{loop:true},pout:{},read:{},twirl:{},stretch:{}};
+const BASE='assets/pigeon-pet/';
 const SMALL=()=>typeof matchMedia==='function'&&matchMedia('(max-width: 650px)').matches;
-const reduced=()=>typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let lines={},figure=null,figureMode='',alphaOK=null,currentAction='',expressToken=0,bubbleTimer=null,idleTimer=null,sleepTimer=null,sleeping=false,petDragUntil=0,holdTimer=null,patDistance=0,patLastY=null;
-const players=new Map();
+let lines={},figure=null,figureMode='',currentAction='',expressToken=0,bubbleTimer=null,idleTimer=null,sleepTimer=null,sleeping=false,petDragUntil=0,holdTimer=null,patDistance=0,patLastY=null;
 
 function store(pos){try{localStorage.setItem('fw-anna-pet-v1',JSON.stringify(pos))}catch{}}
 function recall(){try{return JSON.parse(localStorage.getItem('fw-anna-pet-v1')||'null')}catch{return null}}
@@ -19,13 +16,13 @@ function say(kind){
 }
 function bubble(text,withAsk){
  const b=document.getElementById('annaPetBubble');if(!b)return;
- b.innerHTML=text?`${esc(text)}${withAsk?'<button type="button" id="annaPetAsk">翻账本提问 ↗</button>':''}`:'';
+ b.innerHTML=text?`${esc(text)}${withAsk?'<button type="button" id="annaPetAsk">让白鸽带我查攻略 ↗</button>':''}`:'';
  const el=document.getElementById('annaPet');
  if(el&&text){
   const r=el.getBoundingClientRect(),bw=Math.min(320,innerWidth*.72);
   const x=Math.max(8,Math.min(innerWidth-bw-8,r.left+r.width/2-bw/2));
   b.style.left=x+'px';b.style.right='auto';
-  b.style.bottom=Math.max(8,innerHeight-r.top+8)+'px';b.style.top='auto';
+  if(r.top<130){b.style.top=Math.min(innerHeight-100,r.bottom+8)+'px';b.style.bottom='auto'}else{b.style.bottom=Math.max(8,innerHeight-r.top+8)+'px';b.style.top='auto'}
  }
  b.classList.toggle('show',!!text);
  if(typeof clearTimeout==='function')clearTimeout(bubbleTimer);
@@ -34,69 +31,20 @@ function bubble(text,withAsk){
  if(ask)ask.addEventListener('click',()=>{bubble('');openAnnaSearch()});
 }
 
-function checkAlpha(video,cb){
- try{
-  const c=document.createElement('canvas');c.width=8;c.height=8;
-  const ctx=c.getContext('2d',{willReadFrequently:true});
-  const draw=()=>{try{ctx.drawImage(video,0,0,8,8);const d=ctx.getImageData(0,0,8,8).data;let ok=false;for(let i=3;i<d.length;i+=4)if(d[i]<250){ok=true;break}cb(ok)}catch{cb(false)}};
-  if(video.readyState>=2)draw();else video.addEventListener('loadeddata',draw,{once:true});
-  video.addEventListener('error',()=>cb(false),{once:true});
- }catch{cb(false)}
-}
-
-function poster(id){
- const img=new Image();
- img.src=BASE+id+'.png';img.alt='安娜';img.draggable=false;
- return img;
-}
-function player(id){
- if(players.has(id))return players.get(id);
- const v=document.createElement('video');
- v.muted=true;v.playsInline=true;v.preload='auto';v.src=BASE+id+'.webm';
- players.set(id,v);
- return v;
-}
-
+const POSES={idle:0,idle2:1,wave:1,happy:5,think:3,surprised:1,sleep:4,pout:0,read:3,twirl:5,stretch:2,drag:2};
 function show(id){
  if(!figure)return;
- const useVideo=alphaOK===true&&id!=='drag'&&ACTIONS[id];
- const mode=useVideo?'video':'poster';
- if(currentAction===id&&figureMode===mode){
-  if(useVideo){const v=players.get(id);if(v&&v.paused)v.play().catch(()=>{})}
-  return;
- }
- currentAction=id;figureMode=mode;
- figure.innerHTML='';
- if(useVideo){
-  const v=player(id);
-  v.loop=!!ACTIONS[id].loop;
-  v.currentTime=0;
-  figure.appendChild(v);
-  v.play().catch(()=>{});
- }else{
-  figure.appendChild(poster(ACTIONS[id]||id==='drag'?id:'idle'));
- }
+ currentAction=id;figureMode='sprite';
+ figure.dataset.action=id;
+ figure.innerHTML=`<span class="pigeon-sprite" aria-hidden="true" style="background-position:${(POSES[id]??0)%3*50}% ${Math.floor((POSES[id]??0)/3)*100}%"></span>`;
 }
-
-function resumePetVideo(){
- if(figureMode!=='video'||alphaOK!==true)return;
- const target=sleeping?'sleep':'idle';
- const v=players.get(currentAction);
- if(v&&!v.loop&&v.ended){currentAction='';show(target);return}
- if(v&&v.paused)v.play().catch(()=>{});
-}
-document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')resumePetVideo()});
-window.addEventListener('pageshow',resumePetVideo);
-window.addEventListener('focus',resumePetVideo);
+function resumePigeon(){if(!document.hidden&&!sleeping)show('idle')}
+document.addEventListener('visibilitychange',resumePigeon);
+window.addEventListener('pageshow',resumePigeon);
 
 function express(id,afterIdle=true){
- const token=++expressToken;
- show(id);
- const meta=ACTIONS[id];
- if(!meta||meta.loop||!afterIdle||alphaOK!==true)return;
- const v=players.get(id);
- if(!v)return;
- v.addEventListener('ended',()=>{if(token===expressToken&&!sleeping)show('idle')},{once:true});
+ const token=++expressToken;show(id);
+ if(afterIdle&&id!=='sleep'&&typeof setTimeout==='function')setTimeout(()=>{if(token===expressToken&&!sleeping)show('idle')},id==='read'?4800:1600);
 }
 
 function wake(){
@@ -107,16 +55,16 @@ function wake(){
  scheduleIdle();
 }
 
-function scheduleIdle(){
+function scheduleIdle(resetSleep=true){
  if(typeof setTimeout!=='function')return;
- if(typeof clearTimeout==='function'){clearTimeout(idleTimer);clearTimeout(sleepTimer)}
+ if(typeof clearTimeout==='function'){clearTimeout(idleTimer);if(resetSleep)clearTimeout(sleepTimer)}
  idleTimer=setTimeout(()=>{
   if(sleeping)return;
   express(Math.random()<.5?'idle2':'read');
   if(Math.random()<.6)bubble(say('menu'));
-  scheduleIdle();
+  scheduleIdle(false);
  },90000+Math.random()*90000);
- sleepTimer=setTimeout(()=>{
+ if(resetSleep)sleepTimer=setTimeout(()=>{
   sleeping=true;
   show('sleep');
   bubble(say('sleep'));
@@ -137,7 +85,7 @@ function mount(){
  if(document.getElementById('annaPet'))return;
  const el=document.createElement('div');
  el.id='annaPet';el.setAttribute('role','button');el.tabIndex=0;
- el.setAttribute('aria-label','安娜桌宠:点按聊天,拖拽移动');
+ el.setAttribute('aria-label','白鸽：点按聊天，拖拽移动');
  figure=document.createElement('div');figure.className='anna-pet-figure';
  el.appendChild(figure);
  const b=document.createElement('div');
@@ -152,18 +100,13 @@ function mount(){
   el.style.right='16px';el.style.bottom='16px';el.style.left='auto';el.style.top='auto';
  }
  show('idle');
- const first=player('idle');
- checkAlpha(first,ok=>{
-  alphaOK=ok&&!reduced();
-  if(alphaOK&&currentAction==='idle'){currentAction='';show('idle')}
- });
  fetch(BASE+'lines.json?v=1').then(r=>r.json()).then(d=>{lines=d;bubble(say('greet'),true)}).catch(()=>{});
  scheduleIdle();
 
  const pts=new Map();
  el.addEventListener('pointerdown',e=>{
   if(e.button!==0)return;
-  wake();
+  wake();scheduleIdle();
   el.setPointerCapture(e.pointerId);
   pts.set(e.pointerId,{x:e.clientX,y:e.clientY,moved:false});
   patDistance=0;patLastY=null;

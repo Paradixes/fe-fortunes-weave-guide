@@ -14,3 +14,16 @@
 @media (prefers-reduced-motion:reduce){
  #annaPetBubble{transition:none}
 }
+
+/* White bird sprite: the same game-inspired character in six illustrated poses. */
+#annaPet{width:96px;height:96px}
+#annaPet .anna-pet-figure{width:100%;height:100%;filter:drop-shadow(0 5px 6px #302d3438)}
+.pigeon-sprite{display:block;width:100%;height:100%;background-image:url('assets/pigeon-pet/poses.png');background-size:300% 200%;background-repeat:no-repeat}
+#annaPet .anna-pet-figure[data-action="happy"],#annaPet .anna-pet-figure[data-action="twirl"]{animation:pigeon-hop 480ms ease-out}
+#annaPet.carried .anna-pet-figure{animation:pigeon-carry 500ms ease-in-out infinite alternate}
+#annaPet .anna-pet-figure[data-action="read"]{animation:pigeon-read 650ms ease-out}
+@keyframes pigeon-hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-12px) rotate(-4deg)}70%{transform:translateY(-3px) rotate(3deg)}}
+@keyframes pigeon-carry{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+@keyframes pigeon-read{from{transform:rotate(-3deg)}to{transform:rotate(0)}}
+@media(max-width:650px){#annaPet{width:76px;height:76px}}
+@media(prefers-reduced-motion:reduce){#annaPet .anna-pet-figure{animation:none!important}}

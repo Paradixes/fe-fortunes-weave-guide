@@ -378,7 +378,7 @@
       const p = vid.play && vid.play();
       if (p && p.catch) p.catch(() => {});
     }
-    startHeroLiveRig();
+    // Portraits stay static: no canvas deformation.
     if (!canAnimate() || typeof requestAnimationFrame !== 'function') return;
     const c = document.querySelector('.route-fx-canvas');
     if (!c) { if (routeFxRaf) { cancelAnimationFrame(routeFxRaf); routeFxRaf = 0; } routeFxCanvas = null; return; }
