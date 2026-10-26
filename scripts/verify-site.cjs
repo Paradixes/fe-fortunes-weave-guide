@@ -609,7 +609,25 @@ vm.runInContext("wbDraft.stages.at(-1).classId=wbClass('勇士').id",ctx);
 assert.equal(vm.runInContext('buildPlan(DB.characters[8]).end',ctx),'舞者','Unsaved edits do not mutate the applied plan');
 assert(vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('data-inline-edit')&&!vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('class="path-why"'),'Dossier has inline controls and no expanded rationale dump');
 assert(vm.runInContext('wbStats({hp:26.6},false)',ctx).includes('entry-stat-grid'),'Expected stats reuse the reference stat component');
-assert.equal(reviewed.abilities.length,473);
+assert.equal(reviewed.abilities.length,488);
+{
+ const report=JSON.parse(fs.readFileSync(root+'../data/research/proficiency-coverage-2026-10-26.json','utf8'));
+ assert.equal(report.addedBindings,1258);
+ assert.equal(report.resolvedBindings,1);
+ assert.equal(report.changes.filter(r=>r.action==='add').length,report.addedBindings);
+ assert.equal(new Set(report.changes.map(r=>r.characterId)).size,report.affectedCharacters);
+ for(const row of report.changes){
+  assert(new Set(row.evidence.map(e=>new URL(e.url).hostname)).size>=2,'New learning conditions require two sources');
+  const learned=reviewed.learning[row.characterId].learnedSkills.filter(s=>s.name===row.name);
+  assert.equal(learned.length,1,'No duplicate learned skill: '+row.characterId+' '+row.name);
+  assert.equal(learned[0].skill,row.skill);assert.equal(learned[0].rank,row.rank);
+  assert(!learned[0].requirementUnknown);
+  const ability=reviewed.abilities.find(a=>a.name===row.name&&a.type==='特技');
+  assert(ability?.acquisition.some(a=>a.characterId===row.characterId&&a.skill===row.skill&&a.rank===row.rank&&!a.uncertain),'Learning and ability index stay in sync');
+ }
+ for(const row of report.held)assert(!reviewed.learning[row.characterId].learnedSkills.some(s=>s.name===row.name),'Unverified effects are not imported');
+}
+
 const abilityIds=new Set(reviewed.abilities.map(a=>a.id));assert.equal(abilityIds.size,reviewed.abilities.length);
 for(const a of reviewed.abilities){assert(a.acquisition.length);for(const id of a.characters)assert(reviewed.database.characters.some(c=>c.id===id));for(const id of a.classes)assert(reviewed.database.classes.some(c=>c.id===id));for(const binding of a.acquisition)assert(binding.source,'Every skill binding retains provenance');ctx.abilityProbe=a.id;ctx.abilityProbeName=a.name;assert(vm.runInContext("referenceMarkup('ability',abilityProbe)",ctx).includes(vm.runInContext('esc(abilityProbeName)',ctx)));}
 for(const c of reviewed.database.characters){ctx.probeId=c.id;assert(vm.runInContext('cardCareer(DB.characters.find(c=>c.id===probeId))',ctx).includes('mini-career-track'));}
