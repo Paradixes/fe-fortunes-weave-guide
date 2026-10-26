@@ -1,11 +1,12 @@
 {
-  "version": 1,
+  "version": 2,
   "character": "游戏白鸽参考重绘",
-  "asset": "poses.png",
+  "asset": "poses-v2.png",
   "layout": {
     "columns": 3,
     "rows": 2,
-    "cellSize": 512
+    "cellSize": 512,
+    "safeCellMargins": true
   },
   "poses": [
     "idle",
@@ -16,5 +17,5 @@
     "happy"
   ],
   "reference": "https://www.gamepro.de/artikel/fe-fortunes-weave-ishmael,3457642.html",
-  "method": "AI 辅助重绘；动作以姿态切换与轻量 CSS 反馈实现。"
+  "method": "保留游戏白鸽造型，六姿态单元内留白重绘，避免展翅跨单元裁切；页面以小尺寸显示。"
 }

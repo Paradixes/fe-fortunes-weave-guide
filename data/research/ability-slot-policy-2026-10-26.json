@@ -1,0 +1,32 @@
+{
+  "slotPolicy": {
+    "equipmentSkills": 5,
+    "learnedArtsBase": 3,
+    "free": [
+      "个人技能",
+      "当前职业固有能力",
+      "已配备坐骑的骑乘能力",
+      "职业行动",
+      "武器固有战技",
+      "炽焰技艺"
+    ],
+    "equipped": [
+      "等级习得特技",
+      "专精习得特技",
+      "职业熟练特技"
+    ],
+    "sources": [
+      "https://gamewith.jp/fefw/574420",
+      "https://gamewith.jp/fefw/577433",
+      "https://annasnotebook.net/ja/mechanics/loadout/"
+    ],
+    "checkedAt": "2026-10-26"
+  },
+  "boundClassSkills": 45,
+  "excludedWithoutClassBinding": [
+    "格闘回避+1",
+    "魔法命中+3",
+    "魔法命中+10"
+  ],
+  "trainingPolicy": "跨专精选修仅取本角色已核实习得表；按当前职业有效条件、职责和门槛筛选，不将全技能表当作强制训练任务。"
+}

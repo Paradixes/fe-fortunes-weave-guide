@@ -164831,5 +164831,649 @@
         "https://www.gamersky.com/handbook/202609/2215218_3.shtml"
       ]
     }
-  ]
+  ],
+  "classIntrinsicSkills": [
+    {
+      "id": "intrinsic-c1ac9776f9b9",
+      "name": "上级探索术",
+      "nameJa": "上級探索術",
+      "description": "探索更容易获得 PERFECT 结果。",
+      "classIds": [
+        "class-42"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-953b15b8b337",
+      "name": "战技装备+1",
+      "nameJa": "戦技装備+1",
+      "description": "可装备的普通战技数量增加1个。",
+      "classIds": [
+        "class-6",
+        "class-7",
+        "class-8",
+        "class-9",
+        "class-10",
+        "class-11",
+        "class-21",
+        "class-27",
+        "class-28",
+        "class-43",
+        "class-36"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-0606d1825607",
+      "name": "斧命中+3",
+      "nameJa": "斧命中+3",
+      "description": "装备斧时，命中+3。",
+      "classIds": [
+        "class-7"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-1924e2169e75",
+      "name": "剑必杀+3",
+      "nameJa": "剣必殺+3",
+      "description": "装备剑时，必杀+3。",
+      "classIds": [
+        "class-6"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-a1c82b2cadb3",
+      "name": "弓命中+5",
+      "nameJa": "弓命中+5",
+      "description": "装备弓时，命中+5。",
+      "classIds": [
+        "class-9",
+        "class-21"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-ebb1be6534ec",
+      "name": "开锁",
+      "nameJa": "鍵開け",
+      "description": "无需钥匙即可打开宝箱。",
+      "classIds": [
+        "class-10",
+        "class-42",
+        "class-32",
+        "class-55"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-0e5d80bb7245",
+      "name": "探索术",
+      "nameJa": "探索術",
+      "description": "探索获得 PERFECT 结果的概率略微提高。",
+      "classIds": [
+        "class-10"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-20a7dddef7f3",
+      "name": "后攻物防+3",
+      "nameJa": "後攻守備+3",
+      "description": "后攻战斗时物防+3。",
+      "classIds": [
+        "class-11",
+        "class-43"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-96fb7059d5b9",
+      "name": "战车装甲",
+      "nameJa": "戦車の装甲",
+      "description": "骑兵状态防御+5，但无法回避。",
+      "classIds": [
+        "class-13"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-ad85ab9cfb99",
+      "name": "战车战术",
+      "nameJa": "戦車兵の戦術",
+      "description": "可上下坐骑；骑兵状态可使用突进。",
+      "classIds": [
+        "class-13"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-c33559450598",
+      "name": "战车兵之道",
+      "nameJa": "戦車兵の道",
+      "description": "随角色等级提高，成长率也提高。",
+      "classIds": [
+        "class-13"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-a1931393f89a",
+      "name": "战技装备+2",
+      "nameJa": "戦技装備+2",
+      "description": "可装备的普通战技数量增加2个。",
+      "classIds": [
+        "class-18",
+        "class-19",
+        "class-20",
+        "class-22",
+        "class-23",
+        "class-41",
+        "class-40",
+        "class-42",
+        "class-37",
+        "class-48",
+        "class-50",
+        "class-47"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-f2e480ccfac1",
+      "name": "剑必杀+5",
+      "nameJa": "剣必殺+5",
+      "description": "装备剑时，必杀+5。",
+      "classIds": [
+        "class-18"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-ca1f7fa93fd8",
+      "name": "斧命中+5",
+      "nameJa": "斧命中+5",
+      "description": "装备斧时，命中+5。",
+      "classIds": [
+        "class-19",
+        "class-59"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-24ab51f88ae7",
+      "name": "格斗命中+5",
+      "nameJa": "格闘命中+5",
+      "description": "装备手甲时，命中+5。",
+      "classIds": [
+        "class-19"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-e4422432b58a",
+      "name": "弓命中+10",
+      "nameJa": "弓命中+10",
+      "description": "装备弓时，命中+10。",
+      "classIds": [
+        "class-20",
+        "class-47"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-f5bf971c2088",
+      "name": "后攻物防+5",
+      "nameJa": "後攻守備+5",
+      "description": "后攻战斗时物防+5。",
+      "classIds": [
+        "class-22",
+        "class-48"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-2313a1f17471",
+      "name": "黑魔术探究",
+      "nameJa": "黒魔術の探求",
+      "description": "黑魔法使用次数变为2倍。",
+      "classIds": [
+        "class-16",
+        "class-24",
+        "class-27",
+        "class-38",
+        "class-50",
+        "class-59"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-2ca31e447d5f",
+      "name": "魔法命中+5",
+      "nameJa": "魔法命中+5",
+      "description": "装备魔法时，命中+5。",
+      "classIds": [
+        "class-16",
+        "class-24",
+        "class-49"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-d2a6b58de2fd",
+      "name": "白魔术探究",
+      "nameJa": "白魔術の探求",
+      "description": "白魔法使用次数变为2倍。",
+      "classIds": [
+        "class-17",
+        "class-25",
+        "class-33",
+        "class-39",
+        "class-46"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-b5913a8ca639",
+      "name": "魔法回复+10",
+      "nameJa": "魔法回復+10",
+      "description": "回复魔法治疗量+10。",
+      "classIds": [
+        "class-25",
+        "class-41",
+        "class-33",
+        "class-56",
+        "class-58",
+        "class-49"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-17a6ce623cca",
+      "name": "魔法回复+5",
+      "nameJa": "魔法回復+5",
+      "description": "回复魔法治疗量+5。",
+      "classIds": [
+        "class-17",
+        "class-29"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-768cd68d34bc",
+      "name": "上下坐骑",
+      "nameJa": "乗り降り",
+      "description": "可使用上马和下马指令。",
+      "classIds": [
+        "class-4",
+        "class-12",
+        "class-14",
+        "class-21",
+        "class-23",
+        "class-27",
+        "class-15",
+        "class-28",
+        "class-29",
+        "class-43",
+        "class-35",
+        "class-37",
+        "class-36",
+        "class-57",
+        "class-48",
+        "class-50",
+        "class-47",
+        "class-49"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-de70f1032dba",
+      "name": "跳舞",
+      "nameJa": "踊る",
+      "description": "可使用跳舞，使友军再次行动。",
+      "classIds": [
+        "class-40",
+        "class-52"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-4efc79ea0adb",
+      "name": "弓命中+15",
+      "nameJa": "弓命中+15",
+      "description": "装备弓时，命中+15。",
+      "classIds": [
+        "class-31"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-afd0b2739e77",
+      "name": "高阶探索术",
+      "nameJa": "最上級探索術",
+      "description": "探索获得 PERFECT 结果的概率明显提高。",
+      "classIds": [
+        "class-32"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-b05be7d8f9dc",
+      "name": "后攻物防+7",
+      "nameJa": "後攻守備+7",
+      "description": "后攻战斗时物防+7。",
+      "classIds": [
+        "class-34"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-769e8ce5dc6d",
+      "name": "魔法命中+7",
+      "nameJa": "魔法命中+7",
+      "description": "装备魔法时，命中+7。",
+      "classIds": [
+        "class-38"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-c0494f17656b",
+      "name": "魔法回复+15",
+      "nameJa": "魔法回復+15",
+      "description": "回复魔法治疗量+15。",
+      "classIds": [
+        "class-39"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-52b9b7ab1cea",
+      "name": "战技装备+3",
+      "nameJa": "戦技装備+3",
+      "description": "可装备的普通战技数量增加3个。",
+      "classIds": [
+        "class-30",
+        "class-31",
+        "class-32",
+        "class-33",
+        "class-34",
+        "class-35",
+        "class-46",
+        "class-51",
+        "class-52",
+        "class-53",
+        "class-54",
+        "class-55",
+        "class-56",
+        "class-57",
+        "class-45"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-841cff119ef2",
+      "name": "斧命中+7",
+      "nameJa": "斧命中+7",
+      "description": "装备斧时，命中+7。",
+      "classIds": [
+        "class-30"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-ea3d930a1518",
+      "name": "格斗命中+7",
+      "nameJa": "格闘命中+7",
+      "description": "装备手甲时，命中+7。",
+      "classIds": [
+        "class-30"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-69e6f2dde3aa",
+      "name": "剑必杀+10",
+      "nameJa": "剣必殺+10",
+      "description": "装备剑时，必杀+10。",
+      "classIds": [
+        "class-51"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-9de5a7a980dd",
+      "name": "全魔术极限",
+      "nameJa": "全魔術極限",
+      "description": "黑魔法和白魔法使用次数变为3倍。",
+      "classIds": [
+        "class-58"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-70f2df098e6e",
+      "name": "魔法回复+20",
+      "nameJa": "魔法回復+20",
+      "description": "回复魔法治疗量+20。",
+      "classIds": [
+        "class-58"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-1f34e8c7c087",
+      "name": "斧命中+10",
+      "nameJa": "斧命中+10",
+      "description": "装备斧时，命中+10。",
+      "classIds": [
+        "class-53"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-67b87c67a9f6",
+      "name": "格斗命中+10",
+      "nameJa": "格闘命中+10",
+      "description": "装备手甲时，命中+10。",
+      "classIds": [
+        "class-53"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-21d101592b95",
+      "name": "白魔术极限",
+      "nameJa": "白魔術の極限",
+      "description": "白魔法使用次数变为3倍。",
+      "classIds": [
+        "class-54",
+        "class-56"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-749ac794d4bf",
+      "name": "格斗回避+10",
+      "nameJa": "格闘回避+10",
+      "description": "装备手甲时，命中+10。",
+      "classIds": [
+        "class-54"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-3719a083006b",
+      "name": "超级探索术",
+      "nameJa": "超級探索術",
+      "description": "探索获得 PERFECT 结果的概率大幅提高。",
+      "classIds": [
+        "class-55"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-311cde3e75f7",
+      "name": "黄金骑行",
+      "nameJa": "黄金騎走",
+      "description": "不再受到骑兵有效和骑兵特效。",
+      "classIds": [
+        "class-57"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-397bed0498c2",
+      "name": "剑必杀+7",
+      "nameJa": "剣必殺+7",
+      "description": "装备剑时，必杀+7。",
+      "classIds": [
+        "class-45"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-e5985e6c9354",
+      "name": "战象装脚",
+      "nameJa": "戦象の装脚",
+      "description": "骑兵状态受到攻击的伤害减半；无法回避。",
+      "classIds": [
+        "class-26"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-a65a93c13c58",
+      "name": "战象战术",
+      "nameJa": "戦象兵の戦術",
+      "description": "可上下坐骑；骑兵状态可使用重突进。",
+      "classIds": [
+        "class-26"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-3f79d69025f8",
+      "name": "战象兵之道",
+      "nameJa": "戦象兵の道",
+      "description": "随角色等级提高，成长率也提高。",
+      "classIds": [
+        "class-26"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://gamewith.jp/fefw/577433"
+    }
+  ],
+  "abilitySlotPolicy": {
+    "equipmentSkills": 5,
+    "learnedArtsBase": 3,
+    "free": [
+      "个人技能",
+      "当前职业固有能力",
+      "已配备坐骑的骑乘能力",
+      "职业行动",
+      "武器固有战技",
+      "炽焰技艺"
+    ],
+    "equipped": [
+      "等级习得特技",
+      "专精习得特技",
+      "职业熟练特技"
+    ],
+    "sources": [
+      "https://gamewith.jp/fefw/574420",
+      "https://gamewith.jp/fefw/577433",
+      "https://annasnotebook.net/ja/mechanics/loadout/"
+    ],
+    "checkedAt": "2026-10-26"
+  }
 }
