@@ -1,6 +1,6 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
 const storage={},events={};let storageFails=false;
-const ctx={console,DB:false,PINS:[{id:'place-1',name:'威利村',x:30,y:45}],performance:{now:()=>1000},mapDragUntil:0,mapLoaded:true,localStorage:{getItem:k=>storage[k]||null,setItem:(k,v)=>{if(storageFails)throw Error('quota');storage[k]=v}},document:{querySelector:()=>null,addEventListener:(name,fn)=>events[name]=fn},window:{addEventListener(){}},esc:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'),escapeAttr:s=>String(s).replaceAll('"','&quot;').replaceAll('<','&lt;'),toast:()=>{},atlasIcon:n=>'<svg aria-label="'+n+'"></svg>',mapPage:()=>'<div class="map-results"></div><div class="map-viewport"></div>',mapPinDetail:()=>'<a class="map-pin-source"></a>',render:()=>{},Math,Date};
+const ctx={console,DB:false,mapArea:"all",routes:{all:"全部",蕾达:"蕾达"},PINS:[{id:'place-1',name:'威利村',x:30,y:45}],performance:{now:()=>1000},mapDragUntil:0,mapLoaded:true,localStorage:{getItem:k=>storage[k]||null,setItem:(k,v)=>{if(storageFails)throw Error('quota');storage[k]=v}},document:{querySelector:()=>null,addEventListener:(name,fn)=>events[name]=fn},window:{addEventListener(){}},esc:s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'),escapeAttr:s=>String(s).replaceAll('"','&quot;').replaceAll('<','&lt;'),toast:()=>{},atlasIcon:n=>'<svg aria-label="'+n+'"></svg>',mapPage:()=>'<div class="map-results"></div><div class="map-viewport"></div>',mapPinDetail:()=>'<a class="map-pin-source"></a>',render:()=>{},Math,Date};
 vm.createContext(ctx);vm.runInContext(fs.readFileSync(require('path').resolve(__dirname,'../dist/map-notes.js'),'utf8'),ctx);
 const run=s=>vm.runInContext(s,ctx);
 assert.equal(run("normalizeMapNotes([{id:'a',title:'test',icon:'unknown',x:20,y:30},{id:'b',title:'bad',x:-1,y:5},null]).length"),1);
@@ -15,3 +15,7 @@ const form={id:'mapNoteEditor',elements:{title:{value:'  更新标题  '},icon:{
 run('mapNoteDraft={...mapNotes[0]}');events.click({target:{closest:()=>({hasAttribute:k=>k==='data-note-delete'})},preventDefault(){},stopImmediatePropagation(){}});assert.equal(run('readMapNotes().length'),0);
 storage['fw-map-notes-v1']='{broken';assert.equal(run('readMapNotes().length'),0);
 console.log('PASS map notes: normalized browser storage, map coordinates, safe titles, save/edit/delete, reload, quota failures and corrupt storage.');
+
+run("mapArea='蕾达';newMapNote(20,30,'蕾达物资');writeMapNotes([mapNoteDraft]);mapArea='凯伊'");assert.equal(run('visibleMapNotes().length'),0);run("mapArea='蕾达'");assert.equal(run('visibleMapNotes().length'),1);assert.equal(run("normalizeMapNotes([{id:'legacy',title:'旧标记',x:1,y:2}])[0].route"),'all');
+assert(!run('newMapNote.toString()').includes('focusMapNote'));
+console.log('PASS route-scoped notes: route preservation, filtering, legacy all-route notes and stationary point creation.');

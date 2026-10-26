@@ -1,0 +1,12 @@
+// Page scrolling remains native. Only wide tables scroll horizontally; their
+// visual header follows the viewport without making the table a vertical scroller.
+(()=>{
+ let entries=[],pending=false;
+ function clear(){entries.forEach(e=>e.host.remove());entries=[]}
+ function refresh(){clear();document.querySelectorAll('.table-wrap').forEach(w=>{const table=w.querySelector('table'),head=table?.tHead;if(!head)return;const host=document.createElement('div');host.className='page-table-heading';host.setAttribute('aria-hidden','true');host.inert=true;host.hidden=true;const copy=table.cloneNode(false);copy.removeAttribute('id');copy.append(head.cloneNode(true));copy.querySelectorAll('[id]').forEach(n=>n.removeAttribute('id'));host.append(copy);document.body.append(host);entries.push({w,table,head,host,copy})});schedule()}
+ function paint(){pending=false;const header=document.querySelector('.main > header'),hr=header?.getBoundingClientRect(),toc=document.querySelector('.character-toc'),tr=toc?.getBoundingClientRect();let top=hr&&hr.top<=0?Math.max(0,hr.bottom):0;if(tr&&getComputedStyle(toc).position==='sticky'&&tr.top<=top+1)top=Math.max(top,tr.bottom);
+ for(const e of entries){const wr=e.w.getBoundingClientRect(),r=e.head.getBoundingClientRect(),height=r.height;e.host.hidden=!(r.top<top&&wr.bottom>top+height&&wr.width>0);if(e.host.hidden)continue;e.host.style.cssText=`top:${top}px;left:${wr.left}px;width:${wr.width}px;height:${height}px`;e.copy.style.width=e.table.getBoundingClientRect().width+'px';e.copy.style.minWidth=e.copy.style.width;const cells=e.head.querySelectorAll('th,td');e.copy.querySelectorAll('th,td').forEach((c,i)=>{const width=cells[i].getBoundingClientRect().width;c.style.width=width+'px';c.style.minWidth=width+'px';c.style.maxWidth=width+'px'});e.host.scrollLeft=e.w.scrollLeft;}}
+ function schedule(){if(!pending){pending=true;requestAnimationFrame(paint)}}
+ document.addEventListener('scroll',schedule,true);window.addEventListener('resize',schedule);window.addEventListener('hashchange',()=>requestAnimationFrame(refresh));
+ const content=document.getElementById('content'),character=document.getElementById('characterPage');const observer=new MutationObserver(()=>requestAnimationFrame(refresh));[content,character].filter(Boolean).forEach(n=>observer.observe(n,{childList:true,subtree:true}));refresh();
+})();
