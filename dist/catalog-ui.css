@@ -66,3 +66,12 @@
 .catalog-identity .weapon-icon,.ability-row .badge-ability{display:inline-grid;width:36px;min-width:36px;height:36px;flex:none;place-items:center}.catalog-identity .weapon-icon .equipment-game-icon{display:block;width:36px;height:36px;object-fit:contain}.qualification-token>.tag{display:inline-flex;align-items:center;gap:4px;padding:3px 6px;white-space:nowrap}
 
 .equipment-qualification{display:flex!important;align-items:center;flex-wrap:wrap;gap:4px}.equipment-qualification .tag{margin:0}.qualification-token+.qualification-token{margin-left:4px}
+
+/* Equipment belongs to the character build, with the same heading alignment as its career. */
+.char-card .card-gear-inline{padding:10px 0 0!important}
+.char-card .card-gear-inline .card-equipment{display:block;border:0;padding:0;margin:0}
+.card-equipment-label{margin:0 0 6px;font-size:11.5px;line-height:1.5;color:var(--muted);font-weight:400}
+.char-card .card-gear-inline .chip-list{display:flex;flex-wrap:wrap;gap:5px 8px;min-width:0}
+.char-card .card-gear-inline .equipment-chip{padding:3px 6px;min-height:28px;border:0;border-radius:4px;background:color-mix(in srgb,var(--accent) 6%,var(--card));color:var(--ink);font-size:12px;gap:5px;max-width:100%;text-align:left}
+.char-card .card-gear-inline .equipment-chip:hover{background:var(--tint);color:var(--purple)}
+.char-card .card-gear-inline .equipment-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
