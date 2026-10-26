@@ -609,11 +609,11 @@ vm.runInContext("wbDraft.stages.at(-1).classId=wbClass('勇士').id",ctx);
 assert.equal(vm.runInContext('buildPlan(DB.characters[8]).end',ctx),'舞者','Unsaved edits do not mutate the applied plan');
 assert(vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('data-inline-edit')&&!vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('class="path-why"'),'Dossier has inline controls and no expanded rationale dump');
 assert(vm.runInContext('wbStats({hp:26.6},false)',ctx).includes('entry-stat-grid'),'Expected stats reuse the reference stat component');
-assert.equal(reviewed.abilities.length,450);
+assert.equal(reviewed.abilities.length,473);
 const abilityIds=new Set(reviewed.abilities.map(a=>a.id));assert.equal(abilityIds.size,reviewed.abilities.length);
 for(const a of reviewed.abilities){assert(a.acquisition.length);for(const id of a.characters)assert(reviewed.database.characters.some(c=>c.id===id));for(const id of a.classes)assert(reviewed.database.classes.some(c=>c.id===id));for(const binding of a.acquisition)assert(binding.source,'Every skill binding retains provenance');ctx.abilityProbe=a.id;ctx.abilityProbeName=a.name;assert(vm.runInContext("referenceMarkup('ability',abilityProbe)",ctx).includes(vm.runInContext('esc(abilityProbeName)',ctx)));}
 for(const c of reviewed.database.characters){ctx.probeId=c.id;assert(vm.runInContext('cardCareer(DB.characters.find(c=>c.id===probeId))',ctx).includes('mini-career-track'));}
-vm.runInContext("query='';location.hash='#skills';render()",ctx);assert(nodes['#content'].innerHTML.includes('450项特技、战技'));
+vm.runInContext("query='';location.hash='#skills';render()",ctx);assert(nodes['#content'].innerHTML.includes(reviewed.abilities.length+'项特技、战技'));
 console.log('PASS v88: draft isolation, explicit application, profession permissions and qualification goals, inline dossiers, restored cards, shared stats and 426 linked skills with provenance.');
 for(const c of reviewed.database.characters){ctx.probeId=c.id;const missing=vm.runInContext("(()=>{const c=DB.characters.find(c=>c.id===probeId),r=recommendations(c);return [...r.arts,...r.skills,...r.magic].filter(a=>!abilityName(a.name)).map(a=>a.name)})()",ctx);assert(!missing.length,'Every recommended action resolves to skill data: '+c.cn+' '+missing);}
 vm.runInContext("wbApplied={};activeCharacter='c8';detailRoutes.c8='レダ';careerDirectionSelection.c8=2;",ctx);
@@ -650,7 +650,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(!styleCss.includes('@media(prefers-reduced-motion:reduce){}')&&!styleCss.includes('@media(max-width:700px){}'),'Empty media blocks removed');
  assert(!/\.search\s*\{[^}]*min-height/.test(fs.readFileSync(root+'design.css','utf8')),'design.css search residue removed');
  const counts=vm.runInContext("(()=>{const n=k=>buildAnnaIndex().filter(e=>e.kind===k).length;return {page:n('page'),character:n('character'),class:n('class'),ability:n('ability'),equipment:n('equipment'),gift:n('gift'),material:n('material'),place:n('place'),article:n('article')}})()",ctx);
- assert.equal(counts.page,16,'Site pages include integrated learning and planning views');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,450,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.gift,124,'Gifts indexed');assert.equal(counts.article,18,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
+ assert.equal(counts.page,16,'Site pages include integrated learning and planning views');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,reviewed.abilities.length,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.gift,124,'Gifts indexed');assert.equal(counts.article,18,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
  assert(vm.runInContext("ARTICLES.every(a=>([a.sources||[],...a.sections.map(s=>s.sources||[])].flat()).length>0)",ctx),'Every article carries source citations');
  const best=q=>vm.runInContext(`(r=>({k:r.best?.e.kind,t:r.best?.e.title}))(annaSearch(${JSON.stringify(q)}))`,ctx);
  assert.deepEqual(best('xlk'),{k:'character',t:'西洛可'},'Pinyin acronym finds character');
@@ -829,7 +829,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(vm.runInContext("crossTrainingOptions(DB.characters[33]).some(s=>s.skill==='步兵术'&&/^安定射击\+?$/.test(s.name))",ctx),'Magic attacker cross-trains infantry for a learnable accuracy skill');
  assert(vm.runInContext("trainingGoalPlan(DB.characters[33]).electives.some(g=>g.skill==='步兵术'&&g.benefits.some(s=>/^安定射击\+?$/.test(s.name)))",ctx),'Training table includes specialization acquisition benefits');
  const planIds=vm.runInContext('DB.characters.map(c=>c.id)',ctx);
- for(const cid of planIds){ctx.trainingProbe=cid;assert(vm.runInContext("(()=>{const c=DB.characters.find(c=>c.id===trainingProbe),p=crossTrainingOptions(c);return p.every(s=>!s.requirementUnknown&&(LEARNING[c.id][s.kind==='法术'?'magic':'learnedSkills']||[]).some(x=>x.name===s.name&&x.skill===s.skill&&x.rank===s.rank))})()",ctx),'Every training elective is in the character own verified learning table: '+cid);}
+ for(const cid of planIds){ctx.trainingProbe=cid;assert(vm.runInContext("(()=>{const c=DB.characters.find(c=>c.id===trainingProbe),p=crossTrainingOptions(c);return p.every(s=>!s.requirementUnknown&&(LEARNING[c.id][s.kind==='法术'?'magic':s.kind==='战技'?'combatArts':'learnedSkills']||[]).some(x=>x.name===s.name&&x.skill===s.skill&&x.rank===s.rank))})()",ctx),'Every training elective is in the character own verified learning table: '+cid);}
  assert(vm.runInContext("classIntrinsicSkills(classBy('舞者')).some(s=>s.name==='跳舞')&&classIntrinsicSkills(classBy('刀剑将领')).some(s=>s.name==='战技装备+3')",ctx),'Innate class abilities bind to current classes');
  assert(vm.runInContext("personalSkillPanel(DB.characters[7]).includes('skill-group-personal')&&!personalSkillPanel(DB.characters[7]).includes('compact-learning')",ctx),'Personal skill view is restored rather than redesigned');
  assert(fs.readFileSync(root+'anna-pet.css','utf8').includes('poses-v2.png')&&!JSON.stringify(pigeonLines).includes('啾'),'Bird uses safe sprite margins and a restrained voice');
@@ -863,5 +863,18 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  console.log('PASS dense catalogues: separate materials, qualification AND/OR, complete numeric values, gifts within roster, expanded equipment and contextual map editing.');
  console.log('PASS roster/map/pigeon: catalogue views, unchanged preferences, 315 loadout audits, upgrade suffixes, merchant/material/recruit search, renown and white bird asset.');
  console.log('PASS v110: multi-select roster filters, 124 gifts bidirectional database, forging materials, SSE streaming + mode toggle, entity links, full-bleed icons.');
+// Learning coverage and compact ranks preserve every recorded acquisition.
+const coverage=JSON.parse(fs.readFileSync('data/research/learning-coverage-2026-10-26.json','utf8'));
+assert.equal(coverage.addedBindings,256);
+for(const row of coverage.additions){assert(reviewed.learning[row.characterId].learnedSkills.some(s=>s.name===row.name&&s.skill===row.skill&&s.rank===row.rank));assert(reviewed.abilities.some(a=>a.name===row.name&&a.acquisition.some(b=>b.characterId===row.characterId&&b.skill===row.skill&&b.rank===row.rank)));}
+assert(vm.runInContext("strongestSkillVersions([{name:'剑术Lv.1'},{name:'剑术Lv.4'}]).length===1",ctx));
+assert(vm.runInContext("acquisitionMerit({name:'步行移动术',description:'【步兵】移动时，地形的移动消耗-1'},'learnedSkills').length>0",ctx));
+vm.runInContext("rosterView='plans';family='all';familySet.clear();tier='all';tierSet.clear();primaryRouteFilter='all';primaryRouteSet.clear();query=''",ctx);
+assert(vm.runInContext("rosterPreferences().includes('data-family')&&rosterPreferences().includes('data-primary-route')&&rosterPreferences().includes('data-tier')",ctx));
+assert(vm.runInContext("rosterViewTabs().indexOf('赠礼指南')<rosterViewTabs().indexOf('角色对比')",ctx));
+const grid=vm.runInContext("skillRankGrid([DB.characters[0]],'all',unifiedLearningRows(DB.characters[0]))",ctx);
+assert(grid.includes('D / D+')&&grid.includes('rank-threshold">D+</span>')&&grid.includes('剑术Lv.1'));
+console.log('PASS learning coverage: 256 sourced bindings, exact plus ranks, independent acquisition highlights, Lv family deduplication and shared roster filters.');
+
 }
 })();

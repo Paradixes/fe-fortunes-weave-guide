@@ -1,0 +1,3818 @@
+{
+  "checkedAt": "2026-10-26",
+  "scope": "63 local character learning tables; 61 AppMedia character pages fetched, 45 had explicit rank rows; additions require both explicit character rank and skill effect, no extrapolation to absent ranks or characters.",
+  "addedBindings": 256,
+  "addedSkills": 23,
+  "skippedConflictingRows": [
+    {
+      "character": "c2",
+      "name": "弓術Lv.2",
+      "condition": "弓術：B+"
+    },
+    {
+      "character": "c3",
+      "name": "弓術Lv.2",
+      "condition": "弓術：B+"
+    },
+    {
+      "character": "c13",
+      "name": "剣術Lv.1",
+      "condition": "剣術：C+"
+    },
+    {
+      "character": "c60",
+      "name": "格闘術Lv.5",
+      "condition": "格闘術：A+"
+    },
+    {
+      "character": "c60",
+      "name": "白魔術Lv.5",
+      "condition": "白魔術：A+"
+    },
+    {
+      "character": "c60",
+      "name": "黒魔術Lv.5",
+      "condition": "黒魔術：A+"
+    }
+  ],
+  "additions": [
+    {
+      "characterId": "c0",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "枪术Lv.3",
+      "description": "装备枪时，命中、回避+5",
+      "skill": "枪术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470642"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "枪术Lv.4",
+      "description": "装备枪时，命中、回避+7",
+      "skill": "枪术",
+      "rank": "A+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470645"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "黑魔术Lv.2",
+      "description": "装备黑魔法时，命中+5",
+      "skill": "黑魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470681"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c0",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "剑术Lv.4",
+      "description": "装备剑时，命中、回避+7",
+      "skill": "剑术",
+      "rank": "A+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470633"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c1",
+      "name": "格斗术Lv.2",
+      "description": "装备手甲时，命中+5",
+      "skill": "格斗术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402785",
+        "https://appmedia.jp/fe_banshisenkou/80470669"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "剑术Lv.4",
+      "description": "装备剑时，命中、回避+7",
+      "skill": "剑术",
+      "rank": "A+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470633"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "黑魔术Lv.2",
+      "description": "装备黑魔法时，命中+5",
+      "skill": "黑魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470681"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402647",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c3",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402779",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c3",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402779",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c3",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402779",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c4",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402752",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c4",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402752",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c4",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402752",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c4",
+      "name": "白魔术Lv.3",
+      "description": "装备白魔法时，命中、回避+5",
+      "skill": "白魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402752",
+        "https://appmedia.jp/fe_banshisenkou/80470696"
+      ]
+    },
+    {
+      "characterId": "c6",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402758",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c6",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402758",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c6",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402758",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c6",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402758",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c6",
+      "name": "白魔术Lv.3",
+      "description": "装备白魔法时，命中、回避+5",
+      "skill": "白魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402758",
+        "https://appmedia.jp/fe_banshisenkou/80470696"
+      ]
+    },
+    {
+      "characterId": "c8",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402794",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c8",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402794",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c8",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402794",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c8",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402794",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "黑魔术Lv.2",
+      "description": "装备黑魔法时，命中+5",
+      "skill": "黑魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470681"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c9",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402800",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c10",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402803",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c10",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402803",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c10",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402803",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c10",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402803",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c11",
+      "name": "白魔术Lv.3",
+      "description": "装备白魔法时，命中、回避+5",
+      "skill": "白魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402689",
+        "https://appmedia.jp/fe_banshisenkou/80470696"
+      ]
+    },
+    {
+      "characterId": "c13",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402767",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c13",
+      "name": "弓术Lv.2",
+      "description": "装备弓时，命中+5",
+      "skill": "弓术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402767",
+        "https://appmedia.jp/fe_banshisenkou/80470657"
+      ]
+    },
+    {
+      "characterId": "c14",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402764",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c14",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402764",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c14",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402764",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c14",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402764",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c14",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402764",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "弓术Lv.2",
+      "description": "装备弓时，命中+5",
+      "skill": "弓术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470657"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "弓术Lv.3",
+      "description": "装备弓时，命中、回避+5",
+      "skill": "弓术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470660"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "弓术Lv.4",
+      "description": "装备弓时，命中、回避+7",
+      "skill": "弓术",
+      "rank": "A+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470663"
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402641",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "黑魔术Lv.2",
+      "description": "装备黑魔法时，命中+5",
+      "skill": "黑魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470681"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "黑魔术Lv.3",
+      "description": "装备黑魔法时，命中、回避+5",
+      "skill": "黑魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470684"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c16",
+      "name": "白魔术Lv.3",
+      "description": "装备白魔法时，命中、回避+5",
+      "skill": "白魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402638",
+        "https://appmedia.jp/fe_banshisenkou/80470696"
+      ]
+    },
+    {
+      "characterId": "c17",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402788",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c17",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402788",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c17",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402788",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c17",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402788",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c17",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402788",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c17",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402788",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c17",
+      "name": "弓术Lv.2",
+      "description": "装备弓时，命中+5",
+      "skill": "弓术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402788",
+        "https://appmedia.jp/fe_banshisenkou/80470657"
+      ]
+    },
+    {
+      "characterId": "c17",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402788",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c18",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402734",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c18",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402734",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c18",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402734",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c18",
+      "name": "斧术Lv.3",
+      "description": "装备斧时，命中、回避+5",
+      "skill": "斧术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402734",
+        "https://appmedia.jp/fe_banshisenkou/80470654"
+      ]
+    },
+    {
+      "characterId": "c19",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402731",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c19",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402731",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c19",
+      "name": "黑魔术Lv.2",
+      "description": "装备黑魔法时，命中+5",
+      "skill": "黑魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402731",
+        "https://appmedia.jp/fe_banshisenkou/80470681"
+      ]
+    },
+    {
+      "characterId": "c19",
+      "name": "黑魔术Lv.3",
+      "description": "装备黑魔法时，命中、回避+5",
+      "skill": "黑魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402731",
+        "https://appmedia.jp/fe_banshisenkou/80470684"
+      ]
+    },
+    {
+      "characterId": "c19",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402731",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c19",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402731",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "枪术Lv.3",
+      "description": "装备枪时，命中、回避+5",
+      "skill": "枪术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470642"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "枪术Lv.4",
+      "description": "装备枪时，命中、回避+7",
+      "skill": "枪术",
+      "rank": "A+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470645"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402653",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "格斗术Lv.2",
+      "description": "装备手甲时，命中+5",
+      "skill": "格斗术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470669"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "黑魔术Lv.2",
+      "description": "装备黑魔法时，命中+5",
+      "skill": "黑魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470681"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "黑魔术Lv.3",
+      "description": "装备黑魔法时，命中、回避+5",
+      "skill": "黑魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470684"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402650",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c23",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402797",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c23",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402797",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c23",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402797",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c23",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402797",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c23",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402797",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c23",
+      "name": "格斗术Lv.2",
+      "description": "装备手甲时，命中+5",
+      "skill": "格斗术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402797",
+        "https://appmedia.jp/fe_banshisenkou/80470669"
+      ]
+    },
+    {
+      "characterId": "c23",
+      "name": "格斗术Lv.3",
+      "description": "装备手甲时，命中、回避+5",
+      "skill": "格斗术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402797",
+        "https://appmedia.jp/fe_banshisenkou/80470672"
+      ]
+    },
+    {
+      "characterId": "c24",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402701",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c24",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402701",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c24",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402701",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c24",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402701",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c24",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402701",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c24",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402701",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c25",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402698",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c25",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402698",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c25",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402698",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c25",
+      "name": "枪术Lv.3",
+      "description": "装备枪时，命中、回避+5",
+      "skill": "枪术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402698",
+        "https://appmedia.jp/fe_banshisenkou/80470642"
+      ]
+    },
+    {
+      "characterId": "c25",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402698",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c28",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402716",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c28",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402716",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c31",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402677",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c31",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402677",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c31",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402677",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c31",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402677",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c31",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402677",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c31",
+      "name": "黑魔术Lv.2",
+      "description": "装备黑魔法时，命中+5",
+      "skill": "黑魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402677",
+        "https://appmedia.jp/fe_banshisenkou/80470681"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "斧术Lv.3",
+      "description": "装备斧时，命中、回避+5",
+      "skill": "斧术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470654"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "格斗术Lv.2",
+      "description": "装备手甲时，命中+5",
+      "skill": "格斗术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470669"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "格斗术Lv.3",
+      "description": "装备手甲时，命中、回避+5",
+      "skill": "格斗术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470672"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402683",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c33",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402686",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c33",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402686",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c33",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402686",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c33",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402686",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c33",
+      "name": "白魔术Lv.3",
+      "description": "装备白魔法时，命中、回避+5",
+      "skill": "白魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402686",
+        "https://appmedia.jp/fe_banshisenkou/80470696"
+      ]
+    },
+    {
+      "characterId": "c34",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402656",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c34",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402656",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c34",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402656",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c34",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402656",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c34",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402656",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c34",
+      "name": "斧术Lv.3",
+      "description": "装备斧时，命中、回避+5",
+      "skill": "斧术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402656",
+        "https://appmedia.jp/fe_banshisenkou/80470654"
+      ]
+    },
+    {
+      "characterId": "c34",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402656",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c35",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402791",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c35",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402791",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c35",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402791",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c36",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402713",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c36",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402713",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c36",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402713",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c36",
+      "name": "斧术Lv.3",
+      "description": "装备斧时，命中、回避+5",
+      "skill": "斧术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402713",
+        "https://appmedia.jp/fe_banshisenkou/80470654"
+      ]
+    },
+    {
+      "characterId": "c37",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402776",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c37",
+      "name": "弓术Lv.2",
+      "description": "装备弓时，命中+5",
+      "skill": "弓术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402776",
+        "https://appmedia.jp/fe_banshisenkou/80470657"
+      ]
+    },
+    {
+      "characterId": "c38",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402773",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c38",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402773",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c38",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402773",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c38",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402773",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c39",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402671",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c39",
+      "name": "弓术Lv.2",
+      "description": "装备弓时，命中+5",
+      "skill": "弓术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402671",
+        "https://appmedia.jp/fe_banshisenkou/80470657"
+      ]
+    },
+    {
+      "characterId": "c39",
+      "name": "弓术Lv.3",
+      "description": "装备弓时，命中、回避+5",
+      "skill": "弓术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402671",
+        "https://appmedia.jp/fe_banshisenkou/80470660"
+      ]
+    },
+    {
+      "characterId": "c40",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402668",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c40",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402668",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c40",
+      "name": "枪术Lv.2",
+      "description": "装备枪时，命中+5",
+      "skill": "枪术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402668",
+        "https://appmedia.jp/fe_banshisenkou/80470639"
+      ]
+    },
+    {
+      "characterId": "c40",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402668",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c41",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402743",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c41",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402743",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c41",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402743",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c41",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402743",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c41",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402743",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c41",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402743",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c42",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402770",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c42",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402770",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c42",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402770",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c42",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402770",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c43",
+      "name": "弓术Lv.2",
+      "description": "装备弓时，命中+5",
+      "skill": "弓术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402761",
+        "https://appmedia.jp/fe_banshisenkou/80470657"
+      ]
+    },
+    {
+      "characterId": "c43",
+      "name": "弓术Lv.3",
+      "description": "装备弓时，命中、回避+5",
+      "skill": "弓术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402761",
+        "https://appmedia.jp/fe_banshisenkou/80470660"
+      ]
+    },
+    {
+      "characterId": "c44",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402749",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c44",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402749",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c44",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402749",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c45",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402782",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c45",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402782",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c46",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402692",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c46",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402692",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c46",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402692",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c46",
+      "name": "弓术Lv.2",
+      "description": "装备弓时，命中+5",
+      "skill": "弓术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402692",
+        "https://appmedia.jp/fe_banshisenkou/80470657"
+      ]
+    },
+    {
+      "characterId": "c46",
+      "name": "弓术Lv.3",
+      "description": "装备弓时，命中、回避+5",
+      "skill": "弓术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402692",
+        "https://appmedia.jp/fe_banshisenkou/80470660"
+      ]
+    },
+    {
+      "characterId": "c47",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402746",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c47",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402746",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c47",
+      "name": "弓术Lv.2",
+      "description": "装备弓时，命中+5",
+      "skill": "弓术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402746",
+        "https://appmedia.jp/fe_banshisenkou/80470657"
+      ]
+    },
+    {
+      "characterId": "c47",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402746",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c47",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402746",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c48",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402737",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c48",
+      "name": "剑术Lv.2",
+      "description": "装备剑时，命中+5",
+      "skill": "剑术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402737",
+        "https://appmedia.jp/fe_banshisenkou/80470627"
+      ]
+    },
+    {
+      "characterId": "c48",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402737",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c48",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402737",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "剑术Lv.1",
+      "description": "装备剑时，命中+3",
+      "skill": "剑术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470624"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "枪术Lv.1",
+      "description": "装备枪时，命中+3",
+      "skill": "枪术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470636"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "斧术Lv.1",
+      "description": "装备斧时，命中+3",
+      "skill": "斧术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470648"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "斧术Lv.2",
+      "description": "装备斧时，命中+5",
+      "skill": "斧术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470651"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "格斗术Lv.1",
+      "description": "装备手甲时，命中+3",
+      "skill": "格斗术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470666"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "黑魔术Lv.1",
+      "description": "装备黑魔法时，命中+3",
+      "skill": "黑魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470678"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "黑魔术Lv.2",
+      "description": "装备黑魔法时，命中+5",
+      "skill": "黑魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470681"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "白魔术Lv.1",
+      "description": "装备白魔法时，命中+3",
+      "skill": "白魔术",
+      "rank": "D+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470690"
+      ]
+    },
+    {
+      "characterId": "c49",
+      "name": "白魔术Lv.2",
+      "description": "装备白魔法时，命中+5",
+      "skill": "白魔术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402644",
+        "https://appmedia.jp/fe_banshisenkou/80470693"
+      ]
+    },
+    {
+      "characterId": "c52",
+      "name": "斧术Lv.3",
+      "description": "装备斧时，命中、回避+5",
+      "skill": "斧术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402695",
+        "https://appmedia.jp/fe_banshisenkou/80470654"
+      ]
+    },
+    {
+      "characterId": "c52",
+      "name": "白魔术Lv.3",
+      "description": "装备白魔法时，命中、回避+5",
+      "skill": "白魔术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402695",
+        "https://appmedia.jp/fe_banshisenkou/80470696"
+      ]
+    },
+    {
+      "characterId": "c54",
+      "name": "剑术Lv.3",
+      "description": "装备剑时，命中、回避+5",
+      "skill": "剑术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402725",
+        "https://appmedia.jp/fe_banshisenkou/80470630"
+      ]
+    },
+    {
+      "characterId": "c54",
+      "name": "斧术Lv.3",
+      "description": "装备斧时，命中、回避+5",
+      "skill": "斧术",
+      "rank": "B+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402725",
+        "https://appmedia.jp/fe_banshisenkou/80470654"
+      ]
+    },
+    {
+      "characterId": "c54",
+      "name": "格斗术Lv.2",
+      "description": "装备手甲时，命中+5",
+      "skill": "格斗术",
+      "rank": "C+",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402725",
+        "https://appmedia.jp/fe_banshisenkou/80470669"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "characterId": "c0",
+      "name": "凯伊",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 25,
+        "combatArts": 16,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c1",
+      "name": "古扎岚",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 20,
+        "combatArts": 12,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "燕返+"
+        }
+      ]
+    },
+    {
+      "characterId": "c2",
+      "name": "迪托利希",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 20,
+        "combatArts": 18,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "燕返+"
+        },
+        {
+          "kind": "combatArts",
+          "name": "秘传·落燕+"
+        }
+      ]
+    },
+    {
+      "characterId": "c3",
+      "name": "奇洛伊卡",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 9,
+        "combatArts": 8,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c4",
+      "name": "绯亚娜",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 5,
+        "combatArts": 5,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c5",
+      "name": "赛奥朵拉",
+      "records": {
+        "levelSkills": 3,
+        "learnedSkills": 8,
+        "combatArts": 9,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "levelSkills",
+          "name": "计略达人"
+        }
+      ]
+    },
+    {
+      "characterId": "c6",
+      "name": "索绯雅",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 8,
+        "combatArts": 5,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c7",
+      "name": "蕾达",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 8,
+        "combatArts": 20,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c8",
+      "name": "卡塔妮雅",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 15,
+        "combatArts": 10,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c9",
+      "name": "杨界",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 12,
+        "combatArts": 5,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c10",
+      "name": "马吉迪",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 4,
+        "combatArts": 1,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c11",
+      "name": "妮涅",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 19,
+        "combatArts": 15,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c12",
+      "name": "哪吒",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 2,
+        "combatArts": 5,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c13",
+      "name": "努佐",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 6,
+        "combatArts": 8,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "levelSkills",
+          "name": "秘奥"
+        },
+        {
+          "kind": "combatArts",
+          "name": "燕返"
+        },
+        {
+          "kind": "combatArts",
+          "name": "娴熟一击"
+        },
+        {
+          "kind": "combatArts",
+          "name": "燕返+"
+        }
+      ]
+    },
+    {
+      "characterId": "c14",
+      "name": "亚历珊德拉",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 17,
+        "combatArts": 17,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "levelSkills",
+          "name": "飞翔"
+        }
+      ]
+    },
+    {
+      "characterId": "c15",
+      "name": "皮特鲁",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 21,
+        "combatArts": 17,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c16",
+      "name": "媞雅拉",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 16,
+        "combatArts": 10,
+        "magic": 10
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c17",
+      "name": "伊欧",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 13,
+        "combatArts": 5,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "levelSkills",
+          "name": "骑乘突击"
+        }
+      ]
+    },
+    {
+      "characterId": "c18",
+      "name": "哥莱亚斯",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 9,
+        "combatArts": 2,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c19",
+      "name": "丹提",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 8,
+        "combatArts": 3,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c20",
+      "name": "盖茨",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 1,
+        "combatArts": 0,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "learnedSkills",
+          "name": "佯攻"
+        }
+      ]
+    },
+    {
+      "characterId": "c21",
+      "name": "艾丝梅拉尔达",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 18,
+        "combatArts": 13,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "集中投掷+"
+        }
+      ]
+    },
+    {
+      "characterId": "c22",
+      "name": "法毕欧",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 14,
+        "combatArts": 8,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c23",
+      "name": "诺克裘拉",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 10,
+        "combatArts": 10,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c24",
+      "name": "罗蕾塔",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 10,
+        "combatArts": 4,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c25",
+      "name": "西提司",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 7,
+        "combatArts": 5,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c26",
+      "name": "波拿帕尔特",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 2,
+        "combatArts": 11,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c27",
+      "name": "托比亚斯",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 6,
+        "combatArts": 12,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "learnedSkills",
+          "name": "体格"
+        }
+      ]
+    },
+    {
+      "characterId": "c28",
+      "name": "哈尔温",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 7,
+        "combatArts": 7,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c29",
+      "name": "沙兰",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 1,
+        "combatArts": 7,
+        "magic": 10
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "learnedSkills",
+          "name": "防御阵形"
+        },
+        {
+          "kind": "magic",
+          "name": "彷徨之壁"
+        }
+      ]
+    },
+    {
+      "characterId": "c30",
+      "name": "巴卡尼亚",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 11,
+        "combatArts": 13,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c31",
+      "name": "西洛可",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 13,
+        "combatArts": 10,
+        "magic": 12
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "燕返+"
+        }
+      ]
+    },
+    {
+      "characterId": "c32",
+      "name": "穆",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 23,
+        "combatArts": 13,
+        "magic": 10
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c33",
+      "name": "奥琳琵娅",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 13,
+        "combatArts": 8,
+        "magic": 11
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c34",
+      "name": "米迦艾拉",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 15,
+        "combatArts": 14,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c35",
+      "name": "努蒂奴",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 8,
+        "combatArts": 5,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "旋风枪"
+        },
+        {
+          "kind": "combatArts",
+          "name": "劈刺"
+        }
+      ]
+    },
+    {
+      "characterId": "c36",
+      "name": "大刀",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 7,
+        "combatArts": 7,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c37",
+      "name": "易尼奥尼",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 6,
+        "combatArts": 7,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "levelSkills",
+          "name": "贯穿"
+        },
+        {
+          "kind": "combatArts",
+          "name": "要害射击"
+        },
+        {
+          "kind": "combatArts",
+          "name": "奇袭之箭"
+        }
+      ]
+    },
+    {
+      "characterId": "c38",
+      "name": "嘉丝敏",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 8,
+        "combatArts": 6,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "劈刺"
+        }
+      ]
+    },
+    {
+      "characterId": "c39",
+      "name": "莉利安",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 7,
+        "combatArts": 10,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c40",
+      "name": "莱桑达",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 10,
+        "combatArts": 4,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c41",
+      "name": "希蒙",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 9,
+        "combatArts": 6,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c42",
+      "name": "札可捏",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 8,
+        "combatArts": 9,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c43",
+      "name": "班迪兹",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 2,
+        "combatArts": 6,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "levelSkills",
+          "name": "战车手"
+        },
+        {
+          "kind": "combatArts",
+          "name": "曲射"
+        },
+        {
+          "kind": "combatArts",
+          "name": "合围之箭"
+        },
+        {
+          "kind": "combatArts",
+          "name": "烈风枪"
+        },
+        {
+          "kind": "combatArts",
+          "name": "劈刺"
+        }
+      ]
+    },
+    {
+      "characterId": "c44",
+      "name": "露露蒂雅",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 6,
+        "combatArts": 3,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c45",
+      "name": "佩佩",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 2,
+        "combatArts": 0,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c46",
+      "name": "迪雅各",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 7,
+        "combatArts": 0,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c47",
+      "name": "乌修拉",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 8,
+        "combatArts": 7,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c48",
+      "name": "杰斯塔",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 4,
+        "combatArts": 1,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c49",
+      "name": "乌尔坦德",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 15,
+        "combatArts": 5,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c50",
+      "name": "齐利科",
+      "records": {
+        "levelSkills": 0,
+        "learnedSkills": 1,
+        "combatArts": 2,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c51",
+      "name": "内森",
+      "records": {
+        "levelSkills": 0,
+        "learnedSkills": 1,
+        "combatArts": 1,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c52",
+      "name": "欧露赫露",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 5,
+        "combatArts": 6,
+        "magic": 12
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c53",
+      "name": "谭利穆恩",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 0,
+        "combatArts": 5,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "magic",
+          "name": "雷电"
+        }
+      ]
+    },
+    {
+      "characterId": "c54",
+      "name": "贝特兰",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 4,
+        "combatArts": 13,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "levelSkills",
+          "name": "先之先"
+        }
+      ]
+    },
+    {
+      "characterId": "c55",
+      "name": "爱娜特莉亚",
+      "records": {
+        "levelSkills": 4,
+        "learnedSkills": 4,
+        "combatArts": 12,
+        "magic": 11
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "levelSkills",
+          "name": "连贯圆滑"
+        },
+        {
+          "kind": "magic",
+          "name": "大地之颚"
+        }
+      ]
+    },
+    {
+      "characterId": "c56",
+      "name": "盛托利翁",
+      "records": {
+        "levelSkills": 0,
+        "learnedSkills": 0,
+        "combatArts": 4,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "劈刺"
+        },
+        {
+          "kind": "combatArts",
+          "name": "破盔"
+        },
+        {
+          "kind": "combatArts",
+          "name": "粉碎"
+        },
+        {
+          "kind": "combatArts",
+          "name": "防卫指挥"
+        }
+      ]
+    },
+    {
+      "characterId": "c57",
+      "name": "库拉普卡",
+      "records": {
+        "levelSkills": 0,
+        "learnedSkills": 0,
+        "combatArts": 4,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c58",
+      "name": "救世主",
+      "records": {
+        "levelSkills": 2,
+        "learnedSkills": 3,
+        "combatArts": 12,
+        "magic": 10
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "旋风枪"
+        }
+      ]
+    },
+    {
+      "characterId": "c59",
+      "name": "红花",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 2,
+        "combatArts": 3,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c60",
+      "name": "特洛伊亚",
+      "records": {
+        "levelSkills": 1,
+        "learnedSkills": 1,
+        "combatArts": 2,
+        "magic": 9
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": []
+    },
+    {
+      "characterId": "c61",
+      "name": "亚丝望",
+      "records": {
+        "levelSkills": 0,
+        "learnedSkills": 0,
+        "combatArts": 4,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "曲射"
+        },
+        {
+          "kind": "combatArts",
+          "name": "螺旋射击"
+        },
+        {
+          "kind": "combatArts",
+          "name": "精灵弓"
+        },
+        {
+          "kind": "combatArts",
+          "name": "技术指挥+"
+        }
+      ]
+    },
+    {
+      "characterId": "c62",
+      "name": "塔霍尼雅",
+      "records": {
+        "levelSkills": 0,
+        "learnedSkills": 0,
+        "combatArts": 5,
+        "magic": 8
+      },
+      "sourceMatched": true,
+      "unresolvedRequirements": [
+        {
+          "kind": "combatArts",
+          "name": "豪拳一击"
+        },
+        {
+          "kind": "combatArts",
+          "name": "活杀一击"
+        },
+        {
+          "kind": "combatArts",
+          "name": "用心一击"
+        },
+        {
+          "kind": "combatArts",
+          "name": "杰克一击"
+        },
+        {
+          "kind": "combatArts",
+          "name": "心眼一击"
+        }
+      ]
+    }
+  ],
+  "remainingRequirementCount": 45,
+  "completeness": "Not certified complete: source pages omit entries and some existing acquisition thresholds remain unresolved."
+}
