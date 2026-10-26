@@ -1,6 +1,6 @@
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>zh(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const routes={'レダ':'蕾达','カイ':'凯伊','ディートリヒ':'迪托利希','セオドラ':'赛奥朵拉','救世篇':'第三部'};
-const pages={home:'首页',overview:'路线攻略',sources:'来源',preferences:'偏好与规划',characters:'全角色图鉴',recruit:'招募与声望',gifts:'礼物与喜好',classes:'职业资格',training:'技能与斗技场',equipment:'装备与材料',map:'探索大地图',mechanics:'周目与继承',character:'角色详情',compare:'角色对比'};
+const pages={home:'首页',overview:'路线攻略',sources:'来源',preferences:'我的培养',characters:'全角色图鉴',recruit:'招募与声望',gifts:'礼物与喜好',classes:'职业资格',training:'技能与斗技场',equipment:'装备与材料',map:'探索大地图',mechanics:'周目与继承',character:'角色详情',compare:'角色对比'};
 let DB,PINS=[],mapLoaded=false,mapLoading=false,route='レダ',query='',family='all',mapType='all',mapScale=1,checked={};try{checked=JSON.parse(localStorage.getItem('guide-v2')||'{}')}catch{};route=checked.route||route;if(checked.dark)document.body.classList.add('dark');
 const statNames={hp:'生命',str:'力量',mag:'魔力',spd:'速度',dex:'技巧',def:'防御',res:'魔防',lck:'幸运',cha:'魅力'};
 const link=(url,label)=>guidePage()==='sources'&&url?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';

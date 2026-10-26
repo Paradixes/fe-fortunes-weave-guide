@@ -109638,15 +109638,16 @@
         {
           "characterId": "c54",
           "method": "等级／条件",
-          "level": null,
+          "level": 1,
           "skill": "",
           "rank": "",
           "condition": "等级习得",
-          "uncertain": true,
+          "uncertain": false,
           "description": "在敌方阶段行动时，有25%几率由自己先攻",
-          "source": "https://game8.jp/fe-banshisenko/816882",
+          "source": "https://appmedia.jp/fe_banshisenkou/80470804",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816882"
+            "https://game8.jp/fe-banshisenko/816882",
+            "https://appmedia.jp/fe_banshisenkou/80470804"
           ],
           "weapon": "",
           "parameters": {}
@@ -111573,17 +111574,18 @@
         {
           "characterId": "c0",
           "method": "等级／条件",
-          "level": 5,
+          "level": 35,
           "skill": "",
           "rank": "",
           "condition": "等级习得",
           "uncertain": false,
           "description": "自己出击时，全体友军不受冥炎影响，处于冥炎中的全体友军受到攻击时伤害减半",
-          "source": "https://gamewith.jp/fefw/577325",
+          "source": "https://appmedia.jp/fe_banshisenkou/80402635",
           "sources": [
             "https://gamewith.jp/fefw/577325",
             "https://game8.jp/fe-banshisenko/816414",
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
+            "https://appmedia.jp/fe_banshisenkou/80402635"
           ],
           "weapon": "",
           "parameters": {}
@@ -117411,13 +117413,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "剑术",
-          "rank": "",
+          "rank": "C",
           "condition": "角色习得已核对，技能等级门槛待核实",
-          "uncertain": true,
+          "uncertain": false,
           "description": "敌处于有利地形时，忽略该地形影响",
           "source": "https://game8.jp/fe-banshisenko/816434",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816434"
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "剑",
           "parameters": {}
@@ -117886,13 +117889,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "B",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "追击时，攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816882",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816882"
+            "https://game8.jp/fe-banshisenko/816882",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "斧",
           "parameters": {
@@ -118168,13 +118172,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "剑术",
-          "rank": "",
+          "rank": "B",
           "condition": "角色习得已核对，技能等级门槛待核实",
-          "uncertain": true,
+          "uncertain": false,
           "description": "攻击时以技巧÷2的概率使攻击力+5",
           "source": "https://game8.jp/fe-banshisenko/816434",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816434"
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "剑",
           "parameters": {}
@@ -120314,13 +120319,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "C",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "战斗后，力量+1（最大+5）（持续到战斗结束）",
-          "source": "https://game8.jp/fe-banshisenko/816882",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816882"
+            "https://game8.jp/fe-banshisenko/816882",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "斧",
           "parameters": {
@@ -121298,13 +121304,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "C",
           "condition": "暂译名；数据来自 GameWith 战技一览（2026-10-04）；莱桑达据站长游戏截图",
-          "uncertain": true,
+          "uncertain": false,
           "description": "友军速度+2（持续到下一个己方阶段）",
-          "source": "https://game8.jp/fe-banshisenko/816427",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816427"
+            "https://game8.jp/fe-banshisenko/816427",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "任意",
           "parameters": {
@@ -122383,13 +122390,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "C",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "对骑兵有效",
-          "source": "https://game8.jp/fe-banshisenko/816882",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816882"
+            "https://game8.jp/fe-banshisenko/816882",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "剑",
           "parameters": {
@@ -123774,13 +123782,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "弓术",
-          "rank": "",
+          "rank": "D",
           "condition": "角色习得已核对，技能等级门槛待核实",
-          "uncertain": true,
+          "uncertain": false,
           "description": "战斗时回避+10",
           "source": "https://game8.jp/fe-banshisenko/816434",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816434"
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "弓",
           "parameters": {}
@@ -123973,13 +123982,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "C",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "命中极高，但造成的伤害减半",
-          "source": "https://game8.jp/fe-banshisenko/816461",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816461"
+            "https://game8.jp/fe-banshisenko/816461",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "斧",
           "parameters": {
@@ -124333,13 +124343,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "弓术",
-          "rank": "",
+          "rank": "C",
           "condition": "角色习得已核对，技能等级门槛待核实",
-          "uncertain": true,
+          "uncertain": false,
           "description": "战斗后可以移动1格",
           "source": "https://game8.jp/fe-banshisenko/816434",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816434"
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "弓",
           "parameters": {}
@@ -124552,13 +124563,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "剑术",
-          "rank": "",
+          "rank": "D",
           "condition": "角色习得已核对，技能等级门槛待核实",
-          "uncertain": true,
+          "uncertain": false,
           "description": "必杀较高",
           "source": "https://game8.jp/fe-banshisenko/816434",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816434"
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "剑",
           "parameters": {}
@@ -124908,13 +124920,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "B",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "攻击时，有（力量+2）%几率使攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816882",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816882"
+            "https://game8.jp/fe-banshisenko/816882",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "剑",
           "parameters": {
@@ -125168,13 +125181,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "D",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "战斗时，回避+10",
-          "source": "https://game8.jp/fe-banshisenko/816442",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816442"
+            "https://game8.jp/fe-banshisenko/816442",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "枪",
           "parameters": {
@@ -125630,13 +125644,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "弓术",
-          "rank": "",
+          "rank": "B",
           "condition": "角色习得已核对，技能等级门槛待核实",
-          "uncertain": true,
+          "uncertain": false,
           "description": "攻击时以技巧÷2的概率使攻击力+5",
           "source": "https://game8.jp/fe-banshisenko/816434",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816434"
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "弓",
           "parameters": {}
@@ -127517,13 +127532,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "D",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "命中高",
-          "source": "https://game8.jp/fe-banshisenko/816882",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816882"
+            "https://game8.jp/fe-banshisenko/816882",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "斧",
           "parameters": {
@@ -133402,13 +133418,14 @@
           "method": "战技习得",
           "level": null,
           "skill": "",
-          "rank": "",
+          "rank": "D",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "必杀高",
-          "source": "https://game8.jp/fe-banshisenko/816460",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816460"
+            "https://game8.jp/fe-banshisenko/816460",
+            "https://gamecap.jp/fe_fw/oboeru.html"
           ],
           "weapon": "弓",
           "parameters": {

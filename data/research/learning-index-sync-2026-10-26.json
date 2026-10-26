@@ -1,0 +1,267 @@
+{
+  "method": "Sync the ability acquisition index from previously reviewed canonical character learning rows; no new inferred conditions.",
+  "changes": [
+    {
+      "abilityId": "ability-c9fc143fd3b1",
+      "name": "后之先",
+      "characterId": "c54",
+      "changes": {
+        "level": {
+          "before": null,
+          "after": 1
+        }
+      },
+      "learningCollection": "levelSkills",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80470804"
+      ]
+    },
+    {
+      "abilityId": "ability-34be3b1fb2e7",
+      "name": "冥炎之主",
+      "characterId": "c0",
+      "changes": {
+        "level": {
+          "before": 5,
+          "after": 35
+        }
+      },
+      "learningCollection": "levelSkills",
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402635",
+        "https://game8.jp/fe-banshisenko/816414"
+      ]
+    },
+    {
+      "abilityId": "ability-8f803e5cb700",
+      "name": "暗影迫近",
+      "characterId": "c47",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "C"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://game8.jp/fe-banshisenko/816434",
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-0bc038f4ace7",
+      "name": "暴动",
+      "characterId": "c54",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "B"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-8d44beff1d2a",
+      "name": "必闪一击",
+      "characterId": "c47",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "B"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://game8.jp/fe-banshisenko/816434",
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-1398311096a6",
+      "name": "愤怒激发",
+      "characterId": "c54",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "C"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-0a5d8f294239",
+      "name": "攻速指挥",
+      "characterId": "c40",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "C"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-2504ad8ddb2e",
+      "name": "虎切",
+      "characterId": "c54",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "C"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-92ab63ac8275",
+      "name": "警戒射击",
+      "characterId": "c47",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "D"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://game8.jp/fe-banshisenko/816434",
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-5bd4f26e3295",
+      "name": "看穿一击",
+      "characterId": "c38",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "C"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-90c14a0ffc89",
+      "name": "离脱射击",
+      "characterId": "c47",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "C"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://game8.jp/fe-banshisenko/816434",
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-c1c0fdbb0c29",
+      "name": "两断",
+      "characterId": "c47",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "D"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://game8.jp/fe-banshisenko/816434",
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-41c53484d507",
+      "name": "烈火一击",
+      "characterId": "c54",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "B"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-9d7e327e3461",
+      "name": "流风枪",
+      "characterId": "c8",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "D"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-fc38237eb7ae",
+      "name": "螺旋射击",
+      "characterId": "c47",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "B"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://game8.jp/fe-banshisenko/816434",
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-dd112b3f0441",
+      "name": "劈刺",
+      "characterId": "c54",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "D"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    },
+    {
+      "abilityId": "ability-e33c266d5395",
+      "name": "要害射击",
+      "characterId": "c3",
+      "changes": {
+        "rank": {
+          "before": "",
+          "after": "D"
+        }
+      },
+      "learningCollection": "combatArts",
+      "sources": [
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ]
+    }
+  ]
+}
