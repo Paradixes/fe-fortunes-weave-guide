@@ -858,6 +858,8 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(nodes['#content'].innerHTML.includes('gift-character-table')&&nodes['#content'].innerHTML.includes('赠礼指南'),'Gifts render within the roster');
  assert(!nodes['#content'].innerHTML.includes('gift-char-card'),'Gift preferences use comparable rows instead of cards');
  vm.runInContext("location.hash='#gifts';render()",ctx);assert(nodes['#content'].innerHTML.includes('roster-views'),'Existing gift links still resolve');
+ assert(vm.runInContext("(()=>{query='';giftCategoryFilter='all';const h=giftsPage().split('gift-character-table')[1];return h.includes('gift-character-categories')&&!h.includes('<th scope=\"col\">偏好分类')&&!/\dG/.test(h)&&h.includes('data-reference-type=\"gift\"')})()",ctx),'Gift preferences sit with identity; names use hover without inline prices');
+ assert(vm.runInContext("allGifts().every(g=>{const h=quickReferenceHTML('gift',g.id);return h.includes(esc(g.name))&&h.includes(giftPriceText(g))&&h.includes(esc(g.category))})",ctx),'All gifts expose name, price and category in shared quick reference');
  console.log('PASS dense catalogues: separate materials, qualification AND/OR, complete numeric values, gifts within roster, expanded equipment and contextual map editing.');
  console.log('PASS roster/map/pigeon: catalogue views, unchanged preferences, 315 loadout audits, upgrade suffixes, merchant/material/recruit search, renown and white bird asset.');
  console.log('PASS v110: multi-select roster filters, 124 gifts bidirectional database, forging materials, SSE streaming + mode toggle, entity links, full-bleed icons.');
