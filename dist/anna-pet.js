@@ -15,17 +15,11 @@ function say(kind){
  const pool=lines[kind];if(!pool||!pool.length)return '';
  return pool[Math.floor(Math.random()*pool.length)];
 }
+function positionBubble(){const b=document.getElementById('annaPetBubble'),el=document.getElementById('annaPet');if(!b||!el||!b.classList.contains('show'))return;const vw=document.documentElement.clientWidth||innerWidth,vh=window.visualViewport?.height||innerHeight,r=el.getBoundingClientRect(),w=Math.min(300,vw-24);b.style.width=w+'px';b.style.maxWidth='none';b.style.right='auto';b.style.bottom='auto';const h=b.getBoundingClientRect().height;b.style.left=Math.max(12,Math.min(vw-w-12,r.left+r.width/2-w/2))+'px';b.style.top=Math.max(8,Math.min(vh-h-8,r.top-h-8>=8?r.top-h-8:r.bottom+8))+'px';}
 function bubble(text,withAsk){
  const b=document.getElementById('annaPetBubble');if(!b)return;
  b.innerHTML=text?`${esc(text)}${withAsk?'<button type="button" id="annaPetAsk">查阅资料 ↗</button>':''}`:'';
- const el=document.getElementById('annaPet');
- if(el&&text){
-  const r=el.getBoundingClientRect(),bw=Math.min(320,innerWidth*.72);
-  const x=Math.max(8,Math.min(innerWidth-bw-8,r.left+r.width/2-bw/2));
-  b.style.left=x+'px';b.style.right='auto';
-  if(r.top<130){b.style.top=Math.min(innerHeight-100,r.bottom+8)+'px';b.style.bottom='auto'}else{b.style.bottom=Math.max(8,innerHeight-r.top+8)+'px';b.style.top='auto'}
- }
- b.classList.toggle('show',!!text);
+ b.classList.toggle('show',!!text);positionBubble();
  if(typeof clearTimeout==='function')clearTimeout(bubbleTimer);
  if(text&&typeof setTimeout==='function')bubbleTimer=setTimeout(()=>b.classList.remove('show'),4200);
  const ask=document.getElementById('annaPetAsk');
@@ -80,7 +74,7 @@ function clamp(x,y,el){
 }
 function place(el,pos){
  const [x,y]=clamp(pos.x,pos.y,el);
- el.style.left=x+'px';el.style.top=y+'px';
+ el.style.left=x+'px';el.style.top=y+'px';positionBubble();
  return {x,y};
 }
 
@@ -179,6 +173,7 @@ function mount(){
   if(e.key==='Enter'||e.key===' '){e.preventDefault();wake();express('happy');bubble(say('ask_open'),true)}
  });
  window.addEventListener('resize',()=>{
+  positionBubble();
   const s=recall();
   if(s&&s.dragged===true){
    const r=el.getBoundingClientRect();
@@ -188,6 +183,7 @@ function mount(){
  });
 }
 
+window.visualViewport?.addEventListener('resize',positionBubble);
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});
 else mount();
 })();
