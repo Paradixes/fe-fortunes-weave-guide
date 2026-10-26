@@ -221,7 +221,7 @@ function routeStrategyPanel(cs){if(route==='救世篇')return '';const coverage=
 
 const routeMapQueries={};
 function showCharacterMap(c){return Object.keys(routes).some(r=>r!=='救世篇'&&firstPartHere(c,r)&&!isSupplement(c,r))&&(dataRoute(c)==='summary'||!isSupplement(c,dataRoute(c)))}
-function cardEquipment(c){const entries=equipmentEntries([c]);if(c.gearIds.includes('giant')){const e=EQUIPMENT.find(e=>e.id==='giant');if(e&&!entries.some(x=>x.e.id===e.id))entries.push({e,users:[c]})}return `<div class="card-equipment loadout-row"><small>装备</small><div class="chip-list" aria-label="推荐装备">${entries.slice(0,3).map(({e})=>`<button class="equipment-chip" data-reference-type="equipment" data-reference-id="${e.id}" title="${esc(e.effect||e.purpose)}">${equipmentIcon(e)}${esc(e.name)}</button>`).join('')}</div></div>`}
+function cardEquipment(c){const entries=equipmentEntries([c]);if(c.gearIds.includes('giant')){const e=EQUIPMENT.find(e=>e.id==='giant');if(e&&!entries.some(x=>x.e.id===e.id))entries.push({e,users:[c]})}return `<div class="card-equipment"><div class="card-equipment-label">推荐装备</div><div class="chip-list" aria-label="推荐装备">${entries.slice(0,3).map(({e})=>`<button class="equipment-chip" data-reference-type="equipment" data-reference-id="${e.id}" title="${esc(e.effect||e.purpose)}">${equipmentIcon(e)}${esc(e.name)}</button>`).join('')}</div></div>`}
 function loadLearning(){if(LEARNING||learningLoading)return;learningLoading=true;fetch('learning.json?v=98').then(r=>r.json()).then(data=>{LEARNING=data;learningLoading=false;if(characterOpen())openCharacter(activeCharacter,true);else render()}).catch(()=>{learningLoading=false;toast('技能资料未能载入，请刷新重试')})}
 function sourceConflictReview(){
  const audit=CATALOG.dataResearch;if(!audit)return '';
