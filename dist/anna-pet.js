@@ -16,7 +16,7 @@ function say(kind){
 }
 function bubble(text,withAsk){
  const b=document.getElementById('annaPetBubble');if(!b)return;
- b.innerHTML=text?`${esc(text)}${withAsk?'<button type="button" id="annaPetAsk">让白鸽带我查攻略 ↗</button>':''}`:'';
+ b.innerHTML=text?`${esc(text)}${withAsk?'<button type="button" id="annaPetAsk">查阅资料 ↗</button>':''}`:'';
  const el=document.getElementById('annaPet');
  if(el&&text){
   const r=el.getBoundingClientRect(),bw=Math.min(320,innerWidth*.72);
@@ -100,7 +100,7 @@ function mount(){
   el.style.right='16px';el.style.bottom='16px';el.style.left='auto';el.style.top='auto';
  }
  show('idle');
- fetch(BASE+'lines.json?v=1').then(r=>r.json()).then(d=>{lines=d;bubble(say('greet'),true)}).catch(()=>{});
+ fetch(BASE+'lines.json?v=2').then(r=>r.json()).then(d=>{lines=d;bubble(say('greet'),true)}).catch(()=>{});
  scheduleIdle();
 
  const pts=new Map();

@@ -1,0 +1,64 @@
+.database-tabs{display:flex!important;align-items:stretch;flex-wrap:nowrap!important;gap:24px!important;margin:4px 0 24px!important;padding:0!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;overflow-x:auto;scrollbar-width:thin}
+.database-tabs>button,.database-tabs>a{position:relative;display:flex;align-items:center;gap:7px;flex:none;min-height:46px!important;padding:8px 0!important;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;background:transparent!important;color:var(--muted)!important;font-size:14px!important;font-weight:600;white-space:nowrap;text-decoration:none}
+.database-tabs>button.active,.database-tabs>button[aria-selected=true],.database-tabs>a[aria-current]{border-bottom-color:var(--purple)!important;color:var(--purple)!important}
+.database-tabs>button:hover,.database-tabs>a:hover{color:var(--ink)!important}
+.database-tabs small,.database-tabs>button>span{font-size:12px;color:var(--muted)}
+.catalog-table-tools{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:18px 0 12px;font-size:13px;color:var(--muted)}
+.catalog-table-tools label{display:flex;align-items:center;gap:8px}
+.catalog-table-tools select{padding:5px 10px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;min-height:36px;font:inherit}
+.character-data-wrap,.rank-grid-wrap{max-height:74dvh;overflow:auto;scrollbar-color:var(--line) var(--bg)}
+.character-data-table{min-width:1300px;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+.character-data-table th,.character-data-table td{padding:12px 8px;text-align:center;vertical-align:middle;border-bottom:1px solid var(--line)}
+.character-data-table thead th,.skill-rank-grid thead th{position:sticky;top:0;z-index:3;background:var(--tint);white-space:nowrap}
+.character-data-table th:first-child,.character-recommendation-table th:first-child,.skill-rank-grid th:first-child{position:sticky;left:0;z-index:2;background:var(--card);min-width:160px;border-right:1px solid var(--line);text-align:left}
+.character-data-table thead th:first-child,.skill-rank-grid thead th:first-child{z-index:4;background:var(--tint)}
+.character-data-table td:nth-last-child(-n+2){min-width:150px;max-width:200px;text-align:left;font-size:12px;line-height:1.8}
+.character-data-table .table-character{padding:0;min-width:140px}
+.character-data-table tr:hover td,.character-data-table tr:hover th[scope],.skill-rank-grid tr:hover td,.skill-rank-grid tr:hover th[scope]{background:var(--tint)}
+.roster-growth-stat{display:inline-block;min-width:45px;padding:5px 2px;border-radius:4px;color:#352b27;font-weight:650}
+.roster-growth-stat small{font-size:10px;margin-left:1px;font-weight:400}
+.growth-total{font-weight:700}
+.skill-rank-grid{min-width:1460px;width:100%;font-size:13px}
+.skill-rank-grid th,.skill-rank-grid td{padding:10px 12px;vertical-align:top;min-width:110px;border-bottom:1px solid var(--line)}
+.skill-rank-grid th:first-child{min-width:160px}
+.skill-rank-grid th:nth-child(2){min-width:90px;font-size:12px;white-space:nowrap}
+.skill-rank-grid .learning-token{display:block;margin-bottom:6px}
+.skill-rank-grid .learning-token small{display:none}
+.character-recommendation-table{min-width:1500px;width:100%;font-size:13px}
+.character-recommendation-table th,.character-recommendation-table td{padding:16px;vertical-align:top;border-bottom:1px solid var(--line)}
+.character-recommendation-table td:nth-child(2){min-width:430px}
+.character-recommendation-table td:nth-child(n+3){min-width:190px;max-width:260px}
+.character-recommendation-table .card-career-modern{margin:0;border:0;padding:0}
+.recommendation-tokens{display:flex;align-items:flex-start;flex-direction:column;gap:8px}
+.recommendation-tokens .reference-link{font-size:13px;padding:0}
+.fixed-chip{background:transparent;border-style:dashed;color:var(--muted)}
+.action-chips .loadout-row>small,.action-chips .action-row>small{white-space:normal;max-width:96px;flex:none}
+.training-person-plan{min-width:0;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.training-people-detailed{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;align-content:start}
+.training-person-plan .table-character{margin:0 0 10px;padding:0}
+.training-person-goals{display:grid;gap:8px}
+.training-goal{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:2px 8px;padding:5px 0}
+.training-goal-label{color:var(--muted);font-size:11px;white-space:nowrap}
+.training-goal>b{font-size:12px;color:var(--ink)}
+.training-goal>b>span{font-variant-numeric:tabular-nums;color:var(--purple)}
+.training-goal-benefits{display:block;grid-column:2;font-size:12px}
+.training-goal-benefits .text-button{padding:0;font-size:12px;text-align:left}
+.training-goal-benefits small{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin:2px 0 5px}
+.training-character-plan-table{min-width:950px;width:100%;font-size:13px}
+.training-character-plan-table th,.training-character-plan-table td{vertical-align:top;padding:14px;border-bottom:1px solid var(--line)}
+.training-character-plan-table th:first-child{min-width:190px}
+.training-character-plan-table td:nth-child(3){min-width:290px;max-width:420px}
+.training-plan-note{font-size:13px;color:var(--muted);margin:14px 0}
+@media(max-width:650px){
+ .database-tabs{gap:22px!important;margin-bottom:18px!important}
+ .database-tabs>button,.database-tabs>a{font-size:13px!important;min-height:44px!important}
+ .character-data-table th:first-child,.skill-rank-grid th:first-child{min-width:120px;max-width:145px}
+ .character-data-table .table-character{min-width:105px;gap:6px}
+ .character-data-table th,.character-data-table td{padding:10px 6px}
+ .character-data-table .portrait,.skill-rank-grid .portrait{width:28px;height:28px}
+ .catalog-table-tools{align-items:flex-start}
+ .training-people-detailed{grid-template-columns:minmax(210px,1fr)}
+}
+.character-data-table .roster-growth-stat{padding:4px 2px;white-space:nowrap}
+.character-data-table .roster-growth-stat small{display:inline;margin:0 0 0 2px}
+.database-tabs{overflow-y:hidden!important}

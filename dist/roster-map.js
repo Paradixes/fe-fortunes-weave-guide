@@ -1,4 +1,3 @@
-personalSkillPanel=function(c){const g=skillGrowth(c),rows=[{...g.personal,when:'初始',kind:'个人技能'},...g.levels.map(s=>({...s,when:skillGrowthLevel(s.level),kind:'等级特技'})),...g.blaze.map(s=>({...s,when:s.level?'Lv.'+s.level:s.unlock||'初始',kind:'炽焰技艺'}))];return `<section class="skill-growth compact-learning"><h2>角色技能</h2><div class="table-wrap"><table><thead><tr><th>技能</th><th>习得等级 / 条件</th><th>类型</th></tr></thead><tbody>${rows.map(s=>`<tr><th scope="row">${skillGrowthName(s)}</th><td>${esc(s.when)}</td><td>${esc(s.kind)}${s.upgradeOf?`<small>替换 ${esc(s.upgradeOf)}</small>`:''}</td></tr>`).join('')}</tbody></table></div></section>`};
 trainingReferenceNotes=function(){return `<section class="training-reference"><h2>技能学习与职业培养</h2><a class="button-link" href="#characters/learning">按角色查看技能与习得等级 ↗</a>${multiClassTable()}</section>`};
 
 // The map uses existing, structured local data; filters never invent chapter availability.
