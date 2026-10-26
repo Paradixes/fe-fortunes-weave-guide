@@ -1,4 +1,4 @@
-trainingReferenceNotes=function(){return `<section class="training-reference"><h2>技能学习与职业培养</h2><a class="button-link" href="#characters/learning">按角色查看技能与习得等级 ↗</a>${multiClassTable()}</section>`};
+trainingReferenceNotes=function(){return `<section class="training-reference"><h2>技能学习与职业培养</h2><a class="button-link" href="#characters/data">查看角色资料与技能习得 ↗</a>${multiClassTable()}</section>`};
 
 // The map uses existing, structured local data; filters never invent chapter availability.
 let atlasRelationCache=new Map(),atlasCacheSource=null;

@@ -62,3 +62,33 @@
 .character-data-table .roster-growth-stat{padding:4px 2px;white-space:nowrap}
 .character-data-table .roster-growth-stat small{display:inline;margin:0 0 0 2px}
 .database-tabs{overflow-y:hidden!important}
+/* Personal map annotations use the existing map's icon and parchment language. */
+.personal-map-notes{padding:18px 0;border-block:1px solid var(--line);margin:16px 0}
+.personal-map-notes-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.personal-map-notes h3{margin:0;font-size:14px}.personal-map-notes h3 small{color:var(--muted);margin-left:4px}
+.personal-map-notes-head button{padding:5px 9px;font-size:12px}
+#personal-map-note-list{display:grid;gap:4px;margin-top:10px;max-height:210px;overflow:auto}
+#personal-map-note-list button{display:flex;align-items:center;gap:9px;text-align:left;background:transparent;border:0;padding:8px 4px;font-size:13px}
+#personal-map-note-list button:hover{background:var(--tint)}
+.personal-map-pin{background:var(--purple)!important;color:var(--card)!important;border:2px solid var(--card)!important;z-index:5}
+.personal-map-pin .pin-label{color:var(--ink);background:var(--card);max-width:180px;overflow:hidden;text-overflow:ellipsis}
+.map-note-mode .map-viewport{cursor:crosshair!important}
+#map-note-editor-host:empty{display:none}
+.map-note-editor{padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--card);margin-bottom:12px;color:var(--ink);font-size:13px}
+.map-note-editor-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.map-note-editor-head button{padding:2px 8px;background:transparent;border:0;font-size:22px}
+.map-note-editor>label{display:grid;gap:6px}.map-note-editor input[type=text],.map-note-editor input[name=title]{width:100%;box-sizing:border-box;padding:9px 12px;background:var(--bg);border:1px solid var(--line);border-radius:6px;color:var(--ink);font:inherit}
+.map-note-editor fieldset{border:0;padding:0;margin:12px 0}.map-note-editor legend{margin-bottom:7px}
+.map-note-icons{display:flex;gap:6px;flex-wrap:wrap}.map-note-icons label{position:relative;cursor:pointer}.map-note-icons input{position:absolute;opacity:0;width:100%;height:100%;margin:0}
+.map-note-icons span{display:grid;place-items:center;width:40px;height:36px;border:1px solid var(--line);border-radius:6px}
+.map-note-icons input:checked+span{background:var(--tint);border-color:var(--purple);color:var(--purple)}
+.map-note-icons input:focus-visible+span{outline:2px solid var(--purple);outline-offset:2px}.map-note-icons small{display:block;text-align:center;margin-top:3px;font-size:11px}
+.map-note-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.map-note-actions button{padding:7px 12px;font:inherit}.map-note-actions .primary{background:var(--purple);color:var(--card);border-color:var(--purple)}
+.learning-token.is-recommended>button,.learning-token.is-recommended>span{background:var(--tint);color:var(--purple);font-weight:750;border-bottom:2px solid var(--gold);border-radius:3px;padding:2px 4px}
+.learning-grid-legend{font-size:12px;color:var(--muted);margin:8px 0 12px}.learning-grid-legend b{color:var(--purple);border-bottom:2px solid var(--gold)}
+.roster-preferences>.preference-grid{margin-bottom:32px}.roster-preferences .preference-summary{margin-top:0}
+.personal-map-notes-head h3{display:flex;align-items:baseline;gap:6px}.personal-map-notes-head h3 small{display:inline}
+.skill-rank-grid.single-character-grid{min-width:1280px}
+.skill-rank-grid.single-character-grid th:first-child{min-width:88px;max-width:110px;white-space:nowrap}
+.skill-rank-grid.single-character-grid th,.skill-rank-grid.single-character-grid td{padding:10px;font-size:12px}
+.skill-rank-grid.single-character-grid .learning-token:last-child{margin-bottom:0}

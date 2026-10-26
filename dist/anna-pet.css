@@ -35,3 +35,18 @@
 @keyframes pigeon-pose-in{from{opacity:.35}to{opacity:1}}
 @media(max-width:650px){#annaPet{width:66px;height:66px}}
 @media(prefers-reduced-motion:reduce){.pigeon-sprite{animation:none}}
+
+/* Outer figure animates the body; inner sprite controls flight direction. */
+#annaPet .pigeon-sprite{animation:none;transition:filter .18s;transform-origin:50% 60%}
+#annaPet[data-facing="left"] .pigeon-sprite{transform:scaleX(-1)}
+#annaPet .anna-pet-figure[data-action="idle"]{animation:pigeon-breathe 3.2s ease-in-out infinite}
+#annaPet .anna-pet-figure[data-action="wave"],#annaPet .anna-pet-figure[data-action="idle2"]{animation:pigeon-greet 1.2s ease-in-out}
+#annaPet.carried .anna-pet-figure{animation:pigeon-flight .38s ease-in-out infinite;filter:drop-shadow(0 12px 7px #302d3430)}
+#annaPet[data-facing="left"].carried{--flight-lean:-7deg}
+#annaPet[data-facing="right"].carried{--flight-lean:7deg}
+#annaPet .anna-pet-figure[data-action="sleep"]{animation:pigeon-rest 4s ease-in-out infinite}
+@keyframes pigeon-breathe{0%,100%{transform:translateY(0) scaleY(1)}50%{transform:translateY(-2px) scaleY(1.025)}}
+@keyframes pigeon-flight{0%,100%{transform:translateY(-2px) rotate(var(--flight-lean,0deg)) scaleY(.96)}50%{transform:translateY(-7px) rotate(var(--flight-lean,0deg)) scaleY(1.025)}}
+@keyframes pigeon-greet{0%,100%{transform:none}35%{transform:translateY(-4px) rotate(-5deg)}70%{transform:translateY(-1px) rotate(3deg)}}
+@keyframes pigeon-rest{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.96)}}
+@media(prefers-reduced-motion:reduce){#annaPet .anna-pet-figure{animation:none!important}}
