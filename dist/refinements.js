@@ -146,6 +146,7 @@ function focusCharacterLearning(c){
  requestAnimationFrame(()=>{if(activeCharacter!==c.id)return;const skill=target.abilityId?document.querySelector(`#characterPage .rank-learning-entry [data-reference-id="${target.abilityId}"]`):null,heading=document.querySelector('#proficiency-learning'),node=skill||heading;if(!node)return;if(skill)skill.setAttribute('data-learning-focus','');node.focus({preventScroll:true});node.scrollIntoView({block:skill?'center':'start',behavior:'instant'})});
 }
 document.addEventListener('click',e=>{
+ if(e.target.closest('[data-open-character-skills]')){query='';abilityCatalogHash='';clearTimeout(searchTimer);return}
  const person=e.target.closest('[data-character-learning]');if(!person)return;
  const c=DB.characters.find(c=>c.id===person.dataset.characterLearning);if(!c)return;
  e.preventDefault();e.stopImmediatePropagation();closeClassQuick();if($('#sourceDialog').open)$('#sourceDialog').close();pendingCharacterLearning={characterId:c.id,abilityId:abilityBy(person.dataset.learningAbility)?.id||''};openCharacter(c.id);
