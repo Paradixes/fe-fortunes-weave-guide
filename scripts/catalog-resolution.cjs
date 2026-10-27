@@ -2,6 +2,7 @@
 const fs=require('fs'),path=require('path');
 const defaultPolicy=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/source-policy.json'),'utf8'));
 const copy=v=>JSON.parse(JSON.stringify(v));
+const compare=(a,b)=>a===b?0:a<b?-1:1;
 const normalize=v=>typeof v==='string'?v.normalize('NFKC').replace(/[\s，,。；;、·]/g,''):JSON.stringify(v);
 const usable=v=>v!==undefined&&v!==null&&v!==''&&v!=='—'&&v!=='-';
 function sourceScore(source,profile,policy){
@@ -15,7 +16,7 @@ function selectFact(candidates,{profile='gameplay',policy=defaultPolicy}={}){
  const conf=policy.profiles[profile]||policy.profiles[policy.defaultProfile],groups=new Map();
  for(const candidate of candidates.filter(c=>c&&usable(c.value))){
   const c=copy(candidate),urls=[...new Set([c.source,...(c.sources||[])].filter(u=>typeof u==='string'&&u))];
-  c.source=policy.evidenceScores[c.evidenceKind]&&c.source?c.source:urls.sort((a,b)=>sourceScore(b,conf,policy)-sourceScore(a,conf,policy)||a.localeCompare(b))[0]||'';
+  c.source=policy.evidenceScores[c.evidenceKind]&&c.source?c.source:urls.sort((a,b)=>sourceScore(b,conf,policy)-sourceScore(a,conf,policy)||compare(a,b))[0]||'';
   c.score=(policy.evidenceScores[c.evidenceKind]||sourceScore(c.source,conf,policy))+(policy.confidenceBonuses[c.confidence]||0);
   const key=normalize(c.value);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(c);
  }
@@ -25,7 +26,7 @@ function selectFact(candidates,{profile='gameplay',policy=defaultPolicy}={}){
   const bonus=Math.min(policy.maxConsensusBonus,Math.max(0,domains.size-1)*policy.consensusBonusPerDomain);
   for(const c of rows){c.score+=bonus;choices.push(c)}
  }
- choices.sort((a,b)=>b.score-a.score||String(b.checkedAt||'').localeCompare(String(a.checkedAt||''))||a.source.localeCompare(b.source)||JSON.stringify(a.value).localeCompare(JSON.stringify(b.value)));
+ choices.sort((a,b)=>b.score-a.score||compare(String(b.checkedAt||''),String(a.checkedAt||''))||compare(a.source,b.source)||compare(JSON.stringify(a.value),JSON.stringify(b.value)));
  return choices[0]||null;
 }
 const typeFor={levelSkills:'特技',learnedSkills:'特技',combatArts:'战技',magic:'法术'};
