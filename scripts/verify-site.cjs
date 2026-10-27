@@ -925,7 +925,7 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
  const audits=[];
  for(const ch of reviewed.database.characters){
   ctx.auditCharacterId=ch.id;
-  const row=vm.runInContext(`(()=>{const c=DB.characters.find(c=>c.id===auditCharacterId),rows=unifiedLearningRows(c),visible=rows.filter(s=>/^([DCBAS])\\+?$/.test(s.rank||'')),highlighted=visible.filter(s=>acquisitionMerit(s,s.learningKind)).map(s=>({name:s.name,kind:s.learningKind,skill:s.skill,rank:s.rank,reason:acquisitionMerit(s,s.learningKind)})),grid=unifiedLearningTable(c),order=[...new Set(visible.map(s=>s.skill))].sort((a,b)=>PROFICIENCY_ORDER.indexOf(a)-PROFICIENCY_ORDER.indexOf(b));return {characterId:c.id,name:c.cn,highlighted,electives:crossTrainingOptions(c).map(s=>s.name),recommendedSkills:recommendations(c).skills.map(s=>s.name),order,ordered:order.every((s,i)=>!i||grid.indexOf('>'+s+'</th>')>grid.indexOf('>'+order[i-1]+'</th>')),other:grid.includes('其他条件'),rankPrefix:grid.includes('rank-threshold')}})()`,ctx);
+  const row=vm.runInContext(`(()=>{const c=DB.characters.find(c=>c.id===auditCharacterId),rows=unifiedLearningRows(c),visible=rows.filter(s=>/^([DCBAS])\\+?$/.test(s.rank||'')),highlighted=visible.filter(s=>acquisitionMerit(s,s.learningKind)).map(s=>({name:s.name,kind:s.learningKind,skill:s.skill,rank:s.rank,reason:acquisitionMerit(s,s.learningKind)})),grid=unifiedLearningTable(c),order=[...new Set(visible.map(s=>s.skill))].sort((a,b)=>PROFICIENCY_ORDER.indexOf(a)-PROFICIENCY_ORDER.indexOf(b));return {characterId:c.id,name:c.cn,highlighted,electives:crossTrainingOptions(c).map(s=>s.name),recommendedSkills:recommendations(c).skills.map(s=>s.name),order,ordered:order.every((s,i)=>!i||grid.indexOf('aria-label=\"'+s+'\"')>grid.indexOf('aria-label=\"'+order[i-1]+'\"')),other:grid.includes('其他条件'),rankPrefix:grid.includes('rank-threshold')}})()`,ctx);
   assert(row.ordered&&!row.other&&!row.rankPrefix,'All character grids use the shared specialization order: '+ch.cn);
   assert(row.highlighted.every(s=>!s.name.endsWith('的奥妙')&&!/Lv\./.test(s.name)),'Generic proficiency upgrades are not indiscriminate recommendations: '+ch.cn);
   assert(!row.electives.some(n=>n.endsWith('的奥妙')),'No S+ magic mastery as a generic cross-training target: '+ch.cn);
@@ -956,6 +956,15 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
  assert(vm.runInContext("!classUnlockHint(classBy('侍道'))&&!classUnlockHint(classBy('战斗将领'))&&classUnlockHint(classBy('驭龙兵')).includes('凯伊篇')&&classUnlockHint(classBy('舞者')).includes('蕾达篇')",ctx),'Only meaningful special restrictions remain on class rows');
  assert(vm.runInContext("classUnlockQuick(classBy('舞者')).includes('第一、二部仅蕾达本人')&&classUnlockQuick(classBy('刃辉神将')).includes('妖刀剑锷')",ctx),'Hover preserves phase/character restrictions and unique items');
  assert(vm.runInContext("DB.characters.every(c=>{const h=skillAffinity(c);return h.includes('affinity-good')||!c.good})",ctx),'Affinity facts survive the shared sign treatment');
+
+ for(const ch of reviewed.database.characters)for(const key of ['hp','str','mag','spd','dex','def','res','lck','cha','total']){
+  ctx.rankCharacterId=ch.id;ctx.rankStatKey=key;
+  const actual=vm.runInContext("rosterGrowthRank(DB.characters.find(c=>c.id===rankCharacterId),rankStatKey)",ctx),value=c=>key==='total'?Object.values(c.growth).reduce((n,v)=>n+Number(v||0),0):Number(c.growth[key]||0),rank=1+reviewed.database.characters.filter(c=>value(c)>value(ch)).length;
+  assert.equal(actual.rank,rank);assert.equal(actual.count,63);assert.equal(actual.ties,reviewed.database.characters.filter(c=>value(c)===value(ch)).length);
+ }
+ assert(vm.runInContext("(()=>{const c=DB.characters[7],before=rosterGrowthRank(c,'spd').rank,h=characterDataTable([c]);return h.includes('growth-total')&&h.includes('growth-rank')&&h.includes('proficiency-tag')&&h.includes('全图鉴')&&rosterGrowthRank(c,'spd').rank===before&&rosterGrowthCell(c,'total').includes('--growth-tone-')})()",ctx),'Filtered rosters retain full-dex ranks and a separately scaled total');
+ assert(vm.runInContext("(()=>{const h=proficiencyTag('剣術','D+');return h.includes('剑术')&&h.includes('D+')&&h.includes('sword.webp')&&(decorateSkillHTML(h).match(/<img/g)||[]).length===1})()",ctx),'Shared proficiency tags retain localized names, ranks and one icon');
+
  console.log('PASS reviewed skill judgments, source-linked recommendations, concise AND/OR qualification rows and special unlock hover.');
 
  console.log('PASS all 63 character acquisition grids, 166 sourced additions, conditional highlight reasons and cross-training permission checks.');
