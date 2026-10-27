@@ -668,7 +668,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(!styleCss.includes('@media(prefers-reduced-motion:reduce){}')&&!styleCss.includes('@media(max-width:700px){}'),'Empty media blocks removed');
  assert(!/\.search\s*\{[^}]*min-height/.test(fs.readFileSync(root+'design.css','utf8')),'design.css search residue removed');
  const counts=vm.runInContext("(()=>{const n=k=>buildAnnaIndex().filter(e=>e.kind===k).length;return {page:n('page'),character:n('character'),class:n('class'),ability:n('ability'),equipment:n('equipment'),gift:n('gift'),material:n('material'),place:n('place'),article:n('article')}})()",ctx);
- assert.equal(counts.page,16,'Site pages include integrated learning and planning views');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,reviewed.abilities.length,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.gift,124,'Gifts indexed');assert.equal(counts.article,18,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
+ assert.equal(counts.page,16,'Site pages include integrated learning and planning views');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,reviewed.abilities.length,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.gift,124,'Gifts indexed');assert.equal(counts.article,reviewed.articles.length,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
  assert(vm.runInContext("ARTICLES.every(a=>([a.sources||[],...a.sections.map(s=>s.sources||[])].flat()).length>0)",ctx),'Every article carries source citations');
  const best=q=>vm.runInContext(`(r=>({k:r.best?.e.kind,t:r.best?.e.title}))(annaSearch(${JSON.stringify(q)}))`,ctx);
  assert.deepEqual(best('xlk'),{k:'character',t:'西洛可'},'Pinyin acronym finds character');
@@ -891,7 +891,23 @@ vm.runInContext("rosterView='plans';family='all';familySet.clear();tier='all';ti
 assert(vm.runInContext("rosterPreferences().includes('data-family')&&rosterPreferences().includes('data-primary-route')&&rosterPreferences().includes('data-tier')",ctx));
 assert(vm.runInContext("rosterViewTabs().indexOf('赠礼指南')<rosterViewTabs().indexOf('角色对比')",ctx));
 const grid=vm.runInContext("skillRankGrid([DB.characters[0]],'all',unifiedLearningRows(DB.characters[0]))",ctx);
-assert(grid.includes('D / D+')&&grid.includes('rank-threshold">D+</span>')&&grid.includes('剑术Lv.1'));
+assert(grid.includes('C / C+')&&grid.includes('rank-threshold">C+</span>')&&grid.includes('骑士先阵'));
+assert(!grid.includes('剑术Lv.1')&&!grid.includes('白魔术Lv.5'),'Common levels are moved out of character learning');
+assert(grid.includes('剑术的奥妙'),'Character-specific high-rank skills remain visible');
+for(const c of reviewed.database.characters){
+ ctx.learningCharacterId=c.id;
+ assert(vm.runInContext("unifiedLearningRows(DB.characters.find(c=>c.id===learningCharacterId)).every(s=>!isCommonProficiencyLevel(s)&&!['levelSkills','personalSkills'].includes(s.learningKind))",ctx));
+}
+vm.runInContext("location.hash='#character/c0';paintCharacter('c0')",ctx);
+const focusedDetail=nodes['#characterPage'].innerHTML;
+assert(focusedDetail.includes('角色技能')&&focusedDetail.includes('冥炎之主'),'Unique and level skills remain in the character skill section');
+assert(!focusedDetail.includes('训练方向与停止线')&&!focusedDetail.includes('等级与条件技能')&&!focusedDetail.includes('detail-training'),'Removed duplicate learning and training sections');
+assert(focusedDetail.includes('href="#guides/proficiency-levels"'),'Character details link the standalone guide');
+assert(focusedDetail.includes('data-scroll="proficiency-learning"'),'Specialization learning remains discoverable in the directory');
+vm.runInContext("location.hash='#guides/proficiency-levels';render()",ctx);
+assert(nodes['#content'].innerHTML.includes('通用专精等级技能')&&nodes['#content'].innerHTML.includes('命中、回避＋7'),'Standalone guide renders shared effects');
+assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].innerHTML.includes('data-reference-type="ability"'),'Shared skills retain hover and acquisition details');
+
 console.log('PASS learning coverage: 256 sourced bindings, exact plus ranks, independent acquisition highlights, Lv family deduplication and shared roster filters.');
 
 }
