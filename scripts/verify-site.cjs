@@ -609,7 +609,7 @@ vm.runInContext("wbDraft.stages.at(-1).classId=wbClass('勇士').id",ctx);
 assert.equal(vm.runInContext('buildPlan(DB.characters[8]).end',ctx),'舞者','Unsaved edits do not mutate the applied plan');
 assert(vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('data-inline-edit')&&!vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('class="path-why"'),'Dossier has inline controls and no expanded rationale dump');
 assert(vm.runInContext('wbStats({hp:26.6},false)',ctx).includes('entry-stat-grid'),'Expected stats reuse the reference stat component');
-assert.equal(reviewed.abilities.length,488);
+assert.equal(reviewed.abilities.length,507);
 {
  const report=JSON.parse(fs.readFileSync(root+'../data/research/proficiency-coverage-2026-10-26.json','utf8'));
  assert.equal(report.addedBindings,1258);
@@ -891,7 +891,8 @@ vm.runInContext("rosterView='plans';family='all';familySet.clear();tier='all';ti
 assert(vm.runInContext("rosterPreferences().includes('data-family')&&rosterPreferences().includes('data-primary-route')&&rosterPreferences().includes('data-tier')",ctx));
 assert(vm.runInContext("rosterViewTabs().indexOf('赠礼指南')<rosterViewTabs().indexOf('角色对比')",ctx));
 const grid=vm.runInContext("skillRankGrid([DB.characters[0]],'all',unifiedLearningRows(DB.characters[0]))",ctx);
-assert(grid.includes('C / C+')&&grid.includes('rank-threshold">C+</span>')&&grid.includes('骑士先阵'));
+assert(['D','C','B','A','S'].every(r=>grid.includes('<th>'+r+'</th>'))&&grid.includes('骑士先阵'));
+assert(!grid.includes('rank-threshold')&&!grid.includes('其他条件')&&!grid.includes(' / '),'Rank headers are concise and cells omit duplicated rank prefixes');
 assert(!grid.includes('剑术Lv.1')&&!grid.includes('白魔术Lv.5'),'Common levels are moved out of character learning');
 assert(grid.includes('剑术的奥妙'),'Character-specific high-rank skills remain visible');
 for(const c of reviewed.database.characters){
@@ -907,6 +908,36 @@ assert(focusedDetail.includes('data-scroll="proficiency-learning"'),'Specializat
 vm.runInContext("location.hash='#guides/proficiency-levels';render()",ctx);
 assert(nodes['#content'].innerHTML.includes('通用专精等级技能')&&nodes['#content'].innerHTML.includes('命中、回避＋7'),'Standalone guide renders shared effects');
 assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].innerHTML.includes('data-reference-type="ability"'),'Shared skills retain hover and acquisition details');
+
+
+{
+ const report=JSON.parse(fs.readFileSync(root+'../data/research/all-character-learning-2026-10-27.json','utf8'));
+ assert.equal(report.characters.length,63);assert.equal(new Set(report.characters.map(c=>c.characterId)).size,63);
+ assert.equal(report.addedBindings,166);assert.equal(report.byKind.combatArts,76);assert.equal(report.byKind.learnedSkills,90);
+ for(const row of report.changes){
+  assert(new Set([...(row.evidence||[]).map(e=>new URL(e.url).hostname),...(row.membership?[new URL(row.membership.url).hostname]:[])]).size>=(row.verification==='explicit-character-table'?1:2));
+  if(row.verification==='explicit-character-table')assert(row.evidence.every(e=>e.url.startsWith('https://hyperwiki.jp/fefw/character/')&&e.desc));
+  assert(reviewed.learning[row.characterId][row.kind].some(s=>s.name===row.name&&s.rank===row.rank&&s.skill===row.skill));
+  assert(reviewed.abilities.some(a=>a.name===row.name&&a.acquisition.some(b=>b.characterId===row.characterId&&b.rank===row.rank&&b.skill===row.skill)));
+ }
+ const audits=[];
+ for(const ch of reviewed.database.characters){
+  ctx.auditCharacterId=ch.id;
+  const row=vm.runInContext(`(()=>{const c=DB.characters.find(c=>c.id===auditCharacterId),rows=unifiedLearningRows(c),visible=rows.filter(s=>/^([DCBAS])\\+?$/.test(s.rank||'')),highlighted=visible.filter(s=>acquisitionMerit(s,s.learningKind)).map(s=>({name:s.name,kind:s.learningKind,skill:s.skill,rank:s.rank,reason:acquisitionMerit(s,s.learningKind)})),grid=unifiedLearningTable(c),order=[...new Set(visible.map(s=>s.skill))].sort((a,b)=>PROFICIENCY_ORDER.indexOf(a)-PROFICIENCY_ORDER.indexOf(b));return {characterId:c.id,name:c.cn,highlighted,electives:crossTrainingOptions(c).map(s=>s.name),recommendedSkills:recommendations(c).skills.map(s=>s.name),order,ordered:order.every((s,i)=>!i||grid.indexOf('>'+s+'</th>')>grid.indexOf('>'+order[i-1]+'</th>')),other:grid.includes('其他条件'),rankPrefix:grid.includes('rank-threshold')}})()`,ctx);
+  assert(row.ordered&&!row.other&&!row.rankPrefix,'All character grids use the shared specialization order: '+ch.cn);
+  assert(row.highlighted.every(s=>!s.name.endsWith('的奥妙')&&!/Lv\./.test(s.name)),'Generic proficiency upgrades are not indiscriminate recommendations: '+ch.cn);
+  assert(!row.electives.some(n=>n.endsWith('的奥妙')),'No S+ magic mastery as a generic cross-training target: '+ch.cn);
+  audits.push(row);
+ }
+ assert(vm.runInContext("acquisitionMerit({name:'双重攻击',description:'连续攻击2次（每次伤害为90%）'},'combatArts').length>0",ctx),'Damage scaling percentages are not proc chances');
+ assert.equal(vm.runInContext("acquisitionMerit({name:'白魔术的奥妙',description:'装备白魔法时，命中、回避+10，攻击力+3'},'learnedSkills')",ctx),'');
+ assert(vm.runInContext("!usableTrainingSkill({description:'装备白魔法时，命中+10'},{allowed:new Set(['黑魔术']),healer:false,caster:true})",ctx),'Black magic permission does not satisfy a white magic condition');
+ assert(vm.runInContext("usableTrainingSkill({description:'装备弓或魔法时，命中+10'},{allowed:new Set(['白魔术']),healer:true,caster:false})",ctx),'Generic magic conditions accept white magic');
+ assert(audits.find(a=>a.characterId==='c7').highlighted.some(s=>s.name==='鼓舞重击'));
+ assert(audits.find(a=>a.characterId==='c30').highlighted.some(s=>/^体格|重装移动术/.test(s.name)));
+ if(process.env.FE_WRITE_LEARNING_AUDIT)fs.writeFileSync(process.env.FE_WRITE_LEARNING_AUDIT,JSON.stringify({checkedAt:'2026-10-27',policy:'Highlights identify concrete tactical or training benefits, not an instruction to acquire every skill. Generic proficiency levels and S+ mysteries are excluded; exact ranks and restrictions remain in hover/details.',characters:audits},null,2)+'\n');
+ console.log('PASS all 63 character acquisition grids, 166 sourced additions, conditional highlight reasons and cross-training permission checks.');
+}
 
 console.log('PASS learning coverage: 256 sourced bindings, exact plus ranks, independent acquisition highlights, Lv family deduplication and shared roster filters.');
 
