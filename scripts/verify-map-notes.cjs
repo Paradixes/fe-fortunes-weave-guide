@@ -9,7 +9,7 @@ assert.equal(run("mapNotePoint(350,250,{left:100,top:50,width:1000,height:800}).
 assert.equal(run("mapNotePoint(350,250,{left:100,top:50,width:1000,height:800}).y"),25);
 run("newMapNote(25,35,'材料');writeMapNotes([mapNoteDraft]);closeMapNoteEditor()");assert.equal(run('readMapNotes()[0].title'),'材料');
 run("mapNoteDraft={...mapNotes[0],title:'<b>标题</b>'};writeMapNotes([mapNoteDraft])");assert(run('personalMapPins()').includes('&lt;b&gt;标题&lt;/b&gt;'));assert(!run('personalMapPins()').includes('<b>标题</b>'));
-assert(run('mapPage()').includes('我的标记'));run("mapNoteDraft=null;var mapSelected='place-1'");assert(run("mapNotePopover()").includes('保存为我的标记'));assert(!run("mapPinDetail('place-1')").includes('data-note-place'));run("mapNoteDraft={...mapNotes[0]}");
+assert(run('mapPage()').includes('我的标记'));run("mapNoteDraft=null;var mapSelected='place-1'");assert(run("mapNotePopover()").includes('存为标记')&&run("mapNotePopover()").includes('map-popover-brief'));assert(!run("mapPinDetail('place-1')").includes('data-note-place'));run("mapNoteDraft={...mapNotes[0]}");
 const before=run('JSON.stringify(mapNotes)');storageFails=true;assert.equal(run('writeMapNotes([])'),false);assert.equal(run('JSON.stringify(mapNotes)'),before);storageFails=false;
 const form={id:'mapNoteEditor',elements:{title:{value:'  更新标题  '},icon:{value:'矿石'}}};events.submit({target:form,preventDefault(){}});assert.equal(run('readMapNotes()[0].title'),'更新标题');assert.equal(run('readMapNotes()[0].icon'),'矿石');
 run('mapNoteDraft={...mapNotes[0]}');events.click({target:{closest:()=>({hasAttribute:k=>k==='data-note-delete'})},preventDefault(){},stopImmediatePropagation(){}});assert.equal(run('readMapNotes().length'),0);

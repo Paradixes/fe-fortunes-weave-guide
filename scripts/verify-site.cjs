@@ -878,7 +878,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  vm.runInContext('saveMapBatch()',ctx);const savedCount=vm.runInContext('mapNotes.length',ctx);
  assert(savedCount===batchPlan.locations.length&&vm.runInContext("readMapNotes().every(n=>n.group==='回归物资组'&&n.items.length)",ctx),'Batch groups and target items persist in browser storage');
  vm.runInContext('mapBatchSelected=new Set(collectionNeeds().map(n=>n.key));saveMapBatch()',ctx);assert.equal(vm.runInContext('mapNotes.length',ctx),savedCount,'Saving the same group and places updates existing notes');
- assert(vm.runInContext("(mapNoteDraft=null,mapSelected=PINS.find(p=>Math.abs(p.x-mapNotes[0].x)<.0001&&Math.abs(p.y-mapNotes[0].y)<.0001).id,mapNotePopover().includes('编辑我的标记'))",ctx),'Saved map places expose their edit action');
+ assert(vm.runInContext("(mapNoteDraft=null,mapSelected=PINS.find(p=>Math.abs(p.x-mapNotes[0].x)<.0001&&Math.abs(p.y-mapNotes[0].y)<.0001).id,mapNotePopover().includes('编辑标记'))",ctx),'Saved map places expose their edit action');
  // Catalogue redesign: data and conditions remain complete across the new navigation.
  vm.runInContext("query='';equipmentType='all';materialKindFilter='all';location.hash='#materials';render()",ctx);
  assert(nodes['#pageNav'].innerHTML.includes('href="#materials"')&&!nodes['#pageNav'].innerHTML.includes('href="#gifts"'),'Materials have a separate sidebar entry; gifts belong to characters');
@@ -886,7 +886,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(vm.runInContext("materialKindFilter='forge';materialRowsFor(EQUIPMENT).every(r=>r.forgeUses.length>0)",ctx),'Forge category only contains forging materials');
  assert(vm.runInContext("materialKindFilter='exchange';materialRowsFor(EQUIPMENT).every(r=>r.uses.length>0)",ctx),'Exchange category only contains exchange materials');
  assert(vm.runInContext("DB.classes.every(c=>{const h=classRequirementTokens(c);return [...c.must,...c.any].every(([n,r])=>h.includes(n)&&h.includes(r))&&!h.includes('任选其一')&&(c.any.length<2||h.includes('或'))})",ctx),'Qualification names, ranks and OR semantics survive compact tokens');
- assert(vm.runInContext("EQUIPMENT.every(e=>{const h=equipmentTable([e]);return equipmentMetrics(e).every(([,k,v])=>h.includes(k)&&h.includes(esc(v)))})",ctx),'Weapon and nonweapon statistics are retained in the dense catalogue');
+ assert(vm.runInContext("EQUIPMENT.every(e=>{const h=equipmentTable([e]);return equipmentMetrics(e).every(([,k,v])=>h.includes(k)&&h.includes(esc(v))||/^[+]?0$/.test(String(v).trim()))})",ctx),'Weapon and nonweapon statistics are retained in the dense catalogue (zero-valued extras omitted)');
  vm.runInContext("giftCategoryFilter='all';giftCharacterFilter='';location.hash='#characters/gifts';render()",ctx);
  assert(nodes['#content'].innerHTML.includes('gift-character-table')&&nodes['#content'].innerHTML.includes('赠礼指南'),'Gifts render within the roster');
  assert(!nodes['#content'].innerHTML.includes('gift-char-card'),'Gift preferences use comparable rows instead of cards');
