@@ -34,4 +34,4 @@ preferencePlan=function(){return dancerPlanningPanel()+reviewedPreferencePlan();
 const reviewedThirdPartPlanning=thirdPartPlanning;
 thirdPartPlanning=function(){return dancerPlanningPanel()+reviewedThirdPartPlanning();};
 const reviewedSources=sources;
-sources=function(){return reviewedSources()+`<section class="video-review-source"><h2>全角色视频复审</h2><p>${link(CATALOG.sources.biliCharacterReview[1],CATALOG.sources.biliCharacterReview[0])}</p><p>评级与职业分工为本站结合资料后的编辑判断；未核实的口播技能、固定职业权限和压级玩法不直接写入事实数据。</p></section>`;};
+sources=function(){return reviewedSources()+`<section class="video-review-source"><h2>全角色视频复审</h2><p>${link(CATALOG.sources.biliCharacterReview[1],CATALOG.sources.biliCharacterReview[0])}</p><p>视频观点用于职责分析与培养建议；技能效果与职业权限采用资料库的统一记录。</p></section>`;};

@@ -84,7 +84,11 @@ def export_catalog(db):
 def cache_bundles(db, directory):
     with sqlite3.connect(db) as conn:
         for name in ("catalog.js", "roster.json", "learning.json", "map.json", "map-extras.json"):
-            conn.execute("INSERT OR REPLACE INTO bundles VALUES (?,?)", (name, (Path(directory) / name).read_bytes()))
+            content = (Path(directory) / name).read_bytes()
+            current = conn.execute("SELECT content FROM bundles WHERE name=?", (name,)).fetchone()
+            if current is not None and bytes(current[0]) == content:
+                continue
+            conn.execute("INSERT OR REPLACE INTO bundles VALUES (?,?)", (name, content))
 
 
 if __name__ == "__main__":
