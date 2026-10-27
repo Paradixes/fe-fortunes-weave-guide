@@ -64,3 +64,12 @@ button[data-reference-type],button[data-class],button[data-gear],button[data-cha
 .char-card .mini-career-options .mini-career-link{border:0;border-radius:6px;padding:2px 4px;background:transparent;font-weight:650;color:var(--ink)}
 .char-card .mini-career-options .mini-career-link+.mini-career-link{color:var(--muted);font-weight:500}
 .char-card .mini-career-options .mini-career-link:hover{background:color-mix(in srgb,var(--tint) 75%,transparent);color:var(--purple);text-decoration:none}
+
+/* Keep the shared proficiency reference readable within a phone-width article. */
+.article-layout[data-article-id="proficiency-levels"] .article-table table{min-width:0;width:100%;table-layout:fixed}
+.article-layout[data-article-id="proficiency-levels"] .article-table :is(th,td){white-space:normal;overflow-wrap:anywhere}
+.article-layout[data-article-id="proficiency-levels"] #article-effects :is(th,td):nth-child(1){width:27%}
+.article-layout[data-article-id="proficiency-levels"] #article-effects :is(th,td):nth-child(2){width:24%}
+.article-layout[data-article-id="proficiency-levels"] #article-lookup :is(th,td):nth-child(1){width:16%}
+.article-layout[data-article-id="proficiency-levels"] #article-lookup :is(th,td):nth-child(2){width:56%}
+.article-layout[data-article-id="proficiency-levels"] .inline-entity-link{max-width:100%;white-space:normal;vertical-align:middle}
