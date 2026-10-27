@@ -586,7 +586,20 @@ for(const p of ['overview','characters','classes','training','calculator','equip
 assert(vm.runInContext("!training().includes('id=\"custom-workbench\"')&&pages.calculator==='自定义养成'",ctx),'Calculator has its own navigation page');
 assert(vm.runInContext("!careerDiagram(DB.characters[7]).includes('role=\"tablist\"')&&careerDiagram(DB.characters[7]).includes('永久属性期望')",ctx),'Career stages are a flat horizontal graph');
 console.log('PASS v86 integration: persistent workbench controls, 63 matching draft entries, 60 career previews, compact rationale and six primary pages.');
-vm.runInContext(fs.readFileSync(root+'refinements.js','utf8'),ctx);vm.runInContext(fs.readFileSync(root+'skill-ui.js','utf8'),ctx);vm.runInContext(fs.readFileSync(root+'map-notes.js','utf8'),ctx);vm.runInContext(fs.readFileSync(root+'collection.js','utf8'),ctx);
+// Mastery rewards use skill previews; profession names retain class previews.
+for(const cl of vm.runInContext('DB.classes',ctx)){
+ ctx.masteryClassId=cl.id;
+ const probe=vm.runInContext(`(()=>{const cl=DB.classes.find(c=>c.id===masteryClassId),a=CATALOG.abilities.find(a=>a.name===cl.col_37&&a.type===masteryEffect(cl)?.type)||CATALOG.abilities.find(a=>a.name===cl.col_37),html=classTable([cl]);return {a,html,cell:html.split('class="catalog-mastery"')[1]}})()`,ctx);
+ assert(probe.a,'Mastery ability exists: '+cl.cn);
+ assert(probe.cell.includes('data-reference-type="ability" data-reference-id="'+probe.a.id+'"'),'Mastery reward uses ability preview: '+cl.cn);
+ assert(!probe.cell.includes('data-reference-type="class"'),'Mastery reward must not open class preview: '+cl.cn);
+ assert(probe.html.includes('data-reference-type="class" data-reference-id="'+cl.id+'"'),'Profession name keeps class preview: '+cl.cn);
+}
+vm.runInContext(fs.readFileSync(root+'refinements.js','utf8'),ctx);
+for(const cl of vm.runInContext('DB.classes',ctx)){
+ ctx.masteryClassId=cl.id;
+ assert(vm.runInContext(`(()=>{const cl=DB.classes.find(c=>c.id===masteryClassId),a=abilityName(cl.col_37,masteryEffect(cl)?.type),html=quickReferenceHTML('ability',a.id);return html.includes(esc(a.description))&&html.includes('关闭技能速览')})()`,ctx),'Mastery hover shows canonical skill effect: '+cl.cn);
+}vm.runInContext(fs.readFileSync(root+'skill-ui.js','utf8'),ctx);vm.runInContext(fs.readFileSync(root+'map-notes.js','utf8'),ctx);vm.runInContext(fs.readFileSync(root+'collection.js','utf8'),ctx);
 assert.equal(vm.runInContext("abilityCondition({method:'法术习得',skill:'黑魔术',rank:'D',condition:'暂译名（英 Freeze），游戏内中文名待确认；数值来自 Game8 英文版',uncertain:true})",ctx),'法术习得 · 黑魔术 · D');
 assert.equal(vm.runInContext("abilityGameplayNote('暂译名；第三部加入后习得；数据来自 GameWith 魔法一览')",ctx),'第三部加入后习得');
 assert.equal(vm.runInContext("abilityConditionGroups([{method:'法术习得',skill:'黑魔术',rank:'C'},{method:'法术习得',skill:'黑魔术',rank:'D'},{method:'法术习得',skill:'黑魔术',rank:'D'}]).join('|')",ctx),'法术习得 · 黑魔术 · D／C');
