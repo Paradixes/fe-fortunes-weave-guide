@@ -1,0 +1,4760 @@
+{
+  "checkedAt": "2026-10-27",
+  "policy": "Highlights identify concrete tactical or training benefits, not an instruction to acquire every skill. Generic proficiency levels and S+ mysteries are excluded; exact ranks and restrictions remain in hover/details.",
+  "characters": [
+    {
+      "characterId": "c0",
+      "name": "凯伊",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "高速飞行术+",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "骑兵移动术",
+          "kind": "learnedSkills",
+          "skill": "马术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "骑士先阵+",
+          "kind": "learnedSkills",
+          "skill": "马术",
+          "rank": "S",
+          "reason": "命中、攻速或生存补强；留意发动条件"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "重装移动术+1",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "裂空",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可选魔法伤害手段；按自身魔力与敌方魔防判断收益"
+        },
+        {
+          "name": "脱离射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "投掷魔斧",
+        "骑兵移动术",
+        "裂空"
+      ],
+      "recommendedSkills": [
+        "骑兵移动术",
+        "冥炎之主",
+        "枪术Lv.4",
+        "骑士先阵+",
+        "剑术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c1",
+      "name": "古扎岚",
+      "highlighted": [
+        {
+          "name": "短兵相接+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "重装移动术+1",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "脱离射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "B",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "攻势指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "双刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        }
+      ],
+      "electives": [
+        "步行移动术",
+        "守护旋风",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "步行移动术",
+        "即时回避",
+        "心情上佳+",
+        "剑术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c2",
+      "name": "迪托利希",
+      "highlighted": [
+        {
+          "name": "短兵相接+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "步行移动术+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S+",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "穿行",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "影眩之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "攻势指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "步行移动术",
+        "威吓",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "骑士的感觉",
+        "兽之冲动",
+        "剑术Lv.5",
+        "短兵相接+"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c3",
+      "name": "奇洛伊卡",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "脱离射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "乱射",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "A",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "乱射",
+        "威吓",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "判读风向",
+        "威迫+",
+        "弓术Lv.4",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c4",
+      "name": "绯亚娜",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "体格+",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "S+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "魔法指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可选魔法伤害手段；按自身魔力与敌方魔防判断收益"
+        },
+        {
+          "name": "雷斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "可选魔法伤害手段；按自身魔力与敌方魔防判断收益"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "用心一击",
+        "安定射击",
+        "步行移动术"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "信仰的恩赐+",
+        "安定射击+",
+        "黑魔术Lv.5",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c5",
+      "name": "赛奥朵拉",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "重破坏+",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "条件型爆发或生存补强；概率发动，不能视为稳定收益"
+        },
+        {
+          "name": "重破坏",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "条件型爆发或生存补强；概率发动，不能视为稳定收益"
+        },
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "牵制+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "牵制",
+        "攻击阵形",
+        "前线计略术"
+      ],
+      "recommendedSkills": [
+        "攻击阵形",
+        "牵制",
+        "前线计略术",
+        "毁坏",
+        "直击"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c6",
+      "name": "索绯雅",
+      "highlighted": [
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "魔法指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "用心一击",
+        "远程圣疗",
+        "狙击回避"
+      ],
+      "recommendedSkills": [
+        "远程治愈+",
+        "狙击回避",
+        "白魔术Lv.5",
+        "斧术Lv.4",
+        "格斗术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c7",
+      "name": "蕾达",
+      "highlighted": [
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "穿行",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "步行移动术+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S+",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "影眩之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "佯攻拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "鼓舞重击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "阳炎",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "步行移动术",
+        "佯攻",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "判读风向",
+        "即时回避",
+        "即兴",
+        "剑术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c8",
+      "name": "卡塔妮雅",
+      "highlighted": [
+        {
+          "name": "奇袭",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "命中、攻速或生存补强；留意发动条件"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "霞切",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "速突",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "C",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "高速飞行术",
+        "占地+",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "高速飞行术",
+        "以风为友+",
+        "佯攻",
+        "占地+",
+        "飞行战斗术"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c9",
+      "name": "杨界",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "魔法指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "托隆",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "短兵相接",
+        "活力结界+",
+        "即时回避"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c10",
+      "name": "马吉迪",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "威吓",
+        "牵制",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "牵制",
+        "骑士的感觉",
+        "无所畏惧+",
+        "斧术Lv.4"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c11",
+      "name": "妮涅",
+      "highlighted": [
+        {
+          "name": "骑兵移动术",
+          "kind": "learnedSkills",
+          "skill": "马术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "D",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "抵抗魔装",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "合围之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "攻势指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "雾刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "攻势指挥+",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "A",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "暗黑射线",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "威吓",
+        "致命回避",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "精灵的引导+",
+        "威吓",
+        "判读风向",
+        "致命回避",
+        "白魔术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c12",
+      "name": "哪吒",
+      "highlighted": [
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "绝境回避",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "踏步烈风",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "彷徨之壁",
+          "kind": "magic",
+          "skill": "黑魔术",
+          "rank": "D",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "踏步烈风",
+        "佯攻",
+        "绝境回避"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "绝境回避",
+        "我停不下来+",
+        "闪身",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c13",
+      "name": "努佐",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "双刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "双刃",
+        "牵制",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "骑士的感觉",
+        "秘奥+",
+        "即时回避",
+        "剑术Lv.1"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c14",
+      "name": "亚历珊德拉",
+      "highlighted": [
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "抵抗魔装",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "霞切",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "C",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "B",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "踏步烈风",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "攻速指挥+",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "A",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "攻速指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        }
+      ],
+      "electives": [
+        "霞切",
+        "高速飞行术",
+        "踏步烈风"
+      ],
+      "recommendedSkills": [
+        "高速飞行术",
+        "飞翔+",
+        "飞行战斗术",
+        "枪术Lv.4",
+        "剑术的奥妙"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c15",
+      "name": "皮特鲁",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "步行移动术+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S+",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "合围之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "双重攻击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "速突",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "C",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "占地+",
+        "对狙击战术",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "占地+",
+        "对狙击战术",
+        "骑士的感觉",
+        "误差修正+",
+        "弓术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c16",
+      "name": "媞雅拉",
+      "highlighted": [
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "攻势指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "防卫指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D+",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "魔法指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "攻势指挥+",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "防卫指挥+",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "B+",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "护身枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "C",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "半劈刺",
+        "用心一击",
+        "安定射击"
+      ],
+      "recommendedSkills": [
+        "安定射击",
+        "军师的炯眼+",
+        "白魔术Lv.5",
+        "斧术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c17",
+      "name": "伊欧",
+      "highlighted": [
+        {
+          "name": "防枪术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "D",
+          "reason": "命中、攻速或生存补强；留意发动条件"
+        },
+        {
+          "name": "骑兵移动术",
+          "kind": "learnedSkills",
+          "skill": "马术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "愤怒激发",
+        "骑兵移动术",
+        "威吓"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "骑兵移动术",
+        "骑乘突击+",
+        "枪术Lv.4",
+        "骑士先阵"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c18",
+      "name": "哥莱亚斯",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "防御阵形",
+        "威吓",
+        "绝对防御+"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "绝对防御+",
+        "防御阵形",
+        "压制+",
+        "斧术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "斧术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c19",
+      "name": "丹提",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "防卫指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "用心一击",
+        "安定射击",
+        "托隆"
+      ],
+      "recommendedSkills": [
+        "安定射击",
+        "追加演出+",
+        "黑魔术Lv.5",
+        "剑术Lv.1",
+        "格斗术Lv.1"
+      ],
+      "order": [
+        "枪术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c20",
+      "name": "盖茨",
+      "highlighted": [
+        {
+          "name": "防弓术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "D",
+          "reason": "命中、攻速或生存补强；留意发动条件"
+        },
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "安全攻击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "安全攻击",
+        "佯攻+",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "佯攻+",
+        "判读风向",
+        "牙闪+",
+        "枪术Lv.4",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c21",
+      "name": "艾丝梅拉尔达",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "防弓术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "命中、攻速或生存补强；留意发动条件"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "高速飞行术+",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "重破坏",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "条件型爆发或生存补强；概率发动，不能视为稳定收益"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "短兵相接+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "二连投掷",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "守护尖刺",
+        "防弓术",
+        "威吓"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "防弓术",
+        "投枪达人+",
+        "枪术Lv.5",
+        "体格"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c22",
+      "name": "法毕欧",
+      "highlighted": [
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "魔法指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "佯攻拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可选魔法伤害手段；按自身魔力与敌方魔防判断收益"
+        }
+      ],
+      "electives": [
+        "用心一击",
+        "佯攻拳",
+        "安定射击+"
+      ],
+      "recommendedSkills": [
+        "安定射击+",
+        "暗之秘术+",
+        "剑术Lv.3",
+        "格斗术Lv.4",
+        "黑魔术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c23",
+      "name": "诺克裘拉",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "退身拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "B",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "阳炎",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "战斗强打",
+        "阳炎",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "短兵相接",
+        "专注领域+",
+        "斧术Lv.2",
+        "剑术Lv.1"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c24",
+      "name": "罗蕾塔",
+      "highlighted": [
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "霞切",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "阳炎",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "阳炎",
+        "佯攻",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "佯攻",
+        "状态绝佳+",
+        "剑术Lv.3",
+        "枪术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c25",
+      "name": "西提司",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "正义执行+",
+        "枪术Lv.4",
+        "剑术Lv.3",
+        "斧术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c26",
+      "name": "波拿帕尔特",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "攻势指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "攻势指挥+",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "魔刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "可选魔法伤害手段；按自身魔力与敌方魔防判断收益"
+        },
+        {
+          "name": "鼓舞重击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "安定射击",
+        "魔刃",
+        "鼓舞重击"
+      ],
+      "recommendedSkills": [
+        "安定射击",
+        "补充说明+",
+        "狙击回避",
+        "剑术Lv.3",
+        "黑魔术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c27",
+      "name": "托比亚斯",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "短兵相接+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "三段尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "A",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "三段尖刺",
+        "威吓",
+        "绝对防御+"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "绝对防御+",
+        "认真的一击+",
+        "斧术Lv.4",
+        "体格"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c28",
+      "name": "哈尔温",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "佯攻",
+        "判读风向",
+        "骑士先阵"
+      ],
+      "recommendedSkills": [
+        "骑士先阵",
+        "佯攻",
+        "判读风向",
+        "阻滞+",
+        "弓术Lv.2"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c29",
+      "name": "沙兰",
+      "highlighted": [
+        {
+          "name": "退身拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可选魔法伤害手段；按自身魔力与敌方魔防判断收益"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "退身拳",
+        "投掷魔斧",
+        "救出"
+      ],
+      "recommendedSkills": [
+        "注意唤起+",
+        "白魔术Lv.5",
+        "斧术Lv.4",
+        "格斗术Lv.4",
+        "防御阵形"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c30",
+      "name": "巴卡尼亚",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "牵制+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "短兵相接+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "D",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "防弓术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "命中、攻速或生存补强；留意发动条件"
+        },
+        {
+          "name": "重装移动术+1",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "射足",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "重装移动术+1",
+        "防御阵形",
+        "守护尖刺"
+      ],
+      "recommendedSkills": [
+        "重装移动术+1",
+        "防御阵形",
+        "回礼一击+",
+        "防弓术",
+        "枪术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c31",
+      "name": "西洛可",
+      "highlighted": [
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "合围之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "雾刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可选魔法伤害手段；按自身魔力与敌方魔防判断收益"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "流风枪",
+        "步行移动术",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "步行移动术",
+        "狙击回避",
+        "随风而行+",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c32",
+      "name": "穆",
+      "highlighted": [
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "奇袭",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "命中、攻速或生存补强；留意发动条件"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "佯攻拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "B",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "射足",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "双刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "愤怒激发",
+        "步行移动术",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "佯攻",
+        "强战士之血+",
+        "格斗术的奥妙",
+        "格斗术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c33",
+      "name": "奥琳琵娅",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "安定射击",
+        "攻击阵形",
+        "威吓"
+      ],
+      "recommendedSkills": [
+        "激情圣吸+",
+        "攻击阵形",
+        "威吓",
+        "安定射击+"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c34",
+      "name": "米迦艾拉",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "牵制+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "短兵相接+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "重装移动术",
+        "愤怒激发",
+        "牵制"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "重装移动术",
+        "铁血+",
+        "绝对防御",
+        "枪术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c35",
+      "name": "努蒂奴",
+      "highlighted": [
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "托隆",
+        "防御阵形",
+        "对骑兵战术"
+      ],
+      "recommendedSkills": [
+        "对骑兵战术",
+        "防御阵形",
+        "骑士先阵",
+        "疾驱+",
+        "斧术Lv.2"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c36",
+      "name": "大刀",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "重破坏",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "条件型爆发或生存补强；概率发动，不能视为稳定收益"
+        },
+        {
+          "name": "重破坏+",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B+",
+          "reason": "条件型爆发或生存补强；概率发动，不能视为稳定收益"
+        },
+        {
+          "name": "攻势指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "彷徨之壁",
+          "kind": "magic",
+          "skill": "黑魔术",
+          "rank": "D",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "骑士的感觉",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "判读风向",
+        "全力+",
+        "斧术Lv.3",
+        "重破坏+"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c37",
+      "name": "易尼奥尼",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "绝境回避",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "攻击阵形",
+        "骑士的感觉",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "攻击阵形",
+        "骑士的感觉",
+        "判读风向",
+        "贯穿+",
+        "弓术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c38",
+      "name": "嘉丝敏",
+      "highlighted": [
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "重装移动术",
+        "防御阵形",
+        "守护尖刺"
+      ],
+      "recommendedSkills": [
+        "重装移动术",
+        "防御阵形",
+        "怒涛反击+",
+        "枪术Lv.4",
+        "追击防御"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c39",
+      "name": "莉利安",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "合围之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人走位或为后续攻击补命中；留意持续时间"
+        },
+        {
+          "name": "霞切",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "退身拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "安定射击",
+        "步行移动术",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "判读风向",
+        "步行移动术",
+        "感觉不错+",
+        "即时回避",
+        "弓术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c40",
+      "name": "莱桑达",
+      "highlighted": [
+        {
+          "name": "牵制+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "骑兵移动术",
+          "kind": "learnedSkills",
+          "skill": "马术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "高速飞行术+",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "S",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "防枪术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "命中、攻速或生存补强；留意发动条件"
+        },
+        {
+          "name": "攻速指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "骑兵移动术",
+        "佯攻",
+        "牵制+"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "牵制+",
+        "骑兵移动术",
+        "骑士先阵",
+        "加速+"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c41",
+      "name": "希蒙",
+      "highlighted": [
+        {
+          "name": "攻势指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "威吓",
+        "骑士的感觉",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "骑士的感觉",
+        "判读风向",
+        "恶运+",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c42",
+      "name": "札可捏",
+      "highlighted": [
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "威吓"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "短兵相接",
+        "卑劣+",
+        "剑术Lv.3",
+        "枪术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c43",
+      "name": "班迪兹",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [
+        "战车手+",
+        "弓术Lv.3",
+        "突击态势"
+      ],
+      "order": [
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c44",
+      "name": "露露蒂雅",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "短兵相接",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "速突",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "C",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "速突",
+        "牵制",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "骑士的感觉",
+        "看破+",
+        "剑术Lv.3",
+        "枪术Lv.4"
+      ],
+      "order": [
+        "枪术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c45",
+      "name": "佩佩",
+      "highlighted": [
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [
+        "王之威光+",
+        "剑术Lv.3",
+        "枪术Lv.4",
+        "熟练之技",
+        "即时回避"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c46",
+      "name": "迪雅各",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "牵制",
+        "闪身"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "闪身",
+        "毫不留情+",
+        "剑术Lv.3",
+        "枪术Lv.4"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c47",
+      "name": "乌修拉",
+      "highlighted": [
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "用心一击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "警戒射击",
+        "佯攻",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "佯攻",
+        "好机+",
+        "剑术Lv.3",
+        "弓术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c48",
+      "name": "杰斯塔",
+      "highlighted": [
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "雾刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "B",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "流风枪",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "判读风向",
+        "瞬刃+",
+        "剑术Lv.3",
+        "枪术Lv.4",
+        "熟练之技"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "步兵术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c49",
+      "name": "乌尔坦德",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        }
+      ],
+      "electives": [
+        "牵制",
+        "要害回避",
+        "防御阵形"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "防御阵形",
+        "平安祈祷+",
+        "枪术Lv.4",
+        "白魔术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c50",
+      "name": "齐利科",
+      "highlighted": [
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [
+        "圣盾",
+        "体力强化"
+      ],
+      "order": [
+        "枪术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c51",
+      "name": "内森",
+      "highlighted": [
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [
+        "圣盾",
+        "体力强化"
+      ],
+      "order": [
+        "斧术",
+        "黑魔术",
+        "白魔术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c52",
+      "name": "欧露赫露",
+      "highlighted": [
+        {
+          "name": "魔法指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "防御阵形",
+        "群体圣疗"
+      ],
+      "recommendedSkills": [
+        "动态预测",
+        "防御阵形",
+        "调魂+",
+        "白魔术Lv.5",
+        "斧术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c53",
+      "name": "谭利穆恩",
+      "highlighted": [
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "圣疗",
+        "圣愈",
+        "远程圣疗"
+      ],
+      "recommendedSkills": [
+        "熟练炮手",
+        "胜利之风",
+        "白魔术Lv.5",
+        "技巧咒缚"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c54",
+      "name": "贝特兰",
+      "highlighted": [
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "踏步烈风",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "狂乱",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "踏步烈风"
+      ],
+      "recommendedSkills": [
+        "后之先",
+        "斧术Lv.3",
+        "剑术Lv.3",
+        "格斗术Lv.2",
+        "熟练之技"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c55",
+      "name": "爱娜特莉亚",
+      "highlighted": [
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "霞切",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "攻速指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "反击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "A",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "霞切",
+        "步行移动术",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "佯攻",
+        "连贯圆滑+",
+        "闪身+",
+        "即时回避"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c56",
+      "name": "盛托利翁",
+      "highlighted": [
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [
+        "枪术Lv.4",
+        "斧术Lv.4",
+        "大反击",
+        "集中反击",
+        "阻绝"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c57",
+      "name": "库拉普卡",
+      "highlighted": [
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "圣治",
+        "救援"
+      ],
+      "recommendedSkills": [
+        "圣盾",
+        "不退架势",
+        "体力强化"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c58",
+      "name": "救世主",
+      "highlighted": [
+        {
+          "name": "冰枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "A+",
+          "reason": "可选魔法伤害手段；按自身魔力与敌方魔防判断收益"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "攻势指挥++",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "S",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "防卫指挥++",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "S",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "守护尖刺",
+        "冰枪"
+      ],
+      "recommendedSkills": [
+        "烈日的加护+",
+        "圣盾",
+        "枪术的奥妙",
+        "体力强化"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c59",
+      "name": "红花",
+      "highlighted": [
+        {
+          "name": "流风枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "D",
+          "reason": "提供回避、攻速或承伤补强；留意发动与追击条件"
+        },
+        {
+          "name": "魔法指挥",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "可选队伍增益；消耗行动，按队伍需求使用"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [
+        "托隆",
+        "骑士的感觉",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "判读风向",
+        "魔力增幅+",
+        "格斗术Lv.1",
+        "技巧咒缚"
+      ],
+      "order": [
+        "枪术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c60",
+      "name": "特洛伊亚",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "可选补强目标；按武器重量、兵种和发动条件取舍"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "A+",
+          "reason": "连续攻击或反击控制；需对应武器，留意耐久与命中"
+        },
+        {
+          "name": "鼓舞重击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "A+",
+          "reason": "可在本张地图累计强化；需先使用对应武器战技"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A+",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A+",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "可选群体治疗、控制或防护法术；留意职业权限与使用次数"
+        }
+      ],
+      "electives": [
+        "休息",
+        "安定射击"
+      ],
+      "recommendedSkills": [
+        "安定射击",
+        "改造+",
+        "攻击&远离"
+      ],
+      "order": [
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c61",
+      "name": "亚丝望",
+      "highlighted": [],
+      "electives": [],
+      "recommendedSkills": [
+        "状态不错",
+        "射击专家"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c62",
+      "name": "塔霍尼雅",
+      "highlighted": [
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "机动或辅助功能；留意兵种、射程与使用次数"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    }
+  ]
+}
