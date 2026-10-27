@@ -1,8 +1,8 @@
 name: Deploy production
 
+# Production deploys run from a workstation with scripts/deploy.sh; uploads from
+# GitHub runners to the server stall on port 22. Kept only as a manual fallback.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

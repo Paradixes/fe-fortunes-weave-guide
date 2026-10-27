@@ -39,9 +39,11 @@ python3 server/catalog_server.py --db data/catalog.sqlite3 --port 18776
 
 服务器配置均为通用示例；部署时填写自己的域名和路径。请勿提交密钥、环境变量、本机状态或真实服务器地址。
 
-## GitHub Actions 自动部署
+## 部署
 
-`.github/workflows/deploy.yml` 在推送到 `main` 时自动发布，也可在 Actions 中手动运行。其他分支不会部署。先校验攻略、计算器、SQLite 和公开文件，再通过 SSH 上传运行文件。服务器核对静态资料与 SQLite 一致后切换版本，重启数据服务，并检查本地 API、网站 HTTPS 和发布版本；失败时恢复原版本。部署串行执行，不中断正在发布的任务。
+生产环境从本机手动部署：先把提交推送到 `main`，再运行 `scripts/deploy.sh`。脚本要求 `HEAD` 与 `origin/main` 一致，用 `git archive` 取干净副本，避免带上未提交或未跟踪的文件。它先校验资料生成、攻略、计算器、SQLite、接收器和公开文件，再通过 SSH 上传，最后核对线上 `/deployment.json`。如果另一次发布正占用服务器锁，脚本会等待后重试。默认通过本机 ssh 配置里的 `fe-guide` 别名连接（地址不入库），可用 `DEPLOY_HOST` 覆盖；`DRY_RUN=1` 只做校验，不上传。
+
+推送不再触发 GitHub Actions：从 runner 经 22 端口上传到服务器会长时间卡住。`.github/workflows/deploy.yml` 只保留为手动备用，下文的 Secrets 仅供它使用。服务器端的流程不变：服务器核对静态资料与 SQLite 一致后切换版本，重启数据服务，并检查本地 API、网站 HTTPS 和发布版本；失败时恢复原版本。部署串行执行，不中断正在发布的任务。
 
 在仓库 **Settings → Secrets and variables → Actions** 配置以下 Repository secrets：
 
