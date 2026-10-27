@@ -1,4 +1,5 @@
 require('./verify-map-notes.cjs');
+require('./verify-catalog-resolution.cjs');
 const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},dataset:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','catalog-ui.js','app.js','reasons.js','articles.js','skill-planning.js','v9.js','cultivation.js','roster-map.js','search.js','anna-agent.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
 const searchEvents={...events};
 (async()=>{await new Promise(r=>setImmediate(r));vm.runInContext('LEARNING='+fs.readFileSync(root+'learning.json')+';PINS='+fs.readFileSync(root+'map.json')+';mapLoaded=true;',ctx);
@@ -537,8 +538,9 @@ vm.runInContext("route='カイ';routeGuideView='pets';render()",ctx);assert(vm.r
 for(const r of ['レダ','ディートリヒ','セオドラ','救世篇']){vm.runInContext(`route=${JSON.stringify(r)};routeGuideView='pets';render()`,ctx);assert(vm.runInContext("routeGuideView==='plan'&&!guideViewOptions().some(([key])=>key==='pets')",ctx),'Kai-only tab fallback '+r);}
 assert(!fs.readFileSync(root+'assets/site-logo.svg','utf8').includes('M8 25'),'Logo thread decoration removed');assert(fs.existsSync(root+'cover.css'),'Shared cover component');
 console.log('PASS v72: Kai-only capture tab, cultivation deduplication, cross-route fallback, simpler logo and warm cover gradients.');
-const sourceReview=vm.runInContext('sourceConflictReview()',ctx);
-for(const conflict of reviewed.dataResearch.conflicts){assert(sourceReview.includes(conflict.subject));for(const statement of conflict.statements)assert(sourceReview.includes(statement.url)&&sourceReview.includes(statement.value));}
+const sourceReview=vm.runInContext('sources()',ctx);
+assert(!/source-conflicts|不同记载|仍有冲突|待判断|research-summary/.test(sourceReview),'Source directory publishes references without editorial conflict panels');
+
 assert.equal(reviewed.equipment.flatMap(e=>e.sourcesList).filter(s=>s.recipePending).length,0,'Every previously pending merchant recipe resolved');
 const heal=reviewed.equipment.find(e=>e.id==='heal');
 for(const source of heal.sourcesList.filter(s=>s.kind==='兑换'&&s.place==='帝都鞑古席翁')){ctx.testEquipment=heal;ctx.testSource=source;const names=vm.runInContext('materialsForSource(testEquipment,testSource).map(m=>m[0])',ctx);assert(!names.includes('鞑古扎恩涤'),'Imperial recipe must not require a different merchant ingredient');assert(names.includes('克列斯特尔'));}
@@ -549,13 +551,13 @@ console.log('PASS v75: conflict evidence visible, all 17 pending recipes resolve
 assert.equal(reviewed.dataResearch.remainingCounts.skillRequirements,Object.values(reviewed.learning).flatMap(l=>['levelSkills','learnedSkills','combatArts','magic'].flatMap(k=>l[k]||[])).filter(s=>s.requirementUnknown).length);
 assert(reviewed.dataResearch.resolvedConflicts.length>=6);assert(reviewed.dataResearch.resolvedConflicts.some(c=>c.subject==='因果融合 · 技能进度'));
 assert.equal(reviewed.dataResearch.conflicts.length,0);
-for(const c of reviewed.dataResearch.resolvedConflicts){assert(sourceReview.includes(c.subject)&&sourceReview.includes(c.adopted));assert(c.matchedSources.length>=2);for(const url of c.matchedSources)assert(sourceReview.includes(url));}
+for(const c of reviewed.dataResearch.resolvedConflicts)assert(c.matchedSources.length>=2,'Historical review evidence stays available internally');
 const antiMagic=reviewed.equipment.find(e=>e.name==='抗魔铁甲'),antiSource=antiMagic.sourcesList.find(s=>s.place==='帝都鞑古席翁');assert.equal(antiSource.materials.find(m=>m[0]==='洛卡')[2],5);assert.equal(antiSource.materials.find(m=>m[0]==='椰枣')[2],5);
 for(const id of ['c52','c55']){const c=reviewed.database.characters.find(c=>c.id===id);assert.equal(c.joinDetails.find(j=>j.route==='共通').chapter,'2区分');assert(!c.joinDetails.some(j=>j.note.includes('第一区分')));}
 assert.equal(reviewed.masterySkills['阻绝'].description,'受到攻击时，受到的伤害减少5。');
 const dance=reviewed.learning.c7.combatArts.find(s=>s.name==='跳舞');assert(!dance.requirementUnknown&&dance.condition.includes('舞者'));ctx.reviewRows=[dance];assert(vm.runInContext("learningTable(reviewRows,'战技')",ctx).includes(dance.condition));
-for(const c of reviewed.dataResearch.remainingLearning)assert(sourceReview.includes('data-char="'+c.id+'"'));
-console.log('PASS v76: matched-source decisions, corrected imperial recipe and late entry sections, profession-based dance condition and all remaining learning conditions exposed.');
+assert(vm.runInContext("!Object.hasOwn(CATALOG,'dataResearch')&&!Object.hasOwn(CATALOG,'entryDataResearch')",ctx),'Public catalogue omits alternative and pending-review collections');
+console.log('PASS v76: matched-source decisions, corrected imperial recipe and late entry sections, profession-based dance condition and clean source directory.');
 const dancerPanel=vm.runInContext('dancerPlanningPanel()',ctx);
 for(const id of ['c47','c24','c8'])assert(dancerPanel.includes('data-char="'+id+'"'),'All dance candidates open their dossiers');
 assert(dancerPanel.includes('蕾达线不可招募')&&dancerPanel.includes('剑B或弓B'),'Recruitment and OR qualification are visible');

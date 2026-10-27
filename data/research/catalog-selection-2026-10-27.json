@@ -1,0 +1,376 @@
+{
+  "policyVersion": 1,
+  "abilities": 507,
+  "selectedEffects": [
+    {
+      "abilityId": "ability-8f803e5cb700",
+      "name": "暗影迫近",
+      "selected": "若敌人位于有利地形，则无视该地形的效果",
+      "source": "https://game8.jp/fe-banshisenko/816421",
+      "candidates": [
+        {
+          "value": "若敌人位于有利地形，则无视该地形的效果",
+          "source": "https://game8.jp/fe-banshisenko/816421"
+        },
+        {
+          "value": "若敌人位于有利地形，则无视该地形的效果",
+          "source": "https://game8.jp/fe-banshisenko/816447"
+        },
+        {
+          "value": "若敌人位于有利地形，则无视该地形的效果",
+          "source": "https://game8.jp/fe-banshisenko/816431"
+        },
+        {
+          "value": "敌处于有利地形时，忽略该地形影响",
+          "source": "https://game8.jp/fe-banshisenko/816434"
+        },
+        {
+          "value": "若敌人位于有利地形，则无视该地形的效果"
+        },
+        {
+          "value": "若敌人位于有利地形，则无视该地形的效果"
+        },
+        {
+          "value": "若敌人位于有利地形，则无视该地形的效果"
+        },
+        {
+          "value": "敌处于有利地形时，忽略该地形影响",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        }
+      ]
+    },
+    {
+      "abilityId": "ability-8d44beff1d2a",
+      "name": "必闪一击",
+      "selected": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+      "source": "https://game8.jp/fe-banshisenko/816415",
+      "candidates": [
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816415"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816460"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816462"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816419"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816458"
+        },
+        {
+          "value": "攻击时以技巧÷2的概率使攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816434"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5"
+        },
+        {
+          "value": "攻击时以技巧÷2的概率使攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        }
+      ]
+    },
+    {
+      "abilityId": "ability-92ab63ac8275",
+      "name": "警戒射击",
+      "selected": "战斗时，回避+10",
+      "source": "https://game8.jp/fe-banshisenko/816418",
+      "candidates": [
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816442"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816445"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816418"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816447"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816424"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816429"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html"
+        },
+        {
+          "value": "战斗时回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816434"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816910"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://hyperwiki.jp/fefw/character/ch15/"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://hyperwiki.jp/fefw/character/ch19/"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://hyperwiki.jp/fefw/character/ch50/"
+        },
+        {
+          "value": "战斗时，回避+10"
+        },
+        {
+          "value": "战斗时，回避+10"
+        },
+        {
+          "value": "战斗时，回避+10"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://hyperwiki.jp/fefw/character/ch15/",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch15/",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        },
+        {
+          "value": "战斗时，回避+10"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://hyperwiki.jp/fefw/character/ch50/",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch50/",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        },
+        {
+          "value": "战斗时，回避+10"
+        },
+        {
+          "value": "战斗时，回避+10"
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        },
+        {
+          "value": "战斗时回避+10",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        },
+        {
+          "value": "战斗时，回避+10",
+          "source": "https://hyperwiki.jp/fefw/character/ch19/",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch19/",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        },
+        {
+          "value": "战斗时，回避+10"
+        }
+      ]
+    },
+    {
+      "abilityId": "ability-c1c0fdbb0c29",
+      "name": "两断",
+      "selected": "必杀高",
+      "source": "https://game8.jp/fe-banshisenko/816419",
+      "candidates": [
+        {
+          "value": "必杀高",
+          "source": "research/learning-evidence.html#1401736ed004"
+        },
+        {
+          "value": "必杀高",
+          "source": "https://game8.jp/fe-banshisenko/816448"
+        },
+        {
+          "value": "必杀高",
+          "source": "https://game8.jp/fe-banshisenko/816419"
+        },
+        {
+          "value": "必杀高",
+          "source": "https://game8.jp/fe-banshisenko/816424"
+        },
+        {
+          "value": "必杀高",
+          "source": "research/learning-evidence.html#d89b98a6de6b"
+        },
+        {
+          "value": "必杀较高",
+          "source": "https://game8.jp/fe-banshisenko/816434"
+        },
+        {
+          "value": "必杀高",
+          "source": "research/learning-evidence.html#1401736ed004",
+          "sources": [
+            "research/learning-evidence.html#1401736ed004"
+          ],
+          "confidence": "medium-high",
+          "checkedAt": "2026-10-15"
+        },
+        {
+          "value": "必杀高"
+        },
+        {
+          "value": "必杀高"
+        },
+        {
+          "value": "必杀高"
+        },
+        {
+          "value": "必杀高",
+          "source": "research/learning-evidence.html#d89b98a6de6b",
+          "sources": [
+            "research/learning-evidence.html#d89b98a6de6b"
+          ],
+          "confidence": "medium-high",
+          "checkedAt": "2026-10-15"
+        },
+        {
+          "value": "必杀较高",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        }
+      ]
+    },
+    {
+      "abilityId": "ability-41c53484d507",
+      "name": "烈火一击",
+      "selected": "攻击时，有（力量÷2）%概率使攻击力+5",
+      "source": "https://gamewith.jp/fefw/573032",
+      "candidates": [
+        {
+          "value": "攻击时，有（力量+2）%几率使攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816423"
+        },
+        {
+          "value": "攻击时，有（力量+2）%几率使攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816882"
+        },
+        {
+          "value": "攻击时，有（力量÷2）%概率使攻击力+5",
+          "source": "https://gamewith.jp/fefw/573032"
+        },
+        {
+          "value": "攻击时，有（力量÷2）%概率使攻击力+5",
+          "source": "https://gamewith.jp/fefw/573032",
+          "sources": [
+            "https://gamewith.jp/fefw/573032",
+            "https://hyperwiki.jp/fefw/character/ch14/",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        },
+        {
+          "value": "攻击时，有（力量÷2）%概率使攻击力+5",
+          "source": "https://gamewith.jp/fefw/573032",
+          "sources": [
+            "https://gamewith.jp/fefw/573032",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        },
+        {
+          "value": "攻击时，有（力量+2）%几率使攻击力+5"
+        },
+        {
+          "value": "攻击时，有（力量+2）%几率使攻击力+5",
+          "source": "https://gamecap.jp/fe_fw/oboeru.html",
+          "sources": [
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        }
+      ]
+    },
+    {
+      "abilityId": "ability-fc38237eb7ae",
+      "name": "螺旋射击",
+      "selected": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+      "source": "https://game8.jp/fe-banshisenko/816419",
+      "candidates": [
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816419"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816444"
+        },
+        {
+          "value": "攻击时以技巧÷2的概率使攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816434"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816902"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5"
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5"
+        },
+        {
+          "value": "攻击时以技巧÷2的概率使攻击力+5",
+          "source": "https://game8.jp/fe-banshisenko/816434",
+          "sources": [
+            "https://game8.jp/fe-banshisenko/816434",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ]
+        },
+        {
+          "value": "攻击时，有（技巧÷2）%几率发动。攻击力+5"
+        }
+      ]
+    }
+  ],
+  "selectedBindings": [],
+  "linkedLearning": 3053,
+  "parameterSelections": 883
+}

@@ -1,4 +1,6 @@
-const fs=require('fs'),path=require('path'),assert=require('assert'),{execFileSync}=require('child_process');const root=path.resolve(__dirname,'..'),data=JSON.parse(execFileSync('python3',[path.join(root,'scripts/catalog-db.py'),'export'],{maxBuffer:32*1024*1024}).toString());
+const fs=require('fs'),path=require('path'),assert=require('assert'),{execFileSync}=require('child_process');const root=path.resolve(__dirname,'..');
+execFileSync(process.execPath,[path.join(root,'scripts/resolve-catalog.cjs')],{stdio:'inherit'});
+const data=JSON.parse(execFileSync('python3',[path.join(root,'scripts/catalog-db.py'),'export'],{maxBuffer:32*1024*1024}).toString());
 fs.writeFileSync(path.join(root,'data/catalog.json'),JSON.stringify(data,null,2)+'\n');
 const db=data.database,charIds=new Set(db.characters.map(c=>c.id)),classIds=new Set(db.classes.map(c=>c.id)),gearIds=new Set(data.equipment.map(e=>e.id));assert.equal(charIds.size,db.characters.length);assert.equal(classIds.size,db.classes.length);assert.equal(gearIds.size,data.equipment.length);
 const names=new Set(db.classes.flatMap(c=>[c.cn,c.title,c.id]));
@@ -7,6 +9,8 @@ for(const route of Object.values(data.routeStrategy))for(const id of [...(route.
 for(const e of data.events)for(const id of e.related)assert(charIds.has(id),'Unknown event character '+id);
 for(const cl of db.classes){const skill=data.masterySkills[cl.col_37];assert(skill&&skill.description&&skill.type&&skill.source,'Missing mastery effect '+cl.cn)}
 const runtime={...data,masteryNotes:Object.fromEntries(db.classes.map(cl=>[cl.cn,data.masterySkills[cl.col_37].description])),mapTerms:data.map.map(p=>({name:p.name,info:p.info||''}))};delete runtime.learning;delete runtime.map;delete runtime.mapExtras;
+// The website and AI lookup publish selected facts, not editorial alternatives or pending-review logs.
+for(const key of ['dataResearch','entryDataResearch'])delete runtime[key];
 // Source comparisons remain in the canonical audit; ship only fields read by the UI.
 if(data.ratingAudit)runtime.ratingAudit={...data.ratingAudit,characters:Object.fromEntries(Object.entries(data.ratingAudit.characters).map(([id,a])=>[id,{rating:a.rating,limits:a.limits}]))};
 const aliases=`const SOURCES=CATALOG.sources,EQUIPMENT=CATALOG.equipment,ROUTE_EVENTS=CATALOG.events,ARENA_PROJECTS=CATALOG.arenaProjects,PET_GUIDE=CATALOG.petGuide,ROUTE_STRATEGY=CATALOG.routeStrategy,ART_SLOT_BONUSES=CATALOG.artSlotBonuses;\nconst PRIMARY_VALUE=Object.fromEntries(Object.entries(CATALOG.planning).map(([id,p])=>[id,p.primary]));\nconst EDITOR_BUILDS=Object.fromEntries(Object.entries(CATALOG.planning).map(([id,p])=>[id,{recommendations:p.recommendations,routes:Object.fromEntries(Object.entries(p.routes).filter(([,v])=>v.rule).map(([r,v])=>[r,v.rule]))}]));\n`;

@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "defaultProfile": "gameplay",
+  "profiles": {
+    "gameplay": {
+      "domains": {
+        "nintendo.com": 95,
+        "gamewith.jp": 83,
+        "game8.jp": 82,
+        "hyperwiki.jp": 78,
+        "gamecap.jp": 74,
+        "appmedia.jp": 74,
+        "fireemblem.top": 72,
+        "fire-emblem-fw.site": 70,
+        "redfreshet.com": 68,
+        "al-gest.com": 66,
+        "altema.jp": 65
+      },
+      "paths": [
+        {"prefix": "https://gamewith.jp/fefw/574420", "score": 89},
+        {"prefix": "https://gamewith.jp/fefw/573032", "score": 89},
+        {"prefix": "https://gamewith.jp/fefw/574424", "score": 89}
+      ],
+      "defaultScore": 50
+    },
+    "localization": {
+      "domains": {"nintendo.com": 95, "fireemblem.top": 86, "fire-emblem-fw.site": 84, "game8.jp": 72, "gamewith.jp": 72},
+      "paths": [],
+      "defaultScore": 50
+    }
+  },
+  "evidenceScores": {"reviewed_override": 120, "game_capture": 110},
+  "confidenceBonuses": {"verified": 8, "high": 5, "medium-high": 3, "medium": 0, "low": -12},
+  "consensusBonusPerDomain": 2,
+  "maxConsensusBonus": 6,
+  "tieBreak": "explicit confidence, checked date, stable source URL, stable value",
+  "notes": [
+    "Priority selects one published value; it is not a guarantee that every item from a higher-ranked domain is correct.",
+    "Reviewed overrides and direct game captures outrank default domain preferences.",
+    "A character's acquisition rank is scoped to that character, method and ability. Different characters do not share one threshold.",
+    "Distinct acquisition methods, shop locations, recipes and routes remain separate contexts.",
+    "Missing values remain missing; the resolver does not extrapolate from other characters or invent acquisition conditions."
+  ]
+}
