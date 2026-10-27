@@ -191126,7 +191126,7 @@
       "category": "培养",
       "title": "神技与职业精通搭配：20级补命中、35级定打法、第三部成型",
       "summary": "五格特技先解决眼前命中与反击短板：20级优先状态不错与大反击，35级补熟练之技、残心或驰骋，第三部再追迅雷风烈与阻绝。",
-      "updated": "2026-10-22",
+      "updated": "2026-10-27",
       "tags": [
         "特技搭配",
         "职业精通",
@@ -191595,6 +191595,38 @@
             {
               "type": "p",
               "text": "**把触发条件看完，再决定要不要绕路。** 状态不错要先击杀，暗影隐身只保留到下一战，突破围城只针对有利地形，迅雷风烈要先攻且攻速领先10。手上已经有能解决当前问题的特技，就先用起来；为了还没成型的后期组合，把命中和生存一直空着，前面的战斗会更难打。"
+            }
+          ]
+        },
+        {
+          "id": "recommendation-evidence",
+          "heading": "推荐如何取舍",
+          "blocks": [
+            {
+              "type": "p",
+              "text": "先判断技能能否在当前职责中持续发挥，再比较门槛、职业绕路与槽位。职业精通、角色专精习得和武器战技分别核对，不因某个名字出现在攻略榜单就推荐给所有人。"
+            },
+            {
+              "type": "p",
+              "text": "第一档标为「优先考虑」，第二档标为「按条件选择」。概率伤害、击杀后加成、武器或兵种限制都在技能速览中说明；已经学会的同系强化版本按择高使用处理。"
+            }
+          ],
+          "sources": [
+            {
+              "label": "AppMedia · 按职责推荐特技",
+              "url": "https://appmedia.jp/fe_banshisenkou/80386438"
+            },
+            {
+              "label": "Game8 · 分武器战技强化建议",
+              "url": "https://game8.jp/fe-banshisenko/817667"
+            },
+            {
+              "label": "redfreshet · 职业精通的继承价值",
+              "url": "https://redfreshet.com/fe-banshisenkou-master-skill/"
+            },
+            {
+              "label": "redfreshet · 战技用途与耐久",
+              "url": "https://redfreshet.com/fe-banshisenko-combat-arts/"
             }
           ]
         }
@@ -220156,5 +220188,1272 @@
       "https://annasnotebook.net/ja/mechanics/loadout/"
     ],
     "checkedAt": "2026-10-26"
+  },
+  "skillRecommendations": {
+    "checkedAt": "2026-10-27",
+    "policy": "角色习得表的两级高亮是可选学习价值，不是每个角色都要学的固定清单。优先考虑稳定收益、独特功能与低代价；限制强或依赖职责的放入按条件选择。职业精通仅用于其对应的职业/配装推荐，不伪装成角色专精习得。",
+    "sources": {
+      "appmedia": {
+        "title": "AppMedia · 按职责推荐特技",
+        "url": "https://appmedia.jp/fe_banshisenkou/80386438",
+        "scope": "以困难难度为主；只采纳与本站已核实效果一致的职责建议"
+      },
+      "game8": {
+        "title": "Game8 · 分武器战技强化建议",
+        "url": "https://game8.jp/fe-banshisenko/817667",
+        "scope": "强化优先级不等于所有角色都要跨专精取得"
+      },
+      "redMastery": {
+        "title": "redfreshet · 职业精通的继承价值",
+        "url": "https://redfreshet.com/fe-banshisenkou-master-skill/",
+        "scope": "按终局职责、沿途职业、可发动频率与取得时期取舍"
+      },
+      "redArts": {
+        "title": "redfreshet · 战技用途与耐久",
+        "url": "https://redfreshet.com/fe-banshisenko-combat-arts/",
+        "scope": "区分武器、位置操作、条件输出与耐久消耗"
+      },
+      "gamewithArts": {
+        "title": "GameWith · 战技效果与习得对象",
+        "url": "https://gamewith.jp/fefw/573032",
+        "scope": "核对具体效果与限制，不将资料收录直接当成强度推荐"
+      },
+      "gamewithSkills": {
+        "title": "GameWith · 特技效果与习得对象",
+        "url": "https://gamewith.jp/fefw/574420",
+        "scope": "核对具体效果、兵种条件与触发概率"
+      },
+      "gamewithMagic": {
+        "title": "GameWith · 魔法效果与习得对象",
+        "url": "https://gamewith.jp/fefw/574424",
+        "scope": "核对辅助效果与职业权限"
+      }
+    },
+    "entries": [
+      {
+        "abilityId": "ability-0038911efae6",
+        "name": "熟练之技",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "战技主攻先补稳定命中",
+        "caution": "需要精通勇士；只作用于战技",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-f61c5e6500d9",
+        "name": "射击专家",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "弓手以稳定命中减少失手",
+        "caution": "只在装备弓时生效",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-328e1fa669ae",
+        "name": "状态不错",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "可击杀预热的主力在长地图持续补命中",
+        "caution": "要先取得击杀，首次战斗不能指望满加成",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-62035120b728",
+        "name": "阻绝",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "受击前排可稳定压低伤害",
+        "caution": "取得较晚，主动攻击时是否生效以技能说明为准",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-87d958e19297",
+        "name": "迅雷风烈",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "高速先攻手争取在反击前完成追击",
+        "caution": "要求攻速领先，不能给低速角色当成无条件连击",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-9c11114b9317",
+        "name": "突破围城",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "用于处理占有利地形的敌人",
+        "caution": "只有目标位于有利地形时补命中",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-aba7a4bf16ac",
+        "name": "威胁察觉",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "骑兵与飞行角色可补特效攻击的回避缺口",
+        "caution": "不是通用减伤，也不保证躲开特效",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-83a48d27a935",
+        "name": "不退架势",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "满血前排可补承伤",
+        "caution": "离开满血就失去收益",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-d903d30f4127",
+        "name": "猛盾",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "主动交战时可缓解反击压力",
+        "caution": "概率发动，敌方阶段不能按同等收益计算",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-cbbe4083a7db",
+        "name": "圣盾",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "魔法承伤不足时可作补强",
+        "caution": "概率减伤，不能代替魔防与走位",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-d457499371b4",
+        "name": "大盾",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "物理受击角色沿途可回收",
+        "caution": "概率减伤，不建议只为它大幅绕路",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-e28c6013642e",
+        "name": "袭击",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "飞行输出可通过地形安排补伤害",
+        "caution": "需要停在不能步行的地形",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-fb40a4d5bacc",
+        "name": "集中反击",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "敌方阶段前排可补命中",
+        "caution": "后攻条件限制主动进攻收益",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-1290f2b586a7",
+        "name": "猎人之眼",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "高速弓手补追击伤害",
+        "caution": "先确认角色实际能够追击",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-ae75ad369956",
+        "name": "残心",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "必杀击杀型剑手补续航",
+        "caution": "需要必杀且击杀，普通治疗不能指望它",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-21ec50141858",
+        "name": "攻击&远离",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "战技近战可补当前战斗回避",
+        "caution": "只在使用战技的战斗中生效",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-299decb992ed",
+        "name": "大反击",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "低速承伤前排补后攻伤害",
+        "caution": "不增加主动出手伤害",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-73711dae718b",
+        "name": "结界",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "支援角色贴近前排补魔防",
+        "caution": "看站位收益，不值得所有前排都转职绕修",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-8243100da851",
+        "name": "勇气之咒歌",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "支援行动可同时补队友技巧与速度",
+        "caution": "消耗行动，按受益人数决定是否使用",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-b1e559ca2f50",
+        "name": "静心之咒歌",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "魔法压力大的战斗可补队伍魔防",
+        "caution": "消耗行动，留意范围",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-89b44a7304f7",
+        "name": "特别舞蹈",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "舞者在再行动同时强化目标",
+        "caution": "需要先具备跳舞权限",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-d19fe2cf8672",
+        "name": "战神",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "高速角色的后期速度调整",
+        "caution": "神将精通取得晚，先完成主线职责",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-fc5da1786c93",
+        "name": "武神",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "物理输出的后期力量调整",
+        "caution": "神将精通取得晚，治疗角色无需为力量绕路",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-a44ad58014cd",
+        "name": "神技",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "后期补技巧以支持命中与必杀",
+        "caution": "先比较更早取得的直接命中特技",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-ef81b83c9649",
+        "name": "神法",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "魔法输出与治疗的后期魔力调整",
+        "caution": "神将精通成本高，按实际施法职责决定",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-26d49da4e5b9",
+        "name": "神壁",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "物理承伤角色的后期防御调整",
+        "caution": "不会自动补齐魔法承伤短板",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-79581b84ccaa",
+        "name": "神装",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "魔法承伤压力大的后期补强",
+        "caution": "不是所有角色的固定五格",
+        "sources": [
+          "appmedia",
+          "redMastery"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-59faf7583eb9",
+        "name": "步行移动术",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "步兵可减少地形对行军的拖累",
+        "caution": "降低地形消耗，不是平地移动力直接加一",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-42660883a10f",
+        "name": "步行移动术+",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "步兵可进一步降低复杂地形消耗",
+        "caution": "只对步兵与相应地形有效，S＋培养成本高",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-e66bbd7048eb",
+        "name": "重装移动术",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "重装前排优先补移动短板",
+        "caution": "换成其他兵种后不能继续按相同收益计算",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-3941a091f602",
+        "name": "重装移动术+1",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "重装前排以强化版补移动短板",
+        "caution": "与基础版择高使用",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-8f165e1c43e0",
+        "name": "安定射击+",
+        "type": "特技",
+        "tier": "priority",
+        "reason": "步兵弓手或施法者可补稳定命中",
+        "caution": "装备弓或魔法时生效，先核对本人门槛",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-54f70b3892aa",
+        "name": "安定射击",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "低门槛步兵远程命中补强",
+        "caution": "只对弓或魔法有效，已有更强命中项时比较槽位",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-a68b7a98cb45",
+        "name": "优势战斗术",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "地面输出可利用有利地形补伤害",
+        "caution": "飞行职业通常不能照搬地形收益",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-ae21b77ef6f3",
+        "name": "占地",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "地面回避型角色可利用有利地形",
+        "caution": "不在有利地形时没有这项收益",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-33f54f75202c",
+        "name": "绝境回避",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "半血回避路线可作为配套",
+        "caution": "需要控血，不能视为满血生存保障",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-4abff9a1a487",
+        "name": "闪身",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "步兵对弓与魔法可补回避",
+        "caution": "限定敌方攻击类型",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-cfcf93f42a9e",
+        "name": "闪身+",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "步兵对远程压力可补更高回避",
+        "caution": "与基础版择高使用",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-874d7fc54b4c",
+        "name": "佯攻",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "邻接前排可辅助压低敌方命中",
+        "caution": "需要贴近敌人，收益与站位相关",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-47dca924d957",
+        "name": "佯攻+",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "邻接前排可加强命中压制",
+        "caution": "与基础版择高使用",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-502971277a61",
+        "name": "牵制",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "贴近敌人时为队伍后续攻击补命中",
+        "caution": "减的是敌方回避，需配合站位",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-609a3c12b8f1",
+        "name": "牵制+",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "队伍集火时加强回避压制",
+        "caution": "与基础版择高使用",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-7937e3b2816a",
+        "name": "重破坏",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "高防御重装可作为概率爆发补充",
+        "caution": "不是稳定伤害，不能据此计算必定击杀",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-f8f218e9b68b",
+        "name": "重破坏+",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "高防御重装可选择更强的概率爆发",
+        "caution": "与基础版择高使用，仍受触发概率限制",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-7effc3a9e848",
+        "name": "体格",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "重武器角色可按负重缺口补体格",
+        "caution": "先看装备重量，不是力量的通用替代",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-21fd862ab886",
+        "name": "体格+",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "极重武器可按实际负重缺口补强",
+        "caution": "取得晚；体格已够用就没有继续投入必要",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-8da50cd9a4cb",
+        "name": "高速飞行术",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "飞行先攻手补攻速差",
+        "caution": "只在飞行与先攻条件下生效",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-aac02d654066",
+        "name": "高速飞行术+",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "飞行先攻手进一步争取追击",
+        "caution": "先比较实战攻速差，避免超额投入",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-618885e8929f",
+        "name": "抵抗魔装",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "重装角色按需补魔防",
+        "caution": "换兵种后重新核对生效条件",
+        "sources": [
+          "appmedia",
+          "gamewithSkills"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-ee9e1759225b",
+        "name": "翔闪枪",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "能追击的枪手争取反击前完成输出",
+        "caution": "先确认追击条件与耐久，不能当成无条件双击",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-a0cc6d24fa39",
+        "name": "战斗强打",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "格斗输出可争取反击前追击",
+        "caution": "需要满足实际追击条件",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-74e54a92e746",
+        "name": "娴熟一击",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "轻耗耐久的收割手段，适合补低力量伤害",
+        "caution": "敌人HP需不高于一半",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-25cedf8c66e7",
+        "name": "猛斩",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "需要单次高威力时可以补伤害",
+        "caution": "命中有明显代价，优先保证命中",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-dd112b3f0441",
+        "name": "劈刺",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "斧手可用较低消耗补命中",
+        "caution": "基础战技，已有更合适输出时可替换",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-7fad4ae4399d",
+        "name": "投击",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "投掷斧可兼顾命中与安全距离",
+        "caution": "仅限符合射程条件的斧",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-6b6b784431c5",
+        "name": "破枪",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "面对枪敌人时的针对输出",
+        "caution": "不是对所有敌人都有额外伤害",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-4b3dc41f9f54",
+        "name": "哈姆辛",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "回避路线可处理低命中的敌人",
+        "caution": "先确认敌方命中已经压到阈值",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-db2d91b5433d",
+        "name": "圣突枪",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "枪手交战后按需补续航",
+        "caution": "耐久消耗与回复量一起比较",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-1b993511a2cf",
+        "name": "退身拳",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "格斗手可在攻击后调整距离",
+        "caution": "有伤害与耐久代价",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-3dbb0447f9b0",
+        "name": "脱离射击",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "弓手攻击后可重新拉开距离",
+        "caution": "有伤害与耐久代价",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-fc38237eb7ae",
+        "name": "螺旋射击",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "弓手可作为概率伤害补充",
+        "caution": "额外伤害不稳定，不能按必定触发计算",
+        "sources": [
+          "game8",
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "guide-recommendation"
+      },
+      {
+        "abilityId": "ability-5ee0ed9cf8ff",
+        "name": "鼓舞重击",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "可在本张地图累计速度，为后续追击铺垫",
+        "caution": "需先使用格斗战技，准备回合与耐久不是零成本",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-22f36990371b",
+        "name": "二连投掷",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "两次攻击可帮助低速枪手补出手次数",
+        "caution": "投掷枪限制与命中代价必须一起考虑",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-4f7fe9c624f8",
+        "name": "双刃",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "剑手用连续攻击争取集中输出",
+        "caution": "单次伤害有折扣且耐久消耗高",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-5715109a4247",
+        "name": "双重攻击",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "斧手可用两次攻击补出手次数",
+        "caution": "命中代价明显，先保证两击能中",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-a25a029d977d",
+        "name": "替换",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "队伍可通过换位调整进攻与救援位置",
+        "caution": "需要相邻站位与兵种条件，消耗行动",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-788864e1ebe8",
+        "name": "拉近",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "辅助角色可通过位置操作调整阵线",
+        "caution": "确认相邻站位、大型单位限制与行动成本",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-47fd319c4dcc",
+        "name": "影眩之箭",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "弓手交战时可兼顾回避",
+        "caution": "回避收益有当前战斗范围限制",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-92ab63ac8275",
+        "name": "警戒射击",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "弓手可用较低消耗补本次交战回避",
+        "caution": "不是地图全程的回避加成",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-a56c62c51402",
+        "name": "半劈刺",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "斧手可选择回避型交战方式",
+        "caution": "只在本次战斗生效",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-38b38bdc9cd6",
+        "name": "阳炎",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "剑手击杀后可加强后续回避",
+        "caution": "必须先完成击杀，不宜用来保证首次交战安全",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-903492745c56",
+        "name": "呼唤平静",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "弓手击杀后可准备一次回避交战",
+        "caution": "完成一次战斗后恢复，不能视为常驻",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-4b304033824a",
+        "name": "十字智慧",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "可在地图内累计技巧",
+        "caution": "需要准备战斗和对应武器",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-1398311096a6",
+        "name": "愤怒激发",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "物理输出可在地图内累计力量",
+        "caution": "需要准备战斗；换地图不保留",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-078778e236ab",
+        "name": "射足",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "为后续集火压低敌方回避",
+        "caution": "需要配合队伍攻击顺序",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-c78ae63bdb5f",
+        "name": "合围之箭",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "限制敌人移动以辅助走位",
+        "caution": "命中后才生效，留意持续时间",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-697925df2d79",
+        "name": "投掷魔斧",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "物理武器路线可选择魔法伤害补盲",
+        "caution": "按自身魔力与敌人魔防决定收益",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-50949c22c7f7",
+        "name": "冰枪",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "枪路线可选择魔法伤害补盲",
+        "caution": "低魔力角色并不会因此自动获得高伤害",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-9ca09349ac78",
+        "name": "雷斧",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "斧路线可选择魔法伤害补盲",
+        "caution": "按魔力与敌人魔防比较普通攻击",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-72cecea61a44",
+        "name": "流星",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "后期剑手的多段输出选择",
+        "caution": "每段伤害有折扣且要先精通对应职业",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-c5c2b8249097",
+        "name": "战鬼一击",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "后期物理战技输出选择",
+        "caution": "取得与使用均有成本，先确认资格",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-9efd27aa2dc0",
+        "name": "骑士烈枪",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "低速前排可规避该场战斗被追击",
+        "caution": "只作用于使用它的战斗",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-8f36a2c8c16d",
+        "name": "守护旋风",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "枪手主动交战时补物理承伤",
+        "caution": "消耗耐久，不是装备后常驻物防",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-1edbf20d596f",
+        "name": "守护尖刺",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "斧手交战时补物理承伤",
+        "caution": "只在该战斗生效",
+        "sources": [
+          "redArts",
+          "gamewithArts"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-7cd89ec0d498",
+        "name": "传送",
+        "type": "法术",
+        "tier": "priority",
+        "reason": "改变队友位置以完成进攻或救援",
+        "caution": "职业权限、施法距离和次数均有限制",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-fcca32be5db1",
+        "name": "救出",
+        "type": "法术",
+        "tier": "priority",
+        "reason": "把远处友军拉回身边",
+        "caution": "职业权限、目标距离和次数均有限制",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-84226f9dfb65",
+        "name": "救援",
+        "type": "法术",
+        "tier": "priority",
+        "reason": "移动队友以调整战线",
+        "caution": "按实际法术的射程与移动方式使用",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-2cf834f86552",
+        "name": "远程圣疗",
+        "type": "法术",
+        "tier": "priority",
+        "reason": "治疗角色可扩大安全治疗覆盖",
+        "caution": "先确认施法职业权限，次数有限",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-dde39d2e698a",
+        "name": "群体圣疗",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "队伍集中受伤时可提供群体治疗",
+        "caution": "按受益人数与有限次数决定使用时机",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-8274c7f53466",
+        "name": "屏障",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "可提前准备一次关键防护",
+        "caution": "确认持续时间与目标条件",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-951fbac30a16",
+        "name": "休息",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "按需解除队友异常状态",
+        "caution": "没有异常压力时无需专门投入",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-32e653913bf4",
+        "name": "沉默",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "可以限制敌方法术行动",
+        "caution": "先核对目标、命中与持续时间",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-259b00f3cddf",
+        "name": "冻结",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "可以通过控制目标辅助走位",
+        "caution": "先核对目标、命中与持续时间",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      },
+      {
+        "abilityId": "ability-a3f84d06ab6f",
+        "name": "再生",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "持续作战时可作为治疗补充",
+        "caution": "确认持续时间和治疗节奏",
+        "sources": [
+          "gamewithMagic"
+        ],
+        "basis": "editorial-synthesis"
+      }
+    ]
   }
 }

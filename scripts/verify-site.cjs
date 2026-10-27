@@ -108,7 +108,7 @@ for(const r of ['レダ','カイ','ディートリヒ','セオドラ']){vm.runIn
 assert(vm.runInContext('ARENA_PROJECTS.length===5&&ARENA_PROJECTS.every(p=>p.skills.length>=3&&p.skills.length<=4)',ctx));
 assert(vm.runInContext("ARENA_PROJECTS.find(p=>p.id==='armor').skills.join(',')==='枪术,斧术,重装术,指挥术'",ctx));
 assert(vm.runInContext('JSON.stringify(growthDomain())===JSON.stringify([5,70])',ctx));
-assert(vm.runInContext("growthColor(25)==='#f3d392'&&growthLegend().includes('5%')&&growthLegend().includes('70%')",ctx));
+assert(vm.runInContext("growthColor(25)==='#dfe5d3'&&growthLegend().includes('5%')&&growthLegend().includes('70%')",ctx));
 assert(vm.runInContext('(()=>{const mod=DB.classes.find(c=>Object.values(c.growth).some(v=>Number(v)<0)).growth;const values=DB.characters.flatMap(c=>Object.keys(statNames).map(k=>Number(c.growth[k]||0)+Number(mod[k]||0)));return JSON.stringify(growthDomain(mod))===JSON.stringify([Math.min(...values),Math.max(...values)])})()',ctx));
 for(let i=0;i<63;i++){
  ctx.location.hash='#characters';vm.runInContext(`activeCharacter=null;$('#detail').close();detailRoutes['c${i}']='summary';openCharacter('c${i}')`,ctx);
@@ -265,7 +265,7 @@ vm.runInContext("gearSources={'route:蕾达:daminasword':5}",ctx);assert(vm.runI
 vm.runInContext("location.hash='#overview';route='レダ';routeGuideView='plan';render()",ctx);assert(nodes['#content'].innerHTML.includes('data-view-panel="projects"')&&nodes['#content'].innerHTML.includes('data-view-panel="characters"'));assert(nodes['#content'].innerHTML.includes('data-view-tab="projects" aria-selected="true"'));
 const attrs={};function control(v){return {dataset:{viewTab:v},tabIndex:0,classList:{toggle(){}},setAttribute:(n,value)=>attrs[v+':'+n]=value}}const buttons=[control('projects'),control('characters')],panels=[{dataset:{viewPanel:'projects'},hidden:false},{dataset:{viewPanel:'characters'},hidden:true}],group={dataset:{viewGroup:'route-レダ',viewKind:'arena'},querySelectorAll:selector=>selector==='[data-view-tab]'?buttons:panels};buttons.forEach(b=>b.closest=()=>group);ctx.tabControl=buttons[1];vm.runInContext('activateViewTab(tabControl)',ctx);assert(panels[0].hidden&&!panels[1].hidden);assert(attrs['characters:aria-selected']==='true');vm.runInContext('render()',ctx);assert(nodes['#content'].innerHTML.includes('data-view-tab="characters" aria-selected="true"'));
 vm.runInContext("location.hash='#characters';activeCharacter=null;detailRoutes.c7='summary';openCharacter('c7')",ctx);assert(nodes['#characterPage'].innerHTML.includes('career-stepper'));assert((nodes['#characterPage'].innerHTML.match(/class="career-panel"/g)||[]).length===4);assert((nodes['#characterPage'].innerHTML.match(/data-view-panel="[023]"[^>]* hidden/g)||[]).length===3);
-assert(vm.runInContext("GROWTH_PALETTE.at(-1)==='#b96448'",ctx));assert(css.includes('.career-stepper{display:grid;grid-template-columns:repeat(4'));
+assert(vm.runInContext("GROWTH_PALETTE.at(-1)==='#95b59c'",ctx));assert(css.includes('.career-stepper{display:grid;grid-template-columns:repeat(4'));
 
 vm.runInContext("$('#detail').close();activeCharacter=null;location.hash='#overview';route='レダ';gearSources={};weaponInventory={};render()",ctx);
 const sourceKey='route:レダ:daminasword';vm.runInContext(`sourcePicker(selectedGear([{e:EQUIPMENT.find(e=>e.id==='daminasword'),users:[DB.characters[8]]}],'route:レダ')[0]);openSourceDialog(${JSON.stringify(sourceKey)})`,ctx);
@@ -936,6 +936,26 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
  assert(audits.find(a=>a.characterId==='c7').highlighted.some(s=>s.name==='鼓舞重击'));
  assert(audits.find(a=>a.characterId==='c30').highlighted.some(s=>/^体格|重装移动术/.test(s.name)));
  if(process.env.FE_WRITE_LEARNING_AUDIT)fs.writeFileSync(process.env.FE_WRITE_LEARNING_AUDIT,JSON.stringify({checkedAt:'2026-10-27',policy:'Highlights identify concrete tactical or training benefits, not an instruction to acquire every skill. Generic proficiency levels and S+ mysteries are excluded; exact ranks and restrictions remain in hover/details.',characters:audits},null,2)+'\n');
+
+ const guidance=reviewed.skillRecommendations;
+ assert.equal(guidance.entries.length,94);assert.equal(new Set(guidance.entries.map(r=>r.abilityId)).size,94);
+ for(const item of guidance.entries){
+  assert(reviewed.abilities.some(a=>a.id===item.abilityId&&a.name===item.name&&a.type===item.type));
+  assert(['priority','situational'].includes(item.tier)&&item.reason&&item.caution);
+  assert(item.sources.length&&item.sources.every(id=>guidance.sources[id]?.url.startsWith('https://')));
+ }
+ assert(vm.runInContext("guideRecommendationFor({name:'熟练之技'},'特技').tier==='priority'&&guideRecommendationFor({name:'残心'},'特技').tier==='situational'",ctx),'Recommendations separate broadly useful targets from conditional choices');
+ assert(vm.runInContext("guideRecommendationFor({name:'螺旋射击'},'combatArts').caution.includes('不稳定')&&!acquisitionMerit({name:'随便的技能',description:'攻击力+9'},'learnedSkills')",ctx),'Recommendations come from reviewed judgments, not keyword magnitude');
+ assert(vm.runInContext("skillRecommendationQuick(abilityName('熟练之技')).includes('AppMedia')&&skillRecommendationQuick(abilityName('熟练之技')).includes('redfreshet')",ctx),'Hover retains the recommendation rationale and linked sources');
+ for(const cl of reviewed.database.classes){ctx.unlockProbeId=cl.id;
+  assert(vm.runInContext("(()=>{const c=DB.classes.find(c=>c.id===unlockProbeId),h=classTable([c]);return !h.includes('解锁条件 ↗')&&!h.includes('考试凭证')&&h.includes(classRequirementTokens(c))})()",ctx),'Class list keeps qualification facts and removes generic unlock/certificate clutter: '+cl.cn);
+ }
+ assert(vm.runInContext("(()=>{const h=classRequirementTokens(classBy('驭龙兵'));return h.includes('qualification-line')&&!h.includes('requirement-and')&&!/[（）]/.test(h)&&h.includes('或')})()",ctx),'Required skill and alternative skill groups remain distinct lines without AND/parentheses');
+ assert(vm.runInContext("!classUnlockHint(classBy('侍道'))&&!classUnlockHint(classBy('战斗将领'))&&classUnlockHint(classBy('驭龙兵')).includes('凯伊篇')&&classUnlockHint(classBy('舞者')).includes('蕾达篇')",ctx),'Only meaningful special restrictions remain on class rows');
+ assert(vm.runInContext("classUnlockQuick(classBy('舞者')).includes('第一、二部仅蕾达本人')&&classUnlockQuick(classBy('刃辉神将')).includes('妖刀剑锷')",ctx),'Hover preserves phase/character restrictions and unique items');
+ assert(vm.runInContext("DB.characters.every(c=>{const h=skillAffinity(c);return h.includes('affinity-good')||!c.good})",ctx),'Affinity facts survive the shared sign treatment');
+ console.log('PASS reviewed skill judgments, source-linked recommendations, concise AND/OR qualification rows and special unlock hover.');
+
  console.log('PASS all 63 character acquisition grids, 166 sourced additions, conditional highlight reasons and cross-training permission checks.');
 }
 
