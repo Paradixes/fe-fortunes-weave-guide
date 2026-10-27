@@ -18,4 +18,13 @@ console.log('PASS map notes: normalized browser storage, map coordinates, safe t
 
 run("mapArea='蕾达';newMapNote(20,30,'蕾达物资');writeMapNotes([mapNoteDraft]);mapArea='凯伊'");assert.equal(run('visibleMapNotes().length'),0);run("mapArea='蕾达'");assert.equal(run('visibleMapNotes().length'),1);assert.equal(run("normalizeMapNotes([{id:'legacy',title:'旧标记',x:1,y:2}])[0].route"),'all');
 assert(!run('newMapNote.toString()').includes('focusMapNote'));
+run("mapArea='all';mapNoteDraft=null;mapNoteView=null;writeMapNotes([{id:'p1',title:'回来拿',icon:'道具',x:30,y:45,route:'all'},{id:'f1',title:'野外',icon:'矿石',x:60,y:60,route:'all'},{id:'f2',title:'野外二',icon:'矿石',x:61,y:61,route:'all'}]);mapSelected='place-1'");
+assert(run("mapNotePopover()").includes('map-popover-brief')&&run("mapNotePopover()").includes('回来拿')&&run("mapNotePopover()").includes('data-note-edit=\"p1\"'),'A place with a note keeps its detail and lists the note');
+assert.equal(run("mapNotePlace(mapNotes[0])?.id"),'place-1');assert.equal(run("mapNotePlace(mapNotes[1])"),undefined);
+run("mapNoteView='f1'");assert(run("mapNotePopover()").includes('map-note-card')&&run("mapNotePopover()").includes('data-note-delete-one'),'A free note opens a read-only card');run("mapNoteView=null");
+run("mapNoteChecked=new Set(['f1','f2'])");assert(run("mapNoteLibrary()").includes('删除所选 2')&&run("mapNoteLibrary()").includes('data-note-delete-all'));
+run("confirm=()=>false;deleteMapNotes(['f1'],'')");assert.equal(run('mapNotes.length'),3,'Cancelled confirmation keeps notes');
+run("confirm=()=>true;deleteMapNotes([...mapNoteChecked],'所选')");assert.equal(run("mapNotes.map(n=>n.id).join()"),'p1');assert.equal(run('mapNoteChecked.size'),0);
+run("deleteMapNotes(visibleMapNotes().map(n=>n.id),'全部')");assert.equal(run('readMapNotes().length'),0);
+console.log('PASS note details and bulk deletion: place notes keep place detail, free notes open a card, selected/all deletion with confirmation.');
 console.log('PASS route-scoped notes: route preservation, filtering, legacy all-route notes and stationary point creation.');

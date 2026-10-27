@@ -231,3 +231,28 @@ main#content>.route-cover{margin-top:0}
 #characterPage h2{font-size:17px;margin-top:20px;margin-bottom:8px}
 #characterPage section>h2:first-child,#characterPage .skill-growth-head h2{margin-top:0}
 #characterPage .rating-analysis-heading h2{font-size:14px;margin:0}
+/* Skill catalogue: learners flow as a row of face+name chips; the repeated "专精习得" hint is dropped. */
+.ability-ledger{--eq-cols:minmax(170px,.9fr) minmax(220px,1.5fr) minmax(170px,1fr) minmax(280px,1.35fr)}
+.ability-ledger .equipment-row{padding-block:6px}
+.ability-row-people{flex-direction:row;flex-wrap:wrap;align-items:center;gap:2px 10px}
+.ability-learning-people{display:contents}
+.ability-row-people .ability-person{gap:4px;margin:0;padding:1px 0;min-height:24px}
+.ability-row-people .ability-person .portrait{width:22px;height:22px}
+.ability-row-people .ability-person small{display:none}
+.ability-row-people .ability-person b{font-weight:600}
+.ability-row-people>.text-button{min-height:24px;font-size:12px;white-space:nowrap}
+/* Map notes: a place keeps its detail and lists its notes on top; the note library supports bulk deletion. */
+.map-popover-note{display:flex;align-items:center;gap:6px;margin:0 0 6px;padding:4px 6px;border-radius:6px;background:var(--tint);font-size:12px;line-height:1.4}
+.map-popover-note>svg,.map-popover-note>img,.map-popover-note>.atlas-icon{width:18px;height:18px;flex:none}
+.map-popover-note>span{flex:1;min-width:0}
+.map-popover-note small{display:block;color:var(--muted);font-size:11px}
+.map-popover-note .text-button{min-height:22px;font-size:12px;flex:none}
+.map-note-card .map-popover-note{margin:0}
+.map-note-bulk{display:flex;align-items:center;gap:10px;padding:0 4px 6px;margin-bottom:4px;border-bottom:1px solid var(--line);font-size:12px}
+.map-note-bulk label{display:flex;align-items:center;gap:4px;margin-right:auto;cursor:pointer}
+.map-note-bulk .text-button{min-height:24px;font-size:12px}
+.map-note-bulk .text-button:disabled{opacity:.45;cursor:default}
+.map-note-row{display:flex;align-items:center;gap:4px;padding-left:4px}
+.map-note-row>input{flex:none;margin:0}
+.map-note-row>button{flex:1;min-width:0}
+#personal-map-note-list .map-note-row>button{padding:5px 4px}
