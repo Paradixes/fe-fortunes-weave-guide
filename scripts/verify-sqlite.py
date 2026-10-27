@@ -1,6 +1,8 @@
 """Verify lossless catalogue migration and the actual SQLite HTTP read path."""
 import importlib.util
 import json
+import shutil
+import tempfile
 import threading
 import urllib.error
 import urllib.request
@@ -21,6 +23,14 @@ api = load_module("catalog_api", ROOT / "server/catalog_server.py")
 source = json.loads((ROOT / "data/catalog.json").read_text())
 database = ROOT / "data/catalog.sqlite3"
 assert store.export_catalog(database) == source, "SQLite must preserve every catalogue field"
+# Rebuilding the same catalogue must not churn the SQLite file.
+with tempfile.TemporaryDirectory() as directory:
+    snapshot = Path(directory) / "catalog.sqlite3"
+    shutil.copyfile(database, snapshot)
+    store.cache_bundles(snapshot, ROOT / "dist")
+    unchanged = snapshot.read_bytes()
+    store.cache_bundles(snapshot, ROOT / "dist")
+    assert snapshot.read_bytes() == unchanged, "Unchanged bundles must not rewrite SQLite"
 with store.connect_readonly(database) as conn:
     assert conn.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
     try:
