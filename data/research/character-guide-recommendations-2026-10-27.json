@@ -1,0 +1,4547 @@
+{
+  "checkedAt": "2026-10-27",
+  "policy": "Highlights identify concrete tactical or training benefits, not an instruction to acquire every skill. Generic proficiency levels and S+ mysteries are excluded; exact ranks and restrictions remain in hover/details.",
+  "characters": [
+    {
+      "characterId": "c0",
+      "name": "凯伊",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "佯攻+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "邻接前排可加强命中压制；与基础版择高使用"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵对远程压力可补更高回避；与基础版择高使用"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "高速飞行术+",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C",
+          "reason": "飞行先攻手进一步争取追击；先比较实战攻速差，避免超额投入"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "重装移动术+1",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "重装前排以强化版补移动短板；与基础版择高使用"
+        },
+        {
+          "name": "猛斩",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "需要单次高威力时可以补伤害；命中有明显代价，优先保证命中"
+        },
+        {
+          "name": "圣突枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "枪手交战后按需补续航；耐久消耗与回复量一起比较"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "斧手交战时补物理承伤；只在该战斗生效"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理武器路线可选择魔法伤害补盲；按自身魔力与敌人魔防决定收益"
+        },
+        {
+          "name": "脱离射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "弓手攻击后可重新拉开距离；有伤害与耐久代价"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "劈刺",
+        "猛斩",
+        "投掷魔斧"
+      ],
+      "recommendedSkills": [
+        "冥炎之主",
+        "枪术Lv.4",
+        "圣盾",
+        "骑士先阵+",
+        "剑术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c1",
+      "name": "古扎岚",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "佯攻+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "邻接前排可加强命中压制；与基础版择高使用"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "重装前排优先补移动短板；换成其他兵种后不能继续按相同收益计算"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "重装移动术+1",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "重装前排以强化版补移动短板；与基础版择高使用"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "枪手主动交战时补物理承伤；消耗耐久，不是装备后常驻物防"
+        },
+        {
+          "name": "脱离射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "弓手攻击后可重新拉开距离；有伤害与耐久代价"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "B",
+          "reason": "格斗输出可争取反击前追击；需要满足实际追击条件"
+        },
+        {
+          "name": "投击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "投掷斧可兼顾命中与安全距离；仅限符合射程条件的斧"
+        },
+        {
+          "name": "双刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "剑手用连续攻击争取集中输出；单次伤害有折扣且耐久消耗高"
+        }
+      ],
+      "electives": [
+        "步行移动术",
+        "守护旋风",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "佯攻",
+        "即时回避",
+        "心情上佳+",
+        "剑术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c2",
+      "name": "迪托利希",
+      "highlighted": [
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "步行移动术+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S+",
+          "reason": "步兵可进一步降低复杂地形消耗；只对步兵与相应地形有效，S＋培养成本高"
+        },
+        {
+          "name": "十字智慧",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "可在地图内累计技巧；需要准备战斗和对应武器"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理输出可在地图内累计力量；需要准备战斗；换地图不保留"
+        },
+        {
+          "name": "影眩之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "弓手交战时可兼顾回避；回避收益有当前战斗范围限制"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可以限制敌方法术行动；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "步行移动术",
+        "威吓",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "骑士的感觉",
+        "兽之冲动",
+        "剑术Lv.5",
+        "步行移动术+"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c3",
+      "name": "奇洛伊卡",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵弓手或施法者可补稳定命中；装备弓或魔法时生效，先核对本人门槛"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "占地",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "地面回避型角色可利用有利地形；不在有利地形时没有这项收益"
+        },
+        {
+          "name": "脱离射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "弓手攻击后可重新拉开距离；有伤害与耐久代价"
+        },
+        {
+          "name": "猛斩",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "需要单次高威力时可以补伤害；命中有明显代价，优先保证命中"
+        }
+      ],
+      "electives": [
+        "猛斩",
+        "威吓",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "判读风向",
+        "状态不错",
+        "射击专家",
+        "威迫+"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c4",
+      "name": "绯亚娜",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵弓手或施法者可补稳定命中；装备弓或魔法时生效，先核对本人门槛"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "体格+",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "S+",
+          "reason": "极重武器可按实际负重缺口补强；取得晚；体格已够用就没有继续投入必要"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "重武器角色可按负重缺口补体格；先看装备重量，不是力量的通用替代"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "拉近",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "辅助角色可通过位置操作调整阵线；确认相邻站位、大型单位限制与行动成本"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理武器路线可选择魔法伤害补盲；按自身魔力与敌人魔防决定收益"
+        },
+        {
+          "name": "雷斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "斧路线可选择魔法伤害补盲；按魔力与敌人魔防比较普通攻击"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "安定射击",
+        "步行移动术",
+        "致命回避"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "致命回避",
+        "安定射击+",
+        "信仰的恩赐+",
+        "黑魔术Lv.5"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c5",
+      "name": "赛奥朵拉",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        },
+        {
+          "name": "重破坏+",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "高防御重装可选择更强的概率爆发；与基础版择高使用，仍受触发概率限制"
+        },
+        {
+          "name": "重破坏",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "高防御重装可作为概率爆发补充；不是稳定伤害，不能据此计算必定击杀"
+        },
+        {
+          "name": "牵制+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "队伍集火时加强回避压制；与基础版择高使用"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "枪手主动交战时补物理承伤；消耗耐久，不是装备后常驻物防"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "猛斩",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "需要单次高威力时可以补伤害；命中有明显代价，优先保证命中"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [
+        "劈刺",
+        "猛斩",
+        "牵制"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "毁坏",
+        "直击",
+        "枪术Lv.4",
+        "圣盾"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c6",
+      "name": "索绯雅",
+      "highlighted": [
+        {
+          "name": "拉近",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "辅助角色可通过位置操作调整阵线；确认相邻站位、大型单位限制与行动成本"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        }
+      ],
+      "electives": [
+        "劈刺",
+        "远程圣疗",
+        "狙击回避"
+      ],
+      "recommendedSkills": [
+        "远程治愈+",
+        "狙击回避",
+        "白魔术Lv.5",
+        "结界",
+        "斧术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c7",
+      "name": "蕾达",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵对远程压力可补更高回避；与基础版择高使用"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "步行移动术+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S+",
+          "reason": "步兵可进一步降低复杂地形消耗；只对步兵与相应地形有效，S＋培养成本高"
+        },
+        {
+          "name": "娴熟一击",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "轻耗耐久的收割手段，适合补低力量伤害；敌人HP需不高于一半"
+        },
+        {
+          "name": "影眩之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "B",
+          "reason": "弓手交战时可兼顾回避；回避收益有当前战斗范围限制"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "呼唤平静",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "A",
+          "reason": "弓手击杀后可准备一次回避交战；完成一次战斗后恢复，不能视为常驻"
+        },
+        {
+          "name": "替换",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "队伍可通过换位调整进攻与救援位置；需要相邻站位与兵种条件，消耗行动"
+        },
+        {
+          "name": "鼓舞重击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "可在本张地图累计速度，为后续追击铺垫；需先使用格斗战技，准备回合与耐久不是零成本"
+        },
+        {
+          "name": "阳炎",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "剑手击杀后可加强后续回避；必须先完成击杀，不宜用来保证首次交战安全"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "队伍集中受伤时可提供群体治疗；按受益人数与有限次数决定使用时机"
+        }
+      ],
+      "electives": [
+        "步行移动术",
+        "佯攻",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "判读风向",
+        "即时回避",
+        "即兴",
+        "剑术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c8",
+      "name": "卡塔妮雅",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "佯攻+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "邻接前排可加强命中压制；与基础版择高使用"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "重装前排优先补移动短板；换成其他兵种后不能继续按相同收益计算"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "占地",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "地面回避型角色可利用有利地形；不在有利地形时没有这项收益"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "十字智慧",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "可在地图内累计技巧；需要准备战斗和对应武器"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "投击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "投掷斧可兼顾命中与安全距离；仅限符合射程条件的斧"
+        },
+        {
+          "name": "翔闪枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "A",
+          "reason": "能追击的枪手争取反击前完成输出；先确认追击条件与耐久，不能当成无条件双击"
+        },
+        {
+          "name": "哈姆辛",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "回避路线可处理低命中的敌人；先确认敌方命中已经压到阈值"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "高速飞行术",
+        "占地+",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "高速飞行术",
+        "佯攻",
+        "以风为友+",
+        "占地+",
+        "迅雷风烈"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c9",
+      "name": "杨界",
+      "highlighted": [
+        {
+          "name": "替换",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "队伍可通过换位调整进攻与救援位置；需要相邻站位与兵种条件，消耗行动"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        }
+      ],
+      "electives": [
+        "托隆",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "短兵相接",
+        "活力结界+",
+        "即时回避",
+        "结界"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c10",
+      "name": "马吉迪",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可以通过控制目标辅助走位；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "威吓",
+        "牵制",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "威吓",
+        "骑士的感觉",
+        "熟练之技",
+        "无所畏惧+"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c11",
+      "name": "妮涅",
+      "highlighted": [
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "D",
+          "reason": "重装前排优先补移动短板；换成其他兵种后不能继续按相同收益计算"
+        },
+        {
+          "name": "抵抗魔装",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "重装角色按需补魔防；换兵种后重新核对生效条件"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "圣突枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "枪手交战后按需补续航；耐久消耗与回复量一起比较"
+        },
+        {
+          "name": "合围之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人移动以辅助走位；命中后才生效，留意持续时间"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "斧手交战时补物理承伤；只在该战斗生效"
+        },
+        {
+          "name": "投击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "投掷斧可兼顾命中与安全距离；仅限符合射程条件的斧"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        }
+      ],
+      "electives": [
+        "圣突枪",
+        "威吓",
+        "致命回避"
+      ],
+      "recommendedSkills": [
+        "精灵的引导+",
+        "威吓",
+        "致命回避",
+        "白魔术Lv.5",
+        "不退架势"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c12",
+      "name": "哪吒",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "绝境回避",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "半血回避路线可作为配套；需要控血，不能视为满血生存保障"
+        },
+        {
+          "name": "十字智慧",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "可在地图内累计技巧；需要准备战斗和对应武器"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [
+        "佯攻",
+        "绝境回避",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "绝境回避",
+        "骑士的感觉",
+        "闪身",
+        "我停不下来+"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c13",
+      "name": "努佐",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        },
+        {
+          "name": "双刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "剑手用连续攻击争取集中输出；单次伤害有折扣且耐久消耗高"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可以限制敌方法术行动；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "双刃",
+        "牵制",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "骑士的感觉",
+        "秘奥+",
+        "即时回避",
+        "剑术Lv.1"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c14",
+      "name": "亚历珊德拉",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "佯攻+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "邻接前排可加强命中压制；与基础版择高使用"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "抵抗魔装",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "重装角色按需补魔防；换兵种后重新核对生效条件"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "B",
+          "reason": "格斗输出可争取反击前追击；需要满足实际追击条件"
+        },
+        {
+          "name": "投击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "投掷斧可兼顾命中与安全距离；仅限符合射程条件的斧"
+        },
+        {
+          "name": "破枪",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "面对枪敌人时的针对输出；不是对所有敌人都有额外伤害"
+        },
+        {
+          "name": "翔闪枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "A",
+          "reason": "能追击的枪手争取反击前完成输出；先确认追击条件与耐久，不能当成无条件双击"
+        }
+      ],
+      "electives": [
+        "高速飞行术",
+        "翔闪枪",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "高速飞行术",
+        "佯攻",
+        "飞翔+",
+        "迅雷风烈",
+        "飞行战斗术"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c15",
+      "name": "皮特鲁",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵弓手或施法者可补稳定命中；装备弓或魔法时生效，先核对本人门槛"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "步行移动术+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S+",
+          "reason": "步兵可进一步降低复杂地形消耗；只对步兵与相应地形有效，S＋培养成本高"
+        },
+        {
+          "name": "占地",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "地面回避型角色可利用有利地形；不在有利地形时没有这项收益"
+        },
+        {
+          "name": "合围之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人移动以辅助走位；命中后才生效，留意持续时间"
+        },
+        {
+          "name": "螺旋射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "B",
+          "reason": "弓手可作为概率伤害补充；额外伤害不稳定，不能按必定触发计算"
+        },
+        {
+          "name": "替换",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "队伍可通过换位调整进攻与救援位置；需要相邻站位与兵种条件，消耗行动"
+        },
+        {
+          "name": "投击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "投掷斧可兼顾命中与安全距离；仅限符合射程条件的斧"
+        },
+        {
+          "name": "双重攻击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "斧手可用两次攻击补出手次数；命中代价明显，先保证两击能中"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可以通过控制目标辅助走位；先核对目标、命中与持续时间"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        }
+      ],
+      "electives": [
+        "占地+",
+        "对狙击战术",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "占地+",
+        "对狙击战术",
+        "骑士的感觉",
+        "状态不错",
+        "射击专家"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c16",
+      "name": "媞雅拉",
+      "highlighted": [
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        }
+      ],
+      "electives": [
+        "半劈刺",
+        "安定射击",
+        "圣疗"
+      ],
+      "recommendedSkills": [
+        "安定射击",
+        "军师的炯眼+",
+        "白魔术Lv.5",
+        "斧术Lv.4",
+        "格斗术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c17",
+      "name": "伊欧",
+      "highlighted": [
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "枪手主动交战时补物理承伤；消耗耐久，不是装备后常驻物防"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理输出可在地图内累计力量；需要准备战斗；换地图不保留"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        }
+      ],
+      "electives": [
+        "愤怒激发",
+        "骑兵移动术",
+        "威吓"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "骑兵移动术",
+        "骑乘突击+",
+        "枪术Lv.4",
+        "圣盾"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c18",
+      "name": "哥莱亚斯",
+      "highlighted": [
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "重武器角色可按负重缺口补体格；先看装备重量，不是力量的通用替代"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "斧手交战时补物理承伤；只在该战斗生效"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [
+        "防御阵形",
+        "威吓",
+        "绝对防御+"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "绝对防御+",
+        "防御阵形",
+        "阻绝",
+        "压制+"
+      ],
+      "order": [
+        "剑术",
+        "斧术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c19",
+      "name": "丹提",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可以通过控制目标辅助走位；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "安定射击",
+        "托隆",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "安定射击",
+        "追加演出+",
+        "黑魔术Lv.5",
+        "剑术Lv.1"
+      ],
+      "order": [
+        "枪术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c20",
+      "name": "盖茨",
+      "highlighted": [
+        {
+          "name": "佯攻+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "邻接前排可加强命中压制；与基础版择高使用"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "佯攻+",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "佯攻+",
+        "判读风向",
+        "牙闪+",
+        "枪术Lv.4",
+        "圣盾"
+      ],
+      "order": [
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c21",
+      "name": "艾丝梅拉尔达",
+      "highlighted": [
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "重武器角色可按负重缺口补体格；先看装备重量，不是力量的通用替代"
+        },
+        {
+          "name": "高速飞行术+",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手进一步争取追击；先比较实战攻速差，避免超额投入"
+        },
+        {
+          "name": "重破坏",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "高防御重装可作为概率爆发补充；不是稳定伤害，不能据此计算必定击杀"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "猛斩",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "需要单次高威力时可以补伤害；命中有明显代价，优先保证命中"
+        },
+        {
+          "name": "二连投掷",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "两次攻击可帮助低速枪手补出手次数；投掷枪限制与命中代价必须一起考虑"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "斧手交战时补物理承伤；只在该战斗生效"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [
+        "劈刺",
+        "守护尖刺",
+        "防弓术"
+      ],
+      "recommendedSkills": [
+        "防弓术",
+        "阻绝",
+        "投枪达人+",
+        "体格",
+        "重破坏"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c22",
+      "name": "法毕欧",
+      "highlighted": [
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵弓手或施法者可补稳定命中；装备弓或魔法时生效，先核对本人门槛"
+        },
+        {
+          "name": "拉近",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "辅助角色可通过位置操作调整阵线；确认相邻站位、大型单位限制与行动成本"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理武器路线可选择魔法伤害补盲；按自身魔力与敌人魔防决定收益"
+        }
+      ],
+      "electives": [
+        "安定射击+",
+        "狙击回避",
+        "对魔法战术"
+      ],
+      "recommendedSkills": [
+        "安定射击+",
+        "对魔法战术",
+        "狙击回避",
+        "暗之秘术+",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c23",
+      "name": "诺克裘拉",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "退身拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "格斗手可在攻击后调整距离；有伤害与耐久代价"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "B",
+          "reason": "格斗输出可争取反击前追击；需要满足实际追击条件"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理输出可在地图内累计力量；需要准备战斗；换地图不保留"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "阳炎",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "B",
+          "reason": "剑手击杀后可加强后续回避；必须先完成击杀，不宜用来保证首次交战安全"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可以通过控制目标辅助走位；先核对目标、命中与持续时间"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [
+        "战斗强打",
+        "阳炎",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "熟练之技",
+        "短兵相接",
+        "专注领域+",
+        "斧术Lv.2"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c24",
+      "name": "罗蕾塔",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "哈姆辛",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "回避路线可处理低命中的敌人；先确认敌方命中已经压到阈值"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "阳炎",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "剑手击杀后可加强后续回避；必须先完成击杀，不宜用来保证首次交战安全"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "哈姆辛",
+        "阳炎",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "状态绝佳+",
+        "剑术Lv.3",
+        "闪身",
+        "残心"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c25",
+      "name": "西提司",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "枪手主动交战时补物理承伤；消耗耐久，不是装备后常驻物防"
+        },
+        {
+          "name": "破枪",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "面对枪敌人时的针对输出；不是对所有敌人都有额外伤害"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "移动队友以调整战线；按实际法术的射程与移动方式使用"
+        }
+      ],
+      "electives": [
+        "破枪",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "正义执行+",
+        "枪术Lv.4",
+        "圣盾",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c26",
+      "name": "波拿帕尔特",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "破枪",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "面对枪敌人时的针对输出；不是对所有敌人都有额外伤害"
+        },
+        {
+          "name": "鼓舞重击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "可在本张地图累计速度，为后续追击铺垫；需先使用格斗战技，准备回合与耐久不是零成本"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可以限制敌方法术行动；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "安定射击",
+        "鼓舞重击",
+        "狙击回避"
+      ],
+      "recommendedSkills": [
+        "安定射击",
+        "狙击回避",
+        "补充说明+",
+        "剑术Lv.3",
+        "黑魔术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c27",
+      "name": "托比亚斯",
+      "highlighted": [
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "重武器角色可按负重缺口补体格；先看装备重量，不是力量的通用替代"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理输出可在地图内累计力量；需要准备战斗；换地图不保留"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "移动队友以调整战线；按实际法术的射程与移动方式使用"
+        }
+      ],
+      "electives": [
+        "威吓",
+        "绝对防御+",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "绝对防御+",
+        "骑士的感觉",
+        "阻绝",
+        "认真的一击+"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c28",
+      "name": "哈尔温",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "替换",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "队伍可通过换位调整进攻与救援位置；需要相邻站位与兵种条件，消耗行动"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "移动队友以调整战线；按实际法术的射程与移动方式使用"
+        }
+      ],
+      "electives": [
+        "佯攻",
+        "判读风向",
+        "骑士先阵"
+      ],
+      "recommendedSkills": [
+        "骑士先阵",
+        "佯攻",
+        "判读风向",
+        "状态不错",
+        "射击专家"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c29",
+      "name": "沙兰",
+      "highlighted": [
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "退身拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "格斗手可在攻击后调整距离；有伤害与耐久代价"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理武器路线可选择魔法伤害补盲；按自身魔力与敌人魔防决定收益"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "队伍集中受伤时可提供群体治疗；按受益人数与有限次数决定使用时机"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "劈刺",
+        "退身拳",
+        "投掷魔斧"
+      ],
+      "recommendedSkills": [
+        "注意唤起+",
+        "白魔术Lv.5",
+        "结界",
+        "斧术Lv.4",
+        "格斗术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c30",
+      "name": "巴卡尼亚",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        },
+        {
+          "name": "牵制+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "队伍集火时加强回避压制；与基础版择高使用"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "D",
+          "reason": "重装前排优先补移动短板；换成其他兵种后不能继续按相同收益计算"
+        },
+        {
+          "name": "重装移动术+1",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "重装前排以强化版补移动短板；与基础版择高使用"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "重武器角色可按负重缺口补体格；先看装备重量，不是力量的通用替代"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "枪手主动交战时补物理承伤；消耗耐久，不是装备后常驻物防"
+        },
+        {
+          "name": "射足",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "为后续集火压低敌方回避；需要配合队伍攻击顺序"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "斧手交战时补物理承伤；只在该战斗生效"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "重装移动术+1",
+        "防御阵形",
+        "劈刺"
+      ],
+      "recommendedSkills": [
+        "重装移动术+1",
+        "防御阵形",
+        "阻绝",
+        "回礼一击+",
+        "体格"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c31",
+      "name": "西洛可",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "佯攻+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "邻接前排可加强命中压制；与基础版择高使用"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵对远程压力可补更高回避；与基础版择高使用"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "合围之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人移动以辅助走位；命中后才生效，留意持续时间"
+        },
+        {
+          "name": "投掷魔斧",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理武器路线可选择魔法伤害补盲；按自身魔力与敌人魔防决定收益"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "队伍集中受伤时可提供群体治疗；按受益人数与有限次数决定使用时机"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "步行移动术",
+        "佯攻",
+        "狙击回避"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "狙击回避",
+        "佯攻",
+        "随风而行+",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c32",
+      "name": "穆",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "佯攻+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "邻接前排可加强命中压制；与基础版择高使用"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理输出可在地图内累计力量；需要准备战斗；换地图不保留"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "B",
+          "reason": "格斗输出可争取反击前追击；需要满足实际追击条件"
+        },
+        {
+          "name": "拉近",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "辅助角色可通过位置操作调整阵线；确认相邻站位、大型单位限制与行动成本"
+        },
+        {
+          "name": "射足",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "为后续集火压低敌方回避；需要配合队伍攻击顺序"
+        },
+        {
+          "name": "双刃",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "A",
+          "reason": "剑手用连续攻击争取集中输出；单次伤害有折扣且耐久消耗高"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        }
+      ],
+      "electives": [
+        "劈刺",
+        "愤怒激发",
+        "步行移动术"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "强战士之血+",
+        "熟练之技",
+        "格斗术的奥妙",
+        "格斗术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c33",
+      "name": "奥琳琵娅",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵弓手或施法者可补稳定命中；装备弓或魔法时生效，先核对本人门槛"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可以限制敌方法术行动；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "安定射击",
+        "攻击阵形",
+        "威吓"
+      ],
+      "recommendedSkills": [
+        "安定射击+",
+        "激情圣吸+",
+        "攻击阵形",
+        "威吓",
+        "黑魔术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c34",
+      "name": "米迦艾拉",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        },
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "C",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "牵制+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "队伍集火时加强回避压制；与基础版择高使用"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B",
+          "reason": "重装前排优先补移动短板；换成其他兵种后不能继续按相同收益计算"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理输出可在地图内累计力量；需要准备战斗；换地图不保留"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "队伍集中受伤时可提供群体治疗；按受益人数与有限次数决定使用时机"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "移动队友以调整战线；按实际法术的射程与移动方式使用"
+        }
+      ],
+      "electives": [
+        "劈刺",
+        "重装移动术",
+        "愤怒激发"
+      ],
+      "recommendedSkills": [
+        "重装移动术",
+        "阻绝",
+        "铁血+",
+        "绝对防御",
+        "枪术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c35",
+      "name": "努蒂奴",
+      "highlighted": [
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理输出可在地图内累计力量；需要准备战斗；换地图不保留"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "移动队友以调整战线；按实际法术的射程与移动方式使用"
+        }
+      ],
+      "electives": [
+        "托隆",
+        "防御阵形",
+        "对骑兵战术"
+      ],
+      "recommendedSkills": [
+        "对骑兵战术",
+        "防御阵形",
+        "骑士先阵",
+        "疾驱+",
+        "白魔术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c36",
+      "name": "大刀",
+      "highlighted": [
+        {
+          "name": "重破坏",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "高防御重装可作为概率爆发补充；不是稳定伤害，不能据此计算必定击杀"
+        },
+        {
+          "name": "重破坏+",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "B+",
+          "reason": "高防御重装可选择更强的概率爆发；与基础版择高使用，仍受触发概率限制"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可以通过控制目标辅助走位；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "骑士的感觉",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "判读风向",
+        "阻绝",
+        "全力+",
+        "重破坏+"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c37",
+      "name": "易尼奥尼",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "绝境回避",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "半血回避路线可作为配套；需要控血，不能视为满血生存保障"
+        },
+        {
+          "name": "娴熟一击",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "轻耗耐久的收割手段，适合补低力量伤害；敌人HP需不高于一半"
+        }
+      ],
+      "electives": [
+        "娴熟一击",
+        "攻击阵形",
+        "骑士的感觉"
+      ],
+      "recommendedSkills": [
+        "攻击阵形",
+        "骑士的感觉",
+        "状态不错",
+        "射击专家",
+        "贯穿+"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c38",
+      "name": "嘉丝敏",
+      "highlighted": [
+        {
+          "name": "占地",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "地面回避型角色可利用有利地形；不在有利地形时没有这项收益"
+        },
+        {
+          "name": "重装移动术",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "C",
+          "reason": "重装前排优先补移动短板；换成其他兵种后不能继续按相同收益计算"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "体格",
+          "kind": "learnedSkills",
+          "skill": "重装术",
+          "rank": "A",
+          "reason": "重武器角色可按负重缺口补体格；先看装备重量，不是力量的通用替代"
+        },
+        {
+          "name": "守护旋风",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "B",
+          "reason": "枪手主动交战时补物理承伤；消耗耐久，不是装备后常驻物防"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手交战时补物理承伤；只在该战斗生效"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "移动队友以调整战线；按实际法术的射程与移动方式使用"
+        }
+      ],
+      "electives": [
+        "重装移动术",
+        "防御阵形",
+        "守护尖刺"
+      ],
+      "recommendedSkills": [
+        "重装移动术",
+        "防御阵形",
+        "阻绝",
+        "怒涛反击+",
+        "体格"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c39",
+      "name": "莉利安",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "安定射击+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵弓手或施法者可补稳定命中；装备弓或魔法时生效，先核对本人门槛"
+        },
+        {
+          "name": "优势战斗术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "S",
+          "reason": "地面输出可利用有利地形补伤害；飞行职业通常不能照搬地形收益"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "合围之箭",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "C",
+          "reason": "限制敌人移动以辅助走位；命中后才生效，留意持续时间"
+        },
+        {
+          "name": "拉近",
+          "kind": "combatArts",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "辅助角色可通过位置操作调整阵线；确认相邻站位、大型单位限制与行动成本"
+        },
+        {
+          "name": "退身拳",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "C",
+          "reason": "格斗手可在攻击后调整距离；有伤害与耐久代价"
+        },
+        {
+          "name": "呼唤平静",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "A",
+          "reason": "弓手击杀后可准备一次回避交战；完成一次战斗后恢复，不能视为常驻"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        }
+      ],
+      "electives": [
+        "安定射击",
+        "步行移动术",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "判读风向",
+        "安定射击+",
+        "状态不错",
+        "射击专家"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c40",
+      "name": "莱桑达",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "牵制+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "队伍集火时加强回避压制；与基础版择高使用"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "高速飞行术+",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "S",
+          "reason": "飞行先攻手进一步争取追击；先比较实战攻速差，避免超额投入"
+        },
+        {
+          "name": "佯攻+",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "B",
+          "reason": "邻接前排可加强命中压制；与基础版择高使用"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "劈刺",
+        "骑兵移动术",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "骑兵移动术",
+        "骑士先阵",
+        "加速+",
+        "枪术Lv.4"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c41",
+      "name": "希蒙",
+      "highlighted": [
+        {
+          "name": "娴熟一击",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "轻耗耐久的收割手段，适合补低力量伤害；敌人HP需不高于一半"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [
+        "威吓",
+        "骑士的感觉",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "骑士的感觉",
+        "判读风向",
+        "恶运+",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c42",
+      "name": "札可捏",
+      "highlighted": [
+        {
+          "name": "娴熟一击",
+          "kind": "combatArts",
+          "skill": "剑术",
+          "rank": "C",
+          "reason": "轻耗耐久的收割手段，适合补低力量伤害；敌人HP需不高于一半"
+        },
+        {
+          "name": "投击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "投掷斧可兼顾命中与安全距离；仅限符合射程条件的斧"
+        },
+        {
+          "name": "破枪",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "B",
+          "reason": "面对枪敌人时的针对输出；不是对所有敌人都有额外伤害"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "队伍集中受伤时可提供群体治疗；按受益人数与有限次数决定使用时机"
+        }
+      ],
+      "electives": [
+        "威吓"
+      ],
+      "recommendedSkills": [
+        "威吓",
+        "短兵相接",
+        "卑劣+",
+        "剑术Lv.3",
+        "残心"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c43",
+      "name": "班迪兹",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "螺旋射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "B",
+          "reason": "弓手可作为概率伤害补充；额外伤害不稳定，不能按必定触发计算"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [
+        "螺旋射击"
+      ],
+      "recommendedSkills": [
+        "战车手+",
+        "弓术Lv.3",
+        "突击态势"
+      ],
+      "order": [
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c44",
+      "name": "露露蒂雅",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        }
+      ],
+      "electives": [
+        "牵制",
+        "骑士的感觉",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "骑士的感觉",
+        "判读风向",
+        "熟练之技",
+        "看破+"
+      ],
+      "order": [
+        "枪术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c45",
+      "name": "佩佩",
+      "highlighted": [],
+      "electives": [],
+      "recommendedSkills": [
+        "熟练之技",
+        "王之威光+",
+        "剑术Lv.3",
+        "枪术Lv.4",
+        "即时回避"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c46",
+      "name": "迪雅各",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可以限制敌方法术行动；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "牵制",
+        "闪身"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "闪身",
+        "毫不留情+",
+        "剑术Lv.3",
+        "残心"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c47",
+      "name": "乌修拉",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "D",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "螺旋射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "B",
+          "reason": "弓手可作为概率伤害补充；额外伤害不稳定，不能按必定触发计算"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "队伍集中受伤时可提供群体治疗；按受益人数与有限次数决定使用时机"
+        }
+      ],
+      "electives": [
+        "警戒射击",
+        "螺旋射击",
+        "佯攻"
+      ],
+      "recommendedSkills": [
+        "佯攻",
+        "好机+",
+        "剑术Lv.3",
+        "弓术Lv.4",
+        "闪身"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c48",
+      "name": "杰斯塔",
+      "highlighted": [
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        },
+        {
+          "name": "冻结",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "可以通过控制目标辅助走位；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "判读风向",
+        "熟练之技",
+        "瞬刃+",
+        "剑术Lv.3",
+        "闪身"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "步兵术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c49",
+      "name": "乌尔坦德",
+      "highlighted": [
+        {
+          "name": "牵制",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "贴近敌人时为队伍后续攻击补命中；减的是敌方回避，需配合站位"
+        },
+        {
+          "name": "高速飞行术",
+          "kind": "learnedSkills",
+          "skill": "飞行术",
+          "rank": "C+",
+          "reason": "飞行先攻手补攻速差；只在飞行与先攻条件下生效"
+        },
+        {
+          "name": "闪身",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "步兵对弓与魔法可补回避；限定敌方攻击类型"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵对远程压力可补更高回避；与基础版择高使用"
+        },
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        }
+      ],
+      "electives": [
+        "牵制",
+        "要害回避",
+        "防御阵形"
+      ],
+      "recommendedSkills": [
+        "牵制",
+        "防御阵形",
+        "平安祈祷+",
+        "枪术Lv.4",
+        "白魔术Lv.5"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "马术",
+        "重装术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c50",
+      "name": "齐利科",
+      "highlighted": [
+        {
+          "name": "警戒射击",
+          "kind": "combatArts",
+          "skill": "弓术",
+          "rank": "D",
+          "reason": "弓手可用较低消耗补本次交战回避；不是地图全程的回避加成"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [
+        "圣盾",
+        "体力强化"
+      ],
+      "order": [
+        "枪术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c51",
+      "name": "内森",
+      "highlighted": [
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "劈刺"
+      ],
+      "recommendedSkills": [
+        "圣盾",
+        "体力强化"
+      ],
+      "order": [
+        "斧术",
+        "黑魔术",
+        "白魔术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c52",
+      "name": "欧露赫露",
+      "highlighted": [
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "队伍集中受伤时可提供群体治疗；按受益人数与有限次数决定使用时机"
+        }
+      ],
+      "electives": [
+        "防御阵形",
+        "群体圣疗"
+      ],
+      "recommendedSkills": [
+        "动态预测",
+        "防御阵形",
+        "调魂+",
+        "白魔术Lv.5",
+        "结界"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c53",
+      "name": "谭利穆恩",
+      "highlighted": [
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        }
+      ],
+      "electives": [
+        "圣疗",
+        "圣愈",
+        "远程圣疗"
+      ],
+      "recommendedSkills": [
+        "熟练炮手",
+        "胜利之风",
+        "白魔术Lv.5",
+        "技巧咒缚",
+        "速度咒缚"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c54",
+      "name": "贝特兰",
+      "highlighted": [
+        {
+          "name": "劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可用较低消耗补命中；基础战技，已有更合适输出时可替换"
+        },
+        {
+          "name": "愤怒激发",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "物理输出可在地图内累计力量；需要准备战斗；换地图不保留"
+        },
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [
+        "熟练之技",
+        "后之先",
+        "斧术Lv.3",
+        "攻击&远离",
+        "剑术Lv.3"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "弓术",
+        "黑魔术",
+        "白魔术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c55",
+      "name": "爱娜特莉亚",
+      "highlighted": [
+        {
+          "name": "佯攻",
+          "kind": "learnedSkills",
+          "skill": "指挥术",
+          "rank": "D",
+          "reason": "邻接前排可辅助压低敌方命中；需要贴近敌人，收益与站位相关"
+        },
+        {
+          "name": "步行移动术",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "A",
+          "reason": "步兵可减少地形对行军的拖累；降低地形消耗，不是平地移动力直接加一"
+        },
+        {
+          "name": "闪身+",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "B",
+          "reason": "步兵对远程压力可补更高回避；与基础版择高使用"
+        },
+        {
+          "name": "半劈刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "D",
+          "reason": "斧手可选择回避型交战方式；只在本次战斗生效"
+        },
+        {
+          "name": "投击",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "投掷斧可兼顾命中与安全距离；仅限符合射程条件的斧"
+        },
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        },
+        {
+          "name": "沉默",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "可以限制敌方法术行动；先核对目标、命中与持续时间"
+        }
+      ],
+      "electives": [
+        "步行移动术",
+        "佯攻",
+        "闪身+"
+      ],
+      "recommendedSkills": [
+        "步行移动术",
+        "闪身+",
+        "佯攻",
+        "连贯圆滑+",
+        "即时回避"
+      ],
+      "order": [
+        "剑术",
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c56",
+      "name": "盛托利翁",
+      "highlighted": [
+        {
+          "name": "再生",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "持续作战时可作为治疗补充；确认持续时间和治疗节奏"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [
+        "阻绝",
+        "枪术Lv.4",
+        "大反击",
+        "集中反击",
+        "斧术Lv.4"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c57",
+      "name": "库拉普卡",
+      "highlighted": [
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "移动队友以调整战线；按实际法术的射程与移动方式使用"
+        }
+      ],
+      "electives": [
+        "圣治",
+        "救援"
+      ],
+      "recommendedSkills": [
+        "圣盾",
+        "不退架势",
+        "体力强化"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c58",
+      "name": "救世主",
+      "highlighted": [
+        {
+          "name": "冰枪",
+          "kind": "combatArts",
+          "skill": "枪术",
+          "rank": "A+",
+          "reason": "枪路线可选择魔法伤害补盲；低魔力角色并不会因此自动获得高伤害"
+        },
+        {
+          "name": "守护尖刺",
+          "kind": "combatArts",
+          "skill": "斧术",
+          "rank": "C",
+          "reason": "斧手交战时补物理承伤；只在该战斗生效"
+        },
+        {
+          "name": "群体圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "队伍集中受伤时可提供群体治疗；按受益人数与有限次数决定使用时机"
+        }
+      ],
+      "electives": [
+        "守护尖刺",
+        "冰枪"
+      ],
+      "recommendedSkills": [
+        "烈日的加护+",
+        "圣盾",
+        "枪术的奥妙",
+        "体力强化"
+      ],
+      "order": [
+        "枪术",
+        "斧术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "步兵术",
+        "重装术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c59",
+      "name": "红花",
+      "highlighted": [
+        {
+          "name": "传送",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "改变队友位置以完成进攻或救援；职业权限、施法距离和次数均有限制"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        }
+      ],
+      "electives": [
+        "托隆",
+        "骑士的感觉",
+        "判读风向"
+      ],
+      "recommendedSkills": [
+        "骑士的感觉",
+        "判读风向",
+        "魔力增幅+",
+        "格斗术Lv.1",
+        "技巧咒缚"
+      ],
+      "order": [
+        "枪术",
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "指挥术",
+        "马术",
+        "飞行术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c60",
+      "name": "特洛伊亚",
+      "highlighted": [
+        {
+          "name": "安定射击",
+          "kind": "learnedSkills",
+          "skill": "步兵术",
+          "rank": "C",
+          "reason": "低门槛步兵远程命中补强；只对弓或魔法有效，已有更强命中项时比较槽位"
+        },
+        {
+          "name": "战斗强打",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "A+",
+          "reason": "格斗输出可争取反击前追击；需要满足实际追击条件"
+        },
+        {
+          "name": "鼓舞重击",
+          "kind": "combatArts",
+          "skill": "格斗术",
+          "rank": "A+",
+          "reason": "可在本张地图累计速度，为后续追击铺垫；需先使用格斗战技，准备回合与耐久不是零成本"
+        },
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A+",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        },
+        {
+          "name": "休息",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A+",
+          "reason": "按需解除队友异常状态；没有异常压力时无需专门投入"
+        },
+        {
+          "name": "屏障",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "S",
+          "reason": "可提前准备一次关键防护；确认持续时间与目标条件"
+        }
+      ],
+      "electives": [
+        "休息",
+        "安定射击"
+      ],
+      "recommendedSkills": [
+        "安定射击",
+        "改造+",
+        "攻击&远离"
+      ],
+      "order": [
+        "格斗术",
+        "黑魔术",
+        "白魔术",
+        "步兵术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c61",
+      "name": "亚丝望",
+      "highlighted": [],
+      "electives": [],
+      "recommendedSkills": [
+        "状态不错",
+        "射击专家"
+      ],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    },
+    {
+      "characterId": "c62",
+      "name": "塔霍尼雅",
+      "highlighted": [
+        {
+          "name": "远程圣疗",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "B",
+          "reason": "治疗角色可扩大安全治疗覆盖；先确认施法职业权限，次数有限"
+        },
+        {
+          "name": "救出",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "A",
+          "reason": "把远处友军拉回身边；职业权限、目标距离和次数均有限制"
+        },
+        {
+          "name": "救援",
+          "kind": "magic",
+          "skill": "白魔术",
+          "rank": "C",
+          "reason": "移动队友以调整战线；按实际法术的射程与移动方式使用"
+        }
+      ],
+      "electives": [],
+      "recommendedSkills": [],
+      "order": [
+        "黑魔术",
+        "白魔术"
+      ],
+      "ordered": true,
+      "other": false,
+      "rankPrefix": false
+    }
+  ]
+}
