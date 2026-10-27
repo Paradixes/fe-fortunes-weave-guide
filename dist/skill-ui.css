@@ -117,3 +117,21 @@ body.dark .collection-workspace thead th{background:var(--tint);color:var(--ink)
 .map-batch-unmatched{font-size:11px;line-height:1.7;color:var(--muted)}.map-batch-preview{max-height:180px;overflow:auto}.map-batch-preview button{display:block;width:100%;border:0;background:transparent;text-align:left;padding:7px 0;font-size:12px}.map-batch-preview small{display:block;font-size:11px;color:var(--muted)}
 .map-note-targets{font-size:12px;color:var(--muted)}
 @media(max-width:650px){.collection-toolbar>.button-link{margin-left:0;width:100%;text-align:center}.map-batch-summary button{margin-left:0}}
+
+/* The catalogue and character learning grids share recommendation colors and skill facts. */
+.learning-catalog-links{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;margin:8px 0 12px;font-size:12px}
+.learning-catalog-links .article-links{margin:0}
+.ability-character-context{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;margin:0 0 12px;font-size:12px;color:var(--muted)}
+.ability-learning-people{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px}
+.ability-learning-link{align-items:center;text-align:left;gap:6px;font-size:12px}
+.ability-learning-link>span{display:flex;flex-direction:column;gap:1px}
+.ability-learning-link small{font-size:10px;line-height:1.4;color:var(--muted)}
+.ability-table .ability-name-btn.guide-reward{padding:2px 4px}
+.rank-learning-entry [data-learning-focus]{outline:2px solid var(--positive-mark);outline-offset:3px;border-radius:3px}
+@media(max-width:600px){.ability-character-context{align-items:flex-start;gap:8px}.ability-character-context>span{flex-basis:100%}.learning-catalog-links{gap:6px 12px}}
+
+.ability-catalog-filters .fdeck-ctrl{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px}
+.ability-catalog-filters label{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.ability-catalog-filters select{min-height:32px;max-width:140px;padding:4px 26px 4px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
+.ability-catalog-filters select:focus-visible{outline:2px solid var(--positive-mark);outline-offset:2px}
+@media(max-width:600px){.ability-catalog-filters>.fdeck-label{display:none}.ability-catalog-filters .fdeck-ctrl{width:100%;gap:6px 12px}.ability-catalog-filters label{flex:1;white-space:nowrap}.ability-catalog-filters select{max-width:110px}.ability-catalog-filters [data-ability-reset]{min-height:32px;padding:4px}}

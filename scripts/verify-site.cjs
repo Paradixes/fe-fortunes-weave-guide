@@ -1,6 +1,6 @@
 require('./verify-map-notes.cjs');
 require('./verify-catalog-resolution.cjs');
-const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},dataset:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','catalog-ui.js','app.js','reasons.js','articles.js','skill-planning.js','v9.js','cultivation.js','roster-map.js','search.js','anna-agent.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
+const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},dataset:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,URLSearchParams,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','catalog-ui.js','app.js','reasons.js','articles.js','skill-planning.js','v9.js','cultivation.js','roster-map.js','search.js','anna-agent.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
 const searchEvents={...events};
 (async()=>{await new Promise(r=>setImmediate(r));vm.runInContext('LEARNING='+fs.readFileSync(root+'learning.json')+';PINS='+fs.readFileSync(root+'map.json')+';mapLoaded=true;',ctx);
 assert(vm.runInContext("!decorateSkillHTML('<p>疾风戒指 / 疾风剑</p>').includes('skill-inline')",ctx));
@@ -981,6 +981,36 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
  console.log('PASS reviewed skill judgments, source-linked recommendations, concise AND/OR qualification rows and special unlock hover.');
 
  console.log('PASS all 63 character acquisition grids, 166 sourced additions, conditional highlight reasons and cross-training permission checks.');
+}
+
+// Skill catalogue and character proficiency grids form one recommendation and navigation flow.
+{
+ const savedHash=ctx.location.hash;
+ vm.runInContext("location.hash='#skills';query='';skillDatabasePage()",ctx);
+ assert.equal(vm.runInContext('pages.skills',ctx),'技能图鉴');
+ assert(vm.runInContext("skillDatabasePage().includes('特技、战技与魔法')&&skillDatabasePage().includes('data-ability-character')&&skillDatabasePage().includes('data-ability-recommendation')",ctx));
+ for(const c of reviewed.database.characters){
+  ctx.catalogCharacter=c.id;
+  const probe=vm.runInContext(`(()=>{abilityCharacter=catalogCharacter;abilityProficiency='all';const c=DB.characters.find(c=>c.id===catalogCharacter),expected=[...new Set(unifiedLearningRows(c).filter(s=>/^[DCBAS]\\+?$/.test(s.rank||'')).map(s=>learningAbility(c,s,s.learningKind)?.id).filter(Boolean))].sort(),actual=CATALOG.abilities.filter(a=>abilityProficiencyBindings(a,c.id).length).map(a=>a.id).sort();return {expected,actual}})()`,ctx);
+  assert.deepStrictEqual(probe.actual,probe.expected,'Character catalogue matches proficiency grid: '+c.cn);
+  const gates=vm.runInContext(`(()=>{const c=DB.characters.find(c=>c.id===catalogCharacter),expected=unifiedLearningRows(c).filter(s=>/^[DCBAS]\\+?$/.test(s.rank||'')).map(s=>[learningAbility(c,s,s.learningKind)?.id,s.skill,s.rank].join('|')),actual=CATALOG.abilities.flatMap(a=>abilityProficiencyBindings(a,c.id).map(b=>[a.id,b.skill,b.rank].join('|')));return {expected:[...new Set(expected)].sort(),actual:[...new Set(actual)].sort()}})()`,ctx);
+  assert.deepStrictEqual(gates.actual,gates.expected,'Character-specific ranks and proficiencies match: '+c.cn);
+ }
+ vm.runInContext("location.hash='#skills/filter?character=c7&proficiency=剑术&recommendation=priority';query='';skillDatabasePage()",ctx);
+ assert.equal(vm.runInContext('abilityCharacter',ctx),'c7');assert.equal(vm.runInContext('abilityProficiency',ctx),'剑术');assert.equal(vm.runInContext('abilityRecommendation',ctx),'priority');
+ assert(vm.runInContext("skillDatabasePage().includes('data-character-learning=\"c7\"')&&unifiedLearningTable(DB.characters[7]).includes('#skills/filter?character=c7')",ctx));
+ vm.runInContext("location.hash='#skills';skillDatabasePage()",ctx);
+ for(const a of reviewed.abilities){
+  ctx.catalogAbility=a.id;
+  const probe=vm.runInContext(`(()=>{const a=abilityBy(catalogAbility),review=guideRecommendationFor(a,a.type),row=abilityCatalogRow(a);return {tier:review?.tier,html:row,quick:skillRecommendationQuick(a),links:abilityProficiencyBindings(a).length}})()`,ctx);
+  if(probe.tier){assert(probe.html.includes('data-recommendation-tier="'+probe.tier+'"')&&probe.quick.includes('data-recommendation-tier="'+probe.tier+'"'),'Catalogue uses shared recommendation: '+a.name);}
+  if(probe.links)assert(probe.html.includes('data-character-learning')||!a.characters.length,'Learnable skills link to learning tables: '+a.name);
+ }
+ vm.runInContext("abilityCharacter='c7';abilityProficiency='剑术';abilityRecommendation='situational';abilityKind='战技';syncAbilityCatalogRoute()",ctx);
+ assert(ctx.location.hash.includes('character=c7')&&ctx.location.hash.includes('recommendation=situational'));
+ vm.runInContext("location.hash='#skills';abilityLimit=200;const h=skillDatabasePage();if(abilityLimit!==30||abilityCharacter!=='all'||abilityKind!=='all')throw Error('Route reset failed')",ctx);
+ ctx.location.hash=savedHash;
+ console.log('PASS skill catalogue: all 63 proficiency sets, shared recommendation tiers, magic naming, actor links and restorable filters.');
 }
 
 console.log('PASS learning coverage: 256 sourced bindings, exact plus ranks, independent acquisition highlights, Lv family deduplication and shared roster filters.');
