@@ -1,0 +1,59 @@
+name: Diagnose deployment transport
+on:
+  push:
+    branches: [diagnose/deploy-transport]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - name: Probe HTTPS and restricted SSH with non-deployable data
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          python3 -u - <<'PY'
+          import os, subprocess, socket, time, tempfile, re
+          from pathlib import Path
+          host=os.environ['DEPLOY_HOST']; site='fe-fortunes-weave.intramode.site'
+          def safe(text):
+              text=text.replace(host,'[server]').replace(os.environ['DEPLOY_USER'],'[user]')
+              return re.sub(r'\b(?:\d{1,3}\.){3}\d{1,3}\b','[ip]',text)
+          ips={x[4][0] for x in socket.getaddrinfo(site,443,type=socket.SOCK_STREAM)}
+          print('DNS matches configured server:',host in ips,'addresses:',len(ips),flush=True)
+          for label,opts,url in [
+              ('https-default',[],f'https://{site}/deployment.json'),
+              ('https-direct-dns',['--resolve',f'{site}:443:{host}'],f'https://{site}/deployment.json'),
+              ('https-tls12',['--tlsv1.2','--tls-max','1.2'],f'https://{site}/deployment.json'),
+              ('http-server',[],f'http://{host}/'),
+          ]:
+              r=subprocess.run(['curl','-4','-sS','--max-time','15','--connect-timeout','8','-o','/dev/null','-w','status=%{http_code} connect=%{time_connect} tls=%{time_appconnect} total=%{time_total}\n',*opts,url],capture_output=True,text=True)
+              print(label,'exit',r.returncode,safe(r.stdout+r.stderr).strip(),flush=True)
+          with tempfile.TemporaryDirectory() as folder:
+              d=Path(folder);(d/'key').write_text(os.environ['DEPLOY_SSH_KEY']+'\n');(d/'key').chmod(0o600);(d/'known').write_text(os.environ['DEPLOY_KNOWN_HOSTS']+'\n');(d/'known').chmod(0o600)
+              command=['ssh','-vv','-F','/dev/null','-i',str(d/'key'),'-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','-o','UserKnownHostsFile='+str(d/'known'),'-o','ConnectTimeout=15','-o','ServerAliveInterval=10','-o','ServerAliveCountMax=3','-p',os.environ.get('DEPLOY_PORT') or '22',os.environ['DEPLOY_USER']+'@'+host]
+              # These random bytes are NOT a tar archive; the receiver rejects them
+              # before validation/activation. Production content is never supplied.
+              for size in [128,65536,1048576,4194304]:
+                  payload=d/'probe';payload.write_bytes(b'FE_INVALID_NETWORK_PROBE\n'+os.urandom(size-25));log=d/'ssh.log';started=time.monotonic();print('SSH probe start',size,'bytes',flush=True)
+                  with payload.open('rb') as source,log.open('wb') as output:
+                      p=subprocess.Popen(command,stdin=source,stdout=output,stderr=output)
+                      deadline=started+100;sample=started+10;timed_out=False
+                      while p.poll() is None:
+                          now=time.monotonic()
+                          if now>=deadline:p.kill();p.wait();timed_out=True;break
+                          if now>=sample:
+                              state=subprocess.run(['ss','-tin','dst',host],capture_output=True,text=True).stdout
+                              print('SSH tcp at',round(now-started,1),'s:',safe(state).strip(),flush=True);sample=now+20
+                          time.sleep(.5)
+                  elapsed=time.monotonic()-started;data=log.read_text(errors='replace');complete='Deployment failed (ReadError)' in data
+                  print('SSH probe result',size,'bytes','seconds',round(elapsed,2),'exit',p.returncode,'timeout',timed_out,'receiver_rejected_after_read',complete,'effective_KiB_s',round(size/1024/elapsed,2),flush=True)
+                  for line in data.splitlines():
+                      if any(v in line for v in ['Authenticated to','Sending EOF','send eof','rcvd eof','Transferred:','Bytes per second:','Deployment failed','exit-status','Connection ','timed out','channel 0:','Pseudo-terminal']):print(safe(line),flush=True)
+                  time.sleep(2)
+          PY
