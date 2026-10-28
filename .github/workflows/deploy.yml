@@ -1,8 +1,9 @@
 name: Deploy production
 
-# Production deploys run from a workstation with scripts/deploy.sh; uploads from
-# GitHub runners to the server stall on port 22. Kept only as a manual fallback.
+# Slow runner-to-server transfers need a full upload budget and receiver progress.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -17,7 +18,7 @@ jobs:
   deploy:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
@@ -56,9 +57,20 @@ jobs:
           Path('dist/deployment.json').write_text(json.dumps(manifest) + '\n')
           PY
           tar --exclude='__pycache__' -czf "$RUNNER_TEMP/release-full.tar.gz" dist data/catalog.sqlite3 server/catalog_server.py
-          # Delta deploy: upload only files changed since the live release (uploads to the
-          # server cross the Pacific on port 22 and have stalled the job past 15 minutes).
-          LIVE_SHA=$(curl -fsS --max-time 10 "https://fe-fortunes-weave.intramode.site/deployment.json" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("sha",""))' || true)
+          # Prefer a delta when the HTTPS manifest is reachable; log a full fallback.
+          LIVE_SHA=''
+          if curl -fsS --max-time 10 "https://fe-fortunes-weave.intramode.site/deployment.json" -o "$RUNNER_TEMP/live-deployment.json"; then
+            LIVE_SHA=$(python3 - "$RUNNER_TEMP/live-deployment.json" <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          try:
+              value = json.loads(Path(sys.argv[1]).read_text()).get('sha', '')
+              print(value if isinstance(value, str) and re.fullmatch(r'[0-9a-f]{40}', value) else '')
+          except (OSError, ValueError, AttributeError):
+              print('')
+          PY
+            )
+          fi
           DELTA_OK=0
           if [ -n "${LIVE_SHA:-}" ] && git cat-file -e "$LIVE_SHA^{commit}" 2>/dev/null; then
             git diff --name-status --no-renames "$LIVE_SHA" "$DEPLOY_SHA" -- dist data/catalog.sqlite3 server/catalog_server.py > "$RUNNER_TEMP/delta-status.txt"
@@ -93,11 +105,14 @@ jobs:
           fi
           if [ "$DELTA_OK" = 1 ]; then
             cp "$RUNNER_TEMP/release-delta.tar.gz" "$RUNNER_TEMP/release.tar.gz"
+            echo "Selected incremental archive."
           else
+            echo "::warning::Incremental deployment unavailable; uploading the full archive with a 60-minute SSH budget."
             cp "$RUNNER_TEMP/release-full.tar.gz" "$RUNNER_TEMP/release.tar.gz"
           fi
+          echo "Archive size: $(stat -c %s "$RUNNER_TEMP/release.tar.gz") bytes. Server logs report actual received bytes every 15 seconds."
       - name: Deploy over verified SSH
-        timeout-minutes: 10
+        timeout-minutes: 65
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
@@ -117,21 +132,36 @@ jobs:
           printf '%s\n' "$DEPLOY_SSH_KEY" > "$keydir/key"
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$keydir/known_hosts"
           chmod 600 "$keydir/key" "$keydir/known_hosts"
+          start=$SECONDS
+          deadline=$((start + 3600))
           deploy() {
-            timeout 540 ssh -F /dev/null -i "$keydir/key" \
+            remaining=$((deadline - SECONDS))
+            if (( remaining <= 0 )); then return 124; fi
+            timeout --kill-after=10s "$remaining" ssh -T -F /dev/null -i "$keydir/key" \
               -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
               -o UserKnownHostsFile="$keydir/known_hosts" -o ConnectTimeout=15 \
               -o ServerAliveInterval=15 -o ServerAliveCountMax=3 \
               -p "${DEPLOY_PORT:-22}" "$DEPLOY_USER@$DEPLOY_HOST" < "$1"
           }
-          start=$SECONDS
-          if ! deploy "$RUNNER_TEMP/release.tar.gz"; then
-            if (( SECONDS - start < 120 )); then
+          if deploy "$RUNNER_TEMP/release.tar.gz"; then
+            :
+          else
+            status=$?
+            if (( status == 124 || status == 137 )); then
+              echo "::error::SSH deployment exceeded its 60-minute budget. Review the last receiver progress line; this is not a successful release."
+              exit "$status"
+            elif (( SECONDS - start < 120 )); then
               echo "Deploy failed fast (auth/connectivity or delta rejected); retrying once with the full archive" >&2
-              deploy "$RUNNER_TEMP/release-full.tar.gz"
+              if deploy "$RUNNER_TEMP/release-full.tar.gz"; then
+                :
+              else
+                status=$?
+                echo "::error::Full-archive retry failed (exit $status); both attempts share the same 60-minute budget."
+                exit "$status"
+              fi
             else
-              echo "Deploy stalled past the 9-minute limit; not retrying a hung remote" >&2
-              exit 1
+              echo "::error::SSH deployment failed after $((SECONDS - start)) seconds (exit $status). Review receiver progress and SSH errors."
+              exit "$status"
             fi
           fi
       - name: Write deployment summary

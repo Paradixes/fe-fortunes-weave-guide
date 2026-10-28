@@ -41,9 +41,11 @@ python3 server/catalog_server.py --db data/catalog.sqlite3 --port 18776
 
 ## 部署
 
-生产环境从本机手动部署：先把提交推送到 `main`，再运行 `scripts/deploy.sh`。脚本要求 `HEAD` 与 `origin/main` 一致，用 `git archive` 取干净副本，避免带上未提交或未跟踪的文件。它先校验资料生成、攻略、计算器、SQLite、接收器和公开文件，再通过 SSH 上传，最后核对线上 `/deployment.json`。如果另一次发布正占用服务器锁，脚本会等待后重试。默认通过本机 ssh 配置里的 `fe-guide` 别名连接（地址不入库），可用 `DEPLOY_HOST` 覆盖；`DRY_RUN=1` 只做校验，不上传。
+推送到 `main` 会触发 GitHub Actions 自动部署，也可以手动运行 `.github/workflows/deploy.yml`。完整任务预算为 75 分钟，SSH 部署步骤为 65 分钟，实际 SSH 命令与一次快速失败重试共用 60 分钟预算。服务器每 15 秒报告实际接收字节数、当前及平均速度和耗时；收到完整数据流后才进入归档校验与发布。超时或 SSH 失败会明确返回失败。
 
-推送不再触发 GitHub Actions：从 runner 经 22 端口上传到服务器会长时间卡住。`.github/workflows/deploy.yml` 只保留为手动备用，下文的 Secrets 仅供它使用。服务器端的流程不变：服务器核对静态资料与 SQLite 一致后切换版本，重启数据服务，并检查本地 API、网站 HTTPS 和发布版本；失败时恢复原版本。部署串行执行，不中断正在发布的任务。
+工作流优先根据线上版本生成增量包；如果 HTTPS 版本查询不可用，会明确提示改用完整包，并显示包大小。接收进度需要服务器安装当前 `server/deploy-release.py`。服务器核对静态资料与 SQLite 一致后切换版本，重启数据服务，并检查本地 API、网站 HTTPS 和发布版本；失败时恢复原版本。部署串行执行，不中断正在发布的任务。
+
+本机备用部署仍可使用 `scripts/deploy.sh`。脚本要求 `HEAD` 与 `origin/main` 一致，用 `git archive` 取干净副本，校验后通过 SSH 上传，并核对线上版本。默认使用本机 SSH 配置中的 `fe-guide` 别名，可用 `DEPLOY_HOST` 覆盖；`DRY_RUN=1` 只做校验。如果另一次发布占用服务器锁，脚本会等待后重试。
 
 在仓库 **Settings → Secrets and variables → Actions** 配置以下 Repository secrets：
 

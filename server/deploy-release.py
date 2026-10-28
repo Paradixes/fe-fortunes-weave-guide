@@ -5,6 +5,7 @@ import fcntl
 import json
 import os
 import re
+import select
 import shutil
 import sqlite3
 import subprocess
@@ -22,6 +23,42 @@ SERVICE = 'fire-emblem-catalog'
 BUNDLES = ('catalog.js', 'roster.json', 'learning.json', 'map.json')
 MAX_ARCHIVE = 64 * 1024 * 1024
 MAX_CONTENT = 256 * 1024 * 1024
+
+
+def receive_archive(source, output, progress_interval=15):
+    """Report bytes received by the server, including while waiting for input."""
+    started = time.monotonic()
+    reported_at, reported_bytes, received = started, 0, 0
+
+    def report(final=False):
+        nonlocal reported_at, reported_bytes
+        now = time.monotonic()
+        elapsed = now - started
+        recent_rate = (received - reported_bytes) / max(now - reported_at, 0.001)
+        average_rate = received / max(elapsed, 0.001)
+        label = 'Upload received' if final else 'Receiving'
+        print(f'{label}: {received:,} bytes ({received / 1048576:.2f} MiB); '
+              f'current {recent_rate / 1024:.1f} KiB/s; '
+              f'average {average_rate / 1024:.1f} KiB/s; '
+              f'elapsed {int(elapsed) // 60:02d}:{int(elapsed) % 60:02d}', flush=True)
+        reported_at, reported_bytes = now, received
+
+    print('Receiver ready; reporting actual received bytes every '
+          f'{progress_interval:g} seconds.', flush=True)
+    while True:
+        wait = max(0, reported_at + progress_interval - time.monotonic())
+        readable, _, _ = select.select([source], [], [], wait)
+        if readable:
+            chunk = os.read(source.fileno(), 64 * 1024)
+            if not chunk:
+                report(final=True)
+                return received
+            received += len(chunk)
+            if received > MAX_ARCHIVE:
+                raise ValueError('Upload exceeds size limit')
+            output.write(chunk)
+        if time.monotonic() - reported_at >= progress_interval:
+            report()
 
 
 def unpack(archive, target):
@@ -170,12 +207,8 @@ def main():
             staging = Path(staging)
             archive = staging / 'upload.tar.gz'
             with archive.open('wb') as output:
-                received = 0
-                while chunk := sys.stdin.buffer.read(1024 * 1024):
-                    received += len(chunk)
-                    if received > MAX_ARCHIVE:
-                        raise ValueError('Upload exceeds size limit')
-                    output.write(chunk)
+                receive_archive(sys.stdin.buffer, output)
+            print('Upload complete; validating the archive and release.', flush=True)
             target = staging / 'release'
             target.mkdir(mode=0o755)
             unpack(archive, target)
