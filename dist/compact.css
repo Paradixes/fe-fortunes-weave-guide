@@ -19,7 +19,7 @@
 /* Proficiency labels: inline icon + name + rank, no pill; rank keeps weight. */
 .qualification-token>.proficiency-tag,.dense-table .qualification-token>.proficiency-tag,.catalog-mastery .proficiency-tag{gap:3px;padding:0 5px 0 2px;min-height:20px;font-size:11.5px;line-height:20px;border-radius:4px}
 .proficiency-tag>img{width:15px;height:15px;border-radius:2px}
-.qualification-tokens{flex-direction:row;flex-wrap:wrap;align-items:center;gap:3px 6px}
+.qualification-tokens{flex-direction:column;align-items:flex-start;gap:3px}
 .qualification-line{gap:3px;flex-wrap:nowrap}
 .qualification-alternatives{gap:2px}
 .requirement-or{margin:0 1px;font-size:10.5px}
@@ -28,10 +28,10 @@
 .catalog-requirements{min-width:150px;max-width:215px}
 .class-unlock-summary{margin-top:2px;min-height:0;line-height:1.35}
 
-/* Class ledger: mastery skill and usable proficiencies flow in one block. */
+/* Class ledger: the mastery skill sits on its own line, usable proficiencies below it. */
 .catalog-mastery{min-width:230px;max-width:330px}
-.catalog-mastery>.text-button{margin-right:6px}
-.catalog-mastery .class-skill-list{display:inline-flex;margin-top:2px;gap:2px}
+.catalog-mastery>.text-button{display:flex;width:max-content;margin:0 0 3px}
+.catalog-mastery .class-skill-list{display:flex;flex-wrap:wrap;margin:0;gap:2px}
 .catalog-mastery .proficiency-tags{gap:2px 3px}
 .class-tier-group{margin:0 0 18px}
 .class-tier-heading{margin:16px 0 6px!important;padding:6px 12px!important;border-radius:8px}
@@ -45,21 +45,17 @@
 .equipment-data-table .catalog-equipment-info p{margin:0}
 .equipment-data-table .catalog-source-line.equipment-source-preview{margin-top:1px;gap:2px 10px}
 .dense-table .text-button{min-height:0;line-height:1.45}
-.dense-table .people-stack{display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-width:110px}
-.dense-table .people-face,.dense-table .people-face .portrait{width:24px;height:24px}
-.dense-table .people-summary{margin:0;white-space:nowrap}
-.dense-table .people-more{min-height:22px;height:22px;padding:0 6px;font-size:11px}
 
 /* Material ledger */
 .material-use-links{gap:1px 10px}
 .material-place-cell>button{margin-top:1px}
 .material-data-table td:nth-child(2) small{display:inline;margin-left:6px}
-.qualification-line{flex-wrap:wrap}
-.qualification-line .qualification-token{flex:none}
 /* Class tiers share one column grid so stats align across groups. */
-.class-data-table{table-layout:fixed;min-width:1060px}
-.class-data-table th:nth-child(1){width:128px}.class-data-table th:nth-child(2){width:206px}
-.class-data-table thead th:nth-child(n+3):nth-child(-n+12){width:40px;text-align:center}
+.class-data-table{table-layout:fixed}
+.class-data-table th:nth-child(1){width:120px}.class-data-table th:nth-child(2){width:244px}
+.class-data-table thead th:nth-child(n+3):nth-child(-n+12){width:37px;text-align:center}
+.class-data-table .catalog-requirements{max-width:none}
+.class-data-table .qualification-line{flex-wrap:nowrap;white-space:nowrap}
 .class-data-table td.catalog-number{min-width:0}
 .class-data-table .catalog-mastery{min-width:0;max-width:none}
 
@@ -140,8 +136,8 @@ main#content{padding-top:20px}
 .skill-rank-grid th,.skill-rank-grid td{padding:5px 8px;vertical-align:middle}
 .skill-rank-grid .learning-token{margin-bottom:2px}
 .skill-rank-grid .learning-token button{min-height:22px}
-.weapon-inventory-table th,.weapon-inventory-table td{padding:5px 10px}
-.weapon-inventory-table input{height:28px;min-height:28px;padding:0 8px}
+.weapon-inventory-table th,.weapon-inventory-table td,.inventory-table th,.inventory-table td{padding:5px 10px}
+.weapon-inventory-table input,.inventory-table input{height:28px;min-height:28px;padding:0 8px}
 
 /* ---- Character cards: skill on one block, nine growth swatches in one row, compact career chips ---- */
 .char-card .char-top .portrait{width:48px;height:48px}
@@ -207,8 +203,6 @@ main#content>.route-cover{margin-top:0}
 /* Collection ledger */
 .collection-page .dense-table td,.collection-page .dense-table th,.dense-table td:has(>input){padding-block:4px}
 .dense-table input[type=number],.dense-table input:not([type]),.dense-table input[type=text]{height:28px;min-height:28px;padding:0 8px}
-.weapon-inventory-table .stack-avatar,.weapon-inventory-table .stack-avatar .portrait{width:26px;height:26px;min-height:0}
-.weapon-inventory-table .avatar-stack,.weapon-inventory-table .stacked-characters,.weapon-inventory-table .gear-demand-users{min-height:0}
 .weapon-inventory-table .source-picker-trigger{min-height:26px;height:26px;padding-block:0}
 
 /* ---- Skill ledger rows: name + kind on one line, faces and summary share a row ---- */
@@ -221,26 +215,15 @@ main#content>.route-cover{margin-top:0}
 .ability-row .ability-name-btn b{font-family:inherit}
 .ability-row .equipment-row-name small{display:inline;margin-left:6px;font-size:11px}
 .ability-row .equipment-row-effect{margin:0;font-size:12.5px;line-height:1.5}
-.ability-row-people .people-stack,.equipment-row .people-stack{flex-direction:row;flex-wrap:wrap;align-items:center;gap:2px 8px}
-.ability-row .people-face,.equipment-row .people-face{width:24px;height:24px}
-.ability-row .people-more{min-height:22px;height:22px;padding:0 6px;font-size:11px}
 .equipment-data-table .catalog-equipment-info>.equipment-extra-stat{float:left;margin:0 8px 0 0;line-height:20px}
 .equipment-data-table .catalog-equipment-info>.catalog-source-line{clear:both}
-.class-data-table{min-width:1060px!important}
-.class-data-table thead th:last-child{width:auto;min-width:260px}
+.class-data-table{min-width:980px!important}
+.class-data-table thead th:last-child{width:auto}
 #characterPage h2{font-size:17px;margin-top:20px;margin-bottom:8px}
 #characterPage section>h2:first-child,#characterPage .skill-growth-head h2{margin-top:0}
 #characterPage .rating-analysis-heading h2{font-size:14px;margin:0}
-/* Skill catalogue: learners flow as a row of face+name chips; the repeated "专精习得" hint is dropped. */
 .ability-ledger{--eq-cols:minmax(170px,.9fr) minmax(220px,1.5fr) minmax(170px,1fr) minmax(280px,1.35fr)}
 .ability-ledger .equipment-row{padding-block:6px}
-.ability-row-people{flex-direction:row;flex-wrap:wrap;align-items:center;gap:2px 10px}
-.ability-learning-people{display:contents}
-.ability-row-people .ability-person{gap:4px;margin:0;padding:1px 0;min-height:24px}
-.ability-row-people .ability-person .portrait{width:22px;height:22px}
-.ability-row-people .ability-person small{display:none}
-.ability-row-people .ability-person b{font-weight:600}
-.ability-row-people>.text-button{min-height:24px;font-size:12px;white-space:nowrap}
 /* Map notes: a place keeps its detail and lists its notes on top; the note library supports bulk deletion. */
 .map-popover-note{display:flex;align-items:center;gap:6px;margin:0 0 6px;padding:4px 6px;border-radius:6px;background:var(--tint);font-size:12px;line-height:1.4}
 .map-popover-note>svg,.map-popover-note>img,.map-popover-note>.atlas-icon{width:18px;height:18px;flex:none}
@@ -256,3 +239,49 @@ main#content>.route-cover{margin-top:0}
 .map-note-row>input{flex:none;margin:0}
 .map-note-row>button{flex:1;min-width:0}
 #personal-map-note-list .map-note-row>button{padding:5px 4px}
+/* People stacks (skills, equipment, classes, gifts): overlapping faces only, extra faces expand inline
+   and stay overlapped, so long learner lists keep their row height until asked. */
+.people-stack{flex-direction:row;flex-wrap:wrap;align-items:center;gap:4px 6px;min-width:0}
+.people-faces{padding-left:7px;row-gap:3px}
+.people-face,.dense-table .people-face,.people-face .portrait,.dense-table .people-face .portrait{width:28px;height:28px;min-height:0}
+.people-face,.people-stack.open .people-face{margin-left:-7px}
+.people-stack.open .people-faces{padding-left:7px;gap:0;row-gap:3px}
+.people-more,.dense-table .people-more{height:24px;min-height:24px;min-width:0;margin-left:4px;padding:0 7px;font-size:11px}
+.people-summary,.dense-table .people-summary{margin:0;font-size:11px;white-space:nowrap}
+.equipment-data-table td:last-child{min-width:196px}
+/* Recommended skills in ledgers: plain name plus a legend-coloured chip instead of a filled name. */
+.ability-row .guide-reward,.catalog-mastery .guide-reward,.ability-table .ability-name-btn.guide-reward{background:none;border:0;padding:0;color:inherit}
+.ability-row .guide-reward::after,.catalog-mastery .guide-reward::after{display:inline-block;margin-left:5px;padding:0 4px;border-radius:3px;font-size:10.5px;font-weight:600;line-height:17px;vertical-align:1px;text-decoration:none;font-family:var(--sans,inherit)}
+.ability-row .guide-reward.is-priority::after,.catalog-mastery .guide-reward.is-priority::after{content:"优先";background:var(--priority-bg);color:var(--priority-ink)}
+.ability-row .guide-reward.is-situational::after,.catalog-mastery .guide-reward.is-situational::after{content:"条件";background:var(--secondary-bg);color:var(--secondary-ink);box-shadow:inset 0 -1px 0 var(--positive-mark)}
+/* Collection: each needed character as portrait + name. */
+.person-chips{display:flex;flex-wrap:wrap;gap:3px 10px}
+.person-chip{display:inline-flex;align-items:center;gap:5px;padding:0;border:0;background:none;color:var(--ink);font-size:12px;cursor:pointer;white-space:nowrap}
+.person-chip .portrait{width:24px;height:24px;border-radius:50%;object-fit:cover}
+.person-chip b{font-weight:600}
+.person-chip:hover b{color:var(--purple);text-decoration:underline}
+[data-ability-recommendation="priority"]::before,[data-ability-recommendation="situational"]::before{content:"";display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:2px;vertical-align:0}
+[data-ability-recommendation="priority"]::before{background:var(--priority-bg)}
+[data-ability-recommendation="situational"]::before{background:var(--secondary-bg);box-shadow:inset 0 -1.5px 0 var(--positive-mark)}
+/* Toolbar selects share the rounded filter control used by the class and equipment decks. */
+.fdeck select,.collection-route select{appearance:none;-webkit-appearance:none;height:28px;min-height:28px;min-width:120px;padding:0 30px 0 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23827269' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 11px center;color:var(--ink);font-size:13px;font-weight:500;line-height:26px;cursor:pointer}
+.dark .fdeck select,.dark .collection-route select{background-color:#231e19;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23baa99b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")}
+.fdeck select:hover,.collection-route select:hover{border-color:var(--gold)}
+.fdeck .character-filter-toggle{height:28px;min-height:28px;font-size:13px;font-weight:500}
+.detail-hero-meta>span+span::before{content:none!important;display:none!important}
+/* Guide card meta stays on one line however many sources are cited. */
+.article-card-meta{flex-wrap:nowrap!important;gap:6px;min-width:0}
+.article-card-meta>small{flex:none;white-space:nowrap;letter-spacing:0}
+.article-card-hosts{flex:0 1 auto;min-width:0;flex-wrap:nowrap!important;overflow:hidden;justify-content:flex-start;margin-left:auto;gap:3px!important}
+.article-card-hosts em{flex:none;padding:1px 4px!important;font-size:10.5px!important}
+.article-card-meta>small{font-size:11.5px}
+/* Inventory item names: one link style whether they open a dialog or the map. */
+.inventory-table td:first-child>.text-button[data-map]{text-decoration:none;font-weight:inherit}
+.inventory-table td:first-child>.text-button[data-map]::after{content:"↗";margin-left:3px;font-size:.8em;opacity:.7}
+.inventory-table td:first-child>:is(.text-button,.reference-link):hover{text-decoration:underline;text-underline-offset:2px}
+.inventory-table td:last-child small{display:inline;margin:0 8px 0 0;font-weight:600}
+/* Sources: short link lists, so pack them three across instead of two tall cards. */
+.source-groups{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))!important;gap:10px!important}
+.source-groups>.feature{padding:12px 14px!important;min-height:0!important}
+.source-groups>.feature h2{font-size:15px!important;margin:0 0 6px!important;line-height:1.3}
+.source-groups>.feature p{margin:0 0 3px!important;font-size:13px;line-height:1.5}
