@@ -30,8 +30,8 @@
 
 /* Class ledger: the mastery skill sits on its own line, usable proficiencies below it. */
 .catalog-mastery{min-width:230px;max-width:330px}
-.catalog-mastery>.text-button{display:flex;width:max-content;margin:0 0 3px}
-.catalog-mastery .class-skill-list{display:flex;flex-wrap:wrap;margin:0;gap:2px}
+.catalog-mastery>.text-button{display:inline;margin:0 6px 0 0;vertical-align:middle}
+.catalog-mastery .class-skill-list{display:inline-flex;flex-wrap:wrap;margin:2px 0;gap:2px;vertical-align:middle}
 .catalog-mastery .proficiency-tags{gap:2px 3px}
 .class-tier-group{margin:0 0 18px}
 .class-tier-heading{margin:16px 0 6px!important;padding:6px 12px!important;border-radius:8px}
@@ -249,11 +249,6 @@ main#content>.route-cover{margin-top:0}
 .people-more,.dense-table .people-more{height:24px;min-height:24px;min-width:0;margin-left:4px;padding:0 7px;font-size:11px}
 .people-summary,.dense-table .people-summary{margin:0;font-size:11px;white-space:nowrap}
 .equipment-data-table td:last-child{min-width:196px}
-/* Recommended skills in ledgers: plain name plus a legend-coloured chip instead of a filled name. */
-.ability-row .guide-reward,.catalog-mastery .guide-reward,.ability-table .ability-name-btn.guide-reward{background:none;border:0;padding:0;color:inherit}
-.ability-row .guide-reward::after,.catalog-mastery .guide-reward::after{display:inline-block;margin-left:5px;padding:0 4px;border-radius:3px;font-size:10.5px;font-weight:600;line-height:17px;vertical-align:1px;text-decoration:none;font-family:var(--sans,inherit)}
-.ability-row .guide-reward.is-priority::after,.catalog-mastery .guide-reward.is-priority::after{content:"优先";background:var(--priority-bg);color:var(--priority-ink)}
-.ability-row .guide-reward.is-situational::after,.catalog-mastery .guide-reward.is-situational::after{content:"条件";background:var(--secondary-bg);color:var(--secondary-ink);box-shadow:inset 0 -1px 0 var(--positive-mark)}
 /* Collection: each needed character as portrait + name. */
 .person-chips{display:flex;flex-wrap:wrap;gap:3px 10px}
 .person-chip{display:inline-flex;align-items:center;gap:5px;padding:0;border:0;background:none;color:var(--ink);font-size:12px;cursor:pointer;white-space:nowrap}
@@ -285,3 +280,8 @@ main#content>.route-cover{margin-top:0}
 .source-groups>.feature{padding:12px 14px!important;min-height:0!important}
 .source-groups>.feature h2{font-size:15px!important;margin:0 0 6px!important;line-height:1.3}
 .source-groups>.feature p{margin:0 0 3px!important;font-size:13px;line-height:1.5}
+/* Card career steps: long class names wrap inside the step instead of running past it. */
+.char-card .mini-career-link{display:flex!important;width:100%;min-width:0;white-space:normal}
+.char-card .mini-career-link>span:last-child{min-width:0;white-space:normal;overflow-wrap:anywhere;text-overflow:clip}
+.char-card .mini-career-track li{padding:4px}
+.char-card .mini-career-choice.primary-choice .mini-career-link{font-size:11.5px;gap:2px}
