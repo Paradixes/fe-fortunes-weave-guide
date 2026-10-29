@@ -29,8 +29,8 @@
 .class-unlock-summary{margin-top:2px;min-height:0;line-height:1.35}
 
 /* Class ledger: acquisition rewards and usable proficiencies have distinct columns. */
-.class-data-table .catalog-mastery{min-width:0;max-width:none;padding-left:20px;border-left:1px solid var(--line)}
-.class-data-table thead th:nth-child(13){width:120px;padding-left:20px;border-left:1px solid var(--line)}
+.class-data-table .catalog-mastery{min-width:0;max-width:none;padding-left:20px}
+.class-data-table thead th:nth-child(13){width:120px;padding-left:20px}
 .class-data-table thead th:nth-child(14){width:180px}
 .class-data-table .catalog-mastery>.text-button{margin:0;max-width:100%;white-space:normal;text-align:left}
 .class-data-table .catalog-proficiencies{min-width:0;padding-left:12px}
