@@ -32,9 +32,10 @@
 .class-data-table .catalog-mastery{min-width:0;max-width:none;padding-left:20px}
 .class-data-table thead th:nth-child(13){width:120px;padding-left:20px}
 .class-data-table thead th:nth-child(14){width:180px}
-.class-data-table .catalog-mastery>.text-button{margin:0;max-width:100%;white-space:normal;text-align:left}
+.class-data-table .catalog-mastery>.text-button{margin:0;max-width:none;white-space:nowrap;text-align:left}
+.class-data-table .mastery-skill-link .skill-inline{margin-inline:0;padding:0!important}
 .class-data-table .mastery-skill-link{background:none;color:var(--ink);border:0;box-shadow:none}
-.class-data-table .mastery-recommendation{display:inline-block;margin-left:5px;padding:0 4px;border:1px solid color-mix(in srgb,var(--positive-mark) 38%,transparent);border-radius:3px;font-size:11px;font-weight:700;line-height:17px;white-space:nowrap;vertical-align:1px;color:var(--secondary-ink);background:var(--secondary-bg)}
+.class-data-table .mastery-recommendation{display:inline-block;position:relative;top:-.45em;margin-left:1px;padding:1px 2px;border:1px solid color-mix(in srgb,var(--positive-mark) 38%,transparent);border-radius:2px;font-size:9.5px;font-weight:700;line-height:1;white-space:nowrap;vertical-align:baseline;color:var(--secondary-ink);background:var(--secondary-bg)}
 .class-data-table .mastery-recommendation.priority{color:var(--priority-ink);background:var(--priority-bg);border-color:var(--priority-bg)}
 .class-data-table .catalog-proficiencies{min-width:0;padding-left:12px}
 .class-data-table .catalog-proficiencies .proficiency-tags{gap:2px 4px}
