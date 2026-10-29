@@ -98,7 +98,7 @@ function mount(){
  }
  el.dataset.facing='right';show('idle');
  el.addEventListener('pointerenter',()=>{if(!sleeping&&!flightTimer)express('wave')});
- fetch(BASE+'lines.json?v=2').then(r=>r.json()).then(d=>{lines=d;bubble(say('greet'),true)}).catch(()=>{});
+ fetch(BASE+'lines.json?v=2').then(r=>r.json()).then(d=>{lines=d}).catch(()=>{});
  scheduleIdle();
 
  const pts=new Map();

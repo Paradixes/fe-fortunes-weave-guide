@@ -157,9 +157,12 @@
  .home-article-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:650px){
- .home-route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-route-grid{grid-template-columns:1fr;gap:8px}
+ .home-route-card{flex-direction:row;align-items:center;gap:12px;padding:10px 12px}
+ .home-route-tags{margin-top:4px}
  .home-face-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .home-article-grid{grid-template-columns:1fr}
+ .anna-ask-chips button{min-height:44px}
 }
 
 /* 安娜柜台 BYOK agent:设置弹层、模式切换器、齿轮按钮、流式光标与站内实体链接 */

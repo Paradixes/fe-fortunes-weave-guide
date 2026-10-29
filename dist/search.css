@@ -15,13 +15,15 @@
 .anna-avatar{border-radius:50%;background:var(--tint);padding:4px;flex:none}
 .anna-greet h2{margin:0;flex:1;min-width:160px;font:600 16px/1.55 'Noto Serif SC',Georgia,serif;color:var(--ink)}
 .anna-greet .anna-llm-controls{margin-left:auto;flex:none}
+.anna-dialog-close{display:grid;place-items:center;flex:none;width:36px;height:36px;min-width:36px;min-height:36px;padding:0;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--muted);cursor:pointer}
+.anna-dialog-close:hover{background:var(--ui-soft);color:var(--ink)}
 .anna-greet h2.anna-typing::after{content:'▍';color:var(--gold);animation:anna-caret 1s steps(1) infinite}
 @keyframes anna-caret{50%{opacity:0}}
 #annaSearch .anna-field{margin:0;flex:none;max-width:none;padding-right:6px}
 .anna-dialog-ask-btn{flex:none;height:30px;min-height:30px;padding:0 11px;border:1px solid color-mix(in srgb,var(--gold) 65%,var(--line));border-radius:7px;background:color-mix(in srgb,var(--tint) 75%,var(--card));color:var(--purple);font:inherit;font-size:12px;font-weight:650;white-space:nowrap;cursor:pointer;transition:background-color .15s,border-color .15s}
 .anna-dialog-ask-btn:hover:not(:disabled){border-color:var(--purple);background:var(--tint)}
 .anna-dialog-ask-btn[hidden]{display:none}
-.anna-results{margin-top:10px;flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.anna-results{margin-top:10px;flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin}
 .anna-dialog-ai{margin-bottom:10px}
 .anna-dialog-ai-bar{margin-bottom:8px}
 .anna-dialog-ask-trigger{display:flex;align-items:center;gap:6px;width:100%;padding:8px 12px;border:1px dashed color-mix(in srgb,var(--gold) 65%,var(--line));border-radius:9px;background:color-mix(in srgb,var(--tint) 45%,transparent);color:var(--purple);font:inherit;font-size:12.5px;font-weight:600;text-align:left;cursor:pointer;transition:background-color .15s,border-color .15s}
@@ -32,7 +34,7 @@
 .anna-item:hover,.anna-item.active{background:color-mix(in srgb,var(--gold) 16%,transparent)}
 .anna-kind{flex:none;font-size:10px;color:var(--purple);border:1px solid var(--line);border-radius:5px;padding:1px 5px;white-space:nowrap}
 .anna-item.active .anna-kind{border-color:var(--gold)}
-.anna-title{font-weight:600;white-space:nowrap}
+.anna-title{min-width:0;max-width:55%;overflow:hidden;text-overflow:ellipsis;font-weight:600;white-space:nowrap}
 .anna-item small{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .anna-results mark{background:none;color:var(--purple);font-weight:700}
 body.dark .anna-results mark{color:#e6c27a}
@@ -51,7 +53,8 @@ body.dark .anna-results mark{color:#e6c27a}
  .anna-item{min-height:44px;align-items:center}
  .anna-hint{display:none}
  .anna-btn-label,.anna-btn-kbd{display:none}
- #annaSearchBtn{width:32px;padding:0;justify-content:center}
+ #annaSearchBtn{width:44px;min-width:44px;height:44px;padding:0;justify-content:center}
+ .anna-dialog-close{width:44px;height:44px;min-width:44px;min-height:44px}
 }
 @media(prefers-reduced-motion:reduce){
  .anna-greet h2.anna-typing::after{content:none}

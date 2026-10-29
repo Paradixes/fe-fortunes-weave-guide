@@ -78,13 +78,13 @@ main#content{padding-top:20px}
 .catalog-category-tabs button{min-height:38px}
 
 /* ---- Filter deck: search and short controls share a line ---- */
-.fdeck{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:10px 0 12px;padding:10px 12px;border-radius:10px}
+.fdeck{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:10px 0 16px;padding:12px 14px;border:1px solid color-mix(in srgb,var(--line) 80%,transparent);border-radius:12px;background:linear-gradient(135deg,color-mix(in srgb,var(--ui-soft) 72%,var(--card)),var(--card));box-shadow:0 10px 28px -24px #352b2766}
 .fdeck>.search-bar{flex:1 1 420px;min-width:0}
 .fdeck .search{height:38px}
 .fdeck-rows{flex:1 1 100%;gap:6px;margin-top:0;padding-top:8px}
 .fdeck-rows:empty{display:none}
 .fdeck-row{gap:8px}
-.fdeck-label{min-height:28px}
+.fdeck-label{min-height:28px;white-space:nowrap}
 .fdeck .segments button,.fdeck .tier-filters [data-tier]{min-height:28px;padding:0 11px}
 .fdeck .class-sort select,.fdeck .people-picker-trigger{min-height:28px;height:28px}
 .fdeck:has(>.fdeck-rows>.fdeck-selects:only-child) .fdeck-rows{flex:0 0 auto;padding:0;border:0}
@@ -113,9 +113,14 @@ main#content{padding-top:20px}
 .skill-signature{padding:5px 10px;border-radius:6px}
 .skill-signature .skill-growth-name{font-size:14px;margin-right:8px}
 .skill-signature p{display:inline;margin:0}
-.skill-list{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:4px 8px}
+.skill-list{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:4px 8px}
 .skill-item{padding:4px 8px;border-radius:6px}
 .skill-item p{margin-top:1px;line-height:1.45}
+@media(max-width:650px){
+ .skill-group{grid-template-columns:minmax(0,1fr);gap:8px}
+ .skill-group-personal .skill-group-label{padding-top:0}
+ .skill-list{grid-template-columns:minmax(0,1fr);gap:10px}
+}
 .character-page .initial-data,.character-page .character-global-growth{margin:8px 0;padding:10px 14px}
 .character-page .initial-data>h2,.character-page .character-global-growth>h2{font-size:16px;margin-bottom:6px}
 .character-page .entry-stat-grid{gap:4px}
@@ -128,6 +133,14 @@ main#content{padding-top:20px}
 :is(#detailContent,#characterPage) .character-page h2,.character-page section>h2{font-size:17px}
 .character-page .skill-growth-head h2{font-size:16px}
 /* Touch floor: 44px targets stay on narrow screens; desktop rows use 26-30px controls. */
+@media (max-width:899px){
+ .fdeck .segments button,.fdeck .tier-filters [data-tier],.fdeck .class-sort select,.fdeck .people-picker-trigger{min-height:44px}
+ .map-panel .map-area-tabs button,.map-panel .map-type-filter .segments button{min-height:44px}
+ .atlas-stage{gap:8px}
+ .atlas-stage .map-zoom-controls{grid-auto-rows:44px}
+ .atlas-stage .map-zoom-controls button{width:44px;min-width:44px;height:44px;min-height:44px}
+ .home-section-head .text-button{min-height:44px}
+}
 @media (min-width:900px){
   button[data-reference-type],button[data-class],button[data-gear],button[data-character-gear],button[data-character-material],.chip-list button,.mini-career-link{min-height:26px;padding-block:2px}
   .action-chip,.action-chips .equipment-chip{min-height:26px;padding:2px 7px}
@@ -150,6 +163,7 @@ main#content{padding-top:20px}
 .weapon-inventory-table input,.inventory-table input{height:28px;min-height:28px;padding:0 8px}
 
 /* ---- Character cards: skill on one block, nine growth swatches in one row, compact career chips ---- */
+.char-card{content-visibility:auto;contain-intrinsic-block-size:auto 430px}
 .char-card .char-top .portrait{width:48px;height:48px}
 .char-card .char-top h3{font-size:18px}
 .char-card .char-top .rating-art{min-width:44px;height:38px}

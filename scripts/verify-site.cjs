@@ -677,6 +677,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
 {
  const html=fs.readFileSync(root+'index.html','utf8');
  assert(html.includes('id="annaSearch"')&&html.includes('id="annaSearchBtn"')&&html.includes('id="annaInput"'),'Anna search dialog and header entry present');
+ assert(html.includes('data-anna-close')&&html.includes('aria-label="关闭搜索"'),'Anna search has an explicit mobile-accessible close button');
  assert(html.includes('search.js?v=')&&html.includes('search.css?v='),'Anna search assets versioned');
  assert(!html.includes('角色与攻略详情'),'Detail dialog label no longer overclaims characters');
  const styleCss=fs.readFileSync(root+'style.css','utf8');
@@ -705,6 +706,8 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
 {
  const html=fs.readFileSync(root+'index.html','utf8');
  assert(html.includes('anna-home.css?v=')&&html.includes('anna-home.js?v=')&&html.includes('anna-pet.css?v=')&&html.includes('anna-pet.js?v='),'Anna home and pet assets registered in index.html');
+ assert.equal(vm.runInContext("(homePage().match(/<h1\\b/g)||[]).length",ctx),1,'Homepage has one semantic main heading');
+ assert(fs.readFileSync(root+'compact.css','utf8').includes('minmax(min(100%,240px),1fr)'),'Narrow skill grids cannot force horizontal page overflow');
  assert(!fs.readFileSync(__filename,'utf8').split('\n')[0].includes('anna-home')&&!fs.readFileSync(__filename,'utf8').split('\n')[0].includes('anna-pet'),'Anna home/pet stay out of the vm harness');
  const extras=JSON.parse(fs.readFileSync(root+'map-extras.json','utf8'));
  assert(extras.shops.length>=100&&extras.gather.length>=1000&&extras.renown.length===12&&extras.mounts.length===20,'Legacy map extras complete');
@@ -723,6 +726,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(rec.includes('答题：')&&rec.includes('礼物：')&&rec.includes('时限'),'Recruit rows carry quiz answers, gifts and deadlines');
  assert(rec.includes('生日'),'Recruit roster shows birthdays');
  assert(vm.runInContext("annaSearch('凯伊 礼物').groups.some(g=>g.kind==='gift')",ctx),'Anna search exposes the gift group');
+ assert(vm.runInContext("annaSearch('凯伊').groups.find(g=>g.kind==='gift').items.some(s=>annaResultSub(s.e,'凯伊').startsWith('匹配：凯伊'))",ctx),'Search results explain otherwise hidden character matches');
  assert(vm.runInContext("annaSearch('生日').flat.length>0",ctx),'Birthdays searchable');
  assert(vm.runInContext("annaSearch('太阳果').best?.e.kind==='material'",ctx),'Existing lookups unaffected');
  assert(vm.runInContext("personalSkillPanel(DB.characters[7])",ctx).includes('skill-group-personal'),'Personal skill presentation preserved');
@@ -839,7 +843,9 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
   ctx.recommendationRoute=rr;
   assert(vm.runInContext("route=recommendationRoute;location.hash='#overview';activeCharacter=null;DB.characters.every(c=>{const r=recommendations(c);return [r.skills,r.arts].every(rows=>new Set(rows.map(x=>skillUpgradeKey(x.name))).size===rows.length)})",ctx),'No mutually replacing skill versions in any character loadout: '+rr);
  }
- vm.runInContext("MAP_EXTRAS="+fs.readFileSync(root+'map-extras.json','utf8')+";mapArea='all';mapType='all';mapPurpose='shop';query='伤药'",ctx);
+ vm.runInContext("MAP_EXTRAS="+fs.readFileSync(root+'map-extras.json','utf8')+";mapArea='レダ';mapType='all';mapPurpose='overview';query=''",ctx);
+ assert(vm.runInContext("PINS.filter(atlasMatches).length>0&&PINS.filter(atlasMatches).every(p=>!MAP_GATHER_TYPES.includes(p.type))",ctx),'Map overview keeps settlements readable while preserving the all-points option');
+ vm.runInContext("mapArea='all';mapPurpose='shop';query='伤药'",ctx);
  assert(vm.runInContext("PINS.filter(atlasMatches).length>0&&PINS.filter(atlasMatches).every(p=>atlasRelated(p).shops.some(s=>s.goods.some(g=>g[0].includes('伤药'))))",ctx),'Map search finds structured merchant goods');
  vm.runInContext("query='';mapPurpose='gather'",ctx);
  assert(vm.runInContext("PINS.filter(atlasMatches).length>0&&PINS.filter(atlasMatches).every(p=>atlasRelated(p).gather.length||MAP_GATHER_TYPES.includes(p.type))",ctx),'Material purpose filters real gathering records');

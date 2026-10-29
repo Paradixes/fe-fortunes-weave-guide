@@ -19,7 +19,7 @@ const ANNA_PAGES=[['overview','路线攻略','首页、培养计划与阵容',['
 // 索引(CATALOG 已冻结,另建数组;首次打开时懒构建)。
 let annaIndex=null;
 function annaPinyinOf(text){let fulls=[''],acrs=[''];for(const ch of String(text||'')){let rs=null;const fixed=ANNA_PINYIN_FIX[ch];if(fixed||ANNA_PINYIN[ch]){rs=[fixed||ANNA_PINYIN[ch]];if(ANNA_PINYIN_ALT[ch])rs.push(ANNA_PINYIN_ALT[ch])}else if(/[a-z0-9]/i.test(ch))rs=[ch.toLowerCase()];if(!rs)continue;fulls=fulls.flatMap(f=>rs.map(r=>f+r)).slice(0,16);acrs=acrs.flatMap(a=>rs.map(r=>a+r[0])).slice(0,16)}return {full:[...new Set(fulls)],acr:[...new Set(acrs)]}}
-function annaEntry(kind,id,title,sub,alias=[],hay=''){const p=annaPinyinOf(title);return {kind,id,title:String(title),sub:String(sub||''),alias:alias.filter(Boolean).map(String),acr:p.acr,pinyin:p.full,hay:String(hay||'').toLowerCase()}}
+function annaEntry(kind,id,title,sub,alias=[],hay='',context=[]){const p=annaPinyinOf(title);return {kind,id,title:String(title),sub:String(sub||''),alias:alias.filter(Boolean).map(String),acr:p.acr,pinyin:p.full,hay:String(hay||'').toLowerCase(),context:context.filter(Boolean).map(String)}}
 function buildAnnaIndex(){
  if(annaIndex)return annaIndex;
  const idx=[];
@@ -28,11 +28,11 @@ function buildAnnaIndex(){
  for(const cl of DB.classes)idx.push(annaEntry('class',cl.cn,cl.cn,cl.col_1,[cl.title],[cl.col_37||'',cl.col_2||'',cl.unlock||'',(cl.allowedSkills||[]).join(' ')].join(' ')));
  for(const a of CATALOG.abilities)idx.push(annaEntry('ability',a.id,a.name,a.type,[],a.descriptions.map(d=>d.text).join(' ')));
  for(const e of EQUIPMENT)idx.push(annaEntry('equipment',e.id,e.name,[e.type,e.phase].filter(Boolean).join(' · '),[e.original,...(e.aliases||[])],[e.effect,e.purpose,e.type].filter(Boolean).join(' ')));
- for(const m of materialExchangeIndex())idx.push(annaEntry('material',m.name,m.name,`${m.kind||'材料'} · ${(m.allUses||m.uses).length} 项用途${m.where.length?' · '+m.where.slice(0,2).join('、'):''}`,m.aliases,m.where.join(' ')));
+ for(const m of materialExchangeIndex())idx.push(annaEntry('material',m.name,m.name,`${m.kind||'材料'} · ${(m.allUses||m.uses).length} 项用途${m.where.length?' · '+m.where.slice(0,2).join('、'):''}`,m.aliases,m.where.join(' '),m.where));
  if(Array.isArray(CATALOG.gifts)&&CATALOG.gifts.length){
   for(const g of CATALOG.gifts){
    const who=giftPeople(g).map(({id})=>DB.characters.find(c=>c.id===id)?.cn).filter(Boolean);
-   idx.push(annaEntry('gift',g.id,g.name,[g.category,giftPriceText(g),who.length?who.slice(0,3).join('、')+' 喜爱':''].filter(Boolean).join(' · '),[g.nameEn||'',g.nameJa||'',...(g.aliases||[]),g.category],[g.category,...(g.sources||[]),...who,'礼物'].join(' ')));
+   idx.push(annaEntry('gift',g.id,g.name,[g.category,giftPriceText(g),who.length?who.slice(0,3).join('、')+' 喜爱':''].filter(Boolean).join(' · '),[g.nameEn||'',g.nameJa||'',...(g.aliases||[]),g.category],[g.category,...(g.sources||[]),...who,'礼物'].join(' '),who));
   }
  }else{
   const giftMap=new Map();
@@ -40,7 +40,7 @@ function buildAnnaIndex(){
    for(const g of (c.giftRecs||[])){const e=giftMap.get(g.name)||{name:g.name,price:0,place:'',who:[]};e.price=e.price||g.price;e.who.push(c.cn);giftMap.set(g.name,e)}
    for(const j of c.joinDetails)if(j.gift){const e=giftMap.get(j.gift.name)||{name:j.gift.name,price:0,place:'',who:[]};e.price=e.price||j.gift.price||0;e.place=e.place||j.gift.place||'';e.who.push(c.cn);giftMap.set(j.gift.name,e)}
   }
-  for(const g of giftMap.values())idx.push(annaEntry('gift',g.name,g.name,[g.price?g.price+'G':'',g.place,[...new Set(g.who)].slice(0,3).join('、')+' 喜欢'].filter(Boolean).join(' · '),[],[...new Set(g.who)].join(' ')+' 礼物'));
+  for(const g of giftMap.values())idx.push(annaEntry('gift',g.name,g.name,[g.price?g.price+'G':'',g.place,[...new Set(g.who)].slice(0,3).join('、')+' 喜欢'].filter(Boolean).join(' · '),[],[...new Set(g.who)].join(' ')+' 礼物',[...new Set(g.who)]));
  }
  const seen=new Set();
  for(const t of CATALOG.mapTerms){if(!t.name||seen.has(t.name))continue;seen.add(t.name);idx.push(annaEntry('place',t.name,t.name,t.info,[],t.info))}
@@ -99,6 +99,12 @@ let annaOwnsLock=false,annaFlat=[],annaActive=-1,annaGreetTimer=null,annaDebounc
 function annaReduced(){return typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches}
 function annaStatsText(){return ''}
 function annaMark(text,norm){if(!norm||/^[\x20-\x7e]+$/.test(norm))return esc(text);const i=text.toLowerCase().indexOf(norm);return i<0?esc(text):esc(text.slice(0,i))+'<mark>'+esc(text.slice(i,i+norm.length))+'</mark>'+esc(text.slice(i+norm.length))}
+function annaResultSub(e,norm){
+ const sub=e.sub||'';
+ if(!norm||!e.context?.length)return sub;
+ const words=norm.toLowerCase().split(/\s+/).filter(w=>w.length>=2),hit=e.context.find(v=>words.some(w=>v.toLowerCase().includes(w)));
+ return hit&&!sub.toLowerCase().includes(hit.toLowerCase())?`匹配：${hit}${sub?' · '+sub:''}`:sub;
+}
 function annaGreeting(){
  const h=$('#annaSearch')?.querySelector('h2');if(!h)return;
  const line=ANNA_GREETS[Math.floor(Math.random()*ANNA_GREETS.length)];
@@ -165,7 +171,7 @@ function renderAnnaResults(){
  if(annaDialogAiQuery&&annaDialogAiQuery!==raw&&!annaDialogAsking){annaDialogAiHtml='';annaDialogAiQuery=''}
  const aiBlock=annaDialogAiHtml||`<div class="anna-dialog-ai-bar"><button type="button" class="anna-dialog-ask-trigger" data-anna-ask-trigger>${llmReady?`✦ 让安娜用 AI 解答「${esc(raw.slice(0,24))}」`:`⚙ 接入 AI 模型向安娜提问「${esc(raw.slice(0,20))}」`}</button></div>`;
  let n=0;
- const groupsHtml=res.groups.length?res.groups.map(g=>`<div class="anna-group" role="group" aria-label="${g.label}"><div class="anna-group-label">${g.label}</div>${g.items.map(s=>{const i=n++;return `<div class="anna-item" role="option" id="anna-opt-${i}" data-anna-idx="${i}" aria-selected="false"><span class="anna-kind">${g.label}</span><span class="anna-title">${annaMark(s.e.title,res.norm)}</span>${s.e.sub?`<small>${annaMark(s.e.sub,res.norm)}</small>`:''}</div>`}).join('')}</div>`).join(''):`<p class="anna-empty">${ANNA_EMPTY}</p>`;
+ const groupsHtml=res.groups.length?res.groups.map(g=>`<div class="anna-group" role="group" aria-label="${g.label}"><div class="anna-group-label">${g.label}</div>${g.items.map(s=>{const i=n++,sub=annaResultSub(s.e,res.norm);return `<div class="anna-item" role="option" id="anna-opt-${i}" data-anna-idx="${i}" aria-selected="false"><span class="anna-kind">${g.label}</span><span class="anna-title">${annaMark(s.e.title,res.norm)}</span>${sub?`<small>${annaMark(sub,res.norm)}</small>`:''}</div>`}).join('')}</div>`).join(''):`<p class="anna-empty">${ANNA_EMPTY}</p>`;
  box.innerHTML=aiBlock+groupsHtml;
  input.setAttribute('aria-expanded',res.groups.length?'true':'false');
  const stats=$('#annaStats');if(stats)stats.textContent=res.groups.length?`找到 ${res.total} 条记录`:'';
@@ -238,6 +244,7 @@ function pickAnna(i){
    if(ent.dataset.referenceType){e.preventDefault();closeAnnaSearch();openReferenceDialog(ent.dataset.referenceType,ent.dataset.referenceId);return}
    if(ent.getAttribute('href')?.startsWith('#')){closeAnnaSearch();return}
   }
+  if(e.target.closest('[data-anna-close]')){closeAnnaSearch();return}
   if(e.target.closest('[data-anna-llm-open]')){if(typeof openAnnaLlmSettings==='function')openAnnaLlmSettings();return}
   if(e.target.closest('[data-anna-ask-btn],[data-anna-ask-trigger]')){askAnnaInDialog();return}
   if(e.target.closest('[data-anna-ai-clear]')){annaDialogAiHtml='';annaDialogAiQuery='';renderAnnaResults();return}

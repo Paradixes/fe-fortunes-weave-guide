@@ -5,6 +5,7 @@
 .dense-table thead th{position:sticky;top:0;z-index:3;background:var(--card);font-size:12px;font-weight:600;white-space:nowrap;color:var(--muted);box-shadow:0 1px 0 var(--line)}
 .dense-table tbody th{position:sticky;left:0;z-index:2;background:var(--card);font-weight:600;min-width:152px;max-width:190px}
 .dense-table thead th:first-child{left:0;z-index:4}
+.dense-table tbody tr:nth-child(even)>td,.dense-table tbody tr:nth-child(even)>th{background:color-mix(in srgb,var(--ui-soft) 22%,var(--card))}
 .dense-table tbody tr:hover>td,.dense-table tbody tr:hover>th{background:color-mix(in srgb,var(--accent) 5%,var(--card))}
 .dense-table td.catalog-number{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;min-width:46px;padding:10px 9px}
 .dense-table .sorted{background:color-mix(in srgb,var(--accent) 9%,var(--card))}
@@ -41,6 +42,9 @@
 .gift-character-table{min-width:700px}.gift-character-table tbody th{width:180px;vertical-align:top}.gift-character-table th,.gift-character-table td{vertical-align:top}.gift-character-table td:nth-child(2),.gift-character-table td:nth-child(3){min-width:240px;max-width:520px}.gift-character-categories{display:flex;flex-wrap:wrap;gap:4px 8px;margin-top:8px;font-weight:400}.gift-character-categories .gift-cat-chip{font-size:11px!important;color:var(--muted)}.gift-character-table .gift-inline-link{margin:2px 14px 2px 0}.gift-quick-facts{display:flex;gap:12px;align-items:center;font-size:13px;margin-top:8px;color:var(--muted)}.gift-quick-facts strong{color:var(--ink)}.gift-quick-places{display:flex;flex-wrap:wrap;gap:4px 12px;margin:10px 0}.gift-character-table .table-character-copy{min-width:0}@media(max-width:600px){.gift-character-table tbody th{min-width:128px;max-width:148px}.gift-character-categories{gap:4px 6px}}
 /* Tables follow page scrolling, with a synchronized viewport heading. */
 .table-wrap,.dense-table-wrap,.character-data-wrap,.rank-grid-wrap,.learning-matrix-wrap{max-height:none!important;overflow-x:auto;overflow-y:visible}
+@media(max-width:700px){
+ .table-wrap[data-overflow="true"]:not([data-scrolled="true"])::before{content:'左右滑动查看更多 →';position:sticky;left:0;z-index:5;display:block;width:max-content;padding:5px 9px;border-radius:0 0 6px 0;background:var(--ui-soft);color:var(--muted);font-size:12px;line-height:1.4;pointer-events:none}
+}
 .page-table-heading{position:fixed;z-index:24;overflow:hidden;pointer-events:none;background:var(--card);border-bottom:1px solid var(--line)}
 .page-table-heading[hidden]{display:none}.page-table-heading table{margin:0;border-collapse:collapse;table-layout:fixed}.page-table-heading thead th{top:0;background:var(--card)}
 .skill-rank-grid{min-width:800px}.rank-learning-entry{display:flex;align-items:baseline;gap:6px;margin-bottom:6px}.rank-learning-entry .learning-token{margin:0}

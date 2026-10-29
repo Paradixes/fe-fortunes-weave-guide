@@ -47,7 +47,17 @@
  .reunion-art {grid-row:2;height:200px;}
  .reunion-composite {width:88%;max-width:550px;bottom:-28px;}
 }
-@media(max-width:360px){.route-cover-copy{min-height:226px;}}
+@media(max-width:650px){
+ .route-cover,.reunion-cover{grid-template-rows:auto 140px auto;margin-top:12px}
+ .route-cover-copy{min-height:126px;padding:0 12px 12px}
+ .route-cover h2{margin-block:6px}
+ .route-cover .cover-tags{margin-block:6px}
+ .route-art-panel,.reunion-art{height:140px}
+ .route-art-panel .hero-art{height:210px}
+ .route-hero-picker button{height:88px}
+ .route-art-panel::before,.reunion-art::before{inset:60px 0 -90px}
+}
+@media(max-width:360px){.route-cover-copy{min-height:136px;}}
 
 /* Keep the copy inside the visible frame while portraits extend above it. */
 @media(min-width:1001px){

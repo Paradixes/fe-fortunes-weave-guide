@@ -117,7 +117,7 @@ body .card-career-label b{color:var(--purple);font-weight:650}
 body .mini-career-track{gap:5px}
 body .mini-career-track li{padding:6px 8px;border-radius:8px;border:1px solid color-mix(in srgb,var(--line) 85%,transparent)}
 body .mini-career-track .mini-step{margin-bottom:4px;display:flex;align-items:center;gap:5px}
-body .mini-career-track .mini-step i{font-style:normal;display:inline-grid;place-items:center;width:15px;height:15px;border-radius:50%;background:color-mix(in srgb,var(--gold) 28%,var(--tint));color:var(--purple);font-size:9.5px;font-weight:700}
+body .mini-career-track .mini-step i{font-style:normal;display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;background:color-mix(in srgb,var(--gold) 28%,var(--tint));color:var(--ink);font-size:11px;font-weight:700}
 body .mini-career-options .mini-career-link{min-height:26px!important;font-size:12.5px;padding:2px 6px}
 body .mini-career-link .class-icon{--class-icon-size:24px!important;width:24px;height:24px}
 body .card-loadout.disclosure{margin:6px 0 0;padding-top:4px;border-top:1px dashed color-mix(in srgb,var(--line) 75%,transparent)}
@@ -328,6 +328,8 @@ body.dark .wb-summary{background:linear-gradient(155deg,#332922,#241e19);color:v
 .custom-workbench .wb-method{margin-top:12px}
 .custom-workbench .wb-method p{font-size:12px;color:var(--muted)}
 .custom-workbench .wb-apply-state{margin-top:10px;font-size:12px;color:var(--muted)}
+.wb-result-jump{display:none}
+@media(max-width:900px){.wb-result-jump{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin:14px 0 0;padding:8px 14px;border:1px solid var(--purple);border-radius:8px;background:var(--card);color:var(--purple);font-size:13px;font-weight:650;text-decoration:none}#wb-summary{scroll-margin-top:80px}}
 @media(max-width:1180px){.wb-layout{grid-template-columns:minmax(0,1fr) 290px}.wb-stage-controls{grid-template-columns:1fr 1fr}.wb-stage-level{grid-column:1/-1}.custom-workbench .wb-stage-stats{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:900px){.wb-hero{grid-template-columns:1fr}.wb-layout{grid-template-columns:1fr}.wb-side{position:static}.wb-summary-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:560px){.wb-hero,.wb-main,.custom-workbench .wb-result{padding:14px}.wb-stage-controls{grid-template-columns:1fr}.wb-stage-level{grid-column:auto}.custom-workbench .wb-stage-list>.career-node{grid-template-columns:24px minmax(0,1fr);gap:8px}.wb-stage-dot{width:22px;height:22px;font-size:11px}.wb-stage-top{align-items:start}.wb-add-stage{width:calc(100% - 32px);margin-left:32px}.custom-workbench .wb-stage-stats,.wb-summary-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.wb-stage-more .wb-mounts{grid-template-columns:1fr}.wb-plan-name{flex-direction:column;align-items:stretch;gap:4px}}

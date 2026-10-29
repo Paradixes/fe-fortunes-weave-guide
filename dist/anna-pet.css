@@ -29,11 +29,11 @@
 @media(prefers-reduced-motion:reduce){#annaPet .anna-pet-figure{animation:none!important}}
 
 /* Small, calm companion; gesture changes are brief rather than repeated rocking. */
-#annaPet{width:80px;height:80px}
+#annaPet{width:64px;height:64px}
 #annaPet.carried .anna-pet-figure{animation:none}
 .pigeon-sprite{animation:pigeon-pose-in 160ms ease-out}
 @keyframes pigeon-pose-in{from{opacity:.35}to{opacity:1}}
-@media(max-width:650px){#annaPet{width:66px;height:66px}}
+@media(max-width:650px){#annaPet,#annaPetBubble{display:none}}
 @media(prefers-reduced-motion:reduce){.pigeon-sprite{animation:none}}
 
 /* Outer figure animates the body; inner sprite controls flight direction. */

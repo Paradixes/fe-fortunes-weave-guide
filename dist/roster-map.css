@@ -109,7 +109,7 @@
  .atlas-stage .atlas-purposes{order:2;margin:0 16px}
  .atlas-stage .toolbar{order:3;margin:0 16px}
  .atlas-stage .atlas-layers{order:4;margin:0 16px}
- .atlas-stage .map-main{order:5;height:50dvh;min-height:320px}
+ .atlas-stage .map-main{order:5;height:50dvh;min-height:320px;position:relative;top:auto}
  .atlas-stage .map-pin-detail{order:6;margin:0 16px}
  .atlas-stage .map-results{order:7;padding:0 16px 24px!important}
  .atlas-stage{gap:14px}
@@ -123,7 +123,7 @@
 .atlas-layers>.disclosure-heading{padding:8px 0;min-height:38px;background:transparent;font-size:13px}
 .atlas-layers>.disclosure-body{padding:4px 0}
 .atlas-layers>.disclosure-heading>span{display:flex;justify-content:space-between;gap:12px;flex:1}
-.atlas-stage .atlas-pin[data-place-type="据点"] .pin-label,.atlas-stage .atlas-pin.selected .pin-label,.atlas-stage .atlas-pin .searched-label{display:block}
+.atlas-stage .map-detail-zoom .atlas-pin[data-place-type="据点"] .pin-label,.atlas-stage .atlas-pin.selected .pin-label,.atlas-stage .atlas-pin .searched-label{display:block}
 .atlas-stage .atlas-pin.gather-pin{background:#e6eee0d9;box-shadow:0 1px 3px #0004;border-color:#8d9f86}
 .atlas-stage .atlas-pin:focus-visible{outline:3px solid var(--gold);outline-offset:3px;z-index:10}
 .atlas-stage .atlas-pin:hover{z-index:9}
