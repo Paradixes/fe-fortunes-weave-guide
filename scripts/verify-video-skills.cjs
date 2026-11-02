@@ -27,6 +27,9 @@ assert(run("!trainingSkillValue({description:'【步兵】必杀回避+20',rank:
 run("activeCharacter='c16';detailRoutes.c16='summary';delete selectedClasses.c16;careerDirectionSelection.c16=1");
 assert(run("skillUseContext(DB.characters.find(c=>c.id==='c16')).dancer&&recommendations(DB.characters.find(c=>c.id==='c16')).magic.length===0"),'Actual direction preview updates skill permissions');
 assert(run("recommendations(DB.characters.find(c=>c.id==='c16')).skills.some(s=>s.name==='特别舞蹈')"),'Dance mastery retained from selected branch path');
+select('c59','瓦尔基里姆');
+assert(run("ratingAnalysisPanel(DB.characters.find(c=>c.id==='c59')).includes('独立复评')"),'Runtime bundle retains reassessment metadata');
+assert(run("recommendations(DB.characters.find(c=>c.id==='c59')).magic.some(s=>s.name==='彷徨之壁')"),'Reviewed role priorities retain the wall spell');
 // No recommendation rendering writes personal builds or preferences.
 const before=JSON.stringify(persisted);run('DB.characters.forEach(c=>recommendations(c))');assert.equal(JSON.stringify(persisted),before);
 console.log('PASS contextual skills: dancer role and mastery, fixed dance separate from slots, Mu warp sorted before truncation, 189 class/character permission checks, storage unchanged.');

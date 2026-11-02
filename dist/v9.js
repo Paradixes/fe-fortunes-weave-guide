@@ -126,7 +126,7 @@ function recommendations(c){
  });
  const score=(a,preferred,kind)=>{
   const review=guideRecommendationFor(a,kind),d=a.description||'';
-  let value=(review?(review.tier==='priority'?30:10):0)+(preferred.includes(a.name)?2:0)+(crossNames.has(a.name)?5:0);
+  let value=(review?(review.tier==='priority'?30:10):0)+(preferred.includes(a.name)?(CATALOG.ratingAudit?.characters[c.id]?.reassessedAt?14:2):0)+(crossNames.has(a.name)?5:0);
   // Learning cost is a cost, not a proxy for power. No automatic level/S-rank bonus.
   value-=Math.max(0,rankValue(a.rank)-rankValue('B'))*2;
   if(kind==='learnedSkills'){
@@ -150,7 +150,7 @@ function recommendations(c){
  const mastery=[cl?.cn,...pathClasses].map(classBy).filter(Boolean).filter(x=>masteryEffect(x)?.type==='特技').map(x=>({name:x.col_37,skill:x.cn,rank:'熟练',description:masteryEffect(x)?.description||'效果尚未核实',why:'来自推荐主职业路线'}));
  const fixedNames=new Set(characterFixedSkills(c,cl).map(s=>s.name));
  const skills=sort(strongestSkillVersions(uniq([...(edited?.skills||[]),...(reco.skills||[]),...(learn.levelSkills||[]),...(learn.learnedSkills||[]),...crossOptions.filter(s=>s.kind==='特技'),...mastery],'learnedSkills').filter(a=>!fixedNames.has(a.name)&&relevant(a,'learnedSkills')).filter(a=>guideRecommendationFor(a,'learnedSkills')||trainingSkillValue(a,ctx)||a.name==='特别舞蹈'&&ctx.dancer)),skillPref,'learnedSkills');
- const magic=sort(uniq([...(edited?.magic||[]),...(learn.magic||[])],'magic').filter(a=>relevant(a,'magic')),[],'magic');
+ const magic=sort(uniq([...(edited?.magic||[]),...(learn.magic||[])],'magic').filter(a=>relevant(a,'magic')),(edited?.magic||[]).map(a=>a.name),'magic');
  const slots=3+(ART_SLOT_BONUSES[cl?.cn]||0);
  return {arts:arts.slice(0,slots),skills:skills.slice(0,5),magic:magic.slice(0,4),slots,className:cl?.cn||'当前职业'};
 }

@@ -1,3 +1,4 @@
+require('./verify-strategy-ratings.cjs');
 require('./verify-video-review.cjs');
 require('./verify-video-skills.cjs');
 require('./verify-endgame-candidates.cjs');

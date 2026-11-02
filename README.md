@@ -209,3 +209,9 @@ python3 server/catalog_server.py --db data/catalog.sqlite3 --port 18776
 角色的 `videoReview` 区分视频意见、角色页事实和未确认项，来源含视频时间戳。两期覆盖26名候选，亚丝望明确未覆盖；不将作者暂排的习得等级写入技能事实。`scripts/apply-video-review.py` 从审阅记录更新 SQLite 交换数据，仍需按上文导入/构建。
 
 技能推荐先按当前职业权限过滤再排序；舞者按再行动职责评估，职业精通是目标而非已习得。目录的核心/条件评价与个人实际配装分开，保存的收藏和自定义路线不变。回归：`node scripts/verify-video-review.cjs` 与 `node scripts/verify-video-skills.cjs`，已纳入 verify-site。
+
+## 评级与策略独立复评（2026-11-02）
+
+`data/research/strategy-rating-review-2026-11-02.json` 记录27名重点候选的独立评级、机会成本与培养方案；其余36人保留此前审核记录。视频意见不等于游戏机制，未确认学习条件和未来DLC收益不纳入确定结论。`scripts/apply-strategy-rating-review.py` 将评级/角色说明/主补路线/推荐动作同步写入SQLite并重建职业与装备反向索引，之后运行 `node scripts/build-catalog.cjs`。本次不修改技能事实、属性或浏览器中的自定义方案。
+
+复评一致性验证：`node scripts/verify-strategy-ratings.cjs`（已纳入总验证），检查27人镜像字段、七项变档、其他36人审核日期、角色事实不变与推荐反向索引。
