@@ -158,7 +158,7 @@ for(let i=0;i<63;i++){vm.runInContext(`activeCharacter=null;detailRoutes['c${i}'
 vm.runInContext('preferences=new Set(DEFAULT_PREFERENCES);activeCharacter=null;$(\"#detail\").close()',ctx);
 for(const r of ['レダ','カイ','ディートリヒ','セオドラ']){vm.runInContext(`route=${JSON.stringify(r)};location.hash='#overview';routeGuideView='plan';render()`,ctx);const h=nodes['#content'].innerHTML,arena=h.slice(h.indexOf('<section id="route-arena"'),h.indexOf('<section id="route-fusion"'));const supp=vm.runInContext('routeSupplements().map(c=>({id:c.id,cn:c.cn}))',ctx);for(const c of supp){assert(arena.includes('data-char="'+c.id+'"'),'Supplement in project table '+c.id+r);assert(arena.includes(c.cn));}if(supp.length)assert(arena.includes('候补补强'));}
 vm.runInContext("activeCharacter=null;$('#detail').close();location.hash='#characters';tier='all';render()",ctx);
-assert(vm.runInContext("RATING_TIERS.every(t=>DB.characters.some(c=>c.rating===t))",ctx));
+assert(vm.runInContext("DB.characters.every(c=>RATING_TIERS.includes(c.rating))",ctx));
 for(const t of vm.runInContext('RATING_TIERS',ctx)){
  ctx.ratingCheck=t;
  const badge=vm.runInContext('ratingBadge(ratingCheck,true,true)',ctx);

@@ -49,6 +49,22 @@ def action_rows(cid, names, kind, reasons):
         rows.append(row)
     return rows
 
+# Explicit, sourced exceptions to legacy character restrictions (no inference about arena access).
+for correction in review.get('verifiedFactCorrections',[]):
+    assert set(correction['fields']) <= {'canChangeClass','fixedClass'}
+    chars[correction['id']].update(copy.deepcopy(correction['fields']))
+for cid, additions in review.get('careerAlternativeAdditions',{}).items():
+    existing=data.setdefault('careerAlternatives',{}).setdefault(cid,[])
+    for alt in additions:
+        found=next((i for i,a in enumerate(existing) if a['title']==alt['title']),None)
+        if found is None:existing.append(copy.deepcopy(alt))
+        else:existing[found]=copy.deepcopy(alt)
+for change in review.get('careerAlternativeEdits',[]):
+    matches={change['matchTitle'],change.get('title',change['matchTitle'])}
+    alt=next(a for a in data['careerAlternatives'][change['id']] if a['title'] in matches)
+    alt.update({k:copy.deepcopy(v) for k,v in change.items() if k not in ['id','matchTitle']})
+    alt['reviewedAt']=DATE
+
 for cid, entry in review['characters'].items():
     c = chars[cid]
     p = data['planning'][cid]
@@ -64,6 +80,9 @@ for cid, entry in review['characters'].items():
         p['routes'][route_id]['initial'].update(copy.deepcopy(initial))
     c['plan'] = strategy.get('plan', investment)
     c['stop'] = strategy.get('stop', investment)
+    c['alt'] = strategy.get('alt', entry['limits'])
+    c['growthNote'] = strategy.get('growthNote', '本次按实际职责评估：' + investment)
+    c['arena'] = strategy.get('arena', '先补当前分支的主武器／魔术与资格；' + investment)
     if strategy.get('coreSkill'): c['coreSkill'] = strategy['coreSkill']
     audit.update({k:entry[k] for k in ['rating','reason','limits','investment']})
     audit.update({'previousRating':previous, 'reassessedAt':DATE,
@@ -95,6 +114,7 @@ for cid, entry in review['characters'].items():
             if strategy.get('label'):
                 rule['label'] = rule['goal'] = strategy['label']
             rule['focus'] = [route['build']['focus']]
+        rule.update(copy.deepcopy(strategy.get('routeRules',{}).get(rid,{})))
     if strategy.get('optionalRoutes'):
         for rid in strategy['optionalRoutes']:
             if rid not in p['routes']: continue
@@ -119,7 +139,7 @@ for cid, entry in review['characters'].items():
             direction['level']='条件补养'
             direction['condition']='仅在已有成果存在明确物理伤害缺口时启用，不默认双方向主养。'
         if not r['rule'].get('optional',False):
-            direction.update({'label':strategy.get('label',direction['label']),'reason':entry['reason'],'stop':c['stop'],
+            direction.update({'label':r['rule'].get('label',strategy.get('label',direction['label'])),'reason':r['rule'].get('reason',entry['reason']),'stop':r['rule'].get('firstPartStop',c['stop']),
                               'classes':[r.get('initial',p['initial'])['name'],r['build']['mid'][0],r['build']['upper'][0]]})
             if strategy.get('directionType'):direction['type']=strategy['directionType']
         else:
@@ -155,6 +175,11 @@ for cid, entry in review['characters'].items():
                     else:
                         item['reason']=entry['reason'] + ' 招募后按当前路线权限培养，终局另看整合方案。'
 
+for route_id, overrides in review.get('routeStrategyRoleOverrides',{}).items():
+    for section in ['core','lateReplacements']:
+        for item in data['routeStrategy'][route_id].get(section,[]):
+            if item['id'] in overrides:item['roles']=copy.deepcopy(overrides[item['id']])
+
 for alt in data.get('careerAlternatives',{}).get('c31',[]):
     if alt['title']=='黑魔专精':
         alt['when']='原攻略提供黑魔专精思路；本站本次默认双魔输出与白魔群疗/按需传送。队伍已有足够白魔支援且愿意舍弃本人白魔时，才选纯黑德鲁伊。'
@@ -171,9 +196,14 @@ for candidate in data['dancerGuide']['candidates']:
     if candidate['id']=='c7':
         candidate['when']='保留普通舞者直到第三部第4区、缪斯项链与剑A弓C齐备，再转神乐；他人接舞后才考虑探影。'
 
-# Keep reassessment scope explicit: no claim that the other 36 were rerated.
+# The review explicitly covers every character; video coverage remains separately bounded.
+data['ratingAudit']['checkedAt']=DATE
+data['ratingAudit']['scope']=review['scope']
 data['ratingAudit']['reassessment']={k:review[k] for k in ['checkedAt','scope','policy']}
 data['ratingAudit']['reassessment']['characterIds']=list(review['characters'])
+data['ratingAudit']['reassessment']['revision']=review.get('revision')
+data['ratingAudit']['reassessment']['factReviewIssues']=review.get('factReviewIssues',[])
+data['cultivationAudit']['date']=DATE
 for key,value in protected.items():assert data[key]==value, 'Gameplay facts changed: '+key
 for cid,fields in character_facts.items():
     assert fields=={k:chars[cid].get(k) for k in fields},'Gameplay character facts changed: '+cid
@@ -181,4 +211,4 @@ with tempfile.NamedTemporaryFile(mode='w',suffix='.json',encoding='utf8') as tmp
     json.dump(data,tmp,ensure_ascii=False);tmp.flush()
     subprocess.run(['python3',str(ROOT/'scripts/derive-recommendations.py'),tmp.name],check=True)
     module.import_catalog(tmp.name, ROOT/'data/catalog.sqlite3')
-print('Applied bounded editorial reassessment; gameplay facts preserved and reverse indexes regenerated.')
+print('Applied full-roster editorial reassessment; gameplay facts preserved and reverse indexes regenerated.')

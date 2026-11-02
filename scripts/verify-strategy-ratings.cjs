@@ -6,11 +6,22 @@ const d=JSON.parse(fs.readFileSync('data/catalog.json','utf8'));
 const r=JSON.parse(fs.readFileSync('data/research/strategy-rating-review-2026-11-02.json','utf8'));
 const baseline=r.baseline;
 const chars=Object.fromEntries(d.database.characters.map(c=>[c.id,c]));
-assert.equal(Object.keys(r.characters).length,27);
+assert.equal(Object.keys(r.characters).length,63);
+assert.deepEqual(Object.keys(r.characters).sort(),Object.keys(chars).sort(),'Every catalog character has a decision');
+assert.equal(r.revision,'all-characters-v2');
+assert.ok(r.scope.includes('全63'));
+assert.deepEqual(d.ratingAudit.reassessment.characterIds.sort(),Object.keys(chars).sort());
 const changed=Object.entries(r.characters).filter(([id,e])=>e.rating!==e.previousRating).map(([id])=>id).sort();
-assert.deepEqual(changed,['c1','c6','c19','c29','c47','c54','c59'].sort());
+assert.equal(changed.length,21);
+assert.deepEqual(changed,Object.keys(chars).filter(id=>chars[id].rating!==baseline.releaseRatings[id]).sort());
 for(const [id,e] of Object.entries(r.characters)){
  const c=chars[id],a=d.ratingAudit.characters[id],p=d.planning[id];
+ assert.equal(e.status,'independent-review',id);
+ for(const field of ['reason','limits','investment','reviewPass'])assert.ok(e[field]?.length>=8,id+' missing concrete '+field);
+ assert.ok(e.role?.length>=2,id+' role');
+ assert.ok(e.sources.length,id+' sources');
+ assert.equal(e.previousRating,baseline.releaseRatings[id],id+' baseline rating');
+ assert.equal(hash(Object.fromEntries(baseline.characterFactKeys.map(k=>[k,c[k]??null]))),baseline.characterFactHashes[id],id+' protected character facts changed');
  assert.equal(c.rating,e.rating,id);assert.equal(c.ratingReason,e.reason,id);
  assert.equal(c.role,e.role,id);assert.equal(a.reason,e.reason,id);
  assert.equal(a.investment,e.investment,id);assert.equal(p.audit.investment,e.investment,id);
@@ -31,10 +42,7 @@ for(const [id,e] of Object.entries(r.characters)){
   assert.ok(row.why&&row.reviewedAt===r.checkedAt,id+': missing decision');
  }
 }
-for(const c of d.database.characters)if(!r.characters[c.id]){
- assert.equal(hash(d.ratingAudit.characters[c.id]),baseline.unreviewed[c.id].auditHash,c.id+' unreviewed audit changed');
- assert.equal(c.rating,baseline.unreviewed[c.id].rating);
-}
+assert.equal(hash(d.database.classes.map(c=>[c.id,c.cn,c.allowedSkills,c.must,c.any,c.unlock])),baseline.classPermissionsHash,'Class permissions/requirements changed');
 assert.deepEqual(d.planning.c31.primary.primaryRoutes,['レダ']);
 assert.equal(d.planning.c31.initial.name,'诅咒师');
 assert.equal(d.planning.c31.routes['セオドラ'].initial.name,'斗士');
@@ -71,4 +79,34 @@ for(const cl of d.database.classes){
  const actual=(cl.recommendedBy||[]).map(x=>typeof x==='string'?x:x.id).sort();
  assert.deepEqual(actual,expected,cl.cn+' reverse index');
 }
-console.log('PASS 27 independent ratings, 7 changed tiers, bounded audit dates, synchronized strategies/actions, preserved facts and reverse indexes.');
+// Known former editorial mismatches are explicit regressions, not silently dropped recommendations.
+assert.ok(d.planning.c2.recommendations.combatArts.some(x=>x.name==='影渡'));
+assert.ok(!d.planning.c2.recommendations.combatArts.some(x=>x.name==='秘传·血牙'));
+for(const id of ['c8','c24'])assert.ok(d.planning[id].recommendations.combatArts.find(x=>x.name==='哈姆辛').why.includes('枪B'));
+assert.ok(d.planning.c11.recommendations.magic.find(x=>x.name==='远程圣疗').why.includes('圣枪师'));
+assert.ok(d.planning.c30.recommendations.combatArts.find(x=>x.name==='守护尖刺').why.includes('斧B'));
+assert.ok(!d.planning.c32.recommendations.combatArts.some(x=>x.name==='活人拳'));
+assert.equal(d.planning.c57.final.end,'卫士');
+assert.equal(d.planning.c57.initial.skip,true);
+assert.equal(chars.c57.canChangeClass,false);
+assert.equal(chars.c57.fixedClass,'卫士');
+assert.equal(chars.c57.canUseArenaTraining,undefined,'Do not infer arena restrictions');
+assert.deepEqual(d.planning.c34.routes['ディートリヒ'].build.mid,['弓箭手']);
+assert.deepEqual(d.planning.c34.routes['ディートリヒ'].build.upper,['狙击手']);
+assert.ok(!d.routeStrategy['ディートリヒ'].core.find(c=>c.id==='c35').roles.includes('斧骑'));
+assert.ok(!d.careerAlternatives.c33.some(a=>a.title==='黑白魔必杀'));
+assert.ok(!d.careerAlternatives.c55.some(a=>a.when.includes('物理判定的雷暴')));
+assert.equal(d.planning.c50.final.focus,'剑术 / 马术');
+assert.equal(d.planning.c35.final.end,'瓦尔基里姆');
+assert.ok(d.planning.c60.final.goals.every(x=>!x.includes('黑')));
+assert.equal(d.planning.c25.initial.name,'诅咒师');
+assert.equal(d.planning.c35.initial.name,'诅咒师');
+assert.ok(d.ratingAudit.reassessment.factReviewIssues.length>=8);
+// Route coverage must be backed by the actual recommended upper-class permissions.
+const coverageSkill={'坦克':'重装术','治疗':'白魔术','弓':'弓术','魔法':'黑魔术'};
+for(const [rid,route] of Object.entries(d.routeStrategy))for(const [role,ids] of Object.entries(route.coverage||{}))for(const id of ids){
+ const plan=d.planning[id].routes[rid]?.build||d.planning[id].final;
+ assert.ok(plan.upper.some(n=>classes[n].allowedSkills.includes(coverageSkill[role])),rid+' '+id+' false coverage '+role);
+}
+
+console.log('PASS all 63 independent ratings, 21 tier changes against release, full concrete decisions, synchronized strategies/actions, protected facts and reverse indexes.');

@@ -212,6 +212,6 @@ python3 server/catalog_server.py --db data/catalog.sqlite3 --port 18776
 
 ## 评级与策略独立复评（2026-11-02）
 
-`data/research/strategy-rating-review-2026-11-02.json` 记录27名重点候选的独立评级、机会成本与培养方案；其余36人保留此前审核记录。视频意见不等于游戏机制，未确认学习条件和未来DLC收益不纳入确定结论。`scripts/apply-strategy-rating-review.py` 将评级/角色说明/主补路线/推荐动作同步写入SQLite并重建职业与装备反向索引，之后运行 `node scripts/build-catalog.cjs`。本次不修改技能事实、属性或浏览器中的自定义方案。
+`data/research/strategy-rating-review-2026-11-02.json` 记录全63名角色的独立评级、机会成本与培养方案；本轮重新横向核对已审27人与其余36人。视频意见不等于游戏机制，未确认学习条件和未来DLC收益不纳入确定结论。`scripts/apply-strategy-rating-review.py` 将评级/角色说明/主补路线/推荐动作同步写入SQLite并重建职业与装备反向索引，之后运行 `node scripts/build-catalog.cjs`。本次不修改技能事实、属性或浏览器中的自定义方案。
 
-复评一致性验证：`node scripts/verify-strategy-ratings.cjs`（已纳入总验证），检查27人镜像字段、七项变档、其他36人审核日期、角色事实不变与推荐反向索引。
+复评一致性验证：`node scripts/verify-strategy-ratings.cjs`（已纳入总验证），检查全63人逐项结论与镜像字段、基线变档、逐角色投入建议实际渲染、角色事实不变与推荐反向索引。
