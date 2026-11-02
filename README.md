@@ -27,6 +27,7 @@ node scripts/build-catalog.cjs
 node scripts/verify-site.cjs
 node scripts/verify-workbench.cjs
 node scripts/verify-cultivation.cjs
+node scripts/verify-endgame-candidates.cjs
 python3 scripts/verify-sqlite.py
 python3 scripts/check-public-export.py
 ```
@@ -196,3 +197,9 @@ python3 server/catalog_server.py --db data/catalog.sqlite3 --port 18776
 - 角色技能按等级展示：卡片列出个人技能和已核实等级的等级技能，详情显示「个人技能 → 等级技能 → 炽焰技艺」，解锁等级、剧情或兴行条件写在各项下面。数据来自共用技能索引（SQLite `learning` → `abilities`），没有另存副本。
 - 对照 GameWith 等级技能表与 Game8 角色页修正等级技能、补齐炽焰技艺，更新两站 10/16 评级记录，并补充外站一致推荐的备选职业路线，详见 AUDIT-2026-10-16.md。编辑评级没有改动。
 - 界面：去掉标题上方的小字标签和提示框左侧粗色条，主题按钮改为 SVG 图标，卡片的推荐战技与装备折叠区移到底部，装备卡效果不再截断条件加成。
+
+## 终章候选与职业规划
+
+救世篇候选池只汇总浏览器中关注的角色与救世主，按角色去重；不按评级补人，也不因终章 25 人上限截断候选。页面分别标示候选数量、剩余或超额人数，以及战略地图最多五队、每队八人的编制。第一部各线推荐仅用于跨线培养，不代表终章已选名单。
+
+偏好页的资料定位不锁定最终职业；有自定义路线时优先显示该路线。候选池装备统计是资料推荐的需求估算，不等于确认后的终章装备单。更新不改动偏好、养成工作台、库存或来源选择的本地存储结构。

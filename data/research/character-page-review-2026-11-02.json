@@ -1,0 +1,196 @@
+{
+  "checkedAt": "2026-11-02",
+  "scope": "27 个角色的 Game8 页面与现行目录复核；不是完整 B 站视频或全习得表核验。",
+  "baseCommit": "f653410f42e54e8e30e95d407473ecd10d1cf1d7",
+  "personalEffects": "27 个个人技能效果与现行目录完全一致，不改评级。",
+  "noDeletePolicy": "Game8 页面列出的技能与魔法受截图技能等级限制；不以页面未列出为由删除既有能力。",
+  "preserved": "全部现有等级、技能阶级、效果、参数、能力条目与较新来源；仅删除三处角色归属错误的 note 并清空对应共享 acquisition.condition。",
+  "changes": [
+    {
+      "characterId": "c6",
+      "field": "learning.magic.火山爆焰.note",
+      "before": "媞雅拉：黑魔术 B 级时习得",
+      "after": null,
+      "reason": "角色归属错误；删去误引其他角色的说明，不更改此角色现有习得条件。"
+    },
+    {
+      "characterId": "c49",
+      "field": "learning.magic.火山爆焰.note",
+      "before": "媞雅拉：黑魔术 B 级时习得",
+      "after": null,
+      "reason": "角色归属错误；删去误引其他角色的说明，不更改此角色现有习得条件。"
+    },
+    {
+      "characterId": "c59",
+      "field": "learning.magic.火山爆焰.note",
+      "before": "媞雅拉：黑魔术 B 级时习得",
+      "after": null,
+      "reason": "角色归属错误；删去误引其他角色的说明，不更改此角色现有习得条件。"
+    }
+  ],
+  "reviewedPages": [
+    {
+      "characterId": "c0",
+      "name": "凯伊",
+      "url": "https://game8.jp/fe-banshisenko/816414",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c1",
+      "name": "古扎岚",
+      "url": "https://game8.jp/fe-banshisenko/816440",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c2",
+      "name": "迪托利希",
+      "url": "https://game8.jp/fe-banshisenko/816415",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c4",
+      "name": "绯亚娜",
+      "url": "https://game8.jp/fe-banshisenko/816456",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c5",
+      "name": "赛奥朵拉",
+      "url": "https://game8.jp/fe-banshisenko/816416",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c6",
+      "name": "索绯雅",
+      "url": "https://game8.jp/fe-banshisenko/816448",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c7",
+      "name": "蕾达",
+      "url": "https://game8.jp/fe-banshisenko/816417",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c8",
+      "name": "卡塔妮雅",
+      "url": "https://game8.jp/fe-banshisenko/816442",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c11",
+      "name": "妮涅",
+      "url": "https://game8.jp/fe-banshisenko/816437",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c14",
+      "name": "亚历珊德拉",
+      "url": "https://game8.jp/fe-banshisenko/816445",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c16",
+      "name": "媞雅拉",
+      "url": "https://game8.jp/fe-banshisenko/816418",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c19",
+      "name": "丹提",
+      "url": "https://game8.jp/fe-banshisenko/816433",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c24",
+      "name": "罗蕾塔",
+      "url": "https://game8.jp/fe-banshisenko/816451",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c29",
+      "name": "沙兰",
+      "url": "https://game8.jp/fe-banshisenko/816438",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c30",
+      "name": "巴卡尼亚",
+      "url": "https://game8.jp/fe-banshisenko/816428",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c31",
+      "name": "西洛可",
+      "url": "https://game8.jp/fe-banshisenko/816429",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c32",
+      "name": "穆",
+      "url": "https://game8.jp/fe-banshisenko/816431",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c33",
+      "name": "奥琳琵娅",
+      "url": "https://game8.jp/fe-banshisenko/816430",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c47",
+      "name": "乌修拉",
+      "url": "https://game8.jp/fe-banshisenko/816434",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c49",
+      "name": "乌尔坦德",
+      "url": "https://game8.jp/fe-banshisenko/816420",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c52",
+      "name": "欧露赫露",
+      "url": "https://game8.jp/fe-banshisenko/816884",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c53",
+      "name": "谭利穆恩",
+      "url": "https://game8.jp/fe-banshisenko/816883",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c54",
+      "name": "贝特兰",
+      "url": "https://game8.jp/fe-banshisenko/816882",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c55",
+      "name": "爱娜特莉亚",
+      "url": "https://game8.jp/fe-banshisenko/816885",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c58",
+      "name": "救世主",
+      "url": "https://game8.jp/fe-banshisenko/816479",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c59",
+      "name": "红花",
+      "url": "https://game8.jp/fe-banshisenko/816477",
+      "readAt": "2026-11-02"
+    },
+    {
+      "characterId": "c61",
+      "name": "亚丝望",
+      "url": "https://game8.jp/fe-banshisenko/816902",
+      "readAt": "2026-11-02"
+    }
+  ],
+  "videoStatus": "上、下两段视频未取得完整字幕及所有人物表，不据此重评强度或宣称已完整看完。"
+}
