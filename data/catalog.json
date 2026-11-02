@@ -2136,7 +2136,22 @@
           "sharp-dagger",
           "sharp-fishhook"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "机动力与物魔分支都值得保留；按路线出手机会选主养方向。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=352",
+            "start": "05:52",
+            "end": "06:36"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "グザラン",
@@ -2412,7 +2427,22 @@
           "huge-fish-eyeball",
           "blue-rose-bouquet"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "稳定的物理多面手，保留一条主要输出路线即可，不必重复全修。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=476",
+            "start": "07:56",
+            "end": "08:42"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "ディートリヒ",
@@ -2683,7 +2713,22 @@
           "blue-rose-bouquet",
           "kitten-figurine"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "暴击、承伤与弓战技形成物理核心；不要与紧随其后的暗法角色段落混淆。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=522",
+            "start": "08:42",
+            "end": "09:00"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "キロイカ",
@@ -3167,7 +3212,36 @@
           "joint-relief-gloves",
           "fodlan-tea"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "救出和魔法战技路线值得保留，不能只按随机治疗看待；重装只是分支。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=870",
+            "start": "14:30",
+            "end": "15:24"
+          },
+          "cautions": [
+            "大防御、魔法连拳等视频表述与现行目录仍需校对；不直接新增精确习得等级。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "magic",
+              "label": "魔法与救出",
+              "benefit": "保留施法和位置支援",
+              "tradeoff": "救出门槛较晚，按本人学习表投入。"
+            },
+            {
+              "role": "build",
+              "label": "魔法战技/重装研究",
+              "benefit": "作者提出大防御等构筑方向",
+              "tradeoff": "视频未充分实测；技能名称与学习条件待对照。"
+            }
+          ]
+        }
       },
       {
         "name": "セオドラ",
@@ -3391,7 +3465,22 @@
           "shield-portrait",
           "rare-spices"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "指挥、计策和个人减伤也是价值，不能只按武器战技排名。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=696",
+            "start": "11:36",
+            "end": "12:06"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "ソフィア",
@@ -3635,7 +3724,22 @@
           "protection-figurine",
           "kitten-figurine"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "治疗量与治疗射程有明确用途；作者对单一远疗定位的低评不等于必须删人。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=932",
+            "start": "15:32",
+            "end": "16:00"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "レダ",
@@ -3906,7 +4010,35 @@
           "kitten-figurine",
           "meaty-delicacy"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "保留再行动职责；普通跳舞与专属歌技分开考虑，重装回避仅为构筑备选。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=962",
+            "start": "16:02",
+            "end": "16:28"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "dancer",
+              "label": "保留舞者",
+              "benefit": "再行动是独立队伍职责",
+              "tradeoff": "普通跳舞需舞者权限；专属范围歌技次数另算。"
+            },
+            {
+              "role": "build",
+              "label": "重装研究",
+              "benefit": "作者提出回避重装备选",
+              "tradeoff": "未实测构筑，不替代现有舞位。"
+            }
+          ]
+        }
       },
       {
         "name": "カターニャ",
@@ -4179,7 +4311,41 @@
           "magic-trick-set",
           "kitten-figurine"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "攻速与个人技能可支持飞行输出，法术和传送又形成另一条路线。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=1140",
+            "start": "19:00",
+            "end": "19:23"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "flying",
+              "label": "天马输出",
+              "benefit": "飞行适性与攻速门槛配合",
+              "tradeoff": "放弃该职业不可用的法术。"
+            },
+            {
+              "role": "magic",
+              "label": "魔法与传送",
+              "benefit": "保留施法及位置支援",
+              "tradeoff": "不是飞行终职同时可用。"
+            },
+            {
+              "role": "dancer",
+              "label": "第三部舞位候补",
+              "benefit": "高速有利于支援站位",
+              "tradeoff": "会让出输出与传送行动；需项链。"
+            }
+          ]
+        }
       },
       {
         "name": "ヨーカイ",
@@ -4916,7 +5082,23 @@
           "pegasus-panorama",
           "rare-spices"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "拳术、抗魔与白魔辅助各有用途，不应只为凑飞行队强转。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=982",
+            "start": "16:22",
+            "end": "17:23"
+          },
+          "cautions": [
+            "后卫袭击与步行再移动不叠加仅为作者转述未测试案例，不作为确定机制。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "ナジャ",
@@ -5703,7 +5885,29 @@
           "training-bracelet",
           "sturdy-rucksack"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "自带天马且飞行擅长，是顺手的飞行候选；硬拐魔法需要额外投入。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=386",
+            "start": "06:26",
+            "end": "07:26"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "flying",
+              "label": "天马主线备选",
+              "benefit": "已有飞行基础，发挥攻速与地形特点",
+              "tradeoff": "剑/枪/飞行权限，不同时承诺法术或拳技。"
+            }
+          ]
+        }
       },
       {
         "name": "ピーテル",
@@ -6182,7 +6386,35 @@
           "strategy-manuscript",
           "pickled-bulbs"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "较早远疗与指挥支援之外，第三部舞者也是候选，不必固定为法师。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=396",
+            "start": "06:36",
+            "end": "07:05"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "dancer",
+              "label": "第三部舞者候补",
+              "benefit": "视频明确提出舞者方向，利用已练剑/弓资格",
+              "tradeoff": "第一、二部不可替代蕾达转舞；舞者不能同时使用白魔法。"
+            },
+            {
+              "role": "magic",
+              "label": "白魔与指挥",
+              "benefit": "较早远疗和团队支援",
+              "tradeoff": "与舞位分工，辅助行动也占用本回合。"
+            }
+          ]
+        }
       },
       {
         "name": "イオ",
@@ -6882,7 +7114,22 @@
           "magic-trick-set",
           "sturdy-rucksack"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "冻结与雷暴提供控制、远程用途，不应只凭概率型个人技能优先淘汰。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=607",
+            "start": "10:07",
+            "end": "10:49"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "ゲイツ",
@@ -8009,7 +8256,42 @@
           "training-pillar",
           "blue-rose-bouquet"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "回避、物理战技与救出形成多条路线；舞者、飞行、拳系应分别比较。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=1075",
+            "start": "17:55",
+            "end": "18:27"
+          },
+          "cautions": [
+            "视频部分高阶战技未完整对应现行目录；不得将同一角色的拳、法术与天马收益同时相加。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "dancer",
+              "label": "第三部舞位候补",
+              "benefit": "回避特性支持再行动站位",
+              "tradeoff": "需项链；不同时计算拳战技或救出。"
+            },
+            {
+              "role": "flying",
+              "label": "天马备选",
+              "benefit": "飞行适性与回避特性",
+              "tradeoff": "需按剑枪输出算收益。"
+            },
+            {
+              "role": "magic",
+              "label": "拳/白魔分支",
+              "benefit": "另有拳与救出相关用途",
+              "tradeoff": "按所选职业权限分别计算。"
+            }
+          ]
+        }
       },
       {
         "name": "セテス",
@@ -9191,7 +9473,22 @@
           "morfis-tea",
           "huge-fish-eyeball"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "救出、群体治疗与相邻速度辅助形成支援定位；关键能力较晚成型。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=1147",
+            "start": "19:07",
+            "end": "19:38"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "バッカニア",
@@ -9442,7 +9739,22 @@
           "arrowhead-gem",
           "rare-spices"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "现成可靠前排，下限较高；不用为了追求新玩法放弃已成型投入。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=988",
+            "start": "16:28",
+            "end": "16:42"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "シロッコ",
@@ -9707,7 +10019,22 @@
           "pack-of-pastels",
           "kitten-figurine"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "黑魔法、群体治疗与传送让他兼具输出和位置支援，不只是重复法师。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=1003",
+            "start": "16:43",
+            "end": "17:22"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "ムウ",
@@ -9963,7 +10290,35 @@
           "yarc-milk",
           "pickled-vegetables"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "物理适应面广，白魔A传送也是独立分支；拳、天马、白魔按终职分开取舍。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=1042",
+            "start": "17:22",
+            "end": "18:00"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "flying",
+              "label": "天马输出备选",
+              "benefit": "物理战技适应面广",
+              "tradeoff": "不再同时提供白魔传送或拳战技。"
+            },
+            {
+              "role": "magic",
+              "label": "白魔/拳分支",
+              "benefit": "传送与拳系各有价值",
+              "tradeoff": "先定终职，再算能用的能力。"
+            }
+          ]
+        }
       },
       {
         "name": "オリンピア",
@@ -10197,7 +10552,22 @@
           "fodlan-tea",
           "morfis-tea"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "远疗、沉默和狂乱体现控制价值；不要因为没有传送就判定重复。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=1080",
+            "start": "18:00",
+            "end": "19:00"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "ミカエラ",
@@ -13587,7 +13957,35 @@
           "mane-ornament",
           "kitten-figurine"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "作者看重战技、速度技巧和较早穿越；未来DLC完整培养上限仍是推演。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=760",
+            "start": "12:40",
+            "end": "13:49"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "dancer",
+              "label": "第三部舞位备选",
+              "benefit": "原有舞位候选可按队伍分工保留",
+              "tradeoff": "机会成本是强力物理输出，道具资格与入队路线需满足。"
+            },
+            {
+              "role": "physical",
+              "label": "物理战技",
+              "benefit": "发挥速度技巧与战技",
+              "tradeoff": "未来DLC上限不是当前保证。"
+            }
+          ]
+        }
       },
       {
         "name": "ジェスター",
@@ -14021,7 +14419,23 @@
           "pegasus-panorama",
           "blue-rose-bouquet"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "作者强调急救架势的团队用途；技能门槛和发动方式需与现行资料逐项核对。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=449",
+            "start": "07:29",
+            "end": "07:52"
+          },
+          "cautions": [
+            "视频提及指挥S急救架势；现行习得表未完整收录，不将其视作常驻被动或已确认培养终点。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "キリーク",
@@ -14596,7 +15010,30 @@
           "exquisite-ring",
           "skin-balm"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "远疗、群疗与白魔法组合独特；放弃施法权限的机会成本很高，且不可骑乘。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=926",
+            "start": "15:26",
+            "end": "16:02"
+          },
+          "cautions": [
+            "作者承认弓A来源存在乱射/魔法之箭矛盾，本轮不据此改习得表。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "magic",
+              "label": "白魔支援",
+              "benefit": "远疗和群疗的独立组合",
+              "tradeoff": "不可骑乘或飞行。"
+            }
+          ]
+        }
       },
       {
         "name": "タリムーン",
@@ -14804,7 +15241,30 @@
           "pegasus-panorama",
           "shield-portrait"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "专属诅咒与团队辅助比单纯物理更少重复，可优先列候补而非强制上场。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=733",
+            "start": "12:13",
+            "end": "12:40"
+          },
+          "cautions": [
+            "第三部共通加入不等于所有主角线都能满足前置外传；DLC继承与强制出场规则未据视频确认。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "support",
+              "label": "功能候补",
+              "benefit": "诅咒和团队增益与物理主力较少重叠",
+              "tradeoff": "视频未讲清诅咒射程或行动消耗，不据此补猜。"
+            }
+          ]
+        }
       },
       {
         "name": "ベルトラン",
@@ -15025,7 +15485,30 @@
           "training-weights",
           "sharp-dagger"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "战技质量好，但速度与晚加入成本需要处理；不是因DLC身份就必练。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=523",
+            "start": "08:43",
+            "end": "09:35"
+          },
+          "cautions": [
+            "视频没有精确解释觉醒后的行动机制，应以角色页或实测为准。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": [
+            {
+              "role": "physical",
+              "label": "偏爱候补",
+              "benefit": "优秀战技与物理成长空间",
+              "tradeoff": "晚加入和补速度成本；非DLC必练。"
+            }
+          ]
+        }
       },
       {
         "name": "アナトリア",
@@ -15230,7 +15713,23 @@
           "traders-handbook",
           "full-sewing-kit"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "魔法与传送有当前价值；不能把作者暂排的黑魔法等级当作确认数据。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=1108",
+            "start": "18:28",
+            "end": "19:06"
+          },
+          "cautions": [
+            "作者说明黑魔法等级仅A托隆确定，其余排序为暂排，不录为确认学习等级。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "セントリオン",
@@ -15662,7 +16161,22 @@
         "likedGifts": [],
         "giftCategories": [],
         "preferredGifts": [],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "专属战技与队伍功能优先，不必为了通用战技把每条武器线练满。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=244",
+            "start": "04:04",
+            "end": "04:49"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "コウカ",
@@ -15808,7 +16322,22 @@
           "the-knights-suitors",
           "the-works-of-dante"
         ],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "reviewed",
+          "summary": "传送、救出与墙法形成高功能密度；攻击法术次数仍是限制。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（上）",
+            "url": "https://www.bilibili.com/video/BV17XnU69EZp/?t=289",
+            "start": "04:49",
+            "end": "05:22"
+          },
+          "cautions": [
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "トロイア",
@@ -16073,7 +16602,23 @@
           "桌上游戏"
         ],
         "preferredGifts": [],
-        "dislikedGifts": []
+        "dislikedGifts": [],
+        "videoReview": {
+          "checkedAt": "2026-11-02",
+          "status": "not-covered",
+          "summary": "作者明确留待后续视频；本轮没有她的完整评价或等级技能表。",
+          "source": {
+            "title": "全人物战技、魔法、技能速览+简评（下）",
+            "url": "https://www.bilibili.com/video/BV1s2x66WE58/?t=1259",
+            "start": "20:59",
+            "end": "21:10"
+          },
+          "cautions": [
+            "两期均未提供完整技能表；保留现行角色页资料，不补造视频结论。",
+            "作者声明不少构筑为资料整理与推演，并非全部实测；本条为玩法评价，不覆盖游戏技能事实。"
+          ],
+          "branches": []
+        }
       },
       {
         "name": "タホウニア",
@@ -90578,6 +91123,14 @@
     "proficiencyHyperwiki": [
       "角色技能与习得门槛",
       "https://hyperwiki.jp/fefw/character/"
+    ],
+    "biliSkillsUpper": [
+      "B站 · 全人物战技、魔法、技能速览+简评（上）",
+      "https://www.bilibili.com/video/BV17XnU69EZp/"
+    ],
+    "biliSkillsLower": [
+      "B站 · 全人物战技、魔法、技能速览+简评（下）",
+      "https://www.bilibili.com/video/BV1s2x66WE58/"
     ]
   },
   "planning": {
@@ -112694,26 +113247,50 @@
         "source": "https://altema.jp/febansisenkou/luludiya",
         "sourceLabel": "Altema、GameWith、KeenGamer · 本站按资格整理"
       }
+    ],
+    "c16": [
+      {
+        "title": "第三部舞位备选",
+        "classes": [
+          "舞者",
+          "神乐神将"
+        ],
+        "when": "队伍需要再行动且本人已有剑/弓资格投入；视频明确提及。",
+        "stop": "资格与关键生存能力达标即停，不为舞者绕修不能使用的白魔法；项链按队伍分配。",
+        "source": "https://www.bilibili.com/video/BV17XnU69EZp/?t=396",
+        "sourceLabel": "视频观点 · 职业权限按资料页核对",
+        "reviewKey": "video-20261102-dancer"
+      }
     ]
   },
   "dancerGuide": {
     "title": "舞者由谁承担",
-    "summary": "第三部舞位可由罗蕾塔、卡塔妮雅或乌修拉按阵容接替；第一、二部舞者仅蕾达本人可用。",
+    "summary": "先保留再行动职责，再选输出或飞行分支。蕾达是前两部既有舞位；第三部可考虑媞雅拉、罗蕾塔、卡塔妮雅或乌修拉，按项链与队伍分工选择，不要求全部转舞者。",
     "rules": [
       "舞者：蕾达篇第9章支线解锁；第一、二部仅蕾达可转。第三部其他角色可转，剑B或弓B，并分配舞姬项链。",
-      "神乐神将：第三部第4区分，天冠神殿取得缪斯项链；剑A＋弓C。按实际可用道具分配舞位。",
-      "三名候选按阵容取舍，不要求全部转舞者；蕾达的范围再行动有次数限制，不能当作无限普通舞蹈。"
+      "神乐神将：第三部第4区分，天冠神殿取得缪斯项链；剑A＋弓C。名额按实际拥有的转职道具分配。",
+      "舞者/神乐神将使用剑、弓与步兵技能；不会因为原角色会传送、救出或拳技就保留对应使用权限。",
+      "跳舞消耗本人行动；攻击、治疗、计策与再动不能在同一行动中重复计算收益。特别舞蹈则随跳舞触发。",
+      "蕾达的专属范围再行动有次数限制，与普通跳舞分别计算。候选仅作参考，不改你保存的终职。"
     ],
     "candidates": [
       {
-        "id": "c47",
+        "id": "c7",
         "classes": [
-          "剑客",
           "舞者",
           "神乐神将"
         ],
-        "when": "道具袋共享＋再行动优先；从实际入队职业接续。",
-        "cost": "先剑或弓B，神乐补剑A＋弓C。蕾达线不可招募，应在可招募线培养后于第三部整合。"
+        "when": "保留已有再行动职责，优先补站位和存活。",
+        "cost": "沿已投入的剑或弓资格走；专属歌技次数与普通舞蹈分别计算。"
+      },
+      {
+        "id": "c16",
+        "classes": [
+          "舞者",
+          "神乐神将"
+        ],
+        "when": "视频明确提出的第三部舞位备选；已有剑线投入时顺路。",
+        "cost": "剑B或弓B及舞姬项链；神乐另需剑A、弓C与缪斯项链。转舞者让出白魔远疗权限。"
       },
       {
         "id": "c24",
@@ -112724,7 +113301,7 @@
           "神乐神将"
         ],
         "when": "与卡塔妮雅二选一接舞位，利用满血回避。",
-        "cost": "剑D→C→B；转辅助会让出剑输出位，不额外强刷力量。 神乐另补剑A＋弓C及缪斯项链。",
+        "cost": "剑D→C→B；转辅助会让出剑输出位，不额外强刷力量。 神乐另补剑A＋弓C及缪斯项链。 转舞位不同时计算原法术/拳技；与本人的主攻收益比较。",
         "groups": [
           [
             "猎兵"
@@ -112747,7 +113324,7 @@
           "神乐神将"
         ],
         "when": "罗蕾塔继续输出时的舞位替代，利用高速保站位。",
-        "cost": "剑D→C→B；另一人保留魔法剑/飞行输出，不重复全养。 神乐另补剑A＋弓C及缪斯项链。",
+        "cost": "剑D→C→B；另一人保留魔法剑/飞行输出，不重复全养。 神乐另补剑A＋弓C及缪斯项链。 转舞位不同时计算原法术/拳技；与本人的主攻收益比较。",
         "groups": [
           [
             "猎兵"
@@ -112760,9 +113337,25 @@
             "神乐神将"
           ]
         ]
+      },
+      {
+        "id": "c47",
+        "classes": [
+          "剑客",
+          "舞者",
+          "神乐神将"
+        ],
+        "when": "道具袋共享＋再行动优先；从实际入队职业接续。",
+        "cost": "先剑或弓B，神乐补剑A＋弓C。蕾达线不可招募，应在可招募线培养后于第三部整合。 转舞位不同时计算原法术/拳技；与本人的主攻收益比较。"
       }
     ],
-    "source": "https://www.bilibili.com/video/BV1pYpo64EvB/?t=1050"
+    "source": "https://www.bilibili.com/video/BV17XnU69EZp/?t=396",
+    "checkedAt": "2026-11-02",
+    "sources": [
+      "https://www.bilibili.com/video/BV17XnU69EZp/?t=396",
+      "https://game8.jp/fe-banshisenko/816861",
+      "https://gamewith.jp/fefw/578950"
+    ]
   },
   "abilities": [
     {
@@ -221362,8 +221955,8 @@
     "checkedAt": "2026-10-26"
   },
   "skillRecommendations": {
-    "checkedAt": "2026-10-27",
-    "policy": "角色习得表的两级高亮是可选学习价值，不是每个角色都要学的固定清单。优先考虑稳定收益、独特功能与低代价；限制强或依赖职责的放入按条件选择。职业精通仅用于其对应的职业/配装推荐，不伪装成角色专精习得。",
+    "checkedAt": "2026-11-02",
+    "policy": "按实际职责、终职权限、触发条件、行动与培养成本评估。核心仅表示适配该职责时优先考虑，不是全员必练；条件技不能按常驻收益计算。高等级不自动更强，拿到技能不等于换职后仍能使用。",
     "sources": {
       "appmedia": {
         "title": "AppMedia · 按职责推荐特技",
@@ -221399,6 +221992,16 @@
         "title": "GameWith · 魔法效果与习得对象",
         "url": "https://gamewith.jp/fefw/574424",
         "scope": "核对辅助效果与职业权限"
+      },
+      "biliSkillsUpper": {
+        "title": "B站 · 全人物战技、魔法、技能速览+简评（上）",
+        "url": "https://www.bilibili.com/video/BV17XnU69EZp/",
+        "scope": "00:34–00:54作者声明多种构筑未亲测；作为角色用途与条件分析，不覆盖确认技能数据。"
+      },
+      "biliSkillsLower": {
+        "title": "B站 · 全人物战技、魔法、技能速览+简评（下）",
+        "url": "https://www.bilibili.com/video/BV1s2x66WE58/",
+        "scope": "包含后期角色评价；亚丝望未覆盖，DLC上限与部分学习等级属推测。"
       }
     },
     "entries": [
@@ -221413,7 +222016,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-f61c5e6500d9",
@@ -221426,20 +222032,26 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-328e1fa669ae",
         "name": "状态不错",
         "type": "特技",
-        "tier": "priority",
-        "reason": "可击杀预热的主力在长地图持续补命中",
-        "caution": "要先取得击杀，首次战斗不能指望满加成",
+        "tier": "situational",
+        "reason": "长地图连续击杀后可补命中",
+        "caution": "依赖击杀预热；短图、首次交战和舞者职责不适合为它绕修。",
         "sources": [
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-62035120b728",
@@ -221447,25 +222059,31 @@
         "type": "特技",
         "tier": "priority",
         "reason": "受击前排可稳定压低伤害",
-        "caution": "取得较晚，主动攻击时是否生效以技能说明为准",
+        "caution": "优先给实际受击前排；取得较晚，不能替代对敌方伤害的具体测算。",
         "sources": [
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-87d958e19297",
         "name": "迅雷风烈",
         "type": "特技",
-        "tier": "priority",
-        "reason": "高速先攻手争取在反击前完成追击",
-        "caution": "要求攻速领先，不能给低速角色当成无条件连击",
+        "tier": "situational",
+        "reason": "高速先攻角色可在反击前完成追击",
+        "caution": "需要先攻且攻速领先至少10；圣天翼兵精通较晚，先比较是否真正跨过门槛。",
         "sources": [
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-9c11114b9317",
@@ -221478,7 +222096,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-aba7a4bf16ac",
@@ -221491,7 +222112,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-83a48d27a935",
@@ -221504,7 +222128,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-d903d30f4127",
@@ -221517,7 +222144,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-cbbe4083a7db",
@@ -221530,7 +222160,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-d457499371b4",
@@ -221543,7 +222176,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-e28c6013642e",
@@ -221556,7 +222192,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-fb40a4d5bacc",
@@ -221569,7 +222208,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-1290f2b586a7",
@@ -221582,7 +222224,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-ae75ad369956",
@@ -221595,7 +222240,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-21ec50141858",
@@ -221608,7 +222256,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-299decb992ed",
@@ -221621,7 +222272,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-73711dae718b",
@@ -221634,7 +222288,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-8243100da851",
@@ -221647,7 +222304,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-b1e559ca2f50",
@@ -221660,20 +222320,26 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-89b44a7304f7",
         "name": "特别舞蹈",
         "type": "特技",
         "tier": "situational",
-        "reason": "舞者在再行动同时强化目标",
-        "caution": "需要先具备跳舞权限",
+        "reason": "已确定舞位时，在跳舞的同一次行动中强化目标",
+        "caution": "需要跳舞权限；只持续当前阶段，不能据此把强输出全转舞者。",
         "sources": [
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-d19fe2cf8672",
@@ -221686,7 +222352,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-fc5da1786c93",
@@ -221699,7 +222368,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-a44ad58014cd",
@@ -221712,7 +222384,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-ef81b83c9649",
@@ -221725,7 +222400,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-26d49da4e5b9",
@@ -221738,7 +222416,10 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-79581b84ccaa",
@@ -221751,33 +222432,42 @@
           "appmedia",
           "redMastery"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-59faf7583eb9",
         "name": "步行移动术",
         "type": "特技",
-        "tier": "priority",
-        "reason": "步兵可减少地形对行军的拖累",
-        "caution": "降低地形消耗，不是平地移动力直接加一",
+        "tier": "situational",
+        "reason": "复杂地形的步兵可减少移动消耗",
+        "caution": "不是平地移动力加一；只在对应地形与步兵状态下有收益。",
         "sources": [
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-42660883a10f",
         "name": "步行移动术+",
         "type": "特技",
-        "tier": "priority",
-        "reason": "步兵可进一步降低复杂地形消耗",
-        "caution": "只对步兵与相应地形有效，S＋培养成本高",
+        "tier": "situational",
+        "reason": "复杂地形步兵的后期移动补强",
+        "caution": "S＋投入高，平地无额外收益；基础版已够用时不继续追求。",
         "sources": [
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-e66bbd7048eb",
@@ -221790,7 +222480,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-3941a091f602",
@@ -221803,20 +222496,26 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-8f165e1c43e0",
         "name": "安定射击+",
         "type": "特技",
-        "tier": "priority",
-        "reason": "步兵弓手或施法者可补稳定命中",
-        "caution": "装备弓或魔法时生效，先核对本人门槛",
+        "tier": "situational",
+        "reason": "步兵弓/魔法输出按命中缺口补强",
+        "caution": "只限步兵与弓/魔法；舞者以再动为主时，不应只为少量命中强练。",
         "sources": [
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-54f70b3892aa",
@@ -221829,7 +222528,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-a68b7a98cb45",
@@ -221842,7 +222544,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-ae21b77ef6f3",
@@ -221855,7 +222560,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-33f54f75202c",
@@ -221868,7 +222576,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-4abff9a1a487",
@@ -221881,7 +222592,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-cfcf93f42a9e",
@@ -221894,7 +222608,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-874d7fc54b4c",
@@ -221907,7 +222624,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-47dca924d957",
@@ -221920,7 +222640,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-502971277a61",
@@ -221933,7 +222656,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-609a3c12b8f1",
@@ -221946,7 +222672,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-7937e3b2816a",
@@ -221959,7 +222688,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-f8f218e9b68b",
@@ -221972,7 +222704,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-7effc3a9e848",
@@ -221985,7 +222720,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-21fd862ab886",
@@ -221998,7 +222736,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-8da50cd9a4cb",
@@ -222011,7 +222752,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-aac02d654066",
@@ -222024,7 +222768,10 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-618885e8929f",
@@ -222037,49 +222784,61 @@
           "appmedia",
           "gamewithSkills"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-ee9e1759225b",
         "name": "翔闪枪",
         "type": "战技",
-        "tier": "priority",
-        "reason": "能追击的枪手争取反击前完成输出",
-        "caution": "先确认追击条件与耐久，不能当成无条件双击",
+        "tier": "situational",
+        "reason": "能追击的枪手可把追击提前到反击前",
+        "caution": "不是无条件两次攻击；需实际追击资格、枪权限和耐久。",
         "sources": [
           "game8",
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-a0cc6d24fa39",
         "name": "战斗强打",
         "type": "战技",
-        "tier": "priority",
-        "reason": "格斗输出可争取反击前追击",
-        "caution": "需要满足实际追击条件",
+        "tier": "situational",
+        "reason": "能追击的拳手可争取反击前完成输出",
+        "caution": "不是无条件连击；天马/舞者不能因学过就使用拳战技。",
         "sources": [
           "game8",
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-74e54a92e746",
         "name": "娴熟一击",
         "type": "战技",
-        "tier": "priority",
-        "reason": "轻耗耐久的收割手段，适合补低力量伤害",
-        "caution": "敌人HP需不高于一半",
+        "tier": "situational",
+        "reason": "针对半血敌人的低成本收割手段",
+        "caution": "敌人HP不高于一半才有额外收益；不能当满血目标爆发核心。",
         "sources": [
           "game8",
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-25cedf8c66e7",
@@ -222093,7 +222852,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-dd112b3f0441",
@@ -222107,7 +222869,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-7fad4ae4399d",
@@ -222121,7 +222886,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-6b6b784431c5",
@@ -222135,7 +222903,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-4b3dc41f9f54",
@@ -222149,7 +222920,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-db2d91b5433d",
@@ -222163,7 +222937,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-1b993511a2cf",
@@ -222177,7 +222954,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-3dbb0447f9b0",
@@ -222191,7 +222971,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-fc38237eb7ae",
@@ -222205,20 +222988,26 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "guide-recommendation"
+        "basis": "guide-recommendation",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-5ee0ed9cf8ff",
         "name": "鼓舞重击",
         "type": "战技",
-        "tier": "priority",
-        "reason": "可在本张地图累计速度，为后续追击铺垫",
-        "caution": "需先使用格斗战技，准备回合与耐久不是零成本",
+        "tier": "situational",
+        "reason": "长地图通过准备战斗累计速度",
+        "caution": "需要拳权限、准备回合和耐久；并非即插即用或跨地图永久收益。",
         "sources": [
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-22f36990371b",
@@ -222226,12 +223015,15 @@
         "type": "战技",
         "tier": "priority",
         "reason": "两次攻击可帮助低速枪手补出手次数",
-        "caution": "投掷枪限制与命中代价必须一起考虑",
+        "caution": "投掷枪限制与命中代价必须一起考虑；比较实际命中、目标防御和本回合其他行动，不只看攻击段数。",
         "sources": [
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-4f7fe9c624f8",
@@ -222239,12 +223031,15 @@
         "type": "战技",
         "tier": "priority",
         "reason": "剑手用连续攻击争取集中输出",
-        "caution": "单次伤害有折扣且耐久消耗高",
+        "caution": "单次伤害有折扣且耐久消耗高；比较实际命中、目标防御和本回合其他行动，不只看攻击段数。",
         "sources": [
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-5715109a4247",
@@ -222252,38 +223047,47 @@
         "type": "战技",
         "tier": "priority",
         "reason": "斧手可用两次攻击补出手次数",
-        "caution": "命中代价明显，先保证两击能中",
+        "caution": "命中代价明显，先保证两击能中；比较实际命中、目标防御和本回合其他行动，不只看攻击段数。",
         "sources": [
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-a25a029d977d",
         "name": "替换",
         "type": "战技",
-        "tier": "priority",
-        "reason": "队伍可通过换位调整进攻与救援位置",
-        "caution": "需要相邻站位与兵种条件，消耗行动",
+        "tier": "situational",
+        "reason": "步兵支援按站位需要交换友军",
+        "caution": "只限步兵，需相邻且非大型目标；消耗行动，要与跳舞/治疗收益比较。",
         "sources": [
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-788864e1ebe8",
         "name": "拉近",
         "type": "战技",
-        "tier": "priority",
-        "reason": "辅助角色可通过位置操作调整阵线",
-        "caution": "确认相邻站位、大型单位限制与行动成本",
+        "tier": "situational",
+        "reason": "步兵支援按站位需要拉回友军",
+        "caution": "只限步兵、相邻及非大型目标；消耗行动，不是全员必修。",
         "sources": [
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-47fd319c4dcc",
@@ -222296,7 +223100,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-92ab63ac8275",
@@ -222309,7 +223116,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-a56c62c51402",
@@ -222322,7 +223132,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-38b38bdc9cd6",
@@ -222335,7 +223148,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-903492745c56",
@@ -222348,7 +223164,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-4b304033824a",
@@ -222361,7 +223180,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-1398311096a6",
@@ -222374,7 +223196,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-078778e236ab",
@@ -222387,7 +223212,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-c78ae63bdb5f",
@@ -222400,7 +223228,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-697925df2d79",
@@ -222413,7 +223244,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-50949c22c7f7",
@@ -222426,7 +223260,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-9ca09349ac78",
@@ -222439,7 +223276,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-72cecea61a44",
@@ -222452,7 +223292,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-c5c2b8249097",
@@ -222465,7 +223308,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-9efd27aa2dc0",
@@ -222478,7 +223324,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-8f36a2c8c16d",
@@ -222491,7 +223340,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-1edbf20d596f",
@@ -222504,7 +223356,10 @@
           "redArts",
           "gamewithArts"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-7cd89ec0d498",
@@ -222516,7 +223371,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-fcca32be5db1",
@@ -222528,7 +223386,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-84226f9dfb65",
@@ -222540,7 +223401,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-2cf834f86552",
@@ -222552,7 +223416,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-dde39d2e698a",
@@ -222564,7 +223431,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-8274c7f53466",
@@ -222576,7 +223446,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-951fbac30a16",
@@ -222588,7 +223461,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-32e653913bf4",
@@ -222600,7 +223476,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-259b00f3cddf",
@@ -222612,7 +223491,10 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
       },
       {
         "abilityId": "ability-a3f84d06ab6f",
@@ -222624,9 +223506,148 @@
         "sources": [
           "gamewithMagic"
         ],
-        "basis": "editorial-synthesis"
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "reviewBasis": "已收录效果与职业权限、触发条件、学习/行动成本复核；视频只补充角色用途。"
+      },
+      {
+        "abilityId": "ability-2ad49b5a337a",
+        "name": "跳舞",
+        "type": "战技",
+        "tier": "priority",
+        "reason": "再行动是独立支援职责，可把行动交给当前最有价值的队友",
+        "caution": "需舞者/对应职业权限及解锁道具；自身消耗行动，不能与本回合攻击或施法同时计收益。",
+        "sources": [
+          "biliSkillsUpper"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "supported",
+        "videoSegment": "16:02–16:28"
+      },
+      {
+        "abilityId": "ability-6f6256647186",
+        "name": "穿行",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "步兵可穿过敌人改善站位和救援路线",
+        "caution": "不是移动力加成；不能停在敌人格，飞行终职不照搬步兵收益。",
+        "sources": [
+          "biliSkillsLower"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "videoSegment": "12:40–13:49"
+      },
+      {
+        "abilityId": "ability-6692bbe79ab3",
+        "name": "乱射",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "弓手可用多段攻击集中输出，适合比较实际击杀线",
+        "caution": "弓权限、命中、耐久与每段折扣都要计入；不因四段就适合所有角色。",
+        "sources": [
+          "biliSkillsUpper"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "videoSegment": "08:42–09:00"
+      },
+      {
+        "abilityId": "ability-3f66e16f3674",
+        "name": "魔刃",
+        "type": "战技",
+        "tier": "situational",
+        "reason": "高魔力剑手用魔法伤害补盲，亦可服务舞者剑资格",
+        "caution": "按自身魔力与敌方魔防比较；舞者的攻击仍要与跳舞行动取舍。",
+        "sources": [
+          "biliSkillsUpper"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "videoSegment": "06:36–07:05"
+      },
+      {
+        "abilityId": "ability-295b2dd8c3c7",
+        "name": "前线计略术",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "计略输出角色可利用发动后攻击增益",
+        "caution": "先使用攻击类计略，存在行动顺序和持续时间限制；不是无条件攻击力。",
+        "sources": [
+          "biliSkillsUpper"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "videoSegment": "11:36–12:06"
+      },
+      {
+        "abilityId": "ability-d885bf29c102",
+        "name": "雷暴",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "远程法术为法系提供安全补刀与战术覆盖",
+        "caution": "不能追击，施法次数与职业权限有限；不替代普通主攻。",
+        "sources": [
+          "biliSkillsLower"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "videoSegment": "10:07–10:49"
+      },
+      {
+        "abilityId": "ability-0e2c3d9b36a3",
+        "name": "狂乱",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "控制敌人可为队伍创造安全行动窗口",
+        "caution": "核对目标、命中、次数和持续时间；不是对所有目标可靠的必胜手段。",
+        "sources": [
+          "biliSkillsUpper"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "videoSegment": "18:00–19:00"
+      },
+      {
+        "abilityId": "ability-fdff0eb53a5b",
+        "name": "彷徨之壁",
+        "type": "法术",
+        "tier": "situational",
+        "reason": "生成墙壁可改变路径与敌我接触顺序",
+        "caution": "需要施法权限、次数与适合地形；红花的等级学习条件不能改成普通熟练度门槛。",
+        "sources": [
+          "biliSkillsUpper"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "videoSegment": "04:49–05:22"
+      },
+      {
+        "abilityId": "ability-5c52f5ef7261",
+        "name": "治愈铠甲",
+        "type": "特技",
+        "tier": "situational",
+        "reason": "重装魔力构筑可把攻击转为概率续航",
+        "caution": "限重装、需要命中造成伤害且概率发动；不能作为确定存活保障或必练技能。",
+        "sources": [
+          "biliSkillsLower"
+        ],
+        "basis": "editorial-synthesis",
+        "reviewedAt": "2026-11-02",
+        "confidence": "conditional",
+        "videoSegment": "14:30–15:24"
       }
-    ]
+    ],
+    "reviewScope": "重审原94条推荐的效果与成本，结合26名角色视频用途；未覆盖角色不凭视频重排评分，不将未确认技能加入习得表。"
   },
   "catalogPolicy": {
     "version": 1,

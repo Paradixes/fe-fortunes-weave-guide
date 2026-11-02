@@ -1,7 +1,17 @@
 // Training goals are acquisition goals, not the current class's weapon permissions.
-function currentGuideClass(c){const b=buildPlan(c),r=routeContext(c);return classBy((activeCharacter===c.id?selectedClasses[c.id]:null)||(typeof wbRecommendedClass==='function'?wbRecommendedClass(c,r):null)||(['summary','救世篇'].includes(r)?b.end.split(' / ')[0]:b.upper[0]))}
-function skillUseContext(c){const cl=currentGuideClass(c),allowed=new Set(cl?.allowedSkills||[]),mobility=/成为重装|视为重装/.test(c.personalSkillEffect||'')?'重装':allowed.has('飞行术')?'飞行':allowed.has('马术')?'骑兵':allowed.has('重装术')?'重装':'步兵';return {cl,allowed,mobility,healer:allowed.has('白魔术'),caster:allowed.has('黑魔术'),tank:mobility==='重装'||/主坦|承伤|防御/.test(c.role),support:/再行动|治疗|辅助/.test(c.role)}}
-function usableTrainingSkill(s,ctx){const d=s.description||'',required=d.match(/【(步兵|骑兵|飞行|重装)】/);if(required&&required[1]!==ctx.mobility)return false;if(/装备/.test(d)){
+function currentGuideClass(c){
+ const b=buildPlan(c),r=routeContext(c),viewing=activeCharacter===c.id;
+ const preview=viewing&&typeof careerDirectionSelection!=='undefined'&&careerDirectionSelection[c.id]!==undefined&&typeof wbDetailRoute==='function'?wbDetailRoute(c).d.stages.at(-1)?.classId:null;
+ return classBy((viewing?selectedClasses[c.id]:null)||(preview?wbClass(preview)?.cn:null)||(typeof wbRecommendedClass==='function'?wbRecommendedClass(c,r):null)||(['summary','救世篇'].includes(r)?b.end.split(' / ')[0]:b.upper[0]));
+}
+function skillUseContext(c){
+ const cl=currentGuideClass(c),allowed=new Set(cl?.allowedSkills||[]),mobility=/成为重装|视为重装/.test(c.personalSkillEffect||'')?'重装':allowed.has('飞行术')?'飞行':allowed.has('马术')?'骑兵':allowed.has('重装术')?'重装':'步兵';
+ const dancer=['舞者','神乐神将'].includes(cl?.cn),healer=allowed.has('白魔术'),caster=allowed.has('黑魔术');
+ // A saved career overrides the original dossier role. A former tank can now dance.
+ return {cl,allowed,mobility,dancer,healer,caster,tank:mobility==='重装',support:dancer||healer&&!caster};
+}
+function usableTrainingSkill(s,ctx){if(s.name==='特别舞蹈'&&!ctx.dancer)return false;
+ const d=s.description||'',required=d.match(/【(步兵|骑兵|飞行|重装)】/);if(required&&required[1]!==ctx.mobility)return false;if(/装备/.test(d)){
  const clause=d.match(/装备([^时。；]+)(?:时|，)/)?.[1]||'';
  const weapons=[...new Set([...clause.matchAll(/白魔法|黑魔法|魔法|手甲|拳|剑|枪|斧|弓/g)].map(m=>m[0]))];
  const map={剑:'剑术',枪:'枪术',斧:'斧术',弓:'弓术',手甲:'格斗术',拳:'格斗术',白魔法:'白魔术',黑魔法:'黑魔术'};
@@ -19,8 +29,9 @@ function trainingSkillValue(s,ctx){const d=s.description||'';let value=0,why='';
  if(/回避\s*[+＋]/.test(d)&&value<60){value=60;why='补回避';}
  if(/有\s*\d+%|几率|概率/.test(d)){value-=25;why+='（概率触发）';}
  if(/受到必杀/.test(d))value-=15;
+ if(ctx.dancer&&/攻击时|主动攻击|先攻|击杀|使用战技|发动战技/.test(d)&&!/跳舞/.test(d)){value-=35;why+='（与再行动争用本次行动）';}
  if(/敌人使用/.test(d)){value-=15;why+='（限定敌方武器）';}
- if(/有利地形|有利.*格|地形效果/.test(d)){if(ctx.mobility==='飞行')return null;value-=8;why+='（需有利地形）';}
+ if(/有利地形|有利.*格|地形效果/.test(d)&&!/不能步行|无法步行/.test(d)){if(ctx.mobility==='飞行')return null;value-=8;why+='（需有利地形）';}
  if(/攻速比敌人|速度比敌人/.test(d)){value-=8;why+='（需速度差）';}
  if(!why||value<45)return null;
  const rank=rankValue(s.rank),cost=Math.max(0,rank-2)*4+(s.badAffinity?8:0),upgrade=skillUpgradeTier(s.name)>0?12:0;
@@ -28,8 +39,8 @@ function trainingSkillValue(s,ctx){const d=s.description||'';let value=0,why='';
 }
 function crossTrainingOptions(c){if(c.canUseArenaTraining===false||!LEARNING?.[c.id])return [];const ctx=skillUseContext(c),learn=LEARNING[c.id],qualification=qualificationTargets(c),q=new Map(qualification.map(g=>[g.skill,g.rank])),bad=new Set((c.bad||'').split(':').map(skillName)),candidates=[];
  for(const s of learn.learnedSkills||[]){if(/术Lv\.?\d|的奥妙$/.test(s.name)||s.requirementUnknown||!s.skill||!/^([DCBAS])\+?$/.test(s.rank||'')||!usableTrainingSkill(s,ctx))continue;const merit=trainingSkillValue({...s,badAffinity:bad.has(s.skill)},ctx);if(!merit||merit.value<35)continue;candidates.push({...s,kind:'特技',why:merit.why,value:merit.value});}
- for(const s of learn.magic||[]){if(s.requirementUnknown||!s.skill||!ctx.allowed.has(s.skill)||!/^([DCBAS])\+?$/.test(s.rank||''))continue;const d=s.description||'',healing=/回复|恢复|治愈|治療|治疗/.test(d),transport=/传送|传移|救援|移动友军|再行动|解除.*状态/.test(d),range=Number(String(s.range||'').match(/\d+\D+(\d+)/)?.[1]||0);let value=transport?110:healing?85:range>=3?80:0;if(!value)continue;value-=Math.max(0,rankValue(s.rank)-2)*4+(bad.has(s.skill)?8:0);if(value<35)continue;candidates.push({...s,kind:'法术',why:transport?'补位移或辅助功能':healing?'补治疗能力':'补远程法术',value});}
- for(const s of learn.combatArts||[]){if(s.requirementUnknown||!s.skill||!ctx.allowed.has(s.skill)||!/^([DCBAS])\+?$/.test(s.rank||'')||!acquisitionMerit(s,'combatArts'))continue;candidates.push({...s,kind:'战技',why:'补连续攻击、位移或反击控制',value:90-Math.max(0,rankValue(s.rank)-2)*4});}
+ for(const s of learn.magic||[]){if(s.requirementUnknown||!s.skill||!ctx.allowed.has(s.skill)||!/^([DCBAS])\+?$/.test(s.rank||''))continue;const d=s.description||'',healing=/回复|恢复|治愈|治療|治疗/.test(d),transport=/传送|传移|救出|救援|移动友军|再行动|解除.*状态/.test(s.name+' '+d),range=Number(String(s.range||'').match(/\d+\D+(\d+)/)?.[1]||0);let value=transport?110:healing?85:range>=3?80:0;if(!value)continue;value-=Math.max(0,rankValue(s.rank)-2)*4+(bad.has(s.skill)?8:0);if(value<35)continue;candidates.push({...s,kind:'法术',why:transport?'补位移或辅助功能':healing?'补治疗能力':'补远程法术',value});}
+ for(const s of learn.combatArts||[]){if(s.requirementUnknown||!s.skill||!ctx.allowed.has(s.skill)||!/^([DCBAS])\+?$/.test(s.rank||'')||!acquisitionMerit(s,'combatArts'))continue;const review=guideRecommendationFor(s,'combatArts');const supportArt=/友军|再行动|移动目标|交换位置/.test(s.description||'');if(ctx.dancer&&!supportArt)continue;const value=(review.tier==='priority'?80:50)-(ctx.dancer?20:0)-Math.max(0,rankValue(s.rank)-2)*4;if(value<35)continue;candidates.push({...s,kind:'战技',why:review.reason,value});}
  candidates.sort((a,b)=>b.value-a.value||rankValue(a.rank)-rankValue(b.rank));
  const selected=[],families=new Set();let advanced=0;
  for(const s of candidates){const key=s.kind+':'+skillUpgradeKey(s.name);if(families.has(key))continue;const extra=!q.has(s.skill)||rankValue(s.rank)>rankValue(q.get(s.skill));if(!extra)continue;const high=rankValue(s.rank)>=rankValue('A');if(high&&advanced>=1)continue;if(high)advanced++;families.add(key);selected.push({...s,advanced:high});if(selected.length===3)break;}
@@ -49,7 +60,7 @@ function characterFixedSkills(c,cl){const a=CATALOG.abilities.find(a=>a.type==='
 const SKILL_GUIDANCE=new Map((CATALOG.skillRecommendations?.entries||[]).map(r=>[r.type+':'+r.name,r]));
 function guideRecommendationFor(s,kind){if(s.requirementUnknown||isCommonProficiencyLevel(s)||/的奥妙$/.test(s.name||''))return null;const type=kind==='combatArts'?'战技':kind==='magic'?'法术':kind==='特技'||kind==='战技'||kind==='法术'?kind:'特技';return SKILL_GUIDANCE.get(type+':'+s.name)||null}
 function acquisitionMerit(s,kind){const r=guideRecommendationFor(s,kind);return r?[r.reason,r.caution].filter(Boolean).join('；'):''}
-function skillRecommendationQuick(a){const r=guideRecommendationFor(a,a.type);if(!r)return '';const sources=CATALOG.skillRecommendations.sources;return `<div class="skill-recommendation-note" data-recommendation-tier="${r.tier}"><b>${r.tier==='priority'?'优先考虑':'按条件选择'}</b><p>${esc(r.reason)}</p><small>${esc(r.caution)}</small><div class="skill-recommendation-sources">${r.sources.map(k=>sources[k]?`<a href="${escapeAttr(sources[k].url)}" target="_blank" rel="noopener">${esc(sources[k].title.split(' · ')[0])} ↗</a>`:'').join('')}</div></div>`}
+function skillRecommendationQuick(a){const r=guideRecommendationFor(a,a.type);if(!r)return '';const sources=CATALOG.skillRecommendations.sources;return `<div class="skill-recommendation-note" data-recommendation-tier="${r.tier}"><b>${r.tier==='priority'?'优先考虑':'按条件选择'}</b><p>${esc(r.reason)}</p><small>${esc(r.caution)}</small>${r.confidence==='conditional'?'<small>条件性收益：先确认当前构筑，不作为普适必练。</small>':''}<div class="skill-recommendation-sources">${r.sources.map(k=>sources[k]?`<a href="${escapeAttr(sources[k].url)}" target="_blank" rel="noopener">${esc(sources[k].title.split(' · ')[0])} ↗</a>`:'').join('')}</div></div>`}
 function skillGuideClass(name,type){const r=guideRecommendationFor({name},type);return r?' guide-reward is-'+r.tier:''}
 const PROFICIENCY_ORDER=PROFICIENCY_NAMES;
 function skillRankGrid(cs,kind,overrideRows){const valid=s=>/^([DCBAS])\+?$/.test(s.rank||''),items=cs.flatMap(c=>{const source=(overrideRows||LEARNING?.[c.id]?.[kind]||[]).filter(valid),skills=PROFICIENCY_ORDER.filter(skill=>source.some(s=>s.skill===skill)&&(overrideRows||rosterLearningSkill==='all'||rosterLearningSkill===skill));return skills.map(skill=>({c,skill,rows:source.filter(s=>s.skill===skill)}))}),ranks=['D','C','B','A','S'];

@@ -32,3 +32,9 @@
 .dancer-plan-body small{display:block;color:var(--muted);font-size:13px;line-height:1.7}
 .dancer-planning li{font-size:14px;line-height:1.7;margin:8px 0}
 @media(max-width:640px){.dancer-candidates article{grid-template-columns:1fr;gap:8px}.branch-requirements>div{grid-template-columns:1fr;gap:4px}}
+
+/* Video opinions remain separate from immutable learning facts and saved builds. */
+.character-video-review{border:1px solid var(--line,#ddd3c5);border-radius:12px;padding:16px;margin:16px 0;background:var(--card,#fffaf2)}
+.video-review-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.video-review-heading h3{margin:0}
+.character-video-review p{line-height:1.65}.video-review-branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:12px 0}.video-review-branches article{padding:12px;border-radius:8px;background:var(--bg,#f6f1e8)}.video-review-branches p{margin:6px 0}.video-review-branches small{display:block;color:var(--muted,#776d62);line-height:1.6}.video-review-source-link{font-size:12px;margin-top:12px}.character-video-review ul{padding-left:20px;line-height:1.65}.recommendation-scope{font-size:12px;line-height:1.6}
+@media(max-width:640px){.character-video-review{padding:12px}.video-review-branches{grid-template-columns:1fr}.video-review-heading{align-items:flex-start}}

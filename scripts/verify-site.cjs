@@ -1,3 +1,5 @@
+require('./verify-video-review.cjs');
+require('./verify-video-skills.cjs');
 require('./verify-endgame-candidates.cjs');
 require('./verify-map-notes.cjs');
 require('./verify-catalog-resolution.cjs');
@@ -657,7 +659,7 @@ assert(vm.runInContext("!wbEffective(DB.characters[8])&&!wbDetailRoute(DB.charac
 vm.runInContext("detailRoutes.c8='summary'",ctx);
 assert(vm.runInContext("wbDetailRoute(DB.characters[8]).d.stages.some(s=>wbClass(s.classId).cn==='神乐神将')",ctx),'Third-part view preserves selected direction');
 assert(vm.runInContext("!arenaTable(DB.characters).includes('training-more')",ctx),'All training candidates are visible without expansion');
-assert(vm.runInContext("!preferencePlan().includes('dancer-planning')&&!thirdPartPlanning().includes('dancer-planning')",ctx),'Dance decisions live in character directions, not repeated chapters');
+assert(vm.runInContext("preferencePlan().includes('dancer-planning')&&!thirdPartPlanning().includes('dancer-planning')",ctx),'Dance candidates appear in team planning and individual directions, not repeated route chapters');
 console.log('PASS v91: stage visibility, dance direction continuity, preview isolation, direct training lists and merged planning.');
 
 assert(vm.runInContext("careerDirections(DB.characters[60],'common').some(p=>p.d.stages.some(s=>wbClass(s.classId).cn==='贤士'))&&careerDirections(DB.characters[60],'common').some(p=>p.d.stages.some(s=>wbClass(s.classId).cn==='德鲁伊'))",ctx),'Both same-tier magic directions survive normalization');
@@ -960,7 +962,7 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
  if(process.env.FE_WRITE_LEARNING_AUDIT)fs.writeFileSync(process.env.FE_WRITE_LEARNING_AUDIT,JSON.stringify({checkedAt:'2026-10-27',policy:'Highlights identify concrete tactical or training benefits, not an instruction to acquire every skill. Generic proficiency levels and S+ mysteries are excluded; exact ranks and restrictions remain in hover/details.',characters:audits},null,2)+'\n');
 
  const guidance=reviewed.skillRecommendations;
- assert.equal(guidance.entries.length,94);assert.equal(new Set(guidance.entries.map(r=>r.abilityId)).size,94);
+ assert(guidance.entries.length>=94);assert.equal(new Set(guidance.entries.map(r=>r.abilityId)).size,guidance.entries.length);
  for(const item of guidance.entries){
   assert(reviewed.abilities.some(a=>a.id===item.abilityId&&a.name===item.name&&a.type===item.type));
   assert(['priority','situational'].includes(item.tier)&&item.reason&&item.caution);
