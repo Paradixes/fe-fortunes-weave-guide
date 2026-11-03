@@ -5,6 +5,8 @@ const hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex'
 const d=JSON.parse(fs.readFileSync('data/catalog.json','utf8'));
 const r=JSON.parse(fs.readFileSync('data/research/strategy-rating-review-2026-11-02.json','utf8'));
 const baseline=r.baseline;
+const newer=JSON.parse(fs.readFileSync('data/research/video-skill-reassessment-2026-11-03.json','utf8'));
+assert.equal(Object.keys(newer.characters).length,63);
 const chars=Object.fromEntries(d.database.characters.map(c=>[c.id,c]));
 assert.equal(Object.keys(r.characters).length,63);
 assert.deepEqual(Object.keys(r.characters).sort(),Object.keys(chars).sort(),'Every catalog character has a decision');
@@ -13,7 +15,9 @@ assert.ok(r.scope.includes('全63'));
 assert.deepEqual(d.ratingAudit.reassessment.characterIds.sort(),Object.keys(chars).sort());
 const changed=Object.entries(r.characters).filter(([id,e])=>e.rating!==e.previousRating).map(([id])=>id).sort();
 assert.equal(changed.length,21);
-assert.deepEqual(changed,Object.keys(chars).filter(id=>chars[id].rating!==baseline.releaseRatings[id]).sort());
+const newerChanged=Object.entries(newer.characters).filter(([id,e])=>e.rating!==e.previousRating).map(([id])=>id).sort();
+assert.equal(newerChanged.length,17);
+assert.deepEqual(newerChanged,d.ratingAudit.reassessment.changedIds.sort());
 for(const [id,e] of Object.entries(r.characters)){
  const c=chars[id],a=d.ratingAudit.characters[id],p=d.planning[id];
  assert.equal(e.status,'independent-review',id);
@@ -22,11 +26,11 @@ for(const [id,e] of Object.entries(r.characters)){
  assert.ok(e.sources.length,id+' sources');
  assert.equal(e.previousRating,baseline.releaseRatings[id],id+' baseline rating');
  assert.equal(hash(Object.fromEntries(baseline.characterFactKeys.map(k=>[k,c[k]??null]))),baseline.characterFactHashes[id],id+' protected character facts changed');
- assert.equal(c.rating,e.rating,id);assert.equal(c.ratingReason,e.reason,id);
- assert.equal(c.role,e.role,id);assert.equal(a.reason,e.reason,id);
+ const n=newer.characters[id]; assert.equal(n.previousRating,e.rating,id+' prior review'); assert.equal(c.rating,n.rating,id);assert.equal(c.ratingReason,n.reason,id);
+ assert.equal(c.role,e.role,id);assert.equal(a.reason,n.reason,id);
  assert.equal(a.investment,e.investment,id);assert.equal(p.audit.investment,e.investment,id);
- assert.equal(a.reassessedAt,r.checkedAt,id);assert.equal(p.audit.reassessedAt,r.checkedAt,id);
- assert.equal(a.previousRating,e.previousRating,id);
+ assert.equal(a.reassessedAt,newer.checkedAt,id);assert.equal(p.audit.reassessedAt,newer.checkedAt,id);
+ assert.equal(a.previousRating,n.previousRating,id);
  for(const direction of p.audit.directions){
   const route=p.routes[direction.route];
   assert.deepEqual(direction.classes,[route.initial.name,route.build.mid[0],route.build.upper[0]],id+' direction/build mismatch');
@@ -109,4 +113,4 @@ for(const [rid,route] of Object.entries(d.routeStrategy))for(const [role,ids] of
  assert.ok(plan.upper.some(n=>classes[n].allowedSkills.includes(coverageSkill[role])),rid+' '+id+' false coverage '+role);
 }
 
-console.log('PASS all 63 independent ratings, 21 tier changes against release, full concrete decisions, synchronized strategies/actions, protected facts and reverse indexes.');
+console.log('PASS 63 current decisions, 17 changes against prior review, protected facts and synchronized strategies/actions.');
