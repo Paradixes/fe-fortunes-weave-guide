@@ -185,8 +185,27 @@ document.addEventListener('click',e=>{const full=e.target.closest('[data-quick-f
 // Apply the final class's permissions to equipment suggestions for custom plans.
 const originalEquipmentEntries=equipmentEntries;
 // Default suggestions follow each character's audited gear plan (exclusives and guide picks first), filtered by the career in view.
-function gearPlanEntries(cs){const map=new Map(),skillOf={剑:'剑术',枪:'枪术',斧:'斧术',弓:'弓术',拳:'格斗术',手甲:'格斗术'};for(const c of cs){const picks=c.gearPlan?.picks;if(!picks){for(const x of originalEquipmentEntries([c])){if(!map.has(x.e.id))map.set(x.e.id,{e:x.e,users:[]});map.get(x.e.id).users.push(c);}continue;}const b=buildPlan(c),r=routeContext(c),cl=classBy(r==='summary'?b.end.split(' / ')[0]:b.upper[0]),allowed=new Set(cl?.allowedSkills||[]);for(const p of picks){if(r!=='summary'&&p.kind==='late')continue;const e=EQUIPMENT.find(e=>e.id===p.id);if(!e)continue;const need=skillOf[e.type];if(need&&allowed.size&&!allowed.has(need))continue;if(!map.has(e.id))map.set(e.id,{e,users:[]});map.get(e.id).users.push(c);}}return [...map.values()];}
-equipmentEntries=function(cs,allOptions=false){if(allOptions)return originalEquipmentEntries(cs,true);const defaults=cs.filter(c=>!wbEffective(c)),out=gearPlanEntries(defaults),map=new Map(out.map(x=>[x.e.id,x]));for(const c of cs.filter(c=>wbEffective(c))){const cl=wbClass(wbRecommendedClass(c,routeContext(c))),allowed=new Set(cl.allowedSkills),ids=[];for(const [skill,id]of [['剑术','daminasword'],['枪术','aurora_lance'],['斧术','daminaaxe'],['弓术','damina_bow'],['格斗术','daminafist'],['白魔术','heal'],['黑魔术','magic_staff']])if(allowed.has(skill))ids.push(id);for(const id of ids){const e=EQUIPMENT.find(e=>e.id===id);if(!e)continue;if(!map.has(id))map.set(id,{e,users:[]});map.get(id).users.push(c);}}return [...map.values()];};
+function gearPlanEntries(cs){
+ const map=new Map(),skillOf={剑:'剑术',枪:'枪术',斧:'斧术',弓:'弓术',拳:'格斗术',手甲:'格斗术'};
+ const add=(e,c)=>{if(!map.has(e.id))map.set(e.id,{e,users:[]});if(!map.get(e.id).users.some(u=>u.id===c.id))map.get(e.id).users.push(c);};
+ for(const c of cs){
+  const picks=c.gearPlan?.picks;if(!picks){for(const x of originalEquipmentEntries([c]))add(x.e,c);continue;}
+  const b=buildPlan(c),r=routeContext(c),cl=wbEffective(c)?wbClass(wbRecommendedClass(c,r)):classBy(r==='summary'?b.end.split(' / ')[0]:b.upper[0]);
+  const allowed=new Set(cl?.allowedSkills||[]);
+  for(const p of picks){
+   // The materials list is a starting point, not a shopping order for every matchup, rare item or conditional branch.
+   if(p.usage&&!['常用候选','核心候选'].includes(p.usage))continue;
+   if(r!=='summary'&&p.kind==='late')continue;
+   const e=EQUIPMENT.find(e=>e.id===p.id);if(!e)continue;const need=skillOf[e.type];
+   if(need&&allowed.size&&!allowed.has(need))continue;
+   if(e.id==='heal'&&allowed.size&&!allowed.has('白魔术'))continue;
+   if(e.id==='magic_staff'&&allowed.size&&!allowed.has('黑魔术'))continue;
+   add(e,c);
+  }
+ }
+ return [...map.values()];
+}
+equipmentEntries=function(cs,allOptions=false){if(allOptions)return originalEquipmentEntries(cs,true);return gearPlanEntries(cs);};
 if(DB)render();
 
 document.addEventListener('click',e=>{const b=e.target.closest('[data-career-direction]');if(!b)return;const c=DB.characters.find(c=>c.id===b.dataset.careerCharacter);careerDirectionSelection[c.id]=Number(b.dataset.careerDirection);const stage=wbDetailRoute(c).d.stages.at(-1);if(stage)selectedClasses[c.id]=wbClass(stage.classId).cn;else delete selectedClasses[c.id];closeNodeEditor();openCharacter(c.id,true);});

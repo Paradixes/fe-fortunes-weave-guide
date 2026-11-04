@@ -5,6 +5,8 @@ const hash=x=>crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex'
 const d=JSON.parse(fs.readFileSync('data/catalog.json','utf8'));
 const r=JSON.parse(fs.readFileSync('data/research/strategy-rating-review-2026-11-02.json','utf8'));
 const baseline=r.baseline;
+const gearReview=JSON.parse(fs.readFileSync('data/research/character-equipment-review-2026-11-04.json','utf8'));
+assert.equal(Object.keys(gearReview.baselineGear).length,63);
 const newer=JSON.parse(fs.readFileSync('data/research/video-skill-reassessment-2026-11-03.json','utf8'));
 assert.equal(Object.keys(newer.characters).length,63);
 const chars=Object.fromEntries(d.database.characters.map(c=>[c.id,c]));
@@ -25,7 +27,8 @@ for(const [id,e] of Object.entries(r.characters)){
  assert.ok(e.role?.length>=2,id+' role');
  assert.ok(e.sources.length,id+' sources');
  assert.equal(e.previousRating,baseline.releaseRatings[id],id+' baseline rating');
- assert.equal(hash(Object.fromEntries(baseline.characterFactKeys.map(k=>[k,c[k]??null]))),baseline.characterFactHashes[id],id+' protected character facts changed');
+ const historical=Object.fromEntries(baseline.characterFactKeys.map(k=>[k,k==='gearPlan'?gearReview.baselineGear[id]:(c[k]??null)]));
+ assert.equal(hash(historical),baseline.characterFactHashes[id],id+' protected non-equipment facts changed');
  const n=newer.characters[id]; assert.equal(n.previousRating,e.rating,id+' prior review'); assert.equal(c.rating,n.rating,id);assert.equal(c.ratingReason,n.reason,id);
  assert.equal(c.role,e.role,id);assert.equal(a.reason,n.reason,id);
  assert.equal(a.investment,e.investment,id);assert.equal(p.audit.investment,e.investment,id);

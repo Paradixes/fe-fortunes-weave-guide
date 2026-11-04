@@ -1,0 +1,5669 @@
+{
+  "checkedAt": "2026-11-04",
+  "sources": {
+    "video": "https://annasnotebook.net/videos/yt-xGVvmk8-GSk/",
+    "accessory": "https://annasnotebook.net/videos/yt-hTgubp-XTGI/",
+    "weapon": "https://game8.jp/fe-banshisenko/822235",
+    "slots": "https://annasnotebook.net/mechanics/loadout/",
+    "character": "https://www.gamersky.com/handbook/202610/2223610.shtml"
+  },
+  "characters": {
+    "c0": {
+      "name": "凯伊",
+      "role": "机动攻坚／专属范围输出",
+      "profile": "S+L",
+      "consideration": "主枪机动或圣枪白魔；专属星枪的魔法输出是战技而非平A",
+      "picks": [
+        {
+          "id": "aurora_lance",
+          "kind": "exclusive",
+          "usage": "剧情候选",
+          "when": "枪术C，角色获得武器且需要1–2格魔法战技",
+          "why": "星光战技才按魔法攻击并带特效，注意耐久及无法追击。",
+          "url": "https://game8.jp/fe-banshisenko/819504"
+        },
+        {
+          "id": "sorel_lance",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术A",
+          "why": "太阳战技提供回复，不能将其当作对冥魔特效。",
+          "url": "https://gamewith.jp/fefw/580415"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "选择允许白魔的职业并承担治疗任务时",
+          "why": "治疗杖重3、回复量+10；纯剑骑、飞行或黑魔终职不因此获得白魔能力。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        }
+      ]
+    },
+    "c1": {
+      "name": "古扎岚",
+      "role": "低门槛近战主力",
+      "profile": "S+F",
+      "consideration": "剑拳两种输出，追击与随机战斗加成均需按实际预测确认",
+      "picks": [
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "library_80411647",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "格斗术D且当前职业可用手甲",
+          "why": "铁手甲命中90、重量3，是轻量基础选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411647"
+        },
+        {
+          "id": "library_80469892",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "格斗术C且剑术D；当前职业可用拳",
+          "why": "乾坤圈提供1–2格，附带剑术要求，先核资格。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469892"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得、格斗术B且职业允许拳",
+          "why": "银手甲高威力，重量5；需要检查追击和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        },
+        {
+          "id": "review_wp-120",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "必杀较可靠、需要持续作战且不损失关键追击",
+          "why": "必圣宝珠重量4；打出必杀才回复伤害的1/3，不以概率回复保证生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "library_80411641",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "格斗E、当前职业允许拳且能负担+9强化时",
+          "why": "木手甲+9为强化形态：重量1、速度+5、直接回避+15；未强化版没有这些加成，需比较强化资源、射程和特效。",
+          "url": "https://www.annasnotebook.net/weapons/wooden-gauntlets/"
+        }
+      ]
+    },
+    "c2": {
+      "name": "迪托利希",
+      "role": "专属位移控制／物理攻坚",
+      "profile": "S",
+      "consideration": "血闪与高必杀配合回复，主动和反击都要留意血量",
+      "picks": [
+        {
+          "id": "review_wp-19",
+          "kind": "exclusive",
+          "usage": "剧情候选",
+          "when": "剧情取得、剑术E",
+          "why": "安萨拉的血闪适合高必杀剑系，耐久消耗与龙特效按战技计算。",
+          "url": "https://gamewith.jp/fefw/579899"
+        },
+        {
+          "id": "answerer_kai",
+          "kind": "exclusive",
+          "usage": "剧情候选",
+          "when": "剧情取得强化版本",
+          "why": "安萨拉改可替换原版；血闪+由迪托利希使用并消耗耐久。",
+          "url": "https://game8.jp/fe-banshisenko/822268"
+        },
+        {
+          "id": "library_80469838",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑D与斧D、敌人不需要追击或需要单击时",
+          "why": "巨剑重15、命中60；巨人戒指也不能抵消所有重量，按预测择机。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469838"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "review_wp-120",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "必杀较可靠、需要持续作战且不损失关键追击",
+          "why": "必圣宝珠重量4；打出必杀才回复伤害的1/3，不以概率回复保证生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        }
+      ]
+    },
+    "c3": {
+      "name": "奇洛伊卡",
+      "role": "弓系多击／异常追击",
+      "profile": "B",
+      "consideration": "异常状态增伤配毒弓有联动，但上毒先手、耐久和低伤都要算",
+      "picks": [
+        {
+          "id": "library_80411635",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D且要围绕异常状态联动",
+          "why": "毒弓为上毒手段，先计算前置行动和低威力，不保证一次击杀。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411635"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c4": {
+      "name": "绯亚娜",
+      "role": "高魔力法术／救出备选",
+      "profile": "M",
+      "consideration": "白魔恢复或高魔黑魔分支，治疗次数被动不是固定触发",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c5": {
+      "name": "赛奥朵拉",
+      "role": "指挥支援／专属物理攻坚",
+      "profile": "L",
+      "consideration": "圣焰远程与枪前排分工；减伤概率不能保证安全",
+      "picks": [
+        {
+          "id": "review_wp-46",
+          "kind": "exclusive",
+          "usage": "剧情候选",
+          "when": "获得马哈马杜之枪且枪术E",
+          "why": "剧情枪与真月战技可用，先比较伤害与耐久。",
+          "url": "https://gamewith.jp/fefw/579607"
+        },
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "选择允许白魔的职业并承担治疗任务时",
+          "why": "治疗杖重3、回复量+10；纯剑骑、飞行或黑魔终职不因此获得白魔能力。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        }
+      ]
+    },
+    "c6": {
+      "name": "索绯雅",
+      "role": "稳定远程治疗",
+      "profile": "W",
+      "consideration": "远程治疗及个人回复加成；35级射程收益不提前计入",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c7": {
+      "name": "蕾达",
+      "role": "再行动 / 高速支援",
+      "profile": "S+B",
+      "consideration": "舞者优先再行动；剑弓只是应敌，卡拉弓受弓A与稀缺数量限制",
+      "picks": [
+        {
+          "id": "carla",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "取得卡拉弓且弓术A、负责远程时",
+          "why": "天风3–10格消耗耐久且无法追击；舞者跳舞与攻击占用同一行动。",
+          "url": "https://gamewith.jp/fefw/579915"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "review_wp-209",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "魅力高于目标且确实要补生存，能承担重量时",
+          "why": "迷人面具重5，魅力高于敌人时令其命中-10；不要和概率发动、效果不同的魅惑面具混为一谈。",
+          "url": "https://fire-emblem-fw.site/items.html"
+        }
+      ]
+    },
+    "c8": {
+      "name": "卡塔妮雅",
+      "role": "高速飞行或传送支援",
+      "profile": "S+L",
+      "consideration": "攻速领先能提高命中；天马、舞蹈和魔剑是不同职责",
+      "picks": [
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑术C且当前职业允许剑、魔力足够时",
+          "why": "雷电剑依魔力造成1–2格攻击；飞行或舞者也要核实剑权限及实际攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819521"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "改用可施白魔的支援职业时",
+          "why": "白魔传送或治疗职责才考虑治疗杖；不与飞行职业白魔同时算。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "review_wp-209",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "魅力高于目标且确实要补生存，能承担重量时",
+          "why": "迷人面具重5，魅力高于敌人时令其命中-10；不要和概率发动、效果不同的魅惑面具混为一谈。",
+          "url": "https://fire-emblem-fw.site/items.html"
+        }
+      ]
+    },
+    "c9": {
+      "name": "杨界",
+      "role": "低门槛远程治疗",
+      "profile": "W",
+      "consideration": "白魔远疗是主要职责，斧方向必须另选可用斧的职业",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c10": {
+      "name": "马吉迪",
+      "role": "单击斧输出／传送功能分支",
+      "profile": "A",
+      "consideration": "斧装备加力量；若转白魔救援则另按治疗配杖",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c11": {
+      "name": "妮涅",
+      "role": "对魔支援／机动治疗",
+      "profile": "L+W",
+      "consideration": "圣枪师枪和白魔可用；骑法与枪输出分别核对权限",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c12": {
+      "name": "哪吒",
+      "role": "先攻剑系输出／拳系定身",
+      "profile": "S+F",
+      "consideration": "剑与拳各有战技；拳系需要步行且注意剑D附加条件",
+      "picks": [
+        {
+          "id": "review_wp-100",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "格斗B、剑D且拳系职业时",
+          "why": "风火轮具1–2格；专有炎轮为魔法攻击，先核魔力和战技耐久。",
+          "url": "https://gamewith.jp/fefw/580460"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "library_80411647",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "格斗术D且当前职业可用手甲",
+          "why": "铁手甲命中90、重量3，是轻量基础选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411647"
+        },
+        {
+          "id": "library_80469892",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "格斗术C且剑术D；当前职业可用拳",
+          "why": "乾坤圈提供1–2格，附带剑术要求，先核资格。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469892"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得、格斗术B且职业允许拳",
+          "why": "银手甲高威力，重量5；需要检查追击和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        },
+        {
+          "id": "review_wp-120",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "必杀较可靠、需要持续作战且不损失关键追击",
+          "why": "必圣宝珠重量4；打出必杀才回复伤害的1/3，不以概率回复保证生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "library_80411641",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "格斗E、当前职业允许拳且能负担+9强化时",
+          "why": "木手甲+9为强化形态：重量1、速度+5、直接回避+15；未强化版没有这些加成，需比较强化资源、射程和特效。",
+          "url": "https://www.annasnotebook.net/weapons/wooden-gauntlets/"
+        }
+      ]
+    },
+    "c13": {
+      "name": "努佐",
+      "role": "高速特效剑士",
+      "profile": "S+B",
+      "consideration": "特效攻击加攻；骑兵与重装选针对武器，弓剑依当前职业切换",
+      "picks": [
+        {
+          "id": "library_80411545",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑术D，面对重装时",
+          "why": "弗利萨剑针对重装，能发挥特效攻击相关技能；具体伤害以战斗预测为准。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411545"
+        },
+        {
+          "id": "library_80411539",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑术D，面对骑兵时",
+          "why": "斩马刀对骑兵特效，能发挥特效攻击相关技能；重量7，先看命中与追击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411539"
+        },
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑C且魔力足够时",
+          "why": "雷电剑补1–2格魔法伤害；不以物理力量直接估伤。",
+          "url": "https://game8.jp/fe-banshisenko/819521"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        }
+      ]
+    },
+    "c14": {
+      "name": "亚历珊德拉",
+      "role": "现成飞行补位",
+      "profile": "S+L",
+      "consideration": "飞行机动和相邻队友加成；骑士特效枪及雷电剑按技能和魔力选择",
+      "picks": [
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑C且魔力足够时",
+          "why": "飞行剑系可用雷电剑针对物防高敌人；先确认职业权限与负重。",
+          "url": "https://game8.jp/fe-banshisenko/819521"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "review_wp-209",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "魅力高于目标且确实要补生存，能承担重量时",
+          "why": "迷人面具重5，魅力高于敌人时令其命中-10；不要和概率发动、效果不同的魅惑面具混为一谈。",
+          "url": "https://fire-emblem-fw.site/items.html"
+        }
+      ]
+    },
+    "c15": {
+      "name": "皮特鲁",
+      "role": "远射程物理／减移动控场",
+      "profile": "B",
+      "consideration": "弓战技射程加一；远射与控制有价值，但战车、步兵效果不能叠算",
+      "picks": [
+        {
+          "id": "longbow",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓C且需要战技狙击、命中足够",
+          "why": "狙击3–5格、不能追击且命中惩罚，先以预测确认。",
+          "url": "https://game8.jp/fe-banshisenko/819474"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c16": {
+      "name": "媞雅拉",
+      "role": "双魔指挥 / 舞位备选",
+      "profile": "M",
+      "consideration": "辅助战技射程加一；治疗和舞者不同职责，舞者不可同时施白魔",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c17": {
+      "name": "伊欧",
+      "role": "骑兵先攻突击",
+      "profile": "L",
+      "consideration": "骑兵主动攻击的防守加成；重装移动配骑兵与盾需另看职业",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c18": {
+      "name": "哥莱亚斯",
+      "role": "重装守线／相邻压制",
+      "profile": "A",
+      "consideration": "重装体格高、能限制相邻敌人移动；不能转骑飞，优先抗魔而非盲堆回避",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c19": {
+      "name": "丹提",
+      "role": "冻结控制／远程法术补位",
+      "profile": "M",
+      "consideration": "白魔冻结与黑魔雷暴分支不同；按当前法术职责选杖",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c20": {
+      "name": "盖茨",
+      "role": "晚入队物理补位／救出分支",
+      "profile": "L+W",
+      "consideration": "枪前排或白魔救出二选一；相邻队友防守加成不要求本人重装备",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c21": {
+      "name": "艾丝梅拉尔达",
+      "role": "远距投枪攻坚／物理防线",
+      "profile": "L",
+      "consideration": "减重个人技与投枪专长突出；专属枪和重盾看实际负重与魔防",
+      "picks": [
+        {
+          "id": "gracida",
+          "kind": "exclusive",
+          "usage": "剧情候选",
+          "when": "枪B且已取得；需要专属战技时",
+          "why": "英雄遗产重14，专属无尘与一般攻击效果分开，确认重量与敌人类型。",
+          "url": "https://game8.jp/fe-banshisenko/819500"
+        },
+        {
+          "id": "library_gw_580454",
+          "kind": "exclusive",
+          "usage": "按需切换",
+          "when": "枪E且已取得、需要1–2格时",
+          "why": "鱼叉重16且命中65；个人减重有帮助但不保证足够攻速。",
+          "url": "https://gamewith.jp/fefw/580454"
+        },
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c22": {
+      "name": "法毕欧",
+      "role": "暗法破防／范围必杀支援",
+      "profile": "K",
+      "consideration": "黑魔死神与月神是输出重点；以魔力杖为主但不能忽视攻速",
+      "picks": [
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c23": {
+      "name": "诺克裘拉",
+      "role": "均衡斧拳主力",
+      "profile": "F+A",
+      "consideration": "拳与斧分支各有独立权限；回避需实际预测，巨人戒指会损回避",
+      "picks": [
+        {
+          "id": "library_gw_580475",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "格斗B且当前职业可用拳",
+          "why": "大熊右钩爪重1但有怨咒，留意冥府加护、槽与战技消耗。",
+          "url": "https://gamewith.jp/fefw/580475"
+        },
+        {
+          "id": "library_80411647",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "格斗术D且当前职业可用手甲",
+          "why": "铁手甲命中90、重量3，是轻量基础选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411647"
+        },
+        {
+          "id": "library_80469892",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "格斗术C且剑术D；当前职业可用拳",
+          "why": "乾坤圈提供1–2格，附带剑术要求，先核资格。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469892"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得、格斗术B且职业允许拳",
+          "why": "银手甲高威力，重量5；需要检查追击和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        },
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411641",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "格斗E、当前职业允许拳且能负担+9强化时",
+          "why": "木手甲+9为强化形态：重量1、速度+5、直接回避+15；未强化版没有这些加成，需比较强化资源、射程和特效。",
+          "url": "https://www.annasnotebook.net/weapons/wooden-gauntlets/"
+        },
+        {
+          "id": "library_80411593",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "斧E、具备+9强化条件且提高速度能改变追击或生存时",
+          "why": "木斧+9是强化形态，速度+5；初始木斧不带该加成，应衡量材料和实际命中。",
+          "url": "https://annasnotebook.net/ja/videos/yt-yDOY8Z_dCbs/"
+        }
+      ]
+    },
+    "c24": {
+      "name": "罗蕾塔",
+      "role": "高速回避／飞行或救出分支",
+      "profile": "S+L",
+      "consideration": "依赖HP条件和回避；舞者、飞行与白魔救出三种职责不并算",
+      "picks": [
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑C且魔力足够时",
+          "why": "雷电剑补魔法伤害与两格；舞位或飞行分支不得混算白魔。",
+          "url": "https://game8.jp/fe-banshisenko/819521"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "切为可用白魔的支援职业且承担治疗时",
+          "why": "可供救出／治疗构筑选择；剑系或飞行终职不据此自动获得白魔。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "review_wp-209",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "魅力高于目标且确实要补生存，能承担重量时",
+          "why": "迷人面具重5，魅力高于敌人时令其命中-10；不要和概率发动、效果不同的魅惑面具混为一谈。",
+          "url": "https://fire-emblem-fw.site/items.html"
+        }
+      ]
+    },
+    "c25": {
+      "name": "西提司",
+      "role": "白魔传送／短程救援或枪系前排",
+      "profile": "W",
+      "consideration": "白魔传送与救援是重要职责；转枪前排才选枪盾",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c26": {
+      "name": "波拿帕尔特",
+      "role": "开局双魔／沉默支援",
+      "profile": "M",
+      "consideration": "相邻技巧支援，白魔沉默或黑魔输出按当前职业选杖",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c27": {
+      "name": "托比亚斯",
+      "role": "低投入重装／斧战技攻坚",
+      "profile": "A",
+      "consideration": "战技攻击固定加攻，斧重装可选盾；战车骑乘时另看体格",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411593",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "斧E、具备+9强化条件且提高速度能改变追击或生存时",
+          "why": "木斧+9是强化形态，速度+5；初始木斧不带该加成，应衡量材料和实际命中。",
+          "url": "https://annasnotebook.net/ja/videos/yt-yDOY8Z_dCbs/"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c28": {
+      "name": "哈尔温",
+      "role": "骑弓精准补位／白魔控制备选",
+      "profile": "B",
+      "consideration": "命中需要战斗逐步叠加；战车重武器能戴巨人，回避构筑则谨慎",
+      "picks": [
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c29": {
+      "name": "沙兰",
+      "role": "位置调整／救出与群疗辅助",
+      "profile": "W",
+      "consideration": "拉近后辅助魔法与救出；治疗杖和定位支援优先，拳装只在可用拳的备选职业考虑",
+      "picks": [
+        {
+          "id": "library_80469907",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "仅格斗职业且想试魔法拳时",
+          "why": "沙罗曼蛇为魔法拳且耐久3；贤士不能用拳，治疗主线不推荐占格。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469907"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c30": {
+      "name": "巴卡尼亚",
+      "role": "低投入物理防线",
+      "profile": "L",
+      "consideration": "已定位枪重装，先保命中和承伤；长距离投枪按重量与命中取舍",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c31": {
+      "name": "西洛可",
+      "role": "双魔输出 / 群疗传送",
+      "profile": "M+S",
+      "consideration": "双魔群疗与传送、剑系回避是不同终职；雷电剑须剑权限与魔力",
+      "picks": [
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "剑C且当前职业可用剑、魔力足够",
+          "why": "雷电剑补1–2格魔法伤害；换为双魔骑法时先核剑权限。",
+          "url": "https://game8.jp/fe-banshisenko/819521"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "剑E且当前职业可用剑、目标有冥府加护",
+          "why": "净化剑用于剑职针对加护；非剑职不能据此算白魔和剑同时可用。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "review_wp-120",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "必杀较可靠、需要持续作战且不损失关键追击",
+          "why": "必圣宝珠重量4；打出必杀才回复伤害的1/3，不以概率回复保证生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c32": {
+      "name": "穆",
+      "role": "长窗口物理核心／可选传送",
+      "profile": "F+S",
+      "consideration": "拳剑或其他物理主线择一；作为拳手先检查一至两格与克制需求",
+      "picks": [
+        {
+          "id": "library_80469907",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "拳系且目标魔防较低、技能允许时",
+          "why": "沙罗曼蛇魔法攻击但基础威力低、耐久3；以实战预测决定。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469907"
+        },
+        {
+          "id": "library_80411647",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "格斗术D且当前职业可用手甲",
+          "why": "铁手甲命中90、重量3，是轻量基础选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411647"
+        },
+        {
+          "id": "library_80469892",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "格斗术C且剑术D；当前职业可用拳",
+          "why": "乾坤圈提供1–2格，附带剑术要求，先核资格。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469892"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得、格斗术B且职业允许拳",
+          "why": "银手甲高威力，重量5；需要检查追击和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "review_wp-120",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "必杀较可靠、需要持续作战且不损失关键追击",
+          "why": "必圣宝珠重量4；打出必杀才回复伤害的1/3，不以概率回复保证生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "library_80411641",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "格斗E、当前职业允许拳且能负担+9强化时",
+          "why": "木手甲+9为强化形态：重量1、速度+5、直接回避+15；未强化版没有这些加成，需比较强化资源、射程和特效。",
+          "url": "https://www.annasnotebook.net/weapons/wooden-gauntlets/"
+        }
+      ]
+    },
+    "c33": {
+      "name": "奥琳琵娅",
+      "role": "控制法术／魔法输出",
+      "profile": "M",
+      "consideration": "装备魔法提高必杀；黑魔输出或白魔治疗、控制须按终职取舍",
+      "picks": [
+        {
+          "id": "review_wp-120",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "可靠魔法必杀、负重不影响追击或生存时",
+          "why": "必圣依据造成伤害回复；只在实际必杀收益与重量值得时考虑。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c34": {
+      "name": "米迦艾拉",
+      "role": "贴身斧前排／物理防线",
+      "profile": "A",
+      "consideration": "贴身战斗命中加成支持斧前排，重装需补魔防与移动",
+      "picks": [
+        {
+          "id": "library_80411611",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧A且已取得；面对冥府加护前核对咒宝相杀",
+          "why": "邪斧低重量高命中，但怨咒与后期加护风险不能忽略。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411611"
+        },
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411593",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "斧E、具备+9强化条件且提高速度能改变追击或生存时",
+          "why": "木斧+9是强化形态，速度+5；初始木斧不带该加成，应衡量材料和实际命中。",
+          "url": "https://annasnotebook.net/ja/videos/yt-yDOY8Z_dCbs/"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c35": {
+      "name": "努蒂奴",
+      "role": "穿越骑兵／白魔救出",
+      "profile": "M",
+      "consideration": "非大型骑兵可穿越敌人；白魔救出与黑魔剑职业不可混算",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c36": {
+      "name": "大刀",
+      "role": "低速斧重装／单击补位",
+      "profile": "A",
+      "consideration": "双方无法追击时加攻，重斧可选但需要命中与魔防保护",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c37": {
+      "name": "易尼奥尼",
+      "role": "高力量弓战技",
+      "profile": "B",
+      "consideration": "弓装力量加成和弓战技增伤；战车巨人戒指与轻装回避不可混算",
+      "picks": [
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c38": {
+      "name": "嘉丝敏",
+      "role": "重装反击防线",
+      "profile": "L",
+      "consideration": "后攻命中与重装移动术适合枪反击；斧是条件备选，不用强行主斧",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c39": {
+      "name": "莉利安",
+      "role": "低门槛弓控场／精准输出",
+      "profile": "B",
+      "consideration": "敌人不能反击时命中提高；射程和减移动优先于盲追武器威力",
+      "picks": [
+        {
+          "id": "longbow",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓C且需要更远程战技时",
+          "why": "狙击3–5格且无法追击，莉利安的安全攻击命中优势仍需结合预测。",
+          "url": "https://game8.jp/fe-banshisenko/819474"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c40": {
+      "name": "莱桑达",
+      "role": "早期枪骑／机动清场",
+      "profile": "L",
+      "consideration": "主动攻击回避加成支持骑枪；重戒可能抵消回避方向的收益",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c41": {
+      "name": "希蒙",
+      "role": "剑斧物理主力备选",
+      "profile": "S+A",
+      "consideration": "剑斧均可；概率保命不可当成确定生存，重武器需看攻速",
+      "picks": [
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "review_wp-120",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "必杀较可靠、需要持续作战且不损失关键追击",
+          "why": "必圣宝珠重量4；打出必杀才回复伤害的1/3，不以概率回复保证生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "library_80411593",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "斧E、具备+9强化条件且提高速度能改变追击或生存时",
+          "why": "木斧+9是强化形态，速度+5；初始木斧不带该加成，应衡量材料和实际命中。",
+          "url": "https://annasnotebook.net/ja/videos/yt-yDOY8Z_dCbs/"
+        }
+      ]
+    },
+    "c42": {
+      "name": "札可捏",
+      "role": "高命中斧系／残血收割",
+      "profile": "A",
+      "consideration": "装备斧命中加成，原通用剑模板不符合主要斧方向",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411593",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "斧E、具备+9强化条件且提高速度能改变追击或生存时",
+          "why": "木斧+9是强化形态，速度+5；初始木斧不带该加成，应衡量材料和实际命中。",
+          "url": "https://annasnotebook.net/ja/videos/yt-yDOY8Z_dCbs/"
+        }
+      ]
+    },
+    "c43": {
+      "name": "班迪兹",
+      "role": "战车限定远程输出",
+      "profile": "B",
+      "consideration": "战车限定命中提升；巨人戒指仅在战车或不依赖回避的构筑考虑",
+      "picks": [
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c44": {
+      "name": "露露蒂雅",
+      "role": "主动追击／高速剑枪",
+      "profile": "S",
+      "consideration": "主动攻速加成帮助追击，武器负重与低力量仍需核对",
+      "picks": [
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        }
+      ]
+    },
+    "c45": {
+      "name": "佩佩",
+      "role": "高速残血收割",
+      "profile": "S+B",
+      "consideration": "对受伤敌人有条件先攻；需要队友先削血，不能当无条件先攻",
+      "picks": [
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        }
+      ]
+    },
+    "c46": {
+      "name": "迪雅各",
+      "role": "均衡物理／追击补刀",
+      "profile": "S+B",
+      "consideration": "追击奖励要求先跨过攻速门槛；晚入队仍按实际武器等级选择",
+      "picks": [
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        }
+      ]
+    },
+    "c47": {
+      "name": "乌修拉",
+      "role": "剑弓输出 / 道具支援",
+      "profile": "S+B",
+      "consideration": "道具袋支援或舞位；剑弓分工按终职，不能把白魔群疗并算",
+      "picks": [
+        {
+          "id": "carla",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "弓A且团队愿意分配稀有卡拉弓时",
+          "why": "天风3–10格，舞位行动与攻击互斥；不是每人必带。",
+          "url": "https://gamewith.jp/fefw/579915"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        },
+        {
+          "id": "review_wp-209",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "魅力高于目标且确实要补生存，能承担重量时",
+          "why": "迷人面具重5，魅力高于敌人时令其命中-10；不要和概率发动、效果不同的魅惑面具混为一谈。",
+          "url": "https://fire-emblem-fw.site/items.html"
+        }
+      ]
+    },
+    "c48": {
+      "name": "杰斯塔",
+      "role": "高速剑士／白魔控制备选",
+      "profile": "S",
+      "consideration": "高速回避剑或白魔冻结是不同构筑；先确认力量与生存",
+      "picks": [
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑C且魔力与职业权限足够时",
+          "why": "雷电剑补魔法射程；先比较负重、魔力和命中。",
+          "url": "https://game8.jp/fe-banshisenko/819521"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        }
+      ]
+    },
+    "c49": {
+      "name": "乌尔坦德",
+      "role": "近身护队／指挥辅助",
+      "profile": "L+W",
+      "consideration": "圣枪师近身护队与白魔支援兼顾，盾和杖按敌人切换",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c50": {
+      "name": "齐利科",
+      "role": "高速剑骑即战力",
+      "profile": "S",
+      "consideration": "剑骑而非默认枪手；后攻攻速与回避有条件，避免重戒抵消收益",
+      "picks": [
+        {
+          "id": "library_80411539",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "剑D且要对骑兵输出时",
+          "why": "斩马刀对骑兵有效，重7；高速剑骑需要核对净攻速。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411539"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "usage": "核心候选",
+          "when": "剑术E；中后期敌人有冥府加护时",
+          "why": "净化剑轻且使战斗中敌方冥府加护失效；不是所有敌人都需要。",
+          "url": "https://game8.jp/fe-banshisenko/819533"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "剑术C且已获取；需要攻速或回避",
+          "why": "疾风剑重量2、回避+10；优先看能否跨过实际追击线。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469841"
+        },
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "剑术C；常用剑战技且需要命中",
+          "why": "达·米纳剑使用战技时命中+10，普通攻击不自动获得这项效果。",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且剑术B",
+          "why": "银剑威力与命中较高；与其他剑按敌方加护和战技选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411530",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "剑E、具备+9强化条件且攻速或回避有实际收益时",
+          "why": "木剑+9为强化形态：重量2、速度+5；基础木剑不是这个数值，需消耗多阶段材料并核对其他武器的特效。",
+          "url": "https://annasnotebook.net/db/weapons/"
+        }
+      ]
+    },
+    "c51": {
+      "name": "内森",
+      "role": "物理骑枪／传送分支",
+      "profile": "L",
+      "consideration": "骑枪主动攻速命中加成；白魔传送须改用有白魔权限的职业",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c52": {
+      "name": "欧露赫露",
+      "role": "耐久白魔核心／专属攻坚",
+      "profile": "W",
+      "consideration": "固定重装属性且不能转骑飞；治疗或法术输出按职业分别配杖",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c53": {
+      "name": "谭利穆恩",
+      "role": "专属削弱 / 双魔支援",
+      "profile": "M",
+      "consideration": "后排圣焰削弱与法术支援；怨杖重，不应无条件优先于魔道杖",
+      "picks": [
+        {
+          "id": "review_wp-163",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "已获得怨杖并确实需要技巧和魔力时",
+          "why": "怨杖重8；相较魔道杖多重5，应核攻速、怨咒及团队需求。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c54": {
+      "name": "贝特兰",
+      "role": "后期专属强化物理",
+      "profile": "A",
+      "consideration": "专属武器与斧战技爆发，但超重和低命中武器需临场预测",
+      "picks": [
+        {
+          "id": "zalmoxis",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得斧E且能用斧",
+          "why": "霸绝+为对应战技无视冥府加护；普通攻击不要一概当作无视。",
+          "url": "https://game8.jp/fe-banshisenko/819493"
+        },
+        {
+          "id": "library_gw_580573",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "斧A且有足够命中、体格与资源时",
+          "why": "达古扎棍棒重25、基础命中低且限定战技；只作为特定爆发，不默认常驻。",
+          "url": "https://gamewith.jp/fefw/580573"
+        },
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "斧术C；需要战技输出",
+          "why": "达·米纳斧威力较高但重量10，先检查命中与攻速。",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；需要1–2格反击或攻击",
+          "why": "手斧补射程，重量10且命中较低；不要把低命中视作必定命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "library_80411608",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "斧术D；遭遇重装且命中足够",
+          "why": "战锤对重装特效但重量20；只针对需要的敌人，避免无脑常驻。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411608"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且斧术B",
+          "why": "银斧后期高威力，但要比较重量9及命中70与实战追击。",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "战车／重装确实超重，且不依赖回避",
+          "why": "巨人戒指体格+4、回避−20；不增加攻击，回避坦慎用。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "library_80411593",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "斧E、具备+9强化条件且提高速度能改变追击或生存时",
+          "why": "木斧+9是强化形态，速度+5；初始木斧不带该加成，应衡量材料和实际命中。",
+          "url": "https://annasnotebook.net/ja/videos/yt-yDOY8Z_dCbs/"
+        }
+      ]
+    },
+    "c55": {
+      "name": "爱娜特莉亚",
+      "role": "黑魔爆发 / 传送备选",
+      "profile": "K",
+      "consideration": "黑魔范围输出与白魔传送／拳系是不同终职，不能同时默认可用",
+      "picks": [
+        {
+          "id": "library_80469907",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "仅拳系且可用拳时",
+          "why": "沙罗曼蛇是1–2格魔法拳、耐久3；德鲁伊不能直接使用。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469907"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "选择允许白魔的职业并承担治疗任务时",
+          "why": "治疗杖重3、回复量+10；纯剑骑、飞行或黑魔终职不因此获得白魔能力。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c56": {
+      "name": "盛托利翁",
+      "role": "首次受击减伤／现成重装",
+      "profile": "L",
+      "consideration": "后期现成重装，首次受击减伤不覆盖整轮；封魔盾适合对魔时切换",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c57": {
+      "name": "库拉普卡",
+      "role": "终章枪系防守补位",
+      "profile": "L+W",
+      "consideration": "终章固定卫士，枪与白魔支援按现有熟练使用，不建议重新转职",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c58": {
+      "name": "救世主",
+      "role": "第三部机制核心／专属范围攻坚",
+      "profile": "L",
+      "consideration": "自身已有抵消附近冥府加护的功能；辉枪用于伤害与战技回复而非冥魔特效",
+      "picks": [
+        {
+          "id": "review_wp-214",
+          "kind": "exclusive",
+          "usage": "剧情候选",
+          "when": "第三部已有无铭之枪且枪术E",
+          "why": "救世主自带近身削减冥府加护作用；以位置和实际攻击目标为准。",
+          "url": "https://gamewith.jp/fefw/580414"
+        },
+        {
+          "id": "sorel_lance",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪A",
+          "why": "辉枪太阳战技可回复，按耐久与位置选择；不误标冥魔特效。",
+          "url": "https://gamewith.jp/fefw/580415"
+        },
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "枪术C且已取得；需要枪战技命中",
+          "why": "达·米纳枪为枪系常用候选；战技命中收益不应算进普通攻击。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_80411572",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术D；需要1–2格应对",
+          "why": "投枪可以打两格但威力较低；注意重量和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411572"
+        },
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "枪术C；对骑兵作战",
+          "why": "骑士杀手提供骑兵特效；专门应敌，不是每场必带。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469853"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且枪术B",
+          "why": "银枪作为后期枪输出备选，仍要看技能、资源与敌方加护。",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要轻一档的魔防盾且1点重量影响追击时",
+          "why": "除魔盾重3、防御+1、魔防+2；封魔盾重4、防御+1、魔防+5，按额外1重量与3魔防的实际收益比较，二者切换而非叠带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "选装分支",
+          "when": "选择允许白魔的职业并承担治疗任务时",
+          "why": "治疗杖重3、回复量+10；纯剑骑、飞行或黑魔终职不因此获得白魔能力。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        }
+      ]
+    },
+    "c59": {
+      "name": "红花",
+      "role": "救出墙法 / 双魔支援",
+      "profile": "M",
+      "consideration": "白魔救出与黑魔输出分支要分职业，魔道杖和治疗杖按目标更换",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许黑魔并主要输出",
+          "why": "魔道杖重量3、魔力+3；若损失追击则先比对战斗预测。",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c60": {
+      "name": "特洛伊亚",
+      "role": "现成拳白魔双职责",
+      "profile": "F+W",
+      "consideration": "武僧拳与白魔可在不同回合使用；专属手甲看魔力、武器等级和耐久",
+      "picks": [
+        {
+          "id": "library_gw_580457",
+          "kind": "exclusive",
+          "usage": "剧情候选",
+          "when": "已取得、格斗A且拳系职业",
+          "why": "刻耳柏洛斯有1–2格魔法攻击与专属战技，耐久有限，治疗行动分开计算。",
+          "url": "https://gamewith.jp/fefw/580457"
+        },
+        {
+          "id": "library_80411647",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "格斗术D且当前职业可用手甲",
+          "why": "铁手甲命中90、重量3，是轻量基础选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411647"
+        },
+        {
+          "id": "library_80469892",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "格斗术C且剑术D；当前职业可用拳",
+          "why": "乾坤圈提供1–2格，附带剑术要求，先核资格。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469892"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得、格斗术B且职业允许拳",
+          "why": "银手甲高威力，重量5；需要检查追击和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        },
+        {
+          "id": "heal",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "当前职业允许白魔且负责治疗",
+          "why": "治疗杖重量3，回复魔法治疗量+10；治疗已足够或影响生存时可换下。",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "library_80411641",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "格斗E、当前职业允许拳且能负担+9强化时",
+          "why": "木手甲+9为强化形态：重量1、速度+5、直接回避+15；未强化版没有这些加成，需比较强化资源、射程和特效。",
+          "url": "https://www.annasnotebook.net/weapons/wooden-gauntlets/"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "追击或回避确有缺口且当前重量允许时",
+          "why": "疾风戒指速度+3、重量2；对治疗量没有直接加成，先看是否改善攻速或生存。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "review_wp-110",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "需要补少量魔防且3点重量不会造成不可接受的损失时",
+          "why": "除魔盾重3，防御+1、魔防+2；封魔盾重4、多3点魔防，实战二选一。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "预计会受物理攻击且4点重量不破坏安全阈值时",
+          "why": "银盾重4、防御+5；纯后排不必默认携带，应比较背包格与生存。",
+          "url": "https://gamewith.jp/fefw/574252"
+        }
+      ]
+    },
+    "c61": {
+      "name": "亚丝望",
+      "role": "晚加入弓即战力",
+      "profile": "B",
+      "consideration": "后期现成弓兵，装备弓命中加成；按手中弓等级选，勿假定全部战技已习得",
+      "picks": [
+        {
+          "id": "review_wp-160",
+          "kind": "exclusive",
+          "usage": "剧情候选",
+          "when": "第三部取得且弓B",
+          "why": "伊迪亚之弓对飞行特效并有圣闪战技；按实际技能和取得情况选。",
+          "url": "https://gamewith.jp/fefw/580557"
+        },
+        {
+          "id": "review_wp-205",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "弓术D；需要1–2格攻击",
+          "why": "短弓能覆盖近身与两格，但威力较低，不能当成主力高伤弓。",
+          "url": "https://gamewith.jp/fefw/579402"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "usage": "常用候选",
+          "when": "弓术C且已取得；重视回避",
+          "why": "风弓回避+10、重量5；仅以武器数据评估，是否追击仍看对手。",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "usage": "按需切换",
+          "when": "弓术C；弓战技需要命中",
+          "why": "达·米纳弓战技命中加成与普通攻击分开计算。",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得且弓术B",
+          "why": "银弓重量较轻且威力较高；特效、射程和耐久仍需看具体敌人。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        },
+        {
+          "id": "swift",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "速度型、负重允许且确实跨过攻速门槛",
+          "why": "疾风戒指速度+3、重量2；净收益依体格与总重而变。",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c62": {
+      "name": "塔霍尼雅",
+      "role": "固定拳职晚期即战力",
+      "profile": "F",
+      "consideration": "后期固定拳职；概率无视攻速追击并不稳定，先确认生存和命中",
+      "picks": [
+        {
+          "id": "library_80411647",
+          "kind": "rule",
+          "usage": "常用候选",
+          "when": "格斗术D且当前职业可用手甲",
+          "why": "铁手甲命中90、重量3，是轻量基础选择。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411647"
+        },
+        {
+          "id": "library_80469892",
+          "kind": "guide",
+          "usage": "按需切换",
+          "when": "格斗术C且剑术D；当前职业可用拳",
+          "why": "乾坤圈提供1–2格，附带剑术要求，先核资格。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469892"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "usage": "后期候选",
+          "when": "第三部取得、格斗术B且职业允许拳",
+          "why": "银手甲高威力，重量5；需要检查追击和命中。",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        },
+        {
+          "id": "review_wp-111",
+          "kind": "guide",
+          "usage": "条件饰品",
+          "when": "需要魔防且额外重量不破坏追击／回避",
+          "why": "封魔盾重4，防御+1、魔防+5；物理压力大时可改银盾，勿默认每场都带。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "review_wp-109",
+          "kind": "guide",
+          "usage": "条件盾牌",
+          "when": "物理压力更高且4点重量可承受时",
+          "why": "银盾重4、防御+5；魔法压力更高可考虑封魔盾，两者是替换选择。",
+          "url": "https://gamewith.jp/fefw/574252"
+        },
+        {
+          "id": "library_80411641",
+          "kind": "guide",
+          "usage": "强化备选",
+          "when": "格斗E、当前职业允许拳且能负担+9强化时",
+          "why": "木手甲+9为强化形态：重量1、速度+5、直接回避+15；未强化版没有这些加成，需比较强化资源、射程和特效。",
+          "url": "https://www.annasnotebook.net/weapons/wooden-gauntlets/"
+        }
+      ]
+    }
+  },
+  "baselineGear": {
+    "c0": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "aurora_lance",
+          "kind": "exclusive",
+          "why": "凯伊篇专属路线武器，星光的闪烁可魔法远攻",
+          "url": "https://game8.jp/fe-banshisenko/816414"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "why": "攻略建议第三部改用剑，净化剑使冥府加护失效",
+          "url": "https://news.17173.com/content/10062026/170410654.shtml"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c1": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "why": "冥府加护对策剑",
+          "url": "https://news.17173.com/content/10062026/170410654.shtml"
+        },
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "why": "按魔力伤害、射程1–2",
+          "url": "https://news.17173.com/content/10062026/170410654.shtml"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c2": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "review_wp-19",
+          "kind": "exclusive",
+          "why": "初始装备的魔剑，可用战技「血闪」",
+          "url": "https://gamewith.jp/fefw/579899"
+        },
+        {
+          "id": "answerer_kai",
+          "kind": "exclusive",
+          "why": "迪托利希篇第12章与法毕欧对话取得的强化版",
+          "url": "https://game8.jp/fe-banshisenko/822268"
+        },
+        {
+          "id": "library_80469838",
+          "kind": "guide",
+          "why": "攻略推荐：巨剑配巨人戒指爆发输出",
+          "url": "https://news.17173.com/content/10082026/170132886.shtml"
+        },
+        {
+          "id": "giant",
+          "kind": "guide",
+          "why": "攻略推荐：巨人戒指拿巨剑",
+          "url": "https://news.17173.com/content/10082026/170132886.shtml"
+        },
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "why": "攻略列出的推荐武器之一",
+          "url": "https://news.17173.com/content/10082026/170132886.shtml"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c3": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "why": "弓术主武器：达·米纳弓战技命中+10",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c4": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        }
+      ]
+    },
+    "c5": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "review_wp-46",
+          "kind": "exclusive",
+          "why": "赛奥朵拉篇第1章剧情取得的英雄之枪",
+          "url": "https://gamewith.jp/fefw/579607"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c6": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        }
+      ]
+    },
+    "c7": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "carla",
+          "kind": "exclusive",
+          "why": "卡拉的弓只有一把，交给蕾达作3–10射程「天风」狙击",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "why": "第三部持风弓进入人群作战",
+          "url": "https://news.17173.com/content/10062026/170410654.shtml"
+        },
+        {
+          "id": "library_80469841",
+          "kind": "guide",
+          "why": "疾风剑＋魅惑面具，闪避逼近100%开团",
+          "url": "https://news.17173.com/content/10072026/200358468.shtml"
+        },
+        {
+          "id": "review_wp-164",
+          "kind": "guide",
+          "why": "魅惑面具与疾风剑组合",
+          "url": "https://news.17173.com/content/10072026/200358468.shtml"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c8": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "why": "冥府加护对策剑",
+          "url": "https://news.17173.com/content/10062026/170410654.shtml"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c9": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        }
+      ]
+    },
+    "c10": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "why": "斧术主武器：达·米纳斧可兑换／购买",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "why": "第三部斧术B后换银斧",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c11": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c12": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c13": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "why": "冥府加护对策剑",
+          "url": "https://news.17173.com/content/10062026/170410654.shtml"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c14": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469853",
+          "kind": "guide",
+          "why": "攻略：骑士杀手让她成为神鸵兵与骑士的噩梦",
+          "url": "https://news.17173.com/content/10062026/200702293.shtml"
+        },
+        {
+          "id": "review_wp-164",
+          "kind": "guide",
+          "why": "魅力成长50%，魅惑面具最佳装备者之一",
+          "url": "https://news.17173.com/content/10062026/200702293.shtml"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c15": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "longbow",
+          "kind": "guide",
+          "why": "锻造后的长弓常备，3–4射程削血",
+          "url": "https://game8.jp/fe-banshisenko/819474"
+        },
+        {
+          "id": "wind_bow",
+          "kind": "guide",
+          "why": "与长弓一同锻满携带",
+          "url": "https://game8.jp/fe-banshisenko/819473"
+        },
+        {
+          "id": "library_80411629",
+          "kind": "guide",
+          "why": "对骑兵特效的射马弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411629"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c16": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        }
+      ]
+    },
+    "c17": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c18": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "why": "斧术主武器：达·米纳斧可兑换／购买",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "why": "第三部斧术B后换银斧",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c19": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        }
+      ]
+    },
+    "c20": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c21": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "gracida",
+          "kind": "exclusive",
+          "why": "迪托利希篇第8章击败海王后取得；专属战技「无尘」，射程1–2",
+          "url": "https://gamecap.jp/fe_fw/osusume_chara.html"
+        },
+        {
+          "id": "library_gw_580454",
+          "kind": "exclusive",
+          "why": "路线奖励鱼叉，可用「蛮力投掷」",
+          "url": "https://gamewith.jp/fefw/580454"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c22": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        }
+      ]
+    },
+    "c23": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_gw_580475",
+          "kind": "exclusive",
+          "why": "诺克裘拉的初始装备，可用「暴爪」",
+          "url": "https://gamecap.jp/fe_fw/w5.html"
+        },
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "why": "斧术主武器：达·米纳斧可兑换／购买",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "why": "第三部斧术B后换银斧",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c24": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "clean",
+          "kind": "guide",
+          "why": "冥府加护对策剑",
+          "url": "https://gamecap.jp/fe_fw/osusume_chara.html"
+        },
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "why": "魔力剑，射程1–2",
+          "url": "https://gamecap.jp/fe_fw/osusume_chara.html"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c25": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c26": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c27": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "why": "斧术主武器：达·米纳斧可兑换／购买",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "why": "第三部斧术B后换银斧",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c28": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "why": "弓术主武器：达·米纳弓战技命中+10",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c29": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469907",
+          "kind": "guide",
+          "why": "官方介绍：以携带火器「沙罗曼蛇」击穿重甲",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469907"
+        },
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        }
+      ]
+    },
+    "c30": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c31": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        },
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "why": "剑术＋黑魔术，魔力剑射程1–2",
+          "url": "https://game8.jp/fe-banshisenko/819521"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c32": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80411602",
+          "kind": "guide",
+          "why": "手斧可攻击2格，但命中偏低",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411602"
+        },
+        {
+          "id": "daminafist",
+          "kind": "rule",
+          "why": "格斗术主武器：达·米纳手甲可兑换／购买",
+          "url": "https://game8.jp/fe-banshisenko/819463"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "why": "第三部格斗术B后换银手甲",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        }
+      ]
+    },
+    "c33": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        }
+      ]
+    },
+    "c34": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80411611",
+          "kind": "exclusive",
+          "why": "宝箱咒宝，高命中斧；龙骑兵定位首选",
+          "url": "https://appmedia.jp/fe_banshisenkou/80411611"
+        },
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "why": "第三部斧术B后换银斧",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c35": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        }
+      ]
+    },
+    "c36": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminaaxe",
+          "kind": "rule",
+          "why": "斧术主武器：达·米纳斧可兑换／购买",
+          "url": "https://game8.jp/fe-banshisenko/819487"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "why": "第三部斧术B后换银斧",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c37": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "why": "弓术主武器：达·米纳弓战技命中+10",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c38": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c39": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "why": "弓术主武器：达·米纳弓战技命中+10",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c40": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c41": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c42": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c43": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "why": "弓术主武器：达·米纳弓战技命中+10",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c44": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c45": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c46": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c47": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "damina_bow",
+          "kind": "rule",
+          "why": "弓术主武器：达·米纳弓战技命中+10",
+          "url": "https://game8.jp/fe-banshisenko/819475"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c48": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "daminasword",
+          "kind": "rule",
+          "why": "剑术主武器：达·米纳剑可兑换／购买，C级即可用",
+          "url": "https://game8.jp/fe-banshisenko/819524"
+        },
+        {
+          "id": "thunder",
+          "kind": "guide",
+          "why": "第10章后招募时自带雷电剑",
+          "url": "https://game8.jp/fe-banshisenko/819521"
+        },
+        {
+          "id": "library_80469844",
+          "kind": "late",
+          "why": "第三部剑术B后换银剑",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469844"
+        }
+      ]
+    },
+    "c49": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c50": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c51": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c52": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        }
+      ]
+    },
+    "c53": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        }
+      ]
+    },
+    "c54": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "zalmoxis",
+          "kind": "exclusive",
+          "why": "贝特兰的初始装备，霸绝+无视冥府加护；仅此一把",
+          "url": "https://gamecap.jp/fe_fw/w5.html"
+        },
+        {
+          "id": "library_gw_578470",
+          "kind": "late",
+          "why": "第三部斧术B后换银斧",
+          "url": "https://gamewith.jp/fefw/578470"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c55": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469907",
+          "kind": "guide",
+          "why": "以携带火器「沙罗曼蛇」远程攻击",
+          "url": "https://gamemos.net/2026/08/25/post-147300/"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        }
+      ]
+    },
+    "c56": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        },
+        {
+          "id": "giant",
+          "kind": "rule",
+          "why": "重武器／重装：巨人戒指体格+4抵消负重；回避−20",
+          "url": "https://altema.jp/febansisenkou/annagaiden"
+        }
+      ]
+    },
+    "c57": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469850",
+          "kind": "rule",
+          "why": "枪术主武器：达·米纳枪可兑换／购买，C级即可用",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469850"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c58": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "review_wp-214",
+          "kind": "exclusive",
+          "why": "救世主的初始装备",
+          "url": "https://gamewith.jp/fefw/580414"
+        },
+        {
+          "id": "sorel_lance",
+          "kind": "exclusive",
+          "why": "无铭之枪觉醒为索雷尔的辉枪；仅此一把",
+          "url": "https://gamewith.jp/fefw/580415"
+        },
+        {
+          "id": "library_gw_578469",
+          "kind": "late",
+          "why": "第三部枪术B后换银枪",
+          "url": "https://gamewith.jp/fefw/578469"
+        }
+      ]
+    },
+    "c59": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469907",
+          "kind": "guide",
+          "why": "攻略站「推荐武器」指定沙罗曼蛇",
+          "url": "https://emagame.blog/guide/kouka/"
+        },
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "magic_staff",
+          "kind": "rule",
+          "why": "攻击魔法：魔道杖魔力+3",
+          "url": "https://game8.jp/fe-banshisenko/817533"
+        }
+      ]
+    },
+    "c60": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_gw_580457",
+          "kind": "exclusive",
+          "why": "第三部事件取得的特洛伊亚专用手甲，魔法攻击",
+          "url": "https://gamewith.jp/fefw/580457"
+        },
+        {
+          "id": "heal",
+          "kind": "rule",
+          "why": "治疗：治疗杖使回复量+10",
+          "url": "https://game8.jp/fe-banshisenko/817041"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "why": "第三部格斗术B后换银手甲",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        }
+      ]
+    },
+    "c61": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "review_wp-160",
+          "kind": "exclusive",
+          "why": "亚丝望的初始装备，可用「圣闪」",
+          "url": "https://game8.jp/fe-banshisenko/816902"
+        },
+        {
+          "id": "library_80469889",
+          "kind": "late",
+          "why": "第三部弓术B后换银弓",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469889"
+        }
+      ]
+    },
+    "c62": {
+      "checkedAt": "2026-10-20",
+      "picks": [
+        {
+          "id": "library_80469892",
+          "kind": "guide",
+          "why": "格斗术射程1–2，重量4；个人技能以手甲战技追击",
+          "url": "https://ds-can.com/nanogames/fe05/"
+        },
+        {
+          "id": "library_80469904",
+          "kind": "late",
+          "why": "第三部格斗术B后换银手甲",
+          "url": "https://appmedia.jp/fe_banshisenkou/80469904"
+        }
+      ]
+    }
+  }
+}
