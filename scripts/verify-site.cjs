@@ -917,6 +917,8 @@ assert(vm.runInContext("rosterPreferences().includes('data-family')&&rosterPrefe
 assert(vm.runInContext("rosterViewTabs().indexOf('赠礼指南')<rosterViewTabs().indexOf('角色对比')",ctx));
 const grid=vm.runInContext("skillRankGrid([DB.characters[0]],'all',unifiedLearningRows(DB.characters[0]))",ctx);
 assert(['D','C','B','A','S'].every(r=>grid.includes('<th>'+r+'</th>'))&&grid.includes('骑士先阵'));
+assert(!grid.includes('<th>E</th>'),'Hide E when character has no E records');
+const eGrid=vm.runInContext("skillRankGrid([DB.characters[0]],'all',[{name:'测试',skill:'剑术',rank:'E',learningKind:'combatArts'}])",ctx);assert(eGrid.includes('<th>E</th>'),'Show E when a recorded E skill exists');
 assert(!grid.includes('rank-threshold')&&!grid.includes('其他条件')&&!grid.includes(' / '),'Rank headers are concise and cells omit duplicated rank prefixes');
 assert(!grid.includes('剑术Lv.1')&&!grid.includes('白魔术Lv.5'),'Common proficiency levels live in the shared guide');
 assert(!grid.includes('剑术的奥妙'),'Common mastery lives in the shared guide');
