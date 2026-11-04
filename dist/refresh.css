@@ -782,3 +782,5 @@ body .equipment-library.equipment-ledger,body .equipment-library.gift-ledger{dis
 
 .route-hero-picker button>.route-fortuna-portrait{flex:none;width:40px;height:49px;min-width:40px;max-width:40px;border-radius:5px;overflow:hidden}
 
+
+.learning-unverified{margin:12px 0;padding:12px;border:1px solid var(--line);border-radius:8px}.learning-unverified summary{cursor:pointer;font-weight:600}.learning-unverified p,.learning-unverified small{display:block;color:var(--muted);font-size:12px}.learning-unverified>div{padding:5px 0;border-top:1px solid var(--line)}
