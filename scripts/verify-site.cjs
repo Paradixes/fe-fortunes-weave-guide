@@ -1,3 +1,4 @@
+require('./verify-learning-round2.cjs');
 require('./verify-strategy-ratings.cjs');
 require('./verify-video-review.cjs');
 require('./verify-video-skills.cjs');
@@ -628,7 +629,7 @@ vm.runInContext("wbDraft.stages.at(-1).classId=wbClass('勇士').id",ctx);
 assert.equal(vm.runInContext('buildPlan(DB.characters[8]).end',ctx),'舞者','Unsaved edits do not mutate the applied plan');
 assert(vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('data-inline-edit')&&!vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('class="path-why"'),'Dossier has inline controls and no expanded rationale dump');
 assert(vm.runInContext('wbStats({hp:26.6},false)',ctx).includes('entry-stat-grid'),'Expected stats reuse the reference stat component');
-assert.equal(reviewed.abilities.length,538);
+assert.equal(reviewed.abilities.length,588);
 {
  const report=JSON.parse(fs.readFileSync(root+'../data/research/proficiency-coverage-2026-10-26.json','utf8'));
  assert.equal(report.addedBindings,1258);
@@ -644,7 +645,7 @@ assert.equal(reviewed.abilities.length,538);
   const ability=reviewed.abilities.find(a=>a.name===row.name&&a.type==='特技');
   assert(ability?.acquisition.some(a=>a.characterId===row.characterId&&a.skill===row.skill&&a.rank===row.rank&&!a.uncertain),'Learning and ability index stay in sync');
  }
- for(const row of report.held){const found=reviewed.learning[row.characterId].learnedSkills.find(s=>s.name===row.name);if(found)assert(row.characterId==='c4'&&row.name==='魔力大防御'&&found.rank==='B'&&found.sources.includes('https://hyperwiki.jp/fefw/character/ch39/'),'Previously held items need explicit new character evidence');}
+ for(const row of report.held){const found=reviewed.learning[row.characterId].learnedSkills.find(s=>s.name===row.name);if(found){const rev=JSON.parse(fs.readFileSync('data/research/learning-review-round2-2026-11-04.json','utf8'));assert(row.characterId==='c4'&&row.name==='魔力大防御'&&found.rank==='B'&&found.sources.includes('https://hyperwiki.jp/fefw/character/ch39/')||rev.added.some(a=>a.characterId===row.characterId&&a.name===row.name&&a.skill===found.skill&&a.rank===found.rank&&found.sources.includes(a.source)),'Previously held items need explicit new character evidence');}}
 }
 
 const abilityIds=new Set(reviewed.abilities.map(a=>a.id));assert.equal(abilityIds.size,reviewed.abilities.length);
@@ -944,8 +945,9 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
  for(const row of report.changes){
   assert(new Set([...(row.evidence||[]).map(e=>new URL(e.url).hostname),...(row.membership?[new URL(row.membership.url).hostname]:[])]).size>=(row.verification==='explicit-character-table'?1:2));
   if(row.verification==='explicit-character-table')assert(row.evidence.every(e=>e.url.startsWith('https://hyperwiki.jp/fefw/character/')&&e.desc));
-  assert(reviewed.learning[row.characterId][row.kind].some(s=>s.name===row.name&&s.rank===row.rank&&s.skill===row.skill));
-  assert(reviewed.abilities.some(a=>a.name===row.name&&a.acquisition.some(b=>b.characterId===row.characterId&&b.rank===row.rank&&b.skill===row.skill)));
+  const fix=JSON.parse(fs.readFileSync('data/research/learning-review-round2-2026-11-04.json','utf8')).rankCorrections.find(x=>x.characterId===row.characterId&&x.name===row.name&&x.oldRank===row.rank&&x.skill===row.skill);const rank=fix?fix.rank:row.rank;
+  assert(reviewed.learning[row.characterId][row.kind].some(s=>s.name===row.name&&s.rank===rank&&s.skill===row.skill));
+  assert(reviewed.abilities.some(a=>a.name===row.name&&a.acquisition.some(b=>b.characterId===row.characterId&&b.rank===rank&&b.skill===row.skill)));
  }
  const audits=[];
  for(const ch of reviewed.database.characters){
