@@ -310,13 +310,19 @@ main#content>.route-cover{margin-top:0}
 .char-card .mini-career-track li{padding:4px}
 .char-card .mini-career-choice.primary-choice .mini-career-link{font-size:11.5px;gap:2px}
 
-/* 职业表：主修全部满足，选修任选一项；图标保留名称提示。 */
-.class-data-table{min-width:1450px!important;table-layout:auto}
-.class-data-table thead th:nth-child(n){width:auto;text-align:left;padding-left:8px}
-.class-data-table thead th:nth-child(n+4):nth-child(-n+13){min-width:37px;text-align:center}
-.class-data-table .catalog-qualification{min-width:90px;vertical-align:middle}
-.class-data-table .catalog-exp{min-width:150px}.class-data-table .catalog-intrinsic{min-width:140px}.class-data-table .catalog-proficiencies{min-width:170px}
-.class-icon-list,.class-intrinsic-list{display:flex;align-items:center;flex-wrap:wrap;gap:4px}
-.class-skill-icon{display:inline-flex;align-items:center;gap:2px;white-space:nowrap;padding:2px;border-radius:4px}
-.class-skill-icon img{width:20px;height:20px;object-fit:contain}.class-skill-icon b{font-size:12px;font-weight:650}
-.class-intrinsic-list{gap:2px 8px}.class-intrinsic-list .text-button{white-space:nowrap}
+/* 紧凑职业表：主修和选修各占一行，经验加成和技能自然换行。 */
+.class-data-table{width:100%;min-width:900px!important;table-layout:fixed}
+.class-data-table thead th:nth-child(n){width:auto;padding:6px 3px;text-align:left}
+.class-data-table thead th:nth-child(1){width:110px}.class-data-table thead th:nth-child(2){width:125px}
+.class-data-table thead th:nth-child(n+3):nth-child(-n+12){width:31px;text-align:center}
+.class-data-table thead th:nth-child(13){width:118px}.class-data-table thead th:nth-child(14){width:124px}
+.class-data-table thead th:nth-child(15){width:115px}.class-data-table thead th:nth-child(16){width:112px}
+.class-data-table td,.class-data-table th{padding:6px 3px}
+.class-data-table .catalog-qualification,.class-data-table .catalog-exp,.class-data-table .catalog-intrinsic,.class-data-table .catalog-mastery,.class-data-table .catalog-proficiencies{min-width:0;max-width:none;padding:6px 3px;vertical-align:middle}
+.class-data-table .catalog-identity{gap:5px}.class-data-table .catalog-identity .class-icon{flex-shrink:0}
+.class-data-table .class-unlock-summary{display:block;min-height:0;margin:2px 0 0;padding:0;border:0;background:none;font-size:10px;line-height:1.25;white-space:normal;text-align:left;overflow-wrap:anywhere}
+.qualification-stack{display:flex;flex-direction:column;gap:3px}.qualification-stack>div{display:flex;align-items:flex-start;gap:3px}.qualification-stack small{flex:none;color:var(--muted);font-size:10px;line-height:22px}
+.class-icon-list,.class-intrinsic-list{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
+.class-skill-icon{display:inline-flex;align-items:center;gap:1px;white-space:nowrap;padding:1px;border-radius:4px}
+.class-skill-icon img{width:18px;height:18px;object-fit:contain}.class-skill-icon b{font-size:11px;font-weight:650}
+.class-intrinsic-list{gap:2px 5px}.class-intrinsic-list .text-button,.class-data-table .catalog-mastery>.text-button{white-space:normal;line-height:1.3;text-align:left;overflow-wrap:anywhere}

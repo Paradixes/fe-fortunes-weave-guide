@@ -1038,4 +1038,6 @@ assert(vm.runInContext("classIntrinsicSkills(classBy('圣天翼兵')).some(s=>s.
 
 assert(vm.runInContext("(()=>{const h=routePicker(),x=h.slice(h.indexOf('data-guide-route=\"救世篇\"'));return x.includes('>救世篇</b><small>第三部</small>')&&x.includes('portrait route-fortuna-portrait')&&!x.includes('route-group-portrait')})()",ctx),'Salvation route label and portrait match other routes');
 
+assert(vm.runInContext("(()=>{const h=classTable([classBy('天翼兵')]);return h.includes('qualification-stack')&&h.includes('<small>主修</small>')&&h.includes('<small>选修</small>')&&!h.includes('<th scope=\"col\">主修</th>')})()",ctx),'Qualification groups occupy two labeled rows in one column');
+
 })();
