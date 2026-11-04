@@ -1,3 +1,17 @@
+// 对照职业资料表修正固有技能关联；覆盖会同时作用于职业表和角色方案。
+// 来源：https://annasnotebook.net/ja/classes/，2026-11-04。
+const CLASS_INTRINSIC_REVIEW=(()=>{
+ const list=CATALOG.classIntrinsicSkills.map(s=>({...s,classIds:[...s.classIds]})), remove=(id,cl)=>{const row=list.find(s=>s.id===id);if(row)row.classIds=row.classIds.filter(x=>x!==cl)};
+ remove('intrinsic-2ca31e447d5f','class-16');
+ remove('intrinsic-b5913a8ca639','class-58');
+ const add=(id,name,nameJa,description,classIds)=>list.push({id,name,nameJa,description,classIds,slotCost:0,kind:'职业固有',source:'https://annasnotebook.net/ja/classes/'});
+ add('intrinsic-class-fist-avoid-3','格斗回避+3','格闘回避+3','装备手甲时，回避+3。',['class-8']);
+ add('intrinsic-class-magic-hit-3','魔法命中+3','魔法命中+3','使用魔法时，命中+3。',['class-16','class-29']);
+ add('intrinsic-class-flight-avoid-7','飞行回避+7','飛行回避+7','【飞行】回避+7。',['class-36']);
+ add('intrinsic-class-fist-avoid-7','格斗回避+7','格闘回避+7','装备手甲时，回避+7。',['class-46']);
+ add('intrinsic-class-magic-hit-10','魔法命中+10','魔法命中+10','使用魔法时，命中+10。',['class-58']);
+ return list;
+})();
 // Training goals are acquisition goals, not the current class's weapon permissions.
 function currentGuideClass(c){
  const b=buildPlan(c),r=routeContext(c),viewing=activeCharacter===c.id;
@@ -51,7 +65,7 @@ function trainingGoalPlan(c){const qualification=qualificationTargets(c).map(g=>
  return {qualification,electives,goals:[...qualification,...electives]};
 }
 function trainingGoalHTML(c,g){const label=g.purpose==='qualification'?'转职资格':g.advanced?'进阶选修':'技能选修';return `<div class="training-goal ${g.purpose==='qualification'?'goal-qualification':'goal-elective'}"><span class="training-goal-label">${label}</span>${proficiencyTag(g.skill,g.rank)}${g.benefits?.length?`<span class="training-goal-benefits">${g.benefits.map(s=>{const a=learningAbility(c,s,s.kind==='法术'?'magic':s.kind==='战技'?'combatArts':'learnedSkills');return `${a?`<button class="text-button" data-reference-type="ability" data-reference-id="${a.id}">${esc(s.name)}</button>`:esc(s.name)}<small>${esc(s.why)}</small>`}).join('')}</span>`:''}</div>`}
-function classIntrinsicSkills(cl){return (CATALOG.classIntrinsicSkills||[]).filter(s=>s.classIds.includes(cl?.id))}
+function classIntrinsicSkills(cl){return CLASS_INTRINSIC_REVIEW.filter(s=>s.classIds.includes(cl?.id))}
 function characterFixedSkills(c,cl){const a=CATALOG.abilities.find(a=>a.type==='个人技能'&&a.name===c.personalSkill),rows=[{id:a?.id,name:c.personalSkill,description:c.personalSkillEffect,kind:'个人',referenceType:'ability'},...classIntrinsicSkills(cl).map(s=>({...s,kind:'职业',referenceType:'intrinsic'}))];
  if(typeof wbEffective==='function'){const plan=wbEffective(c),stage=plan?.d.stages.at(-1),pet=PET_GUIDE.pets.find(p=>p.id===stage?.pet);if(pet&&stage.friendship>=3&&pet.compatibleClasses.includes(cl?.cn))for(const s of pet.skills)rows.push({name:pet.name+' · '+s.label,description:s.effect,kind:'骑乘'});}
  return rows;

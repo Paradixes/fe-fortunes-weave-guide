@@ -4,7 +4,7 @@ actionChips=function(c,compact=false){const r=recommendations(c),chip=(s,type)=>
  return `${compact?'':`<p class="muted recommendation-scope">当前技能方案：${esc(r.className)}。目标配装参考，不代表已习得；舞蹈、攻击与支援需比较行动收益。</p>`}<div class="action-chips ${compact?'compact-actions':''}">${row(compact?'战技':`普通战技 ${r.arts.length}/${r.slots}`,r.arts,'art')}${row('职业行动 · 不占槽',r.fixedActions||[],'art')}${row('炽焰技艺 · 独立',r.blazeArts||[],'art')}${row('法术',r.magic,'magic')}${row(compact?'特技':`装备特技 ${r.skills.length}/5`,r.skills,'skill')}${fixed?`<div class="${compact?'loadout-row':'action-row'}"><small>固有 · 不占槽</small><div class="chip-list">${fixed}</div></div>`:''}</div>`;
 };
 const intrinsicBaseQuick=quickReferenceHTML;
-quickReferenceHTML=function(type,id){if(type!=='intrinsic')return intrinsicBaseQuick(type,id);const s=CATALOG.classIntrinsicSkills.find(s=>s.id===id);if(!s)return '';return `<div class="class-quick-head"><b>${esc(s.name)}</b><button data-class-quick-close aria-label="关闭固有能力速览">×</button></div><small>职业固有能力 · 不占装备特技槽</small><p>${esc(s.description)}</p><p>${s.classIds.map(id=>esc(classBy(id)?.cn||id)).join('、')}</p>`};
+quickReferenceHTML=function(type,id){if(type!=='intrinsic')return intrinsicBaseQuick(type,id);const s=CLASS_INTRINSIC_REVIEW.find(s=>s.id===id);if(!s)return '';return `<div class="class-quick-head"><b>${esc(s.name)}</b><button data-class-quick-close aria-label="关闭固有能力速览">×</button></div><small>职业固有能力 · 不占装备特技槽</small><p>${esc(s.description)}</p><p>${s.classIds.map(id=>esc(classBy(id)?.cn||id)).join('、')}</p>`};
 const intrinsicBaseTrigger=classQuickTrigger;
 classQuickTrigger=function(t){return t.closest?.('[data-reference-type="intrinsic"]')||intrinsicBaseTrigger(t)};
 const intrinsicBaseReference=referenceMarkup;

@@ -309,3 +309,14 @@ main#content>.route-cover{margin-top:0}
 .char-card .mini-career-link>span:last-child{min-width:0;white-space:normal;overflow-wrap:anywhere;text-overflow:clip}
 .char-card .mini-career-track li{padding:4px}
 .char-card .mini-career-choice.primary-choice .mini-career-link{font-size:11.5px;gap:2px}
+
+/* 职业表：主修全部满足，选修任选一项；图标保留名称提示。 */
+.class-data-table{min-width:1450px!important;table-layout:auto}
+.class-data-table thead th:nth-child(n){width:auto;text-align:left;padding-left:8px}
+.class-data-table thead th:nth-child(n+4):nth-child(-n+13){min-width:37px;text-align:center}
+.class-data-table .catalog-qualification{min-width:90px;vertical-align:middle}
+.class-data-table .catalog-exp{min-width:150px}.class-data-table .catalog-intrinsic{min-width:140px}.class-data-table .catalog-proficiencies{min-width:170px}
+.class-icon-list,.class-intrinsic-list{display:flex;align-items:center;flex-wrap:wrap;gap:4px}
+.class-skill-icon{display:inline-flex;align-items:center;gap:2px;white-space:nowrap;padding:2px;border-radius:4px}
+.class-skill-icon img{width:20px;height:20px;object-fit:contain}.class-skill-icon b{font-size:12px;font-weight:650}
+.class-intrinsic-list{gap:2px 8px}.class-intrinsic-list .text-button{white-space:nowrap}

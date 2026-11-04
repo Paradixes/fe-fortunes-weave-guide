@@ -260,7 +260,7 @@ for(const cl of vm.runInContext('DB.classes',ctx)){
  const bytes=fs.readFileSync(root+`assets/classes/${cl.id}.webp`);
  assert(bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP','Invalid class icon '+cl.cn);
 }
-assert(!page.includes('data-character-filter="class"')&&!page.includes('推荐角色')&&page.includes('qualification-token'),'Class catalogue focuses on qualification and statistics');
+assert(!page.includes('data-character-filter="class"')&&!page.includes('推荐角色')&&page.includes('class-skill-icon')&&page.includes('技能 EXP 加成')&&page.includes('固有特技'),'Class catalogue focuses on qualification and statistics');
 vm.runInContext("location.hash='#equipment';query='';render()",ctx);assert(nodes['#content'].innerHTML.includes('data-character-filter="equipment"')&&nodes['#content'].innerHTML.includes('data-character-filter-search="equipment"'),'Equipment character filter uses searchable picker');
 vm.runInContext("location.hash='#compare/c8,c7';render()",ctx);{const h=nodes['#content'].innerHTML;assert(h.includes('data-character-filter="compare"')&&h.includes('character-filter-group')&&!h.includes('data-compare-add')&&!h.includes('character-filter-all'),'Compare add uses the shared searchable picker without placeholder avatar');}
 vm.runInContext("location.hash='#overview';route='レダ';routeGuideView='plan';render()",ctx);page=nodes['#content'].innerHTML;assert(page.includes('id="route-fusion"'));page=vm.runInContext('routeEquipmentContent()',ctx);assert(page.indexOf('id="route-gear"')<page.indexOf('id="route-map"'));const gear=page.slice(page.indexOf('id="route-gear"'));assert(!gear.includes('gear-plan-grid')&&!gear.includes('装备详情与材料地点')&&gear.indexOf('weapon-summary')<gear.indexOf('material-summary'));assert(gear.includes('<th>获取途径</th>')&&!gear.includes('缺少部分的获取路径'));
@@ -977,7 +977,7 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
  assert(vm.runInContext("guideRecommendationFor({name:'螺旋射击'},'combatArts').caution.includes('不稳定')&&!acquisitionMerit({name:'随便的技能',description:'攻击力+9'},'learnedSkills')",ctx),'Recommendations come from reviewed judgments, not keyword magnitude');
  assert(vm.runInContext("skillRecommendationQuick(abilityName('熟练之技')).includes('AppMedia')&&skillRecommendationQuick(abilityName('熟练之技')).includes('redfreshet')",ctx),'Hover retains the recommendation rationale and linked sources');
  for(const cl of reviewed.database.classes){ctx.unlockProbeId=cl.id;
-  assert(vm.runInContext("(()=>{const c=DB.classes.find(c=>c.id===unlockProbeId),h=classTable([c]);return !h.includes('解锁条件 ↗')&&!h.includes('考试凭证')&&h.includes(classRequirementTokens(c))})()",ctx),'Class list keeps qualification facts and removes generic unlock/certificate clutter: '+cl.cn);
+  assert(vm.runInContext("(()=>{const c=DB.classes.find(c=>c.id===unlockProbeId),h=classTable([c]);return !h.includes('解锁条件 ↗')&&!h.includes('考试凭证')&&h.includes(classQualificationCell(c.must,'主修'))&&h.includes(classQualificationCell(c.any,'选修'))})()",ctx),'Class list keeps qualification facts and removes generic unlock/certificate clutter: '+cl.cn);
  }
  assert(vm.runInContext("(()=>{const h=classRequirementTokens(classBy('驭龙兵'));return h.includes('qualification-line')&&!h.includes('requirement-and')&&!/[（）]/.test(h)&&h.includes('或')})()",ctx),'Required skill and alternative skill groups remain distinct lines without AND/parentheses');
  assert(vm.runInContext("!classUnlockHint(classBy('侍道'))&&!classUnlockHint(classBy('战斗将领'))&&classUnlockHint(classBy('驭龙兵')).includes('凯伊篇')&&classUnlockHint(classBy('舞者')).includes('蕾达篇')",ctx),'Only meaningful special restrictions remain on class rows');
@@ -1030,4 +1030,10 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
 console.log('PASS learning coverage: 256 sourced bindings, exact plus ranks, independent acquisition highlights, Lv family deduplication and shared roster filters.');
 
 }
+assert(vm.runInContext("DB.classes.every(c=>Object.hasOwn(CLASS_SKILL_EXP,c.id))",ctx),'EXP bonuses cover all classes');
+assert(vm.runInContext("classExpCell(classBy('剑客')).includes('sword.webp')&&classExpCell(classBy('剑客')).includes('+2')",ctx),'Swordmaster proficiency bonus displayed with icon and value');
+assert(vm.runInContext("!decorateSkillHTML('<p>多重反击术</p>').includes('fist.webp')",ctx),'Do not decorate a substring in a skill name');
+
+assert(vm.runInContext("classIntrinsicSkills(classBy('圣天翼兵')).some(s=>s.name==='飞行回避+7')&&classIntrinsicSkills(classBy('萨满巫师')).some(s=>s.name==='魔法命中+3')&&!classIntrinsicSkills(classBy('萨满巫师')).some(s=>s.name==='魔法命中+5')",ctx),'Intrinsic corrections are shared across class and character views');
+
 })();
