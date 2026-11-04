@@ -120,3 +120,5 @@ body.dark .route-cover-video{opacity:.24;mix-blend-mode:screen;filter:saturate(1
  .route-cover-video,.route-art-panel .hero-live-canvas{display:none}
  .route-art-panel .hero-art.has-live-rig{opacity:1}
 }
+
+.reunion-fortuna{position:absolute;display:block;left:50%;bottom:-4px;transform:translateX(-50%);width:min(100%,460px);height:100%;overflow:visible;filter:drop-shadow(0 12px 12px #0002)}

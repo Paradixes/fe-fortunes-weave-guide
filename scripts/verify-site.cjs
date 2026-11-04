@@ -68,7 +68,7 @@ for(const r of ['レダ','カイ','ディートリヒ','セオドラ','救世篇
  const h=vm.runInContext(`route=${JSON.stringify(r)};routeCover(route)`,ctx);
  assert((h.match(/role="tab"/g)||[]).length===5&&h.includes('aria-selected="true"'),'Integrated five route tabs '+r);
  assert(!h.includes('在琴声与复仇之间')&&!h.includes('非游戏原台词'));
- if(r==='救世篇')assert((h.match(/<image /g)||[]).length===4&&h.includes('class="reunion-composite"'),'Four full artworks in reunion');
+ if(r==='救世篇')assert(h.includes('class="reunion-fortuna"')&&h.includes('assets/fortuna-official.webp')&&!h.includes('reunion-composite'),'Fortuna replaces the former four-hero reunion artwork');
 }
 assert(vm.runInContext("DB.classes.every(c=>!classCatalogCard(c).includes('转职等级')&&!classCatalogCard(c).includes('所需声望')&&!classCatalogCard(c).includes('class-entry-metrics'))",ctx));
 assert(vm.runInContext("classTierRequirements(DB.classes.filter(c=>c.col_1==='中级职业'),'').includes('转职等级 20')&&classTierRequirements(DB.classes.filter(c=>c.col_1==='中级职业'),'').includes('职业声望 4')",ctx));

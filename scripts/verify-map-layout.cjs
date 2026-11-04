@@ -8,6 +8,7 @@ for(const label of ['设施','地点','采集','坐骑']) assert(all.includes('<
 assert(!all.includes('fireemblem.top/maps'),'No unwanted external map link');
 const third=vm.runInContext("mapArea='救世篇';mapPage()",ctx);assert(third.includes('救世篇目前仅收录部分专属地点')&&third.includes('女神芙托娜'));
 const picker=vm.runInContext("routePicker()",ctx);assert(picker.includes('fortuna-salvation.png')&&!picker.includes('route-group.svg'));
+const cover=vm.runInContext("routeCover('救世篇')",ctx);assert(cover.includes('fortuna-official.webp')&&!cover.includes('reunion-composite'));
 console.log('PASS map layout: six route filters, grouped layers, compact results, mobile and desktop controls, coverage warning and goddess art.');
 
 })().catch(e=>{console.error(e);process.exitCode=1;});
