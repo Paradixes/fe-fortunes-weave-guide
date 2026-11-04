@@ -918,11 +918,11 @@ assert(vm.runInContext("rosterViewTabs().indexOf('赠礼指南')<rosterViewTabs(
 const grid=vm.runInContext("skillRankGrid([DB.characters[0]],'all',unifiedLearningRows(DB.characters[0]))",ctx);
 assert(['D','C','B','A','S'].every(r=>grid.includes('<th>'+r+'</th>'))&&grid.includes('骑士先阵'));
 assert(!grid.includes('rank-threshold')&&!grid.includes('其他条件')&&!grid.includes(' / '),'Rank headers are concise and cells omit duplicated rank prefixes');
-assert(grid.includes('剑术Lv.1')&&grid.includes('白魔术Lv.5'),'Common proficiency levels are visible in character learning');
-assert(grid.includes('剑术的奥妙'),'Character-specific high-rank skills remain visible');
+assert(!grid.includes('剑术Lv.1')&&!grid.includes('白魔术Lv.5'),'Common proficiency levels live in the shared guide');
+assert(!grid.includes('剑术的奥妙'),'Common mastery lives in the shared guide');
 for(const c of reviewed.database.characters){
  ctx.learningCharacterId=c.id;
- assert(vm.runInContext("unifiedLearningRows(DB.characters.find(c=>c.id===learningCharacterId)).every(s=>s.learningKind!=='personalSkills')",ctx));
+ assert(vm.runInContext("unifiedLearningRows(DB.characters.find(c=>c.id===learningCharacterId)).every(s=>s.learningKind!=='personalSkills'&&!isCommonProficiencyLevel(s))",ctx));
 }
 vm.runInContext("location.hash='#character/c0';paintCharacter('c0')",ctx);
 const focusedDetail=nodes['#characterPage'].innerHTML;
