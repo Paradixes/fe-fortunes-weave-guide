@@ -1036,4 +1036,6 @@ assert(vm.runInContext("!decorateSkillHTML('<p>多重反击术</p>').includes('f
 
 assert(vm.runInContext("classIntrinsicSkills(classBy('圣天翼兵')).some(s=>s.name==='飞行回避+7')&&classIntrinsicSkills(classBy('萨满巫师')).some(s=>s.name==='魔法命中+3')&&!classIntrinsicSkills(classBy('萨满巫师')).some(s=>s.name==='魔法命中+5')",ctx),'Intrinsic corrections are shared across class and character views');
 
+assert(vm.runInContext("(()=>{const h=routePicker(),x=h.slice(h.indexOf('data-guide-route=\"救世篇\"'));return x.includes('>救世篇</b><small>第三部</small>')&&x.includes('portrait route-fortuna-portrait')&&!x.includes('route-group-portrait')})()",ctx),'Salvation route label and portrait match other routes');
+
 })();

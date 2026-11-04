@@ -780,7 +780,11 @@ body .equipment-library.equipment-ledger,body .equipment-library.gift-ledger{dis
 .gear-review details{margin:8px 0 12px}.gear-review details>summary{cursor:pointer;font-weight:600;margin:8px 0}
 .gear-review-sources{margin:8px 0 14px;font-size:12px}
 
-.route-hero-picker button>.route-fortuna-portrait{flex:none;width:40px;height:49px;min-width:40px;max-width:40px;border-radius:5px;overflow:hidden}
+.route-hero-picker button>.route-fortuna-portrait{display:block;flex:none;width:40px;height:49px;min-width:40px;max-width:40px;border-radius:5px;overflow:hidden;clip-path:inset(0 round 5px);transition:transform 260ms var(--motion-ease),filter 200ms ease}
+.route-hero-picker button:not(.active)>.route-fortuna-portrait{filter:saturate(.75)}
+.route-hero-picker button:hover>.route-fortuna-portrait{transform:scale(1.08) rotate(-2deg);filter:none}
+.route-hero-picker button.active>.route-fortuna-portrait{filter:none;box-shadow:0 0 0 2px color-mix(in srgb,var(--gold) 70%,transparent)}
+@media(prefers-reduced-motion:reduce){.route-hero-picker button:hover>.route-fortuna-portrait{transform:none;transition:none}}
 
 
 .learning-unverified{margin:12px 0;padding:12px;border:1px solid var(--line);border-radius:8px}.learning-unverified summary{cursor:pointer;font-weight:600}.learning-unverified p,.learning-unverified small{display:block;color:var(--muted);font-size:12px}.learning-unverified>div{padding:5px 0;border-top:1px solid var(--line)}
