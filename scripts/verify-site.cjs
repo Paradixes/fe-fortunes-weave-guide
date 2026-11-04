@@ -1040,4 +1040,6 @@ assert(vm.runInContext("(()=>{const h=routePicker(),x=h.slice(h.indexOf('data-gu
 
 assert(vm.runInContext("(()=>{const h=classTable([classBy('天翼兵')]);return h.includes('qualification-stack')&&h.includes('<small>主修</small>')&&h.includes('<small>选修</small>')&&!h.includes('<th scope=\"col\">主修</th>')})()",ctx),'Qualification groups occupy two labeled rows in one column');
 
+{const cover=fs.readFileSync(root+'cover.css','utf8');assert(cover.includes('.route-cover-fx{position:absolute;inset:70px 0 0')&&cover.includes('.route-cover-fx{inset:90px 0 0}')&&!/\.reunion-cover\s+\.route-cover-fx\s*\{[^}]*inset\s*:\s*0(?:[;}])/.test(cover),'Salvation background uses the same desktop and mobile inset as the four hero routes');}
+
 })();
