@@ -1,0 +1,13 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},dataset:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,URLSearchParams,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','catalog-ui.js','app.js','reasons.js','articles.js','skill-planning.js','v9.js','cultivation.js','roster-map.js','search.js','anna-agent.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
+
+(async()=>{await new Promise(r=>setImmediate(r));
+vm.runInContext('PINS='+fs.readFileSync(root+'map.json')+';mapLoaded=true;MAP_EXTRAS={shops:[],gather:[],mounts:[],renown:[]};',ctx);
+const all=vm.runInContext("mapArea='all';mapPage()",ctx); assert(all.includes('data-atlas-panel-toggle')&&all.includes('data-atlas-mobile-toggle')&&all.includes('atlas-results-fold'));
+for(const r of ['レダ','カイ','ディートリヒ','セオドラ','救世篇','all']) assert(all.includes('data-map-area="'+r+'"'),r);
+for(const label of ['设施','地点','采集','坐骑']) assert(all.includes('<h4>'+label+'</h4>'),label);
+assert(!all.includes('fireemblem.top/maps'),'No unwanted external map link');
+const third=vm.runInContext("mapArea='救世篇';mapPage()",ctx);assert(third.includes('救世篇目前仅收录部分专属地点')&&third.includes('女神芙托娜'));
+const picker=vm.runInContext("routePicker()",ctx);assert(picker.includes('fortuna-salvation.png')&&!picker.includes('route-group.svg'));
+console.log('PASS map layout: six route filters, grouped layers, compact results, mobile and desktop controls, coverage warning and goddess art.');
+
+})().catch(e=>{console.error(e);process.exitCode=1;});

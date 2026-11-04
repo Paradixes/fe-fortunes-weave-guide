@@ -779,3 +779,6 @@ body .equipment-library.equipment-ledger,body .equipment-library.gift-ledger{dis
 .gear-plan-notes li p small{display:block;margin-top:3px;line-height:1.45}
 .gear-review details{margin:8px 0 12px}.gear-review details>summary{cursor:pointer;font-weight:600;margin:8px 0}
 .gear-review-sources{margin:8px 0 14px;font-size:12px}
+
+.route-hero-picker button>.route-fortuna-portrait{flex:none;width:40px;height:49px;min-width:40px;max-width:40px;border-radius:5px;overflow:hidden}
+
