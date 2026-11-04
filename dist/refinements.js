@@ -111,7 +111,7 @@ function abilityLearningBindings(){
  abilityLearningCache={source:LEARNING,index};return index;
 }
 function abilityResolvedBindings(a){const learned=abilityLearningBindings().get(a.id)||[],actors=new Set(learned.map(b=>b.characterId));return [...a.acquisition.filter(b=>!actors.has(b.characterId)||!['技能等级','战技习得','法术习得'].includes(b.method)),...learned]}
-function abilityProficiencyBindings(a,characterId){return abilityResolvedBindings(a).map(b=>({...b,skill:learningProficiency(b)})).filter(b=>(!characterId||b.characterId===characterId)&&PROFICIENCY_NAMES.includes(b.skill)&&/^[DCBAS]\+?$/.test(b.rank||'')&&!isCommonProficiencyLevel(a)&&b.weapon!=='圣焰'&&['特技','战技','法术'].includes(a.type))}
+function abilityProficiencyBindings(a,characterId){return abilityResolvedBindings(a).map(b=>({...b,skill:learningProficiency(b)})).filter(b=>(!characterId||b.characterId===characterId)&&PROFICIENCY_NAMES.includes(b.skill)&&/^[EDCBAS]\+?$/.test(b.rank||'')&&b.weapon!=='圣焰'&&['特技','战技','法术'].includes(a.type))}
 function abilityCatalogBindings(a){const rows=abilityCharacter==='all'?abilityResolvedBindings(a).map(b=>({...b,skill:learningProficiency(b)==='其他'?'':learningProficiency(b)})):abilityProficiencyBindings(a,abilityCharacter);return abilityProficiency==='all'?rows:rows.filter(b=>b.skill===abilityProficiency)}
 function abilityCatalogReview(a){return guideRecommendationFor(a,a.type)}
 function readAbilityCatalogRoute(){

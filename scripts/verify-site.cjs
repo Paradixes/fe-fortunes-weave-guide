@@ -628,7 +628,7 @@ vm.runInContext("wbDraft.stages.at(-1).classId=wbClass('勇士').id",ctx);
 assert.equal(vm.runInContext('buildPlan(DB.characters[8]).end',ctx),'舞者','Unsaved edits do not mutate the applied plan');
 assert(vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('data-inline-edit')&&!vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('class="path-why"'),'Dossier has inline controls and no expanded rationale dump');
 assert(vm.runInContext('wbStats({hp:26.6},false)',ctx).includes('entry-stat-grid'),'Expected stats reuse the reference stat component');
-assert.equal(reviewed.abilities.length,507);
+assert.equal(reviewed.abilities.length,538);
 {
  const report=JSON.parse(fs.readFileSync(root+'../data/research/proficiency-coverage-2026-10-26.json','utf8'));
  assert.equal(report.addedBindings,1258);
@@ -644,7 +644,7 @@ assert.equal(reviewed.abilities.length,507);
   const ability=reviewed.abilities.find(a=>a.name===row.name&&a.type==='特技');
   assert(ability?.acquisition.some(a=>a.characterId===row.characterId&&a.skill===row.skill&&a.rank===row.rank&&!a.uncertain),'Learning and ability index stay in sync');
  }
- for(const row of report.held)assert(!reviewed.learning[row.characterId].learnedSkills.some(s=>s.name===row.name),'Unverified effects are not imported');
+ for(const row of report.held){const found=reviewed.learning[row.characterId].learnedSkills.find(s=>s.name===row.name);if(found)assert(row.characterId==='c4'&&row.name==='魔力大防御'&&found.rank==='B'&&found.sources.includes('https://hyperwiki.jp/fefw/character/ch39/'),'Previously held items need explicit new character evidence');}
 }
 
 const abilityIds=new Set(reviewed.abilities.map(a=>a.id));assert.equal(abilityIds.size,reviewed.abilities.length);
@@ -1001,9 +1001,9 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
  assert(vm.runInContext("skillDatabasePage().includes('特技、战技与魔法')&&skillDatabasePage().includes('data-ability-character')&&skillDatabasePage().includes('data-ability-recommendation')",ctx));
  for(const c of reviewed.database.characters){
   ctx.catalogCharacter=c.id;
-  const probe=vm.runInContext(`(()=>{abilityCharacter=catalogCharacter;abilityProficiency='all';const c=DB.characters.find(c=>c.id===catalogCharacter),expected=[...new Set(unifiedLearningRows(c).filter(s=>/^[DCBAS]\\+?$/.test(s.rank||'')).map(s=>learningAbility(c,s,s.learningKind)?.id).filter(Boolean))].sort(),actual=CATALOG.abilities.filter(a=>abilityProficiencyBindings(a,c.id).length).map(a=>a.id).sort();return {expected,actual}})()`,ctx);
+  const probe=vm.runInContext(`(()=>{abilityCharacter=catalogCharacter;abilityProficiency='all';const c=DB.characters.find(c=>c.id===catalogCharacter),expected=[...new Set(unifiedLearningRows(c).filter(s=>/^[EDCBAS]\\+?$/.test(s.rank||'')).map(s=>learningAbility(c,s,s.learningKind)?.id).filter(Boolean))].sort(),actual=CATALOG.abilities.filter(a=>abilityProficiencyBindings(a,c.id).length).map(a=>a.id).sort();return {expected,actual}})()`,ctx);
   assert.deepStrictEqual(probe.actual,probe.expected,'Character catalogue matches proficiency grid: '+c.cn);
-  const gates=vm.runInContext(`(()=>{const c=DB.characters.find(c=>c.id===catalogCharacter),expected=unifiedLearningRows(c).filter(s=>/^[DCBAS]\\+?$/.test(s.rank||'')).map(s=>[learningAbility(c,s,s.learningKind)?.id,s.skill,s.rank].join('|')),actual=CATALOG.abilities.flatMap(a=>abilityProficiencyBindings(a,c.id).map(b=>[a.id,b.skill,b.rank].join('|')));return {expected:[...new Set(expected)].sort(),actual:[...new Set(actual)].sort()}})()`,ctx);
+  const gates=vm.runInContext(`(()=>{const c=DB.characters.find(c=>c.id===catalogCharacter),expected=unifiedLearningRows(c).filter(s=>/^[EDCBAS]\\+?$/.test(s.rank||'')).map(s=>[learningAbility(c,s,s.learningKind)?.id,s.skill,s.rank].join('|')),actual=CATALOG.abilities.flatMap(a=>abilityProficiencyBindings(a,c.id).map(b=>[a.id,b.skill,b.rank].join('|')));return {expected:[...new Set(expected)].sort(),actual:[...new Set(actual)].sort()}})()`,ctx);
   assert.deepStrictEqual(gates.actual,gates.expected,'Character-specific ranks and proficiencies match: '+c.cn);
  }
  vm.runInContext("location.hash='#skills/filter?character=c7&proficiency=剑术&recommendation=priority';query='';skillDatabasePage()",ctx);
