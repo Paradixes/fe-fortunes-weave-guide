@@ -710,7 +710,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
 // v104: homepage Anna live figure + ask window, Anna pet, dossier hierarchy, legacy map/recruit/gift data
 {
  const html=fs.readFileSync(root+'index.html','utf8');
- assert(html.includes('anna-home.css?v=')&&html.includes('anna-home.js?v=')&&html.includes('anna-pet.css?v=')&&html.includes('anna-pet.js?v='),'Anna home and pet assets registered in index.html');
+ assert(html.includes('anna-home.css?v=')&&html.includes('anna-home.js?v=')&&!html.includes('anna-pet.css?v=')&&!html.includes('anna-pet.js?v='),'Anna home remains available and white pigeon pet is removed');
  assert.equal(vm.runInContext("(homePage().match(/<h1\\b/g)||[]).length",ctx),1,'Homepage has one semantic main heading');
  assert(fs.readFileSync(root+'compact.css','utf8').includes('minmax(min(100%,240px),1fr)'),'Narrow skill grids cannot force horizontal page overflow');
  assert(!fs.readFileSync(__filename,'utf8').split('\n')[0].includes('anna-home')&&!fs.readFileSync(__filename,'utf8').split('\n')[0].includes('anna-pet'),'Anna home/pet stay out of the vm harness');
@@ -1041,5 +1041,7 @@ assert(vm.runInContext("(()=>{const h=routePicker(),x=h.slice(h.indexOf('data-gu
 assert(vm.runInContext("(()=>{const h=classTable([classBy('天翼兵')]);return h.includes('qualification-stack')&&h.includes('<small>主修</small>')&&h.includes('<small>选修</small>')&&!h.includes('<th scope=\"col\">主修</th>')})()",ctx),'Qualification groups occupy two labeled rows in one column');
 
 {const cover=fs.readFileSync(root+'cover.css','utf8');assert(cover.includes('.route-cover-fx{position:absolute;inset:70px 0 0')&&cover.includes('.route-cover-fx{inset:90px 0 0}')&&!/\.reunion-cover\s+\.route-cover-fx\s*\{[^}]*inset\s*:\s*0(?:[;}])/.test(cover),'Salvation background uses the same desktop and mobile inset as the four hero routes');}
+
+{const cover=fs.readFileSync(root+'cover.css','utf8');assert(!/\.reunion-cover\s*,\s*body\.dark\s+\.reunion-cover\s*\{[^}]*grid-template-rows/.test(cover),'Dark mode does not override the responsive route cover height');assert(/@media\(min-width:1001px\)\s*\{\s*\.route-cover,\.reunion-cover\s*\{grid-template-rows:300px auto;\}/.test(cover),'All route covers share the same desktop height');}
 
 })();

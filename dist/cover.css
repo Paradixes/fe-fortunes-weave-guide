@@ -17,7 +17,7 @@
 .route-tab-copy { display:flex;flex-direction:column;gap:4px; }
 .route-tab-copy b { font-size:13px; }
 .route-tab-copy small { font-size:11px; }
-.reunion-cover,body.dark .reunion-cover { background:none;border:0;grid-template-columns:56% 44%;grid-template-rows:260px auto; }
+.reunion-cover { background:none;border:0;grid-template-columns:56% 44%;grid-template-rows:260px auto; }
 .reunion-cover::before { content:"";position:absolute;inset:0 0 0;border:1px solid var(--line);border-radius:12px;background:linear-gradient(110deg,var(--tint),var(--card) 72%);z-index:-1; }
 .reunion-art {height:260px;}
 .reunion-composite { position:absolute;display:block;left:50%;bottom:-28px;width:100%;height:auto;max-width:673px;transform:translateX(-50%);overflow:visible;margin:0; }
