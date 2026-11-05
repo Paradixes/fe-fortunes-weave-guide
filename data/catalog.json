@@ -668,12 +668,12 @@
     "帕伊亚": "派芽"
   },
   "entryDataResearch": {
-    "checkedAt": "2026-10-13",
+    "checkedAt": "2026-11-05",
     "referenceSource": "https://fire-emblem-fw.site/characters.html",
     "scope": "角色基础属性为资料参考快照，未逐主角路线核实，不作为各线实际入队数值。血印解锁阶段未完整核实，不推断随主角路线必然变化。",
     "comparisonSource": "https://al-gest.com/fe-banshisenkou/fe-banshisenkou-tips02/",
     "comparisonScope": "该攻略比较凯伊与蕾达路线的部分同等级招募样本，观察到属性一致；不同等级的实测数值不同。样本不覆盖全部角色与路线，不建立全角色招募公式。",
-    "referenceCheck": "与中文站当前资料核对：52名角色有基础面板参考，11名缺少；基础快照不代表任意时点实际入队面板。",
+    "referenceCheck": "补充11名角色的参考等级与不含职业补正面板；实际入队等级、路线与成长可能不同，均作为示例，不自动当成当前存档数据。",
     "bloodMarkSource": "https://gamewith.jp/fefw/576935",
     "bloodMarkScope": "血印按角色与解锁条件记录，不按主角路线复制变体；凯伊使徒之天冠Lv.10解锁，其他已确认条件为初始或特定事件。"
   },
@@ -6904,8 +6904,18 @@
         "rating": "A",
         "ratingReason": "已有翼兵成果、飞行适性和不可步行地形攻速奖励适合直接补机动位，不必推倒重练成剑勇士。",
         "alias": "亚历山德拉",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 29,
+          "str": 12,
+          "mag": 10,
+          "spd": 15,
+          "dex": 14,
+          "def": 9,
+          "res": 12,
+          "lck": 17,
+          "cha": 17
+        },
+        "baseLevel": 20,
         "bloodMarks": [],
         "startClass": "天翼兵",
         "recommendedActions": {
@@ -7174,7 +7184,10 @@
           ],
           "judgement": "已有翼兵成果、飞行适性和不可步行地形攻速奖励适合直接补机动位，不必推倒重练成剑勇士。 较晚加入压缩收益窗口；地形攻速并非常驻，物理伤害仍要实战检验。",
           "scope": "作者观点；画面与口述分开记录，精通中转不等于最终职业。"
-        }
+        },
+        "baseReferenceClass": "天翼兵",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/alexandra/"
       },
       {
         "name": "ピーテル",
@@ -14461,8 +14474,18 @@
         "rating": "A",
         "ratingReason": "装备弓固定力量+3与弓战技等级增伤形成真实单发优势，弓A大强弓可作高命中攻坚；不只是低速普通弓手。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 35,
+          "str": 21,
+          "mag": 9,
+          "spd": 13,
+          "dex": 13,
+          "def": 13,
+          "res": 9,
+          "lck": 13,
+          "cha": 10
+        },
+        "baseLevel": 23,
         "bloodMarks": [],
         "startClass": "弓箭手",
         "recommendedActions": {
@@ -14606,7 +14629,10 @@
           "judgement": "装备弓固定力量+3与弓战技等级增伤形成真实单发优势，弓A大强弓可作高命中攻坚；不只是低速普通弓手。 第7～9章及声望门槛压缩培养窗口；35级强化不能当初始，破坏箭50%加攻不可靠，弓骑机动需马术资格及解锁。",
           "scope": "视频作者观点；路线模拟、旁白与站内判断分开。实际转职资格、技能权限及当前进度仍需核对。",
           "evidence": "画面与旁白核对"
-        }
+        },
+        "baseReferenceClass": "弓箭手",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/inyoni/"
       },
       {
         "name": "ジャスミン",
@@ -18657,8 +18683,18 @@
         "rating": "A+",
         "ratingReason": "力速技巧成长与后攻攻速/回避加成支持强力剑骑，已有荣光骑士可直接接续；但没有已核实的稀缺行动支援或专属攻坚机制支持S-。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 46,
+          "str": 30,
+          "mag": 7,
+          "spd": 33,
+          "dex": 26,
+          "def": 22,
+          "res": 15,
+          "lck": 18,
+          "cha": 22
+        },
+        "baseLevel": 40,
         "bloodMarks": [],
         "startClass": "荣光骑士",
         "recommendedActions": {
@@ -18797,7 +18833,10 @@
           "judgement": "力速技巧成长与后攻攻速/回避加成支持强力剑骑，已有荣光骑士可直接接续；但没有已核实的稀缺行动支援或专属攻坚机制支持S-。 第二部2章且需第一部前置支线，不能算全路线开局主力；低魔防和回避不可靠限制受敌，不能仅按成长表推定现成面板。 当前剑技学习表不完整；没有收录不等于不会，不因此否定既有剑骑能力。",
           "scope": "基于自动字幕整理，转职画面和识别有待进一步核对；不是已经验证的游戏机制。",
           "evidence": "字幕整理，画面待核"
-        }
+        },
+        "baseReferenceClass": "荣光骑士",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/creek/"
       },
       {
         "name": "ネイサン",
@@ -18919,8 +18958,18 @@
         "rating": "A+",
         "ratingReason": "力量技巧60与主动命中加成支持单击攻坚，白A传送另给稀缺位移任务；圣枪师可同时容纳枪与白魔，功能不应被单看低速遮蔽。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 50,
+          "str": 35,
+          "mag": 8,
+          "spd": 15,
+          "dex": 34,
+          "def": 28,
+          "res": 10,
+          "lck": 16,
+          "cha": 18
+        },
+        "baseLevel": 40,
         "bloodMarks": [],
         "startClass": "荣光骑士",
         "recommendedActions": {
@@ -19045,7 +19094,10 @@
           "judgement": "力量技巧60与主动命中加成支持单击攻坚，白A传送另给稀缺位移任务；圣枪师可同时容纳枪与白魔，功能不应被单看低速遮蔽。 第二部3章并依赖齐利科击败招募，速度25与魔防15限制追击承伤；白A仍需训练，不能按入队就会传送计分。",
           "scope": "视频作者观点；路线模拟、旁白与站内判断分开。实际转职资格、技能权限及当前进度仍需核对。",
           "evidence": "画面与旁白核对"
-        }
+        },
+        "baseReferenceClass": "荣光骑士",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/nathan/"
       },
       {
         "name": "オルヘル",
@@ -19448,8 +19500,18 @@
         "rating": "S-",
         "ratingReason": "加入可用的减命中、减攻速与攻防属性调换能创造团队突破机会，稀缺性高于单纯晚加入输出；不计未来DLC收益。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 42,
+          "str": 19,
+          "mag": 29,
+          "spd": 22,
+          "dex": 24,
+          "def": 14,
+          "res": 22,
+          "lck": 31,
+          "cha": 24
+        },
+        "baseLevel": 40,
         "bloodMarks": [
           {
             "name": "魂魄之天冠",
@@ -19656,7 +19718,10 @@
           "judgement": "加入可用的减命中、减攻速与攻防属性调换能创造团队突破机会，稀缺性高于单纯晚加入输出；不计未来DLC收益。 有HP成本且状态按一次战斗或一回合结束；不能猜超远范围、免行动或对所有目标有效，白黑法不能在贤士同时用。",
           "scope": "基于自动字幕整理，转职画面和识别有待进一步核对；不是已经验证的游戏机制。",
           "evidence": "字幕整理，画面待核"
-        }
+        },
+        "baseReferenceClass": "先知",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/talimun/"
       },
       {
         "name": "ベルトラン",
@@ -19779,8 +19844,18 @@
         "rating": "A+",
         "ratingReason": "专属觉醒强化与较高力量、防御支持后期物理攻坚，但晚加入、同类替代性与速度投入不支持泛用S-。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 47,
+          "str": 31,
+          "mag": 7,
+          "spd": 21,
+          "dex": 25,
+          "def": 21,
+          "res": 8,
+          "lck": 12,
+          "cha": 25
+        },
+        "baseLevel": 40,
         "bloodMarks": [
           {
             "name": "魂魄之天冠",
@@ -19993,7 +20068,10 @@
           "judgement": "专属觉醒强化与较高力量、防御支持后期物理攻坚，但晚加入、同类替代性与速度投入不支持泛用S-。 5%追击和25%先攻不可靠；觉醒的精确行动结算、生命成本与可用次数需按实测，不预支未来DLC养成。",
           "scope": "视频作者观点；路线模拟、旁白与站内判断分开。实际转职资格、技能权限及当前进度仍需核对。",
           "evidence": "画面与旁白核对"
-        }
+        },
+        "baseReferenceClass": "勇士",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/bertrand/"
       },
       {
         "name": "アナトリア",
@@ -20119,8 +20197,18 @@
         "rating": "S-",
         "ratingReason": "魔力速度与专属范围攻击提供后期攻坚，白魔A传送另有位移用途；现有功能即可支持高档，不依赖视频暂排黑法等级。",
         "alias": "阿纳托利亚",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 38,
+          "str": 15,
+          "mag": 30,
+          "spd": 26,
+          "dex": 24,
+          "def": 14,
+          "res": 21,
+          "lck": 19,
+          "cha": 23
+        },
+        "baseLevel": 40,
         "bloodMarks": [],
         "startClass": "先知",
         "recommendedActions": {
@@ -20246,7 +20334,10 @@
           "judgement": "魔力速度与专属范围攻击提供后期攻坚，白魔A传送另有位移用途；现有功能即可支持高档，不依赖视频暂排黑法等级。 晚加入且部分学习等级证据不全；回避后恢复不能代替可靠承伤，传送与黑魔终职权限要分清。",
           "scope": "基于自动字幕整理，转职画面和识别有待进一步核对；不是已经验证的游戏机制。",
           "evidence": "字幕整理，画面待核"
-        }
+        },
+        "baseReferenceClass": "先知",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/anatolia/"
       },
       {
         "name": "セントリオン",
@@ -20368,8 +20459,18 @@
         "rating": "A-",
         "ratingReason": "现成重装和首次受击减伤可直接补缺，但第三部入队压缩使用期；只减第一次战斗，不能当作整轮无条件减伤。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 51,
+          "str": 33,
+          "mag": 12,
+          "spd": 22,
+          "dex": 31,
+          "def": 40,
+          "res": 15,
+          "lck": 19,
+          "cha": 22
+        },
+        "baseLevel": 45,
         "bloodMarks": [],
         "startClass": "重装步兵",
         "recommendedActions": {
@@ -20491,7 +20592,10 @@
           "judgement": "现成重装和首次受击减伤可直接补缺，但第三部入队压缩使用期；只减第一次战斗，不能当作整轮无条件减伤。 第三部2区分支线后才加入；只减首场而非整轮，重装机动与魔法承伤仍需保护。救出不能在要塞使用。",
           "scope": "基于自动字幕整理，转职画面和识别有待进一步核对；不是已经验证的游戏机制。",
           "evidence": "字幕整理，画面待核"
-        }
+        },
+        "baseReferenceClass": "巨型重甲兵",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/centurio/"
       },
       {
         "name": "クラプカ",
@@ -20554,8 +20658,18 @@
         "rating": "C",
         "ratingReason": "终章才加入且不能转职，培养和使用窗口极短；现成枪系可应急，但不宜按长期发展或未经验证的技能上限评估。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 54,
+          "str": 35,
+          "mag": 5,
+          "spd": 17,
+          "dex": 33,
+          "def": 44,
+          "res": 15,
+          "lck": 18,
+          "cha": 23
+        },
+        "baseLevel": 58,
         "bloodMarks": [],
         "startClass": "卫士",
         "recommendedActions": {
@@ -20745,7 +20859,10 @@
           "judgement": "终章才加入且不能转职，培养和使用窗口极短；现成枪系可应急，但不宜按长期发展或未经验证的技能上限评估。 第三部6区分才加入，需前区分存活；概率叠防不预支，速度与魔防较低。已按多源证据修正为固定卫士，不安排圣枪师转职。招募还可能另需赛奥朵拉线通关状态，尚未作为确定硬条件写入。",
           "scope": "基于自动字幕整理，转职画面和识别有待进一步核对；不是已经验证的游戏机制。",
           "evidence": "字幕整理，画面待核"
-        }
+        },
+        "baseReferenceClass": "卫士",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/klapka/"
       },
       {
         "name": "救世主",
@@ -21514,8 +21631,18 @@
         "rating": "B",
         "ratingReason": "末期加入的现成弓和命中适合补位，作者提出舞位应急；可用窗口短，弓技学习条件待核，不假设长期养成或凭空判无技能。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 50,
+          "str": 29,
+          "mag": 7,
+          "spd": 33,
+          "dex": 44,
+          "def": 23,
+          "res": 12,
+          "lck": 22,
+          "cha": 18
+        },
+        "baseLevel": 55,
         "bloodMarks": [
           {
             "name": "大地之天冠",
@@ -21652,7 +21779,10 @@
           "judgement": "末期加入的现成弓和命中适合补位，作者提出舞位应急；可用窗口短，弓技学习条件待核，不假设长期养成或凭空判无技能。 入队晚且弓战技学习条件在现有目录未确认；按弓命中+20及现成远程打点评价，不将未知当作没有技能，也不虚构满修路线。",
           "scope": "基于自动字幕整理，转职画面和识别有待进一步核对；不是已经验证的游戏机制。",
           "evidence": "字幕整理，画面待核"
-        }
+        },
+        "baseReferenceClass": "狙击手",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/aswan/"
       },
       {
         "name": "タホウニア",
@@ -21715,8 +21845,18 @@
         "rating": "B",
         "ratingReason": "固定职业的现成物理面板能在后期补拳位，但第三部后段加入且不能转职，追击并不稳定；不按前两部培养价值评分。",
         "alias": "",
-        "baseStats": null,
-        "baseLevel": null,
+        "baseStats": {
+          "hp": 69,
+          "str": 43,
+          "mag": 1,
+          "spd": 18,
+          "dex": 28,
+          "def": 33,
+          "res": 20,
+          "lck": 14,
+          "cha": 27
+        },
+        "baseLevel": 55,
         "bloodMarks": [],
         "startClass": "战斗将领",
         "recommendedActions": {
@@ -21857,7 +21997,10 @@
           "judgement": "固定职业的现成物理面板能在后期补拳位，但第三部后段加入且不能转职，追击并不稳定；不按前两部培养价值评分。 第三部5区分加入、职业固定且不能斗技场训练；15%无视攻速追击不是稳定击杀依据，速度低仍要核敌方追击。",
           "scope": "基于自动字幕整理，转职画面和识别有待进一步核对；不是已经验证的游戏机制。",
           "evidence": "字幕整理，画面待核"
-        }
+        },
+        "baseReferenceClass": "战斗将领",
+        "baseStatsReferenceOnly": true,
+        "baseStatsSource": "https://annasnotebook.net/ja/characters/tahonia/"
       }
     ],
     "classes": [
@@ -21891,7 +22034,9 @@
         },
         "allowedSkills": [],
         "id": "class-0",
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {},
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "闘士",
@@ -21982,7 +22127,13 @@
             "id": "c1",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 1,
+          "格斗术": 1,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "猟兵",
@@ -22112,7 +22263,13 @@
             "id": "c23",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 1,
+          "步兵术": 1,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "兵士",
@@ -22196,7 +22353,13 @@
             "id": "c5",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 1,
+          "重装术": 1,
+          "枪术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "飛駝兵",
@@ -22281,7 +22444,13 @@
             "id": "c21",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "飞行术": 1,
+          "马术": 1,
+          "枪术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "呪い師",
@@ -22402,7 +22571,12 @@
             "id": "c49",
             "stage": "初级"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "黑魔术": 1,
+          "白魔术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "剣士",
@@ -22508,7 +22682,12 @@
             "id": "c48",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "步兵术": 1,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ブリガンド",
@@ -22611,7 +22790,11 @@
             "id": "c45",
             "stage": "中级"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "セスタス",
@@ -22672,7 +22855,12 @@
             "id": "c12",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "格斗术": 2,
+          "步兵术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "アーチャー",
@@ -22749,7 +22937,12 @@
             "id": "c34",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 2,
+          "步兵术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ローグ",
@@ -22827,7 +23020,13 @@
             "id": "c61",
             "stage": "中级"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 1,
+          "步兵术": 2,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "重装歩兵",
@@ -22920,7 +23119,13 @@
             "id": "c49",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 1,
+          "重装术": 2,
+          "枪术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "軽騎兵",
@@ -23008,7 +23213,12 @@
             "id": "c35",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "马术": 2,
+          "枪术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "戦車兵",
@@ -23077,7 +23287,12 @@
             "id": "c36",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 2,
+          "马术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "騎甲駝兵",
@@ -23154,7 +23369,14 @@
             "id": "c40",
             "stage": "中级"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 1,
+          "飞行术": 1,
+          "马术": 1,
+          "枪术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "天翼兵",
@@ -23213,7 +23435,13 @@
             "id": "c5",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "飞行术": 2,
+          "枪术": 1,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "シャーマン",
@@ -23309,7 +23537,13 @@
             "id": "c8",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "黑魔术": 2,
+          "剑术": 1,
+          "白魔术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "プリースト",
@@ -23449,7 +23683,13 @@
             "id": "c28",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "黑魔术": 1,
+          "格斗术": 1,
+          "白魔术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "シドー",
@@ -23551,7 +23791,13 @@
             "id": "c48",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "步兵术": 2,
+          "枪术": 1,
+          "剑术": 3
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ウォーリアー",
@@ -23670,7 +23916,14 @@
             "id": "c36",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 3,
+          "格斗术": 2,
+          "步兵术": 1,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "スナイパー",
@@ -23739,7 +23992,12 @@
             "id": "c34",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 3,
+          "步兵术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "フォレストナイト",
@@ -23809,7 +24067,13 @@
             "id": "c61",
             "stage": "上级"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 2,
+          "马术": 2,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ヘヴィアーマー",
@@ -23897,7 +24161,14 @@
             "id": "c49",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 2,
+          "重装术": 3,
+          "步兵术": 1,
+          "枪术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "バーディンガー",
@@ -23989,7 +24260,14 @@
             "id": "c35",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 1,
+          "马术": 3,
+          "枪术": 2,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ウァテス",
@@ -24085,7 +24363,15 @@
             "id": "c8",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "黑魔术": 3,
+          "格斗术": 1,
+          "步兵术": 1,
+          "剑术": 2,
+          "白魔术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ビショップ",
@@ -24221,7 +24507,15 @@
             "id": "c28",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 1,
+          "黑魔术": 1,
+          "格斗术": 2,
+          "步兵术": 1,
+          "白魔术": 3
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "戦象兵",
@@ -24269,7 +24563,11 @@
             "id": "c30",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "马术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "カラドリオス",
@@ -24317,7 +24615,16 @@
           "飞行术"
         ],
         "id": "class-27",
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {
+          "斧术": 2,
+          "黑魔术": 2,
+          "飞行术": 1,
+          "马术": 1,
+          "枪术": 2,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ドラグーン",
@@ -24381,7 +24688,14 @@
             "id": "c21",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 3,
+          "飞行术": 3,
+          "枪术": 1,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "トルバドール",
@@ -24443,7 +24757,13 @@
             "id": "c35",
             "stage": "上级"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "黑魔术": 2,
+          "马术": 2,
+          "白魔术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "バトルマスター",
@@ -24538,7 +24858,14 @@
             "id": "c36",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 4,
+          "格斗术": 2,
+          "步兵术": 1,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "マスターアーチ",
@@ -24591,7 +24918,12 @@
             "id": "c34",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 4,
+          "步兵术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "シャドーシーカー",
@@ -24657,7 +24989,13 @@
             "id": "c37",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 3,
+          "步兵术": 4,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ホーリーランサー",
@@ -24739,7 +25077,13 @@
             "id": "c8",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "步兵术": 1,
+          "枪术": 4,
+          "白魔术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "フォートレス",
@@ -24823,7 +25167,14 @@
             "id": "c56",
             "stage": "终局"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 2,
+          "重装术": 4,
+          "步兵术": 1,
+          "枪术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "オリハルディア",
@@ -24915,7 +25266,14 @@
             "id": "c35",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 1,
+          "马术": 4,
+          "枪术": 3,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "聖天翼兵",
@@ -24974,7 +25332,13 @@
             "id": "c14",
             "stage": "终局"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "飞行术": 4,
+          "枪术": 3,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ドラゴンマスター",
@@ -25038,7 +25402,14 @@
             "id": "c21",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 3,
+          "飞行术": 4,
+          "枪术": 2,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ドルイド",
@@ -25121,7 +25492,14 @@
             "id": "c60",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "黑魔术": 4,
+          "格斗术": 1,
+          "步兵术": 1,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ワイズマン",
@@ -25240,7 +25618,14 @@
             "id": "c28",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 1,
+          "格斗术": 2,
+          "步兵术": 1,
+          "白魔术": 4
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "踊り子",
@@ -25309,7 +25694,13 @@
             "id": "c47",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 2,
+          "步兵术": 4,
+          "剑术": 3
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ガーディアン",
@@ -25390,7 +25781,13 @@
             "id": "c40",
             "stage": "上级"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "步兵术": 1,
+          "枪术": 3,
+          "白魔术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "レンジャー",
@@ -25451,7 +25848,13 @@
             "id": "c37",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 2,
+          "步兵术": 3,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "カタフラクト",
@@ -25515,7 +25918,15 @@
             "id": "c51",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 2,
+          "重装术": 1,
+          "马术": 1,
+          "枪术": 2,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "貴族",
@@ -25547,7 +25958,9 @@
         },
         "allowedSkills": [],
         "id": "class-44",
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {},
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ソードマスター",
@@ -25645,7 +26058,13 @@
             "id": "c23",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "步兵术": 2,
+          "枪术": 1,
+          "剑术": 4
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "バトルモンク",
@@ -25703,7 +26122,13 @@
             "id": "c23",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "格斗术": 4,
+          "步兵术": 2,
+          "白魔术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ボウナイト",
@@ -25773,7 +26198,13 @@
             "id": "c13",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 3,
+          "马术": 2,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "グレートナイト",
@@ -25838,7 +26269,15 @@
             "id": "c17",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 3,
+          "重装术": 2,
+          "马术": 2,
+          "枪术": 2,
+          "剑术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ヴァルキュリウム",
@@ -25913,7 +26352,13 @@
             "id": "c35",
             "stage": "终局"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "黑魔术": 3,
+          "马术": 2,
+          "白魔术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ハイエピタフ",
@@ -25983,7 +26428,13 @@
             "id": "c4",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "黑魔术": 2,
+          "马术": 2,
+          "剑术": 3
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ザ·ブレイド",
@@ -26024,7 +26475,13 @@
           "步兵术"
         ],
         "id": "class-51",
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {
+          "步兵术": 2,
+          "枪术": 1,
+          "剑术": 5
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ジ·アプサラス",
@@ -26090,7 +26547,13 @@
             "id": "c24",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "弓术": 2,
+          "步兵术": 5,
+          "剑术": 4
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ジ·エターナル",
@@ -26140,7 +26603,14 @@
           "步兵术"
         ],
         "id": "class-53",
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {
+          "斧术": 5,
+          "格斗术": 3,
+          "步兵术": 1,
+          "剑术": 3
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ザ·ゴッドハンド",
@@ -26190,7 +26660,13 @@
             "id": "c60",
             "stage": "终局"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "格斗术": 5,
+          "步兵术": 3,
+          "白魔术": 3
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ザ·カラミティ",
@@ -26235,7 +26711,13 @@
           "步兵术"
         ],
         "id": "class-55",
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {
+          "弓术": 4,
+          "步兵术": 5,
+          "剑术": 2
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ザ·トライデント",
@@ -26276,7 +26758,13 @@
           "步兵术"
         ],
         "id": "class-56",
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {
+          "步兵术": 1,
+          "枪术": 5,
+          "白魔术": 3
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ザ·キャバリアー",
@@ -26336,7 +26824,14 @@
             "id": "c0",
             "stage": "备选"
           }
-        ]
+        ],
+        "skillExpBonus": {
+          "斧术": 3,
+          "马术": 5,
+          "枪术": 3,
+          "剑术": 3
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "ジ·アヴァタール",
@@ -26384,7 +26879,16 @@
           "步兵术"
         ],
         "id": "class-58",
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {
+          "斧术": 1,
+          "黑魔术": 5,
+          "格斗术": 2,
+          "步兵术": 1,
+          "剑术": 2,
+          "白魔术": 5
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       },
       {
         "title": "鍛冶師",
@@ -26432,7 +26936,13 @@
         "unlockSources": [
           "https://game8.jp/fe-banshisenko/816973"
         ],
-        "recommendedBy": []
+        "recommendedBy": [],
+        "skillExpBonus": {
+          "斧术": 3,
+          "黑魔术": 1,
+          "步兵术": 1
+        },
+        "skillExpSource": "https://annasnotebook.net/ja/classes/"
       }
     ],
     "skills": {
@@ -48933,11 +49443,15 @@
       "phase": "按获取记录核对",
       "rank": "斧术 E",
       "purpose": "补充装备资料；按效果、资格与负重选择。",
-      "effect": "射程1–2 / 耐久25 / 怨咒1。投掷斧；专属战技中文名称、威力与玩家获取方式尚未核实。",
+      "effect": "射程1–2 / 耐久25 / 怨咒1。投掷斧，可使用专属战技；玩家获取方式尚未核实。",
       "stats": {
         "range": "1–2",
         "durability": 25,
-        "curse": 1
+        "curse": 1,
+        "power": 13,
+        "hit": 80,
+        "crit": 0,
+        "weight": 8
       },
       "materials": [],
       "sourcesList": [
@@ -48953,6 +49467,8 @@
         "source": "https://serenesforest.net/fortunes-weave/weapons-items/axes/"
       },
       "referenceSources": [
+        "https://annasnotebook.net/en/db/weapons/",
+        "https://yuphastemple.com/?item=suirans-whirling-claw",
         "https://fire-emblem-fw.site/items.html",
         "https://gamewith.jp/fefw/574252"
       ],
@@ -48975,7 +49491,8 @@
       "dataProvenance": {
         "primarySource": "https://serenesforest.net/fortunes-weave/weapons-items/axes/",
         "supplementSource": "https://fire-emblem-fw.site/items.html",
-        "filledStatsFromReference": true
+        "filledStatsFromReference": true,
+        "statsSource": "https://annasnotebook.net/en/db/weapons/"
       },
       "recommendedBy": []
     },
@@ -52847,11 +53364,11 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true,
           "abilityId": "ability-0a35b1333464",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816440"
-          ]
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
+          ],
+          "note": "先学会燕返，再使用战技强化；具体可用方式随路线推进"
         },
         {
           "name": "烈火一击",
@@ -53762,11 +54279,11 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true,
           "abilityId": "ability-0a35b1333464",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816415"
-          ]
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
+          ],
+          "note": "先学会燕返，再使用战技强化；具体可用方式随路线推进"
         },
         {
           "name": "十字智慧",
@@ -53875,11 +54392,11 @@
           "hit": "20",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true,
           "abilityId": "ability-d434310c545e",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816415"
-          ]
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
+          ],
+          "note": "需先获得对应秘传，再进行战技强化；迪托利希篇与其他路线的流程不同"
         },
         {
           "name": "血闪",
@@ -56692,15 +57209,6 @@
             "https://gamewith.jp/fefw/577323"
           ],
           "abilityId": "ability-e5a394990b01"
-        },
-        {
-          "name": "计略达人",
-          "description": "计略的次数+1",
-          "requirementUnknown": true,
-          "abilityId": "ability-786b874d91a4",
-          "sources": [
-            "https://game8.jp/fe-banshisenko/816416"
-          ]
         }
       ],
       "learnedSkills": [
@@ -57143,6 +57651,17 @@
             "https://hyperwiki.jp/fefw/character/ch3/"
           ],
           "abilityId": "ability-21fd862ab886"
+        },
+        {
+          "name": "计略达人",
+          "description": "计略的次数+1",
+          "abilityId": "ability-786b874d91a4",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch3/"
+          ],
+          "skill": "指挥术",
+          "rank": "S+",
+          "note": "指挥术 S+ 习得，原先误列为等级技能"
         }
       ],
       "combatArts": [
@@ -65120,12 +65639,11 @@
         {
           "name": "秘奥",
           "description": "战斗时，若自己的攻击对敌人有效、特效，命中+10",
-          "level": null,
+          "level": 20,
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://appmedia.jp/fe_banshisenkou/80402767"
           ],
-          "requirementUnknown": true,
-          "note": "仅 Gamersky 记为 Lv20",
+          "note": "资料交叉核实",
           "abilityId": "ability-67a91c28763a"
         },
         {
@@ -65652,11 +66170,11 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true,
           "abilityId": "ability-0a35b1333464",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816462"
-          ]
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
+          ],
+          "note": "先学会燕返，再使用战技强化；具体可用方式随路线推进"
         },
         {
           "name": "双刃",
@@ -66050,12 +66568,11 @@
         {
           "name": "飞翔",
           "description": "自己位于无法步行的地形时，攻速+3",
-          "level": null,
+          "level": 20,
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://hyperwiki.jp/fefw/character/ch5/"
           ],
-          "requirementUnknown": true,
-          "note": "仅 Gamersky 记为 Lv20",
+          "note": "两份资料均记为 Lv.20，招募时等级可能已超过该等级",
           "abilityId": "ability-f6c5672b9536"
         },
         {
@@ -69391,12 +69908,11 @@
         {
           "name": "骑乘突击",
           "description": "【骑兵】先攻战斗时，命中+10",
-          "level": null,
+          "level": 20,
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://hyperwiki.jp/fefw/character/ch6/"
           ],
-          "requirementUnknown": true,
-          "note": "仅 Gamersky 记为 Lv20",
+          "note": "资料交叉核实",
           "abilityId": "ability-86fe5d136688"
         },
         {
@@ -74030,17 +74546,17 @@
         {
           "name": "集中投掷+",
           "description": "命中高 /（仅限射程1～2的枪使用）",
-          "weapon": "斧",
+          "weapon": "枪",
           "cost": "2",
           "might": "3",
           "hit": "20",
           "crit": "0",
           "range": "2",
-          "requirementUnknown": true,
           "abilityId": "ability-0b727d14b4be",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816422"
-          ]
+            "https://annasnotebook.net/ja/db/skills/"
+          ],
+          "note": "需先掌握集中投掷，再进行战技强化；仅限射程1～2的枪"
         },
         {
           "name": "劈刺",
@@ -82670,14 +83186,16 @@
         {
           "name": "彷徨之壁",
           "description": "在任意位置生成墙壁",
-          "type": "白魔法",
+          "type": "黑魔法",
           "range": "1～3",
           "uses": "5",
-          "requirementUnknown": true,
           "abilityId": "ability-fdff0eb53a5b",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816438"
-          ]
+            "https://hyperwiki.jp/fefw/character/ch18/"
+          ],
+          "skill": "黑魔术",
+          "rank": "D",
+          "note": "黑魔术 D；射程另有资料记为 1，当前保留 1～3，请以游戏内显示为准"
         },
         {
           "name": "冰风雪",
@@ -84547,11 +85065,11 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true,
           "abilityId": "ability-0a35b1333464",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816429"
-          ]
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
+          ],
+          "note": "先学会燕返，再使用战技强化；具体可用方式随路线推进"
         },
         {
           "name": "刺针",
@@ -90079,12 +90597,11 @@
         {
           "name": "贯穿",
           "description": "使用弓的战技攻击时，攻击力+2，必杀+5",
-          "level": null,
+          "level": 20,
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://hyperwiki.jp/fefw/character/ch7/"
           ],
-          "requirementUnknown": true,
-          "note": "仅 Gamersky 记为 Lv20",
+          "note": "资料交叉核实",
           "abilityId": "ability-060bdcf442e8"
         },
         {
@@ -90479,11 +90996,13 @@
           "hit": "0",
           "crit": "5",
           "range": "2",
-          "requirementUnknown": true,
           "abilityId": "ability-e33c266d5395",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816463"
-          ]
+            "https://hyperwiki.jp/fefw/character/ch7/"
+          ],
+          "skill": "弓术",
+          "rank": "D",
+          "note": "资料交叉核实"
         },
         {
           "name": "奇袭之箭",
@@ -90494,11 +91013,13 @@
           "hit": "0",
           "crit": "0",
           "range": "2",
-          "requirementUnknown": true,
           "abilityId": "ability-5c3ad670d491",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816463"
-          ]
+            "https://hyperwiki.jp/fefw/character/ch7/"
+          ],
+          "skill": "弓术",
+          "rank": "C",
+          "note": "习得等级已核；不同资料的战技参数有分歧"
         },
         {
           "name": "娴熟一击",
@@ -96113,12 +96634,11 @@
         {
           "name": "战车手",
           "description": "自身为「战车兵」时，猛击的次数+1",
-          "level": null,
+          "level": 20,
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://hyperwiki.jp/fefw/character/ch41/"
           ],
-          "requirementUnknown": true,
-          "note": "仅 Gamersky 记为 Lv20",
+          "note": "资料交叉核实",
           "abilityId": "ability-4985e6f7a3eb"
         },
         {
@@ -107035,11 +107555,12 @@
         {
           "name": "先之先",
           "description": "先攻战斗时，有25%几率能先于敌人的反击行动",
-          "requirementUnknown": true,
           "abilityId": "ability-d6013bec0787",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816882"
-          ]
+            "https://hyperwiki.jp/fefw/character/ch53/"
+          ],
+          "level": 35,
+          "note": "Lv.35；正式加入时通常已经习得"
         }
       ],
       "learnedSkills": [
@@ -107942,12 +108463,11 @@
         {
           "name": "连贯圆滑",
           "description": "自身回避攻击时，自身回复5点HP",
-          "level": null,
+          "level": 5,
           "sources": [
-            "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json"
+            "https://hyperwiki.jp/fefw/character/ch58/"
           ],
-          "requirementUnknown": true,
-          "note": "GameWith 与 Game8 只列加入即有的「连贯圆滑+」；基础版不单独计入",
+          "note": "Lv.5 基础版；该角色正式加入时通常已习得强化版",
           "abilityId": "ability-ed05f2d1c319"
         },
         {
@@ -114455,11 +114975,13 @@
           "hit": "0",
           "crit": "0",
           "range": "1",
-          "requirementUnknown": true,
           "abilityId": "ability-4c6adc8bb15b",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816903"
-          ]
+            "https://annasnotebook.net/ja/characters/tahonia/"
+          ],
+          "skill": "格斗术",
+          "rank": "C",
+          "note": "按角色技能表记为格斗术 C，部分参数有待复核"
         },
         {
           "name": "心眼一击",
@@ -147746,11 +148268,11 @@
     "resolvedMaterialLocationRecords": 9,
     "checkedCharacterLearningPages": 34,
     "remainingCounts": {
-      "skillRequirements": 19,
+      "skillRequirements": 1,
       "materialLocations": 0,
       "skillProvenance": 43,
       "skillEffects": 0,
-      "basePanels": 11,
+      "basePanels": 0,
       "startClasses": 0
     },
     "conflicts": [],
@@ -148012,217 +148534,10 @@
     },
     "remainingLearning": [
       {
-        "id": "c1",
-        "name": "古扎岚",
-        "skills": [
-          "燕返+"
-        ]
-      },
-      {
-        "id": "c2",
-        "name": "迪托利希",
-        "skills": [
-          "燕返+",
-          "秘传·血牙",
-          "秘传·落燕+"
-        ]
-      },
-      {
-        "id": "c3",
-        "name": "奇洛伊卡",
-        "skills": [
-          "要害射击"
-        ]
-      },
-      {
-        "id": "c5",
-        "name": "赛奥朵拉",
-        "skills": [
-          "计略达人"
-        ]
-      },
-      {
-        "id": "c8",
-        "name": "卡塔妮雅",
-        "skills": [
-          "流风枪"
-        ]
-      },
-      {
-        "id": "c13",
-        "name": "努佐",
-        "skills": [
-          "燕返",
-          "娴熟一击",
-          "燕返+"
-        ]
-      },
-      {
-        "id": "c20",
-        "name": "盖茨",
-        "skills": [
-          "佯攻"
-        ]
-      },
-      {
-        "id": "c21",
-        "name": "艾丝梅拉尔达",
-        "skills": [
-          "集中投掷+"
-        ]
-      },
-      {
-        "id": "c27",
-        "name": "托比亚斯",
-        "skills": [
-          "体格"
-        ]
-      },
-      {
-        "id": "c29",
-        "name": "沙兰",
-        "skills": [
-          "防御阵形",
-          "彷徨之壁"
-        ]
-      },
-      {
-        "id": "c31",
-        "name": "西洛可",
-        "skills": [
-          "燕返+",
-          "史莱姆B",
-          "死神Γ"
-        ]
-      },
-      {
-        "id": "c34",
-        "name": "米迦艾拉",
-        "skills": [
-          "秘传·血牙"
-        ]
-      },
-      {
-        "id": "c35",
-        "name": "努蒂奴",
-        "skills": [
-          "旋风枪",
-          "劈刺"
-        ]
-      },
-      {
-        "id": "c37",
-        "name": "易尼奥尼",
-        "skills": [
-          "要害射击",
-          "奇袭之箭"
-        ]
-      },
-      {
-        "id": "c38",
-        "name": "嘉丝敏",
-        "skills": [
-          "劈刺",
-          "看穿一击"
-        ]
-      },
-      {
-        "id": "c39",
-        "name": "莉利安",
-        "skills": [
-          "防御阵形"
-        ]
-      },
-      {
-        "id": "c40",
-        "name": "莱桑达",
-        "skills": [
-          "攻速指挥"
-        ]
-      },
-      {
-        "id": "c43",
-        "name": "班迪兹",
-        "skills": [
-          "曲射",
-          "合围之箭",
-          "烈风枪",
-          "劈刺"
-        ]
-      },
-      {
-        "id": "c47",
-        "name": "乌修拉",
-        "skills": [
-          "两断",
-          "暗影迫近",
-          "必闪一击",
-          "警戒射击",
-          "离脱射击",
-          "螺旋射击"
-        ]
-      },
-      {
-        "id": "c53",
-        "name": "谭利穆恩",
-        "skills": [
-          "雷电"
-        ]
-      },
-      {
-        "id": "c54",
-        "name": "贝特兰",
-        "skills": [
-          "虎切",
-          "烈火一击",
-          "劈刺",
-          "愤怒激发",
-          "暴动"
-        ]
-      },
-      {
         "id": "c55",
         "name": "爱娜特莉亚",
         "skills": [
           "大地之颚"
-        ]
-      },
-      {
-        "id": "c56",
-        "name": "盛托利翁",
-        "skills": [
-          "劈刺",
-          "破盔",
-          "粉碎",
-          "防卫指挥"
-        ]
-      },
-      {
-        "id": "c58",
-        "name": "救世主",
-        "skills": [
-          "旋风枪"
-        ]
-      },
-      {
-        "id": "c61",
-        "name": "亚丝望",
-        "skills": [
-          "曲射",
-          "螺旋射击",
-          "精灵弓",
-          "技术指挥+"
-        ]
-      },
-      {
-        "id": "c62",
-        "name": "塔霍尼雅",
-        "skills": [
-          "豪拳一击",
-          "活杀一击",
-          "用心一击",
-          "杰克一击",
-          "心眼一击"
         ]
       }
     ],
@@ -148631,6 +148946,12 @@
       "source": "https://hyperwiki.jp/fefw/",
       "limitations": "不同资料存在等级与译名分歧；空位不自动推定，部分入队自带、未映射和冲突内容仍待核实。",
       "added": 1481
+    },
+    "characterLearningReview20261105": {
+      "checkedAt": "2026-11-05",
+      "resolvedConditions": 18,
+      "remainingConditions": 1,
+      "notes": "11名角色参考入队面板已补，因路线和时点影响仅作样本，不自动应用为当前存档。大地之颚的习得条件有不同记载，仍保留待核。"
     }
   },
   "careerAlternatives": {
@@ -164026,14 +164347,14 @@
           "characterId": "c37",
           "method": "战技习得",
           "level": null,
-          "skill": "",
-          "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "skill": "弓术",
+          "rank": "C",
+          "condition": "习得等级已核；不同资料的战技参数有分歧",
+          "uncertain": false,
           "description": "若敌人HP为满值，有30%几率发动。攻击力+5",
-          "source": "https://game8.jp/fe-banshisenko/816463",
+          "source": "https://hyperwiki.jp/fefw/character/ch7/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816463"
+            "https://hyperwiki.jp/fefw/character/ch7/"
           ],
           "weapon": "弓",
           "parameters": {
@@ -164042,7 +164363,10 @@
             "hit": "0",
             "crit": "0",
             "range": "2"
-          }
+          },
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         },
         {
           "characterId": "c17",
@@ -177702,14 +178026,14 @@
           "characterId": "c62",
           "method": "战技习得",
           "level": null,
-          "skill": "",
-          "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "skill": "格斗术",
+          "rank": "C",
+          "condition": "按角色技能表记为格斗术 C，部分参数有待复核",
+          "uncertain": false,
           "description": "攻击时，有5%几率发动，攻击力+10",
-          "source": "https://game8.jp/fe-banshisenko/816903",
+          "source": "https://annasnotebook.net/ja/characters/tahonia/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816903"
+            "https://annasnotebook.net/ja/characters/tahonia/"
           ],
           "weapon": "手甲",
           "parameters": {
@@ -177718,7 +178042,10 @@
             "hit": "0",
             "crit": "0",
             "range": "1"
-          }
+          },
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [
@@ -180990,12 +181317,12 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "condition": "先学会燕返，再使用战技强化；具体可用方式随路线推进",
+          "uncertain": false,
           "description": "对飞行有效",
-          "source": "https://game8.jp/fe-banshisenko/816440",
+          "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816440"
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
           ],
           "weapon": "剑",
           "parameters": {
@@ -181004,7 +181331,10 @@
             "hit": "0",
             "crit": "0",
             "range": "1"
-          }
+          },
+          "evidenceKind": "reviewed_override",
+          "confidence": "high",
+          "checkedAt": "2026-11-05"
         },
         {
           "characterId": "c2",
@@ -181012,12 +181342,12 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "condition": "先学会燕返，再使用战技强化；具体可用方式随路线推进",
+          "uncertain": false,
           "description": "对飞行有效",
-          "source": "https://game8.jp/fe-banshisenko/816415",
+          "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816415"
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
           ],
           "weapon": "剑",
           "parameters": {
@@ -181026,7 +181356,10 @@
             "hit": "0",
             "crit": "0",
             "range": "1"
-          }
+          },
+          "evidenceKind": "reviewed_override",
+          "confidence": "high",
+          "checkedAt": "2026-11-05"
         },
         {
           "characterId": "c13",
@@ -181034,12 +181367,12 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "condition": "先学会燕返，再使用战技强化；具体可用方式随路线推进",
+          "uncertain": false,
           "description": "对飞行有效",
-          "source": "https://game8.jp/fe-banshisenko/816462",
+          "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816462"
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
           ],
           "weapon": "剑",
           "parameters": {
@@ -181048,7 +181381,10 @@
             "hit": "0",
             "crit": "0",
             "range": "1"
-          }
+          },
+          "evidenceKind": "reviewed_override",
+          "confidence": "high",
+          "checkedAt": "2026-11-05"
         },
         {
           "characterId": "c31",
@@ -181056,12 +181392,12 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "condition": "先学会燕返，再使用战技强化；具体可用方式随路线推进",
+          "uncertain": false,
           "description": "对飞行有效",
-          "source": "https://game8.jp/fe-banshisenko/816429",
+          "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816429"
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
           ],
           "weapon": "剑",
           "parameters": {
@@ -181070,7 +181406,10 @@
             "hit": "0",
             "crit": "0",
             "range": "1"
-          }
+          },
+          "evidenceKind": "reviewed_override",
+          "confidence": "high",
+          "checkedAt": "2026-11-05"
         },
         {
           "method": "强化／道具／剧情",
@@ -184591,12 +184930,12 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "condition": "需先获得对应秘传，再进行战技强化；迪托利希篇与其他路线的流程不同",
+          "uncertain": false,
           "description": "命中时，若敌人为飞行单位，敌人移动力-3 /（持续到下一个己方阶段）",
-          "source": "https://game8.jp/fe-banshisenko/816415",
+          "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816415"
+            "https://annasnotebook.net/ja/mechanics/combat-arts/"
           ],
           "weapon": "剑",
           "parameters": {
@@ -184605,7 +184944,10 @@
             "hit": "20",
             "crit": "0",
             "range": "1"
-          }
+          },
+          "evidenceKind": "reviewed_override",
+          "confidence": "high",
+          "checkedAt": "2026-11-05"
         },
         {
           "method": "强化／道具／剧情",
@@ -188904,14 +189246,14 @@
           "characterId": "c37",
           "method": "战技习得",
           "level": null,
-          "skill": "",
-          "rank": "",
+          "skill": "弓术",
+          "rank": "D",
           "condition": "",
-          "uncertain": true,
+          "uncertain": false,
           "description": "必杀高",
-          "source": "https://game8.jp/fe-banshisenko/816463",
+          "source": "https://hyperwiki.jp/fefw/character/ch7/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816463"
+            "https://hyperwiki.jp/fefw/character/ch7/"
           ],
           "weapon": "弓",
           "parameters": {
@@ -188920,7 +189262,10 @@
             "hit": "0",
             "crit": "5",
             "range": "2"
-          }
+          },
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         },
         {
           "characterId": "c42",
@@ -194206,21 +194551,24 @@
           "level": null,
           "skill": "",
           "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "condition": "需先掌握集中投掷，再进行战技强化；仅限射程1～2的枪",
+          "uncertain": false,
           "description": "命中高 /（仅限射程1～2的枪使用）",
-          "source": "https://game8.jp/fe-banshisenko/816422",
+          "source": "https://annasnotebook.net/ja/db/skills/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816422"
+            "https://annasnotebook.net/ja/db/skills/"
           ],
-          "weapon": "斧",
+          "weapon": "枪",
           "parameters": {
             "cost": "2",
             "might": "3",
             "hit": "20",
             "crit": "0",
             "range": "2"
-          }
+          },
+          "evidenceKind": "reviewed_override",
+          "confidence": "high",
+          "checkedAt": "2026-11-05"
         },
         {
           "method": "强化／道具／剧情",
@@ -204472,20 +204820,23 @@
           "characterId": "c29",
           "method": "法术习得",
           "level": null,
-          "skill": "",
-          "rank": "",
-          "condition": "",
-          "uncertain": true,
+          "skill": "黑魔术",
+          "rank": "D",
+          "condition": "黑魔术 D；射程另有资料记为 1，当前保留 1～3，请以游戏内显示为准",
+          "uncertain": false,
           "description": "在任意位置生成墙壁",
-          "source": "https://game8.jp/fe-banshisenko/816438",
+          "source": "https://hyperwiki.jp/fefw/character/ch18/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816438"
+            "https://hyperwiki.jp/fefw/character/ch18/"
           ],
           "weapon": "",
           "parameters": {
             "range": "1～3",
             "uses": "5"
-          }
+          },
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         },
         {
           "characterId": "c36",
@@ -216677,18 +217028,21 @@
         {
           "characterId": "c54",
           "method": "等级／条件",
-          "level": null,
+          "level": 35,
           "skill": "",
           "rank": "",
-          "condition": "等级习得",
-          "uncertain": true,
+          "condition": "Lv.35；正式加入时通常已经习得",
+          "uncertain": false,
           "description": "先攻战斗时，有25%几率能先于敌人的反击行动",
-          "source": "https://game8.jp/fe-banshisenko/816882",
+          "source": "https://hyperwiki.jp/fefw/character/ch53/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816882"
+            "https://hyperwiki.jp/fefw/character/ch53/"
           ],
           "weapon": "",
-          "parameters": {}
+          "parameters": {},
+          "evidenceKind": "reviewed_override",
+          "confidence": "high",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [],
@@ -230172,18 +230526,21 @@
         {
           "characterId": "c43",
           "method": "等级／条件",
-          "level": null,
+          "level": 20,
           "skill": "",
           "rank": "",
-          "condition": "仅 Gamersky 记为 Lv20",
-          "uncertain": true,
+          "condition": "",
+          "uncertain": false,
           "description": "自身为「战车兵」时，猛击的次数+1",
-          "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
+          "source": "https://hyperwiki.jp/fefw/character/ch41/",
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://hyperwiki.jp/fefw/character/ch41/"
           ],
           "weapon": "",
-          "parameters": {}
+          "parameters": {},
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [],
@@ -253447,18 +253804,21 @@
         {
           "characterId": "c13",
           "method": "等级／条件",
-          "level": null,
+          "level": 20,
           "skill": "",
           "rank": "",
-          "condition": "仅 Gamersky 记为 Lv20",
-          "uncertain": true,
+          "condition": "",
+          "uncertain": false,
           "description": "战斗时，若自己的攻击对敌人有效、特效，命中+10",
-          "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
+          "source": "https://appmedia.jp/fe_banshisenkou/80402767",
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://appmedia.jp/fe_banshisenkou/80402767"
           ],
           "weapon": "",
-          "parameters": {}
+          "parameters": {},
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [],
@@ -254975,19 +255335,22 @@
       "acquisition": [
         {
           "characterId": "c5",
-          "method": "等级／条件",
+          "method": "技能等级",
           "level": null,
-          "skill": "",
-          "rank": "",
-          "condition": "等级习得",
-          "uncertain": true,
+          "skill": "指挥术",
+          "rank": "S+",
+          "condition": "指挥术 S+ 习得，原先误列为等级技能",
+          "uncertain": false,
           "description": "计略的次数+1",
-          "source": "https://game8.jp/fe-banshisenko/816416",
+          "source": "https://hyperwiki.jp/fefw/character/ch3/",
           "sources": [
-            "https://game8.jp/fe-banshisenko/816416"
+            "https://hyperwiki.jp/fefw/character/ch3/"
           ],
           "weapon": "",
-          "parameters": {}
+          "parameters": {},
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [],
@@ -256445,18 +256808,21 @@
         {
           "characterId": "c37",
           "method": "等级／条件",
-          "level": null,
+          "level": 20,
           "skill": "",
           "rank": "",
-          "condition": "仅 Gamersky 记为 Lv20",
-          "uncertain": true,
+          "condition": "",
+          "uncertain": false,
           "description": "使用弓的战技攻击时，攻击力+2，必杀+5",
-          "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
+          "source": "https://hyperwiki.jp/fefw/character/ch7/",
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://hyperwiki.jp/fefw/character/ch7/"
           ],
           "weapon": "",
-          "parameters": {}
+          "parameters": {},
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [],
@@ -256644,18 +257010,21 @@
         {
           "characterId": "c55",
           "method": "等级／条件",
-          "level": null,
+          "level": 5,
           "skill": "",
           "rank": "",
-          "condition": "GameWith 与 Game8 只列加入即有的「连贯圆滑+」；基础版不单独计入",
-          "uncertain": true,
+          "condition": "Lv.5 基础版；该角色正式加入时通常已习得强化版",
+          "uncertain": false,
           "description": "自身回避攻击时，自身回复5点HP",
-          "source": "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json",
+          "source": "https://hyperwiki.jp/fefw/character/ch58/",
           "sources": [
-            "https://cn.fire-emblem-fw.site/data/v/characters.94c07aba.json"
+            "https://hyperwiki.jp/fefw/character/ch58/"
           ],
           "weapon": "",
-          "parameters": {}
+          "parameters": {},
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [],
@@ -260729,18 +261098,21 @@
         {
           "characterId": "c14",
           "method": "等级／条件",
-          "level": null,
+          "level": 20,
           "skill": "",
           "rank": "",
-          "condition": "仅 Gamersky 记为 Lv20",
-          "uncertain": true,
+          "condition": "两份资料均记为 Lv.20，招募时等级可能已超过该等级",
+          "uncertain": false,
           "description": "自己位于无法步行的地形时，攻速+3",
-          "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
+          "source": "https://hyperwiki.jp/fefw/character/ch5/",
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://hyperwiki.jp/fefw/character/ch5/"
           ],
           "weapon": "",
-          "parameters": {}
+          "parameters": {},
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [],
@@ -263362,18 +263734,21 @@
         {
           "characterId": "c17",
           "method": "等级／条件",
-          "level": null,
+          "level": 20,
           "skill": "",
           "rank": "",
-          "condition": "仅 Gamersky 记为 Lv20",
-          "uncertain": true,
+          "condition": "",
+          "uncertain": false,
           "description": "【骑兵】先攻战斗时，命中+10",
-          "source": "https://www.gamersky.com/handbook/202609/2217670_5.shtml",
+          "source": "https://hyperwiki.jp/fefw/character/ch6/",
           "sources": [
-            "https://www.gamersky.com/handbook/202609/2217670_5.shtml"
+            "https://hyperwiki.jp/fefw/character/ch6/"
           ],
           "weapon": "",
-          "parameters": {}
+          "parameters": {},
+          "confidence": "high",
+          "evidenceKind": "reviewed_override",
+          "checkedAt": "2026-11-05"
         }
       ],
       "usableClasses": [],
@@ -307381,7 +307756,6 @@
       "nameJa": "魔法命中+5",
       "description": "装备魔法时，命中+5。",
       "classIds": [
-        "class-16",
         "class-24",
         "class-49"
       ],
@@ -307415,7 +307789,6 @@
         "class-41",
         "class-33",
         "class-56",
-        "class-58",
         "class-49"
       ],
       "slotCost": 0,
@@ -307744,6 +308117,67 @@
       "slotCost": 0,
       "kind": "职业固有",
       "source": "https://gamewith.jp/fefw/577433"
+    },
+    {
+      "id": "intrinsic-class-fist-avoid-3",
+      "name": "格斗回避+3",
+      "nameJa": "格闘回避+3",
+      "description": "装备手甲时，回避+3。",
+      "classIds": [
+        "class-8"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://annasnotebook.net/ja/classes/"
+    },
+    {
+      "id": "intrinsic-class-magic-hit-3",
+      "name": "魔法命中+3",
+      "nameJa": "魔法命中+3",
+      "description": "使用魔法时，命中+3。",
+      "classIds": [
+        "class-16",
+        "class-29"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://annasnotebook.net/ja/classes/"
+    },
+    {
+      "id": "intrinsic-class-flight-avoid-7",
+      "name": "飞行回避+7",
+      "nameJa": "飛行回避+7",
+      "description": "【飞行】回避+7。",
+      "classIds": [
+        "class-36"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://annasnotebook.net/ja/classes/"
+    },
+    {
+      "id": "intrinsic-class-fist-avoid-7",
+      "name": "格斗回避+7",
+      "nameJa": "格闘回避+7",
+      "description": "装备手甲时，回避+7。",
+      "classIds": [
+        "class-46"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://annasnotebook.net/ja/classes/"
+    },
+    {
+      "id": "intrinsic-class-magic-hit-10",
+      "name": "魔法命中+10",
+      "nameJa": "魔法命中+10",
+      "description": "使用魔法时，命中+10。",
+      "classIds": [
+        "class-58"
+      ],
+      "slotCost": 0,
+      "kind": "职业固有",
+      "source": "https://annasnotebook.net/ja/classes/"
     }
   ],
   "abilitySlotPolicy": {

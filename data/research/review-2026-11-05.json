@@ -1,0 +1,212 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "用户要求的待核习得条件与装备数据；未确认项目仍保留待核",
+  "updates": [
+    {
+      "characterId": "c14",
+      "name": "飞翔",
+      "fields": {
+        "level": 20
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch5/",
+        "https://appmedia.jp/fe_banshisenkou/80402764"
+      ],
+      "note": "两份资料均记为 Lv.20，招募时等级可能已超过该等级。"
+    },
+    {
+      "characterId": "c13",
+      "name": "秘奥",
+      "fields": {
+        "level": 20
+      },
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80402767",
+        "https://annasnotebook.net/ja/characters/nuzzuo/"
+      ],
+      "note": ""
+    },
+    {
+      "characterId": "c17",
+      "name": "骑乘突击",
+      "fields": {
+        "level": 20
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch6/",
+        "https://appmedia.jp/fe_banshisenkou/80402788"
+      ],
+      "note": ""
+    },
+    {
+      "characterId": "c37",
+      "name": "贯穿",
+      "fields": {
+        "level": 20
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch7/",
+        "https://appmedia.jp/fe_banshisenkou/80402776"
+      ],
+      "note": ""
+    },
+    {
+      "characterId": "c43",
+      "name": "战车手",
+      "fields": {
+        "level": 20
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch41/",
+        "https://annasnotebook.net/ja/characters/benditz/"
+      ],
+      "note": ""
+    },
+    {
+      "characterId": "c55",
+      "name": "连贯圆滑",
+      "fields": {
+        "level": 5
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch58/",
+        "https://annasnotebook.net/ja/characters/anatolia/"
+      ],
+      "note": "Lv.5 基础版；该角色正式加入时通常已习得强化版。"
+    },
+    {
+      "characterId": "c5",
+      "name": "计略达人",
+      "fields": {
+        "skill": "指挥术",
+        "rank": "S+"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch3/",
+        "https://annasnotebook.net/ja/characters/theodora/"
+      ],
+      "note": "指挥术 S+ 习得，原先误列为等级技能。"
+    },
+    {
+      "characterId": "c29",
+      "name": "彷徨之壁",
+      "fields": {
+        "skill": "黑魔术",
+        "rank": "D",
+        "type": "黑魔法"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch18/",
+        "https://annasnotebook.net/ja/characters/sha-lan/"
+      ],
+      "note": "习得类别为黑魔术；射程资料存在分歧，暂保留原记录待核。"
+    },
+    {
+      "characterId": "c37",
+      "name": "要害射击",
+      "fields": {
+        "skill": "弓术",
+        "rank": "D"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch7/"
+      ],
+      "note": ""
+    },
+    {
+      "characterId": "c37",
+      "name": "奇袭之箭",
+      "fields": {
+        "skill": "弓术",
+        "rank": "C"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch7/"
+      ],
+      "note": "习得等级已核；不同资料的战技参数有分歧。"
+    },
+    {
+      "characterId": "c62",
+      "name": "杰克一击",
+      "fields": {
+        "skill": "格斗术",
+        "rank": "C"
+      },
+      "sources": [
+        "https://annasnotebook.net/ja/characters/tahonia/"
+      ],
+      "note": "按角色技能表记为格斗术 C，部分参数有待复核。"
+    },
+    {
+      "characterId": "c54",
+      "name": "先之先",
+      "values": {
+        "level": 35
+      },
+      "source": "https://hyperwiki.jp/fefw/character/ch53/",
+      "note": "Lv.35；正式加入时通常已经习得。"
+    },
+    {
+      "characterId": "c1",
+      "name": "燕返+",
+      "values": {},
+      "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
+      "note": "先学会燕返，再使用战技强化；具体可用方式随路线推进。"
+    },
+    {
+      "characterId": "c2",
+      "name": "燕返+",
+      "values": {},
+      "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
+      "note": "先学会燕返，再使用战技强化；具体可用方式随路线推进。"
+    },
+    {
+      "characterId": "c13",
+      "name": "燕返+",
+      "values": {},
+      "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
+      "note": "先学会燕返，再使用战技强化；具体可用方式随路线推进。"
+    },
+    {
+      "characterId": "c31",
+      "name": "燕返+",
+      "values": {},
+      "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
+      "note": "先学会燕返，再使用战技强化；具体可用方式随路线推进。"
+    },
+    {
+      "characterId": "c2",
+      "name": "秘传·落燕+",
+      "values": {},
+      "source": "https://annasnotebook.net/ja/mechanics/combat-arts/",
+      "note": "需先获得对应秘传，再进行战技强化；迪托利希篇与其他路线的流程不同。"
+    },
+    {
+      "characterId": "c21",
+      "name": "集中投掷+",
+      "values": {
+        "weapon": "枪"
+      },
+      "source": "https://annasnotebook.net/ja/db/skills/",
+      "note": "需先掌握集中投掷，再进行战技强化；仅限射程1～2的枪。"
+    }
+  ],
+  "equipment": {
+    "name": "翠岚旋爪",
+    "source": "https://annasnotebook.net/en/db/weapons/",
+    "power": 13,
+    "hit": 80,
+    "crit": 0,
+    "weight": 8,
+    "acquisition": "待核实"
+  },
+  "entrySnapshots": {
+    "source": "https://annasnotebook.net/ja/characters/",
+    "count": 11,
+    "method": "页面显示的未含职业补正参考值；实际入队面板随路线及时间变化，不自动当作当前存档数据。"
+  },
+  "currentHashes": {
+    "learning": "ab25843d975755945c3a54b41d62b7d1b175c7d4b747fe36326a2fde89b06512",
+    "abilities": "486bab7f51167d2fc2c95125455242d056b6768c7be4659dc93acde993b493fa"
+  }
+}

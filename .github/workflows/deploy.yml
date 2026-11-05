@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 # Finish the current deployment before starting another one.
 concurrency:
@@ -36,6 +37,9 @@ jobs:
           node scripts/build-catalog.cjs
           git diff --exit-code -- data/catalog.json dist/catalog.js dist/roster.json dist/learning.json dist/map.json
           node scripts/verify-site.cjs
+          node scripts/verify-backup.cjs
+          node scripts/verify-data-review-2026-11-05.cjs
+          python3 scripts/verify-deploy-base.py
           node scripts/verify-workbench.cjs
           node scripts/verify-cultivation.cjs
           python3 scripts/verify-sqlite.py
@@ -46,6 +50,7 @@ jobs:
           DEPLOY_SHA: ${{ github.sha }}
           DEPLOY_RUN: ${{ github.run_id }}
           DEPLOY_ATTEMPT: ${{ github.run_attempt }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           python3 - <<'PY'
           import json, os
@@ -70,6 +75,17 @@ jobs:
               print('')
           PY
             )
+          fi
+          # When the public HTTPS route resets, use a prior successful deployment
+          # as a candidate only. The server checks its SHA against the live release
+          # and rejects a stale base before applying any changes.
+          if [ -z "${LIVE_SHA:-}" ]; then
+            if curl -fsS --max-time 15 -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+                "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/workflows/deploy.yml/runs?branch=main&status=success&per_page=20" \
+                -o "$RUNNER_TEMP/successful-deploys.json"; then
+              LIVE_SHA=$(python3 scripts/select-deploy-base.py "$RUNNER_TEMP/successful-deploys.json" "$DEPLOY_RUN")
+              if [ -n "$LIVE_SHA" ]; then echo "Candidate base from last successful deployment: ${LIVE_SHA:0:7}"; fi
+            fi
           fi
           DELTA_OK=0
           if [ -n "${LIVE_SHA:-}" ] && git cat-file -e "$LIVE_SHA^{commit}" 2>/dev/null; then

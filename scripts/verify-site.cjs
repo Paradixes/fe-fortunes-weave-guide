@@ -1030,7 +1030,7 @@ assert(nodes['#content'].innerHTML.includes('剑术Lv.5')&&nodes['#content'].inn
 console.log('PASS learning coverage: 256 sourced bindings, exact plus ranks, independent acquisition highlights, Lv family deduplication and shared roster filters.');
 
 }
-assert(vm.runInContext("DB.classes.every(c=>Object.hasOwn(CLASS_SKILL_EXP,c.id))",ctx),'EXP bonuses cover all classes');
+assert(vm.runInContext("DB.classes.every(c=>c.skillExpBonus&&typeof c.skillExpBonus==='object')",ctx),'EXP bonuses cover all classes');
 assert(vm.runInContext("classExpCell(classBy('剑客')).includes('sword.webp')&&classExpCell(classBy('剑客')).includes('+2')",ctx),'Swordmaster proficiency bonus displayed with icon and value');
 assert(vm.runInContext("!decorateSkillHTML('<p>多重反击术</p>').includes('fist.webp')",ctx),'Do not decorate a substring in a skill name');
 

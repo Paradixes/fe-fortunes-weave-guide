@@ -81,3 +81,6 @@ run("var impossible=wbMigrate(wbPreset('c62','common'));impossible.lanes.common.
 assert.equal(run('wbSaveApply(impossible)'),false,'Unreachable class plans cannot silently become guide recommendations');
 assert(run('wbLastError.includes("不能转职")'));assert.equal(run('JSON.stringify(wbApplied)'),run('beforeInvalid'),'Rejected application leaves prior applied data intact');
 console.log('PASS reachability: character-aware dance phase, fixed-class preset and rejected impossible application.');
+
+for(const id of ['c14','c37','c50','c51','c53','c54','c55','c56','c57','c61','c62']){ctx.testId=id;const preset=run("wbPreset(testId,wbAvailable(testId)[0])");assert.equal(preset.baselineKnown,false,id+' reference snapshot must not be treated as current save');assert(Object.values(preset.base).every(v=>v===0),id+' reference stats must not prefill actual save data');}
+console.log('PASS reference snapshots remain separate from actual saved baselines.');

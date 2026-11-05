@@ -27,7 +27,7 @@ for(const [id,e] of Object.entries(r.characters)){
  assert.ok(e.role?.length>=2,id+' role');
  assert.ok(e.sources.length,id+' sources');
  assert.equal(e.previousRating,baseline.releaseRatings[id],id+' baseline rating');
- const historical=Object.fromEntries(baseline.characterFactKeys.map(k=>[k,k==='gearPlan'?gearReview.baselineGear[id]:(c[k]??null)]));
+ const historical=Object.fromEntries(baseline.characterFactKeys.map(k=>[k,k==='gearPlan'?gearReview.baselineGear[id]:(c.baseStatsReferenceOnly&&['baseLevel','baseStats'].includes(k)?null:(c[k]??null))]));
  assert.equal(hash(historical),baseline.characterFactHashes[id],id+' protected non-equipment facts changed');
  const n=newer.characters[id]; assert.equal(n.previousRating,e.rating,id+' prior review'); assert.equal(c.rating,n.rating,id);assert.equal(c.ratingReason,n.reason,id);
  assert.equal(c.role,e.role,id);assert.equal(a.reason,n.reason,id);
@@ -75,7 +75,8 @@ const learningReview=JSON.parse(fs.readFileSync('data/research/learning-review-2
 assert.equal(hash(learningReview.baselineLearning),baseline.factHashes.learning,'historical learning baseline changed');
 assert.equal(hash(learningReview.baselineAbilities),baseline.factHashes.abilities,'historical abilities baseline changed');
 assert.equal(hash(d.abilityAcquisitionFacts),baseline.factHashes.abilityAcquisitionFacts,'unrelated acquisition facts changed');
-for(const key of ['learning','abilities'])assert.equal(hash(d[key]),learningReview.currentHashes[key],key+' changed outside reviewed update');
+const latestLearningReview=JSON.parse(fs.readFileSync('data/research/review-2026-11-05.json','utf8'));
+for(const key of ['learning','abilities'])assert.equal(hash(d[key]),latestLearningReview.currentHashes[key],key+' changed outside reviewed update');
 const editorial=JSON.stringify([d.planning,d.routeStrategy,d.database.characters.map(c=>[c.plan,c.stop,c.ratingReason])]);
 assert.ok(!editorial.includes('贤士兼用黑白魔'));
 assert.ok(!d.planning.c6.recommendations.skills.some(x=>x.name==='即时回避'));

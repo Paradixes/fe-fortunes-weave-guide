@@ -1,17 +1,5 @@
-// 对照职业资料表修正固有技能关联；覆盖会同时作用于职业表和角色方案。
-// 来源：https://annasnotebook.net/ja/classes/，2026-11-04。
-const CLASS_INTRINSIC_REVIEW=(()=>{
- const list=CATALOG.classIntrinsicSkills.map(s=>({...s,classIds:[...s.classIds]})), remove=(id,cl)=>{const row=list.find(s=>s.id===id);if(row)row.classIds=row.classIds.filter(x=>x!==cl)};
- remove('intrinsic-2ca31e447d5f','class-16');
- remove('intrinsic-b5913a8ca639','class-58');
- const add=(id,name,nameJa,description,classIds)=>list.push({id,name,nameJa,description,classIds,slotCost:0,kind:'职业固有',source:'https://annasnotebook.net/ja/classes/'});
- add('intrinsic-class-fist-avoid-3','格斗回避+3','格闘回避+3','装备手甲时，回避+3。',['class-8']);
- add('intrinsic-class-magic-hit-3','魔法命中+3','魔法命中+3','使用魔法时，命中+3。',['class-16','class-29']);
- add('intrinsic-class-flight-avoid-7','飞行回避+7','飛行回避+7','【飞行】回避+7。',['class-36']);
- add('intrinsic-class-fist-avoid-7','格斗回避+7','格闘回避+7','装备手甲时，回避+7。',['class-46']);
- add('intrinsic-class-magic-hit-10','魔法命中+10','魔法命中+10','使用魔法时，命中+10。',['class-58']);
- return list;
-})();
+// 职业固有技能由统一资料库提供。
+const CLASS_INTRINSIC_REVIEW=CATALOG.classIntrinsicSkills;
 // Training goals are acquisition goals, not the current class's weapon permissions.
 function currentGuideClass(c){
  const b=buildPlan(c),r=routeContext(c),viewing=activeCharacter===c.id;
