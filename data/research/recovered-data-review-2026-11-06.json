@@ -1,0 +1,284 @@
+{
+  "checkedAt": "2026-11-06",
+  "scope": "重新取证恢复4条角色战技、3处魔法分类、8条礼物关系与试作品11号4个字段；不修改已恢复的参考价格，不代表完整游戏实机验收。",
+  "policy": [
+    "不向角色技能复制通用专精等级技能。",
+    "保留未知习得条件和既有参数争议。",
+    "普通攻略、玩家文字与游戏截图分别标记；不同域名不自动视为独立实机证据。"
+  ],
+  "learningAdditions": [
+    {
+      "characterId": "c37",
+      "kind": "combatArts",
+      "name": "大刚击",
+      "japanese": "大剛撃",
+      "skill": "剑术",
+      "rank": "A",
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch7/",
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ],
+      "confidence": "high",
+      "evidenceKind": "multiple-guide-exact-character-rank",
+      "evidence": "HyperWiki角色页160行与Gamecap易尼奥尼区块5953–5960行均明确剑A。"
+    },
+    {
+      "characterId": "c47",
+      "kind": "combatArts",
+      "name": "脱离射击",
+      "japanese": "離脱射撃",
+      "skill": "弓术",
+      "rank": "C",
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch8/",
+        "https://gamecap.jp/fe_fw/oboeru.html"
+      ],
+      "confidence": "high",
+      "evidenceKind": "multiple-guide-exact-character-rank",
+      "evidence": "HyperWiki角色页170行与Gamecap乌修拉区块3824、3862–3866行均明确弓C。"
+    },
+    {
+      "characterId": "c37",
+      "kind": "combatArts",
+      "name": "二连投掷",
+      "japanese": "二連投擲",
+      "skill": "枪术",
+      "rank": "B",
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch7/",
+        "https://ameblo.jp/memo-banshi/entry-12981504436.html"
+      ],
+      "confidence": "medium-high",
+      "evidenceKind": "guide-and-indexed-player-report",
+      "evidence": "HyperWiki163行明确枪B；本轮搜索索引仍保留玩家标题及练至枪B的报告，其中第三项战技为二连投掷。",
+      "note": "玩家原文直接打开仍为404；只核对搜索索引所保留文字，不声称直接读取全文或观看画面。"
+    },
+    {
+      "characterId": "c37",
+      "kind": "combatArts",
+      "name": "破盔",
+      "japanese": "兜割り",
+      "skill": "斧术",
+      "rank": "C",
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch7/",
+        "https://fefw-9le.pages.dev/other/characters/inioni/"
+      ],
+      "confidence": "high",
+      "evidenceKind": "multiple-guide-exact-character-rank",
+      "evidence": "HyperWiki166行与个人攻略的技能表44–50行均明确斧C；个人攻略其他空项不当作否定证据。"
+    }
+  ],
+  "learningFieldUpdates": [
+    {
+      "characterId": "c55",
+      "kind": "magic",
+      "name": "大地之颚",
+      "japanese": "大地の顎",
+      "set": {
+        "skill": "黑魔术"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/reason/",
+        "https://gamewith.jp/fefw/578433",
+        "https://gamewith.jp/fefw/577372"
+      ],
+      "evidence": "HyperWiki黑魔法总表129行及爱娜特莉亚特殊魔法207–210行；两篇GameWith页面本轮直接读取HTML均确认黑魔法分类。",
+      "note": "只补学校分类使适用职业索引正确，requirementUnknown保持true，不推断等级或技能阶级。"
+    },
+    {
+      "characterId": "c11",
+      "kind": "magic",
+      "name": "辉光",
+      "japanese": "オーラ",
+      "set": {
+        "type": "白魔法"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch31/"
+      ],
+      "evidence": "妮涅角色魔法表308行明确白魔S；现有skill已为白魔术，本次只补缺失type。"
+    },
+    {
+      "characterId": "c14",
+      "kind": "magic",
+      "name": "神风之剑",
+      "japanese": "エクスカリバー",
+      "set": {
+        "type": "黑魔法"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch5/",
+        "https://hyperwiki.jp/fefw/reason/"
+      ],
+      "evidence": "亚历珊德拉角色魔法表303行明确黑魔S；现有skill已为黑魔术，本次只补缺失type。"
+    }
+  ],
+  "giftRelations": [
+    {
+      "giftId": "full-sewing-kit",
+      "characterId": "c39",
+      "characterNameJa": "リリアン",
+      "giftNameJa": "実用的な裁縫道具",
+      "level": "favorite",
+      "sources": [
+        "https://altema.jp/febansisenkou/ririan"
+      ],
+      "confidence": "medium",
+      "evidenceLocator": "L144 大好き heading; L149 item; L161 starts 好き",
+      "gameCaptureVerified": false,
+      "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+    },
+    {
+      "giftId": "black-tail-feather",
+      "characterId": "c7",
+      "characterNameJa": "レダ",
+      "giftNameJa": "漆黒の尾羽",
+      "level": "favorite",
+      "sources": [
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ],
+      "confidence": "medium",
+      "evidenceLocator": "L133 character; L135 item; L23–27 explain observed reaction",
+      "gameCaptureVerified": false,
+      "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+    },
+    {
+      "giftId": "black-tail-feather",
+      "characterId": "c37",
+      "characterNameJa": "イニオニ",
+      "giftNameJa": "漆黒の尾羽",
+      "level": "favorite",
+      "sources": [
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ],
+      "confidence": "medium",
+      "evidenceLocator": "L48 character; L50 item; L23–27 explain observed reaction",
+      "gameCaptureVerified": false,
+      "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+    },
+    {
+      "giftId": "red-rose-bouquet",
+      "characterId": "c7",
+      "characterNameJa": "レダ",
+      "giftNameJa": "真紅の薔薇の花束",
+      "level": "favorite",
+      "sources": [
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ],
+      "confidence": "medium",
+      "evidenceLocator": "L133 character; L135 item; L23–27 explain observed reaction",
+      "gameCaptureVerified": false,
+      "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+    },
+    {
+      "giftId": "black-tail-feather",
+      "characterId": "c40",
+      "characterNameJa": "ライサンダー",
+      "giftNameJa": "漆黒の尾羽",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af"
+      ],
+      "confidence": "medium",
+      "evidenceLocator": "L113 character; L115 大好き list",
+      "gameCaptureVerified": false,
+      "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+    },
+    {
+      "giftId": "flower-painting",
+      "characterId": "c40",
+      "characterNameJa": "ライサンダー",
+      "giftNameJa": "小さい白い花の絵",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af"
+      ],
+      "confidence": "medium",
+      "evidenceLocator": "L113 character; L115 大好き list",
+      "gameCaptureVerified": false,
+      "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+    },
+    {
+      "giftId": "decorative-arrows",
+      "characterId": "c15",
+      "characterNameJa": "ピーテル",
+      "giftNameJa": "美しい飾り矢",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af",
+        "https://appmedia.jp/fe_banshisenkou/80407186"
+      ],
+      "confidence": "medium",
+      "evidenceLocator": "L39 character; L41 大好き list",
+      "gameCaptureVerified": false,
+      "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+    },
+    {
+      "giftId": "full-sewing-kit",
+      "characterId": "c49",
+      "characterNameJa": "ウルタンド",
+      "giftNameJa": "実用的な裁縫道具",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af"
+      ],
+      "confidence": "medium",
+      "evidenceLocator": "L49 character; L51 大好き list",
+      "gameCaptureVerified": false,
+      "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+    }
+  ],
+  "giftEvidenceFile": "data/research/recovered-gift-evidence-2026-11-06.json",
+  "prototypeXI": {
+    "id": "library_gw_582765",
+    "image": "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp",
+    "imageSha256": "febc30ade5911f838f9e609e9bb8ee799eaff0c829263f412bc9abdb08d3da06",
+    "page": "https://annasnotebook.net/en/mechanics/strategy/safe-sniper-team/",
+    "corroboration": "https://hyperwiki.jp/fefw/weapon4/",
+    "evidenceKind": "game_capture",
+    "inspection": "本轮重新下载并查看公开攻略游戏截图实际像素，未观看原视频。",
+    "stageUpdates": [
+      {
+        "stage": "I",
+        "stats": {
+          "durability": 5
+        }
+      },
+      {
+        "stage": "II",
+        "stats": {
+          "durability": 10
+        }
+      },
+      {
+        "stage": "III",
+        "stats": {
+          "durability": 10,
+          "weight": 6
+        }
+      }
+    ]
+  },
+  "prototypeEvidenceFile": "data/research/recovered-prototype-evidence-2026-11-06.json",
+  "excluded": [
+    "通用专精等级技能不导入。",
+    "不重新导入已发布的参考价与铁斧店价。",
+    "不恢复无法重新核实的其他战技、礼物或配方。"
+  ],
+  "remaining": [
+    "大地之颚、裁决之剑精确习得条件仍未知。",
+    "加牌、破坏箭与彷徨之壁的既有性能分歧不改动。",
+    "11名入队面板仍为参考样本。",
+    "礼物关系按文字证据分级，未逐项取得游戏截图。",
+    "试作品11号配方及其余空字段，其他试作品强化耐久仍待核实。"
+  ],
+  "baselineHashes": {
+    "learning": "98eaa2ae4e65ca791023d818da6129e9da00c388515e4ebb586074417efff5ec",
+    "abilities": "094be6a90273aacb792627f6034453a0c316588dbb8c86da666a7358a3d667ee"
+  },
+  "currentHashes": {
+    "learning": "eaaf9c9e9720b4ef5b0bd6e239abae3b83a53b52cf85786a56af447e3c09862d",
+    "abilities": "9cf404d74a77f31965f244ec044b1763ca6234e11a660848eab815d24653d06b"
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "checkedAt": "2026-11-06",
+  "freshRetrieval": true,
+  "retrievalMethod": "Public web open of original URLs in this recovery pass, not restored research text or search snippets.",
+  "scope": "Eight requested favorite relationships only.",
+  "canonicalDataModified": false,
+  "published": false,
+  "gameCaptureVerified": false,
+  "sourceEvidence": [
+    {
+      "url": "https://altema.jp/febansisenkou/ririan",
+      "excerpt": "贈り物  | 〖大好き〗 … 実用的な裁縫道具/世界の名詩集",
+      "section": "リリアンのスカウト条件・贈り物",
+      "lineReferences": [
+        144,
+        149,
+        161
+      ],
+      "interpretation": "Canonical sewing-kit name is within the favorite tier, before the separate like tier."
+    },
+    {
+      "url": "https://rodinia.blog.fc2.com/blog-entry-1158.html",
+      "excerpt": "とても気に入ったようだ！",
+      "section": "Methodology and イニオニ / レダ sections",
+      "lineReferences": [
+        23,
+        25,
+        27,
+        48,
+        50,
+        133,
+        135
+      ],
+      "interpretation": "Author says the list records this observed reaction. Inyoni lists black tail feather; Leda lists black tail feather and red rose bouquet."
+    },
+    {
+      "url": "https://note.com/hyattrt/n/n6223124c45af",
+      "excerpt": "大好き",
+      "section": "ピーテル / ウルタンド / ライサンダー",
+      "lineReferences": [
+        39,
+        41,
+        49,
+        51,
+        113,
+        115
+      ],
+      "interpretation": "Explicit favorite lists include decorative arrows for Pieter; practical sewing tools for Wultrand; black tail feather and small white flower painting for Lysander.",
+      "scopeLimit": "Author notes some members of リベイラの風 primarily reflect parts 1 and 2 (line 9)."
+    },
+    {
+      "url": "https://appmedia.jp/fe_banshisenkou/80407186",
+      "excerpt": "美しい飾り矢  | ピーテル",
+      "section": "贈り物ごとの好みのキャラ",
+      "lineReferences": [
+        83,
+        132
+      ],
+      "interpretation": "Independent item/character pair corroboration only; table does not distinguish favorite from like."
+    }
+  ],
+  "relations": [
+    {
+      "giftId": "full-sewing-kit",
+      "characterId": "c39",
+      "characterNameJa": "リリアン",
+      "giftNameJa": "実用的な裁縫道具",
+      "level": "favorite",
+      "sources": [
+        "https://altema.jp/febansisenkou/ririan"
+      ],
+      "confidence": "explicit-secondary-guide",
+      "evidenceLocator": "L144 大好き heading; L149 item; L161 starts 好き",
+      "gameCaptureVerified": false
+    },
+    {
+      "giftId": "black-tail-feather",
+      "characterId": "c7",
+      "characterNameJa": "レダ",
+      "giftNameJa": "漆黒の尾羽",
+      "level": "favorite",
+      "sources": [
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ],
+      "confidence": "explicit-player-reported-test",
+      "evidenceLocator": "L133 character; L135 item; L23–27 explain observed reaction",
+      "gameCaptureVerified": false
+    },
+    {
+      "giftId": "black-tail-feather",
+      "characterId": "c37",
+      "characterNameJa": "イニオニ",
+      "giftNameJa": "漆黒の尾羽",
+      "level": "favorite",
+      "sources": [
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ],
+      "confidence": "explicit-player-reported-test",
+      "evidenceLocator": "L48 character; L50 item; L23–27 explain observed reaction",
+      "gameCaptureVerified": false
+    },
+    {
+      "giftId": "red-rose-bouquet",
+      "characterId": "c7",
+      "characterNameJa": "レダ",
+      "giftNameJa": "真紅の薔薇の花束",
+      "level": "favorite",
+      "sources": [
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ],
+      "confidence": "explicit-player-reported-test",
+      "evidenceLocator": "L133 character; L135 item; L23–27 explain observed reaction",
+      "gameCaptureVerified": false
+    },
+    {
+      "giftId": "black-tail-feather",
+      "characterId": "c40",
+      "characterNameJa": "ライサンダー",
+      "giftNameJa": "漆黒の尾羽",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af"
+      ],
+      "confidence": "explicit-player-report",
+      "evidenceLocator": "L113 character; L115 大好き list",
+      "gameCaptureVerified": false
+    },
+    {
+      "giftId": "flower-painting",
+      "characterId": "c40",
+      "characterNameJa": "ライサンダー",
+      "giftNameJa": "小さい白い花の絵",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af"
+      ],
+      "confidence": "explicit-player-report",
+      "evidenceLocator": "L113 character; L115 大好き list",
+      "gameCaptureVerified": false
+    },
+    {
+      "giftId": "decorative-arrows",
+      "characterId": "c15",
+      "characterNameJa": "ピーテル",
+      "giftNameJa": "美しい飾り矢",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af",
+        "https://appmedia.jp/fe_banshisenkou/80407186"
+      ],
+      "confidence": "explicit-player-report-with-independent-pair-corroboration",
+      "evidenceLocator": "L39 character; L41 大好き list",
+      "gameCaptureVerified": false
+    },
+    {
+      "giftId": "full-sewing-kit",
+      "characterId": "c49",
+      "characterNameJa": "ウルタンド",
+      "giftNameJa": "実用的な裁縫道具",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af"
+      ],
+      "confidence": "explicit-player-report",
+      "evidenceLocator": "L49 character; L51 大好き list",
+      "gameCaptureVerified": false
+    }
+  ],
+  "limits": [
+    "No inspected game screenshots establish these reactions; retain secondary-guide or player-reported labels.",
+    "Seven pairs have only one explicit tier source in this scoped recovery. Pieter has independent pair corroboration, not independent tier corroboration.",
+    "This evidence does not authorize or prove either suspected gift alias merge.",
+    "No missing prices or Kai spectator end time are resolved.",
+    "Anna’s Notebook, syndicated mirrors, and prior internal research were not counted as independent evidence.",
+    "Absence from another incomplete preference list is not a conflicting reaction."
+  ],
+  "applyInstructions": [
+    "Add favorite to gifts[].likedBy and database.characters[].likedGifts, with matching relationEvidence; deduplicate.",
+    "Check current canonical relations for conflicts before applying; do not overwrite a contrary reaction silently."
+  ],
+  "catalogCheck": {
+    "path": "audit-latest/data/catalog.json",
+    "method": "Read-only membership check of list fields on both gift and character records.",
+    "results": [
+      {
+        "giftId": "full-sewing-kit",
+        "characterId": "c39",
+        "giftExists": true,
+        "characterExists": true,
+        "giftListMemberships": [],
+        "characterListMemberships": []
+      },
+      {
+        "giftId": "black-tail-feather",
+        "characterId": "c7",
+        "giftExists": true,
+        "characterExists": true,
+        "giftListMemberships": [],
+        "characterListMemberships": []
+      },
+      {
+        "giftId": "black-tail-feather",
+        "characterId": "c37",
+        "giftExists": true,
+        "characterExists": true,
+        "giftListMemberships": [],
+        "characterListMemberships": []
+      },
+      {
+        "giftId": "red-rose-bouquet",
+        "characterId": "c7",
+        "giftExists": true,
+        "characterExists": true,
+        "giftListMemberships": [],
+        "characterListMemberships": []
+      },
+      {
+        "giftId": "black-tail-feather",
+        "characterId": "c40",
+        "giftExists": true,
+        "characterExists": true,
+        "giftListMemberships": [],
+        "characterListMemberships": []
+      },
+      {
+        "giftId": "flower-painting",
+        "characterId": "c40",
+        "giftExists": true,
+        "characterExists": true,
+        "giftListMemberships": [],
+        "characterListMemberships": []
+      },
+      {
+        "giftId": "decorative-arrows",
+        "characterId": "c15",
+        "giftExists": true,
+        "characterExists": true,
+        "giftListMemberships": [],
+        "characterListMemberships": []
+      },
+      {
+        "giftId": "full-sewing-kit",
+        "characterId": "c49",
+        "giftExists": true,
+        "characterExists": true,
+        "giftListMemberships": [],
+        "characterListMemberships": []
+      }
+    ]
+  }
+}

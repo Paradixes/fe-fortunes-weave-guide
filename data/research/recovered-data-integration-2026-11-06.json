@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-11-06T07:40:08.675900+00:00",
+  "status": "local-integration-validated-not-published",
+  "scope": "Applied the recovered data review into canonical SQLite, rebuilt generated data, and preserved the completed class-table edits. No commit, push or deployment.",
+  "recoveredChanges": {
+    "characterArts": 4,
+    "spellClassificationFields": 3,
+    "favoriteRelations": 8,
+    "prototypeXIFields": 4,
+    "genericSkillsAdded": 0
+  },
+  "catalogCounts": {
+    "characters": 63,
+    "classes": 60,
+    "equipment": 151,
+    "abilities": 589,
+    "learningBindings": 5198
+  },
+  "cacheVersion": "2026110602",
+  "cacheAssets": [
+    "catalog.js",
+    "catalog-ui.js",
+    "v9.js",
+    "compact.css"
+  ],
+  "lazyCache": "Both learning.json fetches use 2026110602.",
+  "tests": {
+    "javascript": {
+      "passed": 24,
+      "failed": 0,
+      "scripts": [
+        "scripts/verify-backup.cjs",
+        "scripts/verify-catalog-resolution.cjs",
+        "scripts/verify-class-table-layout.cjs",
+        "scripts/verify-cultivation.cjs",
+        "scripts/verify-data-review-2026-11-05.cjs",
+        "scripts/verify-endgame-candidates.cjs",
+        "scripts/verify-equipment-followup.cjs",
+        "scripts/verify-equipment-gaps.cjs",
+        "scripts/verify-equipment-review.cjs",
+        "scripts/verify-gifts-schedule-gaps.cjs",
+        "scripts/verify-interaction-review-2026-11-06.cjs",
+        "scripts/verify-learning-followup.cjs",
+        "scripts/verify-learning-gaps.cjs",
+        "scripts/verify-learning-review.cjs",
+        "scripts/verify-learning-round2.cjs",
+        "scripts/verify-map-layout.cjs",
+        "scripts/verify-map-notes.cjs",
+        "scripts/verify-recovered-data-review-2026-11-06.cjs",
+        "scripts/verify-site.cjs",
+        "scripts/verify-strategy-ratings.cjs",
+        "scripts/verify-video-reassessment.cjs",
+        "scripts/verify-video-review.cjs",
+        "scripts/verify-video-skills.cjs",
+        "scripts/verify-workbench.cjs"
+      ]
+    },
+    "python": {
+      "passed": 4,
+      "failed": 0,
+      "scripts": [
+        "scripts/verify-sqlite.py",
+        "scripts/verify-deploy.py",
+        "scripts/verify-deploy-base.py",
+        "scripts/check-public-export.py"
+      ]
+    },
+    "deploymentUnitTests": 15,
+    "rebuildByteStability": "passed",
+    "classTableAndManualFrontendPreservation": "passed",
+    "genericSkillsAndPriceRecordPreservation": "passed",
+    "completenessStructuralErrors": 0,
+    "diffWhitespaceAndShellSyntax": "passed"
+  },
+  "generatedHashes": {
+    "data/catalog.json": "929a906423593ef8f29a46c44afa0734b4582a1601f3d417929e881da2c6b45c",
+    "data/catalog.sqlite3": "5ecd3849591a5b8cad7938bd506aad6381749cfef8fba1a98c48e846673e87dd",
+    "dist/catalog.js": "e3f456dae5114185ae360ab50a4b4ad82321b6d47f63120470653e3c93f22c13",
+    "dist/roster.json": "6a5ac26e3ffd74d08528787762d4fba448e565051926cbdbab557c242afce8d5",
+    "dist/learning.json": "eaaf9c9e9720b4ef5b0bd6e239abae3b83a53b52cf85786a56af447e3c09862d",
+    "dist/map.json": "d4a288bb68215bdf709c3e1d1cb22c00bb68febc3a997ab7dad7b05ed46af7bd",
+    "dist/map-extras.json": "9d7e11aa5933bee0b0c61ec958df3bc95b7d3ea1358f5aa787fda2ed46aea158"
+  },
+  "preservedClassFiles": {
+    "dist/catalog-ui.js": "27b314a0218b25c281802c41766ab31b4626d8ddd7c6be39ba4a84b12d20020f",
+    "dist/compact.css": "629dc118622611783e9550f796643f6e8d2ade267f91b049c2e2ad95b4e2efe5",
+    "scripts/verify-class-table-layout.cjs": "e089942d560d72104bfcc6f6c834aed492c23f880fd47fd0a77c6e1cb949e6e9"
+  },
+  "remainingUncertainty": [
+    "Second throw rank is corroborated by HyperWiki and freshly retrievable player search-index text, but the player article itself returns 404.",
+    "Eight gift reactions are explicit guide/player text, not screenshot verification.",
+    "Earth Jaws and Sword of Judgment acquisition requirements remain unknown.",
+    "Prototype XI recipes and other omitted stage fields remain unknown; other prototype durability disputes are unchanged.",
+    "64 equipment records still contain reference-only prices rather than verified prices at every shop.",
+    "Existing ability parameter disputes, gift price/alias gaps, one observation end-time gap and reference-only entry panels remain."
+  ],
+  "visualBrowserValidation": "Not performed in this integration pass; class-table structural rendering tests passed."
+}

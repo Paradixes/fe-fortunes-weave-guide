@@ -81,7 +81,11 @@ const followupLearningReview=JSON.parse(fs.readFileSync('data/research/learning-
 for(const key of ['learning','abilities']){
  assert.equal(supplementLearningReview.baselineHashes[key],latestLearningReview.currentHashes[key],key+' supplement baseline does not match prior review');
  assert.equal(followupLearningReview.baselineHashes[key],supplementLearningReview.currentHashes[key],key+' follow-up baseline does not match prior supplement');
- assert.equal(hash(d[key]),followupLearningReview.currentHashes[key],key+' changed outside reviewed follow-up');
+ if(d.dataResearch.recoveredDataAudit20261106){
+  const recovered=require('../data/research/recovered-data-review-2026-11-06.json');
+  assert.equal(recovered.baselineHashes[key],followupLearningReview.currentHashes[key],key+' recovery baseline mismatch');
+  assert.equal(hash(d[key]),recovered.currentHashes[key],key+' changed outside recovered review');
+ }else assert.equal(hash(d[key]),followupLearningReview.currentHashes[key],key+' changed outside reviewed follow-up');
 }
 const editorial=JSON.stringify([d.planning,d.routeStrategy,d.database.characters.map(c=>[c.plan,c.stop,c.ratingReason])]);
 assert.ok(!editorial.includes('贤士兼用黑白魔'));

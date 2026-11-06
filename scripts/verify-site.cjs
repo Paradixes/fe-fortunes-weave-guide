@@ -5,11 +5,13 @@ require('./verify-video-skills.cjs');
 require('./verify-endgame-candidates.cjs');
 require('./verify-map-notes.cjs');
 require('./verify-catalog-resolution.cjs');
+require('./verify-class-table-layout.cjs');
 require('./verify-learning-gaps.cjs');
 require('./verify-learning-followup.cjs');
 require('./verify-equipment-gaps.cjs');
 require('./verify-equipment-followup.cjs');
 require('./verify-gifts-schedule-gaps.cjs');
+if(require('../data/catalog.json').dataResearch.recoveredDataAudit20261106)require('./verify-recovered-data-review-2026-11-06.cjs');
 const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},dataset:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,URLSearchParams,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','catalog-ui.js','app.js','reasons.js','articles.js','skill-planning.js','v9.js','cultivation.js','roster-map.js','search.js','anna-agent.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
 const searchEvents={...events};
 (async()=>{await require('./verify-interaction-review-2026-11-06.cjs')();await new Promise(r=>setImmediate(r));vm.runInContext('LEARNING='+fs.readFileSync(root+'learning.json')+';PINS='+fs.readFileSync(root+'map.json')+';mapLoaded=true;',ctx);
@@ -1052,7 +1054,7 @@ assert(vm.runInContext("classIntrinsicSkills(classBy('圣天翼兵')).some(s=>s.
 
 assert(vm.runInContext("(()=>{const h=routePicker(),x=h.slice(h.indexOf('data-guide-route=\"救世篇\"'));return x.includes('>救世篇</b><small>第三部</small>')&&x.includes('portrait route-fortuna-portrait')&&!x.includes('route-group-portrait')})()",ctx),'Salvation route label and portrait match other routes');
 
-assert(vm.runInContext("(()=>{const h=classTable([classBy('天翼兵')]);return h.includes('qualification-stack')&&h.includes('<small>主修</small>')&&h.includes('<small>选修</small>')&&!h.includes('<th scope=\"col\">主修</th>')})()",ctx),'Qualification groups occupy two labeled rows in one column');
+assert(vm.runInContext("(()=>{const h=classTable([classBy('天翼兵')]);return h.includes('qualification-stack')&&h.includes('class=\"tag qualification-label\">主修</span>')&&h.includes('class=\"tag qualification-label\">选修</span>')&&!h.includes('<th scope=\"col\">主修</th>')})()",ctx),'Qualification groups occupy two labeled rows in one column');
 
 {const cover=fs.readFileSync(root+'cover.css','utf8');assert(cover.includes('.route-cover-fx{position:absolute;inset:70px 0 0')&&cover.includes('.route-cover-fx{inset:90px 0 0}')&&!/\.reunion-cover\s+\.route-cover-fx\s*\{[^}]*inset\s*:\s*0(?:[;}])/.test(cover),'Salvation background uses the same desktop and mobile inset as the four hero routes');}
 

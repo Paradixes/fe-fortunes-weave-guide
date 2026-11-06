@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-11-06",
+  "scope": "Isolated copy only; original canonical data, SQLite and frontend bytes unchanged. No commit, push or deploy.",
+  "counts": {
+    "characterArts": 4,
+    "spellClassificationFields": 3,
+    "favoriteRelations": 8,
+    "prototypeXIFields": 4,
+    "genericSkillsAdded": 0
+  },
+  "baselineCatalogSha256": "a1f39503378845a8b88064a20ad527d9442916aa96dc11108547895113632baa",
+  "tests": {
+    "javascriptScripts": {
+      "passed": 23,
+      "failed": 0,
+      "names": [
+        "scripts/verify-backup.cjs",
+        "scripts/verify-catalog-resolution.cjs",
+        "scripts/verify-cultivation.cjs",
+        "scripts/verify-data-review-2026-11-05.cjs",
+        "scripts/verify-endgame-candidates.cjs",
+        "scripts/verify-equipment-followup.cjs",
+        "scripts/verify-equipment-gaps.cjs",
+        "scripts/verify-equipment-review.cjs",
+        "scripts/verify-gifts-schedule-gaps.cjs",
+        "scripts/verify-interaction-review-2026-11-06.cjs",
+        "scripts/verify-learning-followup.cjs",
+        "scripts/verify-learning-gaps.cjs",
+        "scripts/verify-learning-review.cjs",
+        "scripts/verify-learning-round2.cjs",
+        "scripts/verify-map-layout.cjs",
+        "scripts/verify-map-notes.cjs",
+        "scripts/verify-recovered-data-review-2026-11-06.cjs",
+        "scripts/verify-site.cjs",
+        "scripts/verify-strategy-ratings.cjs",
+        "scripts/verify-video-reassessment.cjs",
+        "scripts/verify-video-review.cjs",
+        "scripts/verify-video-skills.cjs",
+        "scripts/verify-workbench.cjs"
+      ]
+    },
+    "sqliteReadOnlyAPIAndETags": "passed",
+    "repeatedBuildByteStability": "passed",
+    "completenessErrors": 0,
+    "inputConflictGuards": "passed",
+    "publicExportScan": "passed",
+    "compatibilityPatchApplyCheck": "passed",
+    "originalCanonicalAndFrontendPreservation": "passed"
+  },
+  "integrationOrder": [
+    "Apply scripts/recovered-data-compatibility-2026-11-06.patch to update historical migration and regression compatibility.",
+    "Run node scripts/apply-recovered-data-review-2026-11-06.cjs data/catalog.json <separate-output.json>.",
+    "Validate output with node scripts/verify-recovered-data-review-2026-11-06.cjs <separate-output.json> data/catalog.json.",
+    "Import reviewed output into SQLite, build generated bundles, bump affected frontend cache versions, then rerun full site and SQLite checks.",
+    "Do not publish without authorization."
+  ],
+  "files": {
+    "data/research/recovered-data-review-2026-11-06.json": "18d22c2d7a96b7754ed2dd0afe26a077a7aaf60c0c2292edbfc64e3e5bc53d3d",
+    "data/research/recovered-gift-evidence-2026-11-06.json": "cc6b5b7eb078e7f26120f2b8581a39bb4415f162e24035062c1f402154a5cbe4",
+    "data/research/recovered-prototype-evidence-2026-11-06.json": "25ea3cae6f87d8730951b8adaec87c796959650d27dfd25f10cce97a36108a17",
+    "scripts/apply-recovered-data-review-2026-11-06.cjs": "902cf0e30080c9b4773b4765b4e7af631bee81b947e0a34eafdb899d583c5ab4",
+    "scripts/verify-recovered-data-review-2026-11-06.cjs": "a6cf4fa487d91ad7cf15779a697f5e1ba26a92a6e58541c4fce8e0b44d13c42e",
+    "scripts/recovered-data-compatibility-2026-11-06.patch": "8421ce4b40e13b4e7f1736e5f45005065f9eca70f3e84f8585705591b1736344"
+  },
+  "limitations": [
+    "Second throw is supported by exact HyperWiki rank and a freshly retrievable search-index player report; player article directly returns 404.",
+    "Gift additions are explicit written reaction reports, not screenshot-verified facts.",
+    "Prototype XI screenshot has been visually rechecked; recipe, other upgrade blanks and other prototypes remain unknown."
+  ]
+}

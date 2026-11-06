@@ -4610,7 +4610,9 @@
           "full-sewing-kit",
           "gaudy-bangle",
           "skin-balm",
-          "portrait-of-yu-phas"
+          "portrait-of-yu-phas",
+          "black-tail-feather",
+          "red-rose-bouquet"
         ],
         "giftCategories": [
           "打扮",
@@ -7518,7 +7520,8 @@
           "pure-white-cervi",
           "saraminian-sweets",
           "strong-cervi",
-          "odd-vegetable-seeds"
+          "odd-vegetable-seeds",
+          "decorative-arrows"
         ],
         "giftCategories": [
           "甜食",
@@ -14637,7 +14640,8 @@
           "wing-fletching",
           "strategy-manuscript",
           "flexible-fishing-rod",
-          "sharp-fishhook"
+          "sharp-fishhook",
+          "black-tail-feather"
         ],
         "giftCategories": [
           "弓",
@@ -15312,7 +15316,8 @@
           "decorative-arrows",
           "strategy-manuscript",
           "eastern-tea-leaves",
-          "rare-spices"
+          "rare-spices",
+          "full-sewing-kit"
         ],
         "giftCategories": [
           "打扮",
@@ -15616,7 +15621,9 @@
           "ceremonial-spear",
           "sharp-dagger",
           "shield-portrait",
-          "imitation-medal"
+          "imitation-medal",
+          "black-tail-feather",
+          "flower-painting"
         ],
         "giftCategories": [
           "武器",
@@ -18553,7 +18560,8 @@
           "poems-of-the-greats",
           "tales-of-adventure",
           "the-knights-suitors",
-          "rare-spices"
+          "rare-spices",
+          "full-sewing-kit"
         ],
         "giftCategories": [
           "料理",
@@ -50093,7 +50101,7 @@
         "https://gamewith.jp/fefw/582765"
       ],
       "method": "赛奥朵拉篇第一部第4章起完成DLC支线，或对应路线通关后第三部第2区分起在帝都领取。",
-      "availabilityNote": "需要付费扩充票（Expansion Pass）及支持第1弹的更新数据；不是本体免费奖励。 强化配方尚未收录，最大强化耐久的资料记载存在分歧。",
+      "availabilityNote": "需要付费扩充票（Expansion Pass）及支持第1弹的更新数据；不是本体免费奖励。强化配方尚未收录。试作品11号强化耐久已按公开游戏画面核实，其他空项仍待核实。",
       "icon": {
         "src": "assets/skills/bow.webp",
         "kind": "弓类游戏图标",
@@ -50117,16 +50125,20 @@
             "power": 12,
             "hit": 70,
             "critical": 0,
-            "avoid": 0
+            "avoid": 0,
+            "durability": 5
           },
           "sources": [
-            "https://appmedia.jp/fe_banshisenkou/80486089"
+            "https://appmedia.jp/fe_banshisenkou/80486089",
+            "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp",
+            "https://hyperwiki.jp/fefw/weapon4/"
           ],
           "fieldSources": {
             "power": "https://appmedia.jp/fe_banshisenkou/80486089",
             "hit": "https://appmedia.jp/fe_banshisenkou/80486089",
             "critical": "https://appmedia.jp/fe_banshisenkou/80486089",
-            "avoid": "https://appmedia.jp/fe_banshisenkou/80486089"
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "durability": "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp"
           }
         },
         {
@@ -50135,16 +50147,20 @@
             "power": 18,
             "hit": 70,
             "critical": 0,
-            "avoid": 0
+            "avoid": 0,
+            "durability": 10
           },
           "sources": [
-            "https://appmedia.jp/fe_banshisenkou/80486089"
+            "https://appmedia.jp/fe_banshisenkou/80486089",
+            "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp",
+            "https://hyperwiki.jp/fefw/weapon4/"
           ],
           "fieldSources": {
             "power": "https://appmedia.jp/fe_banshisenkou/80486089",
             "hit": "https://appmedia.jp/fe_banshisenkou/80486089",
             "critical": "https://appmedia.jp/fe_banshisenkou/80486089",
-            "avoid": "https://appmedia.jp/fe_banshisenkou/80486089"
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "durability": "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp"
           }
         },
         {
@@ -50154,28 +50170,44 @@
             "hit": 70,
             "critical": 0,
             "avoid": 0,
-            "range": "2–3"
+            "range": "2–3",
+            "durability": 10,
+            "weight": 6
           },
           "sources": [
             "https://appmedia.jp/fe_banshisenkou/80486089",
-            "https://gamewith.jp/fefw/582765"
+            "https://gamewith.jp/fefw/582765",
+            "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp",
+            "https://hyperwiki.jp/fefw/weapon4/"
           ],
           "fieldSources": {
             "power": "https://appmedia.jp/fe_banshisenkou/80486089",
             "hit": "https://appmedia.jp/fe_banshisenkou/80486089",
             "critical": "https://appmedia.jp/fe_banshisenkou/80486089",
             "avoid": "https://appmedia.jp/fe_banshisenkou/80486089",
-            "range": "https://gamewith.jp/fefw/582765"
+            "range": "https://gamewith.jp/fefw/582765",
+            "durability": "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp",
+            "weight": "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp"
           }
         }
       ],
-      "upgradeStatsNote": "表内为各阶段绝对性能，仅列已核对的攻略字段；空项待核实，不默认继承基础值。最大强化耐久有来源分歧，配方计价方式也尚未确认。",
+      "upgradeStatsNote": "表内为各阶段绝对性能；I/II/III耐久5/10/10及III重量6已按公开攻略所载游戏画面核对。其余空项待核实，配方计价方式仍未确认。",
       "upgradeStatsProvenance": {
-        "checkedAt": "2026-11-05",
-        "evidenceKind": "secondary-guide-text",
+        "checkedAt": "2026-11-06",
+        "evidenceKind": "mixed-field-level",
         "sources": [
           "https://appmedia.jp/fe_banshisenkou/80486089",
-          "https://gamewith.jp/fefw/582765"
+          "https://gamewith.jp/fefw/582765",
+          "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp",
+          "https://hyperwiki.jp/fefw/weapon4/"
+        ],
+        "gameCapture": {
+          "url": "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp",
+          "sha256": "febc30ade5911f838f9e609e9bb8ee799eaff0c829263f412bc9abdb08d3da06",
+          "inspection": "本轮重新下载并查看公开攻略游戏截图实际像素，未观看原视频。"
+        },
+        "supersedes": [
+          "GameWith最大强化耐久5未采用；游戏画面为10/10"
         ]
       }
     }
@@ -65296,7 +65328,12 @@
           "crit": "0",
           "range": "1～2",
           "uses": "3",
-          "weight": "18"
+          "weight": "18",
+          "type": "白魔法",
+          "evidenceSources": [
+            "https://hyperwiki.jp/fefw/character/ch31/"
+          ],
+          "checkedAt": "2026-11-06"
         }
       ]
     },
@@ -68380,7 +68417,13 @@
           "crit": "10",
           "range": "1～2",
           "uses": "3",
-          "weight": "10"
+          "weight": "10",
+          "type": "黑魔法",
+          "evidenceSources": [
+            "https://hyperwiki.jp/fefw/character/ch5/",
+            "https://hyperwiki.jp/fefw/reason/"
+          ],
+          "checkedAt": "2026-11-06"
         }
       ]
     },
@@ -91988,6 +92031,76 @@
           "hit": "0",
           "crit": "0",
           "range": "1"
+        },
+        {
+          "name": "大刚击",
+          "description": "威力与命中高",
+          "abilityId": "ability-f77f990354f5",
+          "skill": "剑术",
+          "rank": "A",
+          "weapon": "剑",
+          "cost": "8",
+          "might": "12",
+          "hit": "10",
+          "crit": "0",
+          "range": "1",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch7/"
+          ],
+          "evidenceSources": [
+            "https://hyperwiki.jp/fefw/character/ch7/",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "confidence": "high",
+          "evidenceKind": "multiple-guide-exact-character-rank",
+          "checkedAt": "2026-11-06"
+        },
+        {
+          "name": "二连投掷",
+          "description": "连续攻击2次（仅限射程1～2的枪使用）",
+          "abilityId": "ability-22f36990371b",
+          "skill": "枪术",
+          "rank": "B",
+          "weapon": "枪",
+          "cost": "5",
+          "might": "0",
+          "hit": "-30",
+          "crit": "0",
+          "range": "2",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch7/"
+          ],
+          "evidenceSources": [
+            "https://hyperwiki.jp/fefw/character/ch7/",
+            "https://ameblo.jp/memo-banshi/entry-12981504436.html"
+          ],
+          "confidence": "medium-high",
+          "evidenceKind": "guide-and-indexed-player-report",
+          "checkedAt": "2026-11-06",
+          "verificationNote": "玩家原文直接打开仍为404；只核对搜索索引所保留文字，不声称直接读取全文或观看画面。"
+        },
+        {
+          "name": "破盔",
+          "description": "对重装有效",
+          "abilityId": "ability-0ba77b789e96",
+          "skill": "斧术",
+          "rank": "C",
+          "weapon": "斧",
+          "cost": "3",
+          "might": "3",
+          "hit": "0",
+          "crit": "0",
+          "range": "1",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch7/"
+          ],
+          "evidenceSources": [
+            "https://hyperwiki.jp/fefw/character/ch7/",
+            "https://fefw-9le.pages.dev/other/characters/inioni/"
+          ],
+          "confidence": "high",
+          "evidenceKind": "multiple-guide-exact-character-rank",
+          "checkedAt": "2026-11-06"
         }
       ],
       "magic": [
@@ -102365,6 +102478,29 @@
           "hit": "0",
           "crit": "0",
           "range": "1"
+        },
+        {
+          "name": "脱离射击",
+          "description": "战斗后，可再移动至多1格",
+          "abilityId": "ability-3dbb0447f9b0",
+          "skill": "弓术",
+          "rank": "C",
+          "weapon": "弓",
+          "cost": "10",
+          "might": "5",
+          "hit": "0",
+          "crit": "0",
+          "range": "2",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch8/"
+          ],
+          "evidenceSources": [
+            "https://hyperwiki.jp/fefw/character/ch8/",
+            "https://gamecap.jp/fe_fw/oboeru.html"
+          ],
+          "confidence": "high",
+          "evidenceKind": "multiple-guide-exact-character-rank",
+          "checkedAt": "2026-11-06"
         }
       ],
       "magic": [
@@ -110335,7 +110471,14 @@
           "abilityId": "ability-42bf89cfff21",
           "sources": [
             "https://game8.jp/fe-banshisenko/816885"
-          ]
+          ],
+          "skill": "黑魔术",
+          "evidenceSources": [
+            "https://hyperwiki.jp/fefw/reason/",
+            "https://gamewith.jp/fefw/578433",
+            "https://gamewith.jp/fefw/577372"
+          ],
+          "checkedAt": "2026-11-06"
         },
         {
           "name": "火山爆焰",
@@ -149829,7 +149972,7 @@
       "equipmentAcquisition": [
         "翠岚旋爪"
       ],
-      "dlcForging": "4件试作品已收录12个强化阶段的部分性能；配方计价方式、强化耐久及未列字段仍待核实。",
+      "dlcForging": "试作品11号I/II/III耐久已按公开游戏画面确认5/10/10，III重量6；4件配方计价及其他未列字段仍待核实，其他3件强化耐久仍有资料分歧。",
       "giftPrices": [
         "everyday-scenes",
         "flower-painting",
@@ -149916,6 +150059,16 @@
     "historicalCounts20261015": {
       "skillProvenance": 43,
       "note": "旧审计的来源归类计数，未重新按同一口径核验，不作为当前缺口数。"
+    },
+    "recoveredDataAudit20261106": {
+      "checkedAt": "2026-11-06",
+      "evidenceFile": "data/research/recovered-data-review-2026-11-06.json",
+      "learningAdditions": 4,
+      "learningFieldUpdates": 3,
+      "giftRelations": 8,
+      "prototypeXIFields": 4,
+      "genericSkillsImported": 0,
+      "note": "重新取证的有限恢复；不含参考价变更，不清除其他未知条件或性能争议。"
     }
   },
   "careerAlternatives": {
@@ -154345,6 +154498,7 @@
         "c15",
         "c21",
         "c28",
+        "c37",
         "c47"
       ],
       "classes": [],
@@ -154436,6 +154590,31 @@
             "crit": "0",
             "range": "2"
           }
+        },
+        {
+          "characterId": "c37",
+          "method": "战技习得",
+          "level": null,
+          "skill": "枪术",
+          "rank": "B",
+          "condition": "",
+          "uncertain": false,
+          "description": "连续攻击2次（仅限射程1～2的枪使用）",
+          "source": "https://hyperwiki.jp/fefw/character/ch7/",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch7/"
+          ],
+          "weapon": "枪",
+          "parameters": {
+            "cost": "5",
+            "might": "0",
+            "hit": "-30",
+            "crit": "0",
+            "range": "2"
+          },
+          "confidence": "medium-high",
+          "checkedAt": "2026-11-06",
+          "evidenceKind": "guide-and-indexed-player-report"
         },
         {
           "characterId": "c47",
@@ -163406,6 +163585,7 @@
         "c25",
         "c27",
         "c35",
+        "c37",
         "c38",
         "c40",
         "c43",
@@ -163612,6 +163792,31 @@
             "crit": "0",
             "range": "1"
           }
+        },
+        {
+          "characterId": "c37",
+          "method": "战技习得",
+          "level": null,
+          "skill": "剑术",
+          "rank": "A",
+          "condition": "",
+          "uncertain": false,
+          "description": "威力与命中高",
+          "source": "https://hyperwiki.jp/fefw/character/ch7/",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch7/"
+          ],
+          "weapon": "剑",
+          "parameters": {
+            "cost": "8",
+            "might": "12",
+            "hit": "10",
+            "crit": "0",
+            "range": "1"
+          },
+          "confidence": "high",
+          "checkedAt": "2026-11-06",
+          "evidenceKind": "multiple-guide-exact-character-rank"
         },
         {
           "characterId": "c38",
@@ -184467,6 +184672,7 @@
       ],
       "characters": [
         "c5",
+        "c37",
         "c47",
         "c56"
       ],
@@ -184493,6 +184699,31 @@
             "crit": "0",
             "range": "1"
           }
+        },
+        {
+          "characterId": "c37",
+          "method": "战技习得",
+          "level": null,
+          "skill": "斧术",
+          "rank": "C",
+          "condition": "",
+          "uncertain": false,
+          "description": "对重装有效",
+          "source": "https://hyperwiki.jp/fefw/character/ch7/",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch7/"
+          ],
+          "weapon": "斧",
+          "parameters": {
+            "cost": "3",
+            "might": "3",
+            "hit": "0",
+            "crit": "0",
+            "range": "1"
+          },
+          "confidence": "high",
+          "checkedAt": "2026-11-06",
+          "evidenceKind": "multiple-guide-exact-character-rank"
         },
         {
           "characterId": "c47",
@@ -187420,6 +187651,7 @@
         "c20",
         "c25",
         "c40",
+        "c47",
         "c55",
         "c57"
       ],
@@ -187556,6 +187788,31 @@
             "crit": "0",
             "range": "2"
           }
+        },
+        {
+          "characterId": "c47",
+          "method": "战技习得",
+          "level": null,
+          "skill": "弓术",
+          "rank": "C",
+          "condition": "",
+          "uncertain": false,
+          "description": "战斗后，可再移动至多1格",
+          "source": "https://hyperwiki.jp/fefw/character/ch8/",
+          "sources": [
+            "https://hyperwiki.jp/fefw/character/ch8/"
+          ],
+          "weapon": "弓",
+          "parameters": {
+            "cost": "10",
+            "might": "5",
+            "hit": "0",
+            "crit": "0",
+            "range": "2"
+          },
+          "confidence": "high",
+          "checkedAt": "2026-11-06",
+          "evidenceKind": "multiple-guide-exact-character-rank"
         },
         {
           "characterId": "c55",
@@ -203528,7 +203785,7 @@
           "characterId": "c55",
           "method": "法术习得",
           "level": null,
-          "skill": "",
+          "skill": "黑魔术",
           "rank": "",
           "condition": "",
           "uncertain": true,
@@ -203545,10 +203802,24 @@
             "range": "3～10",
             "uses": "1",
             "weight": "25"
-          }
+          },
+          "checkedAt": "2026-11-06"
         }
       ],
-      "usableClasses": [],
+      "usableClasses": [
+        "class-5",
+        "class-16",
+        "class-17",
+        "class-24",
+        "class-25",
+        "class-27",
+        "class-29",
+        "class-38",
+        "class-49",
+        "class-50",
+        "class-58",
+        "class-59"
+      ],
       "description": "巨大的颚将一切咬碎。以敌人的物防计算伤害",
       "canonical": {
         "policyVersion": 1,
@@ -209562,7 +209833,8 @@
             "range": "1～2",
             "uses": "3",
             "weight": "10"
-          }
+          },
+          "checkedAt": "2026-11-06"
         },
         {
           "characterId": "c16",
@@ -210230,7 +210502,8 @@
             "range": "1～2",
             "uses": "3",
             "weight": "18"
-          }
+          },
+          "checkedAt": "2026-11-06"
         },
         {
           "characterId": "c16",
@@ -297826,7 +298099,9 @@
       "likedBy": [
         "c7",
         "c33",
-        "c48"
+        "c48",
+        "c39",
+        "c49"
       ],
       "relationEvidence": [
         {
@@ -297858,6 +298133,28 @@
           "sources": [
             "https://gamewith.jp/fefw/577115"
           ]
+        },
+        {
+          "characterId": "c39",
+          "level": "favorite",
+          "sources": [
+            "https://altema.jp/febansisenkou/ririan"
+          ],
+          "confidence": "medium",
+          "evidenceKind": "explicit-player-or-guide-reaction",
+          "checkedAt": "2026-11-06",
+          "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+        },
+        {
+          "characterId": "c49",
+          "level": "favorite",
+          "sources": [
+            "https://note.com/hyattrt/n/n6223124c45af"
+          ],
+          "confidence": "medium",
+          "evidenceKind": "explicit-player-or-guide-reaction",
+          "checkedAt": "2026-11-06",
+          "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
         }
       ],
       "preferredBy": [
@@ -298117,7 +298414,8 @@
       "likedBy": [
         "c37",
         "c39",
-        "c46"
+        "c46",
+        "c15"
       ],
       "relationEvidence": [
         {
@@ -298156,6 +298454,18 @@
           "sources": [
             "https://gamewith.jp/fefw/577115"
           ]
+        },
+        {
+          "characterId": "c15",
+          "level": "favorite",
+          "sources": [
+            "https://note.com/hyattrt/n/n6223124c45af",
+            "https://appmedia.jp/fe_banshisenkou/80407186"
+          ],
+          "confidence": "medium",
+          "evidenceKind": "explicit-player-or-guide-reaction",
+          "checkedAt": "2026-11-06",
+          "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
         }
       ],
       "preferredBy": [
@@ -301539,7 +301849,8 @@
         "c33",
         "c53",
         "c47",
-        "c11"
+        "c11",
+        "c40"
       ],
       "relationEvidence": [
         {
@@ -301555,6 +301866,17 @@
           "sources": [
             "https://rodinia.blog.fc2.com/blog-entry-1158.html"
           ]
+        },
+        {
+          "characterId": "c40",
+          "level": "favorite",
+          "sources": [
+            "https://note.com/hyattrt/n/n6223124c45af"
+          ],
+          "confidence": "medium",
+          "evidenceKind": "explicit-player-or-guide-reaction",
+          "checkedAt": "2026-11-06",
+          "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
         }
       ]
     },
@@ -303508,7 +303830,10 @@
       ],
       "places": [],
       "likedBy": [
-        "c33"
+        "c33",
+        "c7",
+        "c37",
+        "c40"
       ],
       "evidence": [
         "https://fireemblem.top/archive/gifts",
@@ -303521,6 +303846,39 @@
           "sources": [
             "https://rodinia.blog.fc2.com/blog-entry-1158.html"
           ]
+        },
+        {
+          "characterId": "c7",
+          "level": "favorite",
+          "sources": [
+            "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+          ],
+          "confidence": "medium",
+          "evidenceKind": "explicit-player-or-guide-reaction",
+          "checkedAt": "2026-11-06",
+          "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+        },
+        {
+          "characterId": "c37",
+          "level": "favorite",
+          "sources": [
+            "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+          ],
+          "confidence": "medium",
+          "evidenceKind": "explicit-player-or-guide-reaction",
+          "checkedAt": "2026-11-06",
+          "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
+        },
+        {
+          "characterId": "c40",
+          "level": "favorite",
+          "sources": [
+            "https://note.com/hyattrt/n/n6223124c45af"
+          ],
+          "confidence": "medium",
+          "evidenceKind": "explicit-player-or-guide-reaction",
+          "checkedAt": "2026-11-06",
+          "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
         }
       ]
     },
@@ -303537,7 +303895,8 @@
         "帝都鞑古席翁"
       ],
       "likedBy": [
-        "c33"
+        "c33",
+        "c7"
       ],
       "evidence": [
         "https://www.gamersky.com/handbook/202609/2215218_3.shtml",
@@ -303558,6 +303917,17 @@
           "sources": [
             "https://altema.jp/febansisenkou/dante"
           ]
+        },
+        {
+          "characterId": "c7",
+          "level": "favorite",
+          "sources": [
+            "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+          ],
+          "confidence": "medium",
+          "evidenceKind": "explicit-player-or-guide-reaction",
+          "checkedAt": "2026-11-06",
+          "note": "明确最喜欢等级的攻略或玩家记录；非游戏截图核验。"
         }
       ],
       "preferredBy": [

@@ -47,6 +47,7 @@ for(const e of d.equipment){
  if(/强化配方尚未收录/.test(e.availabilityNote||''))verificationGaps.push('forge_recipe_unverified');
  if(e.upgradeStats?.some(s=>['power','hit','critical','weight','range','durability'].some(k=>s.stats?.[k]==null)))verificationGaps.push('upgrade_stats_partial');
  if(e.sourcesList?.some(s=>/库存待核实/.test(s.text||'')))verificationGaps.push('shop_stock_unverified');
+ if(e.sourcesList?.some(s=>s.priceType==='reference'||s.referencePrice!=null))verificationGaps.push('shop_price_unverified');
  row('equipment',e.id,e.name,gaps,['Accessories do not require weapon damage statistics'],verificationGaps);
 }
 for(const [i,e] of d.events.entries())row('events',String(i),`${e.route} · ${e.name}`,/待核实/.test(e.precision||'')?['exact_schedule']:[],/章首剧情/.test(e.precision||'')?['Story-triggered event has no independent calendar appointment']:[]);

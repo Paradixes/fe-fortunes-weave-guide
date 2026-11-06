@@ -1,0 +1,84 @@
+--- a/scripts/apply-gifts-schedule-review.cjs
++++ b/scripts/apply-gifts-schedule-review.cjs
+@@ -40,8 +40,11 @@
+    else {if(gift[forward])gift[forward]=gift[forward].filter(id=>id!==character.id);if(character[reverse])character[reverse]=character[reverse].filter(id=>id!==gift.id);}
+   }
+   const old=(gift.relationEvidence||[]).find(e=>e.characterId===character.id&&e.level===patch.level);
+-  gift.relationEvidence=(gift.relationEvidence||[]).filter(e=>e.characterId!==character.id);
+-  gift.relationEvidence.push({characterId:character.id,level:patch.level,sources:union(old?.sources,patch.sources)});
++  // Preserve later evidence and row order when this historical migration is replayed.
++  const records=gift.relationEvidence||[],index=records.findIndex(e=>e.characterId===character.id);
++  const evidence={...old,characterId:character.id,level:patch.level,sources:union(old?.sources,patch.sources)};
++  if(index<0)records.push(evidence);else records[index]=evidence;
++  gift.relationEvidence=records.filter((e,i)=>e.characterId!==character.id||i===(index<0?records.length-1:index));
+  }
+  for(const character of data.database.characters)for(const [,reverse]of Object.values(relationFields))if(character[reverse])character[reverse]=union(character[reverse]);
+  data.dataResearch.giftsScheduleReview20261105={checkedAt:review.checkedAt,evidenceFile:'data/research/gifts-schedule-review-2026-11-05.json',...review.summary,policy:'仅合并有游戏截图确认的重复；两个疑似别名保留，未知价格保持空值。'};
+--- a/scripts/apply-equipment-followup-review.cjs
++++ b/scripts/apply-equipment-followup-review.cjs
+@@ -3,12 +3,13 @@
+ function applyEquipmentFollowup(data){
+  for(const update of review.updates){
+   const e=data.equipment.find(e=>e.id===update.id);assert(e&&e.name===update.name);
++  if(e.upgradeStatsProvenance?.checkedAt>review.checkedAt)continue; // Preserve later field-level verification.
+   e.upgradeStats=structuredClone(update.upgradeStats);
+   e.upgradeStatsNote=update.upgradeStatsNote;
+   e.upgradeStatsProvenance={checkedAt:review.checkedAt,evidenceKind:review.evidenceKind,sources:[...new Set(update.upgradeStats.flatMap(row=>row.sources))]};
+  }
+  data.dataResearch.equipmentFollowup20261105={checkedAt:review.checkedAt,evidenceFile:'data/research/equipment-followup-review-2026-11-05.json',newUpgradeStages:review.updates.reduce((n,u)=>n+u.upgradeStats.length,0),note:'仅补明确性能字段；配方报价未导入累计成本，强化耐久和空字段待核实。'};
+- if(data.dataResearch.currentSupplementGaps20261105)data.dataResearch.currentSupplementGaps20261105.dlcForging='4件试作品已收录12个强化阶段的部分性能；配方计价方式、强化耐久及未列字段仍待核实。';
++ if(data.dataResearch.currentSupplementGaps20261105&&!data.dataResearch.recoveredDataAudit20261106)data.dataResearch.currentSupplementGaps20261105.dlcForging='4件试作品已收录12个强化阶段的部分性能；配方计价方式、强化耐久及未列字段仍待核实。';
+  return data;
+ }
+ if(require.main===module){const[input,output]=process.argv.slice(2);assert(input&&output);fs.writeFileSync(output,JSON.stringify(applyEquipmentFollowup(JSON.parse(fs.readFileSync(input))),null,2)+'\n');}
+--- a/scripts/verify-equipment-followup.cjs
++++ b/scripts/verify-equipment-followup.cjs
+@@ -1,12 +1,20 @@
+ const fs=require('fs'),assert=require('assert');
+ const d=JSON.parse(fs.readFileSync(process.argv[2]||'data/catalog.json'));
+ const review=require('../data/research/equipment-followup-review-2026-11-05.json');
++const later=require('../data/research/recovered-data-review-2026-11-06.json');
+ for(const u of review.updates){
+- const e=d.equipment.find(e=>e.id===u.id);assert.deepStrictEqual(e.upgradeStats,u.upgradeStats);
++ const e=d.equipment.find(e=>e.id===u.id),newer=d.dataResearch.recoveredDataAudit20261106&&e.id===later.prototypeXI.id;
++ if(!newer)assert.deepStrictEqual(e.upgradeStats,u.upgradeStats);
++ else for(const original of u.upgradeStats){
++  const row=e.upgradeStats.find(r=>r.stage===original.stage),patch=later.prototypeXI.stageUpdates.find(r=>r.stage===original.stage);
++  assert.deepStrictEqual(row.stats,{...original.stats,...patch.stats},'Only explicitly screenshot-verified fields extend old stages');
++  assert(original.sources.every(s=>row.sources.includes(s)));
++  for(const key of Object.keys(patch.stats))assert.equal(row.fieldSources[key],later.prototypeXI.image);
++ }
+  assert.equal(e.upgradeStats.length,3);assert(e.upgradeStatsNote.includes('空项待核实'));
+  assert(!e.forgeSteps&&!e.forgeGold&&!e.forgeMaterials,'Unresolved recipe quotations are not normalized into costs');
+- for(const row of e.upgradeStats){assert(!('durability' in row.stats));for(const key of Object.keys(row.stats))assert(row.fieldSources[key],e.name+' '+row.stage+' source for '+key);}
++ for(const row of e.upgradeStats){if(!newer)assert(!('durability' in row.stats));for(const key of Object.keys(row.stats))assert(row.fieldSources[key],e.name+' '+row.stage+' source for '+key);}
+  assert.equal(e.stats.durability,5,'Base form unchanged');assert(e.sourcesList.some(s=>s.source.startsWith('https://www.nintendo.com/')));
+ }
+ assert.deepStrictEqual(require('./apply-equipment-followup-review.cjs').applyEquipmentFollowup(structuredClone(d)),d);
+-console.log('PASS equipment follow-up: 12 sourced stages, partial final weights/range, unchanged official routes and base stats, unknown durability and recipe totals kept out.');
++console.log('PASS equipment follow-up: 12 sourced stages, partial final weights/range, unchanged official routes and base stats, later XI screenshot fields preserved when applied; unresolved recipe totals kept out.');
+--- a/scripts/verify-strategy-ratings.cjs
++++ b/scripts/verify-strategy-ratings.cjs
+@@ -81,7 +81,11 @@
+ for(const key of ['learning','abilities']){
+  assert.equal(supplementLearningReview.baselineHashes[key],latestLearningReview.currentHashes[key],key+' supplement baseline does not match prior review');
+  assert.equal(followupLearningReview.baselineHashes[key],supplementLearningReview.currentHashes[key],key+' follow-up baseline does not match prior supplement');
+- assert.equal(hash(d[key]),followupLearningReview.currentHashes[key],key+' changed outside reviewed follow-up');
++ if(d.dataResearch.recoveredDataAudit20261106){
++  const recovered=require('../data/research/recovered-data-review-2026-11-06.json');
++  assert.equal(recovered.baselineHashes[key],followupLearningReview.currentHashes[key],key+' recovery baseline mismatch');
++  assert.equal(hash(d[key]),recovered.currentHashes[key],key+' changed outside recovered review');
++ }else assert.equal(hash(d[key]),followupLearningReview.currentHashes[key],key+' changed outside reviewed follow-up');
+ }
+ const editorial=JSON.stringify([d.planning,d.routeStrategy,d.database.characters.map(c=>[c.plan,c.stop,c.ratingReason])]);
+ assert.ok(!editorial.includes('贤士兼用黑白魔'));
+--- a/scripts/verify-site.cjs
++++ b/scripts/verify-site.cjs
+@@ -10,6 +10,7 @@
+ require('./verify-equipment-gaps.cjs');
+ require('./verify-equipment-followup.cjs');
+ require('./verify-gifts-schedule-gaps.cjs');
++if(require('../data/catalog.json').dataResearch.recoveredDataAudit20261106)require('./verify-recovered-data-review-2026-11-06.cjs');
+ const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},dataset:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,URLSearchParams,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','catalog-ui.js','app.js','reasons.js','articles.js','skill-planning.js','v9.js','cultivation.js','roster-map.js','search.js','anna-agent.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
+ const searchEvents={...events};
+ (async()=>{await require('./verify-interaction-review-2026-11-06.cjs')();await new Promise(r=>setImmediate(r));vm.runInContext('LEARNING='+fs.readFileSync(root+'learning.json')+';PINS='+fs.readFileSync(root+'map.json')+';mapLoaded=true;',ctx);

@@ -40,8 +40,11 @@ function applyGiftScheduleReview(data){
    else {if(gift[forward])gift[forward]=gift[forward].filter(id=>id!==character.id);if(character[reverse])character[reverse]=character[reverse].filter(id=>id!==gift.id);}
   }
   const old=(gift.relationEvidence||[]).find(e=>e.characterId===character.id&&e.level===patch.level);
-  gift.relationEvidence=(gift.relationEvidence||[]).filter(e=>e.characterId!==character.id);
-  gift.relationEvidence.push({characterId:character.id,level:patch.level,sources:union(old?.sources,patch.sources)});
+  // Preserve later evidence and row order when this historical migration is replayed.
+  const records=gift.relationEvidence||[],index=records.findIndex(e=>e.characterId===character.id);
+  const evidence={...old,characterId:character.id,level:patch.level,sources:union(old?.sources,patch.sources)};
+  if(index<0)records.push(evidence);else records[index]=evidence;
+  gift.relationEvidence=records.filter((e,i)=>e.characterId!==character.id||i===(index<0?records.length-1:index));
  }
  for(const character of data.database.characters)for(const [,reverse]of Object.values(relationFields))if(character[reverse])character[reverse]=union(character[reverse]);
  data.dataResearch.giftsScheduleReview20261105={checkedAt:review.checkedAt,evidenceFile:'data/research/gifts-schedule-review-2026-11-05.json',...review.summary,policy:'仅合并有游戏截图确认的重复；两个疑似别名保留，未知价格保持空值。'};

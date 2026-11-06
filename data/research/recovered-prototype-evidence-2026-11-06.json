@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-11-06T07:26:04.489773+00:00",
+  "scope": "恢复试作品11号的四个强化字段证据；只生成研究记录，不修改目录、前端或发布。",
+  "equipmentId": "library_gw_582765",
+  "name": "试作品11号",
+  "evidenceKind": "public-guide-game-screenshot-visually-inspected",
+  "image": {
+    "url": "https://annasnotebook.net/assets/img/zh/ao-6aph3tlq-vimg30-03-hd.webp",
+    "contextPage": "https://annasnotebook.net/en/mechanics/strategy/safe-sniper-team/",
+    "sha256": "febc30ade5911f838f9e609e9bb8ee799eaff0c829263f412bc9abdb08d3da06",
+    "bytes": 115982,
+    "verification": "本轮重新下载，并通过view_image实际查看图像像素；不是仅采纳图片标题或旧报告。"
+  },
+  "verifiedFields": [
+    {
+      "stage": "I",
+      "field": "durability",
+      "value": 5,
+      "visualEvidence": "上方锻造后列表的试作品11号：I行明确显示耐久5/5。"
+    },
+    {
+      "stage": "II",
+      "field": "durability",
+      "value": 10,
+      "visualEvidence": "上方锻造后列表的试作品11号：II行明确显示耐久10/10。"
+    },
+    {
+      "stage": "III",
+      "field": "durability",
+      "value": 10,
+      "visualEvidence": "上方III行和下方所选III详情均明确显示耐久10/10。"
+    },
+    {
+      "stage": "III",
+      "field": "weight",
+      "value": 6,
+      "visualEvidence": "下方所选试作品11号：III面板右侧重量明确显示6。"
+    }
+  ],
+  "proposedUpgradeStatsMerge": [
+    {
+      "stage": "I",
+      "stats": {
+        "durability": 5
+      }
+    },
+    {
+      "stage": "II",
+      "stats": {
+        "durability": 10
+      }
+    },
+    {
+      "stage": "III",
+      "stats": {
+        "durability": 10,
+        "weight": 6
+      }
+    }
+  ],
+  "corroboration": {
+    "url": "https://hyperwiki.jp/fefw/weapon4/",
+    "section": "試作品１１号，強化明细表，网页提取行236–243",
+    "kind": "secondary-guide-text",
+    "freshlyRead": true,
+    "agreement": "第1级耐久5，第2级耐久10，第3级耐久10、重量6。"
+  },
+  "limitations": [
+    "来源是公开攻略所载游戏画面，不是官方公布数据；本轮未观看原视频。",
+    "不宣称对图片的制作或编辑历史完成鉴定。",
+    "不核实或更改配方、金币、累计计价、中间阶段重量、其他武器或任何其他字段。",
+    "图片不显示配方费用；不能由此确认基础至III的材料或金币总量。",
+    "不整体采纳hyperWiki行，其回避等其他字段存在既有疑点。"
+  ],
+  "changesMade": [
+    "仅写入本研究JSON；图片下载至/tmp。"
+  ],
+  "published": false
+}
