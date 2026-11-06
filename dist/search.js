@@ -96,7 +96,7 @@ function annaSearch(q){
 }
 
 // 弹层 UI:复用 openGuideDialog 的焦点保存与背景锁定;结果动作全部复用现有导航;同时接入 AI 提问对话。
-let annaOwnsLock=false,annaFlat=[],annaActive=-1,annaGreetTimer=null,annaDebounce=null,annaBackdropDown=false,annaDialogAiHtml='',annaDialogAiQuery='',annaDialogAsking=false;
+let annaOwnsLock=false,annaFlat=[],annaActive=-1,annaGreetTimer=null,annaDebounce=null,annaRenderedQuery=null,annaBackdropDown=false,annaDialogAiHtml='',annaDialogAiQuery='',annaDialogAsking=false;
 function annaReduced(){return typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches}
 function annaStatsText(){return ''}
 function annaMark(text,norm){if(!norm||/^[\x20-\x7e]+$/.test(norm))return esc(text);const i=text.toLowerCase().indexOf(norm);return i<0?esc(text):esc(text.slice(0,i))+'<mark>'+esc(text.slice(i,i+norm.length))+'</mark>'+esc(text.slice(i+norm.length))}
@@ -151,6 +151,7 @@ async function askAnnaInDialog(rawQ){
 }
 function renderAnnaResults(){
  const input=$('#annaInput'),box=$('#annaResults');if(!input||!box)return;
+ clearTimeout(annaDebounce);annaDebounce=null;annaRenderedQuery=input.value;
  const raw=input.value.trim(),res=annaSearch(raw);
  annaFlat=res.flat;annaActive=-1;input.removeAttribute('aria-activedescendant');
  const clear=$('#annaSearch [data-anna-clear]');if(clear)clear.hidden=!input.value;
@@ -177,9 +178,10 @@ function renderAnnaResults(){
  input.setAttribute('aria-expanded',res.groups.length?'true':'false');
  const stats=$('#annaStats');if(stats)stats.textContent=res.groups.length?`找到 ${res.total} 条记录`:'';
 }
+function flushAnnaResults(){if(annaDebounce!==null||annaRenderedQuery!==$('#annaInput')?.value)renderAnnaResults()}
 function moveAnna(step){
  if(!annaFlat.length)return;
- annaActive=(annaActive+step+annaFlat.length)%annaFlat.length;
+ annaActive=annaActive<0?(step<0?annaFlat.length-1:0):(annaActive+step+annaFlat.length)%annaFlat.length;
  document.querySelectorAll('#annaResults [data-anna-idx]').forEach(el=>{const on=Number(el.dataset.annaIdx)===annaActive;el.classList.toggle('active',on);el.setAttribute('aria-selected',String(on));if(on)el.scrollIntoView({block:'nearest'})});
  $('#annaInput')?.setAttribute('aria-activedescendant','anna-opt-'+annaActive);
 }
@@ -219,7 +221,7 @@ function pickAnna(i){
 (function(){
  const d=$('#annaSearch'),input=$('#annaInput'),btn=$('#annaSearchBtn');
  btn?.addEventListener('click',()=>openAnnaSearch());
- d?.addEventListener('close',()=>{if(typeof clearInterval==='function')clearInterval(annaGreetTimer);d.querySelector('h2')?.classList.remove('anna-typing');annaFlat=[];annaActive=-1;if(annaOwnsLock){annaOwnsLock=false;releaseDialogScroll()}});
+ d?.addEventListener('close',()=>{clearTimeout(annaDebounce);annaDebounce=null;annaRenderedQuery=null;if(typeof clearInterval==='function')clearInterval(annaGreetTimer);d.querySelector('h2')?.classList.remove('anna-typing');annaFlat=[];annaActive=-1;if(annaOwnsLock){annaOwnsLock=false;releaseDialogScroll()}});
  d?.addEventListener('pointerdown',e=>{annaBackdropDown=outsideDialog(e,d)});
  d?.addEventListener('click',e=>{
   const ent=e.target.closest?.('.inline-entity-link');
@@ -260,9 +262,9 @@ function pickAnna(i){
  input?.addEventListener('compositionend',()=>renderAnnaResults());
  input?.addEventListener('keydown',e=>{
   if(e.isComposing)return;
-  if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();moveAnna(e.key==='ArrowDown'?1:-1)}
+  if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();flushAnnaResults();moveAnna(e.key==='ArrowDown'?1:-1)}
   else if(e.key==='Enter'){
-   e.preventDefault();e.stopPropagation();
+   e.preventDefault();e.stopPropagation();flushAnnaResults();
    if(e.shiftKey||(!annaFlat.length&&typeof annaLlmReady==='function'&&annaLlmReady())){askAnnaInDialog();return}
    if(annaActive>=0){pickAnna(annaActive);return}
    const raw=input.value.trim(), isQuestion=/[?？]|怎么|如何|为什么|哪些|哪个|好吗|推荐|培养|对比|区别|谁|多少|哪里|哪儿/.test(raw)||raw.length>=7;

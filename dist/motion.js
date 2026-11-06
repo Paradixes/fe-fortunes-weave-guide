@@ -5,14 +5,27 @@
   let routeAnimations = [];
   let sidebarAnimation;
   const originalSidebar = toggleSidebar;
+  function syncSidebarAccess() {
+    const sidebar = document.querySelector('.sidebar');
+    if (!sidebar) return;
+    const hidden = matchMedia('(max-width: 900px)').matches && document.body.classList.contains('sidebar-collapsed');
+    if (hidden && sidebar.contains(document.activeElement)) document.querySelector('#sidebarToggle')?.focus({ preventScroll: true });
+    sidebar.inert = hidden;
+  }
+  function cancelSidebarMotion() {
+    sidebarAnimation?.cancel();
+    sidebarAnimation = null;
+    document.body.classList.remove('sidebar-moving');
+  }
+  window.addEventListener('resize', () => { cancelSidebarMotion(); syncSidebarAccess(); });
+  syncSidebarAccess();
   toggleSidebar = function (force) {
     const sidebar = document.querySelector('.sidebar');
     const mobile = matchMedia('(max-width: 900px)').matches;
     const before = sidebar.getBoundingClientRect().height;
-    sidebarAnimation?.cancel();
-    document.body.classList.remove('sidebar-moving');
+    cancelSidebarMotion();
     originalSidebar(force);
-    sidebar.inert = mobile && document.body.classList.contains('sidebar-collapsed');
+    syncSidebarAccess();
     if (!mobile || reduced.matches || !Element.prototype.animate) return;
     const collapsed = document.body.classList.contains('sidebar-collapsed');
     const after = collapsed ? 0 : sidebar.scrollHeight;
@@ -188,34 +201,51 @@
   (window.requestIdleCallback || (fn => setTimeout(fn, 600)))(() => routeOrder().forEach(artReady));
 
   const routeSelect = selectGuideRoute;
-  let routeToken = 0;
-  function cinematicSwitch(nextRoute, dir) {
-    const token = ++routeToken, root = document.documentElement;
+  let routeToken = 0, activeRouteTransition = null;
+  function cancelPendingRoute() {
+    routeToken++;
+    activeRouteTransition?.skipTransition?.();
+    activeRouteTransition = null;
+    delete document.documentElement.dataset.routeDir;
+    document.querySelector('.route-sheen')?.classList.remove('route-sheen');
+  }
+  window.addEventListener('hashchange', cancelPendingRoute);
+  function cinematicSwitch(nextRoute, dir, token) {
+    const root = document.documentElement, hash = location.hash;
+    const current = () => token === routeToken && location.hash === hash;
     const wait = new Promise(done => setTimeout(done, 280));
     Promise.race([artReady(nextRoute), wait]).then(() => {
-      if (token !== routeToken) return;
+      if (!current()) return;
       root.dataset.routeDir = dir > 0 ? 'next' : 'prev';
       const transition = document.startViewTransition(() => {
+        if (!current()) return;
         window.__routeViewTransition = true;
         try { routeSelect(nextRoute); } finally { window.__routeViewTransition = false; }
         lastView = location.hash + '|' + (typeof routeGuideView === 'undefined' ? '' : routeGuideView);
         document.querySelector('.route-cover')?.classList.add('route-sheen');
       });
+      activeRouteTransition = transition;
       transition.updateCallbackDone.then(() => {
+        if (!current()) return;
         const panel = document.querySelector('#route-guide-panel');
-        setTimeout(() => { stagger(panel); countUp(panel || document); }, 180);
-      });
-      transition.finished.finally(() => {
-        if (token === routeToken) delete root.dataset.routeDir;
+        setTimeout(() => { if (current() && panel?.isConnected) { stagger(panel); countUp(panel); } }, 180);
+      }, () => {});
+      const finish = () => {
+        if (!current()) return;
+        activeRouteTransition = null;
+        delete root.dataset.routeDir;
         document.querySelector('.route-sheen')?.classList.remove('route-sheen');
-      });
+      };
+      transition.finished.then(finish, finish);
     });
   }
 
   selectGuideRoute = function (nextRoute) {
     const order = routeOrder(), from = order.indexOf(route), to = order.indexOf(nextRoute);
-    const changed = nextRoute !== route;
-    if (changed && canAnimate() && document.startViewTransition) return cinematicSwitch(nextRoute, to > from ? 1 : -1);
+    if (to < 0) return;
+    cancelPendingRoute();
+    const token = routeToken, changed = nextRoute !== route;
+    if (changed && canAnimate() && document.startViewTransition) return cinematicSwitch(nextRoute, to > from ? 1 : -1, token);
     routeSelect(nextRoute);
     lastView = location.hash + '|' + (typeof routeGuideView === 'undefined' ? '' : routeGuideView);
     if (!changed || !canAnimate()) return;

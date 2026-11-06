@@ -127,11 +127,11 @@ body.dark .collection-workspace thead th{background:var(--tint);color:var(--ink)
 .ability-learning-link>span{display:flex;flex-direction:column;gap:1px}
 .ability-learning-link small{font-size:10px;line-height:1.4;color:var(--muted)}
 .ability-table .ability-name-btn.guide-reward{padding:2px 4px}
-.rank-learning-entry [data-learning-focus]{outline:2px solid var(--positive-mark);outline-offset:3px;border-radius:3px}
+.rank-learning-entry [data-learning-focus]{outline:2px solid var(--recommendation-mark);outline-offset:3px;border-radius:3px}
 @media(max-width:600px){.ability-character-context{align-items:flex-start;gap:8px}.ability-character-context>span{flex-basis:100%}.learning-catalog-links{gap:6px 12px}}
 
 .ability-catalog-filters .fdeck-ctrl{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px}
 .ability-catalog-filters label{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
 .ability-catalog-filters select{min-height:32px;max-width:140px;padding:4px 26px 4px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);font:inherit}
-.ability-catalog-filters select:focus-visible{outline:2px solid var(--positive-mark);outline-offset:2px}
+.ability-catalog-filters select:focus-visible{outline:2px solid var(--recommendation-mark);outline-offset:2px}
 @media(max-width:600px){.ability-catalog-filters>.fdeck-label{display:none}.ability-catalog-filters .fdeck-ctrl{width:100%;gap:6px 12px}.ability-catalog-filters label{flex:1;white-space:nowrap}.ability-catalog-filters select{max-width:110px}.ability-catalog-filters [data-ability-reset]{min-height:32px;padding:4px}}

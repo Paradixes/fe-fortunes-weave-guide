@@ -24,7 +24,7 @@
 .compare-person b{display:block;font-size:15px}
 .compare-person small{display:block;font-size:11px;font-weight:500;color:var(--muted)}
 .compare-table td{font-variant-numeric:tabular-nums}
-.compare-growth{display:inline-block;min-width:3.4em;padding:1px 8px;border-radius:4px;background:var(--growth-color);color:#352b27;font-weight:600;text-align:center}
+.compare-growth{display:inline-block;min-width:3.4em;padding:1px 8px;border-radius:4px;background:var(--growth-color);color:var(--growth-ink,#352b27);font-weight:600;text-align:center}
 .compare-top{font-weight:700}
 .compare-top .compare-growth{box-shadow:0 0 0 2px var(--ui-accent)}
 .compare-top::after{content:' ▲';font-size:10px;color:var(--ui-accent)}

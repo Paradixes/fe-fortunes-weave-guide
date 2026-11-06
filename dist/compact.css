@@ -35,7 +35,7 @@
 .class-data-table .catalog-mastery>.text-button{margin:0;max-width:none;white-space:nowrap;text-align:left}
 .class-data-table .mastery-skill-link .skill-inline{margin-inline:0;padding:0!important}
 .class-data-table .mastery-skill-link{background:none;color:var(--ink);border:0;box-shadow:none}
-.class-data-table .mastery-recommendation{display:inline-block;position:relative;top:-.45em;margin-left:1px;padding:1px 2px;border:1px solid color-mix(in srgb,var(--positive-mark) 38%,transparent);border-radius:2px;font-size:9.5px;font-weight:700;line-height:1;white-space:nowrap;vertical-align:baseline;color:var(--secondary-ink);background:var(--secondary-bg)}
+.class-data-table .mastery-recommendation{display:inline-block;position:relative;top:-.45em;margin-left:1px;padding:1px 2px;border:1px solid color-mix(in srgb,var(--recommendation-mark) 38%,transparent);border-radius:2px;font-size:9.5px;font-weight:700;line-height:1;white-space:nowrap;vertical-align:baseline;color:var(--secondary-ink);background:var(--secondary-bg)}
 .class-data-table .mastery-recommendation.priority{color:var(--priority-ink);background:var(--priority-bg);border-color:var(--priority-bg)}
 .class-data-table .catalog-proficiencies{min-width:0;padding-left:12px}
 .class-data-table .catalog-proficiencies .proficiency-tags{gap:2px 4px}
@@ -281,7 +281,7 @@ main#content>.route-cover{margin-top:0}
 .person-chip:hover b{color:var(--purple);text-decoration:underline}
 [data-ability-recommendation="priority"]::before,[data-ability-recommendation="situational"]::before{content:"";display:inline-block;width:9px;height:9px;margin-right:5px;border-radius:2px;vertical-align:0}
 [data-ability-recommendation="priority"]::before{background:var(--priority-bg)}
-[data-ability-recommendation="situational"]::before{background:var(--secondary-bg);box-shadow:inset 0 -1.5px 0 var(--positive-mark)}
+[data-ability-recommendation="situational"]::before{background:var(--secondary-bg);box-shadow:inset 0 -1.5px 0 var(--recommendation-mark)}
 /* Toolbar selects share the rounded filter control used by the class and equipment decks. */
 .fdeck select,.collection-route select{appearance:none;-webkit-appearance:none;height:28px;min-height:28px;min-width:120px;padding:0 30px 0 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23827269' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 11px center;color:var(--ink);font-size:13px;font-weight:500;line-height:26px;cursor:pointer}
 .dark .fdeck select,.dark .collection-route select{background-color:#231e19;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23baa99b' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")}

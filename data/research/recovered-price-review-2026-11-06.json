@@ -1,0 +1,3343 @@
+{
+  "checkedAt": "2026-11-06",
+  "recoveryStatus": "partial-evidence-supported-reconstruction-not-original-patch",
+  "changes": [
+    {
+      "equipmentId": "daminasword",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578477",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578477",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminasword",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578477",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578477",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminasword",
+      "sourceIndex": 12,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "第三部：王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578477",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "第三部：王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578477",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminasword",
+      "sourceIndex": 13,
+      "before": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "第三部：卡里亚涅拉港武器店 等；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578477",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "第三部：卡里亚涅拉港武器店 等；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578477",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminaaxe",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578501",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578501",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminaaxe",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578501",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578501",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminaaxe",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578501",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578501",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminaaxe",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "第三部：王都格兰·亚拉功武器店 等；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578501",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "第三部：王都格兰·亚拉功武器店 等；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578501",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminafist",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578492",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578492",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminafist",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "德莫尼克村",
+        "text": "第三部：德莫尼克村武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578492",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "德莫尼克村",
+        "text": "第三部：德莫尼克村武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578492",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminafist",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "尼扎港",
+        "text": "第三部：尼扎港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578492",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "尼扎港",
+        "text": "第三部：尼扎港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578492",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "daminafist",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市武器店 等；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578492",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市武器店 等；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578492",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "longbow",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "阿奇纽村",
+        "text": "阿奇纽村武器店；攻略参考买价 2000金币",
+        "source": "https://gamewith.jp/fefw/578496",
+        "price": 2000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "阿奇纽村",
+        "text": "阿奇纽村武器店；攻略参考买价 2000金币",
+        "source": "https://gamewith.jp/fefw/578496",
+        "referencePrice": 2000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "wind_bow",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578494",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578494",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "damina_bow",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578475",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578475",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "damina_bow",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "第三部：欧连斯镇武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578475",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "第三部：欧连斯镇武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578475",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "damina_bow",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "黑烟谷达·米纳",
+        "text": "黑烟谷达·米纳武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578475",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "黑烟谷达·米纳",
+        "text": "黑烟谷达·米纳武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578475",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "slender_spear",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 12000金币",
+        "source": "https://gamewith.jp/fefw/578486",
+        "phase": "第三部",
+        "price": 12000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 12000金币",
+        "source": "https://gamewith.jp/fefw/578486",
+        "phase": "第三部",
+        "referencePrice": 12000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "slender_spear",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "第三部：潘多拉港镇武器店；攻略参考买价 12000金币",
+        "source": "https://gamewith.jp/fefw/578486",
+        "phase": "第三部",
+        "price": 12000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "第三部：潘多拉港镇武器店；攻略参考买价 12000金币",
+        "source": "https://gamewith.jp/fefw/578486",
+        "phase": "第三部",
+        "referencePrice": 12000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411530",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578519",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578519",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411530",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578519",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578519",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411530",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578519",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578519",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411530",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "扎斯塔聚落武器店 等；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578519",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "扎斯塔聚落武器店 等；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578519",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411533",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578478",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578478",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411533",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578478",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578478",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411533",
+      "sourceIndex": 12,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578478",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578478",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411533",
+      "sourceIndex": 13,
+      "before": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578478",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578478",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411536",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578518",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578518",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411536",
+      "sourceIndex": 12,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578518",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578518",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411536",
+      "sourceIndex": 13,
+      "before": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578518",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578518",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411536",
+      "sourceIndex": 14,
+      "before": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578518",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578518",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411539",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578505",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578505",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411542",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "雷吉亚镇",
+        "text": "雷吉亚镇武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578517",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "雷吉亚镇",
+        "text": "雷吉亚镇武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578517",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411542",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "雷吉亚镇",
+        "text": "第三部：雷吉亚镇武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578517",
+        "phase": "第三部",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "雷吉亚镇",
+        "text": "第三部：雷吉亚镇武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578517",
+        "phase": "第三部",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411545",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578480",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "卡里亚涅拉港",
+        "text": "卡里亚涅拉港武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578480",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411545",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "扎斯塔聚落武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578480",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "扎斯塔聚落武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578480",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469835",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "扎斯塔聚落武器店；攻略参考买价 2100金币",
+        "source": "https://gamewith.jp/fefw/580603",
+        "price": 2100
+      },
+      "after": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "扎斯塔聚落武器店；攻略参考买价 2100金币",
+        "source": "https://gamewith.jp/fefw/580603",
+        "referencePrice": 2100
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469835",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "基拉村",
+        "text": "基拉村武器店；攻略参考买价 2100金币",
+        "source": "https://gamewith.jp/fefw/580603",
+        "price": 2100
+      },
+      "after": {
+        "kind": "购买",
+        "place": "基拉村",
+        "text": "基拉村武器店；攻略参考买价 2100金币",
+        "source": "https://gamewith.jp/fefw/580603",
+        "referencePrice": 2100
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469835",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "第三部：扎斯塔聚落武器店；攻略参考买价 2100金币",
+        "source": "https://gamewith.jp/fefw/580603",
+        "phase": "第三部",
+        "price": 2100
+      },
+      "after": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "第三部：扎斯塔聚落武器店；攻略参考买价 2100金币",
+        "source": "https://gamewith.jp/fefw/580603",
+        "phase": "第三部",
+        "referencePrice": 2100
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469835",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "基拉村",
+        "text": "第三部：基拉村武器店；攻略参考买价 2100金币",
+        "source": "https://gamewith.jp/fefw/580603",
+        "phase": "第三部",
+        "price": 2100
+      },
+      "after": {
+        "kind": "购买",
+        "place": "基拉村",
+        "text": "第三部：基拉村武器店；攻略参考买价 2100金币",
+        "source": "https://gamewith.jp/fefw/580603",
+        "phase": "第三部",
+        "referencePrice": 2100
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469838",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578476",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578476",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469838",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "第三部：王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578476",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "第三部：王都格兰·亚拉功武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578476",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469841",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "威利村",
+        "text": "威利村武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578504",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "威利村",
+        "text": "威利村武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578504",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469844",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578468",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578468",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411563",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578497",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578497",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411563",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578497",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578497",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411563",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "阿奇纽村",
+        "text": "阿奇纽村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578497",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "阿奇纽村",
+        "text": "阿奇纽村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578497",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411563",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578497",
+        "phase": "第三部",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578497",
+        "phase": "第三部",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411566",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578516",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578516",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411566",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578516",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578516",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411566",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578516",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578516",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411566",
+      "sourceIndex": 12,
+      "before": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578516",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578516",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411569",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577834",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577834",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411569",
+      "sourceIndex": 12,
+      "before": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577834",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577834",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411569",
+      "sourceIndex": 13,
+      "before": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577834",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577834",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411569",
+      "sourceIndex": 14,
+      "before": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "潘多拉港镇武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577834",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "潘多拉港镇武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577834",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411572",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578515",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578515",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411572",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578515",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578515",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411572",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "潘多拉港镇武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578515",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "潘多拉港镇武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578515",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411572",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578515",
+        "phase": "第三部",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578515",
+        "phase": "第三部",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411575",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578489",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578489",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411575",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578489",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578489",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411575",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "潘多拉港镇武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578489",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "潘多拉港镇武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578489",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411575",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578489",
+        "phase": "第三部",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578489",
+        "phase": "第三部",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411578",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578485",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578485",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411581",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "潘多拉港镇武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578482",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "潘多拉港镇",
+        "text": "潘多拉港镇武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578482",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469850",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578503",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578503",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469850",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "第三部：菲那渔村武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578503",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "第三部：菲那渔村武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578503",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469850",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "黑烟谷达·米纳",
+        "text": "黑烟谷达·米纳武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578503",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "黑烟谷达·米纳",
+        "text": "黑烟谷达·米纳武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578503",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469850",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "吉玛港",
+        "text": "吉玛港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578503",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "吉玛港",
+        "text": "吉玛港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578503",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469853",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578502",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578502",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469853",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "第三部：扎斯塔聚落武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578502",
+        "phase": "第三部",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "扎斯塔聚落",
+        "text": "第三部：扎斯塔聚落武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578502",
+        "phase": "第三部",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469862",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578484",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "领都卡西特武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578484",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469862",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "第三部：领都卡西特武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578484",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "领都卡西特",
+        "text": "第三部：领都卡西特武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578484",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411593",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578488",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578488",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411593",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "托巴林村",
+        "text": "托巴林村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578488",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "托巴林村",
+        "text": "托巴林村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578488",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411593",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "贝内特纳什村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578488",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "贝内特纳什村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578488",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411593",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578488",
+        "phase": "第三部",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578488",
+        "phase": "第三部",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411596",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/577857",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/577857",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411596",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/577857",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/577857",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411596",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/577857",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/577857",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411596",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/577857",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/577857",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411599",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577852",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577852",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411599",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577852",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577852",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411599",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577852",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577852",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411599",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577852",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577852",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411602",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578513",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578513",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411602",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "托巴林村",
+        "text": "托巴林村武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578513",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "托巴林村",
+        "text": "托巴林村武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578513",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411602",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578513",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578513",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411602",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "贝内特纳什村武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578513",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "贝内特纳什村武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578513",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411605",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578512",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578512",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411605",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578512",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "莱奥港",
+        "text": "莱奥港武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578512",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411605",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "贝内特纳什村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578512",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "贝内特纳什村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578512",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411605",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578512",
+        "phase": "第三部",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578512",
+        "phase": "第三部",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411608",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578499",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "王都格兰·亚拉功武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578499",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411608",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "第三部：王都格兰·亚拉功武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578499",
+        "phase": "第三部",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "text": "第三部：王都格兰·亚拉功武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578499",
+        "phase": "第三部",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469868",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578500",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "text": "王都美盖拉武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578500",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469871",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "贝内特纳什村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578481",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "贝内特纳什村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578481",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469871",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "第三部：贝内特纳什村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578481",
+        "phase": "第三部",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "第三部：贝内特纳什村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578481",
+        "phase": "第三部",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469874",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "马翁城郭",
+        "text": "第三部：马翁城郭武器店；攻略参考买价 2400金币",
+        "source": "https://gamewith.jp/fefw/578511",
+        "phase": "第三部",
+        "price": 2400
+      },
+      "after": {
+        "kind": "购买",
+        "place": "马翁城郭",
+        "text": "第三部：马翁城郭武器店；攻略参考买价 2400金币",
+        "source": "https://gamewith.jp/fefw/578511",
+        "phase": "第三部",
+        "referencePrice": 2400
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469874",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "马翁城郭",
+        "text": "马翁城郭武器店；攻略参考买价 2400金币",
+        "source": "https://gamewith.jp/fefw/578511",
+        "price": 2400
+      },
+      "after": {
+        "kind": "购买",
+        "place": "马翁城郭",
+        "text": "马翁城郭武器店；攻略参考买价 2400金币",
+        "source": "https://gamewith.jp/fefw/578511",
+        "referencePrice": 2400
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469877",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "托巴林村",
+        "text": "托巴林村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578483",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "托巴林村",
+        "text": "托巴林村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578483",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469880",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 12000金币",
+        "source": "https://gamewith.jp/fefw/578473",
+        "phase": "第三部",
+        "price": 12000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 12000金币",
+        "source": "https://gamewith.jp/fefw/578473",
+        "phase": "第三部",
+        "referencePrice": 12000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469880",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "第三部：贝内特纳什村武器店；攻略参考买价 12000金币",
+        "source": "https://gamewith.jp/fefw/578473",
+        "phase": "第三部",
+        "price": 12000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "贝内特纳什村",
+        "text": "第三部：贝内特纳什村武器店；攻略参考买价 12000金币",
+        "source": "https://gamewith.jp/fefw/578473",
+        "phase": "第三部",
+        "referencePrice": 12000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411614",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578487",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578487",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411614",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "里贝拉村",
+        "text": "里贝拉村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578487",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "里贝拉村",
+        "text": "里贝拉村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578487",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411614",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "亚曼村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578487",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "亚曼村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578487",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411614",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店 等；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578487",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店 等；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578487",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411617",
+      "sourceIndex": 8,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578510",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578510",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411617",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "里贝拉村",
+        "text": "里贝拉村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578510",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "里贝拉村",
+        "text": "里贝拉村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578510",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411617",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "亚曼村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578510",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "亚曼村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578510",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411617",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578510",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578510",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411620",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577833",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577833",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411620",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "里贝拉村",
+        "text": "里贝拉村武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577833",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "里贝拉村",
+        "text": "里贝拉村武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577833",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411620",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577833",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "欧连斯镇武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577833",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411620",
+      "sourceIndex": 12,
+      "before": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577833",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/577833",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411623",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "里贝拉村",
+        "text": "里贝拉村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578509",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "里贝拉村",
+        "text": "里贝拉村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578509",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411629",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "亚曼村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578495",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "亚曼村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578495",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411635",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "亚曼村武器店；攻略参考买价 2800金币",
+        "source": "https://gamewith.jp/fefw/578508",
+        "price": 2800
+      },
+      "after": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "亚曼村武器店；攻略参考买价 2800金币",
+        "source": "https://gamewith.jp/fefw/578508",
+        "referencePrice": 2800
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411635",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "基拉村",
+        "text": "基拉村武器店；攻略参考买价 2800金币",
+        "source": "https://gamewith.jp/fefw/578508",
+        "price": 2800
+      },
+      "after": {
+        "kind": "购买",
+        "place": "基拉村",
+        "text": "基拉村武器店；攻略参考买价 2800金币",
+        "source": "https://gamewith.jp/fefw/578508",
+        "referencePrice": 2800
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411635",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "第三部：亚曼村武器店；攻略参考买价 2800金币",
+        "source": "https://gamewith.jp/fefw/578508",
+        "phase": "第三部",
+        "price": 2800
+      },
+      "after": {
+        "kind": "购买",
+        "place": "亚曼村",
+        "text": "第三部：亚曼村武器店；攻略参考买价 2800金币",
+        "source": "https://gamewith.jp/fefw/578508",
+        "phase": "第三部",
+        "referencePrice": 2800
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411635",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "基拉村",
+        "text": "第三部：基拉村武器店；攻略参考买价 2800金币",
+        "source": "https://gamewith.jp/fefw/578508",
+        "phase": "第三部",
+        "price": 2800
+      },
+      "after": {
+        "kind": "购买",
+        "place": "基拉村",
+        "text": "第三部：基拉村武器店；攻略参考买价 2800金币",
+        "source": "https://gamewith.jp/fefw/578508",
+        "phase": "第三部",
+        "referencePrice": 2800
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469886",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578474",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578474",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469886",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "第三部：王都布雷斯顿武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578474",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "第三部：王都布雷斯顿武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578474",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469889",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578471",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578471",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469889",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "第三部：欧连斯镇武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578471",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "欧连斯镇",
+        "text": "第三部：欧连斯镇武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578471",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411641",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578498",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578498",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411641",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "德莫尼克村",
+        "text": "德莫尼克村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578498",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "德莫尼克村",
+        "text": "德莫尼克村武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578498",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411641",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578498",
+        "phase": "第三部",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/578498",
+        "phase": "第三部",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411644",
+      "sourceIndex": 9,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578493",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578493",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411644",
+      "sourceIndex": 10,
+      "before": {
+        "kind": "购买",
+        "place": "德莫尼克村",
+        "text": "德莫尼克村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578493",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "德莫尼克村",
+        "text": "德莫尼克村武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578493",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411644",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578493",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市武器店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578493",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411644",
+      "sourceIndex": 12,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578493",
+        "phase": "第三部",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/578493",
+        "phase": "第三部",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411647",
+      "sourceIndex": 11,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578507",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578507",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411647",
+      "sourceIndex": 12,
+      "before": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578507",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578507",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411647",
+      "sourceIndex": 13,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578507",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市武器店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578507",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411647",
+      "sourceIndex": 14,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578507",
+        "phase": "第三部",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/578507",
+        "phase": "第三部",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411653",
+      "sourceIndex": 6,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578506",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578506",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80411653",
+      "sourceIndex": 7,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578506",
+        "phase": "第三部",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578506",
+        "phase": "第三部",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469892",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "海都阿勒克托",
+        "text": "海都阿勒克托武器店；攻略参考买价 5000金币",
+        "source": "https://gamewith.jp/fefw/578490",
+        "price": 5000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "海都阿勒克托",
+        "text": "海都阿勒克托武器店；攻略参考买价 5000金币",
+        "source": "https://gamewith.jp/fefw/578490",
+        "referencePrice": 5000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469892",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "海都阿勒克托",
+        "text": "第三部：海都阿勒克托武器店；攻略参考买价 5000金币",
+        "source": "https://gamewith.jp/fefw/578490",
+        "phase": "第三部",
+        "price": 5000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "海都阿勒克托",
+        "text": "第三部：海都阿勒克托武器店；攻略参考买价 5000金币",
+        "source": "https://gamewith.jp/fefw/578490",
+        "phase": "第三部",
+        "referencePrice": 5000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469895",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "尼扎港",
+        "text": "尼扎港武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578491",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "尼扎港",
+        "text": "尼扎港武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/578491",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469898",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578479",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "王都布雷斯顿武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578479",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469898",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "第三部：王都布雷斯顿武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578479",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "王都布雷斯顿",
+        "text": "第三部：王都布雷斯顿武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578479",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469901",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "德莫尼克村",
+        "text": "德莫尼克村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/580583",
+        "price": 3000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "德莫尼克村",
+        "text": "德莫尼克村武器店；攻略参考买价 3000金币",
+        "source": "https://gamewith.jp/fefw/580583",
+        "referencePrice": 3000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469904",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578472",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578472",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_80469904",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "尼扎港",
+        "text": "第三部：尼扎港武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578472",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "尼扎港",
+        "text": "第三部：尼扎港武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578472",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_gw_578469",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578469",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578469",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "library_gw_578470",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578470",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁武器店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/578470",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-35",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "吉玛港",
+        "text": "吉玛港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578514",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "吉玛港",
+        "text": "吉玛港武器店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/578514",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-106",
+      "sourceIndex": 0,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁道具店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁道具店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-106",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁道具店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "price": 300
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁道具店；攻略参考买价 300金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "referencePrice": 300
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-108",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁道具店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁道具店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-108",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市道具店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市道具店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-108",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁道具店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁道具店；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-108",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市道具店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "price": 1500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市道具店 等；攻略参考买价 1500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "referencePrice": 1500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-109",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市道具店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市道具店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-109",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁道具店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁道具店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-109",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市道具店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市道具店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-107",
+      "sourceIndex": 1,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁道具店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "帝都鞑古席翁道具店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-107",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市道具店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市道具店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-107",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁道具店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "price": 500
+      },
+      "after": {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "text": "第三部：帝都鞑古席翁道具店；攻略参考买价 500金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "referencePrice": 500
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-112",
+      "sourceIndex": 3,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市道具店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "蒙斯城塞都市道具店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-112",
+      "sourceIndex": 4,
+      "before": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市道具店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "蒙斯城塞都市",
+        "text": "第三部：蒙斯城塞都市道具店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "phase": "第三部",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-112",
+      "sourceIndex": 5,
+      "before": {
+        "kind": "购买",
+        "place": "黑烟谷达·米纳",
+        "text": "黑烟谷达·米纳道具店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 4000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "黑烟谷达·米纳",
+        "text": "黑烟谷达·米纳道具店；攻略参考买价 4000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 4000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    },
+    {
+      "equipmentId": "review_wp-169",
+      "sourceIndex": 2,
+      "before": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村道具店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "price": 10000
+      },
+      "after": {
+        "kind": "购买",
+        "place": "菲那渔村",
+        "text": "菲那渔村道具店；攻略参考买价 10000金币",
+        "source": "https://gamewith.jp/fefw/574252",
+        "referencePrice": 10000
+      },
+      "basis": "The preserved text explicitly labels this amount as a guide reference purchase price, not a verified local shop price."
+    }
+  ],
+  "unrecovered": [
+    "Four character combat-art changes: exact character IDs, field paths and supporting evidence are missing.",
+    "Three magic classifications: exact IDs and source evidence are missing.",
+    "Eight gift-preference corrections: exact gift/character pairs and ratings are missing.",
+    "Prototype XI four fields: exact field paths and replacements are missing; retained Nov 5 research records known durability/range source differences."
+  ],
+  "currentIronAxeSourceCheck": {
+    "url": "https://gamewith.jp/fefw/577852",
+    "retrieval": "Public web tool page lines 424–442, read 2026-11-06. Facts transcribed, no game screenshot inspected.",
+    "salvationPricesG": {
+      "帝都鞑古席翁": 1500,
+      "王都格兰·亚拉功": 750,
+      "王都美盖拉": 750,
+      "托巴林村": 750,
+      "莱伊·欧港": 750,
+      "马恩城郭": 750
+    },
+    "applied": true
+  },
+  "prototypeSourceCheck": {
+    "urls": [
+      "https://gamewith.jp/fefw/582765",
+      "https://appmedia.jp/fe_banshisenkou/80486089"
+    ],
+    "result": "Current text supports existing base stats and existing III range 2–3. GameWith lists max durability 5; prior preserved Anna report lists 10. No speculative correction applied."
+  },
+  "sourceLimitations": [
+    "https://fire-emblem-fw.site/items.html returned HTTP403; no retry or bypass.",
+    "The reference-price reclassification is supported by preserved per-row wording. This does not independently reverify all 166 price values or shop availability.",
+    "Existing unphased Iron Axe capital text says 1350G, while current GameWith explicitly lists 1500G. That pre-existing conflict was not silently overwritten; the six new rows are explicitly third-part prices."
+  ],
+  "verifiedIronAxeShopAdditions": {
+    "equipmentId": "library_80411599",
+    "rows": [
+      {
+        "kind": "购买",
+        "place": "帝都鞑古席翁",
+        "phase": "第三部",
+        "text": "第三部（救世篇）帝都鞑古席翁武器店：1500金币。",
+        "price": 1500,
+        "source": "https://gamewith.jp/fefw/577852"
+      },
+      {
+        "kind": "购买",
+        "place": "王都格兰·亚拉功",
+        "phase": "第三部",
+        "text": "第三部（救世篇）王都格兰·亚拉功武器店：750金币。",
+        "price": 750,
+        "source": "https://gamewith.jp/fefw/577852"
+      },
+      {
+        "kind": "购买",
+        "place": "王都美盖拉",
+        "phase": "第三部",
+        "text": "第三部（救世篇）王都美盖拉武器店：750金币。",
+        "price": 750,
+        "source": "https://gamewith.jp/fefw/577852"
+      },
+      {
+        "kind": "购买",
+        "place": "托巴林村",
+        "phase": "第三部",
+        "text": "第三部（救世篇）托巴林村武器店：750金币。",
+        "price": 750,
+        "source": "https://gamewith.jp/fefw/577852"
+      },
+      {
+        "kind": "购买",
+        "place": "莱伊·欧港",
+        "phase": "第三部",
+        "text": "第三部（救世篇）莱伊·欧港武器店：750金币。",
+        "price": 750,
+        "source": "https://gamewith.jp/fefw/577852"
+      },
+      {
+        "kind": "购买",
+        "place": "马恩城郭",
+        "phase": "第三部",
+        "text": "第三部（救世篇）马恩城郭武器店：750金币。",
+        "price": 750,
+        "source": "https://gamewith.jp/fefw/577852"
+      }
+    ],
+    "basis": "Current GameWith page explicitly labels these six shops 救世編 (Salvation/third part), lines 436–441. Independently reconstructed facts, not proof these are the original lost rows."
+  }
+}
