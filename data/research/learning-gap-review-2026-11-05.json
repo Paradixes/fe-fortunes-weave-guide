@@ -1,0 +1,335 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "针对既有学习表中的隐藏空项、入队自带误记为等级1、重复分类、漏收法术与基础魔法参数复核。非全游戏逐项实机验证。",
+  "learningChanges": [
+    {
+      "characterId": "c2",
+      "kind": "combatArts",
+      "name": "必杀之剑",
+      "action": "update",
+      "fields": {
+        "condition": "装备必杀剑时可使用；不是角色专精等级习得",
+        "note": "武器战技：需要装备必杀剑（剑术 C）",
+        "requirementUnknown": false
+      },
+      "sources": [
+        "https://appmedia.jp/fe_banshisenkou/80470819",
+        "https://www.fire-emblem.fun/?pid=1968"
+      ]
+    },
+    {
+      "characterId": "c52",
+      "kind": "levelSkills",
+      "name": "动态预测",
+      "action": "update",
+      "removeFields": [
+        "level",
+        "note"
+      ],
+      "fields": {
+        "condition": "加入时已习得"
+      },
+      "sources": [
+        "https://gamewith.jp/fefw/577374",
+        "https://hyperwiki.jp/fefw/character/ch55/"
+      ]
+    },
+    {
+      "characterId": "c52",
+      "kind": "levelSkills",
+      "name": "调魂+",
+      "action": "update",
+      "removeFields": [
+        "note"
+      ],
+      "fields": {
+        "level": 20,
+        "condition": "等级20习得；正式加入时已习得"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch55/",
+        "https://fireemblem.top/database/characters/characters-b3c39df35f7ea1af9cfd"
+      ]
+    },
+    {
+      "characterId": "c52",
+      "kind": "levelSkills",
+      "name": "调魂",
+      "action": "add",
+      "fields": {
+        "description": "使用魔法回复友军时，少量回复自己的HP",
+        "level": 5
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch55/",
+        "https://fireemblem.top/database/characters/characters-b3c39df35f7ea1af9cfd"
+      ]
+    },
+    {
+      "characterId": "c52",
+      "kind": "levelSkills",
+      "name": "自我修复",
+      "action": "add",
+      "fields": {
+        "description": "圣焰爆发中，在自己的行动阶段开始时，大量回复自己的HP",
+        "level": 35
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch55/",
+        "https://fireemblem.top/database/characters/characters-b3c39df35f7ea1af9cfd"
+      ]
+    },
+    {
+      "characterId": "c53",
+      "kind": "levelSkills",
+      "name": "熟练炮手",
+      "action": "update",
+      "removeFields": [
+        "level",
+        "note"
+      ],
+      "fields": {
+        "condition": "加入时已习得"
+      },
+      "sources": [
+        "https://gamewith.jp/fefw/577342",
+        "https://hyperwiki.jp/fefw/character/ch57/"
+      ]
+    },
+    {
+      "characterId": "c53",
+      "kind": "levelSkills",
+      "name": "胜利之风",
+      "action": "update",
+      "fields": {
+        "level": 20,
+        "condition": "等级20习得；正式加入时已习得"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch57/",
+        "https://annasnotebook.net/ja/characters/talimun/"
+      ]
+    },
+    {
+      "characterId": "c54",
+      "kind": "levelSkills",
+      "name": "后之先",
+      "action": "update",
+      "removeFields": [
+        "level"
+      ],
+      "fields": {
+        "condition": "加入时已习得",
+        "note": "专用习得技能：初期"
+      },
+      "sources": [
+        "https://game8.jp/fe-banshisenko/816882"
+      ]
+    },
+    {
+      "characterId": "c55",
+      "kind": "levelSkills",
+      "name": "即时回避",
+      "action": "remove",
+      "reason": "已在同角色步兵术 C 表中；GameWith 的初期说明是加入时已持有，不是等级1。",
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch58/",
+        "https://gamewith.jp/fefw/577372"
+      ]
+    },
+    {
+      "characterId": "c55",
+      "kind": "learnedSkills",
+      "name": "即时回避",
+      "action": "update",
+      "fields": {
+        "skill": "步兵术",
+        "rank": "C",
+        "condition": "加入时已习得；步兵术 C"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch58/",
+        "https://gamewith.jp/fefw/577372"
+      ]
+    },
+    {
+      "characterId": "c55",
+      "kind": "levelSkills",
+      "name": "连贯圆滑+",
+      "action": "update",
+      "fields": {
+        "level": 20,
+        "condition": "等级20习得；正式加入时已习得"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch58/",
+        "https://annasnotebook.net/ja/characters/anatolia/"
+      ]
+    },
+    {
+      "characterId": "c55",
+      "kind": "levelSkills",
+      "name": "经络扩张",
+      "action": "update",
+      "fields": {
+        "level": 35,
+        "condition": "等级35习得；正式加入时已习得"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch58/",
+        "https://gamewith.jp/fefw/577372"
+      ]
+    },
+    {
+      "characterId": "c55",
+      "kind": "magic",
+      "name": "裁决之剑",
+      "action": "add",
+      "fields": {
+        "description": "以自主行动的巨剑连续攻击2次，按照敌人的物防计算伤害",
+        "type": "黑魔法",
+        "skill": "黑魔术",
+        "might": "6",
+        "hit": "80",
+        "crit": "0",
+        "range": "1～2",
+        "uses": "2",
+        "weight": "10",
+        "requirementUnknown": true
+      },
+      "sources": [
+        "https://game8.jp/fe-banshisenko/818781",
+        "https://hyperwiki.jp/fefw/character/ch58/",
+        "https://hyperwiki.jp/fefw/reason/"
+      ]
+    },
+    {
+      "characterId": "c55",
+      "kind": "magic",
+      "name": "彷徨之壁",
+      "action": "update",
+      "fields": {
+        "type": "黑魔法",
+        "skill": "黑魔术"
+      },
+      "sources": [
+        "https://game8.jp/fe-banshisenko/818780",
+        "https://hyperwiki.jp/fefw/reason/"
+      ]
+    },
+    {
+      "characterId": "c55",
+      "kind": "magic",
+      "name": "火山爆焰",
+      "action": "update",
+      "fields": {
+        "skill": "黑魔术",
+        "rank": "B",
+        "condition": "加入时已习得"
+      },
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch58/",
+        "https://annasnotebook.net/ja/characters/anatolia/"
+      ]
+    }
+  ],
+  "parameterChanges": [
+    {
+      "name": "雷电",
+      "fields": {
+        "hit": "75"
+      },
+      "previous": {
+        "hit": "76"
+      },
+      "sources": [
+        "https://game8.jp/fe-banshisenko/818779",
+        "https://hyperwiki.jp/fefw/reason/"
+      ],
+      "note": "基础命中率，不是角色面板命中。"
+    },
+    {
+      "name": "火山爆焰",
+      "fields": {
+        "uses": "5"
+      },
+      "previous": {
+        "uses": "10"
+      },
+      "sources": [
+        "https://game8.jp/fe-banshisenko/818769",
+        "https://hyperwiki.jp/fefw/reason/"
+      ],
+      "note": "基础使用次数，职业的次数加成单独计算。"
+    },
+    {
+      "name": "大地之颚",
+      "fields": {
+        "uses": "1"
+      },
+      "previous": {
+        "uses": "2"
+      },
+      "sources": [
+        "https://game8.jp/fe-banshisenko/818775",
+        "https://hyperwiki.jp/fefw/reason/"
+      ],
+      "note": "基础使用次数，职业的次数加成单独计算；习得条件仍待核。"
+    }
+  ],
+  "unresolved": [
+    {
+      "characterId": "c55",
+      "name": "大地之颚",
+      "field": "acquisition",
+      "statements": [
+        {
+          "value": "个人特殊，未提供门槛",
+          "source": "https://hyperwiki.jp/fefw/character/ch58/"
+        },
+        {
+          "value": "技能表列黑魔术 C",
+          "source": "https://annasnotebook.net/ja/characters/anatolia/"
+        },
+        {
+          "value": "初始",
+          "source": "https://fireemblem.top/topics/personal-skills"
+        }
+      ],
+      "decision": "不把特殊、初始或技能C互相推定为同一解锁规则。保留待核。"
+    },
+    {
+      "characterId": "c55",
+      "name": "裁决之剑",
+      "field": "acquisition",
+      "statements": [
+        {
+          "value": "个人特殊，未提供门槛",
+          "source": "https://hyperwiki.jp/fefw/character/ch58/"
+        },
+        {
+          "value": "技能表列黑魔术 C",
+          "source": "https://annasnotebook.net/ja/characters/anatolia/"
+        },
+        {
+          "value": "初始",
+          "source": "https://fireemblem.top/topics/personal-skills"
+        }
+      ],
+      "decision": "补齐已确认的法术性能与使用者；具体解锁条件保留待核。"
+    }
+  ],
+  "limitations": [
+    "11名角色已有参考入队等级和面板，但未逐路线、入队时点实测。不得以填入参考样本为由宣称入队面板完全核实。",
+    "原技能索引中的14个技能、52条待核绑定包含过期派生记录；重建应依据当前learning，不代表新核实了52条外部事实。",
+    "本次核对是已发现问题的定向修正，不是游戏所有技能、DLC、剧情条件的穷尽性保证。"
+  ],
+  "baselineHashes": {
+    "learning": "ab25843d975755945c3a54b41d62b7d1b175c7d4b747fe36326a2fde89b06512",
+    "abilities": "486bab7f51167d2fc2c95125455242d056b6768c7be4659dc93acde993b493fa"
+  },
+  "currentHashes": {
+    "learning": "d4614cd0eeea72b70e91544650de78d6c855163b21ab68a4d7fea29bf1641012",
+    "abilities": "7417419f1a4825de215c4e60d7dc2e77091374e882964cf889f2fe933d16bbd1"
+  }
+}

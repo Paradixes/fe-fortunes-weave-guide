@@ -5,9 +5,10 @@ assert(r.added.length>1400,'reviewed additions retained');
 assert(new Set(r.added.map(a=>a.characterId)).size>=60,'broad actor coverage');
 for(const x of r.added){
  assert(/^https:\/\/hyperwiki\.jp\/fefw\/character\/ch\d+\/$/.test(x.source),'actor source '+x.name);
- const row=d.learning[x.characterId][x.kind].find(s=>s.name===x.name&&s.skill===x.skill&&s.rank===x.rank);
+ const canonicalName=d.abilities.find(a=>a.aliases?.includes(x.name))?.name||x.name;
+ const row=d.learning[x.characterId][x.kind].find(s=>s.name===canonicalName&&s.skill===x.skill&&s.rank===x.rank);
  assert(row&&row.sources.includes(x.source),'learning entry '+x.character+' '+x.name);
- assert(d.abilities.some(a=>a.name===x.name&&a.id===row.abilityId&&a.acquisition.some(b=>b.characterId===x.characterId&&b.skill===x.skill&&b.rank===x.rank)), 'ability binding '+x.name);
+ assert(d.abilities.some(a=>a.name===canonicalName&&a.id===row.abilityId&&a.acquisition.some(b=>b.characterId===x.characterId&&b.skill===x.skill&&b.rank===x.rank)), 'ability binding '+x.name);
 }
 for(const x of r.resolvedUnknown){const row=d.learning[x.characterId][x.kind].find(s=>s.name===x.name);assert(row&&row.skill===x.skill&&row.rank===x.rank&&!row.requirementUnknown&&row.sources.includes(x.source),'resolved condition '+x.name);}
 for(const c of r.rankCorrections){const row=d.learning[c.characterId][c.kind||'learnedSkills'].find(s=>s.name===c.name);assert(row&&row.rank===c.rank&&row.sources.includes(c.source),'rank correction '+c.name);}

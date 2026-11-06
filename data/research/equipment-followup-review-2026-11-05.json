@@ -1,0 +1,541 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "DLC第1弹四件试作品的逐级性能。文字资料核对，不含未经读取的截图像素。",
+  "evidenceKind": "secondary-guide-text",
+  "updates": [
+    {
+      "id": "library_gw_582763",
+      "name": "试作品1号",
+      "upgradeStats": [
+        {
+          "stage": "I",
+          "stats": {
+            "power": 12,
+            "hit": 90,
+            "critical": 0,
+            "avoid": 0
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486065"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486065",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486065",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486065",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486065"
+          }
+        },
+        {
+          "stage": "II",
+          "stats": {
+            "power": 18,
+            "hit": 90,
+            "critical": 5,
+            "avoid": 0
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486065"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486065",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486065",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486065",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486065"
+          }
+        },
+        {
+          "stage": "III",
+          "stats": {
+            "power": 20,
+            "hit": 90,
+            "critical": 5,
+            "avoid": 0,
+            "weight": 4
+          },
+          "effect": "相邻我方攻击力+1",
+          "sources": [
+            "https://gamewith.jp/fefw/582763"
+          ],
+          "fieldSources": {
+            "power": "https://gamewith.jp/fefw/582763",
+            "hit": "https://gamewith.jp/fefw/582763",
+            "critical": "https://gamewith.jp/fefw/582763",
+            "avoid": "https://gamewith.jp/fefw/582763",
+            "weight": "https://gamewith.jp/fefw/582763",
+            "effect": "https://gamewith.jp/fefw/582763"
+          }
+        }
+      ],
+      "upgradeStatsNote": "表内为各阶段绝对性能，仅列已核对的攻略字段；空项待核实，不默认继承基础值。最大强化耐久有来源分歧，配方计价方式也尚未确认。",
+      "durabilityConflict": {
+        "stage": "III",
+        "values": [
+          {
+            "value": 5,
+            "source": "https://gamewith.jp/fefw/582763"
+          },
+          {
+            "value": 10,
+            "source": "https://annasnotebook.net/en/weapons/prototype-i/"
+          }
+        ],
+        "decision": "未核验游戏画面；不填入强化性能。Anna与匿名玩家说法不是多个已核实实机来源。"
+      },
+      "recipeQuotes": [
+        {
+          "stage": "I",
+          "gold": 1500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ]
+          ],
+          "source": "https://appmedia.jp/fe_banshisenkou/80486065",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        },
+        {
+          "stage": "II",
+          "gold": 3500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ],
+            [
+              "カレット",
+              5
+            ]
+          ],
+          "source": "https://appmedia.jp/fe_banshisenkou/80486065",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        },
+        {
+          "stage": "III",
+          "gold": 6500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ],
+            [
+              "カレット",
+              5
+            ],
+            [
+              "戦魂石",
+              10
+            ]
+          ],
+          "condition": "第三部以后",
+          "source": "https://appmedia.jp/fe_banshisenkou/80486065",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        }
+      ]
+    },
+    {
+      "id": "library_gw_582764",
+      "name": "试作品5号",
+      "upgradeStats": [
+        {
+          "stage": "I",
+          "stats": {
+            "power": 18,
+            "hit": 50,
+            "critical": 0,
+            "avoid": 0
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486077"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486077"
+          }
+        },
+        {
+          "stage": "II",
+          "stats": {
+            "power": 24,
+            "hit": 50,
+            "critical": 0,
+            "avoid": 0
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486077"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486077"
+          }
+        },
+        {
+          "stage": "III",
+          "stats": {
+            "power": 30,
+            "hit": 55,
+            "critical": 0,
+            "avoid": 0,
+            "weight": 12
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486077",
+            "https://gamewith.jp/fefw/582764"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486077",
+            "weight": "https://gamewith.jp/fefw/582764"
+          }
+        }
+      ],
+      "upgradeStatsNote": "表内为各阶段绝对性能，仅列已核对的攻略字段；空项待核实，不默认继承基础值。最大强化耐久有来源分歧，配方计价方式也尚未确认。",
+      "durabilityConflict": {
+        "stage": "III",
+        "values": [
+          {
+            "value": 5,
+            "source": "https://gamewith.jp/fefw/582764"
+          },
+          {
+            "value": 15,
+            "source": "https://annasnotebook.net/en/weapons/prototype-v/"
+          }
+        ],
+        "decision": "未核验游戏画面；不填入强化性能。Anna与匿名玩家说法不是多个已核实实机来源。"
+      },
+      "recipeQuotes": [
+        {
+          "stage": "I",
+          "gold": 1500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ]
+          ],
+          "source": "https://appmedia.jp/fe_banshisenkou/80486077",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        },
+        {
+          "stage": "II",
+          "gold": 3500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ],
+            [
+              "熱素鉱",
+              5
+            ]
+          ],
+          "source": "https://appmedia.jp/fe_banshisenkou/80486077",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        },
+        {
+          "stage": "III",
+          "gold": 6500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ],
+            [
+              "熱素鉱",
+              5
+            ],
+            [
+              "戦魂石",
+              10
+            ]
+          ],
+          "condition": "第三部以后",
+          "source": "https://appmedia.jp/fe_banshisenkou/80486077",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        }
+      ]
+    },
+    {
+      "id": "library_gw_582766",
+      "name": "试作品7号",
+      "upgradeStats": [
+        {
+          "stage": "I",
+          "stats": {
+            "power": 13,
+            "hit": 80,
+            "critical": 0,
+            "avoid": 0
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486083"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486083"
+          }
+        },
+        {
+          "stage": "II",
+          "stats": {
+            "power": 18,
+            "hit": 80,
+            "critical": 0,
+            "avoid": 0
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486083"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486083"
+          }
+        },
+        {
+          "stage": "III",
+          "stats": {
+            "power": 22,
+            "hit": 80,
+            "critical": 10,
+            "avoid": 0,
+            "weight": 8
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486083",
+            "https://gamewith.jp/fefw/582766"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486083",
+            "weight": "https://gamewith.jp/fefw/582766"
+          }
+        }
+      ],
+      "upgradeStatsNote": "表内为各阶段绝对性能，仅列已核对的攻略字段；空项待核实，不默认继承基础值。最大强化耐久有来源分歧，配方计价方式也尚未确认。",
+      "durabilityConflict": {
+        "stage": "III",
+        "values": [
+          {
+            "value": 5,
+            "source": "https://gamewith.jp/fefw/582766"
+          },
+          {
+            "value": 15,
+            "source": "https://annasnotebook.net/en/weapons/prototype-vii/"
+          }
+        ],
+        "decision": "未核验游戏画面；不填入强化性能。Anna与匿名玩家说法不是多个已核实实机来源。"
+      },
+      "recipeQuotes": [
+        {
+          "stage": "I",
+          "gold": 1500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ]
+          ],
+          "source": "https://appmedia.jp/fe_banshisenkou/80486083",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        },
+        {
+          "stage": "II",
+          "gold": 3500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ],
+            [
+              "雷石",
+              5
+            ]
+          ],
+          "source": "https://appmedia.jp/fe_banshisenkou/80486083",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        },
+        {
+          "stage": "III",
+          "gold": 6500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ],
+            [
+              "雷石",
+              5
+            ],
+            [
+              "戦魂石",
+              10
+            ]
+          ],
+          "condition": "第三部以后",
+          "source": "https://appmedia.jp/fe_banshisenkou/80486083",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        }
+      ]
+    },
+    {
+      "id": "library_gw_582765",
+      "name": "试作品11号",
+      "upgradeStats": [
+        {
+          "stage": "I",
+          "stats": {
+            "power": 12,
+            "hit": 70,
+            "critical": 0,
+            "avoid": 0
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486089"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486089"
+          }
+        },
+        {
+          "stage": "II",
+          "stats": {
+            "power": 18,
+            "hit": 70,
+            "critical": 0,
+            "avoid": 0
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486089"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486089"
+          }
+        },
+        {
+          "stage": "III",
+          "stats": {
+            "power": 22,
+            "hit": 70,
+            "critical": 0,
+            "avoid": 0,
+            "range": "2–3"
+          },
+          "sources": [
+            "https://appmedia.jp/fe_banshisenkou/80486089",
+            "https://gamewith.jp/fefw/582765"
+          ],
+          "fieldSources": {
+            "power": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "hit": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "critical": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "avoid": "https://appmedia.jp/fe_banshisenkou/80486089",
+            "range": "https://gamewith.jp/fefw/582765"
+          }
+        }
+      ],
+      "upgradeStatsNote": "表内为各阶段绝对性能，仅列已核对的攻略字段；空项待核实，不默认继承基础值。最大强化耐久有来源分歧，配方计价方式也尚未确认。",
+      "durabilityConflict": {
+        "stage": "III",
+        "values": [
+          {
+            "value": 5,
+            "source": "https://gamewith.jp/fefw/582765"
+          },
+          {
+            "value": 10,
+            "source": "https://annasnotebook.net/en/weapons/prototype-xi/"
+          }
+        ],
+        "decision": "未核验游戏画面；不填入强化性能。Anna与匿名玩家说法不是多个已核实实机来源。"
+      },
+      "recipeQuotes": [
+        {
+          "stage": "I",
+          "gold": 1500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ]
+          ],
+          "source": "https://appmedia.jp/fe_banshisenkou/80486089",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        },
+        {
+          "stage": "II",
+          "gold": 3500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ],
+            [
+              "風石",
+              5
+            ]
+          ],
+          "source": "https://appmedia.jp/fe_banshisenkou/80486089",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        },
+        {
+          "stage": "III",
+          "gold": 6500,
+          "materials": [
+            [
+              "玉鋼",
+              10
+            ],
+            [
+              "風石",
+              5
+            ],
+            [
+              "戦魂石",
+              10
+            ]
+          ],
+          "condition": "第三部以后",
+          "source": "https://appmedia.jp/fe_banshisenkou/80486089",
+          "interpretation": "目标阶段报价；累计或增量口径尚未核验，不导入材料清单或金币总额。"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "AppMedia将5号与11号获取路线写反；本轮只取明确强化字段，不覆盖Nintendo官方获取条件。",
+    "AppMedia缺少1号III性能表，该阶段采用GameWith文字面板。",
+    "耐久、中间阶段重量和未列射程未得到足够证据，不推断补齐。",
+    "研究员早期“直接看图确认”表述已撤回；本记录没有宣称视觉核验。",
+    "Anna试作品11号个体页仍列最终射程2，与GameWith和同站视频图注的2–3不同；本轮采用明确列最大强化的GameWith字段，不能将Anna整页视为独立确认。"
+  ],
+  "recipeDisagreement": [
+    {
+      "source": "https://redfreshet.com/fe-banshisenko-dlc-weapons/",
+      "statement": "三行相加为11500G、玉钢30。"
+    },
+    {
+      "source": "https://annasnotebook.net/en/mechanics/strategy/safe-sniper-team/",
+      "statement": "基础直接到III为6500G、玉钢10。"
+    }
+  ]
+}

@@ -76,7 +76,13 @@ assert.equal(hash(learningReview.baselineLearning),baseline.factHashes.learning,
 assert.equal(hash(learningReview.baselineAbilities),baseline.factHashes.abilities,'historical abilities baseline changed');
 assert.equal(hash(d.abilityAcquisitionFacts),baseline.factHashes.abilityAcquisitionFacts,'unrelated acquisition facts changed');
 const latestLearningReview=JSON.parse(fs.readFileSync('data/research/review-2026-11-05.json','utf8'));
-for(const key of ['learning','abilities'])assert.equal(hash(d[key]),latestLearningReview.currentHashes[key],key+' changed outside reviewed update');
+const supplementLearningReview=JSON.parse(fs.readFileSync('data/research/learning-gap-review-2026-11-05.json','utf8'));
+const followupLearningReview=JSON.parse(fs.readFileSync('data/research/learning-followup-review-2026-11-05.json','utf8'));
+for(const key of ['learning','abilities']){
+ assert.equal(supplementLearningReview.baselineHashes[key],latestLearningReview.currentHashes[key],key+' supplement baseline does not match prior review');
+ assert.equal(followupLearningReview.baselineHashes[key],supplementLearningReview.currentHashes[key],key+' follow-up baseline does not match prior supplement');
+ assert.equal(hash(d[key]),followupLearningReview.currentHashes[key],key+' changed outside reviewed follow-up');
+}
 const editorial=JSON.stringify([d.planning,d.routeStrategy,d.database.characters.map(c=>[c.plan,c.stop,c.ratingReason])]);
 assert.ok(!editorial.includes('贤士兼用黑白魔'));
 assert.ok(!d.planning.c6.recommendations.skills.some(x=>x.name==='即时回避'));

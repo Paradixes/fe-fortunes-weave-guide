@@ -1,0 +1,501 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "Gift missing fields and 13 uncertain spectator schedule records",
+  "catalogEdited": false,
+  "summary": {
+    "directScreenshotScheduleCorrections": 12,
+    "scheduleEndTimeStillUnverified": 1,
+    "giftReactionAdditions": 5,
+    "giftAcquisitionAdditions": 2,
+    "verifiedGiftDuplicateMerges": 1,
+    "unverifiedGiftAliasCandidates": 2
+  },
+  "applyInstructions": [
+    "Event selectors include prior fields; update by matching selector rather than assuming index is still valid.",
+    "Gift favorite maps to gifts[].likedBy AND database.characters[].likedGifts. Like maps to preferredBy AND preferredGifts. Deduplicate, and append matching relationEvidence.",
+    "Verified duplicate merge must replace old ID in all character gift lists, union relationships/evidence/aliases, then remove old record; preserve canonical price and acquisition.",
+    "Do not convert unknown prices to zero or label them not sold. Candidate aliases are excluded from verified merges."
+  ],
+  "eventUpdates": [
+    {
+      "index": 26,
+      "match": {
+        "route": "カイ",
+        "chapter": 5,
+        "name": "斗技场观战",
+        "start": "1449/03/21"
+      },
+      "set": {
+        "start": "1449/03/21",
+        "end": "1449/03/21",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n63ee6cde8095",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n63ee6cde8095",
+          "https://assets.st-note.com/img/1792138283-rlLQTI7C8BfXqUg1zdkj9cvD.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-kai-0.jpg"
+    },
+    {
+      "index": 27,
+      "match": {
+        "route": "カイ",
+        "chapter": 6,
+        "name": "斗技场观战",
+        "start": "1449/05/07"
+      },
+      "set": {
+        "start": "1449/05/07",
+        "end": "1449/05/07",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n63ee6cde8095",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n63ee6cde8095",
+          "https://assets.st-note.com/img/1792138341-PbtuEozpxiCcY463yg5raqvS.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-kai-1.jpg"
+    },
+    {
+      "index": 28,
+      "match": {
+        "route": "カイ",
+        "chapter": 7,
+        "name": "斗技场观战",
+        "start": "1449/06/15"
+      },
+      "set": {
+        "start": "1449/06/15",
+        "end": "1449/06/15",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n63ee6cde8095",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n63ee6cde8095",
+          "https://assets.st-note.com/img/1792138422-aiHMj1BYKtULqEv6hCpNs7ZJ.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-kai-2.jpg"
+    },
+    {
+      "index": 29,
+      "match": {
+        "route": "カイ",
+        "chapter": 10,
+        "name": "斗技场观战",
+        "start": "1449/09/16"
+      },
+      "set": {
+        "start": "1449/09/16",
+        "end": "1449/09/16",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n63ee6cde8095",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n63ee6cde8095",
+          "https://assets.st-note.com/img/1792138449-eF0l1vibwuGoWCq4jxSI83cM.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-kai-3.jpg"
+    },
+    {
+      "index": 30,
+      "match": {
+        "route": "カイ",
+        "chapter": 10,
+        "name": "斗技场观战",
+        "start": "1449/09/27"
+      },
+      "set": {
+        "start": "1449/09/27",
+        "end": "1449/09/27",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n63ee6cde8095",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n63ee6cde8095",
+          "https://assets.st-note.com/img/1792138612-JXuYK23SBGbUR8omEWIk7Qdp.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-kai-4.jpg"
+    },
+    {
+      "index": 32,
+      "match": {
+        "route": "ディートリヒ",
+        "chapter": 6,
+        "name": "斗技场观战",
+        "start": "1449/05/07"
+      },
+      "set": {
+        "start": "1449/05/07",
+        "end": "1449/05/07",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+          "https://assets.st-note.com/img/1792057133-7JXRKo1bsD6MHhtNUyGWvAST.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-dietrich-10.jpg"
+    },
+    {
+      "index": 33,
+      "match": {
+        "route": "ディートリヒ",
+        "chapter": 8,
+        "name": "斗技场观战",
+        "start": "1449/07/09"
+      },
+      "set": {
+        "start": "1449/07/09",
+        "end": "1449/07/09",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+          "https://assets.st-note.com/img/1792059412-02PobB8rQtVmG9xSZjdnDNMi.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-dietrich-11.jpg"
+    },
+    {
+      "index": 34,
+      "match": {
+        "route": "ディートリヒ",
+        "chapter": 8,
+        "name": "斗技场观战",
+        "start": "1449/07/10"
+      },
+      "set": {
+        "start": "1449/07/10",
+        "end": "1449/07/10",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+          "https://assets.st-note.com/img/1792059451-Ta08YEQoeuzUNxvqm4yfOibt.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-dietrich-12.jpg"
+    },
+    {
+      "index": 35,
+      "match": {
+        "route": "ディートリヒ",
+        "chapter": 9,
+        "name": "斗技场观战",
+        "start": "1449/09/01"
+      },
+      "set": {
+        "start": "1449/09/01",
+        "end": "1449/09/01",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+          "https://assets.st-note.com/img/1792061874-fIRrxiaz7F0bhL6Kpw2XyGOZ.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-dietrich-13.jpg"
+    },
+    {
+      "index": 39,
+      "match": {
+        "route": "ディートリヒ",
+        "chapter": 9,
+        "name": "斗技场观战",
+        "start": "1449/09/16"
+      },
+      "set": {
+        "start": "1449/09/16",
+        "end": "1449/09/16",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+          "https://assets.st-note.com/img/1792240826-lJMkQ7TBnDq4582LbEHP3ojI.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-dietrich-14.jpg"
+    },
+    {
+      "index": 40,
+      "match": {
+        "route": "ディートリヒ",
+        "chapter": 11,
+        "name": "斗技场观战",
+        "start": "1449/10/15"
+      },
+      "set": {
+        "start": "1449/10/15",
+        "end": "1449/10/15",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+        "evidence": [
+          "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+          "https://note.com/yaoya_neko/n/n1b8e5e9711d2",
+          "https://assets.st-note.com/img/1792064219-O3FfAK1YEPZvp9jRNsidLbc2.jpg?width=1200"
+        ]
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-dietrich-15.jpg"
+    },
+    {
+      "index": 43,
+      "match": {
+        "route": "セオドラ",
+        "chapter": 10,
+        "name": "凯伊对蕾达 · 本战观战",
+        "start": ""
+      },
+      "set": {
+        "start": "1449/09/01",
+        "end": "1449/09/01",
+        "time": "12:00–17:59",
+        "precision": "游戏截图确认日期与时段",
+        "source": "https://note.com/yaoya_neko/n/n8a4e9ed94bb2",
+        "evidence": [
+          "https://game1122.hatenablog.com/entry/2026/09/28/222117",
+          "https://note.com/yaoya_neko/n/n8a4e9ed94bb2",
+          "https://assets.st-note.com/img/1792132123-MZF6rGkuKS9X5JQxAPhzlaRo.jpg?width=1200"
+        ],
+        "schedule": "1449/09/01 12:00–17:59",
+        "benefit": "观战凯伊与蕾达的本战，为当前已入队角色获得技能经验。"
+      },
+      "evidenceType": "Manually inspected in-game screenshot from the same route",
+      "localScreenshot": "/tmp/fe-schedule-teodora-7.jpg"
+    }
+  ],
+  "eventKeepUnverified": [
+    {
+      "index": 31,
+      "match": {
+        "route": "カイ",
+        "chapter": 10,
+        "start": "1449/10/04"
+      },
+      "keep": {
+        "time": "12:00 起；结束时刻看游戏日历",
+        "precision": "时段待核实"
+      },
+      "appendEvidence": [
+        "https://note.com/iine_hexe/n/n2e6e50e1ce93",
+        "https://note.com/yaoya_neko/n/n8a4e9ed94bb2",
+        "https://assets.st-note.com/img/1792132319-IsLuxc8zApSkPVhZgOYBoKdQ.jpg?width=1200"
+      ],
+      "researchNote": "凯伊篇原始实测攻略明确记载 10/04 12时观战。赛奥朵拉篇同场「迪特里希对安纳托莉亚」截图显示 12:00–17:59，可作跨路线佐证，但尚无凯伊篇本场结束时刻截图，不据此消除待核标记。"
+    }
+  ],
+  "giftFieldUpdates": [
+    {
+      "giftId": "solomon-coffee",
+      "set": {
+        "nameJa": "幻のソロモンテフ"
+      }
+    },
+    {
+      "giftId": "crimson-bull-figure",
+      "set": {
+        "nameJa": "真紅の牛の像"
+      }
+    },
+    {
+      "giftId": "red-hair-clip",
+      "set": {
+        "nameJa": "朱色の髪飾り"
+      }
+    },
+    {
+      "giftId": "red-rose-bouquet",
+      "set": {
+        "nameJa": "真紅の薔薇の花束"
+      },
+      "appendSources": [
+        "蕾达篇第4章：帝都鞑古席翁酒馆剧情／招募教学中，由西洛可赠送"
+      ],
+      "appendPlaces": [
+        "帝都鞑古席翁"
+      ],
+      "appendEvidence": [
+        "https://game8.jp/fe-banshisenko/816410"
+      ],
+      "note": "Game8 Leda chapter 4 steps 6–7 explicitly identify Sirocco giving the bouquet. Price remains unknown."
+    }
+  ],
+  "giftRelations": [
+    {
+      "giftId": "solomon-coffee",
+      "characterId": "c0",
+      "level": "favorite",
+      "sources": [
+        "https://altema.jp/febansisenkou/kai"
+      ]
+    },
+    {
+      "giftId": "crimson-bull-figure",
+      "characterId": "c19",
+      "level": "favorite",
+      "sources": [
+        "https://altema.jp/febansisenkou/dante",
+        "https://note.com/hyattrt/n/n6223124c45af"
+      ]
+    },
+    {
+      "giftId": "red-hair-clip",
+      "characterId": "c33",
+      "level": "favorite",
+      "sources": [
+        "https://note.com/hyattrt/n/n6223124c45af"
+      ]
+    },
+    {
+      "giftId": "red-rose-bouquet",
+      "characterId": "c33",
+      "level": "favorite",
+      "sources": [
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ]
+    },
+    {
+      "giftId": "red-rose-bouquet",
+      "characterId": "c19",
+      "level": "like",
+      "sources": [
+        "https://altema.jp/febansisenkou/dante"
+      ]
+    }
+  ],
+  "verifiedGiftMerges": [
+    {
+      "fromId": "zh-it-273",
+      "toId": "mane-ornament",
+      "aliases": [
+        "胡须装饰",
+        "髭飾り"
+      ],
+      "nameJa": "鬣飾り",
+      "confidence": "verified-primary-screenshot",
+      "explanation": "Altema subquest prose transcribes the reward as 髭飾り, but its own in-game reward screenshot explicitly reads 鬣飾り x1. This is the existing Mane Ornament, not a separate item.",
+      "sources": [
+        "https://altema.jp/febansisenkou/subquest",
+        "https://img.altema.jp/febansisenkou/kakudai/kaisab5.jpg"
+      ],
+      "appendSources": [
+        "凯伊篇人助任务「彼のことが知りたくて」报酬 ×1"
+      ],
+      "localScreenshot": "/tmp/fefw-quest-gift.jpg"
+    }
+  ],
+  "candidateGiftAliases": [
+    {
+      "fromId": "zh-it-290",
+      "toId": "full-sewing-kit",
+      "aliases": [
+        "实验性缝纫工具",
+        "実験的な裁縫道具"
+      ],
+      "nameJa": "実用的な裁縫道具",
+      "confidence": "probable-alias-not-primary-verified",
+      "explanation": "GameWith item list duplicates identical descriptions under 実用的 and 実験的; only 実用的 has an item detail page, 300G price and location. GameWith Lillian uses 実験的, whereas Altema Lillian and Rodinia use 実用的. No in-game item screenshot located.",
+      "sources": [
+        "https://gamewith.jp/fefw/574296",
+        "https://gamewith.jp/fefw/578128",
+        "https://gamewith.jp/fefw/577314",
+        "https://altema.jp/febansisenkou/ririan",
+        "https://rodinia.blog.fc2.com/blog-entry-1158.html"
+      ],
+      "relationMigration": {
+        "c39": "favorite"
+      },
+      "strictAction": "Do not silently merge as verified. Preserve candidate-alias status or perform a separately reviewed correction."
+    },
+    {
+      "fromId": "zh-it-269",
+      "toId": "decorative-arrows",
+      "aliases": [
+        "美丽的装饰弓",
+        "美しい飾り弓"
+      ],
+      "nameJa": "美しい飾り矢",
+      "confidence": "probable-alias-not-primary-verified",
+      "explanation": "GameWith item list has matching category filters and descriptions (three-piece decorative set), changing only 矢 to 弓. Only 飾り矢 has its own linked item page, 600G price and acquisition. Canonical gift already has all duplicate relationships. No in-game screenshot found.",
+      "sources": [
+        "https://gamewith.jp/fefw/574296",
+        "https://gamewith.jp/fefw/578138"
+      ],
+      "relationMigration": {
+        "c46": "favorite",
+        "c5": "like",
+        "c35": "like"
+      },
+      "strictAction": "Do not silently merge as verified. Preserve candidate-alias status or perform a separately reviewed correction."
+    }
+  ],
+  "genuineUnresolved": [
+    {
+      "giftId": "everyday-scenes",
+      "fields": [
+        "price"
+      ],
+      "note": "Known acquisition or gift reaction does not establish a shop price; keep null."
+    },
+    {
+      "giftId": "flower-painting",
+      "fields": [
+        "price"
+      ],
+      "note": "Known acquisition or gift reaction does not establish a shop price; keep null."
+    },
+    {
+      "giftId": "portrait-of-yu-phas",
+      "fields": [
+        "price"
+      ],
+      "note": "Known acquisition or gift reaction does not establish a shop price; keep null."
+    },
+    {
+      "giftId": "black-tail-feather",
+      "fields": [
+        "price"
+      ],
+      "note": "Known acquisition or gift reaction does not establish a shop price; keep null."
+    },
+    {
+      "giftId": "red-rose-bouquet",
+      "fields": [
+        "price"
+      ],
+      "note": "Known acquisition or gift reaction does not establish a shop price; keep null."
+    }
+  ]
+}

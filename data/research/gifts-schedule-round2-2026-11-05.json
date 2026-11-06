@@ -1,0 +1,145 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "Second research pass: remaining gift prices, two suspected aliases, and Kai 10/4 spectator end time",
+  "catalogModified": false,
+  "summary": "One independently corroborated acquisition addition; five data-defined base price reports found; no verified shop prices, alias merges, or Kai end time correction.",
+  "verifiedGiftUpdates": [
+    {
+      "giftId": "portrait-of-yu-phas",
+      "appendSources": [
+        "名声Lv.12恩惠奖励 ×1"
+      ],
+      "appendEvidence": [
+        "https://gamewith.jp/fefw/576751",
+        "https://gamecap.jp/fe_fw/meisei.html",
+        "https://redfreshet.com/game-tools/fe-banshisenko/gifts/gift_c3c21ba9eed9/"
+      ],
+      "confidence": "multiple-independent-secondary-guides"
+    }
+  ],
+  "reportedDataPrices": [
+    {
+      "giftId": "everyday-scenes",
+      "reportedDataPrice": 100,
+      "reportedDataSellPrice": 10,
+      "currency": "G",
+      "itemId": "IID_庶民百景",
+      "reportedSourceFile": "Item.bin",
+      "reportedOffset": 539304,
+      "reportedUseType": 19,
+      "source": "https://wiki.diting.dev/database/items",
+      "retrieval": "Public web-search indexed table, crawled two days before this check; original game binary not inspected.",
+      "confidence": "secondary-raw-data-report",
+      "shopAvailabilityVerified": false,
+      "recommendedHandling": "Preserve actual-shop price as unknown. If displayed, label these explicitly as data-defined base price/sell price and note shop availability has not been established."
+    },
+    {
+      "giftId": "black-tail-feather",
+      "reportedDataPrice": 100,
+      "reportedDataSellPrice": 10,
+      "currency": "G",
+      "itemId": "IID_漆黒の尾羽",
+      "reportedSourceFile": "Item.bin",
+      "reportedOffset": 538848,
+      "reportedUseType": 19,
+      "source": "https://wiki.diting.dev/database/items",
+      "retrieval": "Public web-search indexed table, crawled two days before this check; original game binary not inspected.",
+      "confidence": "secondary-raw-data-report",
+      "shopAvailabilityVerified": false,
+      "recommendedHandling": "Preserve actual-shop price as unknown. If displayed, label these explicitly as data-defined base price/sell price and note shop availability has not been established."
+    },
+    {
+      "giftId": "flower-painting",
+      "reportedDataPrice": 500,
+      "reportedDataSellPrice": 50,
+      "currency": "G",
+      "itemId": "IID_小さい白い花の絵",
+      "reportedSourceFile": "Item.bin",
+      "reportedOffset": 565752,
+      "reportedUseType": 19,
+      "source": "https://wiki.diting.dev/database/items",
+      "retrieval": "Public web-search indexed table, crawled two days before this check; original game binary not inspected.",
+      "confidence": "secondary-raw-data-report",
+      "shopAvailabilityVerified": false,
+      "recommendedHandling": "Preserve actual-shop price as unknown. If displayed, label these explicitly as data-defined base price/sell price and note shop availability has not been established."
+    },
+    {
+      "giftId": "red-rose-bouquet",
+      "reportedDataPrice": 500,
+      "reportedDataSellPrice": 50,
+      "currency": "G",
+      "itemId": "IID_真紅の薔薇の花束",
+      "reportedSourceFile": "Item.bin",
+      "reportedOffset": 554352,
+      "reportedUseType": 19,
+      "source": "https://wiki.diting.dev/database/items",
+      "retrieval": "Public web-search indexed table, crawled two days before this check; original game binary not inspected.",
+      "confidence": "secondary-raw-data-report",
+      "shopAvailabilityVerified": false,
+      "recommendedHandling": "Preserve actual-shop price as unknown. If displayed, label these explicitly as data-defined base price/sell price and note shop availability has not been established."
+    },
+    {
+      "giftId": "portrait-of-yu-phas",
+      "reportedDataPrice": 10000,
+      "reportedDataSellPrice": 1000,
+      "currency": "G",
+      "itemId": "IID_ユ・ファスの肖像",
+      "reportedSourceFile": "Item.bin",
+      "reportedOffset": 570768,
+      "reportedUseType": 19,
+      "source": "https://wiki.diting.dev/database/items",
+      "retrieval": "Public web-search indexed table, crawled two days before this check; original game binary not inspected.",
+      "confidence": "secondary-raw-data-report",
+      "shopAvailabilityVerified": false,
+      "recommendedHandling": "Preserve actual-shop price as unknown. If displayed, label these explicitly as data-defined base price/sell price and note shop availability has not been established."
+    }
+  ],
+  "candidateGiftAliases": [
+    {
+      "fromId": "zh-it-290",
+      "toId": "full-sewing-kit",
+      "status": "probable-transcription-duplicate-still-unverified",
+      "additionalSources": [
+        "https://fire-emblem.fun/?pid=1969",
+        "https://gamewith.jp/fefw/579046"
+      ],
+      "observed": "Both sources use 実用的な裁縫道具, with 300G price. No name-bearing game screenshot or explicit typo correction was found.",
+      "action": "Keep pending; do not merge as primary-verified."
+    },
+    {
+      "fromId": "zh-it-269",
+      "toId": "decorative-arrows",
+      "status": "probable-transcription-duplicate-still-unverified",
+      "additionalSources": [
+        "https://fire-emblem.fun/?pid=1969",
+        "https://hyperwiki.jp/fefw/present/",
+        "https://gamewith.jp/fefw/579046",
+        "https://wiki.diting.dev/database/items"
+      ],
+      "observed": "Canonical 美しい飾り矢 has 600G shop listings and reported IID_美しい飾り矢 at Item.bin offset562104. Absence of another name from a search index does not prove that another ID cannot exist.",
+      "action": "Keep pending; do not merge as primary-verified."
+    }
+  ],
+  "eventStillUnverified": {
+    "match": {
+      "route": "カイ",
+      "chapter": 10,
+      "start": "1449/10/04"
+    },
+    "confirmedStartTime": "12:00",
+    "endTime": null,
+    "additionalSourcesChecked": [
+      "https://game8.jp/fe-banshisenko/817108",
+      "https://appmedia.jp/fe_banshisenkou/80402593",
+      "https://note.com/yura_fe0225/n/nffb6ddc13e00"
+    ],
+    "independentMatchScreenshot": "https://assets.st-note.com/img/1790091860-nKuck2AIwfsjU3ZaECd0r6qm.jpg?width=1200",
+    "finding": "Independent Kai diary confirms the Dietrich–Anatolia spectator match, but image depicts dialogue/combat rather than calendar timing. No same-route evidence for 17:59.",
+    "action": "Preserve uncertainty and earlier cross-route corroboration note."
+  },
+  "sourceLimitations": [
+    "Direct reads of the raw-data page and one Rodinia gameplay image returned HTTP403 in worker checks. No bypass or repeated denied fetch was attempted. Public search results supplied the Item.bin-reported values.",
+    "Data-defined prices do not prove these items are sold by a normal shop. Five price numbers should not be silently used as verified purchasing recommendations.",
+    "Wener search snippets showing 100G near 庶民百景 refer to the page legend, not a verified price for that gift; they are not corroboration."
+  ]
+}

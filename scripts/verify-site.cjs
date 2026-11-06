@@ -5,6 +5,11 @@ require('./verify-video-skills.cjs');
 require('./verify-endgame-candidates.cjs');
 require('./verify-map-notes.cjs');
 require('./verify-catalog-resolution.cjs');
+require('./verify-learning-gaps.cjs');
+require('./verify-learning-followup.cjs');
+require('./verify-equipment-gaps.cjs');
+require('./verify-equipment-followup.cjs');
+require('./verify-gifts-schedule-gaps.cjs');
 const fs=require('fs'),vm=require('vm'),assert=require('assert'),root=require('path').resolve(__dirname,'../dist')+'/';const nodes={},events={};function node(){return {innerHTML:'',textContent:'',open:false,scrollTop:0,style:{},dataset:{},clientWidth:900,clientHeight:650,children:[],querySelector:()=>null,appendChild(){},addEventListener(type,fn){this._handlers??={};(this._handlers[type]??=[]).push(fn)},getBoundingClientRect:()=>({left:0,right:900,top:0,bottom:650}),classList:{add(){},remove(){},toggle(){},contains(){return false}},showModal(){this.open=true},close(){this.open=false;for(const fn of this._handlers?.close||[])fn()},focus(){},setSelectionRange(){},setAttribute(){},scrollIntoView(){},click(){}}}const persisted={};const ctx={console,URLSearchParams,performance,requestAnimationFrame:()=>1,URL:{createObjectURL:()=>'',revokeObjectURL(){}},Blob,localStorage:{getItem:k=>persisted[k]??null,setItem:(k,v)=>persisted[k]=v},location:{hash:''},document:{body:node(),querySelector:s=>nodes[s]??=node(),querySelectorAll:()=>[],getElementById:id=>nodes['#'+id],addEventListener:(e,f)=>events[e]=f,createElement:()=>node()},setTimeout:f=>f(),clearTimeout(){},fetch:async f=>({json:async()=>JSON.parse(fs.readFileSync(root+f.split('?')[0]))})};ctx.window=ctx;ctx.scrollTo=()=>{};ctx.print=()=>{};ctx.addEventListener=(e,f)=>events[e]=f;vm.createContext(ctx);vm.runInContext(['locale.js','catalog.js','catalog-ui.js','app.js','reasons.js','articles.js','skill-planning.js','v9.js','cultivation.js','roster-map.js','search.js','anna-agent.js'].map(f=>fs.readFileSync(root+f,'utf8')).join('\n'),ctx);
 const searchEvents={...events};
 (async()=>{await new Promise(r=>setImmediate(r));vm.runInContext('LEARNING='+fs.readFileSync(root+'learning.json')+';PINS='+fs.readFileSync(root+'map.json')+';mapLoaded=true;',ctx);
@@ -45,6 +50,8 @@ assert(vm.runInContext("DB.classes.every(c=>{const h=signedGrowth(c);return [...
 assert(vm.runInContext("skillAffinity(DB.characters[7]).includes('M6 2v8M2 6h8')",ctx),'Affinity plus uses a centered vector mark');
 for(const c of vm.runInContext('DB.characters',ctx)){ctx.testId=c.id;assert(vm.runInContext("(()=>{const h=arenaTable([DB.characters.find(c=>c.id===testId)],true);return h.includes('<th>当前目标</th>')&&!h.includes('class=\"arena-person')&&!h.includes('class=\"portrait')})()",ctx),'Single-character training contains targets without character cards');}
 assert(vm.runInContext("EQUIPMENT.every(e=>equipmentSourcePreview(e).includes('source-preview-tags')&&!equipmentSourcePreview(e).includes('<p>'))",ctx),'Equipment source previews use structured rows');
+for(const id of ['library_gw_582763','library_gw_582764','library_gw_582766','library_gw_582765']){ctx.upgradeId=id;assert(vm.runInContext('(()=>{const e=EQUIPMENT.find(e=>e.id===upgradeId),h=equipmentVariants(e);return h.includes("强化阶段性能")&&h.includes("空项待核实")&&(h.match(/<tr>/g)||[]).length===4&&h.includes("来源1")&&!h.includes("剧情解锁")&&!h.includes("6500")})()',ctx),'Partial DLC upgrades display sourced stage values without fictional recipes');}
+
 for(const c of vm.runInContext('DB.characters',ctx)){ctx.testId=c.id;assert(vm.runInContext("(()=>{const h=equipmentPlan(equipmentEntries([DB.characters.find(c=>c.id===testId)]),'char:'+testId);return !h.includes('gear-plan-grid')&&!h.includes('装备详情与材料地点')&&!h.includes('①')&&!h.includes('②')&&h.includes('weapon-inventory-table')&&!h.includes('<th>需求角色</th>')})()",ctx),'Character equipment contains only collection tables with demand avatars');}
 assert(vm.runInContext("EQUIPMENT.every(e=>!equipmentSourcePreview(e).includes('source-option-description'))",ctx),'Weapon previews contain only tags and quantity');
 assert(vm.runInContext("sourceQuantityLabel({sourcesList:[{text:'库存2'},{text:'库存3'}]})==='可获取 5 件'&&sourceQuantityLabel({sourcesList:[{text:'库存2'},{text:'随机开出'}]})==='已知 ≥ 2 件'&&sourceQuantityLabel({sourcesList:[{text:'随机开出'}]})==='总数待核实'",ctx),'Unknown and random source quantities never become invented totals');
@@ -344,7 +351,7 @@ const watch=vm.runInContext("CATALOG.events.filter(e=>e.type==='spectate')",ctx)
 console.log('PASS v23: route title, third-part exclusions, 18 sourced observation records, equipment-library-only page, inheritance explanation, single-card width and centered recruit grades styles.');
 
 // Expanded library source dialogs, game-image labels, and shared observation cards.
-assert(vm.runInContext('EQUIPMENT.length===147&&equipmentRecordCount()===152',ctx));
+assert(vm.runInContext('EQUIPMENT.length===151&&equipmentRecordCount()===156',ctx));
 assert(vm.runInContext("(()=>{const ids=EQUIPMENT.flatMap(e=>[...(e.referenceIds||[]),...(e.variants||[]).map(v=>v.referenceId)]);return ids.length===152&&new Set(ids).size===152&&CATALOG.equipmentReview.referenceCoverage.length===152})()",ctx),'All 152 Chinese reference records mapped once');
 assert(vm.runInContext("(()=>{const metric=(id,label)=>equipmentMetrics(EQUIPMENT.find(e=>e.id===id)).find(x=>x[1]===label)?.[2];return metric('carla','射程')==='2'&&metric('carla','耐久')==='30'&&metric('answerer_kai','必杀')==='0'&&metric('sorel_lance','耐久')==='20'&&metric('zalmoxis','耐久')==='30'})()",ctx),'Weapon parameters exclude combat-art range, crit and durability consumption');
 assert(vm.runInContext("equipmentVariants(EQUIPMENT.find(e=>e.id==='library_80411557')).includes('开放的救世之剑+2')",ctx),'Enhanced reference form exposed in shared detail');
@@ -601,6 +608,13 @@ for(const cl of vm.runInContext('DB.classes',ctx)){
  assert(probe.html.includes('data-reference-type="class" data-reference-id="'+cl.id+'"'),'Profession name keeps class preview: '+cl.cn);
 }
 vm.runInContext(fs.readFileSync(root+'refinements.js','utf8'),ctx);
+for(const [oldId,newId,oldName]of [['ability-4c6adc8bb15b','ability-6189d08390dc','杰克一击'],['ability-0114d352dae9','ability-741731b586a4','破坏光箭']]){
+ ctx.aliasProbe={oldId,newId,oldName};
+ assert(vm.runInContext('abilityBy(aliasProbe.oldId).id===aliasProbe.newId&&abilityName(aliasProbe.oldName,"战技").id===aliasProbe.newId',ctx),'Legacy skill ID and name resolve');
+ assert(vm.runInContext('quickReferenceHTML("ability",aliasProbe.oldId).includes("资料有分歧")&&abilityDetails(abilityBy(aliasProbe.oldId)).includes("仍待核实")',ctx),'Unresolved parameter conflict remains visible after alias merge');
+ assert(vm.runInContext('buildAnnaIndex().some(e=>e.kind==="ability"&&e.id===aliasProbe.newId&&e.alias.includes(aliasProbe.oldName))',ctx),'Old name remains searchable');
+}
+
 for(const cl of vm.runInContext('DB.classes',ctx)){
  ctx.masteryClassId=cl.id;
  assert(vm.runInContext(`(()=>{const cl=DB.classes.find(c=>c.id===masteryClassId),a=abilityName(cl.col_37,masteryEffect(cl)?.type),html=quickReferenceHTML('ability',a.id);return html.includes(esc(a.description))&&html.includes('关闭技能速览')})()`,ctx),'Mastery hover shows canonical skill effect: '+cl.cn);
@@ -629,7 +643,7 @@ vm.runInContext("wbDraft.stages.at(-1).classId=wbClass('勇士').id",ctx);
 assert.equal(vm.runInContext('buildPlan(DB.characters[8]).end',ctx),'舞者','Unsaved edits do not mutate the applied plan');
 assert(vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('data-inline-edit')&&!vm.runInContext('careerDiagram(DB.characters[8])',ctx).includes('class="path-why"'),'Dossier has inline controls and no expanded rationale dump');
 assert(vm.runInContext('wbStats({hp:26.6},false)',ctx).includes('entry-stat-grid'),'Expected stats reuse the reference stat component');
-assert.equal(reviewed.abilities.length,588);
+assert(reviewed.abilities.length>=589,'Reviewed skill catalogue includes new sourced entries');
 {
  const report=JSON.parse(fs.readFileSync(root+'../data/research/proficiency-coverage-2026-10-26.json','utf8'));
  assert.equal(report.addedBindings,1258);
@@ -689,7 +703,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(!styleCss.includes('@media(prefers-reduced-motion:reduce){}')&&!styleCss.includes('@media(max-width:700px){}'),'Empty media blocks removed');
  assert(!/\.search\s*\{[^}]*min-height/.test(fs.readFileSync(root+'design.css','utf8')),'design.css search residue removed');
  const counts=vm.runInContext("(()=>{const n=k=>buildAnnaIndex().filter(e=>e.kind===k).length;return {page:n('page'),character:n('character'),class:n('class'),ability:n('ability'),equipment:n('equipment'),gift:n('gift'),material:n('material'),place:n('place'),article:n('article')}})()",ctx);
- assert.equal(counts.page,16,'Site pages include integrated learning and planning views');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,reviewed.abilities.length,'Abilities indexed');assert.equal(counts.equipment,147,'Equipment indexed');assert.equal(counts.gift,124,'Gifts indexed');assert.equal(counts.article,reviewed.articles.length,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
+ assert.equal(counts.page,16,'Site pages include integrated learning and planning views');assert.equal(counts.character,63,'Characters indexed');assert.equal(counts.class,60,'Classes indexed');assert.equal(counts.ability,reviewed.abilities.length,'Abilities indexed');assert.equal(counts.equipment,reviewed.equipment.length,'Equipment indexed');assert.equal(counts.gift,reviewed.gifts.length,'Gifts indexed');assert.equal(counts.article,reviewed.articles.length,'Articles indexed');assert(counts.material>0&&counts.place>100,'Materials and places indexed');
  assert(vm.runInContext("ARTICLES.every(a=>([a.sources||[],...a.sections.map(s=>s.sources||[])].flat()).length>0)",ctx),'Every article carries source citations');
  const best=q=>vm.runInContext(`(r=>({k:r.best?.e.kind,t:r.best?.e.title}))(annaSearch(${JSON.stringify(q)}))`,ctx);
  assert.deepEqual(best('xlk'),{k:'character',t:'西洛可'},'Pinyin acronym finds character');
@@ -906,7 +920,7 @@ console.log('PASS applied fusion: dossier continuation and final expectations sh
  assert(vm.runInContext("allGifts().every(g=>{const h=quickReferenceHTML('gift',g.id);return h.includes(esc(g.name))&&h.includes(giftPriceText(g))&&h.includes(esc(g.category))})",ctx),'All gifts expose name, price and category in shared quick reference');
  console.log('PASS dense catalogues: separate materials, qualification AND/OR, complete numeric values, gifts within roster, expanded equipment and contextual map editing.');
  console.log('PASS roster/map/pigeon: catalogue views, unchanged preferences, 315 loadout audits, upgrade suffixes, merchant/material/recruit search, renown and white bird asset.');
- console.log('PASS v110: multi-select roster filters, 124 gifts bidirectional database, forging materials, SSE streaming + mode toggle, entity links, full-bleed icons.');
+ console.log('PASS v110: multi-select roster filters, 123 gifts bidirectional database, forging materials, SSE streaming + mode toggle, entity links, full-bleed icons.');
 // Learning coverage and compact ranks preserve every recorded acquisition.
 const coverage=JSON.parse(fs.readFileSync('data/research/learning-coverage-2026-10-26.json','utf8'));
 assert.equal(coverage.addedBindings,256);

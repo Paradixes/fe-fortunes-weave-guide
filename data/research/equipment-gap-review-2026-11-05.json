@@ -1,0 +1,417 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "Equipment missing fields and omitted DLC records; no publication; no catalog files changed.",
+  "operationFormat": "updates: set replaces top-level value; appendReferenceSources deduplicates; dataProvenanceMerge shallow-merges. additions: append complete equipment records only after duplicate check.",
+  "updates": [
+    {
+      "id": "review_wp-163",
+      "name": "怨杖亚伦",
+      "set": {
+        "sourcesList": [
+          {
+            "kind": "初始装备",
+            "text": "谭利穆恩的初始装备。",
+            "characterId": "c53",
+            "source": "https://appmedia.jp/fe_banshisenkou/80487157"
+          }
+        ],
+        "method": "谭利穆恩的初始装备。"
+      },
+      "appendReferenceSources": [
+        "https://appmedia.jp/fe_banshisenkou/80487157",
+        "https://www.pegasusknight.com/wiki/fe18/道具袋/装備品"
+      ],
+      "evidence": "AppMedia 获取方法区及天马骑士团装备表均标为タリムーン初期装備。不要从此条推断额外剧情前置。"
+    },
+    {
+      "id": "swift",
+      "name": "疾风戒指",
+      "set": {
+        "stats": {
+          "weight": 2
+        }
+      },
+      "appendReferenceSources": [
+        "https://appmedia.jp/fe_banshisenkou/80469676",
+        "https://gamecap.jp/fe_fw/soubi.html"
+      ],
+      "evidence": "原 effect 已有重量2但 stats 空；两源支持速+3、重2。"
+    },
+    {
+      "id": "review_wp-202",
+      "name": "至福之舌",
+      "set": {
+        "original": "至福なる舌",
+        "stats": {
+          "weight": 8,
+          "curse": 1
+        },
+        "sourcesList": [
+          {
+            "kind": "宝箱",
+            "place": "巴洛尔神殿",
+            "phase": "第一部",
+            "route": "カイ",
+            "text": "凯伊篇第6章，在巴洛尔神殿西北宝箱取得。",
+            "source": "https://chucco.com/fefw-baroll-shrine/"
+          }
+        ],
+        "method": "凯伊篇第6章，巴洛尔神殿西北宝箱。"
+      },
+      "appendReferenceSources": [
+        "https://game8.jp/fe-banshisenko/817533",
+        "https://chucco.com/fefw-baroll-shrine/"
+      ],
+      "evidence": "Game8 装备表确认怨咒1、重8；实测攻略明确凯伊6章/西北宝箱。限定来源实际验证范围，不外推其他路线。"
+    },
+    {
+      "id": "review_wp-226",
+      "name": "翠岚旋爪",
+      "set": {
+        "original": "スイランの魔輪虎",
+        "stats": {
+          "range": "1–2",
+          "durability": 25,
+          "curse": 1,
+          "power": 13,
+          "hit": 80,
+          "critical": 0,
+          "weight": 8
+        },
+        "availabilityNote": "玩家获取方式尚未核实；Serenes Forest 将其标为疑似敌方专用（原文带问号），不能据此断言玩家绝对无法取得。",
+        "sourcesList": [
+          {
+            "kind": "待核实",
+            "text": "已核实性能。Serenes Forest 标注疑似敌方专用；未找到明确的玩家获取地点或材料配方。",
+            "source": "https://serenesforest.net/fortunes-weave/weapons-items/axes/"
+          }
+        ],
+        "method": "玩家获取方式尚未核实；资料标注疑似敌方专用。"
+      },
+      "appendReferenceSources": [
+        "https://serenesforest.net/fortunes-weave/weapons-items/axes/"
+      ],
+      "dataProvenanceMerge": {
+        "statsSource": "https://serenesforest.net/fortunes-weave/weapons-items/axes/"
+      },
+      "evidence": "Serenes axes表全项支持，并注明Crit和Avo默认0；将错用的crit字段归一为前端读取的critical。获取仍不应标完成。"
+    },
+    {
+      "id": "answerer_kai",
+      "name": "安萨拉改",
+      "set": {
+        "effect": "威力15 / 重量4 / 命中90 / 射程1。血闪+：迪特里希使用，耐久2、威力+10、必杀+20、龙有效。第三部可继续锻造为安萨拉碎／安萨拉凰，详见强化表。"
+      },
+      "appendReferenceSources": [
+        "https://appmedia.jp/fe_banshisenkou/80485198"
+      ],
+      "evidence": "原effect说配方未核实，但同一记录的forgeSteps已列完整配方；AppMedia对应表有第三部/战魂石/费用。这里只移除过时措辞，不改既有累计配方语义。"
+    }
+  ],
+  "additions": [
+    {
+      "id": "library_gw_582763",
+      "name": "试作品1号",
+      "original": "試作品1号",
+      "type": "剑",
+      "phase": "DLC第1弹 · 第一部／第三部",
+      "rank": "剑术 E",
+      "purpose": "付费DLC武器；需按路线和进度领取。",
+      "effect": "威力8 / 命中90 / 重量5 / 射程1 / 耐久5。DLC第1弹追加的原型武器。",
+      "stats": {
+        "power": 8,
+        "hit": 90,
+        "critical": 0,
+        "weight": 5,
+        "avoid": 0,
+        "range": "1",
+        "durability": 5
+      },
+      "materials": [],
+      "sourcesList": [
+        {
+          "kind": "任务奖励",
+          "place": "帝都鞑古席翁",
+          "phase": "第一部",
+          "route": "ディートリヒ",
+          "condition": "需购买扩充票并安装支持DLC第1弹的更新；迪特里希篇第4章自由行动开始后",
+          "text": "迪特里希篇第4章起，在帝都公告板接取并完成「異邦の剣士ディートリヒに告ぐ」，获得试作品1号。任务日文名保留供查找。",
+          "source": "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html"
+        },
+        {
+          "kind": "剧情",
+          "place": "帝都鞑古席翁",
+          "phase": "第三部",
+          "condition": "需购买扩充票；已通关迪特里希篇；第三部第2区分起自由行动期间进入帝都",
+          "text": "即使未完成第一部对应支线，已通关迪特里希篇后，也可在第三部第2区分起于帝都领取。",
+          "source": "https://gamewith.jp/fefw/582763"
+        }
+      ],
+      "url": "https://gamewith.jp/fefw/582763",
+      "referenceSources": [
+        "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "https://www.nintendo.com/jp/topics/article/e5e61cdf-3507-453a-b3d6-29b61a056646",
+        "https://gamewith.jp/fefw/582763"
+      ],
+      "method": "迪特里希篇第一部第4章起完成DLC支线，或对应路线通关后第三部第2区分起在帝都领取。",
+      "availabilityNote": "需要付费扩充票（Expansion Pass）及支持第1弹的更新数据；不是本体免费奖励。",
+      "icon": {
+        "src": "assets/skills/sword.webp",
+        "kind": "剑类游戏图标",
+        "source": "https://gamewith.jp/fefw/582763"
+      },
+      "referenceIds": [],
+      "aliases": [
+        "試作品1号",
+        "Prototype I"
+      ],
+      "recommendedBy": [],
+      "dataProvenance": {
+        "primarySource": "https://gamewith.jp/fefw/582763",
+        "acquisitionSource": "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "checkedAt": "2026-11-05"
+      }
+    },
+    {
+      "id": "library_gw_582764",
+      "name": "试作品5号",
+      "original": "試作品5号",
+      "type": "斧",
+      "phase": "DLC第1弹 · 第一部／第三部",
+      "rank": "斧术 E",
+      "purpose": "付费DLC武器；需按路线和进度领取。",
+      "effect": "威力14 / 命中50 / 重量13 / 射程1 / 耐久5。DLC第1弹追加的原型武器。",
+      "stats": {
+        "power": 14,
+        "hit": 50,
+        "critical": 0,
+        "weight": 13,
+        "avoid": 0,
+        "range": "1",
+        "durability": 5
+      },
+      "materials": [],
+      "sourcesList": [
+        {
+          "kind": "任务奖励",
+          "place": "帝都鞑古席翁",
+          "phase": "第一部",
+          "route": "レダ",
+          "condition": "需购买扩充票并安装支持DLC第1弹的更新；蕾达篇第4章自由行动开始后",
+          "text": "蕾达篇第4章起，在帝都公告板接取并完成「華麗なる奏者レダに告ぐ」，获得试作品5号。任务日文名保留供查找。",
+          "source": "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html"
+        },
+        {
+          "kind": "剧情",
+          "place": "帝都鞑古席翁",
+          "phase": "第三部",
+          "condition": "需购买扩充票；已通关蕾达篇；第三部第2区分起自由行动期间进入帝都",
+          "text": "即使未完成第一部对应支线，已通关蕾达篇后，也可在第三部第2区分起于帝都领取。",
+          "source": "https://gamewith.jp/fefw/582764"
+        }
+      ],
+      "url": "https://gamewith.jp/fefw/582764",
+      "referenceSources": [
+        "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "https://www.nintendo.com/jp/topics/article/e5e61cdf-3507-453a-b3d6-29b61a056646",
+        "https://gamewith.jp/fefw/582764"
+      ],
+      "method": "蕾达篇第一部第4章起完成DLC支线，或对应路线通关后第三部第2区分起在帝都领取。",
+      "availabilityNote": "需要付费扩充票（Expansion Pass）及支持第1弹的更新数据；不是本体免费奖励。",
+      "icon": {
+        "src": "assets/skills/axe.webp",
+        "kind": "斧类游戏图标",
+        "source": "https://gamewith.jp/fefw/582764"
+      },
+      "referenceIds": [],
+      "aliases": [
+        "試作品5号",
+        "Prototype V"
+      ],
+      "recommendedBy": [],
+      "dataProvenance": {
+        "primarySource": "https://gamewith.jp/fefw/582764",
+        "acquisitionSource": "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "checkedAt": "2026-11-05"
+      }
+    },
+    {
+      "id": "library_gw_582766",
+      "name": "试作品7号",
+      "original": "試作品7号",
+      "type": "枪",
+      "phase": "DLC第1弹 · 第一部／第三部",
+      "rank": "枪术 E",
+      "purpose": "付费DLC武器；需按路线和进度领取。",
+      "effect": "威力10 / 命中80 / 重量9 / 射程1 / 耐久5。DLC第1弹追加的原型武器。",
+      "stats": {
+        "power": 10,
+        "hit": 80,
+        "critical": 0,
+        "weight": 9,
+        "avoid": 0,
+        "range": "1",
+        "durability": 5
+      },
+      "materials": [],
+      "sourcesList": [
+        {
+          "kind": "任务奖励",
+          "place": "帝都鞑古席翁",
+          "phase": "第一部",
+          "route": "カイ",
+          "condition": "需购买扩充票并安装支持DLC第1弹的更新；凯伊篇第4章自由行动开始后",
+          "text": "凯伊篇第4章起，在帝都公告板接取并完成「噂の若者カイに告ぐ」，获得试作品7号。任务日文名保留供查找。",
+          "source": "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html"
+        },
+        {
+          "kind": "剧情",
+          "place": "帝都鞑古席翁",
+          "phase": "第三部",
+          "condition": "需购买扩充票；已通关凯伊篇；第三部第2区分起自由行动期间进入帝都",
+          "text": "即使未完成第一部对应支线，已通关凯伊篇后，也可在第三部第2区分起于帝都领取。",
+          "source": "https://gamewith.jp/fefw/582766"
+        }
+      ],
+      "url": "https://gamewith.jp/fefw/582766",
+      "referenceSources": [
+        "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "https://www.nintendo.com/jp/topics/article/e5e61cdf-3507-453a-b3d6-29b61a056646",
+        "https://gamewith.jp/fefw/582766"
+      ],
+      "method": "凯伊篇第一部第4章起完成DLC支线，或对应路线通关后第三部第2区分起在帝都领取。",
+      "availabilityNote": "需要付费扩充票（Expansion Pass）及支持第1弹的更新数据；不是本体免费奖励。",
+      "icon": {
+        "src": "assets/skills/lance.webp",
+        "kind": "枪类游戏图标",
+        "source": "https://gamewith.jp/fefw/582766"
+      },
+      "referenceIds": [],
+      "aliases": [
+        "試作品7号",
+        "Prototype VII"
+      ],
+      "recommendedBy": [],
+      "dataProvenance": {
+        "primarySource": "https://gamewith.jp/fefw/582766",
+        "acquisitionSource": "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "checkedAt": "2026-11-05"
+      }
+    },
+    {
+      "id": "library_gw_582765",
+      "name": "试作品11号",
+      "original": "試作品11号",
+      "type": "弓",
+      "phase": "DLC第1弹 · 第一部／第三部",
+      "rank": "弓术 E",
+      "purpose": "付费DLC武器；需按路线和进度领取。",
+      "effect": "威力8 / 命中70 / 重量7 / 射程2 / 耐久5。DLC第1弹追加的原型武器。",
+      "stats": {
+        "power": 8,
+        "hit": 70,
+        "critical": 0,
+        "weight": 7,
+        "avoid": 0,
+        "range": "2",
+        "durability": 5
+      },
+      "materials": [],
+      "sourcesList": [
+        {
+          "kind": "任务奖励",
+          "place": "帝都鞑古席翁",
+          "phase": "第一部",
+          "route": "セオドラ",
+          "condition": "需购买扩充票并安装支持DLC第1弹的更新；赛奥朵拉篇第4章自由行动开始后",
+          "text": "赛奥朵拉篇第4章起，在帝都公告板接取并完成「サラミスの女王セオドラに告ぐ」，获得试作品11号。任务日文名保留供查找。",
+          "source": "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html"
+        },
+        {
+          "kind": "剧情",
+          "place": "帝都鞑古席翁",
+          "phase": "第三部",
+          "condition": "需购买扩充票；已通关赛奥朵拉篇；第三部第2区分起自由行动期间进入帝都",
+          "text": "即使未完成第一部对应支线，已通关赛奥朵拉篇后，也可在第三部第2区分起于帝都领取。",
+          "source": "https://gamewith.jp/fefw/582765"
+        }
+      ],
+      "url": "https://gamewith.jp/fefw/582765",
+      "referenceSources": [
+        "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "https://www.nintendo.com/jp/topics/article/e5e61cdf-3507-453a-b3d6-29b61a056646",
+        "https://gamewith.jp/fefw/582765"
+      ],
+      "method": "赛奥朵拉篇第一部第4章起完成DLC支线，或对应路线通关后第三部第2区分起在帝都领取。",
+      "availabilityNote": "需要付费扩充票（Expansion Pass）及支持第1弹的更新数据；不是本体免费奖励。",
+      "icon": {
+        "src": "assets/skills/bow.webp",
+        "kind": "弓类游戏图标",
+        "source": "https://gamewith.jp/fefw/582765"
+      },
+      "referenceIds": [],
+      "aliases": [
+        "試作品11号",
+        "Prototype XI"
+      ],
+      "recommendedBy": [],
+      "dataProvenance": {
+        "primarySource": "https://gamewith.jp/fefw/582765",
+        "acquisitionSource": "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "checkedAt": "2026-11-05"
+      }
+    }
+  ],
+  "auditFixes": [
+    "sourcesList containing only kind=待核实 is an acquisition gap, not complete.",
+    "Check stats.weight on accessories as well as weapons.",
+    "Recognize 手甲 as a weapon category; current list omits all16 gauntlets.",
+    "Use canonical stats.critical, not crit; check all six base weapon fields (power/hit/critical/weight/range/durability)."
+  ],
+  "remainingUnknowns": [
+    {
+      "id": "review_wp-226",
+      "field": "player acquisition",
+      "reason": "Serenes Forest says Enemy only? with a question mark. This is not enough to assert unobtainable."
+    },
+    {
+      "ids": [
+        "library_gw_582763",
+        "library_gw_582764",
+        "library_gw_582766",
+        "library_gw_582765"
+      ],
+      "field": "fully upgraded durability and exact cost accumulation",
+      "reason": "GameWith maximal panels retain durability5; hyperWiki and Anna site show10. New additions include only verified base stats. Forge costs must be vetted independently before further expansion."
+    }
+  ],
+  "conflicts": [
+    {
+      "field": "DLC reward route for prototype5 and prototype11",
+      "selected": "5=斧/蕾达、11=弓/赛奥朵拉",
+      "evidence": [
+        "https://www.nintendo.com/jp/games/switch2/aacsa/products/dlc.html",
+        "https://www.nintendo.com/jp/topics/article/e5e61cdf-3507-453a-b3d6-29b61a056646",
+        "https://gamewith.jp/fefw/582764",
+        "https://gamewith.jp/fefw/582765"
+      ],
+      "rejectedEvidence": [
+        "https://appmedia.jp/fe_banshisenkou/80486077",
+        "https://appmedia.jp/fe_banshisenkou/80486089"
+      ],
+      "reason": "Official Nintendo original Japanese explicitly lists both weapon type and route; AppMedia swaps its acquisition sections while its titles and type remain correct. Preserve this note; do not silently reuse the swapped routes."
+    }
+  ],
+  "duplicateCheck": {
+    "catalogEquipmentCountBefore": 147,
+    "searched": "All files under data with JSON/JSONL/MD/CSV/TSV suffixes and all rows of catalog.sqlite3 sections/entities/bundles",
+    "terms": [
+      "试作品",
+      "試作品",
+      "prototype",
+      "模仿天帝",
+      "模倣・"
+    ],
+    "result": "No matches before patch."
+  }
+}

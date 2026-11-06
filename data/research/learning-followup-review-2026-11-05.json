@@ -1,0 +1,245 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "发布前第二轮：特殊角色魔法分类、人物等级门槛、双译名重复及未确认法术条件。",
+  "learningChanges": [
+    {
+      "characterId": "c12",
+      "kind": "magic",
+      "name": "彷徨之壁",
+      "set": {
+        "type": "黑魔法"
+      },
+      "sources": [
+        "https://game8.jp/fe-banshisenko/818780",
+        "https://hyperwiki.jp/fefw/reason/"
+      ]
+    },
+    {
+      "characterId": "c36",
+      "kind": "magic",
+      "name": "彷徨之壁",
+      "set": {
+        "type": "黑魔法"
+      },
+      "sources": [
+        "https://game8.jp/fe-banshisenko/818780",
+        "https://hyperwiki.jp/fefw/reason/"
+      ]
+    },
+    {
+      "characterId": "c59",
+      "kind": "magic",
+      "name": "彷徨之壁",
+      "set": {
+        "type": "黑魔法",
+        "skill": "黑魔术",
+        "level": 45,
+        "condition": "人物等级45习得"
+      },
+      "removeFields": [
+        "rank"
+      ],
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch59/",
+        "https://gamewith.jp/fefw/574424",
+        "https://game8.jp/fe-banshisenko/818780"
+      ]
+    },
+    {
+      "characterId": "c59",
+      "kind": "magic",
+      "name": "玻璃车轮",
+      "set": {
+        "level": 48,
+        "condition": "人物等级48习得"
+      },
+      "removeFields": [
+        "rank"
+      ],
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch59/",
+        "https://gamewith.jp/fefw/574424"
+      ]
+    }
+  ],
+  "abilityMerges": [
+    {
+      "fromName": "杰克一击",
+      "fromId": "ability-4c6adc8bb15b",
+      "toName": "加牌",
+      "toId": "ability-6189d08390dc",
+      "type": "战技",
+      "aliases": [
+        "ジャックヒット"
+      ],
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch62/",
+        "https://hyperwiki.jp/fefw/ability5/",
+        "https://gamewith.jp/fefw/573032",
+        "https://www.fireemblem.top/archive/combat-arts?category=%E6%89%8B%E7%94%B2&q=&view=custom"
+      ],
+      "affectedCharacters": [
+        "c12",
+        "c15",
+        "c20",
+        "c39",
+        "c53",
+        "c62"
+      ]
+    },
+    {
+      "fromName": "破坏光箭",
+      "fromId": "ability-0114d352dae9",
+      "toName": "破坏箭",
+      "toId": "ability-741731b586a4",
+      "type": "战技",
+      "aliases": [
+        "ブレイクアロー"
+      ],
+      "sources": [
+        "https://hyperwiki.jp/fefw/character/ch62/",
+        "https://hyperwiki.jp/fefw/character/ch7/",
+        "https://gamewith.jp/fefw/573032",
+        "https://game8.jp/fe-banshisenko/817286"
+      ],
+      "affectedCharacters": [
+        "c5",
+        "c21",
+        "c24",
+        "c30",
+        "c36",
+        "c37",
+        "c41",
+        "c62"
+      ]
+    }
+  ],
+  "parameterDisputes": [
+    {
+      "name": "彷徨之壁",
+      "type": "法术",
+      "field": "range",
+      "selected": "1～3",
+      "statements": [
+        {
+          "value": "1～3",
+          "source": "https://gamewith.jp/fefw/574424"
+        },
+        {
+          "value": "1",
+          "source": "https://game8.jp/fe-banshisenko/818780"
+        },
+        {
+          "value": "0",
+          "source": "https://hyperwiki.jp/fefw/reason/"
+        }
+      ],
+      "decision": "缺少可判定施法范围的实机界面，保留原有值，明确记录未消除的分歧。"
+    },
+    {
+      "name": "加牌",
+      "type": "战技",
+      "field": "might",
+      "selected": "10",
+      "statements": [
+        {
+          "value": "10",
+          "source": "https://hyperwiki.jp/fefw/ability5/"
+        },
+        {
+          "value": "1",
+          "source": "https://gamewith.jp/fefw/573032"
+        },
+        {
+          "value": "1",
+          "source": "https://annasnotebook.net/ja/db/skills/"
+        }
+      ],
+      "decision": "Do not call 10 a proven transcription error. Preserve the current 加牌 entity at power 10 during alias consolidation. This removes Tahonia's duplicate power-1 listing but does not resolve which power is correct. If no parameter propagation is acceptable, defer this entire merge. No game screenshot was obtained."
+    },
+    {
+      "name": "破坏箭",
+      "type": "战技",
+      "field": "might",
+      "selected": "0",
+      "statements": [
+        {
+          "value": "15",
+          "source": "https://hyperwiki.jp/fefw/character/ch62/"
+        },
+        {
+          "value": "0",
+          "source": "https://gamewith.jp/fefw/573032"
+        },
+        {
+          "value": "0",
+          "source": "https://game8.jp/fe-banshisenko/817286"
+        }
+      ],
+      "decision": "Retain the existing 破坏箭 entity and its selected power 0 while merging the alias. The two structured art lists corroborate the existing selection, but this is not a primary capture and does not prove why HyperWiki differs."
+    }
+  ],
+  "acquisitionResearch": {
+    "characterId": "c55",
+    "spells": [
+      "大地之颚",
+      "裁决之剑"
+    ],
+    "decision": "仍保留requirementUnknown；本轮未找到黑魔术C升级获得通知或可证明精确解锁时点的原始画面。使用者、法术效果与基础性能已确认。",
+    "sources": [
+      {
+        "url": "https://hyperwiki.jp/fefw/character/ch58/",
+        "finding": "两项均列个人特殊，无等级门槛。"
+      },
+      {
+        "url": "https://annasnotebook.net/ja/characters/anatolia/",
+        "finding": "两项列黑魔术C，但无直接习得画面。"
+      },
+      {
+        "url": "https://yuphastemple.com/anatolia/",
+        "finding": "两项列黑魔术C，同时采用Lv4平民起始资料，不能直接等同第三部入队状态。"
+      },
+      {
+        "url": "https://lum.gg/fire-emblem-fortunes-weave/characters/anatolia",
+        "finding": "两项列黑魔术C；该页人物等级技能与其他来源不一致，不视为决定性独立验证。"
+      },
+      {
+        "url": "https://fortunesweave.co.uk/characters/anatolia",
+        "finding": "两项列C且明确标记unverified。"
+      },
+      {
+        "url": "https://fortunesweave.co.uk/guide/getting-started",
+        "finding": "大地之颚C注明来自community spreadsheet，不能将多个转载视为独立实测。"
+      },
+      {
+        "url": "https://fireemblem.top/topics/personal-skills",
+        "finding": "两项列初始；同页等级技能也以入队时状态归为初始，无法推出最低门槛。"
+      },
+      {
+        "url": "https://gamewith.jp/fefw/578433",
+        "finding": "两项有性能，但未列习得对象及门槛；搜索片段的アナトリア黒魔術初期属于其他魔法，不能挪用于这两项。"
+      },
+      {
+        "url": "https://game8.jp/fe-banshisenko/816885",
+        "finding": "确认可用魔法清单，不明确各项习得等级。"
+      },
+      {
+        "url": "https://annasnotebook.net/ja/videos/yt-xidXxJRq4v4/",
+        "finding": "视频整理称加入时已有大地之颚，未能独立核验原始画面，不用于抹掉精确门槛缺口。"
+      }
+    ]
+  },
+  "limitations": [
+    "本轮不是全游戏逐项实机验收。",
+    "彷徨之壁射程、少数战技基础威力存在来源分歧；统一名称不意味着已消除参数分歧。"
+  ],
+  "aliasResearchFile": "data/research/late-character-learning-review-2026-11-05.json",
+  "baselineHashes": {
+    "learning": "d4614cd0eeea72b70e91544650de78d6c855163b21ab68a4d7fea29bf1641012",
+    "abilities": "7417419f1a4825de215c4e60d7dc2e77091374e882964cf889f2fe933d16bbd1"
+  },
+  "currentHashes": {
+    "learning": "98eaa2ae4e65ca791023d818da6129e9da00c388515e4ebb586074417efff5ec",
+    "abilities": "094be6a90273aacb792627f6034453a0c316588dbb8c86da666a7358a3d667ee"
+  }
+}

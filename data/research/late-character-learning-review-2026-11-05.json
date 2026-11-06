@@ -1,0 +1,82 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": ["c56", "c57", "c61", "c62"],
+  "policy": "Research proposal only. Alias identity and parameter truth are separate questions. Preserve each surviving ability's existing canonical parameters. No new actor/rank binding is added by the patch.",
+  "merges": [
+    {
+      "from": "杰克一击",
+      "fromId": "ability-4c6adc8bb15b",
+      "to": "加牌",
+      "toId": "ability-6189d08390dc",
+      "japanese": "ジャックヒット",
+      "affectedCharacters": ["c12", "c15", "c20", "c39", "c53", "c62"],
+      "duplicateCharacter": "c62",
+      "rank": "C",
+      "identityEvidence": [
+        {"url": "https://hyperwiki.jp/fefw/character/ch62/", "finding": "One Jack Hit entry at gauntlet C; attack proc 5%, attack +10."},
+        {"url": "https://hyperwiki.jp/fefw/ability5/", "finding": "Jack Hit is one shared gauntlet art; Tahonia learns at C, the other listed learners at B."},
+        {"url": "https://gamewith.jp/fefw/573032", "finding": "One Jack Hit entry with the same 5% attack +10 effect."},
+        {"url": "https://www.fireemblem.top/archive/combat-arts?category=%E6%89%8B%E7%94%B2&q=&view=custom", "finding": "Search-indexed Chinese row uses 加牌 with 5% attack +10 and durability 1; direct page access did not yield its screenshot."}
+      ],
+      "preservedCanonicalParameters": {"cost": "1", "might": "10", "hit": "0", "crit": "0", "range": "1"},
+      "parameterConflict": {
+        "field": "might",
+        "unresolved": true,
+        "candidates": [
+          {"value": "10", "url": "https://hyperwiki.jp/fefw/ability5/", "finding": "The source explicitly puts 10 in its power column, separately from the proc effect."},
+          {"value": "1", "url": "https://gamewith.jp/fefw/573032", "finding": "The source explicitly puts 1 in its power column."},
+          {"value": "1", "url": "https://annasnotebook.net/ja/db/skills/", "finding": "Also states power 1; provenance is not sufficient to establish independent primary corroboration."}
+        ],
+        "decision": "Do not call 10 a proven transcription error. Preserve the current 加牌 entity at power 10 during alias consolidation. This removes Tahonia's duplicate power-1 listing but does not resolve which power is correct. If no parameter propagation is acceptable, defer this entire merge. No game screenshot was obtained."
+      }
+    },
+    {
+      "from": "破坏光箭",
+      "fromId": "ability-0114d352dae9",
+      "to": "破坏箭",
+      "toId": "ability-741731b586a4",
+      "japanese": "ブレイクアロー",
+      "affectedCharacters": ["c5", "c21", "c24", "c30", "c36", "c37", "c41", "c62"],
+      "identityEvidence": [
+        {"url": "https://hyperwiki.jp/fefw/character/ch62/", "finding": "Tahonia bow B is Break Arrow, with 50% attack +15."},
+        {"url": "https://hyperwiki.jp/fefw/character/ch7/", "finding": "Inyoni bow B is the identically named Break Arrow with the same effect."},
+        {"url": "https://gamewith.jp/fefw/573032", "finding": "Break Arrow has cost 5, base power 0, hit 0, crit 0, range 2; 50% attack +15 is separately stated."},
+        {"url": "https://game8.jp/fe-banshisenko/817286", "finding": "Break Arrow independently has cost 5, base power 0, hit 0, crit 0, range 2; 50% attack +15 is separately stated."}
+      ],
+      "preservedCanonicalParameters": {"cost": "5", "might": "0", "hit": "0", "crit": "0", "range": "2"},
+      "parameterConflict": {
+        "field": "might",
+        "unresolved": true,
+        "candidates": [
+          {"value": "15", "url": "https://hyperwiki.jp/fefw/character/ch62/"},
+          {"value": "0", "url": "https://gamewith.jp/fefw/573032"},
+          {"value": "0", "url": "https://game8.jp/fe-banshisenko/817286"}
+        ],
+        "decision": "Retain the existing 破坏箭 entity and its selected power 0 while merging the alias. The two structured art lists corroborate the existing selection, but this is not a primary capture and does not prove why HyperWiki differs."
+      }
+    }
+  ],
+  "heldCandidates": [
+    {
+      "characterId": "c37",
+      "name": "加牌",
+      "skill": "格斗术",
+      "rank": "B",
+      "sources": ["https://hyperwiki.jp/fefw/character/ch7/", "https://annasnotebook.net/ja/characters/inyoni/"],
+      "decision": "Not applied. HyperWiki and Anna's Notebook list the binding, but their independence is unestablished. Gamecap's Inyoni section has a blank at gauntlet B. Blank is not proof of inability; require a stronger independent binding or game capture before adding."
+    },
+    {
+      "characterIds": ["c57", "c61", "c62"],
+      "subject": "Generic weapon and magic proficiency levels absent from learning arrays",
+      "sources": ["https://gamewith.jp/fefw/574420", "https://hyperwiki.jp/fefw/character/ch63/", "https://hyperwiki.jp/fefw/character/ch61/", "https://hyperwiki.jp/fefw/character/ch62/"],
+      "decision": "Not applied in this focused alias patch. Both sources now show examples such as sword C+ Lv.2, bow C+ Lv.2 and gauntlet C+/B+/A+ levels for all three characters. The site intentionally displays common proficiency levels in a separate guide. A complete new exact binding audit is preferable to selectively adding a few examples."
+    }
+  ],
+  "otherFindings": [
+    "c56 is HyperWiki ch60, c57 is ch63; catalog IDs do not match source IDs.",
+    "The four reviewed non-generic learning sets otherwise agree with their current HyperWiki character tables; this is not independent or game-tested certification.",
+    "The legacy 18-item regression checks c62 杰克一击 by exact name. Preserve that record's rank C and its historical source, and resolve the old name through the new survivor aliases in the test. Do not delete or weaken that check.",
+    "Merging removes two old ability IDs. Persist aliases/legacyIds on survivors, and consider resolving old ID links and saved references before releasing. The supplied data transform does not modify UI routing.",
+    "No catalog, shared repository script, test or publication was modified by this worker."
+  ]
+}

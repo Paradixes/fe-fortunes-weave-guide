@@ -22,10 +22,12 @@ python3 -m http.server 8765 --bind 127.0.0.1 --directory dist
 更新 SQLite 数据后生成网页数据：
 
 ```bash
-node scripts/build-abilities.cjs /tmp/fe-guide-catalog.json
-python3 scripts/catalog-db.py import --source /tmp/fe-guide-catalog.json
 node scripts/build-catalog.cjs
 ```
+
+构建会先把角色学习表同步到技能图鉴的习得索引，并保留已经核定的效果与参数。常规资料修订不需要用 `build-abilities.cjs` 从头重建技能图鉴。
+
+2026-11-05 的缺项补充分别保存在 `data/research/learning-gap-review-2026-11-05.json`、`equipment-gap-review-2026-11-05.json`、`gifts-schedule-review-2026-11-05.json`。对应的 `apply-*-gap-review.cjs`（礼物为 `apply-gifts-schedule-review.cjs`）接收输入、输出 JSON 路径，只修改已核实字段；导入 SQLite 后仍须运行构建。三项专项回归已纳入 `verify-site.cjs`。结构完整不等于全部事实已实机核实，可用 `node scripts/audit-data-completeness.cjs /tmp/fe-completeness.json` 查看字段缺口与仍需核实的参考数据。
 
 常用验证：
 

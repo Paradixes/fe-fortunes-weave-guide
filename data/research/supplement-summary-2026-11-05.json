@@ -1,0 +1,908 @@
+{
+  "checkedAt": "2026-11-05",
+  "scope": "本地补充与回归，未提交main或部署。字段完整性不等于全游戏逐项实机核验。",
+  "evidenceFiles": [
+    "data/research/learning-gap-review-2026-11-05.json",
+    "data/research/equipment-gap-review-2026-11-05.json",
+    "data/research/gifts-schedule-review-2026-11-05.json",
+    "data/research/learning-followup-review-2026-11-05.json",
+    "data/research/late-character-learning-review-2026-11-05.json",
+    "data/research/equipment-followup-review-2026-11-05.json",
+    "data/research/gifts-schedule-round2-2026-11-05.json"
+  ],
+  "changes": {
+    "newAbilities": [
+      "调魂",
+      "自我修复",
+      "裁决之剑"
+    ],
+    "learningPatches": 15,
+    "baseMagicParameterCorrections": [
+      "雷电命中75",
+      "火山爆焰基础次数5",
+      "大地之颚基础次数1"
+    ],
+    "resolvedStaleAcquisitionFlags": 51,
+    "equipmentCorrections": 5,
+    "newPaidDlcWeapons": [
+      "试作品1号",
+      "试作品5号",
+      "试作品7号",
+      "试作品11号"
+    ],
+    "screenshotConfirmedSchedules": 12,
+    "newGiftRelations": 5,
+    "newGiftAcquisitionMethods": 2,
+    "verifiedGiftMerge": "胡须装饰 → 鬃毛饰品，保留旧别名"
+  },
+  "counts": {
+    "gifts": {
+      "records": 123,
+      "withGaps": 7,
+      "withVerificationGaps": 0
+    },
+    "characters": {
+      "records": 63,
+      "withGaps": 0,
+      "withVerificationGaps": 11
+    },
+    "learning": {
+      "records": 5194,
+      "withGaps": 2,
+      "withVerificationGaps": 0
+    },
+    "classes": {
+      "records": 60,
+      "withGaps": 0,
+      "withVerificationGaps": 0
+    },
+    "abilities": {
+      "records": 589,
+      "withGaps": 2,
+      "withVerificationGaps": 3
+    },
+    "equipment": {
+      "records": 151,
+      "withGaps": 1,
+      "withVerificationGaps": 5
+    },
+    "events": {
+      "records": 45,
+      "withGaps": 1,
+      "withVerificationGaps": 0
+    },
+    "map": {
+      "records": 991,
+      "withGaps": 0,
+      "withVerificationGaps": 0
+    }
+  },
+  "remainingRecords": [
+    {
+      "collection": "gifts",
+      "id": "everyday-scenes",
+      "name": "庶民百景",
+      "gaps": [
+        "price"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "gifts",
+      "id": "zh-it-290",
+      "name": "实验性缝纫工具",
+      "gaps": [
+        "price",
+        "acquisition"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "gifts",
+      "id": "zh-it-269",
+      "name": "美丽的装饰弓",
+      "gaps": [
+        "price",
+        "acquisition"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "gifts",
+      "id": "flower-painting",
+      "name": "小白花绘画",
+      "gaps": [
+        "price"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "gifts",
+      "id": "portrait-of-yu-phas",
+      "name": "幽·法丝的肖像",
+      "gaps": [
+        "price"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "gifts",
+      "id": "black-tail-feather",
+      "name": "漆黑的尾羽",
+      "gaps": [
+        "price"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "gifts",
+      "id": "red-rose-bouquet",
+      "name": "红玫瑰花束",
+      "gaps": [
+        "price"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "characters",
+      "id": "c14",
+      "name": "亚历珊德拉",
+      "gaps": [],
+      "notApplicable": [
+        "No blood mark recorded; not automatically a missing mark"
+      ],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c37",
+      "name": "易尼奥尼",
+      "gaps": [],
+      "notApplicable": [
+        "No blood mark recorded; not automatically a missing mark"
+      ],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c50",
+      "name": "齐利科",
+      "gaps": [],
+      "notApplicable": [
+        "No blood mark recorded; not automatically a missing mark"
+      ],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c51",
+      "name": "内森",
+      "gaps": [],
+      "notApplicable": [
+        "No blood mark recorded; not automatically a missing mark"
+      ],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c53",
+      "name": "谭利穆恩",
+      "gaps": [],
+      "notApplicable": [],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c54",
+      "name": "贝特兰",
+      "gaps": [],
+      "notApplicable": [],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c55",
+      "name": "爱娜特莉亚",
+      "gaps": [],
+      "notApplicable": [
+        "No blood mark recorded; not automatically a missing mark"
+      ],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "learning",
+      "id": "c55/magic/4",
+      "name": "爱娜特莉亚 · 大地之颚",
+      "gaps": [
+        "requirement"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "learning",
+      "id": "c55/magic/11",
+      "name": "爱娜特莉亚 · 裁决之剑",
+      "gaps": [
+        "requirement"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    },
+    {
+      "collection": "characters",
+      "id": "c56",
+      "name": "盛托利翁",
+      "gaps": [],
+      "notApplicable": [
+        "No blood mark recorded; not automatically a missing mark"
+      ],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c57",
+      "name": "库拉普卡",
+      "gaps": [],
+      "notApplicable": [
+        "No blood mark recorded; not automatically a missing mark"
+      ],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c61",
+      "name": "亚丝望",
+      "gaps": [],
+      "notApplicable": [],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "characters",
+      "id": "c62",
+      "name": "塔霍尼雅",
+      "gaps": [],
+      "notApplicable": [
+        "No blood mark recorded; not automatically a missing mark"
+      ],
+      "verificationGaps": [
+        "entry_stats_reference_only"
+      ]
+    },
+    {
+      "collection": "abilities",
+      "id": "ability-6189d08390dc",
+      "name": "加牌",
+      "gaps": [],
+      "notApplicable": [
+        "Empty character/class lists are not automatically missing acquisition data"
+      ],
+      "verificationGaps": [
+        "parameter_conflict.might"
+      ]
+    },
+    {
+      "collection": "abilities",
+      "id": "ability-741731b586a4",
+      "name": "破坏箭",
+      "gaps": [],
+      "notApplicable": [
+        "Empty character/class lists are not automatically missing acquisition data"
+      ],
+      "verificationGaps": [
+        "parameter_conflict.might"
+      ]
+    },
+    {
+      "collection": "abilities",
+      "id": "ability-42bf89cfff21",
+      "name": "大地之颚",
+      "gaps": [
+        "acquisition_uncertain"
+      ],
+      "notApplicable": [
+        "Empty character/class lists are not automatically missing acquisition data"
+      ],
+      "verificationGaps": []
+    },
+    {
+      "collection": "abilities",
+      "id": "ability-fdff0eb53a5b",
+      "name": "彷徨之壁",
+      "gaps": [],
+      "notApplicable": [
+        "Empty character/class lists are not automatically missing acquisition data"
+      ],
+      "verificationGaps": [
+        "parameter_conflict.range"
+      ]
+    },
+    {
+      "collection": "abilities",
+      "id": "ability-646d9bc28a35",
+      "name": "裁决之剑",
+      "gaps": [
+        "acquisition_uncertain"
+      ],
+      "notApplicable": [
+        "Empty character/class lists are not automatically missing acquisition data"
+      ],
+      "verificationGaps": []
+    },
+    {
+      "collection": "equipment",
+      "id": "library_80411599",
+      "name": "铁斧",
+      "gaps": [],
+      "notApplicable": [
+        "Accessories do not require weapon damage statistics"
+      ],
+      "verificationGaps": [
+        "shop_stock_unverified"
+      ]
+    },
+    {
+      "collection": "equipment",
+      "id": "review_wp-226",
+      "name": "翠岚旋爪",
+      "gaps": [
+        "acquisition_uncertain"
+      ],
+      "notApplicable": [
+        "Accessories do not require weapon damage statistics"
+      ],
+      "verificationGaps": []
+    },
+    {
+      "collection": "equipment",
+      "id": "library_gw_582763",
+      "name": "试作品1号",
+      "gaps": [],
+      "notApplicable": [
+        "Accessories do not require weapon damage statistics"
+      ],
+      "verificationGaps": [
+        "forge_recipe_unverified",
+        "upgrade_stats_partial"
+      ]
+    },
+    {
+      "collection": "equipment",
+      "id": "library_gw_582764",
+      "name": "试作品5号",
+      "gaps": [],
+      "notApplicable": [
+        "Accessories do not require weapon damage statistics"
+      ],
+      "verificationGaps": [
+        "forge_recipe_unverified",
+        "upgrade_stats_partial"
+      ]
+    },
+    {
+      "collection": "equipment",
+      "id": "library_gw_582766",
+      "name": "试作品7号",
+      "gaps": [],
+      "notApplicable": [
+        "Accessories do not require weapon damage statistics"
+      ],
+      "verificationGaps": [
+        "forge_recipe_unverified",
+        "upgrade_stats_partial"
+      ]
+    },
+    {
+      "collection": "equipment",
+      "id": "library_gw_582765",
+      "name": "试作品11号",
+      "gaps": [],
+      "notApplicable": [
+        "Accessories do not require weapon damage statistics"
+      ],
+      "verificationGaps": [
+        "forge_recipe_unverified",
+        "upgrade_stats_partial"
+      ]
+    },
+    {
+      "collection": "events",
+      "id": "31",
+      "name": "カイ · 斗技场观战",
+      "gaps": [
+        "exact_schedule"
+      ],
+      "notApplicable": [],
+      "verificationGaps": []
+    }
+  ],
+  "remainingContext": [
+    {
+      "subject": "特殊装备来源",
+      "items": [
+        "翠岚旋爪"
+      ]
+    },
+    {
+      "subject": "最早获取章节与库存",
+      "items": [
+        "长弓、风弓、达·米纳弓、亚革杰之弓、高级投枪的部分获取途径",
+        "铁斧部分商店库存"
+      ]
+    },
+    {
+      "subject": "观战时刻",
+      "items": [
+        "凯伊篇第10章1449/10/04观战的结束时刻"
+      ],
+      "note": "其余12条原待核日程已以同路线游戏截图补全；跨路线截图不足以替代本条实测。"
+    },
+    {
+      "subject": "捕获最早章节",
+      "items": [
+        "独角兽",
+        "黑羽玛吉纽斯",
+        "野生天马",
+        "猎鹰"
+      ],
+      "note": "四种动物均为凯伊篇捕获对象，捕获系统在凯伊篇第一部第5章解锁；各地点何时可抵达仍未单独记载。"
+    },
+    {
+      "subject": "入队基础面板",
+      "items": [
+        "亚历珊德拉",
+        "易尼奥尼",
+        "齐利科",
+        "内森",
+        "谭利穆恩",
+        "贝特兰",
+        "爱娜特莉亚",
+        "盛托利翁",
+        "库拉普卡",
+        "亚丝望",
+        "塔霍尼雅"
+      ],
+      "note": "11人的参考数值已收录并明确标为参考样本；不同路线、入队时点的实机面板仍待核对，不当作每条路线通用数值。"
+    },
+    {
+      "subject": "路线实测",
+      "items": [
+        "不同路线、不同入队等级的实际面板与纹章解锁阶段"
+      ]
+    }
+  ],
+  "caveats": [
+    "大地之颚、裁决之剑的精确习得条件资料冲突，保留未知。",
+    "翠岚旋爪疑似敌方专用，但来源带问号，不能据此写成玩家不可获得。",
+    "4件DLC试作品只补基础性能和官方路线，强化配方与最大强化耐久仍待核实。",
+    "实验性缝纫工具、美丽的装饰弓疑似其他礼物的重复转录，缺原始截图，暂不合并。",
+    "凯伊篇1449/10/04的观战结束时刻仅有跨路线截图佐证，保持待核实。",
+    "11名角色的入队面板为参考样本，并非每条路线与入队时点的实机值。"
+  ],
+  "verification": {
+    "commands": 25,
+    "passed": 25,
+    "errors": 0,
+    "deterministicExports": 6,
+    "publicExportPassed": true,
+    "gitDiffCheckPassed": true,
+    "browserVisualCheck": "Blocked, not claimed complete",
+    "exportHashes": {
+      "data/catalog.json": "bc5cd9ef6de7942ffd954d7c4f016aa54751c74fb471cba3cc907ea84cd7b664",
+      "dist/catalog.js": "f0e4c6d0ef40df1d68187dcbbf3730dc4f2d59e8cdb67db1c1f15b22e01609d3",
+      "dist/roster.json": "0e365473f069a986d938a6559d5a661157cbcb73d1b7f4c6d2b77b0ae3927a57",
+      "dist/learning.json": "98eaa2ae4e65ca791023d818da6129e9da00c388515e4ebb586074417efff5ec",
+      "dist/map.json": "d4a288bb68215bdf709c3e1d1cb22c00bb68febc3a997ab7dad7b05ed46af7bd",
+      "dist/map-extras.json": "9d7e11aa5933bee0b0c61ec958df3bc95b7d3ea1358f5aa787fda2ed46aea158"
+    },
+    "allPassed": true
+  },
+  "firstPassCounts": {
+    "gifts": {
+      "records": 123,
+      "withGaps": 7,
+      "withVerificationGaps": 0
+    },
+    "characters": {
+      "records": 63,
+      "withGaps": 0,
+      "withVerificationGaps": 11
+    },
+    "learning": {
+      "records": 5195,
+      "withGaps": 2,
+      "withVerificationGaps": 0
+    },
+    "classes": {
+      "records": 60,
+      "withGaps": 0,
+      "withVerificationGaps": 0
+    },
+    "abilities": {
+      "records": 591,
+      "withGaps": 2,
+      "withVerificationGaps": 0
+    },
+    "equipment": {
+      "records": 151,
+      "withGaps": 1,
+      "withVerificationGaps": 5
+    },
+    "events": {
+      "records": 45,
+      "withGaps": 1,
+      "withVerificationGaps": 0
+    },
+    "map": {
+      "records": 991,
+      "withGaps": 0,
+      "withVerificationGaps": 0
+    }
+  },
+  "followupChanges": {
+    "magicClassificationCorrections": 3,
+    "numericCharacterLevelConditions": 2,
+    "abilityAliasMerges": [
+      {
+        "from": "杰克一击",
+        "to": "加牌"
+      },
+      {
+        "from": "破坏光箭",
+        "to": "破坏箭"
+      }
+    ],
+    "removedDuplicateLearningRows": 1,
+    "legacyLinksAndSearchAliasesPreserved": true,
+    "visibleParameterDisputes": [
+      "彷徨之壁射程",
+      "加牌基础威力",
+      "破坏箭基础威力"
+    ],
+    "dlcUpgradeStages": 12,
+    "giftAcquisitionAddition": "幽·法丝肖像：名声Lv.12恩惠奖励 ×1",
+    "notAdopted": [
+      "两项特殊法术的猜测习得门槛",
+      "5项Item.bin报告价当作实际商店售价",
+      "两项未经原始图像证实的礼物别名合并",
+      "DLC强化耐久和累计配方成本"
+    ]
+  },
+  "browserVerification": {
+    "status": "blocked-before-page-open",
+    "scope": "Requested local Chromium checks at 1280px and 390px",
+    "reason": "Chromium launch failed on socket() Operation not permitted, including a permitted escalation attempt. No screenshots or visual validation were obtained.",
+    "availableCoverage": "VM-based DOM/interaction regression covers aliases, preserved old IDs, conflict notices and 12 partial upgrade rows."
+  },
+  "buildVersion": "2026110503",
+  "testCommands": [
+    {
+      "command": "node scripts/verify-backup.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-catalog-resolution.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-cultivation.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-data-review-2026-11-05.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-endgame-candidates.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-equipment-followup.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-equipment-gaps.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-equipment-review.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-gifts-schedule-gaps.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-learning-followup.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-learning-gaps.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-learning-review.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-learning-round2.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-map-layout.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-map-notes.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-site.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-strategy-ratings.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-video-reassessment.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-video-review.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-video-skills.cjs",
+      "exit": 0
+    },
+    {
+      "command": "node scripts/verify-workbench.cjs",
+      "exit": 0
+    },
+    {
+      "command": "python3 scripts/verify-deploy-base.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 scripts/verify-deploy.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 scripts/verify-sqlite.py",
+      "exit": 0
+    },
+    {
+      "command": "python3 scripts/check-public-export.py",
+      "exit": 0
+    }
+  ],
+  "firstPassVerification": {
+    "commands": [
+      {
+        "command": "node scripts/verify-backup.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-catalog-resolution.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-cultivation.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-data-review-2026-11-05.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-endgame-candidates.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-equipment-gaps.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-equipment-review.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-gifts-schedule-gaps.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-learning-gaps.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-learning-review.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-learning-round2.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-map-layout.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-map-notes.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-site.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-strategy-ratings.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-video-reassessment.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-video-review.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-video-skills.cjs",
+        "exit": 0
+      },
+      {
+        "command": "node scripts/verify-workbench.cjs",
+        "exit": 0
+      },
+      {
+        "command": "python3 scripts/verify-deploy-base.py",
+        "exit": 0
+      },
+      {
+        "command": "python3 scripts/verify-deploy.py",
+        "exit": 0
+      },
+      {
+        "command": "python3 scripts/verify-sqlite.py",
+        "exit": 0
+      },
+      {
+        "command": "python3 scripts/check-public-export.py",
+        "exit": 0
+      }
+    ],
+    "allPassed": true,
+    "structuralAuditErrors": [],
+    "repeatBuildByteIdentical": true,
+    "exportHashes": {
+      "data/catalog.json": "e53cafaa18616347e327d4ccf3f6feb5c759a3aea24c4a3ec0979e2ef185a979",
+      "dist/catalog.js": "ff8f363a2a7612aa79d4928b3556468e79ddaa006492ccb208a028e0a9067fb7",
+      "dist/roster.json": "0e365473f069a986d938a6559d5a661157cbcb73d1b7f4c6d2b77b0ae3927a57",
+      "dist/learning.json": "d4614cd0eeea72b70e91544650de78d6c855163b21ab68a4d7fea29bf1641012",
+      "dist/map.json": "d4a288bb68215bdf709c3e1d1cb22c00bb68febc3a997ab7dad7b05ed46af7bd",
+      "dist/map-extras.json": "9d7e11aa5933bee0b0c61ec958df3bc95b7d3ea1358f5aa787fda2ed46aea158"
+    },
+    "browserScreenshotChecked": false
+  },
+  "firstPassPreservation": {
+    "protectedSections": [
+      "schemaVersion",
+      "materialAliases",
+      "entryDataResearch",
+      "arenaProjects",
+      "petGuide",
+      "routeStrategy",
+      "artSlotBonuses",
+      "map",
+      "sources",
+      "arenaAttributes",
+      "investmentGuide",
+      "equipmentInheritance",
+      "arenaCalendar",
+      "abilityIcons",
+      "crossRoutePolicy",
+      "chapterCalendar",
+      "masterySkills",
+      "presentation",
+      "cultivationAudit",
+      "ratingAudit",
+      "careerAlternatives",
+      "dancerGuide",
+      "abilityAcquisitionFacts",
+      "articles",
+      "mapExtras",
+      "forgingMaterials",
+      "classIntrinsicSkills",
+      "abilitySlotPolicy",
+      "skillRecommendations",
+      "catalogPolicy"
+    ],
+    "unchangedSectionHashes": {
+      "schemaVersion": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "materialAliases": "9a0b5619cd2ab14c63a59cf6817a2ffcf29f74262fc494c478bf7a277353ff2e",
+      "entryDataResearch": "1287fe15eca71a4b3f1c1f0e16cfb22cd420d7c6996bcd291dd348f8faa79537",
+      "arenaProjects": "7bfa855284c0284b4268b03e4676bf5bb6de2d63acdfbac8701bce6b4dbe6144",
+      "petGuide": "16d2bfa835fecf5296119c03d0a316def3ac0cc8faee66b11efa1ebacf28fc76",
+      "routeStrategy": "a26cbb710ea02a796e6d10afc1bc8db0415a1f472516732efd56283c62118a62",
+      "artSlotBonuses": "b3d9c72cd79bef0ae877985e190be7839eb5ef92a9299bc590cba330764fef2c",
+      "map": "d4a288bb68215bdf709c3e1d1cb22c00bb68febc3a997ab7dad7b05ed46af7bd",
+      "sources": "0b47c810d13aa3699cdb47d5e020bc725bd1772b060864d3f3949c2d8a1b72b7",
+      "arenaAttributes": "5b2b455a9921bac7657fe7bfb31495d4f37b4696a5e7e17fe2592a18c32d5678",
+      "investmentGuide": "3693cade033566d572b56a7c023b110e6d7d25809a079a176d3c6db58833257b",
+      "equipmentInheritance": "9fc327a08443d9b0d6bfad547cf355d62774910669fe848a142977f945fc35df",
+      "arenaCalendar": "e1ed6e30f47bcf8e3305b162d529a0f5ae7aa70045928bce03500bffc56fc20b",
+      "abilityIcons": "6015f6a203478b6be4c3c991c883b0491dccbc0f9a9c56a75f1db92658105577",
+      "crossRoutePolicy": "4512377f8cdc500c5a51249bd0fa07e29bfb2785be28ff42bb8c81eda5f7fa21",
+      "chapterCalendar": "191f678cd5f592bfff7465a6f369fdac55627df69874d0541e33dcc9cdb468d2",
+      "masterySkills": "578f6a3711d3573a538dbb9bbd41cde6de1452c0ad8f9d729f89f287e2dc741f",
+      "presentation": "43ec0bbf3ddab7fe2027cf5989e17c39f7e6ae92c44a7c0a7baf8feff93581c1",
+      "cultivationAudit": "3c8e82239b07f1310c441dc27ef137c985e4ec367a3cf9f1ad620545ddc0b661",
+      "ratingAudit": "dd06c412776cf3f55e3d812e7fe13f97633934238acc529a483a1d80dfaf17f6",
+      "careerAlternatives": "489b70d47ee001911941339878788247d61c00e5099420cbdbfbdf7871242538",
+      "dancerGuide": "9adc7f44fe304d9734b357d562ce83df34bc86bcc6c4afd4274bad3cddb03fea",
+      "abilityAcquisitionFacts": "8f42e56723796d36b7d9b4dc0b2b2dea19665c9e552b2ca53c6df5ea9d7f0e5c",
+      "articles": "e2e047e8011a07626edab21240ba639cb1c6201b80a83e15eeb87d77acecc2a8",
+      "mapExtras": "9d7e11aa5933bee0b0c61ec958df3bc95b7d3ea1358f5aa787fda2ed46aea158",
+      "forgingMaterials": "2989ff92569cc15fa46019d7a941b54e402e3bf56b5e4a1a0c69172ec1691659",
+      "classIntrinsicSkills": "9cdecfcc2bc2e0011551b3ce29fff023f00bbdd5921bdfae68d8e056b2be3f79",
+      "abilitySlotPolicy": "9c6604983ba8e36eb1ae559b86ff52bdcf5a11df898b9cffdabf4921a524c3e3",
+      "skillRecommendations": "5eec427c19332ac540ae33b506f3a1da496a4202d23354311f26430a198c4c25",
+      "catalogPolicy": "e0873ab8090e0e938904e3c3cb876ad3830c9fc2c873ab1d7b0ffc58f756a2b4"
+    },
+    "characterFactsHash": "f1491a35b7acc23180ea1aa903eff86c04b92e446515a9e5c8c929c31afd82b2",
+    "classesHash": "ff33d3badaebe968c53b39b6306d3ea7cb75c2230a1ce31cfd19a6b04b4acc74",
+    "scope": "Character facts exclude gift relations. Existing ability identity, effect, icon and quality are unchanged. Planning changed only the corrected volcano base uses from 10 to 5."
+  },
+  "preservation": {
+    "scope": "第二轮对照第一轮完成后的数据库。63名角色的属性、评级、初始职业、装备方案，以及全部职业、路线策略、事件、地图保持不变；仅合并两组技能别名及其学习/引用关系。",
+    "protectedCharacterFields": [
+      "growth",
+      "baseStats",
+      "baseLevel",
+      "rating",
+      "ratingReason",
+      "personalSkill",
+      "personalSkillEffect",
+      "canChangeClass",
+      "startClass",
+      "gearIds"
+    ],
+    "protectedCollections": [
+      "database.classes",
+      "events",
+      "map",
+      "mapExtras",
+      "routeStrategy",
+      "careerAlternatives"
+    ],
+    "assertionsPassed": true
+  }
+}
